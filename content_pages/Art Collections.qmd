@@ -5,8 +5,11 @@ date: 2021-01-12
 date-format: long
 ---
 
+Notable topics: geom_area plot, distributions, calculating area (square meters) and ratio (width / height)
 
-test text
+Recorded on: 2021-01-12
+
+Timestaps by" Eric Fletcher
 
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/AqwA5EJfLXo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

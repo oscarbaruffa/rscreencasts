@@ -5,8 +5,11 @@ date: 2020-06-16
 date-format: long
 ---
 
+Notable topics: Network diagram, Wordcloud
 
-test text
+Recorded on: 2020-06-16
+
+Timestaps by" Eric Fletcher
 
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/2L-jA-Me3zg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

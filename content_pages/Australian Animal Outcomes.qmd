@@ -5,8 +5,11 @@ date: 2020-07-21
 date-format: long
 ---
 
+Notable topics: Data manipulation, Web Scraping (rvest package) and SelectorGadget, Animated Choropleth Map
 
-test text
+Recorded on: 2020-07-21
+
+Timestaps by" Eric Fletcher
 
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/E2amEz_upzU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
