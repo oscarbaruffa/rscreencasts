@@ -61,8 +61,11 @@ date: ',as.character(screencasts_data[entry, "date"]),'
 date-format: long
 ---
 
+Notable topics: ',as.character(screencasts_data[entry, "notable_topics"]),'
 
-test text
+Recorded on: ',as.character(screencasts_data[entry, "date"]),'
+
+Timestamps by: ',as.character(screencasts_data[entry, "contributor"]), '
 
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/', as.character(screencasts_data[entry, "vid_key"]),'" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>')
@@ -78,4 +81,4 @@ close(fileConn)
 
 ```
 
-## Header 2
+## All recordings
