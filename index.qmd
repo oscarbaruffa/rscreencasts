@@ -15,6 +15,8 @@ gs4_deauth()
 
 screencasts_data_google <- read_sheet("https://docs.google.com/spreadsheets/d/1pjj_G9ncJZPGTYPkR1BYwzA6bhJoeTfY2fJeGKSbOKM/edit#gid=444382177", sheet = "Summary")
 
+timestamps_data_google <- read_sheet("https://docs.google.com/spreadsheets/d/1pjj_G9ncJZPGTYPkR1BYwzA6bhJoeTfY2fJeGKSbOKM/edit#gid=444382177", sheet = "Screencasts")
+
 screencasts_data <- screencasts_data_google %>% 
   clean_names() %>% 
   filter(complete == "x") %>% 
@@ -23,6 +25,11 @@ screencasts_data <- screencasts_data_google %>%
   mutate(vid_key = str_extract(screencast_url, "(?<==).+")) %>% 
   identity() %>% 
   head()
+
+
+timestamps_data <- timestamps_data_google %>% 
+  clean_names()
+
 
 
 embed_pix_w <- 560
@@ -69,8 +76,11 @@ Recorded on: ',as.character(screencasts_data[entry, "date"]),'
 
 Timestamps by: ',as.character(screencasts_data[entry, "contributor"]), '
 
+## Full screencast
+<iframe width="',embed_pix_w,'" height="',embed_pix_h,'" src="https://www.youtube.com/embed/', as.character(screencasts_data[entry, "vid_key"]),'" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-<iframe width="',embed_pix_w,'" height="',embed_pix_h,'" src="https://www.youtube.com/embed/', as.character(screencasts_data[entry, "vid_key"]),'" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>')
+## Timestamp
+<iframe width="',embed_pix_w_small,'" height="',embed_pix_h_small,'" src="https://www.youtube.com/embed/', as.character(screencasts_data[entry, "vid_key"]),'" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>')
 
 fileConn<-file(paste0("content_pages/",as.character(screencasts_data[entry, "screencast"]),".qmd"))
 writeLines(content_text, fileConn)
