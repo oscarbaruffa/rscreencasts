@@ -1,11 +1,63 @@
 ---
-title: "rscreencasts"
+title: "R on Demand"
+listing:
+  contents: content_pages
 ---
 
 This is a Quarto website.
 
 To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
 
-```{r}
-1 + 1
+```{r get data, include=FALSE, cache=TRUE}
+library(magrittr)
+library(dplyr)
+library(googlesheets4)
+library(janitor)
+library(stringr)
+
+gs4_deauth()
+
+screencasts_data_google <- read_sheet("https://docs.google.com/spreadsheets/d/1pjj_G9ncJZPGTYPkR1BYwzA6bhJoeTfY2fJeGKSbOKM/edit#gid=444382177", sheet = "Summary")
+
+screencasts_data <- screencasts_data_google %>% 
+  clean_names() %>% 
+  filter(complete == "x") %>% 
+  arrange(screencast) %>% 
+  # regex is (?<=) positive assertion, means look after this match, then the additional = is the things to match,and .+ is all characters except whitespace 
+  mutate(vid_key = str_extract(screencast_url, "(?<==).+")) %>% 
+  identity()
+
 ```
+
+
+
+```{r create_pages, echo=FALSE, results='asis'}
+
+for (entry in row.names(screencasts_data)) {
+  
+  
+  #cat("\n\n#", as.character(screencasts_data[entry, "screencast"]), "\n\n")
+
+  #cat("Notable topics: ", as.character(screencasts_data[entry, "notable_topics"]), "\n\n")
+  
+
+# this text has to be left aligned for it to work properly, otherwise it gets tabbed and is not recognised as a yaml header
+content_text <- paste0(
+'---
+title: "',as.character(screencasts_data[entry, "screencast"]),'"\n
+---
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/', as.character(screencasts_data[entry, "vid_key"]),'" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>')
+
+fileConn<-file(paste0("content_pages/",as.character(screencasts_data[entry, "screencast"]),".qmd"))
+writeLines(content_text, fileConn)
+close(fileConn)
+  
+}
+
+
+
+
+```
+
+## Header 2
