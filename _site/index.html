@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>R on Demand</title>
+<title>R on Demand - R Screencasts</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -64,10 +64,9 @@ ul.task-list{list-style: none;}
     }
 
     const options = {
-      valueNames: ['listing-title','listing-author','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      page: 25,
-    pagination: { item: "<li class='page-item'><a class='page page-link' href='#'></a></li>" },
-      searchColumns: ["listing-title","listing-author","listing-description"],
+      valueNames: ['listing-date','listing-title','listing-author','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      
+      searchColumns: ["listing-date","listing-title","listing-author","listing-description"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -104,9 +103,6 @@ ul.task-list{list-style: none;}
   <li class="nav-item">
     <a class="nav-link" href="./about.html">About</a>
   </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./content_pages/Plastic Waste.html">Plastic Waste</a>
-  </li>  
 </ul>
               <div id="quarto-search" class="" title="Search"></div>
           </div> <!-- /navcollapse -->
@@ -131,7 +127,7 @@ ul.task-list{list-style: none;}
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">R on Demand</h1>
+<h1 class="title">R Screencasts</h1>
 </div>
 
 
@@ -147,8 +143,18 @@ ul.task-list{list-style: none;}
 
 </header>
 
-<p>This is a Quarto website.</p>
-<p>To learn more about Quarto websites visit <a href="https://quarto.org/docs/websites" class="uri">https://quarto.org/docs/websites</a>.</p>
+<p>If you’re looking to learn how to analyze data, you’ve come to the right place.</p>
+<p>David Robinson has recorded a bunch of screencasts where he uses R to analyze data he has never seen before. These are fantastic examples of how to think about approaching an analysis.</p>
+<blockquote class="blockquote">
+<p>It’s like watching over the shoulder of an experienced colleague.</p>
+</blockquote>
+<p>In each video you’ll learn:</p>
+<ul>
+<li><p>How to approach the analysis (when there’s no guiding questions)</p></li>
+<li><p>Handy R tips and tricks</p></li>
+<li><p>What packages and methods he’s using, and why.</p></li>
+</ul>
+<p>All code is shared and all datasets are publicly available.</p>
 <section id="header-2" class="level2">
 <h2 class="anchored" data-anchor-id="header-2">Header 2</h2>
 
@@ -158,7 +164,7 @@ ul.task-list{list-style: none;}
 
 <div class="quarto-listing quarto-listing-container-default" id="listing-listing">
 <div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-listing-file-modified-sort="1652417024065" data-listing-reading-time-sort="0.075">
+<div class="quarto-post image-right" data-index="0" data-listing-date-sort="1591653600000" data-listing-file-modified-sort="1652420550522" data-listing-reading-time-sort="0.08">
 <div class="body">
 <a href="./content_pages/African-American Achievements.html">
 <h3 class="no-anchor listing-title">
@@ -168,15 +174,19 @@ African-American Achievements
 
 </div>
 <div class="listing-description">
-
+<p><code>plotly</code> interactive timeline, Wikipedia web scraping</p>
 </div>
 </a>
 </div>
 <div class="metadata">
-<a href="./content_pages/African-American Achievements.html"> </a>
+<a href="./content_pages/African-American Achievements.html">
+<div class="listing-date">
+Jun 9, 2020
+</div>
+</a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="1" data-listing-file-modified-sort="1652417024065" data-listing-reading-time-sort="0.075">
+<div class="quarto-post image-right" data-index="1" data-listing-date-sort="1592258400000" data-listing-file-modified-sort="1652420550523" data-listing-reading-time-sort="0.08">
 <div class="body">
 <a href="./content_pages/African-American History.html">
 <h3 class="no-anchor listing-title">
@@ -186,15 +196,19 @@ African-American History
 
 </div>
 <div class="listing-description">
-
+<p>Network diagram, Wordcloud</p>
 </div>
 </a>
 </div>
 <div class="metadata">
-<a href="./content_pages/African-American History.html"> </a>
+<a href="./content_pages/African-American History.html">
+<div class="listing-date">
+Jun 16, 2020
+</div>
+</a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="2" data-listing-file-modified-sort="1652417024065" data-listing-reading-time-sort="0.075">
+<div class="quarto-post image-right" data-index="2" data-listing-date-sort="1588629600000" data-listing-file-modified-sort="1652420550525" data-listing-reading-time-sort="0.08">
 <div class="body">
 <a href="./content_pages/Animal Crossing.html">
 <h3 class="no-anchor listing-title">
@@ -204,15 +218,19 @@ Animal Crossing
 
 </div>
 <div class="listing-description">
-
+<p>Topic modelling (stm package)</p>
 </div>
 </a>
 </div>
 <div class="metadata">
-<a href="./content_pages/Animal Crossing.html"> </a>
+<a href="./content_pages/Animal Crossing.html">
+<div class="listing-date">
+May 5, 2020
+</div>
+</a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="3" data-listing-file-modified-sort="1652417024069" data-listing-reading-time-sort="0.075">
+<div class="quarto-post image-right" data-index="3" data-listing-date-sort="1610406000000" data-listing-file-modified-sort="1652420550527" data-listing-reading-time-sort="0.08">
 <div class="body">
 <a href="./content_pages/Art Collections.html">
 <h3 class="no-anchor listing-title">
@@ -222,15 +240,19 @@ Art Collections
 
 </div>
 <div class="listing-description">
-
+<p>geom_area plot, distributions, calculating area (square meters) and ratio (width / height)</p>
 </div>
 </a>
 </div>
 <div class="metadata">
-<a href="./content_pages/Art Collections.html"> </a>
+<a href="./content_pages/Art Collections.html">
+<div class="listing-date">
+Jan 12, 2021
+</div>
+</a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="4" data-listing-file-modified-sort="1652417024069" data-listing-reading-time-sort="0.075">
+<div class="quarto-post image-right" data-index="4" data-listing-date-sort="1595282400000" data-listing-file-modified-sort="1652420550528" data-listing-reading-time-sort="0.08">
 <div class="body">
 <a href="./content_pages/Australian Animal Outcomes.html">
 <h3 class="no-anchor listing-title">
@@ -240,15 +262,19 @@ Australian Animal Outcomes
 
 </div>
 <div class="listing-description">
-
+<p>Data manipulation, Web Scraping (rvest package) and SelectorGadget, Animated Choropleth Map</p>
 </div>
 </a>
 </div>
 <div class="metadata">
-<a href="./content_pages/Australian Animal Outcomes.html"> </a>
+<a href="./content_pages/Australian Animal Outcomes.html">
+<div class="listing-date">
+Jul 21, 2020
+</div>
+</a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="5" data-listing-file-modified-sort="1652417024069" data-listing-reading-time-sort="0.075">
+<div class="quarto-post image-right" data-index="5" data-listing-date-sort="1589839200000" data-listing-file-modified-sort="1652420550529" data-listing-reading-time-sort="0.08">
 <div class="body">
 <a href="./content_pages/Beach Volleyball.html">
 <h3 class="no-anchor listing-title">
@@ -258,1227 +284,22 @@ Beach Volleyball
 
 </div>
 <div class="listing-description">
-
+<p>Data cleaning, Logistic regression</p>
 </div>
 </a>
 </div>
 <div class="metadata">
-<a href="./content_pages/Beach Volleyball.html"> </a>
+<a href="./content_pages/Beach Volleyball.html">
+<div class="listing-date">
+May 19, 2020
 </div>
-</div>
-<div class="quarto-post image-right" data-index="6" data-listing-file-modified-sort="1652417024069" data-listing-reading-time-sort="0.075">
-<div class="body">
-<a href="./content_pages/Beer Production.html">
-<h3 class="no-anchor listing-title">
-Beer Production
-</h3>
-<div class="listing-subtitle">
-
-</div>
-<div class="listing-description">
-
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./content_pages/Beer Production.html"> </a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="7" data-listing-file-modified-sort="1652417024069" data-listing-reading-time-sort="0.075">
-<div class="body">
-<a href="./content_pages/Beyonce and Taylor Swift Lyrics.html">
-<h3 class="no-anchor listing-title">
-Beyonce and Taylor Swift Lyrics
-</h3>
-<div class="listing-subtitle">
-
-</div>
-<div class="listing-description">
-
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./content_pages/Beyonce and Taylor Swift Lyrics.html"> </a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="8" data-listing-file-modified-sort="1652417024073" data-listing-reading-time-sort="0.075">
-<div class="body">
-<a href="./content_pages/Big Mac Index.html">
-<h3 class="no-anchor listing-title">
-Big Mac Index
-</h3>
-<div class="listing-subtitle">
-
-</div>
-<div class="listing-description">
-
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./content_pages/Big Mac Index.html"> </a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="9" data-listing-file-modified-sort="1652417024073" data-listing-reading-time-sort="0.075">
-<div class="body">
-<a href="./content_pages/Bird Collisions.html">
-<h3 class="no-anchor listing-title">
-Bird Collisions
-</h3>
-<div class="listing-subtitle">
-
-</div>
-<div class="listing-description">
-
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./content_pages/Bird Collisions.html"> </a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="10" data-listing-file-modified-sort="1652417024073" data-listing-reading-time-sort="0.075">
-<div class="body">
-<a href="./content_pages/Board Game Reviews.html">
-<h3 class="no-anchor listing-title">
-Board Game Reviews
-</h3>
-<div class="listing-subtitle">
-
-</div>
-<div class="listing-description">
-
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./content_pages/Board Game Reviews.html"> </a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="11" data-listing-file-modified-sort="1652417024073" data-listing-reading-time-sort="0.075">
-<div class="body">
-<a href="./content_pages/Bob Ross Paintings.html">
-<h3 class="no-anchor listing-title">
-Bob Ross Paintings
-</h3>
-<div class="listing-subtitle">
-
-</div>
-<div class="listing-description">
-
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./content_pages/Bob Ross Paintings.html"> </a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="12" data-listing-file-modified-sort="1652417024077" data-listing-reading-time-sort="0.075">
-<div class="body">
-<a href="./content_pages/Broadway Musicals.html">
-<h3 class="no-anchor listing-title">
-Broadway Musicals
-</h3>
-<div class="listing-subtitle">
-
-</div>
-<div class="listing-description">
-
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./content_pages/Broadway Musicals.html"> </a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="13" data-listing-file-modified-sort="1652417024081" data-listing-reading-time-sort="0.075">
-<div class="body">
-<a href="./content_pages/CORD-19 Data Package.html">
-<h3 class="no-anchor listing-title">
-CORD-19 Data Package
-</h3>
-<div class="listing-subtitle">
-
-</div>
-<div class="listing-description">
-
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./content_pages/CORD-19 Data Package.html"> </a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="14" data-listing-file-modified-sort="1652417024085" data-listing-reading-time-sort="0.075">
-<div class="body">
-<a href="./content_pages/COVID-19 Open Research Dataset (CORD-19).html">
-<h3 class="no-anchor listing-title">
-COVID-19 Open Research Dataset (CORD-19)
-</h3>
-<div class="listing-subtitle">
-
-</div>
-<div class="listing-description">
-
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./content_pages/COVID-19 Open Research Dataset (CORD-19).html"> </a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="15" data-listing-file-modified-sort="1652417024085" data-listing-reading-time-sort="0.075">
-<div class="body">
-<a href="./content_pages/CRAN Package Code.html">
-<h3 class="no-anchor listing-title">
-CRAN Package Code
-</h3>
-<div class="listing-subtitle">
-
-</div>
-<div class="listing-description">
-
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./content_pages/CRAN Package Code.html"> </a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="16" data-listing-file-modified-sort="1652417024077" data-listing-reading-time-sort="0.075">
-<div class="body">
-<a href="./content_pages/Car Fuel Efficiency.html">
-<h3 class="no-anchor listing-title">
-Car Fuel Efficiency
-</h3>
-<div class="listing-subtitle">
-
-</div>
-<div class="listing-description">
-
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./content_pages/Car Fuel Efficiency.html"> </a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="17" data-listing-file-modified-sort="1652417024077" data-listing-reading-time-sort="0.075">
-<div class="body">
-<a href="./content_pages/Caribou Locations.html">
-<h3 class="no-anchor listing-title">
-Caribou Locations
-</h3>
-<div class="listing-subtitle">
-
-</div>
-<div class="listing-description">
-
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./content_pages/Caribou Locations.html"> </a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="18" data-listing-file-modified-sort="1652417024077" data-listing-reading-time-sort="0.075">
-<div class="body">
-<a href="./content_pages/Chopped.html">
-<h3 class="no-anchor listing-title">
-Chopped
-</h3>
-<div class="listing-subtitle">
-
-</div>
-<div class="listing-description">
-
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./content_pages/Chopped.html"> </a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="19" data-listing-file-modified-sort="1652417024077" data-listing-reading-time-sort="0.075">
-<div class="body">
-<a href="./content_pages/Cocktails.html">
-<h3 class="no-anchor listing-title">
-Cocktails
-</h3>
-<div class="listing-subtitle">
-
-</div>
-<div class="listing-description">
-
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./content_pages/Cocktails.html"> </a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="20" data-listing-file-modified-sort="1652417024081" data-listing-reading-time-sort="0.075">
-<div class="body">
-<a href="./content_pages/Coffee Ratings.html">
-<h3 class="no-anchor listing-title">
-Coffee Ratings
-</h3>
-<div class="listing-subtitle">
-
-</div>
-<div class="listing-description">
-
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./content_pages/Coffee Ratings.html"> </a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="21" data-listing-file-modified-sort="1652417024081" data-listing-reading-time-sort="0.075">
-<div class="body">
-<a href="./content_pages/College Majors and Income.html">
-<h3 class="no-anchor listing-title">
-College Majors and Income
-</h3>
-<div class="listing-subtitle">
-
-</div>
-<div class="listing-description">
-
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./content_pages/College Majors and Income.html"> </a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="22" data-listing-file-modified-sort="1652417024085" data-listing-reading-time-sort="0.075">
-<div class="body">
-<a href="./content_pages/Dolphins.html">
-<h3 class="no-anchor listing-title">
-Dolphins
-</h3>
-<div class="listing-subtitle">
-
-</div>
-<div class="listing-description">
-
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./content_pages/Dolphins.html"> </a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="23" data-listing-file-modified-sort="1652417024089" data-listing-reading-time-sort="0.075">
-<div class="body">
-<a href="./content_pages/European Energy.html">
-<h3 class="no-anchor listing-title">
-European Energy
-</h3>
-<div class="listing-subtitle">
-
-</div>
-<div class="listing-description">
-
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./content_pages/European Energy.html"> </a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="24" data-listing-file-modified-sort="1652417024089" data-listing-reading-time-sort="0.075">
-<div class="body">
-<a href="./content_pages/French Train Delays.html">
-<h3 class="no-anchor listing-title">
-French Train Delays
-</h3>
-<div class="listing-subtitle">
-
-</div>
-<div class="listing-description">
-
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./content_pages/French Train Delays.html"> </a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="25" data-listing-file-modified-sort="1652417024089" data-listing-reading-time-sort="0.075">
-<div class="body">
-<a href="./content_pages/Friends.html">
-<h3 class="no-anchor listing-title">
-Friends
-</h3>
-<div class="listing-subtitle">
-
-</div>
-<div class="listing-description">
-
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./content_pages/Friends.html"> </a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="26" data-listing-file-modified-sort="1652417024089" data-listing-reading-time-sort="0.075">
-<div class="body">
-<a href="./content_pages/GDPR Violations.html">
-<h3 class="no-anchor listing-title">
-GDPR Violations
-</h3>
-<div class="listing-subtitle">
-
-</div>
-<div class="listing-description">
-
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./content_pages/GDPR Violations.html"> </a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="27" data-listing-file-modified-sort="1652417024093" data-listing-reading-time-sort="0.075">
-<div class="body">
-<a href="./content_pages/Global Crop Yields.html">
-<h3 class="no-anchor listing-title">
-Global Crop Yields
-</h3>
-<div class="listing-subtitle">
-
-</div>
-<div class="listing-description">
-
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./content_pages/Global Crop Yields.html"> </a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="28" data-listing-file-modified-sort="1652417024093" data-listing-reading-time-sort="0.075">
-<div class="body">
-<a href="./content_pages/Government Spending on Kids.html">
-<h3 class="no-anchor listing-title">
-Government Spending on Kids
-</h3>
-<div class="listing-subtitle">
-
-</div>
-<div class="listing-description">
-
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./content_pages/Government Spending on Kids.html"> </a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="29" data-listing-file-modified-sort="1652417024093" data-listing-reading-time-sort="0.075">
-<div class="body">
-<a href="./content_pages/Great American Beer Festival.html">
-<h3 class="no-anchor listing-title">
-Great American Beer Festival
-</h3>
-<div class="listing-subtitle">
-
-</div>
-<div class="listing-description">
-
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./content_pages/Great American Beer Festival.html"> </a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="30" data-listing-file-modified-sort="1652417024093" data-listing-reading-time-sort="0.075">
-<div class="body">
-<a href="./content_pages/HBCU Enrollment.html">
-<h3 class="no-anchor listing-title">
-HBCU Enrollment
-</h3>
-<div class="listing-subtitle">
-
-</div>
-<div class="listing-description">
-
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./content_pages/HBCU Enrollment.html"> </a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="31" data-listing-file-modified-sort="1652417024097" data-listing-reading-time-sort="0.075">
-<div class="body">
-<a href="./content_pages/Himalayan Climbers.html">
-<h3 class="no-anchor listing-title">
-Himalayan Climbers
-</h3>
-<div class="listing-subtitle">
-
-</div>
-<div class="listing-description">
-
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./content_pages/Himalayan Climbers.html"> </a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="32" data-listing-file-modified-sort="1652417024097" data-listing-reading-time-sort="0.075">
-<div class="body">
-<a href="./content_pages/Historical Phones.html">
-<h3 class="no-anchor listing-title">
-Historical Phones
-</h3>
-<div class="listing-subtitle">
-
-</div>
-<div class="listing-description">
-
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./content_pages/Historical Phones.html"> </a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="33" data-listing-file-modified-sort="1652417024097" data-listing-reading-time-sort="0.075">
-<div class="body">
-<a href="./content_pages/Horror Movie Profits.html">
-<h3 class="no-anchor listing-title">
-Horror Movie Profits
-</h3>
-<div class="listing-subtitle">
-
-</div>
-<div class="listing-description">
-
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./content_pages/Horror Movie Profits.html"> </a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="34" data-listing-file-modified-sort="1652417024101" data-listing-reading-time-sort="0.075">
-<div class="body">
-<a href="./content_pages/Horror Movies.html">
-<h3 class="no-anchor listing-title">
-Horror Movies
-</h3>
-<div class="listing-subtitle">
-
-</div>
-<div class="listing-description">
-
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./content_pages/Horror Movies.html"> </a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="35" data-listing-file-modified-sort="1652417024101" data-listing-reading-time-sort="0.075">
-<div class="body">
-<a href="./content_pages/IKEA Furniture.html">
-<h3 class="no-anchor listing-title">
-IKEA Furniture
-</h3>
-<div class="listing-subtitle">
-
-</div>
-<div class="listing-description">
-
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./content_pages/IKEA Furniture.html"> </a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="36" data-listing-file-modified-sort="1652417024101" data-listing-reading-time-sort="0.075">
-<div class="body">
-<a href="./content_pages/Kenya Census.html">
-<h3 class="no-anchor listing-title">
-Kenya Census
-</h3>
-<div class="listing-subtitle">
-
-</div>
-<div class="listing-description">
-
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./content_pages/Kenya Census.html"> </a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="37" data-listing-file-modified-sort="1652417024105" data-listing-reading-time-sort="0.075">
-<div class="body">
-<a href="./content_pages/Malaria Incidence.html">
-<h3 class="no-anchor listing-title">
-Malaria Incidence
-</h3>
-<div class="listing-subtitle">
-
-</div>
-<div class="listing-description">
-
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./content_pages/Malaria Incidence.html"> </a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="38" data-listing-file-modified-sort="1652417024105" data-listing-reading-time-sort="0.075">
-<div class="body">
-<a href="./content_pages/Maryland Bridges.html">
-<h3 class="no-anchor listing-title">
-Maryland Bridges
-</h3>
-<div class="listing-subtitle">
-
-</div>
-<div class="listing-description">
-
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./content_pages/Maryland Bridges.html"> </a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="39" data-listing-file-modified-sort="1652417024105" data-listing-reading-time-sort="0.075">
-<div class="body">
-<a href="./content_pages/Media Franchise Revenue.html">
-<h3 class="no-anchor listing-title">
-Media Franchise Revenue
-</h3>
-<div class="listing-subtitle">
-
-</div>
-<div class="listing-description">
-
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./content_pages/Media Franchise Revenue.html"> </a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="40" data-listing-file-modified-sort="1652417024105" data-listing-reading-time-sort="0.075">
-<div class="body">
-<a href="./content_pages/Medium Articles.html">
-<h3 class="no-anchor listing-title">
-Medium Articles
-</h3>
-<div class="listing-subtitle">
-
-</div>
-<div class="listing-description">
-
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./content_pages/Medium Articles.html"> </a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="41" data-listing-file-modified-sort="1652417024105" data-listing-reading-time-sort="0.075">
-<div class="body">
-<a href="./content_pages/NCAA Women's Basketball.html">
-<h3 class="no-anchor listing-title">
-NCAA Women’s Basketball
-</h3>
-<div class="listing-subtitle">
-
-</div>
-<div class="listing-description">
-
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./content_pages/NCAA Women's Basketball.html"> </a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="42" data-listing-file-modified-sort="1652417024109" data-listing-reading-time-sort="0.075">
-<div class="body">
-<a href="./content_pages/NYC Restaurant Inspections.html">
-<h3 class="no-anchor listing-title">
-NYC Restaurant Inspections
-</h3>
-<div class="listing-subtitle">
-
-</div>
-<div class="listing-description">
-
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./content_pages/NYC Restaurant Inspections.html"> </a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="43" data-listing-file-modified-sort="1652417024109" data-listing-reading-time-sort="0.075">
-<div class="body">
-<a href="./content_pages/NYC Squirrel Census.html">
-<h3 class="no-anchor listing-title">
-NYC Squirrel Census
-</h3>
-<div class="listing-subtitle">
-
-</div>
-<div class="listing-description">
-
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./content_pages/NYC Squirrel Census.html"> </a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="44" data-listing-file-modified-sort="1652417024109" data-listing-reading-time-sort="0.075">
-<div class="body">
-<a href="./content_pages/Ninja Warrior.html">
-<h3 class="no-anchor listing-title">
-Ninja Warrior
-</h3>
-<div class="listing-subtitle">
-
-</div>
-<div class="listing-description">
-
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./content_pages/Ninja Warrior.html"> </a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="45" data-listing-file-modified-sort="1652417024109" data-listing-reading-time-sort="0.075">
-<div class="body">
-<a href="./content_pages/Nobel Prize Winners.html">
-<h3 class="no-anchor listing-title">
-Nobel Prize Winners
-</h3>
-<div class="listing-subtitle">
-
-</div>
-<div class="listing-description">
-
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./content_pages/Nobel Prize Winners.html"> </a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="46" data-listing-file-modified-sort="1652417024113" data-listing-reading-time-sort="0.075">
-<div class="body">
-<a href="./content_pages/Palmer Penguins.html">
-<h3 class="no-anchor listing-title">
-Palmer Penguins
-</h3>
-<div class="listing-subtitle">
-
-</div>
-<div class="listing-description">
-
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./content_pages/Palmer Penguins.html"> </a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="47" data-listing-file-modified-sort="1652417024113" data-listing-reading-time-sort="0.075">
-<div class="body">
-<a href="./content_pages/Pizza Ratings.html">
-<h3 class="no-anchor listing-title">
-Pizza Ratings
-</h3>
-<div class="listing-subtitle">
-
-</div>
-<div class="listing-description">
-
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./content_pages/Pizza Ratings.html"> </a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="48" data-listing-file-modified-sort="1652417024113" data-listing-reading-time-sort="0.075">
-<div class="body">
-<a href="./content_pages/Plants in Danger.html">
-<h3 class="no-anchor listing-title">
-Plants in Danger
-</h3>
-<div class="listing-subtitle">
-
-</div>
-<div class="listing-description">
-
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./content_pages/Plants in Danger.html"> </a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="49" data-listing-file-modified-sort="1652417024113" data-listing-reading-time-sort="0.075">
-<div class="body">
-<a href="./content_pages/Plastic Waste.html">
-<h3 class="no-anchor listing-title">
-Plastic Waste
-</h3>
-<div class="listing-subtitle">
-
-</div>
-<div class="listing-description">
-
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./content_pages/Plastic Waste.html"> </a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="50" data-listing-file-modified-sort="1652417024117" data-listing-reading-time-sort="0.075">
-<div class="body">
-<a href="./content_pages/R Downloads.html">
-<h3 class="no-anchor listing-title">
-R Downloads
-</h3>
-<div class="listing-subtitle">
-
-</div>
-<div class="listing-description">
-
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./content_pages/R Downloads.html"> </a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="51" data-listing-file-modified-sort="1652417024120" data-listing-reading-time-sort="0.075">
-<div class="body">
-<a href="./content_pages/Ramen Reviews.html">
-<h3 class="no-anchor listing-title">
-Ramen Reviews
-</h3>
-<div class="listing-subtitle">
-
-</div>
-<div class="listing-description">
-
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./content_pages/Ramen Reviews.html"> </a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="52" data-listing-file-modified-sort="1652417024147" data-listing-reading-time-sort="0.075">
-<div class="body">
-<a href="./content_pages/Seattle Bike Counts.html">
-<h3 class="no-anchor listing-title">
-Seattle Bike Counts
-</h3>
-<div class="listing-subtitle">
-
-</div>
-<div class="listing-description">
-
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./content_pages/Seattle Bike Counts.html"> </a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="53" data-listing-file-modified-sort="1652417024147" data-listing-reading-time-sort="0.075">
-<div class="body">
-<a href="./content_pages/Seattle Pet Names.html">
-<h3 class="no-anchor listing-title">
-Seattle Pet Names
-</h3>
-<div class="listing-subtitle">
-
-</div>
-<div class="listing-description">
-
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./content_pages/Seattle Pet Names.html"> </a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="54" data-listing-file-modified-sort="1652417024147" data-listing-reading-time-sort="0.075">
-<div class="body">
-<a href="./content_pages/Simpsons Guest Stars.html">
-<h3 class="no-anchor listing-title">
-Simpsons Guest Stars
-</h3>
-<div class="listing-subtitle">
-
-</div>
-<div class="listing-description">
-
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./content_pages/Simpsons Guest Stars.html"> </a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="55" data-listing-file-modified-sort="1652417024151" data-listing-reading-time-sort="0.075">
-<div class="body">
-<a href="./content_pages/Space Launches.html">
-<h3 class="no-anchor listing-title">
-Space Launches
-</h3>
-<div class="listing-subtitle">
-
-</div>
-<div class="listing-description">
-
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./content_pages/Space Launches.html"> </a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="56" data-listing-file-modified-sort="1652417024151" data-listing-reading-time-sort="0.075">
-<div class="body">
-<a href="./content_pages/Student-Teacher Ratios.html">
-<h3 class="no-anchor listing-title">
-Student-Teacher Ratios
-</h3>
-<div class="listing-subtitle">
-
-</div>
-<div class="listing-description">
-
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./content_pages/Student-Teacher Ratios.html"> </a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="57" data-listing-file-modified-sort="1652417024159" data-listing-reading-time-sort="0.075">
-<div class="body">
-<a href="./content_pages/TV Golden Age.html">
-<h3 class="no-anchor listing-title">
-TV Golden Age
-</h3>
-<div class="listing-subtitle">
-
-</div>
-<div class="listing-description">
-
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./content_pages/TV Golden Age.html"> </a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="58" data-listing-file-modified-sort="1652417024151" data-listing-reading-time-sort="0.075">
-<div class="body">
-<a href="./content_pages/Tennis Tournaments.html">
-<h3 class="no-anchor listing-title">
-Tennis Tournaments
-</h3>
-<div class="listing-subtitle">
-
-</div>
-<div class="listing-description">
-
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./content_pages/Tennis Tournaments.html"> </a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="59" data-listing-file-modified-sort="1652417024155" data-listing-reading-time-sort="0.075">
-<div class="body">
-<a href="./content_pages/Thanksgiving Dinner.html">
-<h3 class="no-anchor listing-title">
-Thanksgiving Dinner
-</h3>
-<div class="listing-subtitle">
-
-</div>
-<div class="listing-description">
-
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./content_pages/Thanksgiving Dinner.html"> </a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="60" data-listing-file-modified-sort="1652417024155" data-listing-reading-time-sort="0.075">
-<div class="body">
-<a href="./content_pages/The Office.html">
-<h3 class="no-anchor listing-title">
-The Office
-</h3>
-<div class="listing-subtitle">
-
-</div>
-<div class="listing-description">
-
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./content_pages/The Office.html"> </a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="61" data-listing-file-modified-sort="1652417024155" data-listing-reading-time-sort="0.075">
-<div class="body">
-<a href="./content_pages/TidyTuesday Tweets.html">
-<h3 class="no-anchor listing-title">
-TidyTuesday Tweets
-</h3>
-<div class="listing-subtitle">
-
-</div>
-<div class="listing-description">
-
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./content_pages/TidyTuesday Tweets.html"> </a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="62" data-listing-file-modified-sort="1652417024155" data-listing-reading-time-sort="0.075">
-<div class="body">
-<a href="./content_pages/Tour de France.html">
-<h3 class="no-anchor listing-title">
-Tour de France
-</h3>
-<div class="listing-subtitle">
-
-</div>
-<div class="listing-description">
-
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./content_pages/Tour de France.html"> </a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="63" data-listing-file-modified-sort="1652417024159" data-listing-reading-time-sort="0.075">
-<div class="body">
-<a href="./content_pages/Transit Costs.html">
-<h3 class="no-anchor listing-title">
-Transit Costs
-</h3>
-<div class="listing-subtitle">
-
-</div>
-<div class="listing-description">
-
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./content_pages/Transit Costs.html"> </a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="64" data-listing-file-modified-sort="1652417024159" data-listing-reading-time-sort="0.075">
-<div class="body">
-<a href="./content_pages/US Dairy Consumption.html">
-<h3 class="no-anchor listing-title">
-US Dairy Consumption
-</h3>
-<div class="listing-subtitle">
-
-</div>
-<div class="listing-description">
-
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./content_pages/US Dairy Consumption.html"> </a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="65" data-listing-file-modified-sort="1652417024159" data-listing-reading-time-sort="0.075">
-<div class="body">
-<a href="./content_pages/US Incarceration.html">
-<h3 class="no-anchor listing-title">
-US Incarceration
-</h3>
-<div class="listing-subtitle">
-
-</div>
-<div class="listing-description">
-
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./content_pages/US Incarceration.html"> </a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="66" data-listing-file-modified-sort="1652417024163" data-listing-reading-time-sort="0.075">
-<div class="body">
-<a href="./content_pages/US PhDs.html">
-<h3 class="no-anchor listing-title">
-US PhDs
-</h3>
-<div class="listing-subtitle">
-
-</div>
-<div class="listing-description">
-
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./content_pages/US PhDs.html"> </a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="67" data-listing-file-modified-sort="1652417024163" data-listing-reading-time-sort="0.075">
-<div class="body">
-<a href="./content_pages/US Wind Turbines.html">
-<h3 class="no-anchor listing-title">
-US Wind Turbines
-</h3>
-<div class="listing-subtitle">
-
-</div>
-<div class="listing-description">
-
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./content_pages/US Wind Turbines.html"> </a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="68" data-listing-file-modified-sort="1652417024163" data-listing-reading-time-sort="0.075">
-<div class="body">
-<a href="./content_pages/Volcano Eruptions.html">
-<h3 class="no-anchor listing-title">
-Volcano Eruptions
-</h3>
-<div class="listing-subtitle">
-
-</div>
-<div class="listing-description">
-
-</div>
 </a>
-</div>
-<div class="metadata">
-<a href="./content_pages/Volcano Eruptions.html"> </a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="69" data-listing-file-modified-sort="1652417024167" data-listing-reading-time-sort="0.075">
-<div class="body">
-<a href="./content_pages/Wine Ratings.html">
-<h3 class="no-anchor listing-title">
-Wine Ratings
-</h3>
-<div class="listing-subtitle">
-
-</div>
-<div class="listing-description">
-
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./content_pages/Wine Ratings.html"> </a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="70" data-listing-file-modified-sort="1652417024167" data-listing-reading-time-sort="0.075">
-<div class="body">
-<a href="./content_pages/Women in the Workplace.html">
-<h3 class="no-anchor listing-title">
-Women in the Workplace
-</h3>
-<div class="listing-subtitle">
-
-</div>
-<div class="listing-description">
-
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./content_pages/Women in the Workplace.html"> </a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="71" data-listing-file-modified-sort="1652417024167" data-listing-reading-time-sort="0.075">
-<div class="body">
-<a href="./content_pages/Women's World Cup.html">
-<h3 class="no-anchor listing-title">
-Women’s World Cup
-</h3>
-<div class="listing-subtitle">
-
-</div>
-<div class="listing-description">
-
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./content_pages/Women's World Cup.html"> </a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="72" data-listing-file-modified-sort="1652417024171" data-listing-reading-time-sort="0.075">
-<div class="body">
-<a href="./content_pages/X-Men Comics.html">
-<h3 class="no-anchor listing-title">
-X-Men Comics
-</h3>
-<div class="listing-subtitle">
-
-</div>
-<div class="listing-description">
-
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./content_pages/X-Men Comics.html"> </a>
 </div>
 </div>
 </div>
 <div class="listing-no-matching d-none">
 No matching items
 </div>
-<nav id="listing-pagination" class="listing-pagination" aria-label="Page Navigation">
-  <ul class="pagination"></ul>
-</nav>
 </div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {

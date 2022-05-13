@@ -2,14 +2,14 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "R on Demand",
+    "title": "R Screencasts",
     "section": "",
-    "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites."
+    "text": "If you’re looking to learn how to analyze data, you’ve come to the right place.\nDavid Robinson has recorded a bunch of screencasts where he uses R to analyze data he has never seen before. These are fantastic examples of how to think about approaching an analysis.\nIn each video you’ll learn:\nAll code is shared and all datasets are publicly available."
   },
   {
     "objectID": "index.html#header-2",
     "href": "index.html#header-2",
-    "title": "R on Demand",
+    "title": "R Screencasts",
     "section": "Header 2",
     "text": "Header 2"
   },
@@ -18,6 +18,48 @@
     "href": "about.html",
     "title": "About",
     "section": "",
-    "text": "1 + 1\n\n[1] 2"
+    "text": "David Robinson for recording the screencasts.\nAlex Cookson and Eric Fletcher for painstakingly timestamping and describing all the content.\nOscar Baruffa for creating this website collating it all.\nThomas Mock for maintaining the TidyTuesday challenge.\nCountless others for R, RStudio, Quarto and a gazillion packages that make this all possible.\n\nIf you’d like to keep up to date with this website and other resources from Oscar Baruffa, sign up to the newsletter."
+  },
+  {
+    "objectID": "content_pages/African-American Achievements.html",
+    "href": "content_pages/African-American Achievements.html",
+    "title": "African-American Achievements",
+    "section": "",
+    "text": "test text"
+  },
+  {
+    "objectID": "content_pages/African-American History.html",
+    "href": "content_pages/African-American History.html",
+    "title": "African-American History",
+    "section": "",
+    "text": "test text"
+  },
+  {
+    "objectID": "content_pages/Animal Crossing.html",
+    "href": "content_pages/Animal Crossing.html",
+    "title": "Animal Crossing",
+    "section": "",
+    "text": "test text"
+  },
+  {
+    "objectID": "content_pages/Art Collections.html",
+    "href": "content_pages/Art Collections.html",
+    "title": "Art Collections",
+    "section": "",
+    "text": "test text"
+  },
+  {
+    "objectID": "content_pages/Australian Animal Outcomes.html",
+    "href": "content_pages/Australian Animal Outcomes.html",
+    "title": "Australian Animal Outcomes",
+    "section": "",
+    "text": "test text"
+  },
+  {
+    "objectID": "content_pages/Beach Volleyball.html",
+    "href": "content_pages/Beach Volleyball.html",
+    "title": "Beach Volleyball",
+    "section": "",
+    "text": "test text"
   }
 ]

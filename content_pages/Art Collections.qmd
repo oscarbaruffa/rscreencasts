@@ -1,6 +1,12 @@
 ---
 title: "Art Collections"
-
+description: "geom_area plot, distributions, calculating area (square meters) and ratio (width / height)"
+date: 2021-01-12
+date-format: long
 ---
+
+
+test text
+
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/AqwA5EJfLXo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
