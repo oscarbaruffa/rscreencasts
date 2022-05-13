@@ -59,7 +59,10 @@ All code is shared and all datasets are publicly available.
 ```{r create_pages, echo=FALSE, results='asis'}
 
 for (entry in row.names(screencasts_data)) {
-  
+ 
+   topic <- as.character(screencasts_data[entry, "screencast"])
+   
+   timestamps_entries <- subset(timestamps_data, screencast==topic)
   
  # this text has to be left aligned for it to work properly, otherwise it gets tabbed and is not recognised as a yaml header. Might be becuaxse of the AS IS argument
 content_text <- paste0(
@@ -80,11 +83,12 @@ Timestamps by: ',as.character(screencasts_data[entry, "contributor"]), '
 <iframe width="',embed_pix_w,'" height="',embed_pix_h,'" src="https://www.youtube.com/embed/', as.character(screencasts_data[entry, "vid_key"]),'" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Timestamp
-<iframe width="',embed_pix_w_small,'" height="',embed_pix_h_small,'" src="https://www.youtube.com/embed/', as.character(screencasts_data[entry, "vid_key"]),'" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>')
+<iframe width="',embed_pix_w_small,'" height="',embed_pix_h_small,'" src="https://www.youtube.com/embed/', as.character(screencasts_data[entry, "vid_key"]),'?start=106" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>')
 
 fileConn<-file(paste0("content_pages/",as.character(screencasts_data[entry, "screencast"]),".qmd"))
 writeLines(content_text, fileConn)
 close(fileConn)
+
   
 }
 
