@@ -58,34 +58,48 @@ All code is shared and all datasets are publicly available.
 
 ```{r create_pages, echo=FALSE, results='asis'}
 
-for (entry in row.names(screencasts_data)) {
+for (entry_screencast in row.names(screencasts_data)) {
  
-   topic <- as.character(screencasts_data[entry, "screencast"])
-   
+   topic <- as.character(screencasts_data[entry_screencast, "screencast"])
+   #not using a dplyr filter considtion, because it causes the render to fail for some 
+   #reason with the error "cannot find the specified file"
    timestamps_entries <- subset(timestamps_data, screencast==topic)
   
  # this text has to be left aligned for it to work properly, otherwise it gets tabbed and is not recognised as a yaml header. Might be becuaxse of the AS IS argument
 content_text <- paste0(
 '---
-title: "',as.character(screencasts_data[entry, "screencast"]),'"
-description: "',as.character(screencasts_data[entry, "notable_topics"]),'"
-date: ',as.character(screencasts_data[entry, "date"]),'
+title: "',as.character(screencasts_data[entry_screencast, "screencast"]),'"
+description: "',as.character(screencasts_data[entry_screencast, "notable_topics"]),'"
+date: ',as.character(screencasts_data[entry_screencast, "date"]),'
 date-format: long
 ---
 
-Notable topics: ',as.character(screencasts_data[entry, "notable_topics"]),'
+Notable topics: ',as.character(screencasts_data[entry_screencast, "notable_topics"]),'
 
-Recorded on: ',as.character(screencasts_data[entry, "date"]),'
+Recorded on: ',as.character(screencasts_data[entry_screencast, "date"]),'
 
-Timestamps by: ',as.character(screencasts_data[entry, "contributor"]), '
+Timestamps by: ',as.character(screencasts_data[entry_screencast, "contributor"]),'
 
 ## Full screencast
-<iframe width="',embed_pix_w,'" height="',embed_pix_h,'" src="https://www.youtube.com/embed/', as.character(screencasts_data[entry, "vid_key"]),'" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="',embed_pix_w,'" height="',embed_pix_h,'" src="https://www.youtube.com/embed/', as.character(screencasts_data[entry_screencast, "vid_key"]),'" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-## Timestamp
-<iframe width="',embed_pix_w_small,'" height="',embed_pix_h_small,'" src="https://www.youtube.com/embed/', as.character(screencasts_data[entry, "vid_key"]),'?start=106" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>')
+## Timestamps\n')
 
-fileConn<-file(paste0("content_pages/",as.character(screencasts_data[entry, "screencast"]),".qmd"))
+for (entry_timestamp in row.names(timestamps_entries)) {
+  
+
+
+content_text <- paste0(content_text,'\n',
+
+                      as.character(timestamps_entries[entry_timestamp, "timestamp_with_hours"]),' ',
+                                              
+                      as.character(timestamps_entries[entry_timestamp, "description"]),
+                      '\n','
+
+<iframe width="',embed_pix_w_small,'" height="',embed_pix_h_small,'" src="https://www.youtube.com/embed/', as.character(screencasts_data[entry_screencast, "vid_key"]),'?start=',as.character(timestamps_entries[entry_timestamp, "timestamp_seconds"]),'" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>\n')
+
+}
+fileConn<-file(paste0("content_pages/",as.character(screencasts_data[entry_screencast, "screencast"]),".qmd"))
 writeLines(content_text, fileConn)
 close(fileConn)
 
