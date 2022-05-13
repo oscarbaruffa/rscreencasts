@@ -9,7 +9,7 @@ Notable topics: Data cleaning, Logistic regression
 
 Recorded on: 2020-05-19
 
-Timestaps by" Eric Fletcher
+Timestamps by: Eric Fletcher
 
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/MfDdmsW3OMo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

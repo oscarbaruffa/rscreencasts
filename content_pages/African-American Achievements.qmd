@@ -9,7 +9,7 @@ Notable topics: `plotly` interactive timeline, Wikipedia web scraping
 
 Recorded on: 2020-06-09
 
-Timestaps by" Eric Fletcher
+Timestamps by: Eric Fletcher
 
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/-W-OopvhNPo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

@@ -25,7 +25,7 @@
     "href": "content_pages/African-American Achievements.html",
     "title": "African-American Achievements",
     "section": "",
-    "text": "Recorded on: 2020-06-09\nTimestaps by” Eric Fletcher"
+    "text": "Recorded on: 2020-06-09\nTimestamps by: Eric Fletcher"
   },
   {
     "objectID": "content_pages/African-American History.html",
@@ -46,7 +46,7 @@
     "href": "content_pages/Art Collections.html",
     "title": "Art Collections",
     "section": "",
-    "text": "test text"
+    "text": "Recorded on: 2021-01-12\nTimestamps by: Eric Fletcher"
   },
   {
     "objectID": "content_pages/Australian Animal Outcomes.html",
@@ -61,5 +61,12 @@
     "title": "Beach Volleyball",
     "section": "",
     "text": "test text"
+  },
+  {
+    "objectID": "index.html#all-recordings",
+    "href": "index.html#all-recordings",
+    "title": "R Screencasts",
+    "section": "All recordings",
+    "text": "All recordings"
   }
 ]
