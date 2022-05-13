@@ -4,7 +4,6 @@ listing:
   contents: content_pages
 ---
 
-
 ```{r get data, include=FALSE, cache=TRUE}
 library(magrittr)
 library(dplyr)
@@ -26,18 +25,21 @@ screencasts_data <- screencasts_data_google %>%
 
 ```
 
+If you're looking to learn how to analyze data, you've come to the right place.
 
-If you're looking to learn how to analyze data, you've come to the right place. 
+David Robinson has recorded a bunch of screencasts where he uses R to analyze data he has never seen before. These are fantastic examples of how to think about approaching an analysis.
 
-David Robinson has recorded a bunch of screencasts where he uses R to analyze data he has never seen before. These are fantastic examples of how to think about approaching an analysis. 
-> It's like watching over the shoulder of an experienced colleague. 
+> It's like watching over the shoulder of an experienced colleague.
 
 In each video you'll learn:
-- How to approach the analysis  (when there's no guiding questions)
-- Handy R tips and tricks
-- What packages and methods he's using, and why. 
 
-All code is shared and all datasets are publicly available. 
+-   How to approach the analysis (when there's no guiding questions)
+
+-   Handy R tips and tricks
+
+-   What packages and methods he's using, and why.
+
+All code is shared and all datasets are publicly available.
 
 ```{r create_pages, echo=FALSE, results='asis'}
 
