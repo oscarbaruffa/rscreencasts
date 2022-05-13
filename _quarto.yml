@@ -9,7 +9,6 @@ website:
       - href: index.qmd
         text: Home
       - about.qmd
-      - content_pages/Plastic Waste.qmd 
 
 format:
   html:
