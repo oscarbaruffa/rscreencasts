@@ -1,0 +1,1566 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-0.9.388">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>R on Demand</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+span.underline{text-decoration: underline;}
+div.column{display: inline-block; vertical-align: top; width: 50%;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+</style>
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<script src="site_libs/quarto-listing/list.min.js"></script>
+<script src="site_libs/quarto-listing/quarto-listing.js"></script>
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link id="quarto-text-highlighting-styles" href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+<script>
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-listing .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-title','listing-author','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      page: 25,
+    pagination: { item: "<li class='page-item'><a class='page page-link' href='#'></a></li>" },
+      searchColumns: ["listing-title","listing-author","listing-description"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">R on Demand</span>
+  </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link active" href="./index.html" aria-current="page">Home</a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./about.html">About</a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./content_pages/Plastic Waste.html">Plastic Waste</a>
+  </li>  
+</ul>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#header-2" id="toc-header-2" class="nav-link active" data-scroll-target="#header-2">Header 2</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">R on Demand</h1>
+</div>
+
+
+
+
+
+<div class="quarto-title-meta">
+
+    
+    
+  </div>
+  
+
+</header>
+
+<p>This is a Quarto website.</p>
+<p>To learn more about Quarto websites visit <a href="https://quarto.org/docs/websites" class="uri">https://quarto.org/docs/websites</a>.</p>
+<section id="header-2" class="level2">
+<h2 class="anchored" data-anchor-id="header-2">Header 2</h2>
+
+
+
+</section>
+
+<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
+<div class="list quarto-listing-default">
+<div class="quarto-post image-right" data-index="0" data-listing-file-modified-sort="1652416184068" data-listing-reading-time-sort="0.075">
+<div class="body">
+<a href="./content_pages/African-American Achievements.html">
+<h3 class="no-anchor listing-title">
+African-American Achievements
+</h3>
+<div class="listing-subtitle">
+
+</div>
+<div class="listing-description">
+
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="./content_pages/African-American Achievements.html"> </a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="1" data-listing-file-modified-sort="1652416184082" data-listing-reading-time-sort="0.075">
+<div class="body">
+<a href="./content_pages/African-American History.html">
+<h3 class="no-anchor listing-title">
+African-American History
+</h3>
+<div class="listing-subtitle">
+
+</div>
+<div class="listing-description">
+
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="./content_pages/African-American History.html"> </a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="2" data-listing-file-modified-sort="1652416184082" data-listing-reading-time-sort="0.075">
+<div class="body">
+<a href="./content_pages/Animal Crossing.html">
+<h3 class="no-anchor listing-title">
+Animal Crossing
+</h3>
+<div class="listing-subtitle">
+
+</div>
+<div class="listing-description">
+
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="./content_pages/Animal Crossing.html"> </a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="3" data-listing-file-modified-sort="1652416184082" data-listing-reading-time-sort="0.075">
+<div class="body">
+<a href="./content_pages/Art Collections.html">
+<h3 class="no-anchor listing-title">
+Art Collections
+</h3>
+<div class="listing-subtitle">
+
+</div>
+<div class="listing-description">
+
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="./content_pages/Art Collections.html"> </a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="4" data-listing-file-modified-sort="1652416184082" data-listing-reading-time-sort="0.075">
+<div class="body">
+<a href="./content_pages/Australian Animal Outcomes.html">
+<h3 class="no-anchor listing-title">
+Australian Animal Outcomes
+</h3>
+<div class="listing-subtitle">
+
+</div>
+<div class="listing-description">
+
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="./content_pages/Australian Animal Outcomes.html"> </a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="5" data-listing-file-modified-sort="1652416184082" data-listing-reading-time-sort="0.075">
+<div class="body">
+<a href="./content_pages/Beach Volleyball.html">
+<h3 class="no-anchor listing-title">
+Beach Volleyball
+</h3>
+<div class="listing-subtitle">
+
+</div>
+<div class="listing-description">
+
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="./content_pages/Beach Volleyball.html"> </a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="6" data-listing-file-modified-sort="1652416184082" data-listing-reading-time-sort="0.075">
+<div class="body">
+<a href="./content_pages/Beer Production.html">
+<h3 class="no-anchor listing-title">
+Beer Production
+</h3>
+<div class="listing-subtitle">
+
+</div>
+<div class="listing-description">
+
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="./content_pages/Beer Production.html"> </a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="7" data-listing-file-modified-sort="1652416184082" data-listing-reading-time-sort="0.075">
+<div class="body">
+<a href="./content_pages/Beyonce and Taylor Swift Lyrics.html">
+<h3 class="no-anchor listing-title">
+Beyonce and Taylor Swift Lyrics
+</h3>
+<div class="listing-subtitle">
+
+</div>
+<div class="listing-description">
+
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="./content_pages/Beyonce and Taylor Swift Lyrics.html"> </a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="8" data-listing-file-modified-sort="1652416184082" data-listing-reading-time-sort="0.075">
+<div class="body">
+<a href="./content_pages/Big Mac Index.html">
+<h3 class="no-anchor listing-title">
+Big Mac Index
+</h3>
+<div class="listing-subtitle">
+
+</div>
+<div class="listing-description">
+
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="./content_pages/Big Mac Index.html"> </a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="9" data-listing-file-modified-sort="1652416184082" data-listing-reading-time-sort="0.075">
+<div class="body">
+<a href="./content_pages/Bird Collisions.html">
+<h3 class="no-anchor listing-title">
+Bird Collisions
+</h3>
+<div class="listing-subtitle">
+
+</div>
+<div class="listing-description">
+
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="./content_pages/Bird Collisions.html"> </a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="10" data-listing-file-modified-sort="1652416184082" data-listing-reading-time-sort="0.075">
+<div class="body">
+<a href="./content_pages/Board Game Reviews.html">
+<h3 class="no-anchor listing-title">
+Board Game Reviews
+</h3>
+<div class="listing-subtitle">
+
+</div>
+<div class="listing-description">
+
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="./content_pages/Board Game Reviews.html"> </a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="11" data-listing-file-modified-sort="1652416184082" data-listing-reading-time-sort="0.075">
+<div class="body">
+<a href="./content_pages/Bob Ross Paintings.html">
+<h3 class="no-anchor listing-title">
+Bob Ross Paintings
+</h3>
+<div class="listing-subtitle">
+
+</div>
+<div class="listing-description">
+
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="./content_pages/Bob Ross Paintings.html"> </a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="12" data-listing-file-modified-sort="1652416184082" data-listing-reading-time-sort="0.075">
+<div class="body">
+<a href="./content_pages/Broadway Musicals.html">
+<h3 class="no-anchor listing-title">
+Broadway Musicals
+</h3>
+<div class="listing-subtitle">
+
+</div>
+<div class="listing-description">
+
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="./content_pages/Broadway Musicals.html"> </a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="13" data-listing-file-modified-sort="1652416184101" data-listing-reading-time-sort="0.075">
+<div class="body">
+<a href="./content_pages/CORD-19 Data Package.html">
+<h3 class="no-anchor listing-title">
+CORD-19 Data Package
+</h3>
+<div class="listing-subtitle">
+
+</div>
+<div class="listing-description">
+
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="./content_pages/CORD-19 Data Package.html"> </a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="14" data-listing-file-modified-sort="1652416184101" data-listing-reading-time-sort="0.075">
+<div class="body">
+<a href="./content_pages/COVID-19 Open Research Dataset (CORD-19).html">
+<h3 class="no-anchor listing-title">
+COVID-19 Open Research Dataset (CORD-19)
+</h3>
+<div class="listing-subtitle">
+
+</div>
+<div class="listing-description">
+
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="./content_pages/COVID-19 Open Research Dataset (CORD-19).html"> </a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="15" data-listing-file-modified-sort="1652416184102" data-listing-reading-time-sort="0.075">
+<div class="body">
+<a href="./content_pages/CRAN Package Code.html">
+<h3 class="no-anchor listing-title">
+CRAN Package Code
+</h3>
+<div class="listing-subtitle">
+
+</div>
+<div class="listing-description">
+
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="./content_pages/CRAN Package Code.html"> </a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="16" data-listing-file-modified-sort="1652416184082" data-listing-reading-time-sort="0.075">
+<div class="body">
+<a href="./content_pages/Car Fuel Efficiency.html">
+<h3 class="no-anchor listing-title">
+Car Fuel Efficiency
+</h3>
+<div class="listing-subtitle">
+
+</div>
+<div class="listing-description">
+
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="./content_pages/Car Fuel Efficiency.html"> </a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="17" data-listing-file-modified-sort="1652416184082" data-listing-reading-time-sort="0.075">
+<div class="body">
+<a href="./content_pages/Caribou Locations.html">
+<h3 class="no-anchor listing-title">
+Caribou Locations
+</h3>
+<div class="listing-subtitle">
+
+</div>
+<div class="listing-description">
+
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="./content_pages/Caribou Locations.html"> </a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="18" data-listing-file-modified-sort="1652416184082" data-listing-reading-time-sort="0.075">
+<div class="body">
+<a href="./content_pages/Chopped.html">
+<h3 class="no-anchor listing-title">
+Chopped
+</h3>
+<div class="listing-subtitle">
+
+</div>
+<div class="listing-description">
+
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="./content_pages/Chopped.html"> </a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="19" data-listing-file-modified-sort="1652416184082" data-listing-reading-time-sort="0.075">
+<div class="body">
+<a href="./content_pages/Cocktails.html">
+<h3 class="no-anchor listing-title">
+Cocktails
+</h3>
+<div class="listing-subtitle">
+
+</div>
+<div class="listing-description">
+
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="./content_pages/Cocktails.html"> </a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="20" data-listing-file-modified-sort="1652416184098" data-listing-reading-time-sort="0.075">
+<div class="body">
+<a href="./content_pages/Coffee Ratings.html">
+<h3 class="no-anchor listing-title">
+Coffee Ratings
+</h3>
+<div class="listing-subtitle">
+
+</div>
+<div class="listing-description">
+
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="./content_pages/Coffee Ratings.html"> </a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="21" data-listing-file-modified-sort="1652416184098" data-listing-reading-time-sort="0.075">
+<div class="body">
+<a href="./content_pages/College Majors and Income.html">
+<h3 class="no-anchor listing-title">
+College Majors and Income
+</h3>
+<div class="listing-subtitle">
+
+</div>
+<div class="listing-description">
+
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="./content_pages/College Majors and Income.html"> </a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="22" data-listing-file-modified-sort="1652416184103" data-listing-reading-time-sort="0.075">
+<div class="body">
+<a href="./content_pages/Dolphins.html">
+<h3 class="no-anchor listing-title">
+Dolphins
+</h3>
+<div class="listing-subtitle">
+
+</div>
+<div class="listing-description">
+
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="./content_pages/Dolphins.html"> </a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="23" data-listing-file-modified-sort="1652416184104" data-listing-reading-time-sort="0.075">
+<div class="body">
+<a href="./content_pages/European Energy.html">
+<h3 class="no-anchor listing-title">
+European Energy
+</h3>
+<div class="listing-subtitle">
+
+</div>
+<div class="listing-description">
+
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="./content_pages/European Energy.html"> </a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="24" data-listing-file-modified-sort="1652416184105" data-listing-reading-time-sort="0.075">
+<div class="body">
+<a href="./content_pages/French Train Delays.html">
+<h3 class="no-anchor listing-title">
+French Train Delays
+</h3>
+<div class="listing-subtitle">
+
+</div>
+<div class="listing-description">
+
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="./content_pages/French Train Delays.html"> </a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="25" data-listing-file-modified-sort="1652416184106" data-listing-reading-time-sort="0.075">
+<div class="body">
+<a href="./content_pages/Friends.html">
+<h3 class="no-anchor listing-title">
+Friends
+</h3>
+<div class="listing-subtitle">
+
+</div>
+<div class="listing-description">
+
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="./content_pages/Friends.html"> </a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="26" data-listing-file-modified-sort="1652416184108" data-listing-reading-time-sort="0.075">
+<div class="body">
+<a href="./content_pages/GDPR Violations.html">
+<h3 class="no-anchor listing-title">
+GDPR Violations
+</h3>
+<div class="listing-subtitle">
+
+</div>
+<div class="listing-description">
+
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="./content_pages/GDPR Violations.html"> </a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="27" data-listing-file-modified-sort="1652416184108" data-listing-reading-time-sort="0.075">
+<div class="body">
+<a href="./content_pages/Global Crop Yields.html">
+<h3 class="no-anchor listing-title">
+Global Crop Yields
+</h3>
+<div class="listing-subtitle">
+
+</div>
+<div class="listing-description">
+
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="./content_pages/Global Crop Yields.html"> </a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="28" data-listing-file-modified-sort="1652416184111" data-listing-reading-time-sort="0.075">
+<div class="body">
+<a href="./content_pages/Government Spending on Kids.html">
+<h3 class="no-anchor listing-title">
+Government Spending on Kids
+</h3>
+<div class="listing-subtitle">
+
+</div>
+<div class="listing-description">
+
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="./content_pages/Government Spending on Kids.html"> </a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="29" data-listing-file-modified-sort="1652416184112" data-listing-reading-time-sort="0.075">
+<div class="body">
+<a href="./content_pages/Great American Beer Festival.html">
+<h3 class="no-anchor listing-title">
+Great American Beer Festival
+</h3>
+<div class="listing-subtitle">
+
+</div>
+<div class="listing-description">
+
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="./content_pages/Great American Beer Festival.html"> </a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="30" data-listing-file-modified-sort="1652416184113" data-listing-reading-time-sort="0.075">
+<div class="body">
+<a href="./content_pages/HBCU Enrollment.html">
+<h3 class="no-anchor listing-title">
+HBCU Enrollment
+</h3>
+<div class="listing-subtitle">
+
+</div>
+<div class="listing-description">
+
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="./content_pages/HBCU Enrollment.html"> </a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="31" data-listing-file-modified-sort="1652416184114" data-listing-reading-time-sort="0.075">
+<div class="body">
+<a href="./content_pages/Himalayan Climbers.html">
+<h3 class="no-anchor listing-title">
+Himalayan Climbers
+</h3>
+<div class="listing-subtitle">
+
+</div>
+<div class="listing-description">
+
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="./content_pages/Himalayan Climbers.html"> </a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="32" data-listing-file-modified-sort="1652416184115" data-listing-reading-time-sort="0.075">
+<div class="body">
+<a href="./content_pages/Historical Phones.html">
+<h3 class="no-anchor listing-title">
+Historical Phones
+</h3>
+<div class="listing-subtitle">
+
+</div>
+<div class="listing-description">
+
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="./content_pages/Historical Phones.html"> </a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="33" data-listing-file-modified-sort="1652416184116" data-listing-reading-time-sort="0.075">
+<div class="body">
+<a href="./content_pages/Horror Movie Profits.html">
+<h3 class="no-anchor listing-title">
+Horror Movie Profits
+</h3>
+<div class="listing-subtitle">
+
+</div>
+<div class="listing-description">
+
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="./content_pages/Horror Movie Profits.html"> </a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="34" data-listing-file-modified-sort="1652416184117" data-listing-reading-time-sort="0.075">
+<div class="body">
+<a href="./content_pages/Horror Movies.html">
+<h3 class="no-anchor listing-title">
+Horror Movies
+</h3>
+<div class="listing-subtitle">
+
+</div>
+<div class="listing-description">
+
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="./content_pages/Horror Movies.html"> </a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="35" data-listing-file-modified-sort="1652416184119" data-listing-reading-time-sort="0.075">
+<div class="body">
+<a href="./content_pages/IKEA Furniture.html">
+<h3 class="no-anchor listing-title">
+IKEA Furniture
+</h3>
+<div class="listing-subtitle">
+
+</div>
+<div class="listing-description">
+
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="./content_pages/IKEA Furniture.html"> </a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="36" data-listing-file-modified-sort="1652416184120" data-listing-reading-time-sort="0.075">
+<div class="body">
+<a href="./content_pages/Kenya Census.html">
+<h3 class="no-anchor listing-title">
+Kenya Census
+</h3>
+<div class="listing-subtitle">
+
+</div>
+<div class="listing-description">
+
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="./content_pages/Kenya Census.html"> </a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="37" data-listing-file-modified-sort="1652416184121" data-listing-reading-time-sort="0.075">
+<div class="body">
+<a href="./content_pages/Malaria Incidence.html">
+<h3 class="no-anchor listing-title">
+Malaria Incidence
+</h3>
+<div class="listing-subtitle">
+
+</div>
+<div class="listing-description">
+
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="./content_pages/Malaria Incidence.html"> </a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="38" data-listing-file-modified-sort="1652416184122" data-listing-reading-time-sort="0.075">
+<div class="body">
+<a href="./content_pages/Maryland Bridges.html">
+<h3 class="no-anchor listing-title">
+Maryland Bridges
+</h3>
+<div class="listing-subtitle">
+
+</div>
+<div class="listing-description">
+
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="./content_pages/Maryland Bridges.html"> </a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="39" data-listing-file-modified-sort="1652416184123" data-listing-reading-time-sort="0.075">
+<div class="body">
+<a href="./content_pages/Media Franchise Revenue.html">
+<h3 class="no-anchor listing-title">
+Media Franchise Revenue
+</h3>
+<div class="listing-subtitle">
+
+</div>
+<div class="listing-description">
+
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="./content_pages/Media Franchise Revenue.html"> </a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="40" data-listing-file-modified-sort="1652416184124" data-listing-reading-time-sort="0.075">
+<div class="body">
+<a href="./content_pages/Medium Articles.html">
+<h3 class="no-anchor listing-title">
+Medium Articles
+</h3>
+<div class="listing-subtitle">
+
+</div>
+<div class="listing-description">
+
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="./content_pages/Medium Articles.html"> </a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="41" data-listing-file-modified-sort="1652416184124" data-listing-reading-time-sort="0.075">
+<div class="body">
+<a href="./content_pages/NCAA Women's Basketball.html">
+<h3 class="no-anchor listing-title">
+NCAA Women’s Basketball
+</h3>
+<div class="listing-subtitle">
+
+</div>
+<div class="listing-description">
+
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="./content_pages/NCAA Women's Basketball.html"> </a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="42" data-listing-file-modified-sort="1652416184128" data-listing-reading-time-sort="0.075">
+<div class="body">
+<a href="./content_pages/NYC Restaurant Inspections.html">
+<h3 class="no-anchor listing-title">
+NYC Restaurant Inspections
+</h3>
+<div class="listing-subtitle">
+
+</div>
+<div class="listing-description">
+
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="./content_pages/NYC Restaurant Inspections.html"> </a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="43" data-listing-file-modified-sort="1652416184129" data-listing-reading-time-sort="0.075">
+<div class="body">
+<a href="./content_pages/NYC Squirrel Census.html">
+<h3 class="no-anchor listing-title">
+NYC Squirrel Census
+</h3>
+<div class="listing-subtitle">
+
+</div>
+<div class="listing-description">
+
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="./content_pages/NYC Squirrel Census.html"> </a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="44" data-listing-file-modified-sort="1652416184125" data-listing-reading-time-sort="0.075">
+<div class="body">
+<a href="./content_pages/Ninja Warrior.html">
+<h3 class="no-anchor listing-title">
+Ninja Warrior
+</h3>
+<div class="listing-subtitle">
+
+</div>
+<div class="listing-description">
+
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="./content_pages/Ninja Warrior.html"> </a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="45" data-listing-file-modified-sort="1652416184126" data-listing-reading-time-sort="0.075">
+<div class="body">
+<a href="./content_pages/Nobel Prize Winners.html">
+<h3 class="no-anchor listing-title">
+Nobel Prize Winners
+</h3>
+<div class="listing-subtitle">
+
+</div>
+<div class="listing-description">
+
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="./content_pages/Nobel Prize Winners.html"> </a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="46" data-listing-file-modified-sort="1652416184130" data-listing-reading-time-sort="0.075">
+<div class="body">
+<a href="./content_pages/Palmer Penguins.html">
+<h3 class="no-anchor listing-title">
+Palmer Penguins
+</h3>
+<div class="listing-subtitle">
+
+</div>
+<div class="listing-description">
+
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="./content_pages/Palmer Penguins.html"> </a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="47" data-listing-file-modified-sort="1652416184131" data-listing-reading-time-sort="0.075">
+<div class="body">
+<a href="./content_pages/Pizza Ratings.html">
+<h3 class="no-anchor listing-title">
+Pizza Ratings
+</h3>
+<div class="listing-subtitle">
+
+</div>
+<div class="listing-description">
+
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="./content_pages/Pizza Ratings.html"> </a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="48" data-listing-file-modified-sort="1652416184132" data-listing-reading-time-sort="0.075">
+<div class="body">
+<a href="./content_pages/Plants in Danger.html">
+<h3 class="no-anchor listing-title">
+Plants in Danger
+</h3>
+<div class="listing-subtitle">
+
+</div>
+<div class="listing-description">
+
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="./content_pages/Plants in Danger.html"> </a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="49" data-listing-file-modified-sort="1652416184132" data-listing-reading-time-sort="0.075">
+<div class="body">
+<a href="./content_pages/Plastic Waste.html">
+<h3 class="no-anchor listing-title">
+Plastic Waste
+</h3>
+<div class="listing-subtitle">
+
+</div>
+<div class="listing-description">
+
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="./content_pages/Plastic Waste.html"> </a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="50" data-listing-file-modified-sort="1652416184132" data-listing-reading-time-sort="0.075">
+<div class="body">
+<a href="./content_pages/R Downloads.html">
+<h3 class="no-anchor listing-title">
+R Downloads
+</h3>
+<div class="listing-subtitle">
+
+</div>
+<div class="listing-description">
+
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="./content_pages/R Downloads.html"> </a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="51" data-listing-file-modified-sort="1652416184132" data-listing-reading-time-sort="0.075">
+<div class="body">
+<a href="./content_pages/Ramen Reviews.html">
+<h3 class="no-anchor listing-title">
+Ramen Reviews
+</h3>
+<div class="listing-subtitle">
+
+</div>
+<div class="listing-description">
+
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="./content_pages/Ramen Reviews.html"> </a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="52" data-listing-file-modified-sort="1652416184148" data-listing-reading-time-sort="0.075">
+<div class="body">
+<a href="./content_pages/Seattle Bike Counts.html">
+<h3 class="no-anchor listing-title">
+Seattle Bike Counts
+</h3>
+<div class="listing-subtitle">
+
+</div>
+<div class="listing-description">
+
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="./content_pages/Seattle Bike Counts.html"> </a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="53" data-listing-file-modified-sort="1652416184148" data-listing-reading-time-sort="0.075">
+<div class="body">
+<a href="./content_pages/Seattle Pet Names.html">
+<h3 class="no-anchor listing-title">
+Seattle Pet Names
+</h3>
+<div class="listing-subtitle">
+
+</div>
+<div class="listing-description">
+
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="./content_pages/Seattle Pet Names.html"> </a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="54" data-listing-file-modified-sort="1652416184148" data-listing-reading-time-sort="0.075">
+<div class="body">
+<a href="./content_pages/Simpsons Guest Stars.html">
+<h3 class="no-anchor listing-title">
+Simpsons Guest Stars
+</h3>
+<div class="listing-subtitle">
+
+</div>
+<div class="listing-description">
+
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="./content_pages/Simpsons Guest Stars.html"> </a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="55" data-listing-file-modified-sort="1652416184148" data-listing-reading-time-sort="0.075">
+<div class="body">
+<a href="./content_pages/Space Launches.html">
+<h3 class="no-anchor listing-title">
+Space Launches
+</h3>
+<div class="listing-subtitle">
+
+</div>
+<div class="listing-description">
+
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="./content_pages/Space Launches.html"> </a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="56" data-listing-file-modified-sort="1652416184148" data-listing-reading-time-sort="0.075">
+<div class="body">
+<a href="./content_pages/Student-Teacher Ratios.html">
+<h3 class="no-anchor listing-title">
+Student-Teacher Ratios
+</h3>
+<div class="listing-subtitle">
+
+</div>
+<div class="listing-description">
+
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="./content_pages/Student-Teacher Ratios.html"> </a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="57" data-listing-file-modified-sort="1652416184163" data-listing-reading-time-sort="0.075">
+<div class="body">
+<a href="./content_pages/TV Golden Age.html">
+<h3 class="no-anchor listing-title">
+TV Golden Age
+</h3>
+<div class="listing-subtitle">
+
+</div>
+<div class="listing-description">
+
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="./content_pages/TV Golden Age.html"> </a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="58" data-listing-file-modified-sort="1652416184148" data-listing-reading-time-sort="0.075">
+<div class="body">
+<a href="./content_pages/Tennis Tournaments.html">
+<h3 class="no-anchor listing-title">
+Tennis Tournaments
+</h3>
+<div class="listing-subtitle">
+
+</div>
+<div class="listing-description">
+
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="./content_pages/Tennis Tournaments.html"> </a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="59" data-listing-file-modified-sort="1652416184148" data-listing-reading-time-sort="0.075">
+<div class="body">
+<a href="./content_pages/Thanksgiving Dinner.html">
+<h3 class="no-anchor listing-title">
+Thanksgiving Dinner
+</h3>
+<div class="listing-subtitle">
+
+</div>
+<div class="listing-description">
+
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="./content_pages/Thanksgiving Dinner.html"> </a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="60" data-listing-file-modified-sort="1652416184148" data-listing-reading-time-sort="0.075">
+<div class="body">
+<a href="./content_pages/The Office.html">
+<h3 class="no-anchor listing-title">
+The Office
+</h3>
+<div class="listing-subtitle">
+
+</div>
+<div class="listing-description">
+
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="./content_pages/The Office.html"> </a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="61" data-listing-file-modified-sort="1652416184163" data-listing-reading-time-sort="0.075">
+<div class="body">
+<a href="./content_pages/TidyTuesday Tweets.html">
+<h3 class="no-anchor listing-title">
+TidyTuesday Tweets
+</h3>
+<div class="listing-subtitle">
+
+</div>
+<div class="listing-description">
+
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="./content_pages/TidyTuesday Tweets.html"> </a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="62" data-listing-file-modified-sort="1652416184163" data-listing-reading-time-sort="0.075">
+<div class="body">
+<a href="./content_pages/Tour de France.html">
+<h3 class="no-anchor listing-title">
+Tour de France
+</h3>
+<div class="listing-subtitle">
+
+</div>
+<div class="listing-description">
+
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="./content_pages/Tour de France.html"> </a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="63" data-listing-file-modified-sort="1652416184163" data-listing-reading-time-sort="0.075">
+<div class="body">
+<a href="./content_pages/Transit Costs.html">
+<h3 class="no-anchor listing-title">
+Transit Costs
+</h3>
+<div class="listing-subtitle">
+
+</div>
+<div class="listing-description">
+
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="./content_pages/Transit Costs.html"> </a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="64" data-listing-file-modified-sort="1652416184163" data-listing-reading-time-sort="0.075">
+<div class="body">
+<a href="./content_pages/US Dairy Consumption.html">
+<h3 class="no-anchor listing-title">
+US Dairy Consumption
+</h3>
+<div class="listing-subtitle">
+
+</div>
+<div class="listing-description">
+
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="./content_pages/US Dairy Consumption.html"> </a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="65" data-listing-file-modified-sort="1652416184163" data-listing-reading-time-sort="0.075">
+<div class="body">
+<a href="./content_pages/US Incarceration.html">
+<h3 class="no-anchor listing-title">
+US Incarceration
+</h3>
+<div class="listing-subtitle">
+
+</div>
+<div class="listing-description">
+
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="./content_pages/US Incarceration.html"> </a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="66" data-listing-file-modified-sort="1652416184163" data-listing-reading-time-sort="0.075">
+<div class="body">
+<a href="./content_pages/US PhDs.html">
+<h3 class="no-anchor listing-title">
+US PhDs
+</h3>
+<div class="listing-subtitle">
+
+</div>
+<div class="listing-description">
+
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="./content_pages/US PhDs.html"> </a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="67" data-listing-file-modified-sort="1652416184163" data-listing-reading-time-sort="0.075">
+<div class="body">
+<a href="./content_pages/US Wind Turbines.html">
+<h3 class="no-anchor listing-title">
+US Wind Turbines
+</h3>
+<div class="listing-subtitle">
+
+</div>
+<div class="listing-description">
+
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="./content_pages/US Wind Turbines.html"> </a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="68" data-listing-file-modified-sort="1652416184163" data-listing-reading-time-sort="0.075">
+<div class="body">
+<a href="./content_pages/Volcano Eruptions.html">
+<h3 class="no-anchor listing-title">
+Volcano Eruptions
+</h3>
+<div class="listing-subtitle">
+
+</div>
+<div class="listing-description">
+
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="./content_pages/Volcano Eruptions.html"> </a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="69" data-listing-file-modified-sort="1652416184163" data-listing-reading-time-sort="0.075">
+<div class="body">
+<a href="./content_pages/Wine Ratings.html">
+<h3 class="no-anchor listing-title">
+Wine Ratings
+</h3>
+<div class="listing-subtitle">
+
+</div>
+<div class="listing-description">
+
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="./content_pages/Wine Ratings.html"> </a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="70" data-listing-file-modified-sort="1652416184163" data-listing-reading-time-sort="0.075">
+<div class="body">
+<a href="./content_pages/Women in the Workplace.html">
+<h3 class="no-anchor listing-title">
+Women in the Workplace
+</h3>
+<div class="listing-subtitle">
+
+</div>
+<div class="listing-description">
+
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="./content_pages/Women in the Workplace.html"> </a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="71" data-listing-file-modified-sort="1652416184163" data-listing-reading-time-sort="0.075">
+<div class="body">
+<a href="./content_pages/Women's World Cup.html">
+<h3 class="no-anchor listing-title">
+Women’s World Cup
+</h3>
+<div class="listing-subtitle">
+
+</div>
+<div class="listing-description">
+
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="./content_pages/Women's World Cup.html"> </a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="72" data-listing-file-modified-sort="1652416184163" data-listing-reading-time-sort="0.075">
+<div class="body">
+<a href="./content_pages/X-Men Comics.html">
+<h3 class="no-anchor listing-title">
+X-Men Comics
+</h3>
+<div class="listing-subtitle">
+
+</div>
+<div class="listing-description">
+
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="./content_pages/X-Men Comics.html"> </a>
+</div>
+</div>
+</div>
+<div class="listing-no-matching d-none">
+No matching items
+</div>
+<nav id="listing-pagination" class="listing-pagination" aria-label="Page Navigation">
+  <ul class="pagination"></ul>
+</nav>
+</div></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    setTimeout(function() {
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      let href = ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>

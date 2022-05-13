@@ -1,0 +1,6 @@
+---
+title: "Big Mac Index"
+
+---
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/pxJ5wtxL5Kw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

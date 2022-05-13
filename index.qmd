@@ -29,8 +29,6 @@ screencasts_data <- screencasts_data_google %>%
 
 ```
 
-
-
 ```{r create_pages, echo=FALSE, results='asis'}
 
 for (entry in row.names(screencasts_data)) {
