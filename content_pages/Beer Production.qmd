@@ -1,0 +1,320 @@
+---
+title: "Beer Production"
+description: "tidymetrics package demonstration, Animated map (gganimate package)"
+date: 2020-04-01
+date-format: long
+---
+
+Notable topics: tidymetrics package demonstration, Animated map (gganimate package)
+
+Recorded on: 2020-04-01
+
+Timestamps by: Alex Cookson
+
+[View code](https://github.com/dgrtwo/data-screencasts/blob/master/beer-production.Rmd)
+
+## Full screencast
+<iframe width="560" height="315" src="https://www.youtube.com/embed/1R4X09w7tQ8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+## Timestamps
+
+### 0:4:25
+
+Asking, "What ingredients are used in beer?"
+
+NA
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/1R4X09w7tQ8?start=265" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:4:40
+
+Using filter and max functions to look at the most recent period of time
+
+filter | max
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/1R4X09w7tQ8?start=280" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:7:25
+
+Using paste and ymd functions (ymd is from lubridate package) to convert year-month field into an date-formatted field
+
+paste | ymd
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/1R4X09w7tQ8?start=445" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:9:20
+
+Spotting potential missing or mis-parsed data
+
+NA
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/1R4X09w7tQ8?start=560" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:13:50
+
+Introducing the tidymetrics framework
+
+NA
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/1R4X09w7tQ8?start=830" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:14:45
+
+Using install_github function to install tidymetrics from GitHub
+
+install_github
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/1R4X09w7tQ8?start=885" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:15:25
+
+Using cross_by_dimensions function from tidymetrics package to get aggregations at different levels of multiple dimensions
+
+cross_by_dimensions
+
+tidymetrics
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/1R4X09w7tQ8?start=925" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:18:10
+
+Using cross_by_periods function from tidymetrics package to also get aggregations for different intervals (e.g, month, quarter, year)
+
+cross_by_periods
+
+tidymetrics
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/1R4X09w7tQ8?start=1090" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:22:00
+
+Using use_metrics_scaffold function from tidymetrics package to create framework for documenting dimensions in RMarkdown YAML header
+
+use_metrics_scaffold
+
+tidymetrics
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/1R4X09w7tQ8?start=1320" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:24:00
+
+Using create_metrics function from tidymetrics package to save data as a tibble with useful metadata (good for visualizing interactively)
+
+create_metrics
+
+tidymetrics
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/1R4X09w7tQ8?start=1440" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:25:15
+
+Using preview_metric function from shinymetrics package (still under development as of 2020-04-24) to demonstrate shinymetrics
+
+preview_metrics
+
+shinymetrics
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/1R4X09w7tQ8?start=1515" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:27:35
+
+Succesfuly getting shinymetrics to work
+
+NA
+
+shinymetrics
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/1R4X09w7tQ8?start=1655" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:28:25
+
+Explanation of the shinymetrics bug David ran into
+
+NA
+
+shinymetrics
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/1R4X09w7tQ8?start=1705" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:34:10
+
+Changing order of ordinal variable (e.g., "1,000 to 10,000" and "10,000 to 20,000") using the parse_number, fct_lump, and coalesce functions
+
+parse_number | fct_lump | coalesce
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/1R4X09w7tQ8?start=2050" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:41:25
+
+Asking, "Where is beer produced?"
+
+NA
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/1R4X09w7tQ8?start=2485" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:46:45
+
+Looking up sf package documentation to refresh memory on how to draw state borders for a map
+
+NA
+
+sf
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/1R4X09w7tQ8?start=2805" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:48:55
+
+Using match function and state.abb vector (state abbreviations) from sf package to perform a lookup of state names
+
+match
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/1R4X09w7tQ8?start=2935" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:51:05
+
+Using geom_sf function (and working through some hiccoughs) to create a choropleth map
+
+geom_sf
+
+sf
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/1R4X09w7tQ8?start=3065" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:52:30
+
+Using theme_map function from ggthemes package to get more appropriate styling for maps
+
+theme_map
+
+ggthemes
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/1R4X09w7tQ8?start=3150" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:55:40
+
+Experimenting with how to get the legend to display in the bottom right corner
+
+NA
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/1R4X09w7tQ8?start=3340" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:58:25
+
+Starting to build an animation of consumption patterns over time using gganimate package
+
+NA
+
+gganimate
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/1R4X09w7tQ8?start=3505" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 1:03:40
+
+Getting the year being animated to show up in the title of a gganimate map
+
+NA
+
+gganimate
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/1R4X09w7tQ8?start=3820" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 1:05:40
+
+Summary of screencast
+
+NA
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/1R4X09w7tQ8?start=3940" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 1:06:50
+
+Spotting a mistake in a group_by call causing the percentages not to add up properly
+
+NA
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/1R4X09w7tQ8?start=4010" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 1:09:10
+
+Brief extra overview of tidymetrics code
+
+NA
+
+tidymetrics
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/1R4X09w7tQ8?start=4150" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+

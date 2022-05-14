@@ -11,5 +11,190 @@ Recorded on: 2020-06-16
 
 Timestamps by: Eric Fletcher
 
+[View code](https://github.com/dgrtwo/data-screencasts/blob/master/african-american-history.Rmd)
 
+## Full screencast
 <iframe width="560" height="315" src="https://www.youtube.com/embed/2L-jA-Me3zg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+## Timestamps
+
+### 0:6:55
+
+Use `fct_lump` from the `forcats` package to lump together all the factor levels in `ship_name` except the `n` most frequent. Used within `filter` with `! = "Other"` to remove `other`.
+
+fct_lump
+
+forcats
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/2L-jA-Me3zg?start=415" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:8:00
+
+use `fct_reorder` from the `forcats` package to reorder the `ship_name` factor levels y sorting along the `n_slaves_arrived` variable.
+
+fct_reorder
+
+forcats
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/2L-jA-Me3zg?start=480" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:10:20
+
+Add `geom_vline` to `geom_histogram` to annotate the plot with a vertical line indicating the Revolutionary War and the Civil War.
+
+geom_vline
+
+ggplot2
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/2L-jA-Me3zg?start=620" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:13:00
+
+Use `truncated division` within `count` to create a new `decade` variable equal to `10 * (year_arrival %/% 10))`
+
+count
+
+dplyr
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/2L-jA-Me3zg?start=780" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:17:20
+
+Use `str_trunc` from the `stringr` package to truncate the titles in each facet panel accounting for the slave ports with really long names.
+
+str_trunc
+
+stringr
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/2L-jA-Me3zg?start=1040" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:18:05
+
+Another option for accounting for long titles in the facet panels is to use `strip.text` within `theme` with `element_text(size = 6)`
+
+theme
+
+ggplot2
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/2L-jA-Me3zg?start=1085" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:26:55
+
+Use the `ggraph` package to create a `network diagram` using `port_origin` and `port_arrival`.
+
+ggraph | geom_edge_link | geom_node_point | geom_node_text
+
+ggraph
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/2L-jA-Me3zg?start=1615" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:29:05
+
+Use `arrow` from the `grid` package to add directional arrows to the points in the `network diagram`.
+
+arrow
+
+grid
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/2L-jA-Me3zg?start=1745" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:29:40
+
+Use `scale_width_size_continuous` from the `ggraph` packge to adjust the size of the points in the `network diagram`.
+
+scale_edge_size_continuous
+
+ggraph
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/2L-jA-Me3zg?start=1780" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:35:25
+
+Within `summarize` use `mean(n_slaves_arrived, na.rm = TRUE) * n())` to come up with an estimated total numer of slaves since 49% of the data is missing.
+
+summarize | mean
+
+dplyr
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/2L-jA-Me3zg?start=2125" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:48:20
+
+Create a faceted stacked percent barplot (spinogram) showing the percentage of `black_free`, `black_slaves`, `white`, and `other` for each region.
+
+geom_col | facet_wrap
+
+ggplot2
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/2L-jA-Me3zg?start=2900" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:51:00
+
+Use the `wordcloud` package to create a `wordcloud` with the `african_names` dataset. David hsa issues with the `wordcloud` package and opts to use `ggwordcloud` instead. Also, mentions the `worldcloud2` package.
+
+wordcloud | geom_text_wordcloud
+
+wordcloud | ggwordcloud
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/2L-jA-Me3zg?start=3060" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:55:20
+
+Use `fct_recode` from the `forcats` package to change the factor levels for the `gender` variable while renaming `Man = "Boy"` and `Woman = "Girl"`
+
+fct_recode
+
+forcats
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/2L-jA-Me3zg?start=3320" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:57:20
+
+Use `reorder_within` from the `tidytext` package to reorder the `geom_col` by `n` within `gender` variable for each facet panel.
+
+reorder_within
+
+tidytext
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/2L-jA-Me3zg?start=3440" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:59:00
+
+Summary of screencast.
+
+NA
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/2L-jA-Me3zg?start=3540" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+

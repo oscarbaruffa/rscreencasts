@@ -9,7 +9,7 @@
 <meta name="dcterms.date" content="2020-07-21">
 <meta name="description" content="Data manipulation, Web Scraping (rvest package) and SelectorGadget, Animated Choropleth Map">
 
-<title>R on Demand - Australian Animal Outcomes</title>
+<title>R Screencasts - Australian Animal Outcomes</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -26,6 +26,7 @@ ul.task-list{list-style: none;}
 <script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
+<link href="..//images/favicon-32x32.png" rel="icon" type="image/png">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -54,6 +55,7 @@ ul.task-list{list-style: none;}
     "search-submit-button-title": "Submit"
   }
 }</script>
+<script async="" defer="" data-domain="rscreencasts.com" src="https://plausible.io/js/plausible.outbound-links.js"></script>
 
 
 <link rel="stylesheet" href="../styles.css">
@@ -66,7 +68,7 @@ ul.task-list{list-style: none;}
     <nav class="navbar navbar-expand-lg navbar-dark ">
       <div class="navbar-container container-fluid">
       <a class="navbar-brand" href="../index.html">
-    <span class="navbar-title">R on Demand</span>
+    <span class="navbar-title">R Screencasts</span>
   </a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
@@ -75,6 +77,9 @@ ul.task-list{list-style: none;}
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
     <a class="nav-link" href="../index.html">Home</a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../resources.html">Resources</a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../about.html">About</a>
@@ -90,7 +95,37 @@ ul.task-list{list-style: none;}
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#full-screencast" id="toc-full-screencast" class="nav-link active" data-scroll-target="#full-screencast">Full screencast</a></li>
+  <li><a href="#timestamps" id="toc-timestamps" class="nav-link" data-scroll-target="#timestamps">Timestamps</a>
+  <ul class="collapse">
+  <li><a href="#section" id="toc-section" class="nav-link" data-scroll-target="#section">0:1:20</a></li>
+  <li><a href="#section-1" id="toc-section-1" class="nav-link" data-scroll-target="#section-1">0:4:30</a></li>
+  <li><a href="#section-2" id="toc-section-2" class="nav-link" data-scroll-target="#section-2">0:6:20</a></li>
+  <li><a href="#section-3" id="toc-section-3" class="nav-link" data-scroll-target="#section-3">0:7:00</a></li>
+  <li><a href="#section-4" id="toc-section-4" class="nav-link" data-scroll-target="#section-4">0:9:15</a></li>
+  <li><a href="#section-5" id="toc-section-5" class="nav-link" data-scroll-target="#section-5">0:12:10</a></li>
+  <li><a href="#section-6" id="toc-section-6" class="nav-link" data-scroll-target="#section-6">0:13:03</a></li>
+  <li><a href="#section-7" id="toc-section-7" class="nav-link" data-scroll-target="#section-7">0:14:10</a></li>
+  <li><a href="#section-8" id="toc-section-8" class="nav-link" data-scroll-target="#section-8">0:16:10</a></li>
+  <li><a href="#section-9" id="toc-section-9" class="nav-link" data-scroll-target="#section-9">0:19:30</a></li>
+  <li><a href="#section-10" id="toc-section-10" class="nav-link" data-scroll-target="#section-10">0:21:45</a></li>
+  <li><a href="#section-11" id="toc-section-11" class="nav-link" data-scroll-target="#section-11">0:25:45</a></li>
+  <li><a href="#section-12" id="toc-section-12" class="nav-link" data-scroll-target="#section-12">0:27:13</a></li>
+  <li><a href="#section-13" id="toc-section-13" class="nav-link" data-scroll-target="#section-13">0:28:55</a></li>
+  <li><a href="#section-14" id="toc-section-14" class="nav-link" data-scroll-target="#section-14">0:29:35</a></li>
+  <li><a href="#section-15" id="toc-section-15" class="nav-link" data-scroll-target="#section-15">0:29:47</a></li>
+  <li><a href="#section-16" id="toc-section-16" class="nav-link" data-scroll-target="#section-16">0:37:25</a></li>
+  <li><a href="#section-17" id="toc-section-17" class="nav-link" data-scroll-target="#section-17">0:39:10</a></li>
+  <li><a href="#section-18" id="toc-section-18" class="nav-link" data-scroll-target="#section-18">0:42:45</a></li>
+  <li><a href="#section-19" id="toc-section-19" class="nav-link" data-scroll-target="#section-19">0:55:45</a></li>
+  <li><a href="#section-20" id="toc-section-20" class="nav-link" data-scroll-target="#section-20">1:01:35</a></li>
+  </ul></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -124,11 +159,188 @@ ul.task-list{list-style: none;}
 
 </header>
 
-<p>test text</p>
+<p>Notable topics: Data manipulation, Web Scraping (rvest package) and SelectorGadget, Animated Choropleth Map</p>
+<p>Recorded on: 2020-07-21</p>
+<p>Timestamps by: Eric Fletcher</p>
+<p><a href="https://github.com/dgrtwo/data-screencasts/blob/master/australian-animal-outcomes.Rmd">View code</a></p>
+<section id="full-screencast" class="level2">
+<h2 class="anchored" data-anchor-id="full-screencast">Full screencast</h2>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/E2amEz_upzU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
+</iframe>
+</section>
+<section id="timestamps" class="level2">
+<h2 class="anchored" data-anchor-id="timestamps">Timestamps</h2>
+<section id="section" class="level3">
+<h3 class="anchored" data-anchor-id="section">0:1:20</h3>
+<p>Using <code>use_tidytemplate</code> to open the project dataset with the package’s tidytemplate Rmd</p>
+<p>use_tidytemplate</p>
+<p>tidytuesdayR</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/E2amEz_upzU?start=80" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
+</iframe>
+</section>
+<section id="section-1" class="level3">
+<h3 class="anchored" data-anchor-id="section-1">0:4:30</h3>
+<p>Using <code>rename</code> to rename <code>Total</code> column to <code>total</code></p>
+<p>rename</p>
+<p>dplyr</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/E2amEz_upzU?start=270" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
+</iframe>
+</section>
+<section id="section-2" class="level3">
+<h3 class="anchored" data-anchor-id="section-2">0:6:20</h3>
+<p>Using <code>fct_reorder</code> to reorder stacked barplot with <code>weight = sum</code></p>
+<p>fct_reorder</p>
+<p>forcats</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/E2amEz_upzU?start=380" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
+</iframe>
+</section>
+<section id="section-3" class="level3">
+<h3 class="anchored" data-anchor-id="section-3">0:7:00</h3>
+<p>Using <code>fct_lump</code> with <code>w = n</code> to lump together <code>outcome</code> factor levels displaying the most frequenct with rest lumped into <code>other</code></p>
+<p>fct_lump</p>
+<p>forcats</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/E2amEz_upzU?start=420" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
+</iframe>
+</section>
+<section id="section-4" class="level3">
+<h3 class="anchored" data-anchor-id="section-4">0:9:15</h3>
+<p>Using <code>fct_recode</code> to combine the factor level <code>In Stock</code> with <code>Currently In Care</code></p>
+<p>fct_recode</p>
+<p>forcats</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/E2amEz_upzU?start=555" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
+</iframe>
+</section>
+<section id="section-5" class="level3">
+<h3 class="anchored" data-anchor-id="section-5">0:12:10</h3>
+<p>Using <code>fct_reorder</code> to reorder <code>facet_wrap</code> panels</p>
+<p>fct_reorder</p>
+<p>forcats</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/E2amEz_upzU?start=730" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
+</iframe>
+</section>
+<section id="section-6" class="level3">
+<h3 class="anchored" data-anchor-id="section-6">0:13:03</h3>
+<p>Using <code>scale_y_continuous</code> with <code>labels = comma</code> to separate digits with comma</p>
+<p>scale_y_continuous</p>
+<p>ggplot2 | scales</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/E2amEz_upzU?start=783" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
+</iframe>
+</section>
+<section id="section-7" class="level3">
+<h3 class="anchored" data-anchor-id="section-7">0:14:10</h3>
+<p>Using <code>complete</code> to complete account for missing combinations of data where the value is 0 in the <code>released</code> column</p>
+<p>complete</p>
+<p>tidyr</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/E2amEz_upzU?start=850" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
+</iframe>
+</section>
+<section id="section-8" class="level3">
+<h3 class="anchored" data-anchor-id="section-8">0:16:10</h3>
+<p>Using <code>max (year)</code> within <code>filter</code> to subset the data displaying only the most recent year</p>
+<p>max</p>
+<p>base</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/E2amEz_upzU?start=970" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
+</iframe>
+</section>
+<section id="section-9" class="level3">
+<h3 class="anchored" data-anchor-id="section-9">0:19:30</h3>
+<p>Using <code>pivot_longer</code> to pivot location variables from wide to long</p>
+<p>pivot_longer</p>
+<p>tidyr</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/E2amEz_upzU?start=1170" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
+</iframe>
+</section>
+<section id="section-10" class="level3">
+<h3 class="anchored" data-anchor-id="section-10">0:21:45</h3>
+<p>Web Scaraping table from Wikipedia with <code>SelectorGadget</code> and <code>Rvest</code></p>
+<p>read_html | html_nodes | map |</p>
+<p>rvest | janitor</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/E2amEz_upzU?start=1305" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
+</iframe>
+</section>
+<section id="section-11" class="level3">
+<h3 class="anchored" data-anchor-id="section-11">0:25:45</h3>
+<p>Using <code>str_to_upper</code> to upper case the values in the <code>shorthand</code> column</p>
+<p>str_to_upper</p>
+<p>stringr</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/E2amEz_upzU?start=1545" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
+</iframe>
+</section>
+<section id="section-12" class="level3">
+<h3 class="anchored" data-anchor-id="section-12">0:27:13</h3>
+<p>Using <code>parse_number</code> to remove commas from <code>population</code> and <code>area</code> columns</p>
+<p>parse_number</p>
+<p>readr</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/E2amEz_upzU?start=1633" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
+</iframe>
+</section>
+<section id="section-13" class="level3">
+<h3 class="anchored" data-anchor-id="section-13">0:28:55</h3>
+<p>Using <code>bind_rows</code> to bind the two web scraped tables from Wikipedia together by row and column</p>
+<p>bind_rows</p>
+<p>dplyr</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/E2amEz_upzU?start=1735" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
+</iframe>
+</section>
+<section id="section-14" class="level3">
+<h3 class="anchored" data-anchor-id="section-14">0:29:35</h3>
+<p>Using <code>inner_join</code> to combine the Wikipedia table with the original data set</p>
+<p>inner_join</p>
+<p>dplyr</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/E2amEz_upzU?start=1775" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
+</iframe>
+</section>
+<section id="section-15" class="level3">
+<h3 class="anchored" data-anchor-id="section-15">0:29:47</h3>
+<p>Using <code>mutate</code> to create new <code>per_capita_million</code> column to show <code>outcome</code> on a per million people basis</p>
+<p>mutate</p>
+<p>dplyr</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/E2amEz_upzU?start=1787" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
+</iframe>
+</section>
+<section id="section-16" class="level3">
+<h3 class="anchored" data-anchor-id="section-16">0:37:25</h3>
+<p>Using <code>summarize</code> to create new column <code>pct_euthanized</code> showing percent of cats and dogs euthanized over time. Formula accounts for 0 values thus avoiding a resulting empty vector.</p>
+<p>summarize</p>
+<p>dplyr</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/E2amEz_upzU?start=2245" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
+</iframe>
+</section>
+<section id="section-17" class="level3">
+<h3 class="anchored" data-anchor-id="section-17">0:39:10</h3>
+<p>Using <code>scale_y_continuous</code> with <code>labels = percent</code> to add percentage sign to y-axis values</p>
+<p>scale_y_continuous</p>
+<p>ggplot2 | scales</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/E2amEz_upzU?start=2350" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
+</iframe>
+</section>
+<section id="section-18" class="level3">
+<h3 class="anchored" data-anchor-id="section-18">0:42:45</h3>
+<p>Create a choropleth map of Australia using an Australian States <code>Shapefile</code> using the <code>sf</code> and <code>ggplot2</code> packages | Troubleshooting begins at 44:25 (downsizing / downsampling with <code>sf_simplify</code>)</p>
+<p>read_sf | geom_sf | sf_simplify</p>
+<p>sf | ggplot2</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/E2amEz_upzU?start=2565" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
+</iframe>
+</section>
+<section id="section-19" class="level3">
+<h3 class="anchored" data-anchor-id="section-19">0:55:45</h3>
+<p>Add animation to the map of Australia showing the percent of cats euthanized by region using <code>gganimate</code></p>
+<p>transition_manual</p>
+<p>gganimate</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/E2amEz_upzU?start=3345" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
+</iframe>
+</section>
+<section id="section-20" class="level3">
+<h3 class="anchored" data-anchor-id="section-20">1:01:35</h3>
+<p>Summary of screencast</p>
+<p>NA</p>
+<p>NA</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/E2amEz_upzU?start=3695" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
 </iframe>
 
 
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -211,6 +423,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+      <div class="nav-footer-center">Vids by <a href="https://twitter.com/drob">David Robinson</a>. Timestamps &amp; rich content by <a href="https://twitter.com/alexcookson">Alex Cookson</a> and <a href="https://twitter.com/iamericfletcher">Eric Fletcher</a>. Website by <a href="https://twitter.com/OscarBaruffa">Oscar Baruffa</a>, sign up to my <a href="https://oscarbaruffa.com/newsletter/">newsletter</a> for R, data and careers</div>
+  </div>
+</footer>
 
 
 

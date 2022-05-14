@@ -1,0 +1,260 @@
+---
+title: "Himalayan Climbers"
+description: "Data Manipulation, Empirical Bayes, Logistic Regression Model"
+date: 2020-09-22
+date-format: long
+---
+
+Notable topics: Data Manipulation, Empirical Bayes, Logistic Regression Model
+
+Recorded on: 2020-09-22
+
+Timestamps by: Eric Fletcher
+
+[View code](https://github.com/dgrtwo/data-screencasts/blob/master/2020_09_22_himalayan_climbers.Rmd)
+
+## Full screencast
+<iframe width="560" height="315" src="https://www.youtube.com/embed/WT7FMn-_jPY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+## Timestamps
+
+### 0:3:00
+
+Create a `geom_col` chart to visualize the top 50 tallest mountains.
+
+Use `fct_reorder` to reorder the `peak_name` factor levels by sorting along the `height_metres` variable.
+
+ggplot | fct_reorder
+
+ggplot | forcats
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/WT7FMn-_jPY?start=180" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:8:50
+
+Use `summarize` with `across` to get the total number of climbs, climbers, deaths, and first year climbed. 
+
+Use `mutate` to calculate the percent death rate for members and hired staff.
+
+Use `inner_join` and `select` to join with `peaks` dataset by `peak_id`.
+
+summarize | across | arrange | mutate | inner_join
+
+dplyr
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/WT7FMn-_jPY?start=530" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:11:20
+
+Touching on statistical `noise` and how it impacts the death rate for mountains with fewer number of climbs, and how to account for it using various statistical methods including `Beta Binomial Regression` & `Empirical Bayes`.
+
+NA
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/WT7FMn-_jPY?start=680" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:14:30
+
+Further description of `Empirical Bayes` and how to account for not overestimating death rate for mountains with fewer climbers.
+
+Recommended reading: [Introduction to Empirical Bayes: Examples from Baseball Statistics](http://varianceexplained.org/r/empirical-bayes-book/) by David Robinson
+
+NA
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/WT7FMn-_jPY?start=870" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:17:00
+
+Use the `ebbr` package (Empirical Bayes for Binomial in R) to create an Empirical Bayes Estimate for each mountain by fitting prior distribution across data and adjusting the death rates down or up based on the prior distributions. 
+
+Use a `geom_point` chart to visualize the difference between the raw death rate and new `ebbr` fitted death rate.
+
+add_ebb_estimate | geom_point | geom_abline
+
+ebbr | ggplot
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/WT7FMn-_jPY?start=1020" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:21:20
+
+Use `geom_point` to visualize how deadly each mountain is with `geom_errorbarh` representing the 95% credible interval between minimum and maximum values.
+
+ggplot | fct_reorder | geom_errorbarh
+
+ggplot | forcats
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/WT7FMn-_jPY?start=1280" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:26:35
+
+Use `geom_point` to visualize the relationship between `death rate` and `height` of mountain.  
+
+There is not a clear relationship, but David does briefly mention how one could use `Beta Binomial Regression` to further inspect for possible relationships / trends.
+
+geom_point
+
+ggplot | forcats
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/WT7FMn-_jPY?start=1595" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:28:00
+
+Use `geom_histogram` and `geom_boxplot` to visualize the distribution of time it took climbers to go from basecamp to the mountain’s high point for successful climbs only.
+
+Use `mutate` to calculate the number of days it took climbers to get from basecamp to the highpoint.
+
+Add column to data using `case_when` and `str_detect` to identify strings in `termination_reason` that contain the word `Success` and rename them to `Success` & how to use a `vector` and `%in%` to change multiple values in `termination_reason` to `NA` and rest to `Failed`.
+
+Use `fct_lump` to show the top 10 mountains while lumping the other factor levels (mountains) into `other`.
+
+mutate | case_when | str_detect |fct_lump | fct_reorder
+
+dplyr | stringr | forcats
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/WT7FMn-_jPY?start=1680" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:35:30
+
+For just Mount Everest, use `geom_histogram` and `geom_density` with `fill = success` to visualize the days from basecamp to highpoint for climbs that ended in `success`, `failure` or `other`.
+
+geom_histogram | geom_density
+
+ggplot
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/WT7FMn-_jPY?start=2130" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:38:40
+
+For just Mount Everest, use `geom_histogram` to see the distribution of climbs per year.
+
+geom_histogram
+
+ggplot
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/WT7FMn-_jPY?start=2320" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:39:55
+
+For just Mount Everest, use ‘geom_line` and `geom_point` to visualize `pct_death` over time by decade.
+
+Use `mutate` with `pmax` and `integer division` to create a decade variable that lumps together the data for 1970 and before.
+
+mutate | pmax | geom_line | geom_point
+
+ggplot | base | dplyr
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/WT7FMn-_jPY?start=2395" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:41:30
+
+Write a function for summary statistics such as `n_climbs`, `pct_success`, `first_climb`, `pct_death`, ‘pct_hired_staff_death`.
+
+function
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/WT7FMn-_jPY?start=2490" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:46:20
+
+For just Mount Everest, use `geom_line` and `geom_point` to visualize `pct_success` over time by decade.
+
+mutate | pmax | geom_line | geom_point
+
+ggplot | base | dplyr
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/WT7FMn-_jPY?start=2780" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:47:10
+
+For just Mount Everest, use `geom_line` and `geom_point` to visualize `pct_hired_staff_deaths ` over time by decade.
+
+David decides to visualize the `pct_hired_staff_deaths` and `pct_death` charts together on the same plot.
+
+mutate | pmax | geom_line | geom_point
+
+ggplot | base | dplyr
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/WT7FMn-_jPY?start=2830" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:50:45
+
+For just Mount Everest, fit a logistic regression model to predict the probability of death with `format.pval` to calculate the `p.value`.
+
+Use `fct_lump` to lump together all `expedition_role` factors except for the n most frequent.
+
+fct_lump | glm | format.pval
+
+forcats | stats | broom | base
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/WT7FMn-_jPY?start=3045" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:56:30
+
+Use `group_by` with `integer division` and `summarize` to calculate `n_climbers` and `pct_death` for age bucketed into decades.
+
+group_by | summarize
+
+dplyr
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/WT7FMn-_jPY?start=3390" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:59:45
+
+Use `geom_point` and `geom_errorbarh` to visualize the logistic regression model with confident intervals.
+
+geom_point | geom_errorbarh | conf.int
+
+ggplot | broom
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/WT7FMn-_jPY?start=3585" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 1:03:30
+
+Summary of screencast
+
+NA
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/WT7FMn-_jPY?start=3810" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+

@@ -1,0 +1,152 @@
+---
+title: "Government Spending on Kids"
+description: "Data Manipulation, Functions, Embracing, Reading in Many .csv Files, Pairwise Correlation"
+date: 2020-09-15
+date-format: long
+---
+
+Notable topics: Data Manipulation, Functions, Embracing, Reading in Many .csv Files, Pairwise Correlation
+
+Recorded on: 2020-09-15
+
+Timestamps by: Eric Fletcher
+
+[View code](https://github.com/dgrtwo/data-screencasts/blob/master/2020_09_15_government_spending_kids.Rmd)
+
+## Full screencast
+<iframe width="560" height="315" src="https://www.youtube.com/embed/dHRPrVsnNwo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+## Timestamps
+
+### 0:6:15
+
+Using `geom_line` and `summarize` to visualize education spending over time. First for all states. Then individual states. Then small groups of states using `%in%`. Then in random groups of size n using `%in%` and `sample` with `unique`. `fct_reorder` is used to reorder `state` factor levels by sorting along the `inf_adj` variable. 
+
+`geom_vline` used to add reference to the 2009 financial crisis.
+
+geom_line | summarize | unique | sample | facet_wrap | fct_reorder | theme_tufte | geom_vline
+
+ggplot | dplyr | base | ggthemes | forcats
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/dHRPrVsnNwo?start=375" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:16:00
+
+Take the previous chart setting the `inf_adj_perchild` for the first year  `1997` to `100%` in order to show a measure of increase from `100%` as opposed to absolute value for change over time for each state relative to `1997`.  `geom_hline` used to add reference for the `100%` starting point. David ends up changing the starting point from `100%` to `0%`
+
+`fct_reorder` with `max` used to reorder the plots in descending order based on highest peak values.
+
+David briefly mentions the [small multiples](https://www.sharpsightlabs.com/blog/small-multiples-ggplot/#:~:text=The%20small%20multiples%20technique%20is,groups%20or%20comparing%20over%20time.&text=In%20contrast%2C%20R's%20GGPlot2%20package,multiples%20extraordinarily%20easy%20to%20create.) approach to analyzing data.
+
+geom_line | summarize | unique | sample | facet_wrap | fct_reorder | theme_tufte | geom_vline | geom_hline
+
+ggplot | dplyr | base | ggthemes | forcats
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/dHRPrVsnNwo?start=960" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:23:35
+
+Create a `function` named `plot_changed_faceted` to make it easier to visualize the many other variables included in the dataset.
+
+function
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/dHRPrVsnNwo?start=1415" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:27:25
+
+Create a `function` named `plot_faceted` with a `{{ y_axis }}` [embracing](https://dplyr.tidyverse.org/articles/programming.html) argument. Adding this function creates two stages: one for data transformation and another for plotting.
+
+function
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/dHRPrVsnNwo?start=1645" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:37:05
+
+Use the `dir` function with `pattern` and `purrr` package's `map_df` function to read in many different `.csv` files with GDP values for each state. 
+
+Troubleshooting `Can't combine <character> and <double> columns` error using `function` and `mutate` with `across` and `as.numeric`.
+
+Extract state name from filename using `extract` from `tidyr` and `regular expression`.
+
+dir | map_df | function | set_names | pivot_longer | separate | extract
+
+base | purr | tidyr
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/dHRPrVsnNwo?start=2225" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:50:50
+
+Unsuccessful attempt at importing state population data via a not user friendly dataset from `census.gov` by skipping the first 3 rows of the Excel file.
+
+read_xlsx
+
+readxl
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/dHRPrVsnNwo?start=3050" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:54:22
+
+Use `geom_col` to see which states spend the most for each child for a single variable and multiple variables using `%in%`.
+
+Use `scale_fill_discrete` with `guide_legend(reverse = TRUE)` to change the ordering of the legend.
+
+geom_col | fct_reorder | scale_fill_discrete
+
+ggplot | forcats
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/dHRPrVsnNwo?start=3262" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:57:40
+
+Use `geom_col` and 'pairwise_corr` to visualize the correlation between variables across states in 2016 using `pairwise correlation`.
+
+pairwise_corr | fct_reorder
+
+widyr
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/dHRPrVsnNwo?start=3460" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 1:02:02
+
+Use ` geom_point` to plot `inf_adjust_perchild_PK12ed` versus `inf_adj_perchild_highered`. `geom_text` used to apply state names to each point.
+
+pivot_wider | geom_point |geom_text
+
+ggplot | tidyr
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/dHRPrVsnNwo?start=3722" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 1:05:00
+
+Summary of screencast.
+
+NA
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/dHRPrVsnNwo?start=3900" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+

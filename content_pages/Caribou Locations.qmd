@@ -1,0 +1,128 @@
+---
+title: "Caribou Locations"
+description: "Maps with `ggplot2`, Calculating distance and speed with `geosphere`"
+date: 2020-06-23
+date-format: long
+---
+
+Notable topics: Maps with `ggplot2`, Calculating distance and speed with `geosphere`
+
+Recorded on: 2020-06-23
+
+Timestamps by: Eric Fletcher
+
+[View code](https://github.com/dgrtwo/data-screencasts/blob/master/caribou-locations.Rmd)
+
+## Full screencast
+<iframe width="560" height="315" src="https://www.youtube.com/embed/7G7SVODhVo4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+## Timestamps
+
+### 0:4:00
+
+Use `summarize` and `across` to calculate the proportion of `NA` values in the `individuals` dataset. Note, you do not need to use `list()`.
+
+summarize | across
+
+dplyr
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/7G7SVODhVo4?start=240" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:9:00
+
+Use `ggplot` and `borders` from the `ggplot2` package to create a map of `Canada` with `deploy_on_longitude` and `deploy_on_latitude` from the `individuals` dataset.
+
+ggplot | borders
+
+ggplot2
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/7G7SVODhVo4?start=540" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:13:50
+
+Import Canada province `shapefile` using the `sf` package. [Unsuccessful]
+
+read_sf
+
+sf
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/7G7SVODhVo4?start=830" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:25:00
+
+Use `min` and `max` from `base r ` within `summarize` to find out the `start` and `end` dates for each caribou in the `locations` dataset.
+
+min | max
+
+base
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/7G7SVODhVo4?start=1500" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:27:15
+
+Use `sample` from `base r` to pick one single caribou at a time then use the subset with `geom_path` from `ggplot2` to track the path a that caribou takes over time.  `color = factor(floor_date(timestamp, "quarter")` is used to color the path according to what quarter the observation occured in.
+
+sample | geom_path
+
+base | ggplot2
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/7G7SVODhVo4?start=1635" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:35:15
+
+Use `as.Date` from `base r` and `floor_date` from the `lubridate` package to convert `timestamp` variable into quarters then `facet_wrap` the previous plot by `quarter`.
+
+as.Date | floor_date
+
+base | lubridate
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/7G7SVODhVo4?start=2115" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:37:15
+
+Within `mutate`, use `as.numeric(difftime(timestamp, lag(timestamp), unit = "hours"))`  from `base r` to figure out the gap in time between observations.
+
+difftime | lag
+
+base
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/7G7SVODhVo4?start=2235" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:43:05
+
+Use `distHaversine` from the `geosphere` package to calculate distance in `km` then convert it to speed in `kph`.
+
+distHaversine | cbind
+
+geosphere
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/7G7SVODhVo4?start=2585" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 1:00:00
+
+Summary of dataset.
+
+NA
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/7G7SVODhVo4?start=3600" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+

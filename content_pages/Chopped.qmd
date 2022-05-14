@@ -1,0 +1,272 @@
+---
+title: "Chopped"
+description: "Data manipulation, Modeling (Linear Regression, Random Forest, and Natural Spline)"
+date: 2020-08-25
+date-format: long
+---
+
+Notable topics: Data manipulation, Modeling (Linear Regression, Random Forest, and Natural Spline)
+
+Recorded on: 2020-08-25
+
+Timestamps by: Eric Fletcher
+
+[View code](https://github.com/dgrtwo/data-screencasts/blob/master/2020_08_25_chopped.Rmd)
+
+## Full screencast
+<iframe width="560" height="315" src="https://www.youtube.com/embed/6V0vAx2Km7U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+## Timestamps
+
+### 0:5:20
+
+Use `geom_histogram` to visualize the distribution of episode ratings.
+
+geom_histogram
+
+ggplot
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/6V0vAx2Km7U?start=320" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:6:30
+
+Use `geom_point` and `geom_line` with `color = factor(season)` to visualize the episode rating for every episode.
+
+geom_point | geom_line
+
+ggplot |
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/6V0vAx2Km7U?start=390" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:7:15
+
+Use `group_by` and `summarize` to show the average rating for each season and the number of episodes in each season.
+
+group_by | summarize
+
+dplyr
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/6V0vAx2Km7U?start=435" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:7:15
+
+Continuing from previous row:
+
+Use `geom_line` and `geom_point` with `size = n_episodes`  to visualize the average rating for each season with point size indicating the total number of episodes (larger = more episodes, smaller = fewer episodes).
+
+geom_line | geom_point
+
+ggplot
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/6V0vAx2Km7U?start=435" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:10:55
+
+Use `fct_reorder`  to reorder the `episode_name` factor levels by sorting along the `episode_rating` variable.
+
+fct_reorder
+
+forcats
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/6V0vAx2Km7U?start=655" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:10:55
+
+Use `geom_point` to visualize the top episodes by rating. 
+
+Use the 'glue' package to place `season number` and `episode number` before episode name on the `y axis`.
+
+gnemonol | arrange
+
+gplot | dplyr | glue
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/6V0vAx2Km7U?start=655" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:15:20
+
+Use `pivot_longer` to combine ingredients into one single column.
+
+Use `separate_rows` with `sep = ", "`  to separate out the ingredients with each ingredient getting its own row.
+
+pivot_longer | separate_rows
+
+tidyr
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/6V0vAx2Km7U?start=920" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:18:10
+
+Use `fct_lump`  to lump ingredients together except for the 10 most frequent.
+
+Use `fct_reorder` to reorder `ingredient` factor levels by sorting against `n`.
+
+fct_lump | fct_reorder
+
+forcats
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/6V0vAx2Km7U?start=1090" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:18:10
+
+Use `geom_col` to create a stacked bar plot to visualize the most common ingredients by course.
+
+geom_col
+
+ggplot
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/6V0vAx2Km7U?start=1090" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:19:45
+
+Use `fct_relevel`  to reorder `course` factor levels to appetizer, entree, dessert.
+
+fct_relevel
+
+forcats
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/6V0vAx2Km7U?start=1185" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:21:00
+
+Use `fct_rev` and `scale_fill_discrete` with `guide = guide_legend(reverse = TRUE)` to reorder the segments within the stacked bar plot.
+
+fct_rev | scale_fill_discrete
+
+forcats | ggplot
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/6V0vAx2Km7U?start=1260" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:23:20
+
+Use the `widyr` package and `pairwise_cor` to find out what ingredients appear together. 
+
+Mentioned: [David Robinson - The {widyr} Package YouTube Talk at 2020 R Conference](https://www.youtube.com/watch?v=mApnx5NJwQA)
+
+add_count | distinct | pairwise_cor
+
+widyr | dplyr
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/6V0vAx2Km7U?start=1400" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:26:20
+
+Use `ggraph` , `geom_edge_link`, `geom_node_point`, `geom_node_text` to create an ingredient network diagram to show their makeup and how they interact.
+
+ggraph | geom_edge_link | geom_node_point | geom_node_text
+
+widyr | ggraph | tidygraph
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/6V0vAx2Km7U?start=1580" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:28:00
+
+Use `pairwise_count` from `widyr` to count the number of times each pair of items appear together within a group defined by feature.
+
+pairwise_count
+
+widyr
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/6V0vAx2Km7U?start=1680" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:30:15
+
+Use `unite` from the `tidyr` package in order to paste together the `episode_course` and `series_episode` columns into one column to figure out if any pairs of ingredients appear together in the same course across episodes.
+
+unite | pairwise_count
+
+tidyr | widyr
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/6V0vAx2Km7U?start=1815" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:31:55
+
+Use `summarize` with `min`, `mean, `max`, and `n()` to create the `first_season`, `avg_season`, `last_season` and `n_appearances` variables.
+
+summarize | min | mean | max
+
+dplyr | base
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/6V0vAx2Km7U?start=1915" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:34:35
+
+Use `slice` with `tail` to get the `n` ingredients that appear in early and late seasons.
+
+slice | tail
+
+dplyr | base
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/6V0vAx2Km7U?start=2075" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:35:40
+
+Use `geom_boxplot` to visualize the distribution of each ingredient across all seasons.
+
+semi_join | geom_boxplot | fct_reorder
+
+dplyr | ggplot | forcats
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/6V0vAx2Km7U?start=2140" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:36:50
+
+Fit predictive models (`linear regression` , `random forest`, and `natural spline`) to determine if episode rating is explained by the ingredients or season.
+
+Use `pivot_wider` with `values_fill = list(value = 0))` with 1 indicating ingredient was used and 0 indicating it wasn't used.
+
+pivot_wider | lm | linear_reg | set_engine | fit | initial_split | training | plot | base | vfold_cv | fit_resamples | tune_grid | collect_metrics | geom_line | tidy | rand_forest | clean_names | step_ns | tune_grid  | collect_metrics | prep | juice
+
+tidymodels | stats | rsample | ggplot | broom | parsnip | janitor
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/6V0vAx2Km7U?start=2210" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 1:17:25
+
+Summary of screencast.
+
+NA
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/6V0vAx2Km7U?start=4645" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+

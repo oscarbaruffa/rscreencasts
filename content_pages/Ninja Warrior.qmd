@@ -1,0 +1,176 @@
+---
+title: "Ninja Warrior"
+description: "Log-odds with `tidylo` package, Graphing with `ggplot2`"
+date: 2020-12-15
+date-format: long
+---
+
+Notable topics: Log-odds with `tidylo` package, Graphing with `ggplot2`
+
+Recorded on: 2020-12-15
+
+Timestamps by: Alex Cookson
+
+[View code](NA)
+
+## Full screencast
+<iframe width="560" height="315" src="https://www.youtube.com/embed/4AhXvMsCooM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+## Timestamps
+
+### 0:2:35
+
+Inspecting the dataset
+
+NA
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/4AhXvMsCooM?start=155" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:6:40
+
+Using `geom_histogram` to look at distribution of obstacles in a stage
+
+geom_histogram
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/4AhXvMsCooM?start=400" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:9:05
+
+Using `str_remove` function to clean stage names (remove "(Regional/City)")
+
+str_remove
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/4AhXvMsCooM?start=545" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:10:40
+
+Asking, "Are there obstacles that are more common in the Finals than Qualifying rounds?"
+
+NA
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/4AhXvMsCooM?start=640" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:10:50
+
+Using `bind_log_odds` function from `tidylo` package to calculate log-odds of obstacles within a stage type
+
+bind_log_odds
+
+tidylo
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/4AhXvMsCooM?start=650" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:16:05
+
+Using `unite` function to combine two columns
+
+unite
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/4AhXvMsCooM?start=965" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:18:20
+
+Graphing the average position of different obstacles with many, many tweaks to make it look nice
+
+NA
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/4AhXvMsCooM?start=1100" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:23:10
+
+Creating a stacked bar plot of which obstacles appear in which order
+
+NA
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/4AhXvMsCooM?start=1390" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:30:30
+
+Turning stacked bar plot visualization into a custom function
+
+NA
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/4AhXvMsCooM?start=1830" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:37:40
+
+Asking, "Is there data on how difficult an obstacle is?"
+
+NA
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/4AhXvMsCooM?start=2260" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:45:30
+
+Visualizing which obstacles appear in different seasons with `geom_tile` and a lot of tweaking
+
+geom_tile
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/4AhXvMsCooM?start=2730" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:50:22
+
+Reviewing the result of the previous step (obstacles in different seasons)
+
+NA
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/4AhXvMsCooM?start=3022" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:59:25
+
+Summary of screencast
+
+NA
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/4AhXvMsCooM?start=3565" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+

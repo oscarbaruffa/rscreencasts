@@ -1,0 +1,224 @@
+---
+title: "Space Launches"
+description: "Graphing for EDA (Exploratory Data Analysis)"
+date: 2019-01-15
+date-format: long
+---
+
+Notable topics: Graphing for EDA (Exploratory Data Analysis)
+
+Recorded on: 2019-01-15
+
+Timestamps by: Alex Cookson
+
+[View code](https://github.com/dgrtwo/data-screencasts/blob/master/space-launches.Rmd)
+
+## Full screencast
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ZyPrP_Yo1BA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+## Timestamps
+
+### 0:4:40
+
+Using str_detect function to find missions with "Apollo" in their name
+
+str_detect
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ZyPrP_Yo1BA?start=280" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:6:20
+
+Starting EDA (exploratory data analysis)
+
+NA
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ZyPrP_Yo1BA?start=380" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:15:10
+
+Using fct_collapse function to recode factors (similar to case_when function)
+
+fct_collapse
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ZyPrP_Yo1BA?start=910" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:16:45
+
+Using countrycode function from countrycode package to get full country names from country codes (e.g. "RU" becomes "Russia")
+
+countrycode
+
+countrycode
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ZyPrP_Yo1BA?start=1005" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:18:15
+
+Using replace_na function to convert NA (missing) observations to "Other"
+
+NA
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ZyPrP_Yo1BA?start=1095" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:19:10
+
+Creating a line graph using geom_line function with different colours for different categories
+
+geom_line
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ZyPrP_Yo1BA?start=1150" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:21:05
+
+Using fct_reorder function to reorder factors in line graph above, in order to make legend more readable
+
+fct_reorder
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ZyPrP_Yo1BA?start=1265" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:32:00
+
+Creating a bar graph, using geom_col function, of most active (by number of launches) private or startup agencies
+
+geom_col
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ZyPrP_Yo1BA?start=1920" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:35:05
+
+Using truncated division operator %/% to bin data into decades
+
+%/%
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ZyPrP_Yo1BA?start=2105" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:35:35
+
+Using complete function to turn implicit zeros into explicit zeros (makes for a cleaner line graph)
+
+complete
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ZyPrP_Yo1BA?start=2135" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:37:15
+
+Using facet_wrap function to create small multiples of a line graph, then proceeding to tweak the graph
+
+facet_wrap
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ZyPrP_Yo1BA?start=2235" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:42:50
+
+Using semi_join function as a filtering step
+
+semi_join
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ZyPrP_Yo1BA?start=2570" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:43:15
+
+Using geom_point to create a timeline of launches by vehicle type
+
+geom_point
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ZyPrP_Yo1BA?start=2595" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:47:20
+
+Explanation of why boxplots over time might not be a good visualization choice
+
+NA
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ZyPrP_Yo1BA?start=2840" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:48:00
+
+Using geom_jitter function to tweak the timeline graph to be more readable
+
+geom_jitter
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ZyPrP_Yo1BA?start=2880" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:51:30
+
+Creating a second timeline graph for US vehicles and launches
+
+NA
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ZyPrP_Yo1BA?start=3090" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:56:35
+
+Summary of screencast
+
+NA
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ZyPrP_Yo1BA?start=3395" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+

@@ -1,0 +1,248 @@
+---
+title: "IKEA Furniture"
+description: "Linear model, Coefficient/TIE fighter plot, Boxplots, Log scale discussion, Calculating volume"
+date: 2020-11-03
+date-format: long
+---
+
+Notable topics: Linear model, Coefficient/TIE fighter plot, Boxplots, Log scale discussion, Calculating volume
+
+Recorded on: 2020-11-03
+
+Timestamps by: Eric Fletcher
+
+[View code](https://github.com/dgrtwo/data-screencasts/blob/master/2020_11_03_ikea.Rmd)
+
+## Full screencast
+<iframe width="560" height="315" src="https://www.youtube.com/embed/lY0YLDZhT88" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+## Timestamps
+
+### 0:4:30
+
+Use `fct_reorder` from the `forcats` package to reorder the factor levels for `category` sorted along `n`.
+
+fct_reorder
+
+forcats
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/lY0YLDZhT88?start=270" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:6:00
+
+Brief explanation of why `scale_x_log10` is needed given the distribution of `category` and `price` with `geom_boxplot`.
+
+scale_x_log_10 | geom_boxplot
+
+ggplot2
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/lY0YLDZhT88?start=360" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:7:00
+
+Using `geom_jitter` with `geom_boxplot` to show how many items are within each `category`.
+
+geom_jitter | geom_boxplot
+
+ggplot2
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/lY0YLDZhT88?start=420" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:8:00
+
+Use `add_count` from the `dplyr` package and  `glue` from the `glue` package to concatenate the `category` name with `category_total` on the `geom_boxplot` y-axis.
+
+glue | add_count
+
+glue | dplyr
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/lY0YLDZhT88?start=480" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:9:00
+
+Convert from `Saudi Riyals` to `United States Dollars`.
+
+mutate
+
+dplyr
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/lY0YLDZhT88?start=540" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:11:05
+
+Create a `ridgeplot` - AKA `joyplot` - using `ggridges` package showing the distribution of `price` across `category`.
+
+geom_density_ridges
+
+ggridges
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/lY0YLDZhT88?start=665" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:12:50
+
+Discussion on `distributions` and when to use a `log scale`.
+
+NA
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/lY0YLDZhT88?start=770" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:19:20
+
+Use `fct_lump` from the `forcats` package to lump together all the levels in `category` except for the `n` most frequent.
+
+fct_lump
+
+forcats
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/lY0YLDZhT88?start=1160" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:21:00
+
+Use `scale_fill_discrete` from the `ggplot2` package with `guide = guide_legend(reverse = TRUE)` to reverse the `fill legend`.
+
+scale_fill_discrete
+
+ggplot2
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/lY0YLDZhT88?start=1260" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:24:20
+
+Use `str_trim`  from the `stringr` package to remove whitespace from the `short_description` variable. David then decides to use `str_replace_all` instead with the following regular expression `"\\s+", " "` to replace all whitespace with a single space instead.
+
+str_trim | str_replace_all
+
+stringr
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/lY0YLDZhT88?start=1460" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:25:30
+
+Use `separate` from the `tidyr` package with `extra = "merge"` and `fill = "right"` to separate item description from item dimension.
+
+separate
+
+tidyr
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/lY0YLDZhT88?start=1530" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:26:45
+
+Use `extract` from the `tidyr` package with the regular expression `"[\\d\\-xX]+) cm"` to extract the numbers before `cm`.
+
+extract
+
+tidyr
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/lY0YLDZhT88?start=1605" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:29:50
+
+Use `unite` from the `tidyr` package to paste together the `category` and `main_description` columns into a new column named `category_and_description`.
+
+unite
+
+tidyr
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/lY0YLDZhT88?start=1790" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:32:45
+
+Calculate the volume given the `depth`, `height`, and `width` of each item in dataset in liters using `depth * height * width / 1000`. At 36:15, David decides to change to `cubic meters` instead using `depth * height * width / 1000000`.
+
+mutate
+
+dplyr
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/lY0YLDZhT88?start=1965" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:44:20
+
+Use `str_squish` from the `stringr` package to remove whitespace from the start to the end of the `short_description` variable.
+
+str_squish
+
+stringr
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/lY0YLDZhT88?start=2660" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:48:00
+
+Use `lm` from the `stats` package to create a linear model on a `log, log scale` to predict the price of an item based on volume + category. David then uses `fct_relevel` to reorder the factor levels for `category` such that `tables & desks` is first (starting point) since it's the most frequent item in the category variable and it's price distribution is in the middle.
+
+lm
+
+stats
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/lY0YLDZhT88?start=2880" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:53:00
+
+Use the `broom` package to turn the model output into a coefficient / TIE fighter plot.
+
+tidy | geom_point | geom_errorbarh | geom_vline
+
+broom
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/lY0YLDZhT88?start=3180" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:56:20
+
+Use `str_remove` from the `stringr` package to remove `category` from the start of the strings on the y-axis using the regular expression `"^category"`
+
+str_remove
+
+stringr
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/lY0YLDZhT88?start=3380" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:57:50
+
+Summary of screencast.
+
+NA
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/lY0YLDZhT88?start=3470" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+

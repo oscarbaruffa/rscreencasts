@@ -1,0 +1,188 @@
+---
+title: "Friends"
+description: "Data Manipulation, Linear Modeling, Pairwise Correlation, Text Mining"
+date: 2020-09-08
+date-format: long
+---
+
+Notable topics: Data Manipulation, Linear Modeling, Pairwise Correlation, Text Mining
+
+Recorded on: 2020-09-08
+
+Timestamps by: Eric Fletcher
+
+[View code](https://github.com/dgrtwo/data-screencasts/blob/master/2020_09_08_friends.Rmd)
+
+## Full screencast
+<iframe width="560" height="315" src="https://www.youtube.com/embed/bgcBEBqVnx8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+## Timestamps
+
+### 0:7:30
+
+Use `dplyr` package's `count` function to count the unique values of multiple variables.
+
+count
+
+dplyr
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/bgcBEBqVnx8?start=450" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:9:35
+
+Use `geom_col` to show how many lines of dialogue there is for each character. Use `fct_reorder` to reorder the `speaker` factor levels by sorting along `n`.
+
+geom_col | fct_reorder
+
+ggplot | forcats
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/bgcBEBqVnx8?start=575" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:12:07
+
+Use `semi_join` to join `friends` dataset with `main_cast` with `by = "speaker` returning all rows from `friends` with a match in `main_cast`.
+
+semi_join
+
+dplyr
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/bgcBEBqVnx8?start=727" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:12:30
+
+Use `unite` to create the `episode_number` variable which pastes together `season` and `episode` with `sep = "."`.
+
+Then, use `inner_join` to combine above dataset with `friends_info` with `by = c("season", "episode")`. 
+
+Then, use `mutate` and the `glue` package instead to combine `{ season }.{ episode } { title }`.
+
+Then use `fct_reorder(episode_title, season + .001 * episode)`  to order it by `season` first then `episode`.
+
+unite | inner_join | glue | fct_reorder
+
+tidyr | glue |forcats
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/bgcBEBqVnx8?start=750" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:15:45
+
+Use `geom_point` to visualize `episode_title` and `us_views_millions`. 
+
+Use `as.integer` to change `episode_title` to integer class. 
+
+Add labels to `geom_point` using `geom_text` with `check_overlap = TRUE` so text that overlaps previous text in the same layer will not be plotted.
+
+geom_point | as.integer | geom_text | geom_line
+
+ggplot | base
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/bgcBEBqVnx8?start=945" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:19:95
+
+Run the above plot again using `imdb_rating` instead of `us_views_millions`
+
+geom_point | as.integer | geom_text | geom_line
+
+ggplot | base
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/bgcBEBqVnx8?start=1235" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:21:35
+
+Ahead of modeling:
+
+Use `geom_boxplot` to visualize the distribution of speaking for main characters.
+
+Use the `complete` function with `fill = list(n = 0)` to replace existing explicit missing values in the data set.
+
+Demonstration of how to account for missing `imdb_rating` values using the `fill` function with `.direction = "downup"` to keep the imdb rating across the same title.
+
+semi_join | geom_boxplot | coord_flip | fct_reorder | complete | fill | scale_x_log10
+
+dplyr | ggplot | forcats | tidyr | tidyr
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/bgcBEBqVnx8?start=1295" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:26:45
+
+Ahead of modeling:
+
+Use `summarize` with `cor(log2(n), imdb_rating)` to find the correlation between speaker and imdb rating -- the fact that the correlation is positive for all speakers gives David a suspicion that some episodes are longer than others because they're in 2 parts with higher ratings due to important moments. David addresses this `confounding factor` by including `percentage of lines` instead of `number of lines`.  
+
+Visualize results with `geom_boxplot`, `geom_point` with `geom_smooth`.
+
+semi_join | summarize | add_count | geom_boxplot | geom_smooth | geom_point
+
+dplyr | ggplot
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/bgcBEBqVnx8?start=1605" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:34:05
+
+Use a `linear model` to predict imdb rating based on various variables.
+
+spread | across | semi_join | lm | aov
+
+tidyr | dplyr | stats
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/bgcBEBqVnx8?start=2045" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:42:00
+
+Use the `tidytext` and `tidylo` packages to see what words are most common amongst characters, and whether they are said more times than would be expected by chance. 
+
+Use `geom_col` to visualize the most overrepresented words per character according to `log_odds_weighted`.
+
+unnest_tokens | anti_join | bind_log_odds | semi_join | geom_col | scale_y_reordered
+
+tidytext | tidylo | ggplot
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/bgcBEBqVnx8?start=2520" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:54:15
+
+Use the `widyr` package and `pairwise correlation` to determine which characters tend to appear in the same scences together? 
+
+Use `geom_col` to visualize the correlation between characters.
+
+unite | semi_join | pairwise_corr
+
+widyr | tidyr
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/bgcBEBqVnx8?start=3255" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 1:00:25
+
+Summary of screencast.
+
+NA
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/bgcBEBqVnx8?start=3625" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+

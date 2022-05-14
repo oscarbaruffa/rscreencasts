@@ -1,0 +1,392 @@
+---
+title: "Medium Articles"
+description: "Text mining (tidytext package)"
+date: 2018-12-04
+date-format: long
+---
+
+Notable topics: Text mining (tidytext package)
+
+Recorded on: 2018-12-04
+
+Timestamps by: Alex Cookson
+
+[View code](https://github.com/dgrtwo/data-screencasts/blob/master/medium-datasci.Rmd)
+
+## Full screencast
+<iframe width="560" height="315" src="https://www.youtube.com/embed/C69QyycHsgE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+## Timestamps
+
+### 0:5:40
+
+Using summarise_at and starts_with functions to quickly sum up all variables starting with "tag_"
+
+summarise_at | starts_with
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/C69QyycHsgE?start=340" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:6:55
+
+Using gather function (now pivot_longer) to convert topic tag variables from wide to tall (tidy) format
+
+gather
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/C69QyycHsgE?start=415" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:8:10
+
+Explanation of how gathering step above will let us find the most/least common tags
+
+NA
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/C69QyycHsgE?start=490" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:9:00
+
+Explanation of using median (instead of mean) as measure of central tendency for number of claps an article got
+
+median
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/C69QyycHsgE?start=540" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:9:50
+
+Visualizing log-normal (ish) distribution of number of claps an article gets
+
+NA
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/C69QyycHsgE?start=590" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:12:05
+
+Using pmin function to bin reading times of 10 minutes or more to cap out at 10 minutes
+
+pmin
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/C69QyycHsgE?start=725" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:12:35
+
+Changing scale_x_continuous function's breaks argument to get custom labels and tick marks on a histogram
+
+scale_x_continuous
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/C69QyycHsgE?start=755" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:14:35
+
+Discussion of using mean vs. median as measure of central tendency for reading time (he decides on mean)
+
+NA
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/C69QyycHsgE?start=875" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:16:00
+
+Starting text mining analysis
+
+NA
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/C69QyycHsgE?start=960" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:16:40
+
+Using unnest_tokens function from tidytext package to split character string into individual words
+
+unnest_tokens
+
+tidytext
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/C69QyycHsgE?start=1000" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:17:50
+
+Explanation of stop words and using anti_join function from tidytext package to get rid of them
+
+anti_join
+
+tidytext
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/C69QyycHsgE?start=1070" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:20:20
+
+Using str_detect function to filter out "words" that are just numbers (e.g., "2", "35")
+
+str_detect
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/C69QyycHsgE?start=1220" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:22:35
+
+Quick analysis of which individual words are associated with more/fewer claps ("What are the hype words?")
+
+NA
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/C69QyycHsgE?start=1355" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:25:15
+
+Using geometric mean as alternative to median to get more distinction between words (note 27:33 where he makes a quick fix)
+
+NA
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/C69QyycHsgE?start=1515" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:28:10
+
+Starting analysis of clusters of related words (e.g., "neural" is linked to "network")
+
+NA
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/C69QyycHsgE?start=1690" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:30:30
+
+Finding correlations pairs of words using pairwise_cor function from widyr package
+
+pairwise_cor
+
+widyr
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/C69QyycHsgE?start=1830" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:34:00
+
+Using ggraph and igraph packages to make network plot of correlated pairs of words
+
+NA
+
+ggraph | igraph
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/C69QyycHsgE?start=2040" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:35:00
+
+Using geom_node_text to add labels for points (vertices) in the network plot
+
+geom_node_text
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/C69QyycHsgE?start=2100" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:38:40
+
+Filtering original data to only include words appear in the network plot (150 word pairs with most correlation)
+
+NA
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/C69QyycHsgE?start=2320" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:40:10
+
+Adding colour as a dimension to the network plot, representing geometric mean of claps
+
+NA
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/C69QyycHsgE?start=2410" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:40:50
+
+Changing default colour scale to one with Blue = Low and High = Red with scale_colour_gradient2 function
+
+scale_colour_gradient2
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/C69QyycHsgE?start=2450" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:43:15
+
+Adding dark outlines to points on network plot with a hack
+
+NA
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/C69QyycHsgE?start=2595" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:44:45
+
+Starting to predict number of claps based on title tag (Lasso regression)
+
+NA
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/C69QyycHsgE?start=2685" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:45:50
+
+Explanation of data format needed to conduct Lasso regression (and using cast_sparse function to get sparse matrix)
+
+cast_sparse
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/C69QyycHsgE?start=2750" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:47:45
+
+Bringing in number of claps to the sparse matrix (un-tidy methods)
+
+NA
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/C69QyycHsgE?start=2865" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:49:00
+
+Using cv.glmnet function (cv = cross validated) from glmnet package to run Lasso regression
+
+cv.glmnet
+
+glmnet
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/C69QyycHsgE?start=2940" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:49:55
+
+Finding and fixing mistake in defining Lasso model
+
+NA
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/C69QyycHsgE?start=2995" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:51:05
+
+Explanation of Lasso model
+
+NA
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/C69QyycHsgE?start=3065" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:52:35
+
+Using tidy function from the broom package to tidy up the Lasso model
+
+tidy
+
+broom
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/C69QyycHsgE?start=3155" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:54:35
+
+Visualizing how specific words affect the prediction of claps as lambda (Lasso's penalty parameter) changes
+
+NA
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/C69QyycHsgE?start=3275" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 1:00:20
+
+Summary of screencast
+
+NA
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/C69QyycHsgE?start=3620" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+

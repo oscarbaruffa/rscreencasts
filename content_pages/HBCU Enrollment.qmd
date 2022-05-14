@@ -1,0 +1,332 @@
+---
+title: "HBCU Enrollment"
+description: "Data Cleaning"
+date: 2021-02-02
+date-format: long
+---
+
+Notable topics: Data Cleaning
+
+Recorded on: 2021-02-02
+
+Timestamps by: Eric Fletcher
+
+[View code](https://github.com/dgrtwo/data-screencasts/blob/master/2021_02_02_hbcu.Rmd)
+
+## Full screencast
+<iframe width="560" height="315" src="https://www.youtube.com/embed/TSG74voJQ3E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+## Timestamps
+
+### 0:2:45
+
+Detect the presence or absence of a pattern in a string.
+
+str_detect
+
+stringr
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/TSG74voJQ3E?start=165" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:3:30
+
+Separate a character column into multiple columns with a regular expression or numeric locations
+
+separate
+
+tidyr
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/TSG74voJQ3E?start=210" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:3:30
+
+Rename column.
+
+rename
+
+dplyr
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/TSG74voJQ3E?start=210" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:4:20
+
+Select only unique/distinct rows from a data frame.
+
+distinct
+
+dplyr
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/TSG74voJQ3E?start=260" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:5:55
+
+Expand the y axis plot limits by starting at 0.
+
+expand_limits
+
+ggplot2
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/TSG74voJQ3E?start=355" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:6:20
+
+Combine two datasets while including all rows in x and y.
+
+full_join
+
+dplyr
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/TSG74voJQ3E?start=380" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:11:00
+
+Y axis labels as percentages (2.5%, 50%, etc).
+
+percent
+
+scales
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/TSG74voJQ3E?start=660" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:12:30
+
+Bind multiple data frames by row and an explanation as to why it's not the best approach for joining given the other options.
+
+bind_rows
+
+dplyr
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/TSG74voJQ3E?start=750" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:14:55
+
+Brief discussion on the differences between `rbind` and `row_bind`.
+
+rbind | row_bind
+
+dplyr | base
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/TSG74voJQ3E?start=895" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:16:10
+
+Remove matched patterns in a string.
+
+str_remove
+
+stringr
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/TSG74voJQ3E?start=970" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:17:10
+
+Turn variable names into 'snake case' (e.g. Standard Error, standard_error).
+
+clean_names
+
+janitor
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/TSG74voJQ3E?start=1030" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:18:10
+
+Mutate multiple columns to change type from `character` to `numeric` while parsing out the numbers while getting rid of the other characters in the dataset.
+
+mutate_if | is.character | parse_number
+
+dplyr | base | readr
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/TSG74voJQ3E?start=1090" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:18:50
+
+Subset rows using their positions.
+
+slice
+
+dplyr
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/TSG74voJQ3E?start=1130" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:20:15
+
+Reshape the data from wide to long such that there is one row for each year and race.
+
+gather | mutate | ifelse | str_remove | spread
+
+tidyr | dplyr | stringr | base
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/TSG74voJQ3E?start=1215" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:21:25
+
+Compute the absolute value of x
+
+abs
+
+base
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/TSG74voJQ3E?start=1285" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:24:55
+
+Remove matched patterns in a string (e.g. black1, black & white1, white).
+
+str_remove
+
+stringr
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/TSG74voJQ3E?start=1495" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:25:35
+
+Reorder factor levels in `geom_line` plot by sorting along another variable.
+
+fct_reorder
+
+forcats
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/TSG74voJQ3E?start=1535" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:29:25
+
+Bind multiple data frames by row.
+
+bind_rows
+
+dplyr
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/TSG74voJQ3E?start=1765" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:36:05
+
+Reorder factor levels by hand.
+
+fct_relevel
+
+forcats
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/TSG74voJQ3E?start=2165" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:37:45
+
+Detect and remove the presence of a pattern in a string to remove duplication from `geom_line` plot legend.
+
+str_remove
+
+stringr
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/TSG74voJQ3E?start=2265" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:38:50
+
+"Reorder factor levels in `geom_line` plot by sorting along another variable with ordering based on the last value to make the data line up with how the values are displayed in the legend. 'fct_reorder(race_ethnicity, percent, last, .desc = TRUE)`"
+
+fct_reorder
+
+forcats
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/TSG74voJQ3E?start=2330" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:40:35
+
+Import external Excel data set from `Data.World`.
+
+read_excel
+
+readxl
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/TSG74voJQ3E?start=2435" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:44:20
+
+Select variables that match a pattern to remove.
+
+starts_with
+
+tidyselect
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/TSG74voJQ3E?start=2660" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:49:00
+
+Unpack data in one column (field_gender) into two separate columns (field, gender).
+
+str_remove | group_by | first | ifelse | cumsum
+
+stringr | dplyr
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/TSG74voJQ3E?start=2940" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:49:20
+
+Summary of screencast.
+
+NA
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/TSG74voJQ3E?start=2960" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:58:00
+
+NA
+
+NA
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/TSG74voJQ3E?start=3480" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+

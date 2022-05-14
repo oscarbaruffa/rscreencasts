@@ -11,5 +11,240 @@ Recorded on: 2020-05-19
 
 Timestamps by: Eric Fletcher
 
+[View code](https://github.com/dgrtwo/data-screencasts/blob/master/beach-volleyball.Rmd)
 
+## Full screencast
 <iframe width="560" height="315" src="https://www.youtube.com/embed/MfDdmsW3OMo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+## Timestamps
+
+### 0:5:30
+
+Use `pivot_longer` from the `dplyr` package to pivot the data set from `wide` to `long`.
+
+pivot_longer
+
+dplyr
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/MfDdmsW3OMo?start=330" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:7:20
+
+Use `mutate_at` from the `dplyr` package with `starts_with` to change the class to `character` for all columns that start with `w_` and `l_`.
+
+mutate_at
+
+dplyr
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/MfDdmsW3OMo?start=440" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:8:00
+
+Use `separate` from the `tidyr` package to separate the `name` variable into three columns with `extra = merge` and `fill = right`.
+
+separate
+
+tidyr
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/MfDdmsW3OMo?start=480" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:10:35
+
+Use `rename` from the `dplyr` package to rename `w_player1`, `w_player2`, `l_player1`, and `l_player2`.
+
+rename
+
+dplyr
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/MfDdmsW3OMo?start=635" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:12:50
+
+Use `pivot_wider` from the `dplyr` package to pivot the `name` variable from `long` to `wide`.
+
+pivot_wider
+
+dplyr
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/MfDdmsW3OMo?start=770" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:15:15
+
+Use `str_to_upper` to convert the `winner_loser` `w` and `l` values to uppercase.
+
+str_to_upper
+
+stringr
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/MfDdmsW3OMo?start=915" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:20:25
+
+Add unique row numbers for each match using `mutate` with `row_number` from the `dplyr` package.
+
+row_number
+
+dplyr
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/MfDdmsW3OMo?start=1225" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:21:20
+
+Separate the `score` values into multiple rows using `separate_rows` from the `tidyr` package.
+
+separate_rows
+
+tidyr
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/MfDdmsW3OMo?start=1280" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:22:45
+
+Use `separate` from the `tidyr` package to actual scores into two columns, one for the winners score `w_score` and another for the losers score `l_score`.
+
+separate
+
+tidyr
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/MfDdmsW3OMo?start=1365" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:23:45
+
+Use `na_if` from the `dplyr` package to change the `Forfeit or other` value from the `score` variable to `NA`.
+
+na_if
+
+dplyr
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/MfDdmsW3OMo?start=1425" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:24:35
+
+Use `str_remove` from the `stringr` package to remove scores that include `retired`.
+
+str_remove
+
+stringr
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/MfDdmsW3OMo?start=1475" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:25:25
+
+Determine how many times the winners score `w_score` is  greter than the losers score `l_score` at least 1/3 of the time.
+
+mutate | group_by | summarize
+
+dplyr
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/MfDdmsW3OMo?start=1525" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:28:30
+
+Use `summarize` from the `dplyr` package to create the summary statistics including the `number of matches`, `winning percentage`, `date of first match`, `date of most recent match`.
+
+summarize
+
+dplyr
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/MfDdmsW3OMo?start=1710" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:34:15
+
+Use `type_convert` from the `readr` package to convert `character` class variables to `numeric`.
+
+type_convert
+
+readr
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/MfDdmsW3OMo?start=2055" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:35:00
+
+Use `summarize_all` from the `dplyr` package to calculate the calculate which fraction of the data is not `NA`.
+
+summarize_all
+
+dplyr
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/MfDdmsW3OMo?start=2100" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:42:00
+
+Use `summarize` from the `dplyr` package to determine players `number of matches`, `winning percentage`, `average attacks`, `average errors`, `average kills`, `average aces`, `average serve errors`, and `total rows with data` for years prior to 2019. 
+
+The summary statistics are then used to answer how would we could predict if a player will win in 2019 using `geom_point` and `logistic regression`. Initially, David wanted to predict performance based on players first year performance. (NOTE - David mistakingly grouped by `year` and `age`. He cathces this around 1:02:00.)
+
+summarize | inner_join | geom_point | glm |cbind
+
+dplyr | ggplot2
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/MfDdmsW3OMo?start=2520" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:49:25
+
+Use  `year` from the `lubridate` package within a `group_by` to determine the `age` for each play given their `birthdate`.
+
+summarize | year
+
+lubridate
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/MfDdmsW3OMo?start=2965" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:54:30
+
+Turn the summary statistics at timestamp `42:00` into a `.` DOT `%>%` PIPE function.
+
+NA
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/MfDdmsW3OMo?start=3270" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 1:04:30
+
+Summary of screencast.
+
+NA
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/MfDdmsW3OMo?start=3870" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+

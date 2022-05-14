@@ -1,0 +1,116 @@
+---
+title: "Women's World Cup"
+description: "NA"
+date: 2019-07-22
+date-format: long
+---
+
+Notable topics: NA
+
+Recorded on: 2019-07-22
+
+Timestamps by: Alex Cookson
+
+[View code](https://github.com/dgrtwo/data-screencasts/blob/master/womens-world-cup.Rmd)
+
+## Full screencast
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ZOQSuapvHqA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+## Timestamps
+
+### 0:2:15
+
+Adding country names using countrycode package
+
+NA
+
+countrycode
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ZOQSuapvHqA?start=135" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:3:45
+
+Web scraping country codes from Wikipedia
+
+NA
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ZOQSuapvHqA?start=225" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:6:00
+
+Combining tables that are separate lists into one dataframe
+
+NA
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ZOQSuapvHqA?start=360" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:14:00
+
+Using rev function (reverse) to turn multiple rows of soccer match scores into one row (base team and opposing team)
+
+rev
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ZOQSuapvHqA?start=840" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:26:30
+
+Applying a geom_smooth linear model line to a scatter plot, then facetting it
+
+geom_smooth
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ZOQSuapvHqA?start=1590" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:28:30
+
+Adding a line with a slope of 1 (x = y) using geom_abline
+
+geom_abline
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ZOQSuapvHqA?start=1710" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:40:00
+
+Pulling out elements of a list that is embedded in a dataframe
+
+NA
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ZOQSuapvHqA?start=2400" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 1:09:45
+
+Using glue function to add context to facet titles
+
+glue
+
+glue
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ZOQSuapvHqA?start=4185" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+

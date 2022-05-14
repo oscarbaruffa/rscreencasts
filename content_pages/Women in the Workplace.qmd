@@ -1,0 +1,164 @@
+---
+title: "Women in the Workplace"
+description: "Interactive scatterplot (plotly and shiny packages)"
+date: 2019-03-05
+date-format: long
+---
+
+Notable topics: Interactive scatterplot (plotly and shiny packages)
+
+Recorded on: 2019-03-05
+
+Timestamps by: Alex Cookson
+
+[View code](https://github.com/dgrtwo/data-screencasts/blob/master/women-workplace.Rmd)
+
+## Full screencast
+<iframe width="560" height="315" src="https://www.youtube.com/embed/fv9SQ4IFNr4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+## Timestamps
+
+### 0:5:50
+
+Writing a custom function that summarizes variables based on their names (then abandoning the idea)
+
+NA
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/fv9SQ4IFNr4?start=350" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:9:15
+
+Using complete.cases function to find observations that have an NA value in any variable
+
+complete.cases
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/fv9SQ4IFNr4?start=555" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:9:50
+
+Using subsetting within a summarise function to calculate a weighted mean when dealing with 0 or NA values in some observations
+
+NA
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/fv9SQ4IFNr4?start=590" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:12:20
+
+Debugging what is causing NA values to appear in the summarise output (finds the error at 13:25)
+
+NA
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/fv9SQ4IFNr4?start=740" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:17:50
+
+Hypothesizing about one sector illustrating a variation of Simpson's Paradox
+
+NA
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/fv9SQ4IFNr4?start=1070" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:25:25
+
+Creating a scatterplot with a logarithmic scale and using scale_colour_gradient2 function to encode data to point colour
+
+scale_colour_gradient2
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/fv9SQ4IFNr4?start=1525" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:30:00
+
+Creating an interactive plot (tooltips show up on hover) using ggplotly function from plotly package
+
+ggplotly
+
+plotly
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/fv9SQ4IFNr4?start=1800" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:33:20
+
+Fiddling with scale_size_continuous function's range argument to specify point size on a scatterplot (which are encoded to total workers)
+
+NA
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/fv9SQ4IFNr4?start=2000" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:34:50
+
+Explanation of why healthcare sector is a good example of Simpson's Paradox
+
+NA
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/fv9SQ4IFNr4?start=2090" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:43:15
+
+Starting to create a shiny app with "occupation" as only input (many tweaks in subsequent minutes to make it work)
+
+NA
+
+shiny
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/fv9SQ4IFNr4?start=2595" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:47:55
+
+Tweaking size (height) of graph in shiny app
+
+NA
+
+shiny
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/fv9SQ4IFNr4?start=2875" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:54:05
+
+Summary of screencast
+
+NA
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/fv9SQ4IFNr4?start=3245" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+

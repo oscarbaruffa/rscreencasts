@@ -1,0 +1,236 @@
+---
+title: "Student-Teacher Ratios"
+description: "WDI package (World Development Indicators)"
+date: 2019-05-10
+date-format: long
+---
+
+Notable topics: WDI package (World Development Indicators)
+
+Recorded on: 2019-05-10
+
+Timestamps by: Alex Cookson
+
+[View code](https://github.com/dgrtwo/data-screencasts/blob/master/student-teacher-ratios.Rmd)
+
+## Full screencast
+<iframe width="560" height="315" src="https://www.youtube.com/embed/NoUHdrailxA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+## Timestamps
+
+### 0:7:30
+
+Using slice function to select 10 highest and 10 lowest student-teacher ratios (like a filter using row numbers)
+
+slice
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/NoUHdrailxA?start=450" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:12:35
+
+Adding GDP per capita to a dataset using WDI package
+
+NA
+
+WDI
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/NoUHdrailxA?start=755" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:17:40
+
+Using geom_text to add labels to points on a scatterplot
+
+geom_text
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/NoUHdrailxA?start=1060" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:19:00
+
+Using WDIsearch function from WDI package to search for country population data
+
+WDIsearch
+
+WDI
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/NoUHdrailxA?start=1140" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:23:20
+
+Explanation of trick with geom_text function's check_overlap argument to get label for US to appear by rearranging row order
+
+NA
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/NoUHdrailxA?start=1400" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:25:45
+
+Using comma_format function from scales format to get more readable numeric legend (e.g., "500,000,000" instead of "5e+08")
+
+comma_format
+
+scales
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/NoUHdrailxA?start=1545" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:27:55
+
+Exploring different education-related indicators in the WDI package
+
+NA
+
+WDI
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/NoUHdrailxA?start=1675" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:31:55
+
+Using spread function (now pivot_wider) to turn data from tidy to wide format
+
+spread | pivot_wider
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/NoUHdrailxA?start=1915" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:32:15
+
+Using to_snake_case function from snakecase package to conver field names to snake_case
+
+to_snake_case
+
+snakecase
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/NoUHdrailxA?start=1935" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:48:30
+
+Exploring female/male school secondary school enrollment
+
+NA
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/NoUHdrailxA?start=2910" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:51:50
+
+Note of caution on keeping confounders in mind when interpreting scatterplots
+
+NA
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/NoUHdrailxA?start=3110" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:52:30
+
+Creating a linear regression of secondary school enrollment to explore confounders
+
+lm
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/NoUHdrailxA?start=3150" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:54:30
+
+Discussing the actual confounder (GDP per capita) in the linear regression above
+
+NA
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/NoUHdrailxA?start=3270" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:57:20
+
+Adding world region as another potential confounder
+
+NA
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/NoUHdrailxA?start=3440" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:58:00
+
+Using aov function (ANOVA) to explore confounders further
+
+aov
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/NoUHdrailxA?start=3480" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 1:06:50
+
+Reviewing and interpreting the final linear regression model
+
+NA
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/NoUHdrailxA?start=4010" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 1:08:00
+
+Using cor function (correlation) to get correlation matrix for three variables (and brief explanation of multi-collinearity)
+
+cor
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/NoUHdrailxA?start=4080" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 1:10:10
+
+Summary of screencast
+
+NA
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/NoUHdrailxA?start=4210" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+

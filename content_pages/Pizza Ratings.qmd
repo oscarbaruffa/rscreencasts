@@ -1,0 +1,272 @@
+---
+title: "Pizza Ratings"
+description: "NA"
+date: 2019-10-01
+date-format: long
+---
+
+Notable topics: NA
+
+Recorded on: 2019-10-01
+
+Timestamps by: Alex Cookson
+
+[View code](https://github.com/dgrtwo/data-screencasts/blob/master/nyc-pizza.Rmd)
+
+## Full screencast
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Mkac8DHScps" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+## Timestamps
+
+### 0:4:45
+
+Transforming time into something more readable (from time value of seconds since Unix epoch [1970-01-01] ), then converting it into a date
+
+NA
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Mkac8DHScps?start=285" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:9:05
+
+Formatting x-axis text so that it is rotated and readable, then re-ordering using fct_relevel function so that it is in its proper ordinal order
+
+fct_relevel
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Mkac8DHScps?start=545" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:11:00
+
+Converting string answers to integer counterparts to get an overall numeric value for how good each place is
+
+NA
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Mkac8DHScps?start=660" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:12:30
+
+Commentary on speed of mutate calculation within or without a group (non-grouped is slightly faster)
+
+NA
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Mkac8DHScps?start=750" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:15:30
+
+Re-ordering groups by total votes using fct_reorder function, while still maintaining the groups themselves
+
+fct_reorder
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Mkac8DHScps?start=930" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:19:15
+
+Using glue package to combine place name and total respondents
+
+glue
+
+glue
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Mkac8DHScps?start=1155" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:20:30
+
+Using statistical test to give confidence intervals on average score
+
+NA
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Mkac8DHScps?start=1230" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:22:15
+
+Actually using the t.test function with toy example
+
+t.test
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Mkac8DHScps?start=1335" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:23:15
+
+Using weighted linear model instead (which doesn't end up working)
+
+NA
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Mkac8DHScps?start=1395" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:26:00
+
+Using custom function with rep function to get vector of repeated scores (sneaky way of weighting) so that we can perform a proper t-test
+
+rep
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Mkac8DHScps?start=1560" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:27:30
+
+Summarizing t-test function into a list (alternative to nesting)
+
+NA
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Mkac8DHScps?start=1650" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:31:20
+
+Adding error bars using geom_errorbarh to make a TIE fighter plot that shows confidence intervals
+
+geom_errorbarh
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Mkac8DHScps?start=1880" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:36:30
+
+Bringing in additional data from Barstool ratings (to supplement survey of Open R meetup NY)
+
+NA
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Mkac8DHScps?start=2190" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:39:45
+
+Getting survey data to the place level so that we can add an additional dataset
+
+NA
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Mkac8DHScps?start=2385" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:41:15
+
+Checking for duplicates in the joined data
+
+NA
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Mkac8DHScps?start=2475" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:42:15
+
+Calling off the planned analysis due to low sample sizes (too much noise, not enough overlap between datasets)
+
+NA
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Mkac8DHScps?start=2535" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:45:15
+
+Looking at Barstool data on its own
+
+NA
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Mkac8DHScps?start=2715" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:55:15
+
+Renaming all variables with a certain string pattern in them
+
+NA
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Mkac8DHScps?start=3315" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:58:00
+
+Comparing Dave's reviews with all other critics
+
+NA
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Mkac8DHScps?start=3480" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:59:15
+
+Adding geom_abline showing x = y as comparison for geom_smooth linear model line
+
+geom_abline
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Mkac8DHScps?start=3555" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 1:02:30
+
+Changing the location of the aes() to change what the legend icons look like for size aesthetic
+
+NA
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Mkac8DHScps?start=3750" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+

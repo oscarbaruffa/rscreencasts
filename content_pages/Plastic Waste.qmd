@@ -1,0 +1,152 @@
+---
+title: "Plastic Waste"
+description: "Map visualization (especially choropleth)"
+date: 2019-05-27
+date-format: long
+---
+
+Notable topics: Map visualization (especially choropleth)
+
+Recorded on: 2019-05-27
+
+Timestamps by: Alex Cookson
+
+[View code](https://github.com/dgrtwo/data-screencasts/blob/master/plastic-waste.Rmd)
+
+## Full screencast
+<iframe width="560" height="315" src="https://www.youtube.com/embed/BRdLOYtJk9o" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+## Timestamps
+
+### 0:1:45
+
+Using summarise_all to get proportion of NA values across many variables
+
+summarise_all
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/BRdLOYtJk9o?start=105" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:16:50
+
+Adding text labels to scatter plot for some points using check_overlap argument
+
+geom_text
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/BRdLOYtJk9o?start=1010" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:21:45
+
+Using pmin function to get the lower of two possible numbers for a percentage variable that was showing > 100%
+
+pmin
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/BRdLOYtJk9o?start=1305" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:29:00
+
+Starting to make a choropleth map
+
+NA
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/BRdLOYtJk9o?start=1740" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:29:30
+
+Connecting ISO country names (used in mapping code) to country names given in the dataset
+
+NA
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/BRdLOYtJk9o?start=1770" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:32:00
+
+Actual code to create the map using given longitude and latitude
+
+NA
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/BRdLOYtJk9o?start=1920" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:33:45
+
+Using fuzzyjoin package to link variables that use regular expression instead of character (using regex_right_join / regex_left_join function)
+
+regex_left_join
+
+fuzzyjoin
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/BRdLOYtJk9o?start=2025" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:36:15
+
+Using coord_fixed function as a hack to get proper ratios for maps
+
+coord_fixed
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/BRdLOYtJk9o?start=2175" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:39:30
+
+Bringing in additional data using WDI package
+
+NA
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/BRdLOYtJk9o?start=2370" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:47:30
+
+Using patchwork package to show multiple graphs in the same plot
+
+NA
+
+patchwork
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/BRdLOYtJk9o?start=2850" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:53:00
+
+Importing and rename multiple indicators from the WDI package at the same time
+
+NA
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/BRdLOYtJk9o?start=3180" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+

@@ -1,0 +1,188 @@
+---
+title: "CRAN Package Code"
+description: "Graphing for EDA (Exploratory Data Analysis)"
+date: 2019-12-30
+date-format: long
+---
+
+Notable topics: Graphing for EDA (Exploratory Data Analysis)
+
+Recorded on: 2019-12-30
+
+Timestamps by: Alex Cookson
+
+[View code](https://github.com/dgrtwo/data-screencasts/blob/master/cran-code.Rmd)
+
+## Full screencast
+<iframe width="560" height="315" src="https://www.youtube.com/embed/dr4qw8o0nYU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+## Timestamps
+
+### 0:4:30
+
+Summarizing many things by language (e.g., lines of code, comment/code ratio)
+
+NA
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/dr4qw8o0nYU?start=270" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:9:35
+
+Using gather function to consolidate multiple metrics into one dimension, then visualizing by facetting by metric
+
+gather
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/dr4qw8o0nYU?start=575" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:11:20
+
+Setting ncol = 1 within facet_wrap function to get facetted graphs to stack vertically
+
+facet_wrap
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/dr4qw8o0nYU?start=680" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:11:30
+
+Using reorder_within function (tidytext package) to properly reorder factors within each facet
+
+reorder_within
+
+tidytext
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/dr4qw8o0nYU?start=690" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:16:00
+
+Using geom_text label to add language name as label to scatter points
+
+geom_text
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/dr4qw8o0nYU?start=960" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:20:00
+
+Completing preliminary overview and looking at distribution of R code in packages
+
+NA
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/dr4qw8o0nYU?start=1200" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:26:15
+
+Using str_extract to extract only letters and names from character vector (using regex)
+
+str_extract
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/dr4qw8o0nYU?start=1575" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:34:00
+
+Re-ordering the order of categorical variables in the legend using guides function
+
+guides
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/dr4qw8o0nYU?start=2040" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:36:00
+
+Investigating comment/code ratio
+
+NA
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/dr4qw8o0nYU?start=2160" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:43:05
+
+Importing additional package data (looking around for a bit, then starting to actually import ~46:00)
+
+NA
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/dr4qw8o0nYU?start=2585" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:54:40
+
+Importing even more additional data (available packages)
+
+NA
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/dr4qw8o0nYU?start=3280" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:57:50
+
+Using separate_rows function to separate delimited values
+
+separate_rows
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/dr4qw8o0nYU?start=3470" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:58:45
+
+Using extract function and regex to pull out specific types of characters from a string
+
+extract
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/dr4qw8o0nYU?start=3525" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 1:05:35
+
+Summary of screencast
+
+NA
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/dr4qw8o0nYU?start=3935" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+

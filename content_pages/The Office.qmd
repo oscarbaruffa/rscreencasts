@@ -1,0 +1,380 @@
+---
+title: "The Office"
+description: "Text mining (tidytext package), LASSO regression (glmnet package)"
+date: 2020-03-16
+date-format: long
+---
+
+Notable topics: Text mining (tidytext package), LASSO regression (glmnet package)
+
+Recorded on: 2020-03-16
+
+Timestamps by: Alex Cookson
+
+[View code](https://github.com/dgrtwo/data-screencasts/blob/master/office-transcripts.Rmd)
+
+## Full screencast
+<iframe width="560" height="315" src="https://www.youtube.com/embed/_IvAubTDQME" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+## Timestamps
+
+### 0:1:45
+
+Overview of transcripts data
+
+NA
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/_IvAubTDQME?start=105" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:2:25
+
+Overview of ratintgs data
+
+NA
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/_IvAubTDQME?start=145" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:4:10
+
+Using fct_inorder function to create a factor with levels based on when they appear in the dataframe
+
+fct_inorder
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/_IvAubTDQME?start=250" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:4:50
+
+Using theme and element_text to turn axis labels 90 degrees
+
+theme | element_text
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/_IvAubTDQME?start=290" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:5:55
+
+Creating a line graph with points at each observation (using geom_line and geom_point)
+
+geom_line | geom_point
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/_IvAubTDQME?start=355" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:7:10
+
+Adding text labels to very high and very low-rated episodes
+
+NA
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/_IvAubTDQME?start=430" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:8:50
+
+Using theme function's panel.grid.major argument to get rid of some extraneous gridlines, using element_blank function
+
+theme | element_blank
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/_IvAubTDQME?start=530" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:10:15
+
+Using geom_text_repel from ggrepel package to experiment with different labelling (before abandoning this approach)
+
+geom_text_repel
+
+ggrepel
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/_IvAubTDQME?start=615" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:12:45
+
+Using row_number function to add episode_number field to make graphing easier
+
+row_number
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/_IvAubTDQME?start=765" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:14:05
+
+Explanation of why number of ratings (votes) is relevant to interpreting the graph
+
+NA
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/_IvAubTDQME?start=845" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:19:10
+
+Using unnest_tokens function from tidytext package to split full-sentence text field to individual words
+
+unnest_tokens
+
+tidytext
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/_IvAubTDQME?start=1150" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:20:10
+
+Using anti_join function to filter out stop words (e.g., and, or, the)
+
+anti_join
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/_IvAubTDQME?start=1210" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:22:25
+
+Using str_remove_all function to get rid of quotation marks from character names (quirks that might pop up when parsing)
+
+str_remove_all
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/_IvAubTDQME?start=1345" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:25:40
+
+Asking, "Are there words that are specific to certain characters?" (using bind_tf_idf function)
+
+bind_tf_idf
+
+tidytext
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/_IvAubTDQME?start=1540" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:32:25
+
+Using reorder_within function to re-order factors within a grouping (when a term appears in multiple groups) and scale_x_reordered function to graph
+
+reorder_within | scale_x_reordered
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/_IvAubTDQME?start=1945" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:37:05
+
+Asking, "What effects the popularity of an episode?"
+
+NA
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/_IvAubTDQME?start=2225" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:37:55
+
+Dealing with inconsistent episode names between datasets
+
+NA
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/_IvAubTDQME?start=2275" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:41:25
+
+Using str_remove function and some regex to remove "(Parts 1&2)" from some episode names
+
+str_remove
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/_IvAubTDQME?start=2485" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:42:45
+
+Using str_to_lower function to further align episode names (addresses inconsistent capitalization)
+
+str_to_lower
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/_IvAubTDQME?start=2565" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:52:20
+
+Setting up dataframe of features for a LASSO regression, with director and writer each being a feature with its own line
+
+NA
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/_IvAubTDQME?start=3140" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:52:55
+
+Using separate_rows function to separate episodes with multiple writers so that each has their own row
+
+separate_rows
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/_IvAubTDQME?start=3175" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:58:25
+
+Using log2 function to transform number of lines fields to something more useable (since it is log-normally distributed)
+
+log2
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/_IvAubTDQME?start=3505" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 1:00:20
+
+Using cast_sparse function from tidytext package to create a sparse matrix of features by episode
+
+cast_sparse
+
+tidytext
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/_IvAubTDQME?start=3620" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 1:01:55
+
+Using semi_join function as a "filtering join"
+
+semi_join
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/_IvAubTDQME?start=3715" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 1:02:30
+
+Setting up dataframes (after we have our features) to run LASSO regression
+
+NA
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/_IvAubTDQME?start=3750" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 1:03:50
+
+Using cv.glmnet function from glmnet package to run a cross-validated LASSO regression
+
+cv.glmnet
+
+glmnet
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/_IvAubTDQME?start=3830" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 1:05:35
+
+Explanation of how to pick a lambda penalty parameter
+
+NA
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/_IvAubTDQME?start=3935" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 1:05:55
+
+Explanation of output of LASSO model
+
+NA
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/_IvAubTDQME?start=3955" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 1:09:25
+
+Outline of why David likes regularized linear models (which is what LASSO is)
+
+NA
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/_IvAubTDQME?start=4165" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 1:10:55
+
+Summary of screencast
+
+NA
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/_IvAubTDQME?start=4255" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+

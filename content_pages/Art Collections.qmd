@@ -11,5 +11,238 @@ Recorded on: 2021-01-12
 
 Timestamps by: Eric Fletcher
 
+[View code](https://github.com/dgrtwo/data-screencasts/blob/master/2021_01_12_tate_art.Rmd)
 
+## Full screencast
 <iframe width="560" height="315" src="https://www.youtube.com/embed/AqwA5EJfLXo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+## Timestamps
+
+### 0:1:55
+
+Using `clean_names` to convert variable names from `camelcase` to `snakecase`.
+
+clean_names
+
+janitor
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/AqwA5EJfLXo?start=115" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:4:05
+
+Use `fct_reorder` to reorder `geom_col` columns in ascending order.
+
+fct_reorder | geom_col
+
+forcats | ggplot2
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/AqwA5EJfLXo?start=245" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:4:50
+
+"Use `extract` to extract a character column into multiple columns using the regular expression `""(.*) on (.*)""` at `6:05` David decides to change this to: Use `separate` with `sep = "" on ""` and `fill = ""left""` and `extra = ""merge""` to control what happens when there are not enoughor too many pieces. at `7:10` David decides to change to `fill = ""right""`."
+
+extract | separate
+
+tidyr
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/AqwA5EJfLXo?start=290" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:7:50
+
+Use `replace_na` to replace NAs with specified values. In this case replace them with `Missing`.
+
+replace_na
+
+tidyr
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/AqwA5EJfLXo?start=470" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:10:25
+
+"Use `fct_lump` to lump `artist` and `medium` levels except for the n most frequent. at `11:30` David decides to use `filter(fct_lump(artist, 16) != ""Other"")` to get rid of the artist `Other` category. "
+
+fct_lump | filter
+
+forcats | dplyr
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/AqwA5EJfLXo?start=625" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:13:55
+
+"Create a `geom_area` plot to show the distribution of paintings by medium over time. At `15:35` David decides to change from count to percentage to make it easier to show the difference in composition using `mutate(pct = n / sum)`."
+
+geom_area
+
+ggplot2
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/AqwA5EJfLXo?start=835" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:14:20
+
+Bucket `year` variable into decades using `round(year -1)` to round the year to the nearest 10.
+
+count | round
+
+base | dplyr
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/AqwA5EJfLXo?start=860" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:16:35
+
+Use `scale_y_continuous(labels = scales::percent)` to change y-axis labels to percent format.
+
+scale_y_continuous
+
+scales
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/AqwA5EJfLXo?start=995" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:18:35
+
+Turn the `geom_area` plot into a faceted `geom_col`.
+
+facet_wrap | geom_col
+
+ggplot2
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/AqwA5EJfLXo?start=1115" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:21:35
+
+"Calculate the percentage of artists for each medium per decade. "
+
+mutate | group_by | summarize | complete
+
+dplyr | tidyr
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/AqwA5EJfLXo?start=1295" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:29:20
+
+Calculate the distribution of the area (square meters) and ratio (width / height) of the art pieces.
+
+filter | mutate | ggplot | geom_histogram | scale_x_log10 | geom_vline
+
+dplyr | ggplot2
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/AqwA5EJfLXo?start=1760" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:38:25
+
+Categorize the pieces by shape(landscape, portait, scquare) based on their ratio then plot using `geom_area` to look at the composition over time.
+
+mutate | case_when | geom_area | complete
+
+dplyr | ggplot2
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/AqwA5EJfLXo?start=2305" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:41:35
+
+Craete a `line plot` showing the median ratio by decade over time.
+
+group_by | summarize | filter | ggplot | geom_line | geom_point
+
+dplyr | ggplot2
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/AqwA5EJfLXo?start=2495" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:44:15
+
+Craete a `line plot` showing the median area by decade over time.
+
+group_by | summarize | filter | ggplot | geom_line | geom_point
+
+dplyr | ggplot2
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/AqwA5EJfLXo?start=2655" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:46:05
+
+Create a `boxplot` showing the distribution of area over time.
+
+mutate | filter | ggplot | geom_boxplot | scale_y_log10
+
+dplyr | ggplot2
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/AqwA5EJfLXo?start=2765" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:48:25
+
+Create various `summary statistics` for the artists such as `avg_year`, first_year`, `last_year`, `n_pieces`, `median_area`, `median_ratio`.
+
+group_by | summarize | arrange
+
+dplyr
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/AqwA5EJfLXo?start=2905" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:51:00
+
+Create a `boxplot` showing the distribution of ratio over time for n amount of artists. Use `glue` to concatonate number of pieces for each artist ont he y axis.
+
+filter | add_count | mutate | ggplot | geom_boxplot | scale_x_log10 | geom_vline | glue
+
+dplyr | ggplot2 | glue
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/AqwA5EJfLXo?start=3060" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:56:20
+
+Create a `boxplot` showing the distribution of ratio over time for each medium. Use `glue` to concatonate number of pieces for each medium on the y axis.
+
+filter | add_count | mutate | ggplot | geom_boxplot | scale_x_log10 | geom_vline | glue
+
+dplyr | ggplot2 | glue
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/AqwA5EJfLXo?start=3380" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:59:10
+
+Summary of screencast
+
+NA
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/AqwA5EJfLXo?start=3550" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+

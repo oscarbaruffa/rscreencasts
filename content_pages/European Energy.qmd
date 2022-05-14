@@ -1,0 +1,225 @@
+---
+title: "European Energy"
+description: "Data manipulation, Country flags, Slope graph, Function creation"
+date: 2020-08-04
+date-format: long
+---
+
+Notable topics: Data manipulation, Country flags, Slope graph, Function creation
+
+Recorded on: 2020-08-04
+
+Timestamps by: Eric Fletcher
+
+[View code](https://github.com/dgrtwo/data-screencasts/blob/master/2020_08_04_europe_energy.Rmd)
+
+## Full screencast
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Rcmu5e-9FSc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+## Timestamps
+
+### 0:01:50
+
+Using `count` to get an overview of scategorical data
+
+count
+
+dplyr
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Rcmu5e-9FSc?start=110" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:07:25
+
+Using `pivot_longer` and `gather` to pivot date variables from wide to long
+
+pivot_longer | gather
+
+tidyr
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Rcmu5e-9FSc?start=445" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:09:00
+
+Using `as.integer` to change `year` variable from `character` to `integer` class
+
+as.integer
+
+base
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Rcmu5e-9FSc?start=540" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:10:10
+
+Using `fct_reorder` to reorder stacked barplot
+
+fct_reorder
+
+forcats
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Rcmu5e-9FSc?start=610" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:10:30
+
+Using `scale_y_continuous`  with `labels = comma` from `scales` package to insert a comma every three digits on the y-axis
+
+scale_y_continuous | comma
+
+ggplot2 | scales
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Rcmu5e-9FSc?start=630" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:16:35
+
+Using `replace_na` and `list` to replace `NA` values in `country_name` column with United Kingdom
+
+replace_na
+
+tidyr
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Rcmu5e-9FSc?start=995" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:18:05
+
+Using `fct_lump` to lump factor levels together except for the 10 most frequent for each facet panel
+
+fct_lump
+
+forcats
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Rcmu5e-9FSc?start=1085" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:20:10
+
+Using `reorder_within` with `fun = sum` and `scale_y_reordered` to reorder the categories within each facet panel
+
+reorder_within | scale_y_reordered
+
+tidytext
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Rcmu5e-9FSc?start=1210" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:24:30
+
+Using `ggflags` package to add country flags | Debugging strategies include 1) minimal reproducible example and 2) binary search
+
+geom_flag
+
+ggfalgs
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Rcmu5e-9FSc?start=1470" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:29:20
+
+(Unsuccessfully) Using `fct_recode` to rename the ISO two-digit identifier for the United Kingdom from the UK to GB
+
+fct_recode
+
+forcats
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Rcmu5e-9FSc?start=1760" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:33:20
+
+Using `ifelse` to replace the ISO two-digit identifier for the United Kingdom from UK to GB & from EL to GR fro Greece | Debugging included
+
+ifelse
+
+base
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Rcmu5e-9FSc?start=2000" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:40:45
+
+Using `str_to_lower` to convert observations in `country` column to lower case
+
+str_to_lower
+
+stringr
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Rcmu5e-9FSc?start=2445" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:45:00
+
+Creating a `slope graph` to show differences in Nuclear production (2106 versus 2018) | Using `scale_y_log10` to increase distance between points | Using `ggflags` for country flags
+
+geom_point | geom_line | 
+scale_y_log10 | geom_flag
+
+ggplot2 | ggflags
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Rcmu5e-9FSc?start=2700" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:47:00
+
+Using `scale_x_continuous` with `breaks = c(2016, 2018)` to show only 2016 and 2018 on x-axis
+
+scale_x_continuous
+
+ggplot2
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Rcmu5e-9FSc?start=2820" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:48:20
+
+Extend x-axis limits using `scale_x_continuous` with `limits = c(2015, 2019)` and `geom_text` with an `ifelse` within `hjust` to alternate labels for the right and left side of `slope graph`
+
+scale_x_continuous | geom_text
+
+ggplot2
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Rcmu5e-9FSc?start=2900" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:52:40
+
+Creating a slopegraph function
+
+function
+
+base
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Rcmu5e-9FSc?start=3160" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 1:00:00
+
+Summary of screencast
+
+NA
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Rcmu5e-9FSc?start=3600" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+

@@ -1,0 +1,200 @@
+---
+title: "Cocktails"
+description: "Pairwise correlation, Network diagram, Principal component analysis (PCA)"
+date: 2020-05-26
+date-format: long
+---
+
+Notable topics: Pairwise correlation, Network diagram, Principal component analysis (PCA)
+
+Recorded on: 2020-05-26
+
+Timestamps by: Eric Fletcher
+
+[View code](https://github.com/dgrtwo/data-screencasts/blob/master/cocktails.Rmd)
+
+## Full screencast
+<iframe width="560" height="315" src="https://www.youtube.com/embed/EC0SVkFB2OU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+## Timestamps
+
+### 0:6:20
+
+Use `fct_reorder` from the `forcats` package to reorder the `ingredient` factor levels along `n`.
+
+fct_reorder
+
+forcats
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/EC0SVkFB2OU?start=380" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:7:40
+
+Use `fct_lump` from the `forcats` package to lump together all the levels except the `n` most frequent in the `category` and `ingredient` variables.
+
+fct_lump
+
+forcats
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/EC0SVkFB2OU?start=460" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:11:30
+
+Use `pairwise_cor` from the `widyr` package to find the correlation between the `ingredients`.
+
+pairwise_cor
+
+widyr
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/EC0SVkFB2OU?start=690" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:16:00
+
+Use `reorder_within` from the `tidytext` package with `scale_x_reordered`  to reorder the the columns in each `facet`.
+
+reorder_within | scale_x_reordered
+
+tidytext
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/EC0SVkFB2OU?start=960" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:19:45
+
+Use the `ggraph` and `igraph` packages to create a `network diagram`
+
+graph_from_data_frame | ggraph | geom_edge_link | geom_node_point | geom_node_label
+
+igraph | ggraph
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/EC0SVkFB2OU?start=1185" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:25:15
+
+Use `extract` from the `tidyr` package with `regex = (.*) oz` to create a new variable `amount` which doesn't include the `oz`.
+
+extract
+
+tidyr
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/EC0SVkFB2OU?start=1515" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:26:40
+
+Use `extract` with `regex` to turn the strings in the new `amount` variable into separate columns for the `ones`, `numerator`, and `denominator`.
+
+extract
+
+tidyr
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/EC0SVkFB2OU?start=1600" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:28:53
+
+Use `replace_na` from the `tidyr` package to replace `NA` with zeros in the `ones`, `numberator`, and `denominator` columns. David ends up reaplcing the `zero` in the `denominator` column with ones in order for the calculation to work.
+
+replace_na
+
+tidyr
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/EC0SVkFB2OU?start=1733" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:31:49
+
+Use `geom_text_repel` from the `ggrepel` package to add `ingredient` labels to the `geom_point` plot.
+
+geom_text_repel
+
+ggrepel
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/EC0SVkFB2OU?start=1909" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:32:30
+
+Use `na_if` from the `dplyr` package to replace `zeros` with `NA`
+
+na_if
+
+dplyr
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/EC0SVkFB2OU?start=1950" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:34:25
+
+Use `scale_size_continuous` with `labels = percent_format()` to convert size legend values to percent.
+
+scale_size_continuous
+
+ggplot2
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/EC0SVkFB2OU?start=2065" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:36:35
+
+Change the size of the points in the `network diagram` proportional to `n` using `vertices = ingredient_info` within `graph_from_data_frame` and `aes(size = n)` within `geom_node_point`.
+
+graph_from_data_frame | geom_node_point
+
+igraph | ggraph
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/EC0SVkFB2OU?start=2195" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:48:05
+
+Use `widely_svd` from the `widyr` package to perform principle component analysis on the `ingredients`.
+
+widely_svd | top_n | abs | geom_col | reorder_within | scale_y_reordered | facet_wrap
+
+widyr
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/EC0SVkFB2OU?start=2885" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:52:32
+
+Use `paste0`  to concatenate `PC` and `dimension` in the facet panel titles.
+
+paste0
+
+base
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/EC0SVkFB2OU?start=3152" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:57:00
+
+Summary of screencast.
+
+NA
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/EC0SVkFB2OU?start=3420" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+

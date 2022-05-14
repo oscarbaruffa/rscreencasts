@@ -1,0 +1,250 @@
+---
+title: "Volcano Eruptions"
+description: "Static map with `ggplot2`, Interactive map with `leaflet`, Animated map with `gganimate`"
+date: 2020-05-12
+date-format: long
+---
+
+Notable topics: Static map with `ggplot2`, Interactive map with `leaflet`, Animated map with `gganimate`
+
+Recorded on: 2020-05-12
+
+Timestamps by: Eric Fletcher
+
+[View code](https://github.com/dgrtwo/data-screencasts/blob/master/volcano-eruptions.Rmd)
+
+## Full screencast
+<iframe width="560" height="315" src="https://www.youtube.com/embed/pZINGjQ86Hc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+## Timestamps
+
+### 0:7:00
+
+Change the `last_eruption_year` into `years_ago` by using `mutate` from the `dplyr` package with `years_ago = 2020 - as.numeric(last_eruption_year))`. In the plot David includes `+1` to account for 0 values in the `years_ago` variable.
+
+mutate
+
+dplyr
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/pZINGjQ86Hc?start=420" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:9:50
+
+Use `str_detect` from the `stringr` package to search the `volcano_name` variable for `Vesuvius` when not sure if spelling is correct.
+
+str_detect
+
+stringr
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/pZINGjQ86Hc?start=590" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:12:50
+
+Use the `longitude` and `latitude` to create a world map showing where the volcanoes are located.
+
+grom_point | theme_map | borders
+
+ggplot2 | ggthemes
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/pZINGjQ86Hc?start=770" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:15:30
+
+Use `fct_lump` from the`forcats` package to lump together all `primary_volcano_type` factor levels except for the `n` most frequent.
+
+fct_lump
+
+forcats
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/pZINGjQ86Hc?start=930" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:16:25
+
+Use `str_remove` from the `stringr` package with the regular expression `"\\(.\\)"` to remove the parentheses.
+
+str_remove
+
+stringr
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/pZINGjQ86Hc?start=985" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:18:30
+
+Use the `leaflet` package to create an interactive map with popup information about each volcano.
+
+leaflet | addTiles | addCircleMarkers
+
+leaflet
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/pZINGjQ86Hc?start=1110" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:24:10
+
+Use `glue` from the `glue` package to create an `HTML` string by concatenating `volcano_name` and `primary_volcano_type` between `HTML <p></p> tags`.
+
+glue
+
+glue
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/pZINGjQ86Hc?start=1450" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:27:15
+
+Use the `DT` package to turn the `leaflet` popup information into a `datatable`.
+
+gather | nest | map
+
+DT
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/pZINGjQ86Hc?start=1635" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:31:40
+
+Use `str_replace_all` fromt he `stringr` package to replace all the underscores `_` in `volcano_name` with space. Then use `str_to_title` from the `stringr` package to convert the `volcano_name` variable to title case.
+
+str_replace | str_to_title
+
+stringr
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/pZINGjQ86Hc?start=1900" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:32:05
+
+Use `kable` with `format = HTML`  from the `knitr` package instead of `DT` to make turning the data into `HTML` much easier.
+
+kable
+
+knitr
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/pZINGjQ86Hc?start=1925" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:34:05
+
+Use `paste0` from `base` R to bold the `Volcano Name`, `Primary Volcano Type`, and `Last Eruption Year` in the `leaflet` popup.
+
+paste0
+
+base
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/pZINGjQ86Hc?start=2045" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:34:50
+
+Use `replace_na` from the `tidyr` package to replace `unknown` with `NA`.
+
+replace_na
+
+tidyr
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/pZINGjQ86Hc?start=2090" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:37:15
+
+Use `addMeasure` from the `leaflet` package to add a tool to the map that allows for the measuring of distance between points.
+
+addMeasure
+
+leaflet
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/pZINGjQ86Hc?start=2235" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:39:30
+
+Use `colorNumeric` from the `leaflet` package to color the points based on their `population within 5km`. To accomplish this, David creates 2 new variables: 1) `transformed_pop` to get the population on a `log2` scale & 2) `pop_color` which uses the `colorNumeric` function to generate the color hex values based on `transformed_pop`.
+
+colorNumeric
+
+leaflet
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/pZINGjQ86Hc?start=2370" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:46:30
+
+Use the `gganimate` package to create an animated map.
+
+transition_time | frame_time
+
+gganimate
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/pZINGjQ86Hc?start=2790" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:48:45
+
+Use `geom_point` from the `ggplot2` package with `size = .00001 * 10 ^ vei` so the size of the points are then proportional to the `volume` metrics provided in the `Volcano Eruption Index`. The metrics are in `Km^3`.
+
+geom_point
+
+ggplot2
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/pZINGjQ86Hc?start=2925" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:50:20
+
+Use `scale_size_continuous` from the `ggplot2` package with `range = c(.1, 6)` to make the smaller points smaller and larger points larger.
+
+scale_size_continuous
+
+ggplot2
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/pZINGjQ86Hc?start=3020" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:50:55
+
+Use `scale_color_gradient2` from the `ggplot2` package to apply color gradient to each point based on the volcano size and whether its low or high.
+
+scale_color_gradient2
+
+ggplot2
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/pZINGjQ86Hc?start=3055" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:59:40
+
+Summary of screencast while waiting for `gganimate` map to render. 
+
+Also, brief discussion on using `transition_reveal` instead of `transition_time` to keep the point on the map instead of replacing them in each frame.
+
+transition_reveal
+
+gganimate
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/pZINGjQ86Hc?start=3580" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+

@@ -1,0 +1,368 @@
+---
+title: "Wine Ratings"
+description: "Text mining (tidytext package), LASSO regression (glmnet package)"
+date: 2019-05-31
+date-format: long
+---
+
+Notable topics: Text mining (tidytext package), LASSO regression (glmnet package)
+
+Recorded on: 2019-05-31
+
+Timestamps by: Alex Cookson
+
+[View code](https://github.com/dgrtwo/data-screencasts/blob/master/wine-ratings.Rmd)
+
+## Full screencast
+<iframe width="560" height="315" src="https://www.youtube.com/embed/AQzZNIyjyWM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+## Timestamps
+
+### 0:3:15
+
+Using extract function from tidyr package to pull out year from text field
+
+extract
+
+tidyr
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/AQzZNIyjyWM?start=195" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:9:15
+
+Changing extract function to pull out year column more accurately
+
+extract
+
+tidyr
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/AQzZNIyjyWM?start=555" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:13:00
+
+Starting to explore prediction of points
+
+NA
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/AQzZNIyjyWM?start=780" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:17:00
+
+Using fct_lump on country variable to collapse countries into an "Other" category, then fct_relevel to set the baseline category for a linear model
+
+fct_lump | fct_relevel
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/AQzZNIyjyWM?start=1020" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:21:30
+
+Investigating year as a potential confounding variable
+
+NA
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/AQzZNIyjyWM?start=1290" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:24:45
+
+Investigating "taster_name" as a potential confounding variable
+
+NA
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/AQzZNIyjyWM?start=1485" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:27:45
+
+Coefficient (TIE fighter) plot to see effect size of terms in a linear model, using tidy function from broom package
+
+tidy
+
+broom
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/AQzZNIyjyWM?start=1665" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:30:45
+
+Polishing category names for presentation in graph using str_replace function
+
+str_replace
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/AQzZNIyjyWM?start=1845" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:32:15
+
+Using augment function to add predictions of linear model to original data
+
+augment
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/AQzZNIyjyWM?start=1935" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:33:30
+
+Plotting predicted points vs. actual points
+
+NA
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/AQzZNIyjyWM?start=2010" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:34:45
+
+Using ANOVA to determine the amount of variation that explained by different terms
+
+NA
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/AQzZNIyjyWM?start=2085" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:36:45
+
+Using tidytext package to set up wine review text for Lasso regression
+
+NA
+
+tidytext
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/AQzZNIyjyWM?start=2205" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:40:00
+
+Setting up and using pairwise_cor function to look at words that appear in reviews together
+
+pairwise_cor
+
+widyr
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/AQzZNIyjyWM?start=2400" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:45:00
+
+Creating sparse matrix using cast_sparse function from tidytext package; used to perform a regression on positive/negative words
+
+cast_sparse
+
+tidytext
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/AQzZNIyjyWM?start=2700" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:46:45
+
+Checking if rownames of sparse matrix correspond to the wine_id values they represent
+
+NA
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/AQzZNIyjyWM?start=2805" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:47:00
+
+Setting up sparse matrix for using glmnet package to do sparse regression using Lasso method
+
+NA
+
+glmnet
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/AQzZNIyjyWM?start=2820" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:48:15
+
+Actually writing code for doing Lasso regression
+
+NA
+
+glmnet
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/AQzZNIyjyWM?start=2895" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:49:45
+
+Basic explanation of Lasso regression
+
+NA
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/AQzZNIyjyWM?start=2985" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:51:00
+
+Putting Lasso model into tidy format
+
+tidy
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/AQzZNIyjyWM?start=3060" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:53:15
+
+Explaining how the number of terms increases as lambda (penalty parameter) decreases
+
+NA
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/AQzZNIyjyWM?start=3195" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:54:00
+
+Answering how we choose a lambda value (penalty parameter) for Lasso regression
+
+NA
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/AQzZNIyjyWM?start=3240" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:56:45
+
+Using parallelization for intensive computations
+
+NA
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/AQzZNIyjyWM?start=3405" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:58:30
+
+Adding price (from original linear model) to Lasso regression
+
+NA
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/AQzZNIyjyWM?start=3510" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 1:02:15
+
+Shows glmnet.fit piece of a Lasso (glmnet) model
+
+NA
+
+glmnet
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/AQzZNIyjyWM?start=3735" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 1:03:30
+
+Picking a lambda value (penalty parameter) and explaining which one to pick
+
+NA
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/AQzZNIyjyWM?start=3810" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 1:08:15
+
+Taking most extreme coefficients (positive and negative) by grouping theme by direction
+
+NA
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/AQzZNIyjyWM?start=4095" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 1:10:30
+
+Demonstrating tidytext package's sentiment lexicon, then looking at individual reviews to demonstrate the model
+
+NA
+
+tidytext
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/AQzZNIyjyWM?start=4230" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 1:17:30
+
+Visualizing each coefficient's effect on a single review
+
+NA
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/AQzZNIyjyWM?start=4650" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 1:20:30
+
+Using str_trunc to truncate character strings
+
+str_trunc
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/AQzZNIyjyWM?start=4830" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+

@@ -1,0 +1,236 @@
+---
+title: "Car Fuel Efficiency"
+description: "Natural splines for regression"
+date: 2019-10-15
+date-format: long
+---
+
+Notable topics: Natural splines for regression
+
+Recorded on: 2019-10-15
+
+Timestamps by: Alex Cookson
+
+[View code](https://github.com/dgrtwo/data-screencasts/blob/master/car-economy.Rmd)
+
+## Full screencast
+<iframe width="560" height="315" src="https://www.youtube.com/embed/RpeioixHOHw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+## Timestamps
+
+### 0:3:20
+
+Using select and sort and colnames functions to sort variables in alphabetical order
+
+select | sort | colnames
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/RpeioixHOHw?start=200" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:10:00
+
+Adding geom_abline for y = x to a scatter plot for comparison
+
+geom_abline
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/RpeioixHOHw?start=600" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:18:00
+
+Visualising using geom_boxplot for mpg by vehicle class (size of car)
+
+geom_boxplot
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/RpeioixHOHw?start=1080" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:24:45
+
+Start of explanation of prediction goals
+
+NA
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/RpeioixHOHw?start=1485" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:27:00
+
+Creating train and test sets, along with trick using sample_frac function to randomly re-arrange all rows in a dataset
+
+sample_frac
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/RpeioixHOHw?start=1620" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:28:35
+
+First step of developing linear model: visually adding geom_smooth
+
+geom_smooth
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/RpeioixHOHw?start=1715" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:30:00
+
+Using augment function to add extra variables from model to original dataset (fitted values and residuals, especially)
+
+augment
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/RpeioixHOHw?start=1800" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:30:45
+
+Creating residuals plot and explaining what you want and don't want to see
+
+NA
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/RpeioixHOHw?start=1845" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:31:50
+
+Explanation of splines
+
+NA
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/RpeioixHOHw?start=1910" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:33:30
+
+Visualising effect of regressing using natural splines
+
+NA
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/RpeioixHOHw?start=2010" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:35:10
+
+Creating a tibble to test different degrees of freedom (1:10) for natural splines
+
+NA
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/RpeioixHOHw?start=2110" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:36:30
+
+Using unnest function to get tidy versions of different models
+
+unnest
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/RpeioixHOHw?start=2190" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:37:55
+
+Visualising fitted values of all 6 different models at the same time
+
+NA
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/RpeioixHOHw?start=2275" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:42:10
+
+Investigating whether the model got "better" as we added degrees of freedom to the natural splines, using the glance function
+
+glance
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/RpeioixHOHw?start=2530" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:47:45
+
+Using ANOVA to perform a statistical test on whether natural splines as a group explain variation in MPG
+
+NA
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/RpeioixHOHw?start=2865" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:48:30
+
+Exploring colinearity of dependant variables (displacement and cylinders)
+
+NA
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/RpeioixHOHw?start=2910" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:55:10
+
+Binning years into every two years using floor function
+
+floor
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/RpeioixHOHw?start=3310" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:56:40
+
+Using summarise_at function to do quick averaging of multiple variables
+
+summarise_at
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/RpeioixHOHw?start=3400" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+

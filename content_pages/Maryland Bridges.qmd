@@ -1,0 +1,320 @@
+---
+title: "Maryland Bridges"
+description: "Data manipulation, Map visualization"
+date: 2018-11-27
+date-format: long
+---
+
+Notable topics: Data manipulation, Map visualization
+
+Recorded on: 2018-11-27
+
+Timestamps by: Alex Cookson
+
+[View code](https://github.com/dgrtwo/data-screencasts/blob/master/baltimore_bridges.Rmd)
+
+## Full screencast
+<iframe width="560" height="315" src="https://www.youtube.com/embed/kzM-4jMh9Qs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+## Timestamps
+
+### 0:9:15
+
+Using geom_line to create an exploratory line graph
+
+geom_line
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/kzM-4jMh9Qs?start=555" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:10:10
+
+Using %/% operator (truncated division) to bin years into decades (e.g., 1980, 1984, and 1987 would all become "1980")
+
+%/%
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/kzM-4jMh9Qs?start=610" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:12:30
+
+Converting two-digit year to four-digit year (e.g., "16" becomes "2016") by adding 2000 to each one
+
+NA
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/kzM-4jMh9Qs?start=750" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:15:40
+
+Using percent_format function from scales package to get nice-looking axis labels
+
+percent_format
+
+scales
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/kzM-4jMh9Qs?start=940" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:19:55
+
+Using geom_col to create an ordered nice bar/column graph
+
+geom_col
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/kzM-4jMh9Qs?start=1195" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:21:35
+
+Using replace_na to replace NA values with "Other"
+
+replace_na
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/kzM-4jMh9Qs?start=1295" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:27:15
+
+Starting exploration of average daily traffic
+
+NA
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/kzM-4jMh9Qs?start=1635" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:29:05
+
+Using comma_format function from scales package to get more readable axis labels (e.g., "1e+05" becomes "100,000")
+
+comma_format
+
+scales
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/kzM-4jMh9Qs?start=1745" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:31:15
+
+Using cut function to bin continuous variable into customized breaks (also does a mutate within a group_by!)
+
+cut
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/kzM-4jMh9Qs?start=1875" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:34:30
+
+Starting to make a map
+
+NA
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/kzM-4jMh9Qs?start=2070" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:37:00
+
+Encoding a continuous variable to colour, then using scale_colour_gradient2 function to specify colours and midpoint
+
+scale_colour_gradient2
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/kzM-4jMh9Qs?start=2220" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:38:20
+
+Specifying the trans argument (transformation) of the scale_colour_gradient2 function to get a logarithmic scale
+
+scale_colour_gradient2
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/kzM-4jMh9Qs?start=2300" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:45:55
+
+Using str_to_title function to get values to Title Case (first letter of each word capitalized)
+
+str_to_title
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/kzM-4jMh9Qs?start=2755" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:48:35
+
+Predicting whether bridges are in "Good" condition using logistic regression (remember to specify the family argument! Dave fixes this at 52:54)
+
+glm
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/kzM-4jMh9Qs?start=2915" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:50:30
+
+Explanation of why we should NOT be using an OLS linear regression
+
+NA
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/kzM-4jMh9Qs?start=3030" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:51:10
+
+Using the augment function from the broom package to illustrate why a linear model is not a good fit
+
+augment
+
+broom
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/kzM-4jMh9Qs?start=3070" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:52:05
+
+Specifying the type.predict argument in the augment function so that we get the actual predicted probability
+
+augment
+
+broom
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/kzM-4jMh9Qs?start=3125" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:54:40
+
+Explanation of why the sigmoidal shape of logistic regression can be a drawback
+
+NA
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/kzM-4jMh9Qs?start=3280" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:55:05
+
+Using a cubic spline model (a type of GAM, Generalized Additive Model) as an alternative to logistic regression
+
+NA
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/kzM-4jMh9Qs?start=3305" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:56:00
+
+Explanation of the shape that a cubic spline model can take (which logistic regression cannot)
+
+NA
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/kzM-4jMh9Qs?start=3360" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 1:02:15
+
+Visualizing the model in a different way, using a coefficient plot
+
+NA
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/kzM-4jMh9Qs?start=3735" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 1:04:35
+
+Using geom_vline function to add a red reference line to a graph
+
+geom_vline
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/kzM-4jMh9Qs?start=3875" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 1:04:50
+
+Adding confidence intervals to the coefficient plot by specifying conf.int argument of tidy function and graphing using the geom_errorbarh function
+
+tidy | geom_errorbarh
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/kzM-4jMh9Qs?start=3890" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 1:05:35
+
+Brief explanation of log-odds coefficients
+
+NA
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/kzM-4jMh9Qs?start=3935" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 1:09:10
+
+Summary of screencast
+
+NA
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/kzM-4jMh9Qs?start=4150" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+

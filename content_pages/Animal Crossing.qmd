@@ -11,5 +11,250 @@ Recorded on: 2020-05-05
 
 Timestamps by: Alex Cookson
 
+[View code](https://github.com/dgrtwo/data-screencasts/blob/master/animal-crossing.Rmd)
 
+## Full screencast
 <iframe width="560" height="315" src="https://www.youtube.com/embed/Xt7ACiedRRI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+## Timestamps
+
+### 0:5:05
+
+Starting text analysis of critic reviews of Animal Crossing
+
+NA
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Xt7ACiedRRI?start=305" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:7:50
+
+Using floor_date function from lubridate package to round dates down to nearest month (then week)
+
+floor_date
+
+lubridate
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Xt7ACiedRRI?start=470" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:9:00
+
+Using unnest_tokens function and anti_join functions from tidytext package to break reviews into individual words and remove stop words
+
+unnest_tokens | anti_join
+
+tidytext
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Xt7ACiedRRI?start=540" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:10:35
+
+Taking the average rating associated with individual words (simple approach to gauge sentiment)
+
+NA
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Xt7ACiedRRI?start=635" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:12:30
+
+Using geom_line and geom_point to graph ratings over time
+
+geom_line
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Xt7ACiedRRI?start=750" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:14:40
+
+Using mean function and logical statement to calculate percentages that meet a certain condition
+
+mean
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Xt7ACiedRRI?start=880" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:22:30
+
+Using geom_text to visualize what words are associated with positive/negative reviews
+
+geom_text
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Xt7ACiedRRI?start=1350" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:27:00
+
+Disclaimer that this exploration is not text regression -- wine ratings screencast is a good resource for that
+
+NA
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Xt7ACiedRRI?start=1620" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:28:30
+
+Starting to do topic modelling
+
+NA
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Xt7ACiedRRI?start=1710" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:30:45
+
+Explanation of stm function from stm package
+
+stm
+
+stm
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Xt7ACiedRRI?start=1845" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:34:30
+
+Explanation of stm function's output (topic modelling output)
+
+stm
+
+stm
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Xt7ACiedRRI?start=2070" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:36:55
+
+Changing the number of topics from 4 to 6
+
+NA
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Xt7ACiedRRI?start=2215" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:37:40
+
+Explanation of how topic modelling works conceptually
+
+NA
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Xt7ACiedRRI?start=2260" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:40:55
+
+Using tidy function from broom package to find which "documents" (reviews) were the "strongest" representation of each topic
+
+tidy
+
+broom
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Xt7ACiedRRI?start=2455" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:44:50
+
+Noting that there might be a scraping issue resulting in review text being repeated
+
+NA
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Xt7ACiedRRI?start=2690" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:46:05
+
+(Unsuccessfully) Using str_sub function to help fix repeated review text by locating where in the review text starts being repeated
+
+str_sub
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Xt7ACiedRRI?start=2765" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:48:20
+
+(Unsuccessfully) Using str_replace and map2_chr functions, as well as regex cpaturing groups to fix repeated text
+
+str_replace | map2
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Xt7ACiedRRI?start=2900" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:52:00
+
+Looking at the association between review grade and gamma of the topic model (how "strong" a review represents a topic)
+
+NA
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Xt7ACiedRRI?start=3120" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:53:55
+
+Using cor function with method = "spearman" to calculate correlation based on rank instead of actual values
+
+cor
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Xt7ACiedRRI?start=3235" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:57:35
+
+Summary of screencast
+
+NA
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Xt7ACiedRRI?start=3455" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+

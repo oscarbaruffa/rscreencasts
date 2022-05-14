@@ -1,0 +1,200 @@
+---
+title: "Transit Costs"
+description: "EDA (Exploratory Data Analysis) with boxplots, interactive Shiny dashboard"
+date: 2021-01-05
+date-format: long
+---
+
+Notable topics: EDA (Exploratory Data Analysis) with boxplots, interactive Shiny dashboard
+
+Recorded on: 2021-01-05
+
+Timestamps by: Alex Cookson
+
+[View code](https://github.com/dgrtwo/data-screencasts/blob/master/2021_01_05_transit_costs.Rmd)
+
+## Full screencast
+<iframe width="560" height="315" src="https://www.youtube.com/embed/8jNQzce13SE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+## Timestamps
+
+### 0:4:45
+
+Using `countrycode` function from `countrycode` package to convert two-letter country codes to country names
+
+countrycode
+
+countrycode
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/8jNQzce13SE?start=285" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:6:20
+
+Using `geom_errorbarh` function to visualize start and end times of transit projects
+
+geom_errorbarh
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/8jNQzce13SE?start=380" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:7:15
+
+Using `fct_reorder` function to reorder lines by project midpoint year
+
+fct_reorder
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/8jNQzce13SE?start=435" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:9:10
+
+Using `as.numeric` to convert character field (real_cost) to proper numeric field
+
+as.numeric
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/8jNQzce13SE?start=550" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:10:20
+
+Using `mutate_at` function to apply the same function (`as.numeric`) to multiple fields in one line of code
+
+mutate_at
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/8jNQzce13SE?start=620" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:13:40
+
+Using `geom_boxplot` and `fct_lump` to visualize cost per kilometre by country as boxplots
+
+geom_boxplot | fct_lump
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/8jNQzce13SE?start=820" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:15:35
+
+Using `glue` function from `glue` package to combine fields to make easy-to-read labels on a graph
+
+glue
+
+glue
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/8jNQzce13SE?start=935" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:19:15
+
+Splitting boxplots into whether they are railroads (rr) or not, using `factor` function and `fill` argument
+
+factor
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/8jNQzce13SE?start=1155" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:24:15
+
+Investigating sources of missing data for Shanghai
+
+NA
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/8jNQzce13SE?start=1455" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:31:35
+
+Using `geom_jitter` with `geom_boxplot` to show distribution of items within each group
+
+geom_jitter
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/8jNQzce13SE?start=1895" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:33:00
+
+Setting `geom_boxplot` argument `outlier.size = -1` as a hack to get rid of boxplot-generated outlier points
+
+geom_boxplot
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/8jNQzce13SE?start=1980" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:40:40
+
+Starting to build a `shiny` app
+
+NA
+
+shiny
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/8jNQzce13SE?start=2440" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:48:55
+
+Review of preliminary `shiny` app
+
+NA
+
+shiny
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/8jNQzce13SE?start=2935" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:58:00
+
+Screencast summary
+
+NA
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/8jNQzce13SE?start=3480" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 1:00:25
+
+Showing how to upload code to GitHub in RStudio
+
+NA
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/8jNQzce13SE?start=3625" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+

@@ -1,0 +1,173 @@
+---
+title: "Palmer Penguins"
+description: "Modeling (logistic regression, k-nearest neighbors, decision tree, multiclass logistic regression) with cross validated accuracy"
+date: 2020-07-28
+date-format: long
+---
+
+Notable topics: Modeling (logistic regression, k-nearest neighbors, decision tree, multiclass logistic regression) with cross validated accuracy
+
+Recorded on: 2020-07-28
+
+Timestamps by: Eric Fletcher
+
+[View code](https://github.com/dgrtwo/data-screencasts/blob/master/2020_07_28_penguins.Rmd)
+
+## Full screencast
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ImpXawPNCfM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+## Timestamps
+
+### 0:11:17
+
+Create a pivoted histogram plot to visualize the distribution of penguin metrics using `pivot_longer`, `geom_histogram`, and `facet_wrap`
+
+pivot_longer | geom_histogram | facet_wrap
+
+tidyr | ggplot2
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ImpXawPNCfM?start=677" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:14:40
+
+Create a pivoted density plot  to visualize the distribution of penguin metrics using `geom_density` and `facet_wrap`
+
+geom_density | facet_wrap
+
+ggplot2
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ImpXawPNCfM?start=880" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:15:21
+
+Create a pivoted boxplot plot to visualize the distribution of penguin metrics using `geom_boxplot` and `facet_wrap`
+
+geom_boxplot | facet_wrap
+
+ggplot2
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ImpXawPNCfM?start=921" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:17:50
+
+Create a bar plot to show penguin species changed over time
+
+geom_bar
+
+ggplot2
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ImpXawPNCfM?start=1070" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:18:25
+
+Create a bar plot to show specie counts per island
+
+geom_bar
+
+ggplot2
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ImpXawPNCfM?start=1105" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:20:00
+
+Create a logistic regression model to predict if a penguin is Adelie or not using bill length with cross validaiton of metrics
+
+initital_split | training | logistic_reg | set_engine |
+fit | fct_lump | predict | metrics | vfold_cv | 
+fit_resamples | collect_metrics |
+
+tidymodels | rsample | parsnip
+yardstick |
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ImpXawPNCfM?start=1200" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:39:35
+
+Create second logistic regression model using 4 predictive metrics (bill length, bill depth, flipper length, body mass) and then compare the accuracy of both models
+
+initital_split | training | logistic_reg | set_engine |
+fit | fct_lump | predict | metrics | vfold_cv | 
+fit_resamples | collect_metrics |
+
+tidymodels | rsample | parsnip
+yardstick |
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ImpXawPNCfM?start=2375" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:43:25
+
+Create a k-nearest neighbor model and then compare accuracy against logistic regression models to see which has the highest cross validated accuracy
+
+nearest_neighbor | initital_split | training | logistic_reg |
+set_engine | fit | fct_lump | predict | metrics | vfold_cv | 
+fit_resamples | collect_metrics
+
+tidymodels | rsample | parsnip
+yardstick |
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ImpXawPNCfM?start=2605" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:53:05
+
+What is the accuracy of the testing holdout data on the k-nearest neighbor model?
+
+testing | predict | metrics
+
+rsample | stats | yardstick
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ImpXawPNCfM?start=3185" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 1:05:40
+
+Create a decision tree and then compare accuracy against the previous models to see which has the highest cross validated accuracy + how to extract a decision tree
+
+decision_tree | set_engine
+
+parsnip
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ImpXawPNCfM?start=3940" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 1:10:45
+
+Perform multi class regression using `multinom_reg`
+
+multinom_reg | set_engine | fit_resamples
+
+parsnip | tune
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ImpXawPNCfM?start=4245" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 1:19:40
+
+Summary of screencast
+
+NA
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ImpXawPNCfM?start=4780" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+

@@ -1,0 +1,262 @@
+---
+title: "Beyonce and Taylor Swift Lyrics"
+description: "Text analysis, `tf_idf`, Log odds ratio, Diverging bar graph, Lollipop graph"
+date: 2020-09-29
+date-format: long
+---
+
+Notable topics: Text analysis, `tf_idf`, Log odds ratio, Diverging bar graph, Lollipop graph
+
+Recorded on: 2020-09-29
+
+Timestamps by: Eric Fletcher
+
+[View code](https://github.com/dgrtwo/data-screencasts/blob/master/2020_09_29_taylor_swift_beyonce.Rmd)
+
+## Full screencast
+<iframe width="560" height="315" src="https://www.youtube.com/embed/vYbDyfv_v4Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+## Timestamps
+
+### 0:7:50
+
+Use `fct_reorder` from the `forcats` package to reorder `title` factor levels by sorting along the `sales` variable in `geom_col` plot.
+
+fct_reorder
+
+forcats
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/vYbDyfv_v4Q?start=470" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:8:10
+
+Use `labels = dollar` from the `scales` package to format the `geom_col` x-axis values as currency.
+
+labels
+
+scales
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/vYbDyfv_v4Q?start=490" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:11:15
+
+Use `rename_all(str_to_lower)` to convert variable names to lowercase.
+
+rename_all | str_to_lower
+
+dplyr | stringr
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/vYbDyfv_v4Q?start=675" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:12:45
+
+Use `unnest_tokens` from the `tidytext` package to split the lyrics into one-lyric-per-row.
+
+unnest_tokens
+
+tidytext
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/vYbDyfv_v4Q?start=765" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:13:00
+
+Use `anti_join` from the `tidytext` package to find the most common words int he lyrics without `stop_words`.
+
+anti_join
+
+dplyr
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/vYbDyfv_v4Q?start=780" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:15:15
+
+Use `bind_tf_idf` from the `tidytext` package to determine `tf` - the proportion each word has in each album and `idf` - how specific each word is to each particular album.
+
+bind_tf_idf
+
+tidytext
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/vYbDyfv_v4Q?start=915" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:17:45
+
+Use `reorder_within` with `scale_y_reordered` in order to reorder the bars within each `facet panel`. David replaces `top_n` with `slice_max` from the `dplyr` package in order to show the top 10 words with `ties = FALSE`.
+
+reorder_within | scale_y_reordered | slice_max
+
+tidytext | dplyr
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/vYbDyfv_v4Q?start=1065" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:20:45
+
+Use `bind_log_odds` from the `tidylo` package to calculate the `log odds ratio` of album and words, that is how much more common is the word in a specific album than across all the other albums.
+
+bind_log_odds
+
+tidylo
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/vYbDyfv_v4Q?start=1245" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:23:10
+
+Use `filter(str_length(word) <= 3)` to come up with a list in order to remove common filler words like `ah`, `uh`, `ha`, `ey`, `eeh`, and `huh`.
+
+filter | str_length
+
+dplyr | stringr
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/vYbDyfv_v4Q?start=1390" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:27:00
+
+Use `mdy` from the `lubridate` package and `str_remove(released, " \\(.*)"))` from the `stringr` package to parse the dates in the `released` variable.
+
+distinct | mdy | str_remove
+
+dplyr | lubridate | stringr
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/vYbDyfv_v4Q?start=1620" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:28:15
+
+Use `inner_join` from the `dplyr` package to join `taylor_swift_words` with `release_dates`. 
+ 
+ David ends up having to use `fct_recode` since the albums `reputation` and `folklore` were nor `lowercase` in a previous table thus excluding them from the `inner_join`.
+
+inner_join | fct_recode
+
+dplyr | forcats
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/vYbDyfv_v4Q?start=1695" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:28:30
+
+Use `fct_reorder` from the `forcats` package to reorder `album` factor levels by sorting along the `released` variable to be used in the `faceted` `geom_col`.
+
+fct_reorder | geom_col
+
+forcats | ggplot2
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/vYbDyfv_v4Q?start=1710" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:34:40
+
+Use `bind_rows` from hte `dplyr` package to bind `ts` with `beyonce` with `unnest_tokens` from the `tidytext` package to get one lyric per row per artist.
+
+bind_rows | unnest_tokens
+
+dplyr | tidytext
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/vYbDyfv_v4Q?start=2080" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:38:40
+
+Use `bind_log_odds` to figure out which words are more likely to come from a Taylor Swift or Beyonce song?
+
+bind_log_odds
+
+tidylo
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/vYbDyfv_v4Q?start=2320" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:41:10
+
+Use `slice_max` from the `dplyr` package to select the top 100 words by `num_words_total` and then the top 25 by `log_odds_weighted`. Results are used to create a diverging bar chart showing which words are most common between Beyonce and Taylor Swift songs.
+
+slice_max | geom_col | ifelse | fct_reorder
+
+dplyr | ggplot2 | forcats
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/vYbDyfv_v4Q?start=2470" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:44:40
+
+Use `scale_x_continuous` to make the `log_odds_weighted` scale more interpretable.
+
+scale_x_continuous
+
+ggplot2
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/vYbDyfv_v4Q?start=2680" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:50:45
+
+Take the previous plot and turn it into a `lollipop graph` with `geom_point(aes(size = num_words_total, color = direction))`
+
+geom_col | geom_point | geom_vline
+
+ggplot2
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/vYbDyfv_v4Q?start=3045" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:53:05
+
+Use `ifelse` to change the `1x` value on the x-axis to `same`.
+
+ifelse
+
+base
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/vYbDyfv_v4Q?start=3185" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:54:15
+
+Create a `geom_point` with `geom_abline` to show the most popular words they use in common.
+
+pivot_wider | clean_names | geom_abline | geom_point | slice_max | scale_y_log_10 | scale_x_log_10 | geom_text
+
+tidyr | ggplot2 | dplyr
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/vYbDyfv_v4Q?start=3255" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 1:01:55
+
+Summary of screencast.
+
+NA
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/vYbDyfv_v4Q?start=3715" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+

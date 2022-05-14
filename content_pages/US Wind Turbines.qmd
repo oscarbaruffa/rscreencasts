@@ -1,0 +1,248 @@
+---
+title: "US Wind Turbines"
+description: "Animated map (gganimate package)"
+date: 2018-11-06
+date-format: long
+---
+
+Notable topics: Animated map (gganimate package)
+
+Recorded on: 2018-11-06
+
+Timestamps by: Alex Cookson
+
+[View code](https://github.com/dgrtwo/data-screencasts/blob/master/us-wind.Rmd)
+
+## Full screencast
+<iframe width="560" height="315" src="https://www.youtube.com/embed/O1oDIQV6VKU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+## Timestamps
+
+### 0:3:50
+
+Using count function to explore categorical variables
+
+count
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/O1oDIQV6VKU?start=230" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:5:00
+
+Creating a quick-and-dirty map using geom_point function and latitude and longitude data
+
+geom_point
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/O1oDIQV6VKU?start=300" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:6:10
+
+Explaining need for mapproj package when plotting maps in ggplot2
+
+coord_map
+
+mapproj
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/O1oDIQV6VKU?start=370" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:7:35
+
+Using borders function to add US state borders to map
+
+borders
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/O1oDIQV6VKU?start=455" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:10:45
+
+Using fct_lump to get the top 6 project categories and put the rest in a lumped "Other" category
+
+fct_lump
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/O1oDIQV6VKU?start=645" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:11:30
+
+Changing data so that certain categories' points appear in front of other categories' points on the map
+
+NA
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/O1oDIQV6VKU?start=690" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:14:15
+
+Taking the centroid (average longitude and latitude) of points across a geographic area as a way to aggregate categories to one point
+
+NA
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/O1oDIQV6VKU?start=855" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:19:40
+
+Using ifelse function to clean missing data that is coded as "-9999"
+
+ifelse
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/O1oDIQV6VKU?start=1180" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:26:00
+
+Asking, "How has turbine capacity changed over time?"
+
+NA
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/O1oDIQV6VKU?start=1560" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:33:15
+
+Exploring different models of wind turbines
+
+NA
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/O1oDIQV6VKU?start=1995" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:38:00
+
+Using mutate_if function to find NA values (coded as -9999) in multiple columns and replace them with an actual NA
+
+mutate_if
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/O1oDIQV6VKU?start=2280" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:45:40
+
+Reviewing documentation for gganimate package
+
+NA
+
+gganimate
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/O1oDIQV6VKU?start=2740" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:47:00
+
+Attempting to set up gganimate map
+
+NA
+
+gganimate
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/O1oDIQV6VKU?start=2820" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:48:55
+
+Understanding gganimate package using a "Hello World" / toy example, then trying to debug turbine animation
+
+NA
+
+gganimate
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/O1oDIQV6VKU?start=2935" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:56:45
+
+Using is.infinite function to get rid of troublesome Inf values
+
+is.infinite
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/O1oDIQV6VKU?start=3405" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:57:55
+
+Quick hack for getting cumulative data from a table using crossing function (though it does end up with some duplication)
+
+crossing
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/O1oDIQV6VKU?start=3475" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 1:01:45
+
+Diagnosis of gganimate issue (points between integer years are being interpolated)
+
+NA
+
+gganimate
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/O1oDIQV6VKU?start=3705" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 1:04:35
+
+Pseudo-successful gganimate map (cumulative points show up, but some points are missing)
+
+NA
+
+gganimate
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/O1oDIQV6VKU?start=3875" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 1:05:40
+
+Summary of screencast
+
+NA
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/O1oDIQV6VKU?start=3940" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+

@@ -1,0 +1,224 @@
+---
+title: "US PhDs"
+description: "Data cleaning (getting messy data into tidy format)"
+date: 2019-02-22
+date-format: long
+---
+
+Notable topics: Data cleaning (getting messy data into tidy format)
+
+Recorded on: 2019-02-22
+
+Timestamps by: Alex Cookson
+
+[View code](https://github.com/dgrtwo/data-screencasts/blob/master/us_phds.Rmd)
+
+## Full screencast
+<iframe width="560" height="315" src="https://www.youtube.com/embed/KzRP40PzopY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+## Timestamps
+
+### 0:3:15
+
+Using read_xlsx function to read in Excel spreadsheet, including skipping first few rows that don't have data
+
+read_xlsx
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/KzRP40PzopY?start=195" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:7:25
+
+Overview of starting very messy data
+
+NA
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/KzRP40PzopY?start=445" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:8:20
+
+Using gather function to clean up wide dataset
+
+gather
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/KzRP40PzopY?start=500" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:9:20
+
+Using fill function to fill in NA values with a entries in a previous observation
+
+fill
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/KzRP40PzopY?start=560" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:10:10
+
+Cleaning variable that has number and percent in it, on top of one another using a combination of ifelse and fill functions
+
+fill | ifelse
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/KzRP40PzopY?start=610" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:12:00
+
+Using spread function on cleaned data to separate number and percent by year
+
+spread
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/KzRP40PzopY?start=720" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:13:50
+
+Spotted a mistake where he had the wrong string on str_detect function
+
+str_detect
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/KzRP40PzopY?start=830" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:16:50
+
+Using sample function to get 6 random fields of study to graph
+
+sample
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/KzRP40PzopY?start=1010" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:18:50
+
+Cleaning another dataset, which is much easier to clean
+
+NA
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/KzRP40PzopY?start=1130" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:19:05
+
+Renaming the first field, even without knowing the exact name
+
+NA
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/KzRP40PzopY?start=1145" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:21:55
+
+Cleaning another dataset
+
+NA
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/KzRP40PzopY?start=1315" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:23:10
+
+Discussing challenge of when indentation is used in original dataset (for group / sub-group distinction)
+
+NA
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/KzRP40PzopY?start=1390" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:25:20
+
+Starting to separate out data that is appended to one another in the original dataset (all, male, female)
+
+NA
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/KzRP40PzopY?start=1520" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:27:30
+
+Removing field with long name using contains function
+
+contains
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/KzRP40PzopY?start=1650" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:28:10
+
+Using fct_recode function to rename an oddly-named category in a categorical variable (ifelse function is probably a better alternative)
+
+fct_recode
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/KzRP40PzopY?start=1690" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:35:30
+
+Discussing solution to broad major field description and fine major field description (meaningfully indented in original data)
+
+NA
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/KzRP40PzopY?start=2130" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:39:40
+
+Using setdiff function to separate broad and fine major fields
+
+setdiff
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/KzRP40PzopY?start=2380" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+

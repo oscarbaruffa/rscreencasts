@@ -9,7 +9,7 @@
 <meta name="dcterms.date" content="2020-05-19">
 <meta name="description" content="Data cleaning, Logistic regression">
 
-<title>R on Demand - Beach Volleyball</title>
+<title>R Screencasts - Beach Volleyball</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -26,6 +26,7 @@ ul.task-list{list-style: none;}
 <script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
+<link href="..//images/favicon-32x32.png" rel="icon" type="image/png">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -54,6 +55,7 @@ ul.task-list{list-style: none;}
     "search-submit-button-title": "Submit"
   }
 }</script>
+<script async="" defer="" data-domain="rscreencasts.com" src="https://plausible.io/js/plausible.outbound-links.js"></script>
 
 
 <link rel="stylesheet" href="../styles.css">
@@ -66,7 +68,7 @@ ul.task-list{list-style: none;}
     <nav class="navbar navbar-expand-lg navbar-dark ">
       <div class="navbar-container container-fluid">
       <a class="navbar-brand" href="../index.html">
-    <span class="navbar-title">R on Demand</span>
+    <span class="navbar-title">R Screencasts</span>
   </a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
@@ -75,6 +77,9 @@ ul.task-list{list-style: none;}
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
     <a class="nav-link" href="../index.html">Home</a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../resources.html">Resources</a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../about.html">About</a>
@@ -90,7 +95,35 @@ ul.task-list{list-style: none;}
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#full-screencast" id="toc-full-screencast" class="nav-link active" data-scroll-target="#full-screencast">Full screencast</a></li>
+  <li><a href="#timestamps" id="toc-timestamps" class="nav-link" data-scroll-target="#timestamps">Timestamps</a>
+  <ul class="collapse">
+  <li><a href="#section" id="toc-section" class="nav-link" data-scroll-target="#section">0:5:30</a></li>
+  <li><a href="#section-1" id="toc-section-1" class="nav-link" data-scroll-target="#section-1">0:7:20</a></li>
+  <li><a href="#section-2" id="toc-section-2" class="nav-link" data-scroll-target="#section-2">0:8:00</a></li>
+  <li><a href="#section-3" id="toc-section-3" class="nav-link" data-scroll-target="#section-3">0:10:35</a></li>
+  <li><a href="#section-4" id="toc-section-4" class="nav-link" data-scroll-target="#section-4">0:12:50</a></li>
+  <li><a href="#section-5" id="toc-section-5" class="nav-link" data-scroll-target="#section-5">0:15:15</a></li>
+  <li><a href="#section-6" id="toc-section-6" class="nav-link" data-scroll-target="#section-6">0:20:25</a></li>
+  <li><a href="#section-7" id="toc-section-7" class="nav-link" data-scroll-target="#section-7">0:21:20</a></li>
+  <li><a href="#section-8" id="toc-section-8" class="nav-link" data-scroll-target="#section-8">0:22:45</a></li>
+  <li><a href="#section-9" id="toc-section-9" class="nav-link" data-scroll-target="#section-9">0:23:45</a></li>
+  <li><a href="#section-10" id="toc-section-10" class="nav-link" data-scroll-target="#section-10">0:24:35</a></li>
+  <li><a href="#section-11" id="toc-section-11" class="nav-link" data-scroll-target="#section-11">0:25:25</a></li>
+  <li><a href="#section-12" id="toc-section-12" class="nav-link" data-scroll-target="#section-12">0:28:30</a></li>
+  <li><a href="#section-13" id="toc-section-13" class="nav-link" data-scroll-target="#section-13">0:34:15</a></li>
+  <li><a href="#section-14" id="toc-section-14" class="nav-link" data-scroll-target="#section-14">0:35:00</a></li>
+  <li><a href="#section-15" id="toc-section-15" class="nav-link" data-scroll-target="#section-15">0:42:00</a></li>
+  <li><a href="#section-16" id="toc-section-16" class="nav-link" data-scroll-target="#section-16">0:49:25</a></li>
+  <li><a href="#section-17" id="toc-section-17" class="nav-link" data-scroll-target="#section-17">0:54:30</a></li>
+  <li><a href="#section-18" id="toc-section-18" class="nav-link" data-scroll-target="#section-18">1:04:30</a></li>
+  </ul></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -124,11 +157,173 @@ ul.task-list{list-style: none;}
 
 </header>
 
-<p>test text</p>
+<p>Notable topics: Data cleaning, Logistic regression</p>
+<p>Recorded on: 2020-05-19</p>
+<p>Timestamps by: Eric Fletcher</p>
+<p><a href="https://github.com/dgrtwo/data-screencasts/blob/master/beach-volleyball.Rmd">View code</a></p>
+<section id="full-screencast" class="level2">
+<h2 class="anchored" data-anchor-id="full-screencast">Full screencast</h2>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/MfDdmsW3OMo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
+</iframe>
+</section>
+<section id="timestamps" class="level2">
+<h2 class="anchored" data-anchor-id="timestamps">Timestamps</h2>
+<section id="section" class="level3">
+<h3 class="anchored" data-anchor-id="section">0:5:30</h3>
+<p>Use <code>pivot_longer</code> from the <code>dplyr</code> package to pivot the data set from <code>wide</code> to <code>long</code>.</p>
+<p>pivot_longer</p>
+<p>dplyr</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/MfDdmsW3OMo?start=330" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
+</iframe>
+</section>
+<section id="section-1" class="level3">
+<h3 class="anchored" data-anchor-id="section-1">0:7:20</h3>
+<p>Use <code>mutate_at</code> from the <code>dplyr</code> package with <code>starts_with</code> to change the class to <code>character</code> for all columns that start with <code>w_</code> and <code>l_</code>.</p>
+<p>mutate_at</p>
+<p>dplyr</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/MfDdmsW3OMo?start=440" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
+</iframe>
+</section>
+<section id="section-2" class="level3">
+<h3 class="anchored" data-anchor-id="section-2">0:8:00</h3>
+<p>Use <code>separate</code> from the <code>tidyr</code> package to separate the <code>name</code> variable into three columns with <code>extra = merge</code> and <code>fill = right</code>.</p>
+<p>separate</p>
+<p>tidyr</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/MfDdmsW3OMo?start=480" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
+</iframe>
+</section>
+<section id="section-3" class="level3">
+<h3 class="anchored" data-anchor-id="section-3">0:10:35</h3>
+<p>Use <code>rename</code> from the <code>dplyr</code> package to rename <code>w_player1</code>, <code>w_player2</code>, <code>l_player1</code>, and <code>l_player2</code>.</p>
+<p>rename</p>
+<p>dplyr</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/MfDdmsW3OMo?start=635" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
+</iframe>
+</section>
+<section id="section-4" class="level3">
+<h3 class="anchored" data-anchor-id="section-4">0:12:50</h3>
+<p>Use <code>pivot_wider</code> from the <code>dplyr</code> package to pivot the <code>name</code> variable from <code>long</code> to <code>wide</code>.</p>
+<p>pivot_wider</p>
+<p>dplyr</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/MfDdmsW3OMo?start=770" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
+</iframe>
+</section>
+<section id="section-5" class="level3">
+<h3 class="anchored" data-anchor-id="section-5">0:15:15</h3>
+<p>Use <code>str_to_upper</code> to convert the <code>winner_loser</code> <code>w</code> and <code>l</code> values to uppercase.</p>
+<p>str_to_upper</p>
+<p>stringr</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/MfDdmsW3OMo?start=915" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
+</iframe>
+</section>
+<section id="section-6" class="level3">
+<h3 class="anchored" data-anchor-id="section-6">0:20:25</h3>
+<p>Add unique row numbers for each match using <code>mutate</code> with <code>row_number</code> from the <code>dplyr</code> package.</p>
+<p>row_number</p>
+<p>dplyr</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/MfDdmsW3OMo?start=1225" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
+</iframe>
+</section>
+<section id="section-7" class="level3">
+<h3 class="anchored" data-anchor-id="section-7">0:21:20</h3>
+<p>Separate the <code>score</code> values into multiple rows using <code>separate_rows</code> from the <code>tidyr</code> package.</p>
+<p>separate_rows</p>
+<p>tidyr</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/MfDdmsW3OMo?start=1280" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
+</iframe>
+</section>
+<section id="section-8" class="level3">
+<h3 class="anchored" data-anchor-id="section-8">0:22:45</h3>
+<p>Use <code>separate</code> from the <code>tidyr</code> package to actual scores into two columns, one for the winners score <code>w_score</code> and another for the losers score <code>l_score</code>.</p>
+<p>separate</p>
+<p>tidyr</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/MfDdmsW3OMo?start=1365" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
+</iframe>
+</section>
+<section id="section-9" class="level3">
+<h3 class="anchored" data-anchor-id="section-9">0:23:45</h3>
+<p>Use <code>na_if</code> from the <code>dplyr</code> package to change the <code>Forfeit or other</code> value from the <code>score</code> variable to <code>NA</code>.</p>
+<p>na_if</p>
+<p>dplyr</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/MfDdmsW3OMo?start=1425" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
+</iframe>
+</section>
+<section id="section-10" class="level3">
+<h3 class="anchored" data-anchor-id="section-10">0:24:35</h3>
+<p>Use <code>str_remove</code> from the <code>stringr</code> package to remove scores that include <code>retired</code>.</p>
+<p>str_remove</p>
+<p>stringr</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/MfDdmsW3OMo?start=1475" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
+</iframe>
+</section>
+<section id="section-11" class="level3">
+<h3 class="anchored" data-anchor-id="section-11">0:25:25</h3>
+<p>Determine how many times the winners score <code>w_score</code> is greter than the losers score <code>l_score</code> at least 1/3 of the time.</p>
+<p>mutate | group_by | summarize</p>
+<p>dplyr</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/MfDdmsW3OMo?start=1525" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
+</iframe>
+</section>
+<section id="section-12" class="level3">
+<h3 class="anchored" data-anchor-id="section-12">0:28:30</h3>
+<p>Use <code>summarize</code> from the <code>dplyr</code> package to create the summary statistics including the <code>number of matches</code>, <code>winning percentage</code>, <code>date of first match</code>, <code>date of most recent match</code>.</p>
+<p>summarize</p>
+<p>dplyr</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/MfDdmsW3OMo?start=1710" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
+</iframe>
+</section>
+<section id="section-13" class="level3">
+<h3 class="anchored" data-anchor-id="section-13">0:34:15</h3>
+<p>Use <code>type_convert</code> from the <code>readr</code> package to convert <code>character</code> class variables to <code>numeric</code>.</p>
+<p>type_convert</p>
+<p>readr</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/MfDdmsW3OMo?start=2055" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
+</iframe>
+</section>
+<section id="section-14" class="level3">
+<h3 class="anchored" data-anchor-id="section-14">0:35:00</h3>
+<p>Use <code>summarize_all</code> from the <code>dplyr</code> package to calculate the calculate which fraction of the data is not <code>NA</code>.</p>
+<p>summarize_all</p>
+<p>dplyr</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/MfDdmsW3OMo?start=2100" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
+</iframe>
+</section>
+<section id="section-15" class="level3">
+<h3 class="anchored" data-anchor-id="section-15">0:42:00</h3>
+<p>Use <code>summarize</code> from the <code>dplyr</code> package to determine players <code>number of matches</code>, <code>winning percentage</code>, <code>average attacks</code>, <code>average errors</code>, <code>average kills</code>, <code>average aces</code>, <code>average serve errors</code>, and <code>total rows with data</code> for years prior to 2019.</p>
+<p>The summary statistics are then used to answer how would we could predict if a player will win in 2019 using <code>geom_point</code> and <code>logistic regression</code>. Initially, David wanted to predict performance based on players first year performance. (NOTE - David mistakingly grouped by <code>year</code> and <code>age</code>. He cathces this around 1:02:00.)</p>
+<p>summarize | inner_join | geom_point | glm |cbind</p>
+<p>dplyr | ggplot2</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/MfDdmsW3OMo?start=2520" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
+</iframe>
+</section>
+<section id="section-16" class="level3">
+<h3 class="anchored" data-anchor-id="section-16">0:49:25</h3>
+<p>Use <code>year</code> from the <code>lubridate</code> package within a <code>group_by</code> to determine the <code>age</code> for each play given their <code>birthdate</code>.</p>
+<p>summarize | year</p>
+<p>lubridate</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/MfDdmsW3OMo?start=2965" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
+</iframe>
+</section>
+<section id="section-17" class="level3">
+<h3 class="anchored" data-anchor-id="section-17">0:54:30</h3>
+<p>Turn the summary statistics at timestamp <code>42:00</code> into a <code>.</code> DOT <code>%&gt;%</code> PIPE function.</p>
+<p>NA</p>
+<p>NA</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/MfDdmsW3OMo?start=3270" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
+</iframe>
+</section>
+<section id="section-18" class="level3">
+<h3 class="anchored" data-anchor-id="section-18">1:04:30</h3>
+<p>Summary of screencast.</p>
+<p>NA</p>
+<p>NA</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/MfDdmsW3OMo?start=3870" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
 </iframe>
 
 
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -211,6 +406,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+      <div class="nav-footer-center">Vids by <a href="https://twitter.com/drob">David Robinson</a>. Timestamps &amp; rich content by <a href="https://twitter.com/alexcookson">Alex Cookson</a> and <a href="https://twitter.com/iamericfletcher">Eric Fletcher</a>. Website by <a href="https://twitter.com/OscarBaruffa">Oscar Baruffa</a>, sign up to my <a href="https://oscarbaruffa.com/newsletter/">newsletter</a> for R, data and careers</div>
+  </div>
+</footer>
 
 
 

@@ -1,0 +1,308 @@
+---
+title: "Bob Ross Paintings"
+description: "Network graphs, Principal Component Analysis (PCA)"
+date: 2019-08-12
+date-format: long
+---
+
+Notable topics: Network graphs, Principal Component Analysis (PCA)
+
+Recorded on: 2019-08-12
+
+Timestamps by: Alex Cookson
+
+[View code](https://github.com/dgrtwo/data-screencasts/blob/master/bob-ross.Rmd)
+
+## Full screencast
+<iframe width="560" height="315" src="https://www.youtube.com/embed/sD993H5FBIY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+## Timestamps
+
+### 0:1:40
+
+Using clean_names function in janitor package to get field names to snake_case
+
+clean_names
+
+janitor
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/sD993H5FBIY?start=100" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:1:50
+
+Using gather function to get wide elements into tall (tidy) format
+
+gather
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/sD993H5FBIY?start=110" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:2:35
+
+Cleaning text (str_to_title, str_replace) to get into nicer-to-read format
+
+str_to_title | str_replace
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/sD993H5FBIY?start=155" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:3:30
+
+Using str_remove_all function to trim trimming quotation marks and backslashes
+
+str_remove_all
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/sD993H5FBIY?start=210" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:4:40
+
+Using extract function to extract the season number and episode number from episode field; uses regex capturing groups
+
+extract
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/sD993H5FBIY?start=280" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:14:00
+
+Using add_count function's name argument to specify field's name
+
+add_count
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/sD993H5FBIY?start=840" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:15:35
+
+Getting into whether the elements of Ross's paintings changed over time (e.g., are mountains more/less common over time?)
+
+NA
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/sD993H5FBIY?start=935" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:20:00
+
+Quick point: could have used logistic regression to see change over time of elements
+
+NA
+
+broom
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/sD993H5FBIY?start=1200" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:21:10
+
+Asking, "What elements tends to appear together?" prompting clustering analysis
+
+NA
+
+widyr
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/sD993H5FBIY?start=1270" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:22:15
+
+Using pairwise_cor to see which elements tend to appear together
+
+pairwise_cor
+
+widyr
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/sD993H5FBIY?start=1335" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:22:50
+
+Discussion of a blind spot of pairwise correlation (high or perfect correlation on elements that only appear once or twice)
+
+NA
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/sD993H5FBIY?start=1370" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:28:05
+
+Asking, "What are clusters of elements that belong together?"
+
+NA
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/sD993H5FBIY?start=1685" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:28:30
+
+Creating network plot using ggraph and igraph packages
+
+NA
+
+ggraph | igraph
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/sD993H5FBIY?start=1710" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:30:15
+
+Reviewing network plot for interesting clusters (e.g., beach cluster, mountain cluster, structure cluster)
+
+NA
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/sD993H5FBIY?start=1815" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:31:55
+
+Explanation of Principal Component Analysis (PCA)
+
+NA
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/sD993H5FBIY?start=1915" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:34:35
+
+Start of actual PCA coding
+
+NA
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/sD993H5FBIY?start=2075" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:34:50
+
+Using acast function to create matrix of painting titles x painting elements (initially wrong, corrected at 36:30)
+
+acast
+
+reshape2
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/sD993H5FBIY?start=2090" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:36:55
+
+Centering the matrix data using t function (transpose of matrix), colSums function, and colMeans function
+
+t | colSums | colMeans
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/sD993H5FBIY?start=2215" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:38:15
+
+Using svd function to performn singular value decomposition, then tidying with broom package
+
+svd
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/sD993H5FBIY?start=2295" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:39:55
+
+Exploring one principal component to get a better feel for what PCA is doing
+
+NA
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/sD993H5FBIY?start=2395" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:43:20
+
+Using reorder_within function to re-order factors within a grouping
+
+reorder_within
+
+tidytext
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/sD993H5FBIY?start=2600" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:48:00
+
+Exploring different matrix names in PCA (u, v, d)
+
+NA
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/sD993H5FBIY?start=2880" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:56:50
+
+Looking at top 6 principal components of painting elements
+
+NA
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/sD993H5FBIY?start=3410" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:57:45
+
+Showing percentage of variation that each principal component is responsible for
+
+NA
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/sD993H5FBIY?start=3465" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+

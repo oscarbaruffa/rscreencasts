@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "R Screencasts",
     "section": "",
-    "text": "If you’re looking to learn how to analyze data, you’ve come to the right place.\nDavid Robinson has recorded a bunch of screencasts where he uses R to analyze data he has never seen before. These are fantastic examples of how to think about approaching an analysis.\nIn each video you’ll learn:\nAll code is shared and all datasets are publicly available."
+    "text": "If you’re looking for real-world examples of live data analyses, you’ve come to the right place.\nDavid Robinson, a highly experienced Data Scientist, has recorded many screencasts where he analyses data that he’s never seen before. These are fantastic examples of how to think about approaching an analysis.\nThe recordings were done as part of a weekly R programming challenge called TidyTuesday. All code is shared and all datasets are publicly available.\nIn each video you’ll learn:\nThis is a wealth of knowledge for new and experienced analysts alike.\nUse the search bar to look for specific functions, packages or other keywords.\nBelow you’ll find a list of 82 time-stamped screencasts."
   },
   {
     "objectID": "index.html#header-2",
@@ -18,49 +18,49 @@
     "href": "about.html",
     "title": "About",
     "section": "",
-    "text": "David Robinson for recording the screencasts.\nAlex Cookson and Eric Fletcher for painstakingly timestamping and describing all the content.\nOscar Baruffa for creating this website collating it all.\nThomas Mock for maintaining the TidyTuesday challenge.\nCountless others for R, RStudio, Quarto and a gazillion packages that make this all possible.\n\nIf you’d like to keep up to date with this website and other resources from Oscar Baruffa, sign up to the newsletter."
+    "text": "David Robinson for recording the screencasts.\nAlex Cookson and Eric Fletcher for painstakingly time-stamping and describing all the content.\nOscar Baruffa for creating this website collating it all.\nThomas Mock for maintaining the TidyTuesday challenge.\nCountless others for R, RStudio, Quarto and a gazillion packages that make this all possible.\n\nIf you’d like to keep up to date with this website and other resources from Oscar Baruffa, sign up to the newsletter for posts about R, data and careers."
   },
   {
     "objectID": "content_pages/African-American Achievements.html",
     "href": "content_pages/African-American Achievements.html",
     "title": "African-American Achievements",
     "section": "",
-    "text": "Recorded on: 2020-06-09\nTimestamps by: Eric Fletcher"
+    "text": "Notable topics: plotly interactive timeline, Wikipedia web scraping\nRecorded on: 2020-06-09\nTimestamps by: Eric Fletcher\nView code"
   },
   {
     "objectID": "content_pages/African-American History.html",
     "href": "content_pages/African-American History.html",
     "title": "African-American History",
     "section": "",
-    "text": "test text"
+    "text": "Notable topics: Network diagram, Wordcloud\nRecorded on: 2020-06-16\nTimestamps by: Eric Fletcher\nView code"
   },
   {
     "objectID": "content_pages/Animal Crossing.html",
     "href": "content_pages/Animal Crossing.html",
     "title": "Animal Crossing",
     "section": "",
-    "text": "test text"
+    "text": "Notable topics: Topic modelling (stm package)\nRecorded on: 2020-05-05\nTimestamps by: Alex Cookson\nView code"
   },
   {
     "objectID": "content_pages/Art Collections.html",
     "href": "content_pages/Art Collections.html",
     "title": "Art Collections",
     "section": "",
-    "text": "Recorded on: 2021-01-12\nTimestamps by: Eric Fletcher"
+    "text": "Notable topics: geom_area plot, distributions, calculating area (square meters) and ratio (width / height)\nRecorded on: 2021-01-12\nTimestamps by: Eric Fletcher\nView code"
   },
   {
     "objectID": "content_pages/Australian Animal Outcomes.html",
     "href": "content_pages/Australian Animal Outcomes.html",
     "title": "Australian Animal Outcomes",
     "section": "",
-    "text": "test text"
+    "text": "Notable topics: Data manipulation, Web Scraping (rvest package) and SelectorGadget, Animated Choropleth Map\nRecorded on: 2020-07-21\nTimestamps by: Eric Fletcher\nView code"
   },
   {
     "objectID": "content_pages/Beach Volleyball.html",
     "href": "content_pages/Beach Volleyball.html",
     "title": "Beach Volleyball",
     "section": "",
-    "text": "test text"
+    "text": "Notable topics: Data cleaning, Logistic regression\nRecorded on: 2020-05-19\nTimestamps by: Eric Fletcher\nView code"
   },
   {
     "objectID": "index.html#all-recordings",
@@ -68,5 +68,166 @@
     "title": "R Screencasts",
     "section": "All recordings",
     "text": "All recordings"
+  },
+  {
+    "objectID": "content_pages/African-American Achievements.html#full-screencast",
+    "href": "content_pages/African-American Achievements.html#full-screencast",
+    "title": "African-American Achievements",
+    "section": "Full screencast",
+    "text": "Full screencast"
+  },
+  {
+    "objectID": "content_pages/African-American Achievements.html#timestamp",
+    "href": "content_pages/African-American Achievements.html#timestamp",
+    "title": "African-American Achievements",
+    "section": "Timestamp",
+    "text": "Timestamp"
+  },
+  {
+    "objectID": "content_pages/African-American History.html#full-screencast",
+    "href": "content_pages/African-American History.html#full-screencast",
+    "title": "African-American History",
+    "section": "Full screencast",
+    "text": "Full screencast"
+  },
+  {
+    "objectID": "content_pages/African-American History.html#timestamp",
+    "href": "content_pages/African-American History.html#timestamp",
+    "title": "African-American History",
+    "section": "Timestamp",
+    "text": "Timestamp"
+  },
+  {
+    "objectID": "content_pages/Animal Crossing.html#full-screencast",
+    "href": "content_pages/Animal Crossing.html#full-screencast",
+    "title": "Animal Crossing",
+    "section": "Full screencast",
+    "text": "Full screencast"
+  },
+  {
+    "objectID": "content_pages/Animal Crossing.html#timestamp",
+    "href": "content_pages/Animal Crossing.html#timestamp",
+    "title": "Animal Crossing",
+    "section": "Timestamp",
+    "text": "Timestamp"
+  },
+  {
+    "objectID": "content_pages/Art Collections.html#full-screencast",
+    "href": "content_pages/Art Collections.html#full-screencast",
+    "title": "Art Collections",
+    "section": "Full screencast",
+    "text": "Full screencast"
+  },
+  {
+    "objectID": "content_pages/Art Collections.html#timestamp",
+    "href": "content_pages/Art Collections.html#timestamp",
+    "title": "Art Collections",
+    "section": "Timestamp",
+    "text": "Timestamp"
+  },
+  {
+    "objectID": "content_pages/Australian Animal Outcomes.html#full-screencast",
+    "href": "content_pages/Australian Animal Outcomes.html#full-screencast",
+    "title": "Australian Animal Outcomes",
+    "section": "Full screencast",
+    "text": "Full screencast"
+  },
+  {
+    "objectID": "content_pages/Australian Animal Outcomes.html#timestamp",
+    "href": "content_pages/Australian Animal Outcomes.html#timestamp",
+    "title": "Australian Animal Outcomes",
+    "section": "Timestamp",
+    "text": "Timestamp"
+  },
+  {
+    "objectID": "content_pages/Beach Volleyball.html#full-screencast",
+    "href": "content_pages/Beach Volleyball.html#full-screencast",
+    "title": "Beach Volleyball",
+    "section": "Full screencast",
+    "text": "Full screencast"
+  },
+  {
+    "objectID": "content_pages/Beach Volleyball.html#timestamp",
+    "href": "content_pages/Beach Volleyball.html#timestamp",
+    "title": "Beach Volleyball",
+    "section": "Timestamp",
+    "text": "Timestamp"
+  },
+  {
+    "objectID": "content_pages/African-American Achievements.html#timestamphi",
+    "href": "content_pages/African-American Achievements.html#timestamphi",
+    "title": "African-American Achievements",
+    "section": "Timestamphi",
+    "text": "Timestamphi"
+  },
+  {
+    "objectID": "content_pages/African-American Achievements.html#timestamps",
+    "href": "content_pages/African-American Achievements.html#timestamps",
+    "title": "African-American Achievements",
+    "section": "Timestamps",
+    "text": "Timestamps\n\n0:8:20\nUse fct_reorder from the forcats package to reorder the category factor levels by sorting along n.\nfct_reorder\nforcats\n\n\n\n\n0:11:35\nUse str_remove from the stringr package to remove anything after a bracket or parenthesis from the person variable with the regular expression \"[\\\\[\\\\(].*\" David then discusses how web scraping may be a better option than parsing the strings.\nstr_remove\nstringr\n\n\n\n\n0:12:25\nUse str_trim from the stringr package to remove the whitespace from the person variable. David then discusses how web scraping may be a better option than parsing the strings.\nstr_trim\nstringr\n\n\n\n\n0:15:50\nCreate an interactive plotly timeline.\nggplotly\nplotly\n\n\n\n\n0:18:20\nUse ylim(c(-.1, 1)) to set scale limits moving the geom_point to the bottom of the graph.\nylim\nggplot2\n\n\n\n\n0:19:30\nUse paste0 from base R to concatenate the accomplishment and person with \": \" in between the two displayed in the timeline hover label.\npaste0\nbase\n\n\n\n\n0:20:30\nSet y to category in ggplot aesthetics to get 8 separate timelines on one plot, one for each category. Doing this allows David to remove the ylim mentioned above.\naes\nggplot2\n\n\n\n\n0:22:25\nUse the plotly tooltip = text parameter to get just a single line of text in the plotly hover labels.\ntooltip\nplotly\n\n\n\n\n0:26:05\nUse glue from the glue package to reformat text with \\n included so that the single line of text can now be broken up into 2 separate lines in the hover labels.\nglue\nglue\n\n\n\n\n0:33:55\nUse separate_rows from the tidyr package to separate the occupation_s variable from the science dataset into multiple columns delimited by a semicolon with sep = \"; \"\nseparate_rows\ntidyr\n\n\n\n\n0:34:25\nUse str_to_title from the stringr package to conver the case to title case in the occupation_s variable.\nstr_to_title\nstringr\n\n\n\n\n0:35:15\nUse str_detect from the stringr package to detect the presence of statistician from within the occupation_s variable with regex(\"statistician\", ignore_case = TRUE) to perform a case-insensitive search.\nstr_detect\nstringr\n\n\n\n\n0:41:55\nUse the rvest package with Selector Gadget to scrape additional information about the individual from their Wikipedia infobox.\nread_html | html_nodes | html_table | setNames\nrvest\n\n\n\n\n0:49:15\nUse map and possibly from the purrr package to separate out the downloading of data from parsing the useful information. David then turns the infobox extraction step into an anonymous function using .%>% dot-pipe.\nmap | possibly | read_html\npurrr\n\n\n\n\n0:58:40\nSummary of screencast.\nNA\nNA"
+  },
+  {
+    "objectID": "content_pages/African-American History.html#timestamps",
+    "href": "content_pages/African-American History.html#timestamps",
+    "title": "African-American History",
+    "section": "Timestamps",
+    "text": "Timestamps\n\n0:6:55\nUse fct_lump from the forcats package to lump together all the factor levels in ship_name except the n most frequent. Used within filter with ! = \"Other\" to remove other.\nfct_lump\nforcats\n\n\n\n\n0:8:00\nuse fct_reorder from the forcats package to reorder the ship_name factor levels y sorting along the n_slaves_arrived variable.\nfct_reorder\nforcats\n\n\n\n\n0:10:20\nAdd geom_vline to geom_histogram to annotate the plot with a vertical line indicating the Revolutionary War and the Civil War.\ngeom_vline\nggplot2\n\n\n\n\n0:13:00\nUse truncated division within count to create a new decade variable equal to 10 * (year_arrival %/% 10))\ncount\ndplyr\n\n\n\n\n0:17:20\nUse str_trunc from the stringr package to truncate the titles in each facet panel accounting for the slave ports with really long names.\nstr_trunc\nstringr\n\n\n\n\n0:18:05\nAnother option for accounting for long titles in the facet panels is to use strip.text within theme with element_text(size = 6)\ntheme\nggplot2\n\n\n\n\n0:26:55\nUse the ggraph package to create a network diagram using port_origin and port_arrival.\nggraph | geom_edge_link | geom_node_point | geom_node_text\nggraph\n\n\n\n\n0:29:05\nUse arrow from the grid package to add directional arrows to the points in the network diagram.\narrow\ngrid\n\n\n\n\n0:29:40\nUse scale_width_size_continuous from the ggraph packge to adjust the size of the points in the network diagram.\nscale_edge_size_continuous\nggraph\n\n\n\n\n0:35:25\nWithin summarize use mean(n_slaves_arrived, na.rm = TRUE) * n()) to come up with an estimated total numer of slaves since 49% of the data is missing.\nsummarize | mean\ndplyr\n\n\n\n\n0:48:20\nCreate a faceted stacked percent barplot (spinogram) showing the percentage of black_free, black_slaves, white, and other for each region.\ngeom_col | facet_wrap\nggplot2\n\n\n\n\n0:51:00\nUse the wordcloud package to create a wordcloud with the african_names dataset. David hsa issues with the wordcloud package and opts to use ggwordcloud instead. Also, mentions the worldcloud2 package.\nwordcloud | geom_text_wordcloud\nwordcloud | ggwordcloud\n\n\n\n\n0:55:20\nUse fct_recode from the forcats package to change the factor levels for the gender variable while renaming Man = \"Boy\" and Woman = \"Girl\"\nfct_recode\nforcats\n\n\n\n\n0:57:20\nUse reorder_within from the tidytext package to reorder the geom_col by n within gender variable for each facet panel.\nreorder_within\ntidytext\n\n\n\n\n0:59:00\nSummary of screencast.\nNA\nNA"
+  },
+  {
+    "objectID": "content_pages/Animal Crossing.html#timestamps",
+    "href": "content_pages/Animal Crossing.html#timestamps",
+    "title": "Animal Crossing",
+    "section": "Timestamps",
+    "text": "Timestamps\n\n0:5:05\nStarting text analysis of critic reviews of Animal Crossing\nNA\nNA\n\n\n\n\n0:7:50\nUsing floor_date function from lubridate package to round dates down to nearest month (then week)\nfloor_date\nlubridate\n\n\n\n\n0:9:00\nUsing unnest_tokens function and anti_join functions from tidytext package to break reviews into individual words and remove stop words\nunnest_tokens | anti_join\ntidytext\n\n\n\n\n0:10:35\nTaking the average rating associated with individual words (simple approach to gauge sentiment)\nNA\nNA\n\n\n\n\n0:12:30\nUsing geom_line and geom_point to graph ratings over time\ngeom_line\nNA\n\n\n\n\n0:14:40\nUsing mean function and logical statement to calculate percentages that meet a certain condition\nmean\nNA\n\n\n\n\n0:22:30\nUsing geom_text to visualize what words are associated with positive/negative reviews\ngeom_text\nNA\n\n\n\n\n0:27:00\nDisclaimer that this exploration is not text regression – wine ratings screencast is a good resource for that\nNA\nNA\n\n\n\n\n0:28:30\nStarting to do topic modelling\nNA\nNA\n\n\n\n\n0:30:45\nExplanation of stm function from stm package\nstm\nstm\n\n\n\n\n0:34:30\nExplanation of stm function’s output (topic modelling output)\nstm\nstm\n\n\n\n\n0:36:55\nChanging the number of topics from 4 to 6\nNA\nNA\n\n\n\n\n0:37:40\nExplanation of how topic modelling works conceptually\nNA\nNA\n\n\n\n\n0:40:55\nUsing tidy function from broom package to find which “documents” (reviews) were the “strongest” representation of each topic\ntidy\nbroom\n\n\n\n\n0:44:50\nNoting that there might be a scraping issue resulting in review text being repeated\nNA\nNA\n\n\n\n\n0:46:05\n(Unsuccessfully) Using str_sub function to help fix repeated review text by locating where in the review text starts being repeated\nstr_sub\nNA\n\n\n\n\n0:48:20\n(Unsuccessfully) Using str_replace and map2_chr functions, as well as regex cpaturing groups to fix repeated text\nstr_replace | map2\nNA\n\n\n\n\n0:52:00\nLooking at the association between review grade and gamma of the topic model (how “strong” a review represents a topic)\nNA\nNA\n\n\n\n\n0:53:55\nUsing cor function with method = “spearman” to calculate correlation based on rank instead of actual values\ncor\nNA\n\n\n\n\n0:57:35\nSummary of screencast\nNA\nNA"
+  },
+  {
+    "objectID": "content_pages/Art Collections.html#timestamps",
+    "href": "content_pages/Art Collections.html#timestamps",
+    "title": "Art Collections",
+    "section": "Timestamps",
+    "text": "Timestamps\n\n0:1:55\nUsing clean_names to convert variable names from camelcase to snakecase.\nclean_names\njanitor\n\n\n\n\n0:4:05\nUse fct_reorder to reorder geom_col columns in ascending order.\nfct_reorder | geom_col\nforcats | ggplot2\n\n\n\n\n0:4:50\n“Use extract to extract a character column into multiple columns using the regular expression \"\"(.*) on (.*)\"\" at 6:05 David decides to change this to: Use separate with sep = \"\" on \"\" and fill = \"\"left\"\" and extra = \"\"merge\"\" to control what happens when there are not enoughor too many pieces. at 7:10 David decides to change to fill = \"\"right\"\".”\nextract | separate\ntidyr\n\n\n\n\n0:7:50\nUse replace_na to replace NAs with specified values. In this case replace them with Missing.\nreplace_na\ntidyr\n\n\n\n\n0:10:25\n“Use fct_lump to lump artist and medium levels except for the n most frequent. at 11:30 David decides to use filter(fct_lump(artist, 16) != \"\"Other\"\") to get rid of the artist Other category.”\nfct_lump | filter\nforcats | dplyr\n\n\n\n\n0:13:55\n“Create a geom_area plot to show the distribution of paintings by medium over time. At 15:35 David decides to change from count to percentage to make it easier to show the difference in composition using mutate(pct = n / sum).”\ngeom_area\nggplot2\n\n\n\n\n0:14:20\nBucket year variable into decades using round(year -1) to round the year to the nearest 10.\ncount | round\nbase | dplyr\n\n\n\n\n0:16:35\nUse scale_y_continuous(labels = scales::percent) to change y-axis labels to percent format.\nscale_y_continuous\nscales\n\n\n\n\n0:18:35\nTurn the geom_area plot into a faceted geom_col.\nfacet_wrap | geom_col\nggplot2\n\n\n\n\n0:21:35\n“Calculate the percentage of artists for each medium per decade.”\nmutate | group_by | summarize | complete\ndplyr | tidyr\n\n\n\n\n0:29:20\nCalculate the distribution of the area (square meters) and ratio (width / height) of the art pieces.\nfilter | mutate | ggplot | geom_histogram | scale_x_log10 | geom_vline\ndplyr | ggplot2\n\n\n\n\n0:38:25\nCategorize the pieces by shape(landscape, portait, scquare) based on their ratio then plot using geom_area to look at the composition over time.\nmutate | case_when | geom_area | complete\ndplyr | ggplot2\n\n\n\n\n0:41:35\nCraete a line plot showing the median ratio by decade over time.\ngroup_by | summarize | filter | ggplot | geom_line | geom_point\ndplyr | ggplot2\n\n\n\n\n0:44:15\nCraete a line plot showing the median area by decade over time.\ngroup_by | summarize | filter | ggplot | geom_line | geom_point\ndplyr | ggplot2\n\n\n\n\n0:46:05\nCreate a boxplot showing the distribution of area over time.\nmutate | filter | ggplot | geom_boxplot | scale_y_log10\ndplyr | ggplot2\n\n\n\n\n0:48:25\nCreate various summary statistics for the artists such as avg_year, first_year,last_year,n_pieces,median_area,median_ratio`.\ngroup_by | summarize | arrange\ndplyr\n\n\n\n\n0:51:00\nCreate a boxplot showing the distribution of ratio over time for n amount of artists. Use glue to concatonate number of pieces for each artist ont he y axis.\nfilter | add_count | mutate | ggplot | geom_boxplot | scale_x_log10 | geom_vline | glue\ndplyr | ggplot2 | glue\n\n\n\n\n0:56:20\nCreate a boxplot showing the distribution of ratio over time for each medium. Use glue to concatonate number of pieces for each medium on the y axis.\nfilter | add_count | mutate | ggplot | geom_boxplot | scale_x_log10 | geom_vline | glue\ndplyr | ggplot2 | glue\n\n\n\n\n0:59:10\nSummary of screencast\nNA\nNA"
+  },
+  {
+    "objectID": "content_pages/Australian Animal Outcomes.html#timestamps",
+    "href": "content_pages/Australian Animal Outcomes.html#timestamps",
+    "title": "Australian Animal Outcomes",
+    "section": "Timestamps",
+    "text": "Timestamps\n\n0:1:20\nUsing use_tidytemplate to open the project dataset with the package’s tidytemplate Rmd\nuse_tidytemplate\ntidytuesdayR\n\n\n\n\n0:4:30\nUsing rename to rename Total column to total\nrename\ndplyr\n\n\n\n\n0:6:20\nUsing fct_reorder to reorder stacked barplot with weight = sum\nfct_reorder\nforcats\n\n\n\n\n0:7:00\nUsing fct_lump with w = n to lump together outcome factor levels displaying the most frequenct with rest lumped into other\nfct_lump\nforcats\n\n\n\n\n0:9:15\nUsing fct_recode to combine the factor level In Stock with Currently In Care\nfct_recode\nforcats\n\n\n\n\n0:12:10\nUsing fct_reorder to reorder facet_wrap panels\nfct_reorder\nforcats\n\n\n\n\n0:13:03\nUsing scale_y_continuous with labels = comma to separate digits with comma\nscale_y_continuous\nggplot2 | scales\n\n\n\n\n0:14:10\nUsing complete to complete account for missing combinations of data where the value is 0 in the released column\ncomplete\ntidyr\n\n\n\n\n0:16:10\nUsing max (year) within filter to subset the data displaying only the most recent year\nmax\nbase\n\n\n\n\n0:19:30\nUsing pivot_longer to pivot location variables from wide to long\npivot_longer\ntidyr\n\n\n\n\n0:21:45\nWeb Scaraping table from Wikipedia with SelectorGadget and Rvest\nread_html | html_nodes | map |\nrvest | janitor\n\n\n\n\n0:25:45\nUsing str_to_upper to upper case the values in the shorthand column\nstr_to_upper\nstringr\n\n\n\n\n0:27:13\nUsing parse_number to remove commas from population and area columns\nparse_number\nreadr\n\n\n\n\n0:28:55\nUsing bind_rows to bind the two web scraped tables from Wikipedia together by row and column\nbind_rows\ndplyr\n\n\n\n\n0:29:35\nUsing inner_join to combine the Wikipedia table with the original data set\ninner_join\ndplyr\n\n\n\n\n0:29:47\nUsing mutate to create new per_capita_million column to show outcome on a per million people basis\nmutate\ndplyr\n\n\n\n\n0:37:25\nUsing summarize to create new column pct_euthanized showing percent of cats and dogs euthanized over time. Formula accounts for 0 values thus avoiding a resulting empty vector.\nsummarize\ndplyr\n\n\n\n\n0:39:10\nUsing scale_y_continuous with labels = percent to add percentage sign to y-axis values\nscale_y_continuous\nggplot2 | scales\n\n\n\n\n0:42:45\nCreate a choropleth map of Australia using an Australian States Shapefile using the sf and ggplot2 packages | Troubleshooting begins at 44:25 (downsizing / downsampling with sf_simplify)\nread_sf | geom_sf | sf_simplify\nsf | ggplot2\n\n\n\n\n0:55:45\nAdd animation to the map of Australia showing the percent of cats euthanized by region using gganimate\ntransition_manual\ngganimate\n\n\n\n\n1:01:35\nSummary of screencast\nNA\nNA"
+  },
+  {
+    "objectID": "content_pages/Beach Volleyball.html#timestamps",
+    "href": "content_pages/Beach Volleyball.html#timestamps",
+    "title": "Beach Volleyball",
+    "section": "Timestamps",
+    "text": "Timestamps\n\n0:5:30\nUse pivot_longer from the dplyr package to pivot the data set from wide to long.\npivot_longer\ndplyr\n\n\n\n\n0:7:20\nUse mutate_at from the dplyr package with starts_with to change the class to character for all columns that start with w_ and l_.\nmutate_at\ndplyr\n\n\n\n\n0:8:00\nUse separate from the tidyr package to separate the name variable into three columns with extra = merge and fill = right.\nseparate\ntidyr\n\n\n\n\n0:10:35\nUse rename from the dplyr package to rename w_player1, w_player2, l_player1, and l_player2.\nrename\ndplyr\n\n\n\n\n0:12:50\nUse pivot_wider from the dplyr package to pivot the name variable from long to wide.\npivot_wider\ndplyr\n\n\n\n\n0:15:15\nUse str_to_upper to convert the winner_loser w and l values to uppercase.\nstr_to_upper\nstringr\n\n\n\n\n0:20:25\nAdd unique row numbers for each match using mutate with row_number from the dplyr package.\nrow_number\ndplyr\n\n\n\n\n0:21:20\nSeparate the score values into multiple rows using separate_rows from the tidyr package.\nseparate_rows\ntidyr\n\n\n\n\n0:22:45\nUse separate from the tidyr package to actual scores into two columns, one for the winners score w_score and another for the losers score l_score.\nseparate\ntidyr\n\n\n\n\n0:23:45\nUse na_if from the dplyr package to change the Forfeit or other value from the score variable to NA.\nna_if\ndplyr\n\n\n\n\n0:24:35\nUse str_remove from the stringr package to remove scores that include retired.\nstr_remove\nstringr\n\n\n\n\n0:25:25\nDetermine how many times the winners score w_score is greter than the losers score l_score at least 1/3 of the time.\nmutate | group_by | summarize\ndplyr\n\n\n\n\n0:28:30\nUse summarize from the dplyr package to create the summary statistics including the number of matches, winning percentage, date of first match, date of most recent match.\nsummarize\ndplyr\n\n\n\n\n0:34:15\nUse type_convert from the readr package to convert character class variables to numeric.\ntype_convert\nreadr\n\n\n\n\n0:35:00\nUse summarize_all from the dplyr package to calculate the calculate which fraction of the data is not NA.\nsummarize_all\ndplyr\n\n\n\n\n0:42:00\nUse summarize from the dplyr package to determine players number of matches, winning percentage, average attacks, average errors, average kills, average aces, average serve errors, and total rows with data for years prior to 2019.\nThe summary statistics are then used to answer how would we could predict if a player will win in 2019 using geom_point and logistic regression. Initially, David wanted to predict performance based on players first year performance. (NOTE - David mistakingly grouped by year and age. He cathces this around 1:02:00.)\nsummarize | inner_join | geom_point | glm |cbind\ndplyr | ggplot2\n\n\n\n\n0:49:25\nUse year from the lubridate package within a group_by to determine the age for each play given their birthdate.\nsummarize | year\nlubridate\n\n\n\n\n0:54:30\nTurn the summary statistics at timestamp 42:00 into a . DOT %>% PIPE function.\nNA\nNA\n\n\n\n\n1:04:30\nSummary of screencast.\nNA\nNA"
+  },
+  {
+    "objectID": "resources.html",
+    "href": "resources.html",
+    "title": "Resources",
+    "section": "",
+    "text": "Not on Twitter but keen to try it out? The free book Twitter for R programmers will get you started.\nWant to learn R? Here’s some free resources to get you started - one book and one video course.\nWant even more R? Check out the collection of over 250 free books covering a wide variety of fields and topics at Big Book of R."
+  },
+  {
+    "objectID": "content_pages/European Energy.html",
+    "href": "content_pages/European Energy.html",
+    "title": "European Energy",
+    "section": "",
+    "text": "Notable topics: Data manipulation, Country flags, Slope graph, Function creation\nRecorded on: 2020-08-04\nTimestamps by: Eric Fletcher\nView code"
+  },
+  {
+    "objectID": "content_pages/European Energy.html#full-screencast",
+    "href": "content_pages/European Energy.html#full-screencast",
+    "title": "European Energy",
+    "section": "Full screencast",
+    "text": "Full screencast"
+  },
+  {
+    "objectID": "content_pages/European Energy.html#timestamps",
+    "href": "content_pages/European Energy.html#timestamps",
+    "title": "European Energy",
+    "section": "Timestamps",
+    "text": "Timestamps\n\n0:01:50\nUsing count to get an overview of scategorical data\ncount\ndplyr\n\n\n\n\n0:07:25\nUsing pivot_longer and gather to pivot date variables from wide to long\npivot_longer | gather\ntidyr\n\n\n\n\n0:09:00\nUsing as.integer to change year variable from character to integer class\nas.integer\nbase\n\n\n\n\n0:10:10\nUsing fct_reorder to reorder stacked barplot\nfct_reorder\nforcats\n\n\n\n\n0:10:30\nUsing scale_y_continuous with labels = comma from scales package to insert a comma every three digits on the y-axis\nscale_y_continuous | comma\nggplot2 | scales\n\n\n\n\n0:16:35\nUsing replace_na and list to replace NA values in country_name column with United Kingdom\nreplace_na\ntidyr\n\n\n\n\n0:18:05\nUsing fct_lump to lump factor levels together except for the 10 most frequent for each facet panel\nfct_lump\nforcats\n\n\n\n\n0:20:10\nUsing reorder_within with fun = sum and scale_y_reordered to reorder the categories within each facet panel\nreorder_within | scale_y_reordered\ntidytext\n\n\n\n\n0:24:30\nUsing ggflags package to add country flags | Debugging strategies include 1) minimal reproducible example and 2) binary search\ngeom_flag\nggfalgs\n\n\n\n\n0:29:20\n(Unsuccessfully) Using fct_recode to rename the ISO two-digit identifier for the United Kingdom from the UK to GB\nfct_recode\nforcats\n\n\n\n\n0:33:20\nUsing ifelse to replace the ISO two-digit identifier for the United Kingdom from UK to GB & from EL to GR fro Greece | Debugging included\nifelse\nbase\n\n\n\n\n0:40:45\nUsing str_to_lower to convert observations in country column to lower case\nstr_to_lower\nstringr\n\n\n\n\n0:45:00\nCreating a slope graph to show differences in Nuclear production (2106 versus 2018) | Using scale_y_log10 to increase distance between points | Using ggflags for country flags\ngeom_point | geom_line | scale_y_log10 | geom_flag\nggplot2 | ggflags\n\n\n\n\n0:47:00\nUsing scale_x_continuous with breaks = c(2016, 2018) to show only 2016 and 2018 on x-axis\nscale_x_continuous\nggplot2\n\n\n\n\n0:48:20\nExtend x-axis limits using scale_x_continuous with limits = c(2015, 2019) and geom_text with an ifelse within hjust to alternate labels for the right and left side of slope graph\nscale_x_continuous | geom_text\nggplot2\n\n\n\n\n0:52:40\nCreating a slopegraph function\nfunction\nbase\n\n\n\n\n1:00:00\nSummary of screencast\nNA\nNA"
   }
 ]

@@ -1,0 +1,200 @@
+---
+title: "French Train Delays"
+description: "Heat map"
+date: 2019-02-26
+date-format: long
+---
+
+Notable topics: Heat map
+
+Recorded on: 2019-02-26
+
+Timestamps by: Alex Cookson
+
+[View code](https://github.com/dgrtwo/data-screencasts/blob/master/french-trains.Rmd)
+
+## Full screencast
+<iframe width="560" height="315" src="https://www.youtube.com/embed/bmaigtpKyiM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+## Timestamps
+
+### 0:10:20
+
+Boxplots of departure stations using fct_lump function
+
+fct_lump
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/bmaigtpKyiM?start=620" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:14:25
+
+Creating heat map of departure and arrival delays, then cleaning up a sparse heat map
+
+NA
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/bmaigtpKyiM?start=865" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:15:30
+
+Using fct_reorder function and length function to reorder stations based on how frequently they appear
+
+fct_reorder | length
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/bmaigtpKyiM?start=930" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:16:30
+
+Using fct_infreq to reorder based on infrequently-appearing stations (same as above, but without a trick needed)
+
+fct_infreq
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/bmaigtpKyiM?start=990" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:17:45
+
+Using fct_lump function to lump based on proportion instead of number of top categories desired
+
+fct_lump
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/bmaigtpKyiM?start=1065" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:18:45
+
+Using scale_fill_gradient2 function to specify diverging colour scale
+
+scale_fill_gradient2
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/bmaigtpKyiM?start=1125" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:26:00
+
+Checking another person's take on the data, which is a heatmap over time
+
+NA
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/bmaigtpKyiM?start=1560" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:28:40
+
+Converting year and month (as digits) into date-class variable using sprintf function and padding month number with extra zero when necessary
+
+sprintf
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/bmaigtpKyiM?start=1720" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:34:50
+
+Using summarise_at function to quickly sum multiple columns
+
+summarise_at
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/bmaigtpKyiM?start=2090" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:39:35
+
+Creating heatmap using geom_tile function for percentage of late trains by station over time
+
+geom_tile
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/bmaigtpKyiM?start=2375" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:45:05
+
+Using fill function to fill in missing NA values with data from previous observations
+
+fill
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/bmaigtpKyiM?start=2705" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:50:35
+
+Grouping multiple variables into a single category using paste0 function
+
+paste0
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/bmaigtpKyiM?start=3035" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:51:40
+
+Grouping heatmap into International / National chunks with a weird hack
+
+NA
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/bmaigtpKyiM?start=3100" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:52:20
+
+Further separating International / National visually
+
+NA
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/bmaigtpKyiM?start=3140" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:53:30
+
+Less hacky way of separating International / National (compared to previous two rows)
+
+NA
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/bmaigtpKyiM?start=3210" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+

@@ -1,0 +1,272 @@
+---
+title: "Horror Movies"
+description: "ANOVA, Text mining (tidytext package), LASSO regression (glmnet package)"
+date: 2019-10-22
+date-format: long
+---
+
+Notable topics: ANOVA, Text mining (tidytext package), LASSO regression (glmnet package)
+
+Recorded on: 2019-10-22
+
+Timestamps by: Alex Cookson
+
+[View code](https://github.com/dgrtwo/data-screencasts/blob/master/horror-movie-ratings.Rmd)
+
+## Full screencast
+<iframe width="560" height="315" src="https://www.youtube.com/embed/yFRSTlk3kRQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+## Timestamps
+
+### 0:4:15
+
+Extracting digits (release year) from character string using regex, along with good explanation of extract function
+
+extract
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/yFRSTlk3kRQ?start=255" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:8:00
+
+Quick check on why parse_number is unable to parse some values -- is it because they are NA or some other reason?
+
+parse_number
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/yFRSTlk3kRQ?start=480" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:9:45
+
+Visually investigating correlation between budget and rating
+
+NA
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/yFRSTlk3kRQ?start=585" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:11:50
+
+Investigating correlation between MPAA rating (PG-13, R, etc.) and rating using boxplots
+
+NA
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/yFRSTlk3kRQ?start=710" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:12:50
+
+Using pull function to quickly check levels of a factor
+
+pull
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/yFRSTlk3kRQ?start=770" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:13:30
+
+Using ANOVA to check difference of variation within groups (MPAA rating) than between groups
+
+NA
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/yFRSTlk3kRQ?start=810" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:15:40
+
+Separating genre using separate_rows function (instead of str_split and unnest)
+
+separate_rows
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/yFRSTlk3kRQ?start=940" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:18:00
+
+Removing boilerplate "Directed by..." and "With..." part of plot variable and isolating plot, first using regex, then by using separate function with periods as separator
+
+separate
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/yFRSTlk3kRQ?start=1080" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:20:40
+
+Unnesting word tokens, removing stop words, and counting appearances
+
+NA
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/yFRSTlk3kRQ?start=1240" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:21:20
+
+Aggregating by word to find words that appear in high- or low-rated movies
+
+NA
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/yFRSTlk3kRQ?start=1280" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:23:00
+
+Discussing potential confounding factors for ratings associated with specific words
+
+NA
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/yFRSTlk3kRQ?start=1380" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:24:50
+
+Searching for duplicated movie titles
+
+NA
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/yFRSTlk3kRQ?start=1490" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:25:50
+
+De-duping using distinct function
+
+NA
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/yFRSTlk3kRQ?start=1550" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:26:55
+
+Loading in and explaining glmnet package
+
+NA
+
+glmnet
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/yFRSTlk3kRQ?start=1615" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:28:00
+
+Using movie titles to pull out ratings using rownmaes and match functions to create an index of which rating to pull out of the original dataset
+
+NA
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/yFRSTlk3kRQ?start=1680" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:29:10
+
+Actually using glmnet function to create lasso model
+
+NA
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/yFRSTlk3kRQ?start=1750" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:34:05
+
+Showing built-in plot of lasso lambda against mean-squared error
+
+NA
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/yFRSTlk3kRQ?start=2045" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:37:05
+
+Explaining when certain terms appeared in the lasso model as the lambda value dropped
+
+NA
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/yFRSTlk3kRQ?start=2225" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:41:10
+
+Gathering all variables except for title, so that the dataset is very tall
+
+NA
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/yFRSTlk3kRQ?start=2470" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:42:35
+
+Using unite function to combine two variables (better alternative to paste)
+
+unite
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/yFRSTlk3kRQ?start=2555" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:45:45
+
+Creating a new lasso with tons of new variables other than plot words
+
+NA
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/yFRSTlk3kRQ?start=2745" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+

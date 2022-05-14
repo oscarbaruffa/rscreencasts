@@ -1,0 +1,308 @@
+---
+title: "Malaria Incidence"
+description: "Map visualization"
+date: 2018-11-12
+date-format: long
+---
+
+Notable topics: Map visualization
+
+Recorded on: 2018-11-12
+
+Timestamps by: Alex Cookson
+
+[View code](https://github.com/dgrtwo/data-screencasts/blob/master/malaria.Rmd)
+
+## Full screencast
+<iframe width="560" height="315" src="https://www.youtube.com/embed/5_6O2oDy5Jk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+## Timestamps
+
+### 0:2:45
+
+Importing data using the malariaAtlas package
+
+NA
+
+malariaAtlas
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/5_6O2oDy5Jk?start=165" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:14:10
+
+Using geom_line function to visualize malaria prevalence over time
+
+geom_line
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/5_6O2oDy5Jk?start=850" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:15:10
+
+Quick map visualization using longitude and latitude coordinates and the geom_point function
+
+geom_point
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/5_6O2oDy5Jk?start=910" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:18:40
+
+Using borders function to add Kenyan country borders to map
+
+borders
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/5_6O2oDy5Jk?start=1120" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:19:50
+
+Using scale_colour_gradient2 function to change the colour scale of points on the map
+
+scale_colour_gradient2
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/5_6O2oDy5Jk?start=1190" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:20:40
+
+Using arrange function to ensure that certain points on a map appear in front of/behind other points
+
+arrange
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/5_6O2oDy5Jk?start=1240" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:21:50
+
+Aggregating data into decades using the truncated division operator %/%
+
+%/%
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/5_6O2oDy5Jk?start=1310" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:24:45
+
+Starting to look at aggregated malaria data (instead of country-specific data)
+
+NA
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/5_6O2oDy5Jk?start=1485" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:26:50
+
+Using sample and unique functions to randomly select a few countries, which are then graphed
+
+sample | unique
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/5_6O2oDy5Jk?start=1610" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:28:30
+
+Using last function to select the most recent observation from a set of arranged data
+
+last
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/5_6O2oDy5Jk?start=1710" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:32:55
+
+Creating a Bland-Altman plot to explore relationship between current incidence and change in incidence in past 15 years
+
+NA
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/5_6O2oDy5Jk?start=1975" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:35:45
+
+Using anti_join function to find which countries are not in the malaria dataset
+
+anti_join
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/5_6O2oDy5Jk?start=2145" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:36:40
+
+Using the iso3166 dataset set in the maps package to match three-letter country code (i.e., the ISO 3166 code) with country names
+
+NA
+
+maps
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/5_6O2oDy5Jk?start=2200" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:38:30
+
+Creating a world map using geom_polygon function (and eventually theme_void and coord_map functions)
+
+geom_polygon | theme_void | coord_map
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/5_6O2oDy5Jk?start=2310" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:39:00
+
+Getting rid of Antarctica from world map
+
+NA
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/5_6O2oDy5Jk?start=2340" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:42:35
+
+Using facet_wrap function to create small multiples of world map for different time periods
+
+facet_wrap
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/5_6O2oDy5Jk?start=2555" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:47:30
+
+Starting to create an animated map of malaria deaths (actual code writing starts at 57:45)
+
+NA
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/5_6O2oDy5Jk?start=2850" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:51:25
+
+Starting with a single year after working through some bugs
+
+NA
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/5_6O2oDy5Jk?start=3085" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:52:10
+
+Using regex_inner_join function from the fuzzyjoin package to join map datasets because one of them has values in regular expressions
+
+regex_inner_join
+
+fuzzyjoin
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/5_6O2oDy5Jk?start=3130" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:55:15
+
+As alternative to fuzzyjoin package in above step, using str_remove function to get rid of unwanted regex
+
+str_remove
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/5_6O2oDy5Jk?start=3315" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 0:57:45
+
+Starting to turn static map into an animation using gganimate package
+
+NA
+
+gganimate
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/5_6O2oDy5Jk?start=3465" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 1:02:00
+
+The actual animated map
+
+NA
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/5_6O2oDy5Jk?start=3720" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 1:02:35
+
+Using countrycode package to filter down to countries in a specific continent (Africa, in this case)
+
+countrycode
+
+countrycode
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/5_6O2oDy5Jk?start=3755" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 1:03:55
+
+Summary of screencast
+
+NA
+
+NA
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/5_6O2oDy5Jk?start=3835" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
