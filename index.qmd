@@ -30,6 +30,10 @@ screencasts_data <- screencasts_data_google %>%
   identity() %>% 
   head()
 
+screencasts_count <- screencasts_data %>% 
+  distinct(screencast) %>% 
+  count() %>% 
+  pull()
 
 timestamps_data <- timestamps_data_google %>% 
   clean_names()
@@ -44,25 +48,29 @@ embed_pix_h_small <- embed_pix_h * 1
 
 ```
 
-If you're looking to learn how to analyze data, you've come to the right place.
+If you're looking for real-world examples of live data analyses, you've come to the right place.
 
-David Robinson has recorded a bunch of screencasts where he uses R to analyze data he has never seen before. These are fantastic examples of how to think about approaching an analysis.
+David Robinson, a highly experienced Data Scientist, has recorded many screencasts where he analyses data that he's never seen before. These are fantastic examples of how to think about approaching an analysis.
 
-> It's like watching over the shoulder of an experienced colleague.
+> You couldn't ask for a better mentor!
 
 In each video you'll learn:
 
--   How to approach the analysis (when there's no guiding questions)
+- How to approach the analysis
 
--   Handy R tips and tricks
+- What packages and methods he's using, and why
 
--   What packages and methods he's using, and why.
+- Handy R tips and tricks
 
-This is a wealth of knowledge for new and experienced analysts. 
+- How to get unstuck when something doesn't lead anywhere   
+
+This is a wealth of knowledge for new and experienced analysts alike. 
 
 All code is shared and all datasets are publicly available.
 
 Use the search bar to look for specific functions, packages or other keywords. 
+
+The recordings were done as part of a weekly R programming challenge called TidyTuesday. Below you'll find a list of `r screencasts_count`  timestamped screencasts.
 
 ```{r create_pages, echo=FALSE, results='asis'}
 
