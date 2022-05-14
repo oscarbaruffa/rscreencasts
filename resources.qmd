@@ -1,0 +1,11 @@
+---
+title: "Resources"
+---
+
+If you're keen to find more code examples to learn from, search for "#TidyTuesday" and "#RStats" on [Twitter](https://twitter.com/).
+
+Not on Twitter but keen to try it out? The free book [Twitter for R programmers](https://www.t4rstats.com/) will get you started.
+
+Want to learn R? Here's some [free resources](https://www.bigbookofr.com/new-to-r-start-here.html) to get you started - one book and one video course.
+
+Want even more R? Check out the collection of over 250 free books covering a wide variety of fields and topics at [Big Book of R](https://www.bigbookofr.com/).
