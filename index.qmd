@@ -1,5 +1,6 @@
 ---
 title: "R Screencasts"
+description: "Awesome data analysis screencasts from a top Data Scientist" 
 listing:
   contents: content_pages
   sort:
@@ -27,8 +28,7 @@ screencasts_data <- screencasts_data_google %>%
   arrange(screencast) %>% 
   # regex is (?<=) positive assertion, means look after this match, then the additional = is the things to match,and .+ is all characters except whitespace 
   mutate(vid_key = str_extract(screencast_url, "(?<==).+")) %>% 
-  identity() %>% 
-  head()
+  identity() 
 
 screencasts_count <- screencasts_data %>% 
   distinct(screencast) %>% 
