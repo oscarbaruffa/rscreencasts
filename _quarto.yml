@@ -9,6 +9,13 @@ website:
       - href: index.qmd
         text: Home
       - about.qmd
+  page-footer: 
+    center: |
+      Vids by [David Robinson](https://twitter.com/drob). 
+      Timestamps & rich content by [Alex Cookson](https://twitter.com/alexcookson) and [Eric Fletcher](https://twitter.com/iamericfletcher).
+      Website by [Oscar Baruffa](https://twitter.com/OscarBaruffa), sign up to my [newsletter](https://oscarbaruffa.com/newsletter/) for R, data and careers
+      
+
 
 format:
   html:
@@ -17,6 +24,8 @@ format:
     theme: spacelab
     css: styles.css
     toc: true
+
+
 
 editor: visual
 
