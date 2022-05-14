@@ -2,6 +2,10 @@
 title: "R Screencasts"
 listing:
   contents: content_pages
+  sort:
+    - "title"
+    - "date"
+  sort-ui: [title, date]
 ---
 
 ```{r get data, include=FALSE, cache=TRUE}
@@ -79,6 +83,8 @@ Notable topics: ',as.character(screencasts_data[entry_screencast, "notable_topic
 Recorded on: ',as.character(screencasts_data[entry_screencast, "date"]),'
 
 Timestamps by: ',as.character(screencasts_data[entry_screencast, "contributor"]),'
+
+[View code](',as.character(screencasts_data[entry_screencast, "browse_r_code_url"]),')','
 
 ## Full screencast
 <iframe width="',embed_pix_w,'" height="',embed_pix_h,'" src="https://www.youtube.com/embed/', as.character(screencasts_data[entry_screencast, "vid_key"]),'" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
