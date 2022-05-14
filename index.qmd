@@ -52,6 +52,8 @@ If you're looking for real-world examples of live data analyses, you've come to 
 
 David Robinson, a highly experienced Data Scientist, has recorded many screencasts where he analyses data that he's never seen before. These are fantastic examples of how to think about approaching an analysis.
 
+The recordings were done as part of a weekly R programming challenge called TidyTuesday. All code is shared and all datasets are publicly available.
+
 > You couldn't ask for a better mentor!
 
 In each video you'll learn:
@@ -66,11 +68,9 @@ In each video you'll learn:
 
 This is a wealth of knowledge for new and experienced analysts alike. 
 
-All code is shared and all datasets are publicly available.
-
 Use the search bar to look for specific functions, packages or other keywords. 
 
-The recordings were done as part of a weekly R programming challenge called TidyTuesday. Below you'll find a list of `r screencasts_count`  timestamped screencasts.
+Below you'll find a list of `r screencasts_count`  time-stamped screencasts.
 
 ```{r create_pages, echo=FALSE, results='asis'}
 
