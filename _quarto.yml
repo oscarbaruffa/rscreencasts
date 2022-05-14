@@ -12,6 +12,8 @@ website:
 
 format:
   html:
+    include-in-header: 
+      - plausible-analytics.html
     theme: spacelab
     css: styles.css
     toc: true
