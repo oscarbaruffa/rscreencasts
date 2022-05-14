@@ -4,10 +4,10 @@ title: "About"
 
 This project is possible thanks to many people:
 
--   David Robinson for recording the screencasts.
--   Alex Cookson and Eric Fletcher for painstakingly timestamping and describing all the content.
--   Oscar Baruffa for creating this website collating it all.
--   Thomas Mock for maintaining the TidyTuesday challenge.
+-   [David Robinson](https://twitter.com/drob) for recording the screencasts.
+-   [Alex Cookson](https://twitter.com/alexcookson) and [Eric Fletcher](https://twitter.com/iamericfletcher) for painstakingly timestamping and describing all the content.
+-   [Oscar Baruffa](https://twitter.com/OscarBaruffa) for creating this website collating it all.
+-   [Thomas Mock](https://twitter.com/thomas_mock) for maintaining the [TidyTuesday](https://github.com/rfordatascience/tidytuesday) challenge.
 -   Countless others for R, RStudio, Quarto and a gazillion packages that make this all possible.
 
-If you'd like to keep up to date with this website and other resources from Oscar Baruffa, sign up to the newsletter. 
+If you'd like to keep up to date with this website and other resources from Oscar Baruffa, sign up to the [newsletter](https://oscarbaruffa.com/newsletter/) for posts about R, data and careers.
