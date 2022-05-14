@@ -58,7 +58,11 @@ In each video you'll learn:
 
 -   What packages and methods he's using, and why.
 
+This is a wealth of knowledge for new and experienced analysts. 
+
 All code is shared and all datasets are publicly available.
+
+Use the search bar to look for specific functions, packages or other keywords. 
 
 ```{r create_pages, echo=FALSE, results='asis'}
 
