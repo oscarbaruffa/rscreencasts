@@ -14,7 +14,7 @@ Timestamps by: Alex Cookson
 [View code](https://github.com/dgrtwo/data-screencasts/blob/master/french-trains.Rmd)
 
 ## Full screencast
-<iframe width="560" height="315" src="https://www.youtube.com/embed/bmaigtpKyiM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe class="video" src="https://www.youtube.com/embed/bmaigtpKyiM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Timestamps
 
@@ -28,7 +28,7 @@ NA
 
 
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/bmaigtpKyiM?start=620" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe class="video" src="https://www.youtube.com/embed/bmaigtpKyiM?start=620" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ### 0:14:25
 
@@ -40,7 +40,7 @@ NA
 
 
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/bmaigtpKyiM?start=865" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe class="video" src="https://www.youtube.com/embed/bmaigtpKyiM?start=865" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ### 0:15:30
 
@@ -52,7 +52,7 @@ NA
 
 
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/bmaigtpKyiM?start=930" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe class="video" src="https://www.youtube.com/embed/bmaigtpKyiM?start=930" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ### 0:16:30
 
@@ -64,7 +64,7 @@ NA
 
 
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/bmaigtpKyiM?start=990" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe class="video" src="https://www.youtube.com/embed/bmaigtpKyiM?start=990" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ### 0:17:45
 
@@ -76,7 +76,7 @@ NA
 
 
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/bmaigtpKyiM?start=1065" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe class="video" src="https://www.youtube.com/embed/bmaigtpKyiM?start=1065" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ### 0:18:45
 
@@ -88,7 +88,7 @@ NA
 
 
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/bmaigtpKyiM?start=1125" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe class="video" src="https://www.youtube.com/embed/bmaigtpKyiM?start=1125" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ### 0:26:00
 
@@ -100,7 +100,7 @@ NA
 
 
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/bmaigtpKyiM?start=1560" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe class="video" src="https://www.youtube.com/embed/bmaigtpKyiM?start=1560" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ### 0:28:40
 
@@ -112,7 +112,7 @@ NA
 
 
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/bmaigtpKyiM?start=1720" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe class="video" src="https://www.youtube.com/embed/bmaigtpKyiM?start=1720" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ### 0:34:50
 
@@ -124,7 +124,7 @@ NA
 
 
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/bmaigtpKyiM?start=2090" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe class="video" src="https://www.youtube.com/embed/bmaigtpKyiM?start=2090" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ### 0:39:35
 
@@ -136,7 +136,7 @@ NA
 
 
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/bmaigtpKyiM?start=2375" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe class="video" src="https://www.youtube.com/embed/bmaigtpKyiM?start=2375" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ### 0:45:05
 
@@ -148,7 +148,7 @@ NA
 
 
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/bmaigtpKyiM?start=2705" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe class="video" src="https://www.youtube.com/embed/bmaigtpKyiM?start=2705" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ### 0:50:35
 
@@ -160,7 +160,7 @@ NA
 
 
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/bmaigtpKyiM?start=3035" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe class="video" src="https://www.youtube.com/embed/bmaigtpKyiM?start=3035" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ### 0:51:40
 
@@ -172,7 +172,7 @@ NA
 
 
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/bmaigtpKyiM?start=3100" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe class="video" src="https://www.youtube.com/embed/bmaigtpKyiM?start=3100" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ### 0:52:20
 
@@ -184,7 +184,7 @@ NA
 
 
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/bmaigtpKyiM?start=3140" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe class="video" src="https://www.youtube.com/embed/bmaigtpKyiM?start=3140" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ### 0:53:30
 
@@ -196,5 +196,5 @@ NA
 
 
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/bmaigtpKyiM?start=3210" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe class="video" src="https://www.youtube.com/embed/bmaigtpKyiM?start=3210" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 

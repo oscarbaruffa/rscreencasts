@@ -14,7 +14,7 @@ Timestamps by: Eric Fletcher
 [View code](https://github.com/dgrtwo/data-screencasts/blob/master/caribou-locations.Rmd)
 
 ## Full screencast
-<iframe width="560" height="315" src="https://www.youtube.com/embed/7G7SVODhVo4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe class="video" src="https://www.youtube.com/embed/7G7SVODhVo4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Timestamps
 
@@ -28,7 +28,7 @@ dplyr
 
 
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/7G7SVODhVo4?start=240" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe class="video" src="https://www.youtube.com/embed/7G7SVODhVo4?start=240" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ### 0:9:00
 
@@ -40,7 +40,7 @@ ggplot2
 
 
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/7G7SVODhVo4?start=540" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe class="video" src="https://www.youtube.com/embed/7G7SVODhVo4?start=540" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ### 0:13:50
 
@@ -52,7 +52,7 @@ sf
 
 
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/7G7SVODhVo4?start=830" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe class="video" src="https://www.youtube.com/embed/7G7SVODhVo4?start=830" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ### 0:25:00
 
@@ -64,7 +64,7 @@ base
 
 
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/7G7SVODhVo4?start=1500" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe class="video" src="https://www.youtube.com/embed/7G7SVODhVo4?start=1500" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ### 0:27:15
 
@@ -76,7 +76,7 @@ base | ggplot2
 
 
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/7G7SVODhVo4?start=1635" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe class="video" src="https://www.youtube.com/embed/7G7SVODhVo4?start=1635" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ### 0:35:15
 
@@ -88,7 +88,7 @@ base | lubridate
 
 
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/7G7SVODhVo4?start=2115" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe class="video" src="https://www.youtube.com/embed/7G7SVODhVo4?start=2115" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ### 0:37:15
 
@@ -100,7 +100,7 @@ base
 
 
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/7G7SVODhVo4?start=2235" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe class="video" src="https://www.youtube.com/embed/7G7SVODhVo4?start=2235" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ### 0:43:05
 
@@ -112,7 +112,7 @@ geosphere
 
 
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/7G7SVODhVo4?start=2585" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe class="video" src="https://www.youtube.com/embed/7G7SVODhVo4?start=2585" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ### 1:00:00
 
@@ -124,5 +124,5 @@ NA
 
 
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/7G7SVODhVo4?start=3600" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe class="video" src="https://www.youtube.com/embed/7G7SVODhVo4?start=3600" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
