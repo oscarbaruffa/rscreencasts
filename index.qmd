@@ -39,13 +39,6 @@ timestamps_data <- timestamps_data_google %>%
   clean_names()
 
 
-
-embed_pix_w <- 560
-embed_pix_h <- 315
-
-embed_pix_w_small <- embed_pix_w * 1
-embed_pix_h_small <- embed_pix_h * 1
-
 ```
 
 If you're looking for real-world examples of live data analyses, you've come to the right place.
@@ -99,7 +92,7 @@ Timestamps by: ',as.character(screencasts_data[entry_screencast, "contributor"])
 [View code](',as.character(screencasts_data[entry_screencast, "browse_r_code_url"]),')','
 
 ## Full screencast
-<iframe width="',embed_pix_w,'" height="',embed_pix_h,'" src="https://www.youtube.com/embed/', as.character(screencasts_data[entry_screencast, "vid_key"]),'" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe class="video" src="https://www.youtube.com/embed/', as.character(screencasts_data[entry_screencast, "vid_key"]),'" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Timestamps\n')
 
@@ -118,7 +111,7 @@ as.character(timestamps_entries[entry_timestamp, "functions"]),'\n\n',
 
 as.character(timestamps_entries[entry_timestamp, "packages"]),'\n\n','
 
-<iframe width="',embed_pix_w_small,'" height="',embed_pix_h_small,'" src="https://www.youtube.com/embed/', as.character(screencasts_data[entry_screencast, "vid_key"]),'?start=',as.character(timestamps_entries[entry_timestamp, "timestamp_sec"]),'" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>\n')
+<iframe class="video" src="https://www.youtube.com/embed/', as.character(screencasts_data[entry_screencast, "vid_key"]),'?start=',as.character(timestamps_entries[entry_timestamp, "timestamp_sec"]),'" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>\n')
 
 }
 fileConn<-file(paste0("content_pages/",as.character(screencasts_data[entry_screencast, "screencast"]),".qmd"))
