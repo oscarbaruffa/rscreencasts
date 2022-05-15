@@ -3,9 +3,9 @@ project:
 
 website:
   title: "R Screencasts"
-  favicon: /images/favicon-32x32.png
+  favicon: images/favicon-32x32.png
   opengraph: 
-    image: /images/rscreencasts_social.png
+    image: images/rscreencasts_social.png
   navbar:
     background: primary
     left:
