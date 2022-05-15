@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-0.9.388">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="dcterms.date" content="2018-11-21">
+<meta name="description" content="Survey data, Network graphing">
+
+<title>R Screencasts - Thanksgiving Dinner</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+span.underline{text-decoration: underline;}
+div.column{display: inline-block; vertical-align: top; width: 50%;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+</style>
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<link href="..//images/favicon-32x32.png" rel="icon" type="image/png">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link id="quarto-text-highlighting-styles" href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+<script defer="" data-domain="rscreencasts.com" src="https://plausible.io/js/script.outbound-links.js"></script>
+
+
+
+<link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">R Screencasts</span>
+  </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../index.html">Home</a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../resources.html">Resources</a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../about.html">About</a>
+  </li>  
+</ul>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#full-screencast" id="toc-full-screencast" class="nav-link active" data-scroll-target="#full-screencast">Full screencast</a></li>
+  <li><a href="#timestamps" id="toc-timestamps" class="nav-link" data-scroll-target="#timestamps">Timestamps</a>
+  <ul class="collapse">
+  <li><a href="#section" id="toc-section" class="nav-link" data-scroll-target="#section">0:4:10</a></li>
+  <li><a href="#section-1" id="toc-section-1" class="nav-link" data-scroll-target="#section-1">0:7:40</a></li>
+  <li><a href="#section-2" id="toc-section-2" class="nav-link" data-scroll-target="#section-2">0:11:25</a></li>
+  <li><a href="#section-3" id="toc-section-3" class="nav-link" data-scroll-target="#section-3">0:13:05</a></li>
+  <li><a href="#section-4" id="toc-section-4" class="nav-link" data-scroll-target="#section-4">0:14:00</a></li>
+  <li><a href="#section-5" id="toc-section-5" class="nav-link" data-scroll-target="#section-5">0:14:30</a></li>
+  <li><a href="#section-6" id="toc-section-6" class="nav-link" data-scroll-target="#section-6">0:16:50</a></li>
+  <li><a href="#section-7" id="toc-section-7" class="nav-link" data-scroll-target="#section-7">0:17:55</a></li>
+  <li><a href="#section-8" id="toc-section-8" class="nav-link" data-scroll-target="#section-8">0:18:30</a></li>
+  <li><a href="#section-9" id="toc-section-9" class="nav-link" data-scroll-target="#section-9">0:21:55</a></li>
+  <li><a href="#section-10" id="toc-section-10" class="nav-link" data-scroll-target="#section-10">0:22:55</a></li>
+  <li><a href="#section-11" id="toc-section-11" class="nav-link" data-scroll-target="#section-11">0:23:45</a></li>
+  <li><a href="#section-12" id="toc-section-12" class="nav-link" data-scroll-target="#section-12">0:27:00</a></li>
+  <li><a href="#section-13" id="toc-section-13" class="nav-link" data-scroll-target="#section-13">0:28:00</a></li>
+  <li><a href="#section-14" id="toc-section-14" class="nav-link" data-scroll-target="#section-14">0:28:45</a></li>
+  <li><a href="#section-15" id="toc-section-15" class="nav-link" data-scroll-target="#section-15">0:30:25</a></li>
+  <li><a href="#section-16" id="toc-section-16" class="nav-link" data-scroll-target="#section-16">0:32:50</a></li>
+  <li><a href="#section-17" id="toc-section-17" class="nav-link" data-scroll-target="#section-17">0:35:35</a></li>
+  <li><a href="#section-18" id="toc-section-18" class="nav-link" data-scroll-target="#section-18">0:36:15</a></li>
+  <li><a href="#section-19" id="toc-section-19" class="nav-link" data-scroll-target="#section-19">0:40:35</a></li>
+  <li><a href="#section-20" id="toc-section-20" class="nav-link" data-scroll-target="#section-20">0:42:30</a></li>
+  <li><a href="#section-21" id="toc-section-21" class="nav-link" data-scroll-target="#section-21">0:45:30</a></li>
+  <li><a href="#section-22" id="toc-section-22" class="nav-link" data-scroll-target="#section-22">0:46:20</a></li>
+  <li><a href="#section-23" id="toc-section-23" class="nav-link" data-scroll-target="#section-23">0:49:05</a></li>
+  <li><a href="#section-24" id="toc-section-24" class="nav-link" data-scroll-target="#section-24">0:51:40</a></li>
+  <li><a href="#section-25" id="toc-section-25" class="nav-link" data-scroll-target="#section-25">0:53:00</a></li>
+  <li><a href="#section-26" id="toc-section-26" class="nav-link" data-scroll-target="#section-26">0:53:25</a></li>
+  <li><a href="#section-27" id="toc-section-27" class="nav-link" data-scroll-target="#section-27">0:55:05</a></li>
+  <li><a href="#section-28" id="toc-section-28" class="nav-link" data-scroll-target="#section-28">0:57:45</a></li>
+  <li><a href="#section-29" id="toc-section-29" class="nav-link" data-scroll-target="#section-29">0:58:55</a></li>
+  <li><a href="#section-30" id="toc-section-30" class="nav-link" data-scroll-target="#section-30">1:00:05</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Thanksgiving Dinner</h1>
+</div>
+
+<div>
+  <div class="description">
+    Survey data, Network graphing
+  </div>
+</div>
+
+
+
+
+<div class="quarto-title-meta">
+
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">November 21, 2018</p>
+    </div>
+  </div>
+    
+  </div>
+  
+
+</header>
+
+<p>Notable topics: Survey data, Network graphing</p>
+<p>Recorded on: 2018-11-21</p>
+<p>Timestamps by: Alex Cookson</p>
+<p><a href="https://github.com/dgrtwo/data-screencasts/blob/master/thanksgiving.Rmd">View code</a></p>
+<section id="full-screencast" class="level2">
+<h2 class="anchored" data-anchor-id="full-screencast">Full screencast</h2>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/rxJZT0duwfU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
+</iframe>
+</section>
+<section id="timestamps" class="level2">
+<h2 class="anchored" data-anchor-id="timestamps">Timestamps</h2>
+<section id="section" class="level3">
+<h3 class="anchored" data-anchor-id="section">0:4:10</h3>
+<p>Exploratory bar chart of age distribution (and gender) of survey respondents</p>
+<p>NA</p>
+<p>NA</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/rxJZT0duwfU?start=250" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
+</iframe>
+</section>
+<section id="section-1" class="level3">
+<h3 class="anchored" data-anchor-id="section-1">0:7:40</h3>
+<p>Using count function on multiple columns to get detailed counts</p>
+<p>NA</p>
+<p>NA</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/rxJZT0duwfU?start=460" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
+</iframe>
+</section>
+<section id="section-2" class="level3">
+<h3 class="anchored" data-anchor-id="section-2">0:11:25</h3>
+<p>Parsing numbers from text using parse_number function, then using those numbers to re-level an ordinal factor (income bands)</p>
+<p>NA</p>
+<p>NA</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/rxJZT0duwfU?start=685" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
+</iframe>
+</section>
+<section id="section-3" class="level3">
+<h3 class="anchored" data-anchor-id="section-3">0:13:05</h3>
+<p>Exploring relationship between income and using homemade (vs.&nbsp;canned) cranberry sauce</p>
+<p>NA</p>
+<p>NA</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/rxJZT0duwfU?start=785" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
+</iframe>
+</section>
+<section id="section-4" class="level3">
+<h3 class="anchored" data-anchor-id="section-4">0:14:00</h3>
+<p>Adding group = 1 argument to the aes function to properly display a line chart</p>
+<p>NA</p>
+<p>NA</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/rxJZT0duwfU?start=840" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
+</iframe>
+</section>
+<section id="section-5" class="level3">
+<h3 class="anchored" data-anchor-id="section-5">0:14:30</h3>
+<p>Rotating text for axis labels that overlap</p>
+<p>NA</p>
+<p>NA</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/rxJZT0duwfU?start=870" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
+</iframe>
+</section>
+<section id="section-6" class="level3">
+<h3 class="anchored" data-anchor-id="section-6">0:16:50</h3>
+<p>Getting confidence intervals for proportions using Jeffreys interval (using beta distribution with an uniformative prior)</p>
+<p>qbeta</p>
+<p>NA</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/rxJZT0duwfU?start=1010" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
+</iframe>
+</section>
+<section id="section-7" class="level3">
+<h3 class="anchored" data-anchor-id="section-7">0:17:55</h3>
+<p>Explanation of Clopper-Pearson approach as alternative to Jeffreys interval</p>
+<p>NA</p>
+<p>NA</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/rxJZT0duwfU?start=1075" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
+</iframe>
+</section>
+<section id="section-8" class="level3">
+<h3 class="anchored" data-anchor-id="section-8">0:18:30</h3>
+<p>Using geom_ribbon function add shaded region to line chart that shows confidence intervals</p>
+<p>geom_ribbon</p>
+<p>NA</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/rxJZT0duwfU?start=1110" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
+</iframe>
+</section>
+<section id="section-9" class="level3">
+<h3 class="anchored" data-anchor-id="section-9">0:21:55</h3>
+<p>Using starts_with function to select fields with names that start with a certain string (e.g., using “pie” selects “pie1” and “pie2”)</p>
+<p>starts_with</p>
+<p>NA</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/rxJZT0duwfU?start=1315" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
+</iframe>
+</section>
+<section id="section-10" class="level3">
+<h3 class="anchored" data-anchor-id="section-10">0:22:55</h3>
+<p>Using gather function to get wide-format data to tidy (tall) format</p>
+<p>gather</p>
+<p>NA</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/rxJZT0duwfU?start=1375" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
+</iframe>
+</section>
+<section id="section-11" class="level3">
+<h3 class="anchored" data-anchor-id="section-11">0:23:45</h3>
+<p>Using str_remove and regex to remove digits from field values (e.g., “dessert1” and “dessert2” get turned into “dessert”)</p>
+<p>str_remove</p>
+<p>NA</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/rxJZT0duwfU?start=1425" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
+</iframe>
+</section>
+<section id="section-12" class="level3">
+<h3 class="anchored" data-anchor-id="section-12">0:27:00</h3>
+<p>“What are people eating?” Graphing pies, sides, and desserts</p>
+<p>NA</p>
+<p>NA</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/rxJZT0duwfU?start=1620" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
+</iframe>
+</section>
+<section id="section-13" class="level3">
+<h3 class="anchored" data-anchor-id="section-13">0:28:00</h3>
+<p>Using fct_reorder function to reorder foods based on how popular they are</p>
+<p>fct_reorder</p>
+<p>NA</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/rxJZT0duwfU?start=1680" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
+</iframe>
+</section>
+<section id="section-14" class="level3">
+<h3 class="anchored" data-anchor-id="section-14">0:28:45</h3>
+<p>Using n_distinct function count the number of unique respondents</p>
+<p>n_distinct</p>
+<p>NA</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/rxJZT0duwfU?start=1725" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
+</iframe>
+</section>
+<section id="section-15" class="level3">
+<h3 class="anchored" data-anchor-id="section-15">0:30:25</h3>
+<p>Using facet_wrap function to facet food types into their own graphs</p>
+<p>NA</p>
+<p>NA</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/rxJZT0duwfU?start=1825" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
+</iframe>
+</section>
+<section id="section-16" class="level3">
+<h3 class="anchored" data-anchor-id="section-16">0:32:50</h3>
+<p>Using parse_number function to convert age ranges as character string into a numeric field</p>
+<p>parse_number</p>
+<p>NA</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/rxJZT0duwfU?start=1970" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
+</iframe>
+</section>
+<section id="section-17" class="level3">
+<h3 class="anchored" data-anchor-id="section-17">0:35:35</h3>
+<p>Exploring relationship between US region and food types</p>
+<p>NA</p>
+<p>NA</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/rxJZT0duwfU?start=2135" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
+</iframe>
+</section>
+<section id="section-18" class="level3">
+<h3 class="anchored" data-anchor-id="section-18">0:36:15</h3>
+<p>Using group_by, then mutate, then count to calculate a complicated summary</p>
+<p>NA</p>
+<p>NA</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/rxJZT0duwfU?start=2175" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
+</iframe>
+</section>
+<section id="section-19" class="level3">
+<h3 class="anchored" data-anchor-id="section-19">0:40:35</h3>
+<p>Exploring relationship between praying at Thanksgiving (yes/no) and food types</p>
+<p>NA</p>
+<p>NA</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/rxJZT0duwfU?start=2435" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
+</iframe>
+</section>
+<section id="section-20" class="level3">
+<h3 class="anchored" data-anchor-id="section-20">0:42:30</h3>
+<p>Empirical Bayes binomial estimation for calculating binomial confidence intervals (see Dave’s book on Empirical Bayes)</p>
+<p>add_ebb_estimate</p>
+<p>ebbr</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/rxJZT0duwfU?start=2550" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
+</iframe>
+</section>
+<section id="section-21" class="level3">
+<h3 class="anchored" data-anchor-id="section-21">0:45:30</h3>
+<p>Asking, “What sides/desserts/pies are eaten together?”</p>
+<p>NA</p>
+<p>NA</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/rxJZT0duwfU?start=2730" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
+</iframe>
+</section>
+<section id="section-22" class="level3">
+<h3 class="anchored" data-anchor-id="section-22">0:46:20</h3>
+<p>Calculating pairwise correlation of food types</p>
+<p>pairwise_cor</p>
+<p>widyr</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/rxJZT0duwfU?start=2780" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
+</iframe>
+</section>
+<section id="section-23" class="level3">
+<h3 class="anchored" data-anchor-id="section-23">0:49:05</h3>
+<p>Network graph of pairwise correlation</p>
+<p>NA</p>
+<p>ggraph | igraph</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/rxJZT0duwfU?start=2945" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
+</iframe>
+</section>
+<section id="section-24" class="level3">
+<h3 class="anchored" data-anchor-id="section-24">0:51:40</h3>
+<p>Adding text labels to nodes using geom_node_text function</p>
+<p>geom_node_text</p>
+<p>ggraph | igraph</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/rxJZT0duwfU?start=3100" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
+</iframe>
+</section>
+<section id="section-25" class="level3">
+<h3 class="anchored" data-anchor-id="section-25">0:53:00</h3>
+<p>Getting rid of unnecessary graph elements (e.g., axes, gridlines) with theme_void function</p>
+<p>theme_void</p>
+<p>NA</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/rxJZT0duwfU?start=3180" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
+</iframe>
+</section>
+<section id="section-26" class="level3">
+<h3 class="anchored" data-anchor-id="section-26">0:53:25</h3>
+<p>Explanation of network graph relationships</p>
+<p>NA</p>
+<p>NA</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/rxJZT0duwfU?start=3205" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
+</iframe>
+</section>
+<section id="section-27" class="level3">
+<h3 class="anchored" data-anchor-id="section-27">0:55:05</h3>
+<p>Adding dimension to network graph (node colour) to represent the type of food</p>
+<p>NA</p>
+<p>NA</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/rxJZT0duwfU?start=3305" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
+</iframe>
+</section>
+<section id="section-28" class="level3">
+<h3 class="anchored" data-anchor-id="section-28">0:57:45</h3>
+<p>Fixing overlapping text labels using the geom_node_text function’s repel argument</p>
+<p>geom_node_text</p>
+<p>ggraph | igraph</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/rxJZT0duwfU?start=3465" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
+</iframe>
+</section>
+<section id="section-29" class="level3">
+<h3 class="anchored" data-anchor-id="section-29">0:58:55</h3>
+<p>Tweaking display of percentage legend to be in more readable format (e.g., “40%” instead of “0.4”)</p>
+<p>NA</p>
+<p>scales</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/rxJZT0duwfU?start=3535" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
+</iframe>
+</section>
+<section id="section-30" class="level3">
+<h3 class="anchored" data-anchor-id="section-30">1:00:05</h3>
+<p>Summary of screencast</p>
+<p>NA</p>
+<p>NA</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/rxJZT0duwfU?start=3605" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
+</iframe>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    setTimeout(function() {
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      let href = ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+});
+</script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+      <div class="nav-footer-center">Vids by <a href="https://twitter.com/drob">David Robinson</a>. Timestamps &amp; rich content by <a href="https://twitter.com/alexcookson">Alex Cookson</a> and <a href="https://twitter.com/iamericfletcher">Eric Fletcher</a>. Website by <a href="https://twitter.com/OscarBaruffa">Oscar Baruffa</a>, sign up to my <a href="https://oscarbaruffa.com/newsletter/">newsletter</a> for R, data and careers</div>
+  </div>
+</footer>
+
+
+
+</body></html>
