@@ -57,6 +57,18 @@ ul.task-list{list-style: none;}
 }</script>
 <script defer="" data-domain="rscreencasts.com" src="https://plausible.io/js/script.outbound-links.js"></script>
 
+<meta property="og:title" content="R Screencasts - Volcano Eruptions">
+<meta property="og:description" content="Awesome data analysis screencasts from a top Data Scientist">
+<meta property="og:image" content="https://www.rscreencasts.com/images/rscreencasts_social.png">
+<meta property="og:url" content="https://www.rscreencasts.com/">
+<meta property="og:site_name" content="R Screencasts">
+
+<meta name="twitter:title" content="R Screencasts - Volcano Eruptions">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image:alt" content="Awesome data analysis screencasts from a top Data Scientist">
+<meta name="twitter:site" content="@oscarbaruffa">
+<meta name="twitter:description" content="Awesome data analysis screencasts from a top Data Scientists">
+<meta name="twitter:image" content="https://www.rscreencasts.com/images/rscreencasts_social.png">
 
 
 <link rel="stylesheet" href="../styles.css">
@@ -164,7 +176,7 @@ ul.task-list{list-style: none;}
 <p><a href="https://github.com/dgrtwo/data-screencasts/blob/master/volcano-eruptions.Rmd">View code</a></p>
 <section id="full-screencast" class="level2">
 <h2 class="anchored" data-anchor-id="full-screencast">Full screencast</h2>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/pZINGjQ86Hc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
+<iframe class="video" src="https://www.youtube.com/embed/pZINGjQ86Hc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
 </iframe>
 </section>
 <section id="timestamps" class="level2">
@@ -174,7 +186,7 @@ ul.task-list{list-style: none;}
 <p>Change the <code>last_eruption_year</code> into <code>years_ago</code> by using <code>mutate</code> from the <code>dplyr</code> package with <code>years_ago = 2020 - as.numeric(last_eruption_year))</code>. In the plot David includes <code>+1</code> to account for 0 values in the <code>years_ago</code> variable.</p>
 <p>mutate</p>
 <p>dplyr</p>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/pZINGjQ86Hc?start=420" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
+<iframe class="video" src="https://www.youtube.com/embed/pZINGjQ86Hc?start=420" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
 </iframe>
 </section>
 <section id="section-1" class="level3">
@@ -182,7 +194,7 @@ ul.task-list{list-style: none;}
 <p>Use <code>str_detect</code> from the <code>stringr</code> package to search the <code>volcano_name</code> variable for <code>Vesuvius</code> when not sure if spelling is correct.</p>
 <p>str_detect</p>
 <p>stringr</p>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/pZINGjQ86Hc?start=590" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
+<iframe class="video" src="https://www.youtube.com/embed/pZINGjQ86Hc?start=590" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
 </iframe>
 </section>
 <section id="section-2" class="level3">
@@ -190,7 +202,7 @@ ul.task-list{list-style: none;}
 <p>Use the <code>longitude</code> and <code>latitude</code> to create a world map showing where the volcanoes are located.</p>
 <p>grom_point | theme_map | borders</p>
 <p>ggplot2 | ggthemes</p>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/pZINGjQ86Hc?start=770" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
+<iframe class="video" src="https://www.youtube.com/embed/pZINGjQ86Hc?start=770" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
 </iframe>
 </section>
 <section id="section-3" class="level3">
@@ -198,7 +210,7 @@ ul.task-list{list-style: none;}
 <p>Use <code>fct_lump</code> from the<code>forcats</code> package to lump together all <code>primary_volcano_type</code> factor levels except for the <code>n</code> most frequent.</p>
 <p>fct_lump</p>
 <p>forcats</p>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/pZINGjQ86Hc?start=930" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
+<iframe class="video" src="https://www.youtube.com/embed/pZINGjQ86Hc?start=930" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
 </iframe>
 </section>
 <section id="section-4" class="level3">
@@ -206,7 +218,7 @@ ul.task-list{list-style: none;}
 <p>Use <code>str_remove</code> from the <code>stringr</code> package with the regular expression <code>"\\(.\\)"</code> to remove the parentheses.</p>
 <p>str_remove</p>
 <p>stringr</p>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/pZINGjQ86Hc?start=985" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
+<iframe class="video" src="https://www.youtube.com/embed/pZINGjQ86Hc?start=985" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
 </iframe>
 </section>
 <section id="section-5" class="level3">
@@ -214,7 +226,7 @@ ul.task-list{list-style: none;}
 <p>Use the <code>leaflet</code> package to create an interactive map with popup information about each volcano.</p>
 <p>leaflet | addTiles | addCircleMarkers</p>
 <p>leaflet</p>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/pZINGjQ86Hc?start=1110" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
+<iframe class="video" src="https://www.youtube.com/embed/pZINGjQ86Hc?start=1110" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
 </iframe>
 </section>
 <section id="section-6" class="level3">
@@ -222,7 +234,7 @@ ul.task-list{list-style: none;}
 <p>Use <code>glue</code> from the <code>glue</code> package to create an <code>HTML</code> string by concatenating <code>volcano_name</code> and <code>primary_volcano_type</code> between <code>HTML &lt;p&gt;&lt;/p&gt; tags</code>.</p>
 <p>glue</p>
 <p>glue</p>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/pZINGjQ86Hc?start=1450" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
+<iframe class="video" src="https://www.youtube.com/embed/pZINGjQ86Hc?start=1450" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
 </iframe>
 </section>
 <section id="section-7" class="level3">
@@ -230,7 +242,7 @@ ul.task-list{list-style: none;}
 <p>Use the <code>DT</code> package to turn the <code>leaflet</code> popup information into a <code>datatable</code>.</p>
 <p>gather | nest | map</p>
 <p>DT</p>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/pZINGjQ86Hc?start=1635" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
+<iframe class="video" src="https://www.youtube.com/embed/pZINGjQ86Hc?start=1635" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
 </iframe>
 </section>
 <section id="section-8" class="level3">
@@ -238,7 +250,7 @@ ul.task-list{list-style: none;}
 <p>Use <code>str_replace_all</code> fromt he <code>stringr</code> package to replace all the underscores <code>_</code> in <code>volcano_name</code> with space. Then use <code>str_to_title</code> from the <code>stringr</code> package to convert the <code>volcano_name</code> variable to title case.</p>
 <p>str_replace | str_to_title</p>
 <p>stringr</p>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/pZINGjQ86Hc?start=1900" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
+<iframe class="video" src="https://www.youtube.com/embed/pZINGjQ86Hc?start=1900" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
 </iframe>
 </section>
 <section id="section-9" class="level3">
@@ -246,7 +258,7 @@ ul.task-list{list-style: none;}
 <p>Use <code>kable</code> with <code>format = HTML</code> from the <code>knitr</code> package instead of <code>DT</code> to make turning the data into <code>HTML</code> much easier.</p>
 <p>kable</p>
 <p>knitr</p>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/pZINGjQ86Hc?start=1925" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
+<iframe class="video" src="https://www.youtube.com/embed/pZINGjQ86Hc?start=1925" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
 </iframe>
 </section>
 <section id="section-10" class="level3">
@@ -254,7 +266,7 @@ ul.task-list{list-style: none;}
 <p>Use <code>paste0</code> from <code>base</code> R to bold the <code>Volcano Name</code>, <code>Primary Volcano Type</code>, and <code>Last Eruption Year</code> in the <code>leaflet</code> popup.</p>
 <p>paste0</p>
 <p>base</p>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/pZINGjQ86Hc?start=2045" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
+<iframe class="video" src="https://www.youtube.com/embed/pZINGjQ86Hc?start=2045" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
 </iframe>
 </section>
 <section id="section-11" class="level3">
@@ -262,7 +274,7 @@ ul.task-list{list-style: none;}
 <p>Use <code>replace_na</code> from the <code>tidyr</code> package to replace <code>unknown</code> with <code>NA</code>.</p>
 <p>replace_na</p>
 <p>tidyr</p>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/pZINGjQ86Hc?start=2090" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
+<iframe class="video" src="https://www.youtube.com/embed/pZINGjQ86Hc?start=2090" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
 </iframe>
 </section>
 <section id="section-12" class="level3">
@@ -270,7 +282,7 @@ ul.task-list{list-style: none;}
 <p>Use <code>addMeasure</code> from the <code>leaflet</code> package to add a tool to the map that allows for the measuring of distance between points.</p>
 <p>addMeasure</p>
 <p>leaflet</p>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/pZINGjQ86Hc?start=2235" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
+<iframe class="video" src="https://www.youtube.com/embed/pZINGjQ86Hc?start=2235" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
 </iframe>
 </section>
 <section id="section-13" class="level3">
@@ -278,7 +290,7 @@ ul.task-list{list-style: none;}
 <p>Use <code>colorNumeric</code> from the <code>leaflet</code> package to color the points based on their <code>population within 5km</code>. To accomplish this, David creates 2 new variables: 1) <code>transformed_pop</code> to get the population on a <code>log2</code> scale &amp; 2) <code>pop_color</code> which uses the <code>colorNumeric</code> function to generate the color hex values based on <code>transformed_pop</code>.</p>
 <p>colorNumeric</p>
 <p>leaflet</p>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/pZINGjQ86Hc?start=2370" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
+<iframe class="video" src="https://www.youtube.com/embed/pZINGjQ86Hc?start=2370" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
 </iframe>
 </section>
 <section id="section-14" class="level3">
@@ -286,7 +298,7 @@ ul.task-list{list-style: none;}
 <p>Use the <code>gganimate</code> package to create an animated map.</p>
 <p>transition_time | frame_time</p>
 <p>gganimate</p>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/pZINGjQ86Hc?start=2790" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
+<iframe class="video" src="https://www.youtube.com/embed/pZINGjQ86Hc?start=2790" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
 </iframe>
 </section>
 <section id="section-15" class="level3">
@@ -294,7 +306,7 @@ ul.task-list{list-style: none;}
 <p>Use <code>geom_point</code> from the <code>ggplot2</code> package with <code>size = .00001 * 10 ^ vei</code> so the size of the points are then proportional to the <code>volume</code> metrics provided in the <code>Volcano Eruption Index</code>. The metrics are in <code>Km^3</code>.</p>
 <p>geom_point</p>
 <p>ggplot2</p>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/pZINGjQ86Hc?start=2925" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
+<iframe class="video" src="https://www.youtube.com/embed/pZINGjQ86Hc?start=2925" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
 </iframe>
 </section>
 <section id="section-16" class="level3">
@@ -302,7 +314,7 @@ ul.task-list{list-style: none;}
 <p>Use <code>scale_size_continuous</code> from the <code>ggplot2</code> package with <code>range = c(.1, 6)</code> to make the smaller points smaller and larger points larger.</p>
 <p>scale_size_continuous</p>
 <p>ggplot2</p>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/pZINGjQ86Hc?start=3020" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
+<iframe class="video" src="https://www.youtube.com/embed/pZINGjQ86Hc?start=3020" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
 </iframe>
 </section>
 <section id="section-17" class="level3">
@@ -310,7 +322,7 @@ ul.task-list{list-style: none;}
 <p>Use <code>scale_color_gradient2</code> from the <code>ggplot2</code> package to apply color gradient to each point based on the volcano size and whether its low or high.</p>
 <p>scale_color_gradient2</p>
 <p>ggplot2</p>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/pZINGjQ86Hc?start=3055" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
+<iframe class="video" src="https://www.youtube.com/embed/pZINGjQ86Hc?start=3055" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
 </iframe>
 </section>
 <section id="section-18" class="level3">
@@ -319,7 +331,7 @@ ul.task-list{list-style: none;}
 <p>Also, brief discussion on using <code>transition_reveal</code> instead of <code>transition_time</code> to keep the point on the map instead of replacing them in each frame.</p>
 <p>transition_reveal</p>
 <p>gganimate</p>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/pZINGjQ86Hc?start=3580" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
+<iframe class="video" src="https://www.youtube.com/embed/pZINGjQ86Hc?start=3580" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
 </iframe>
 
 

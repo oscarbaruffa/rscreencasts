@@ -57,6 +57,18 @@ ul.task-list{list-style: none;}
 }</script>
 <script defer="" data-domain="rscreencasts.com" src="https://plausible.io/js/script.outbound-links.js"></script>
 
+<meta property="og:title" content="R Screencasts - NCAA Women’s Basketball">
+<meta property="og:description" content="Awesome data analysis screencasts from a top Data Scientist">
+<meta property="og:image" content="https://www.rscreencasts.com/images/rscreencasts_social.png">
+<meta property="og:url" content="https://www.rscreencasts.com/">
+<meta property="og:site_name" content="R Screencasts">
+
+<meta name="twitter:title" content="R Screencasts - NCAA Women’s Basketball">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image:alt" content="Awesome data analysis screencasts from a top Data Scientist">
+<meta name="twitter:site" content="@oscarbaruffa">
+<meta name="twitter:description" content="Awesome data analysis screencasts from a top Data Scientists">
+<meta name="twitter:image" content="https://www.rscreencasts.com/images/rscreencasts_social.png">
 
 
 <link rel="stylesheet" href="../styles.css">
@@ -159,7 +171,7 @@ ul.task-list{list-style: none;}
 <p><a href="https://github.com/dgrtwo/data-screencasts/blob/master/2020_10_06_ncaa_womens_basketball.Rmd">View code</a></p>
 <section id="full-screencast" class="level2">
 <h2 class="anchored" data-anchor-id="full-screencast">Full screencast</h2>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/-RD8GNCNsCk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
+<iframe class="video" src="https://www.youtube.com/embed/-RD8GNCNsCk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
 </iframe>
 </section>
 <section id="timestamps" class="level2">
@@ -169,7 +181,7 @@ ul.task-list{list-style: none;}
 <p>Use <code>fct_relevel</code> from the <code>forcats</code> package to order the factor levels for the <code>tourney_finish</code> variable.</p>
 <p>fct_relevel</p>
 <p>forcats</p>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/-RD8GNCNsCk?start=900" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
+<iframe class="video" src="https://www.youtube.com/embed/-RD8GNCNsCk?start=900" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
 </iframe>
 </section>
 <section id="section-1" class="level3">
@@ -177,7 +189,7 @@ ul.task-list{list-style: none;}
 <p>Use <code>geom_tile</code> from the <code>ggplot2</code> package to create a <code>heatmap</code> to show how far a particular seed ends up going in the tournament.</p>
 <p>geom_tile | scale_fill_gradient2</p>
 <p>ggplot2</p>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/-RD8GNCNsCk?start=995" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
+<iframe class="video" src="https://www.youtube.com/embed/-RD8GNCNsCk?start=995" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
 </iframe>
 </section>
 <section id="section-2" class="level3">
@@ -185,7 +197,7 @@ ul.task-list{list-style: none;}
 <p>Use <code>scale_y_continuous</code> from the <code>ggplot2</code> package with <code>breaks = seq(1, 16)</code> in order to include all 16 seeds.</p>
 <p>scale_y_continuous</p>
 <p>ggplot2</p>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/-RD8GNCNsCk?start=1235" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
+<iframe class="video" src="https://www.youtube.com/embed/-RD8GNCNsCk?start=1235" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
 </iframe>
 </section>
 <section id="section-3" class="level3">
@@ -193,7 +205,7 @@ ul.task-list{list-style: none;}
 <p>Use <code>geom_text</code> from the <code>ggplot2</code> package with <code>label = percent(pct)</code> to apply the percentage to each tile in the heatmap.</p>
 <p>geom_text | scales</p>
 <p>ggplot2</p>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/-RD8GNCNsCk?start=1255" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
+<iframe class="video" src="https://www.youtube.com/embed/-RD8GNCNsCk?start=1255" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
 </iframe>
 </section>
 <section id="section-4" class="level3">
@@ -201,7 +213,7 @@ ul.task-list{list-style: none;}
 <p>Use <code>scale_x_discrete</code> and <code>scale_y_continuous</code> both with <code>expand = c(0, 0)</code> to remove the space between the x and y axis and the heatmap tiles. David calls this flattening.</p>
 <p>scale_x_discrete | scale_y_continuous</p>
 <p>ggplot2</p>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/-RD8GNCNsCk?start=1300" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
+<iframe class="video" src="https://www.youtube.com/embed/-RD8GNCNsCk?start=1300" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
 </iframe>
 </section>
 <section id="section-5" class="level3">
@@ -209,7 +221,7 @@ ul.task-list{list-style: none;}
 <p>Use <code>scale_y_reverse</code> to flip the order of the y-axis from 1-16 to 16-1.</p>
 <p>scale_y_reverse</p>
 <p>ggplot2</p>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/-RD8GNCNsCk?start=1935" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
+<iframe class="video" src="https://www.youtube.com/embed/-RD8GNCNsCk?start=1935" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
 </iframe>
 </section>
 <section id="section-6" class="level3">
@@ -217,7 +229,7 @@ ul.task-list{list-style: none;}
 <p>Use <code>cor</code> from the <code>stats</code> package to calculate the <code>correlation</code> between <code>seed</code> and <code>tourney_finish</code>. Then plotted to determine if there is a correlation over time.</p>
 <p>cor | geom_line</p>
 <p>stats | ggplot2</p>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/-RD8GNCNsCk?start=2085" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
+<iframe class="video" src="https://www.youtube.com/embed/-RD8GNCNsCk?start=2085" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
 </iframe>
 </section>
 <section id="section-7" class="level3">
@@ -225,7 +237,7 @@ ul.task-list{list-style: none;}
 <p>Use <code>geom_smooth</code> with <code>method = "loess"</code> to add a smoothing line with confidence bound to aid in seeing the trend between <code>seed</code> and <code>reg_percent</code>.</p>
 <p>geom_smooth</p>
 <p>ggplot2</p>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/-RD8GNCNsCk?start=2390" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
+<iframe class="video" src="https://www.youtube.com/embed/-RD8GNCNsCk?start=2390" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
 </iframe>
 </section>
 <section id="section-8" class="level3">
@@ -233,7 +245,7 @@ ul.task-list{list-style: none;}
 <p>Use <code>fct_lump</code> from the <code>forcats</code> package to lump together all the conference except for the <code>n</code> most frequent.</p>
 <p>fct_lump</p>
 <p>forcats</p>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/-RD8GNCNsCk?start=2530" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
+<iframe class="video" src="https://www.youtube.com/embed/-RD8GNCNsCk?start=2530" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
 </iframe>
 </section>
 <section id="section-9" class="level3">
@@ -241,7 +253,7 @@ ul.task-list{list-style: none;}
 <p>Use <code>geom_jitter</code> from the <code>ggplot2</code> package instead of <code>geom_boxplot</code> to avoid overplotting which makes it easier to visualize the points that make up the distribution of the <code>seed</code> variable.</p>
 <p>geom_jitter</p>
 <p>ggplot2</p>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/-RD8GNCNsCk?start=2575" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
+<iframe class="video" src="https://www.youtube.com/embed/-RD8GNCNsCk?start=2575" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
 </iframe>
 </section>
 <section id="section-10" class="level3">
@@ -249,7 +261,7 @@ ul.task-list{list-style: none;}
 <p>Use <code>geom_smooth</code> with <code>method = "lm"</code> to aid in seeing the trend between <code>reg_percent</code> and <code>tourney_w</code>.</p>
 <p>geom_smooth</p>
 <p>ggplot2</p>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/-RD8GNCNsCk?start=2825" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
+<iframe class="video" src="https://www.youtube.com/embed/-RD8GNCNsCk?start=2825" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
 </iframe>
 </section>
 <section id="section-11" class="level3">
@@ -257,7 +269,7 @@ ul.task-list{list-style: none;}
 <p>Create a <code>dot pipe function</code> using <code>.</code> and <code>%&gt;%</code> to avoid duplicating summary statistics with <code>summarize</code>.</p>
 <p>. | %&gt;%</p>
 <p>NA</p>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/-RD8GNCNsCk?start=3260" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
+<iframe class="video" src="https://www.youtube.com/embed/-RD8GNCNsCk?start=3260" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
 </iframe>
 </section>
 <section id="section-12" class="level3">
@@ -265,7 +277,7 @@ ul.task-list{list-style: none;}
 <p>Use <code>glue</code> from the <code>glue</code> package to concatenate together <code>school</code> and <code>n_entries</code> on the <code>geo_col</code> y-axis.</p>
 <p>glue</p>
 <p>glue</p>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/-RD8GNCNsCk?start=3395" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
+<iframe class="video" src="https://www.youtube.com/embed/-RD8GNCNsCk?start=3395" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
 </iframe>
 </section>
 <section id="section-13" class="level3">
@@ -273,7 +285,7 @@ ul.task-list{list-style: none;}
 <p>Summary of screencast.</p>
 <p>NA</p>
 <p>NA</p>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/-RD8GNCNsCk?start=3590" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
+<iframe class="video" src="https://www.youtube.com/embed/-RD8GNCNsCk?start=3590" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
 </iframe>
 
 
