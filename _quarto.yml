@@ -4,8 +4,6 @@ project:
 website:
   title: "R Screencasts"
   favicon: images/favicon-32x32.png
-  opengraph: 
-    image: images/rscreencasts_social.png
   navbar:
     background: primary
     left:
@@ -26,6 +24,7 @@ format:
   html:
     include-in-header: 
       - plausible-analytics.html
+      - social.html
     theme: flatly
     css: styles.css
     toc: true
