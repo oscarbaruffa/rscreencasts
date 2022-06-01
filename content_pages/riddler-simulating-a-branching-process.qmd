@@ -1,0 +1,24 @@
+---
+title: |
+  Riddler: Simulating a Branching Process
+description: |
+  Simulation, Probability distributions (Exponential and Geometric)
+date: 2020-04-12
+date-format: long
+---
+
+Notable topics: Simulation, Probability distributions (Exponential and Geometric)
+
+Recorded on: 2020-04-12
+
+Timestamps by: Alex Cookson
+
+[View code](https://github.com/dgrtwo/data-screencasts/blob/master/gdpr.Rmd)
+
+## Full screencast
+
+<iframe class="video" src="https://www.youtube.com/embed/QtThluGted0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+## Timestamps
+
+<script id="timestamps" type="application-json">[{"timestamp_with_hours":"0:0:35","description":"Explanation of a Poisson process","timestamp_sec":35},{"timestamp_with_hours":"0:2:40","description":"Asking \"How long do you have to wait for X to happen?\", which the Exponential distribution can answer","timestamp_sec":160},{"timestamp_with_hours":"0:4:20","description":"Using `rexp` function to generate numbers from the Exponential distribution","functions":"rexp","timestamp_sec":260},{"timestamp_with_hours":"0:5:25","description":"Using a vector of rates inside the `rexp` function (to explore consecutive waiting times)","functions":"rexp","timestamp_sec":325},{"timestamp_with_hours":"0:7:05","description":"Using `cumsum` function to calculate total waiting time until hitting a specific number in the Poisson process","timestamp_sec":425},{"timestamp_with_hours":"0:7:35","description":"Using `which` function to determine the first instance > 3 in a vector","functions":"which","timestamp_sec":455},{"timestamp_with_hours":"0:9:20","description":"Using `replicate` function to do a quick simulation of the function just written","functions":"replicate","timestamp_sec":560},{"timestamp_with_hours":"0:10:55","description":"Discussing methods of making the simulation function faster","timestamp_sec":655},{"timestamp_with_hours":"0:12:00","description":"Using `crossing` function to set up \"tidy\" simulation (gives you all possible combinations of values you provide it)","functions":"crossing","timestamp_sec":720},{"timestamp_with_hours":"0:13:15","description":"Noting how the consecutive waiting times seems to follow the Harmonic series","timestamp_sec":795},{"timestamp_with_hours":"0:17:10","description":"Noticing that we are missing trials with 0 comments and fixing","timestamp_sec":1030},{"timestamp_with_hours":"0:20:25","description":"Using `nls` function (non-linear least squares) to test how well the data fits with an exponential curve","functions":"nls","timestamp_sec":1225},{"timestamp_with_hours":"0:23:05","description":"Visualizing fit between data and the exponential curve calculated with `nls` in previous step","timestamp_sec":1385},{"timestamp_with_hours":"0:23:50","description":"Using `augment` function to added fitted values of the `nls` function","functions":"augment","timestamp_sec":1430},{"timestamp_with_hours":"0:26:00","description":"Exploring whether the data actually follows a Geometric distribution","timestamp_sec":1560},{"timestamp_with_hours":"0:30:55","description":"Explanation of the Geometric distribution as it applies to this question","timestamp_sec":1855},{"timestamp_with_hours":"0:34:05","description":"Generalizing the question to ask how long it takes to get to multiple comments (not just 3)","timestamp_sec":2045},{"timestamp_with_hours":"0:38:45","description":"Explanation of why we subtract 1 when fitting an exponential curve","timestamp_sec":2325},{"timestamp_with_hours":"0:46:00","description":"Summary of screencast","timestamp_sec":2760}]</script>

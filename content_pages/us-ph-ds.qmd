@@ -1,0 +1,24 @@
+---
+title: |
+  US PhDs
+description: |
+  Data cleaning (getting messy data into tidy format)
+date: 2019-02-21
+date-format: long
+---
+
+Notable topics: Data cleaning (getting messy data into tidy format)
+
+Recorded on: 2019-02-21
+
+Timestamps by: Alex Cookson
+
+[View code](https://github.com/dgrtwo/data-screencasts/blob/master/us_phds.Rmd)
+
+## Full screencast
+
+<iframe class="video" src="https://www.youtube.com/embed/KzRP40PzopY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+## Timestamps
+
+<script id="timestamps" type="application-json">[{"timestamp_with_hours":"0:3:15","description":"Using read_xlsx function to read in Excel spreadsheet, including skipping first few rows that don't have data","functions":"read_xlsx","timestamp_sec":195},{"timestamp_with_hours":"0:7:25","description":"Overview of starting very messy data","timestamp_sec":445},{"timestamp_with_hours":"0:8:20","description":"Using gather function to clean up wide dataset","functions":"gather","timestamp_sec":500},{"timestamp_with_hours":"0:9:20","description":"Using fill function to fill in NA values with a entries in a previous observation","functions":"fill","timestamp_sec":560},{"timestamp_with_hours":"0:10:10","description":"Cleaning variable that has number and percent in it, on top of one another using a combination of ifelse and fill functions","functions":"fill | ifelse","timestamp_sec":610},{"timestamp_with_hours":"0:12:00","description":"Using spread function on cleaned data to separate number and percent by year","functions":"spread","timestamp_sec":720},{"timestamp_with_hours":"0:13:50","description":"Spotted a mistake where he had the wrong string on str_detect function","functions":"str_detect","timestamp_sec":830},{"timestamp_with_hours":"0:16:50","description":"Using sample function to get 6 random fields of study to graph","functions":"sample","timestamp_sec":1010},{"timestamp_with_hours":"0:18:50","description":"Cleaning another dataset, which is much easier to clean","timestamp_sec":1130},{"timestamp_with_hours":"0:19:05","description":"Renaming the first field, even without knowing the exact name","timestamp_sec":1145},{"timestamp_with_hours":"0:21:55","description":"Cleaning another dataset","timestamp_sec":1315},{"timestamp_with_hours":"0:23:10","description":"Discussing challenge of when indentation is used in original dataset (for group / sub-group distinction)","timestamp_sec":1390},{"timestamp_with_hours":"0:25:20","description":"Starting to separate out data that is appended to one another in the original dataset (all, male, female)","timestamp_sec":1520},{"timestamp_with_hours":"0:27:30","description":"Removing field with long name using contains function","functions":"contains","timestamp_sec":1650},{"timestamp_with_hours":"0:28:10","description":"Using fct_recode function to rename an oddly-named category in a categorical variable (ifelse function is probably a better alternative)","functions":"fct_recode","timestamp_sec":1690},{"timestamp_with_hours":"0:35:30","description":"Discussing solution to broad major field description and fine major field description (meaningfully indented in original data)","timestamp_sec":2130},{"timestamp_with_hours":"0:39:40","description":"Using setdiff function to separate broad and fine major fields","functions":"setdiff","timestamp_sec":2380}]</script>

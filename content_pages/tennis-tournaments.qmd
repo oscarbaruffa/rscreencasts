@@ -1,0 +1,24 @@
+---
+title: |
+  Tennis Tournaments
+description: |
+  NA
+date: 2019-04-08
+date-format: long
+---
+
+Notable topics: NA
+
+Recorded on: 2019-04-08
+
+Timestamps by: Alex Cookson
+
+[View code](https://github.com/dgrtwo/data-screencasts/blob/master/grand-slams.Rmd)
+
+## Full screencast
+
+<iframe class="video" src="https://www.youtube.com/embed/YWUCUfEeNJI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+## Timestamps
+
+<script id="timestamps" type="application-json">[{"timestamp_with_hours":"0:5:00","description":"Identifying duplicated rows ands fixing them","timestamp_sec":300},{"timestamp_with_hours":"0:11:15","description":"Using add_count and fct_reorder functions to order categories that are broken down into sub-categories for graphing","functions":"add_count | fct_reorder","timestamp_sec":675},{"timestamp_with_hours":"0:13:00","description":"Tidying graph titles (e.g., replacing underscores with spaces) using str_to_title and str_replace functions","functions":"str_to_title | str_replace","timestamp_sec":780},{"timestamp_with_hours":"0:15:00","description":"Using inner_join function to merge datasets","functions":"inner_join","timestamp_sec":900},{"timestamp_with_hours":"0:15:30","description":"Calculating age from date of birth using difftime and as.numeric functions","functions":"difftime | as.numeric","timestamp_sec":930},{"timestamp_with_hours":"0:16:35","description":"Adding simple calculations like mean and median into the text portion of markdown document","timestamp_sec":995},{"timestamp_with_hours":"0:17:45","description":"Looking at distribution of wins by sex using overlapping histograms","timestamp_sec":1065},{"timestamp_with_hours":"0:18:55","description":"Binning years into decades using truncated division %/%","functions":"%/%","timestamp_sec":1135},{"timestamp_with_hours":"0:20:15","description":"Splitting up boxplots so that they are separated into pairs (M/F) across a different group (decade) using interaction function","functions":"interaction","timestamp_sec":1215},{"timestamp_with_hours":"0:20:30","description":"Analyzing distribution of ages across decades, looking specifically at the effect of Serena Williams (one individual having a disproportionate affect on the data, making it look like there's a trend)","timestamp_sec":1230},{"timestamp_with_hours":"0:24:30","description":"Avoiding double-counting of individuals by counting their average age instead of their age at each win","timestamp_sec":1470},{"timestamp_with_hours":"0:30:20","description":"Starting analysis to predict winner of Grand Slam tournaments","timestamp_sec":1820},{"timestamp_with_hours":"0:35:00","description":"Creating rolling count using row_number function to make a count of previous tournament experience","functions":"row_number","timestamp_sec":2100},{"timestamp_with_hours":"0:39:45","description":"Creating rolling win count using cumsum function","functions":"cumsum","timestamp_sec":2385},{"timestamp_with_hours":"0:41:00","description":"Lagging rolling win count using lag function (otherwise we get information about a win before a player has actually won, for prediction purposes)","functions":"lag","timestamp_sec":2460},{"timestamp_with_hours":"0:43:30","description":"Asking, \"When someone is a finalist, what is their probability of winning as a function of previous tournaments won?\"","timestamp_sec":2610},{"timestamp_with_hours":"0:48:00","description":"Asking, \"How does the number of wins a finalist has affect their chance of winning?\"","timestamp_sec":2880},{"timestamp_with_hours":"0:49:00","description":"Backtesting simple classifier where person with more tournament wins is predicted to win the given tournament","timestamp_sec":2940},{"timestamp_with_hours":"0:51:45","description":"Creating classifier that gives points based on how far a player got in previous tournaments","timestamp_sec":3105},{"timestamp_with_hours":"0:52:55","description":"Using match function to turn name of round reached (1st round, 2nd round, …) into a number score (1, 2, …)","functions":"match","timestamp_sec":3175},{"timestamp_with_hours":"0:54:20","description":"Using cummean function to get score of average past performance (instead of cumsum function)","functions":"cummean","timestamp_sec":3260},{"timestamp_with_hours":"1:04:10","description":"Pulling names of rounds (1st round, 2nd round, … ) based on the rounded numeric score of previous performance","timestamp_sec":3850}]</script>

@@ -1,0 +1,24 @@
+---
+title: |
+  Plants in Danger
+description: |
+  Data manipulation, Web scraping (rvest package) and SelectorGadget
+date: 2020-08-17
+date-format: long
+---
+
+Notable topics: Data manipulation, Web scraping (rvest package) and SelectorGadget
+
+Recorded on: 2020-08-17
+
+Timestamps by: Eric Fletcher
+
+[View code](https://github.com/dgrtwo/data-screencasts/blob/master/2020_08_18_extinct_plants.Rmd)
+
+## Full screencast
+
+<iframe class="video" src="https://www.youtube.com/embed/f7Rc1bvMgZY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+## Timestamps
+
+<script id="timestamps" type="application-json">[{"timestamp_with_hours":"0:2:00","description":"Using `count`, `fct_lump`, and `fct_reorder` to get an overview of categorical data","functions":"count | fct_lump | fct_reorder","packages":"dplyr | forcats","timestamp_sec":120},{"timestamp_with_hours":"0:5:00","description":"Using `fct_relevel` to reorder the \"Before 1900\" level to the first location leaving the other levels in their existing order","functions":"fct_relevel","packages":"forcats","timestamp_sec":300},{"timestamp_with_hours":"0:8:05","description":"Using `n` and `sum` in `fct_reorder` to reorder factor levels when there are multiple categories in `count`","functions":"fct_reorder","packages":"forcats","timestamp_sec":485},{"timestamp_with_hours":"0:12:00","description":"Using `reorder_within` and `scale_y_reordered` such that the values are ordered within each facet","functions":"reorder_within | scale_y_reordered","packages":"tidytext","timestamp_sec":720},{"timestamp_with_hours":"0:14:55","description":"Using `axis.text.x\" to rotate overlapping labels","functions":"axis.text.x","packages":"ggplot2","timestamp_sec":895},{"timestamp_with_hours":"0:19:05","description":"Using `filter` and `fct_lump` to lump all levels except for the 8 most frequest facet panels","functions":"filter | fct_lump","packages":"dplyr | forcats","timestamp_sec":1145},{"timestamp_with_hours":"0:26:55","description":"Using `separate` to separate the character column `binomial_name` into multiple columns (genus and species)","functions":"separate","packages":"tidyr","timestamp_sec":1615},{"timestamp_with_hours":"0:28:20","description":"Using `fct_lump` within `count` to lump all levels except for the 8 most frequent genus","functions":"fct_lump","packages":"forcats","timestamp_sec":1700},{"timestamp_with_hours":"0:45:30","description":"Using `rvest` and `SelectorGadget` to web scrape list of species","functions":"read_html | html_nodes | html_text","packages":"rvest","timestamp_sec":2730},{"timestamp_with_hours":"0:49:35","description":"Using `str_trim` to remove whitespace from character string","functions":"str_trim","packages":"stringr","timestamp_sec":2975},{"timestamp_with_hours":"0:50:00","description":"Using `separate` to separate character string into genus, species, and rest/citation columns and using `extra = \"merge\"` to merge extra pieces into the rest/citation column","functions":"separate","packages":"tidyr","timestamp_sec":3000},{"timestamp_with_hours":"0:51:00","description":"Using `rvest` and `SelectorGadget` to web scrape image links","functions":"read_html | html_nodes | html_text \nhtml_attr | inner_join | paste0 | map","packages":"rvest | dplyr\npurrr","timestamp_sec":3060},{"timestamp_with_hours":"0:57:50","description":"Summary of screencast","timestamp_sec":3470}]</script>

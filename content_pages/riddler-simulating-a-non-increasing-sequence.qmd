@@ -1,0 +1,24 @@
+---
+title: |
+  Riddler: Simulating a Non-increasing Sequence
+description: |
+  Simulation
+date: 2020-04-05
+date-format: long
+---
+
+Notable topics: Simulation
+
+Recorded on: 2020-04-05
+
+Timestamps by: Alex Cookson
+
+[View code](https://github.com/dgrtwo/data-screencasts/blob/master/riddler-die-roll-low.Rmd)
+
+## Full screencast
+
+<iframe class="video" src="https://www.youtube.com/embed/aR6jf6ZzlFk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+## Timestamps
+
+<script id="timestamps" type="application-json">[{"timestamp_with_hours":"0:2:20","description":"Introducing accumulate functon as a possible solution (but not used here)","functions":"accumulate","timestamp_sec":140},{"timestamp_with_hours":"0:3:20","description":"Using sample function to simulate 1000 rolls of a 10-sided die","functions":"sample","timestamp_sec":200},{"timestamp_with_hours":"0:3:40","description":"Explanation of dividing sample rolls into streaks (instead of using logic similar to a while loop)","timestamp_sec":220},{"timestamp_with_hours":"0:4:55","description":"Using cumsum function to separate 1000 rolls into individual sequences (which end when a 0 is rolled)","functions":"cumsum","timestamp_sec":295},{"timestamp_with_hours":"0:5:50","description":"Using lag function to \"shift\" sequence numbering down by one row","functions":"lag","timestamp_sec":350},{"timestamp_with_hours":"0:7:35","description":"Using cummax and lag functions to check whether a roll is less than the highest value rolled previously in the sequence","functions":"cummax | lag","timestamp_sec":455},{"timestamp_with_hours":"0:9:30","description":"Fixing previous step with cummin function (instead of cummax) and dropping the lag function","functions":"cummin","timestamp_sec":570},{"timestamp_with_hours":"0:13:05","description":"Finished simulation code and starting to calculate scores","timestamp_sec":785},{"timestamp_with_hours":"0:13:10","description":"Using -row_number function (note the minus sign!) to calculate decimal position of number in the score","functions":"row_number","timestamp_sec":790},{"timestamp_with_hours":"0:15:30","description":"Investigating the distribution of scores","timestamp_sec":930},{"timestamp_with_hours":"0:16:25","description":"Using seq function in the breaks argument of scale_x_continuous to set custom, evenly-spaced axis ticks and labels","functions":"seq | scale_x_continuous","timestamp_sec":985}]</script>

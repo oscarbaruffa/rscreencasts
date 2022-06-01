@@ -1,0 +1,24 @@
+---
+title: |
+  French Train Delays
+description: |
+  Heat map
+date: 2019-02-25
+date-format: long
+---
+
+Notable topics: Heat map
+
+Recorded on: 2019-02-25
+
+Timestamps by: Alex Cookson
+
+[View code](https://github.com/dgrtwo/data-screencasts/blob/master/french-trains.Rmd)
+
+## Full screencast
+
+<iframe class="video" src="https://www.youtube.com/embed/bmaigtpKyiM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+## Timestamps
+
+<script id="timestamps" type="application-json">[{"timestamp_with_hours":"0:10:20","description":"Boxplots of departure stations using fct_lump function","functions":"fct_lump","timestamp_sec":620},{"timestamp_with_hours":"0:14:25","description":"Creating heat map of departure and arrival delays, then cleaning up a sparse heat map","timestamp_sec":865},{"timestamp_with_hours":"0:15:30","description":"Using fct_reorder function and length function to reorder stations based on how frequently they appear","functions":"fct_reorder | length","timestamp_sec":930},{"timestamp_with_hours":"0:16:30","description":"Using fct_infreq to reorder based on infrequently-appearing stations (same as above, but without a trick needed)","functions":"fct_infreq","timestamp_sec":990},{"timestamp_with_hours":"0:17:45","description":"Using fct_lump function to lump based on proportion instead of number of top categories desired","functions":"fct_lump","timestamp_sec":1065},{"timestamp_with_hours":"0:18:45","description":"Using scale_fill_gradient2 function to specify diverging colour scale","functions":"scale_fill_gradient2","timestamp_sec":1125},{"timestamp_with_hours":"0:26:00","description":"Checking another person's take on the data, which is a heatmap over time","timestamp_sec":1560},{"timestamp_with_hours":"0:28:40","description":"Converting year and month (as digits) into date-class variable using sprintf function and padding month number with extra zero when necessary","functions":"sprintf","timestamp_sec":1720},{"timestamp_with_hours":"0:34:50","description":"Using summarise_at function to quickly sum multiple columns","functions":"summarise_at","timestamp_sec":2090},{"timestamp_with_hours":"0:39:35","description":"Creating heatmap using geom_tile function for percentage of late trains by station over time","functions":"geom_tile","timestamp_sec":2375},{"timestamp_with_hours":"0:45:05","description":"Using fill function to fill in missing NA values with data from previous observations","functions":"fill","timestamp_sec":2705},{"timestamp_with_hours":"0:50:35","description":"Grouping multiple variables into a single category using paste0 function","functions":"paste0","timestamp_sec":3035},{"timestamp_with_hours":"0:51:40","description":"Grouping heatmap into International / National chunks with a weird hack","timestamp_sec":3100},{"timestamp_with_hours":"0:52:20","description":"Further separating International / National visually","timestamp_sec":3140},{"timestamp_with_hours":"0:53:30","description":"Less hacky way of separating International / National (compared to previous two rows)","timestamp_sec":3210}]</script>

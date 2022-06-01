@@ -1,0 +1,24 @@
+---
+title: |
+  Riddler: Simulating a Circular Random Walk
+description: |
+  Simulation
+date: 2020-11-22
+date-format: long
+---
+
+Notable topics: Simulation
+
+Recorded on: 2020-11-22
+
+Timestamps by: Alex Cookson
+
+[View code](NA)
+
+## Full screencast
+
+<iframe class="video" src="https://www.youtube.com/embed/b1oKh9eeqkY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+## Timestamps
+
+<script id="timestamps" type="application-json">[{"timestamp_with_hours":"0:1:25","description":"Using `sample()` and `cumsum()` to simulate a random walk","functions":"sample | cumsum","timestamp_sec":85},{"timestamp_with_hours":"0:2:30","description":"Using `%%` (modulo operator) to \"close\" the circle (set the number of people in the circle)","functions":"%%","timestamp_sec":150},{"timestamp_with_hours":"0:3:40","description":"Using `crossing` function to set up \"tidy\" simulation (gives you all possible combinations of values you provide it)","functions":"crossing","timestamp_sec":220},{"timestamp_with_hours":"0:5:10","description":"Using `distinct` function and its `.keep_all` argument to get only the first unique set of the variables you give it","functions":"distinct","timestamp_sec":310},{"timestamp_with_hours":"0:8:15","description":"Visualizing the number of steps it takes for the sauce to reach people at differents seats","timestamp_sec":495},{"timestamp_with_hours":"0:13:40","description":"Visualizing the distribution of number of steps it takes to reach each seat","timestamp_sec":820},{"timestamp_with_hours":"0:26:30","description":"Investigating the parabolic shape of average number of steps to reach a given seat","timestamp_sec":1590},{"timestamp_with_hours":"0:28:40","description":"Using `lm` and `I` functions to calculate formula of the parabola describing average number of steps","functions":"lm | I","timestamp_sec":1720},{"timestamp_with_hours":"0:30:15","description":"Starting to vary the size of the table","timestamp_sec":1815},{"timestamp_with_hours":"0:38:45","description":"Summary of screencast","timestamp_sec":2325}]</script>

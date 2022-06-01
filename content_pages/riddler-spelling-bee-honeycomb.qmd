@@ -1,0 +1,24 @@
+---
+title: |
+  Riddler: Spelling Bee Honeycomb
+description: |
+  Simulation with matrixes
+date: 2020-01-05
+date-format: long
+---
+
+Notable topics: Simulation with matrixes
+
+Recorded on: 2020-01-05
+
+Timestamps by: Alex Cookson
+
+[View code](https://github.com/dgrtwo/data-screencasts/blob/master/honeycomb-puzzle.Rmd)
+
+## Full screencast
+
+<iframe class="video" src="https://www.youtube.com/embed/wFZhuQEfEYA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+## Timestamps
+
+<script id="timestamps" type="application-json">[{"timestamp_with_hours":"0:2:00","description":"Using read_lines function to import a plain text file (.txt)","functions":"read_lines","timestamp_sec":120},{"timestamp_with_hours":"0:2:35","description":"Using str_detect function to filter out words that do not contain the letter \"g\"","functions":"str_detect","timestamp_sec":155},{"timestamp_with_hours":"0:3:25","description":"Using str_split function to get a list of a word's individual letters","functions":"str_split","timestamp_sec":205},{"timestamp_with_hours":"0:3:55","description":"Using setdiff function to find words with invalid letters (letters that are not in the puzzle honeycomb) -- also needs map function (at 4:35)","functions":"setdiff","timestamp_sec":235},{"timestamp_with_hours":"0:10:45","description":"Changing existing code to make a function that will calculate scores for letter combinations","timestamp_sec":645},{"timestamp_with_hours":"0:14:10","description":"Noticing the rule about bonus points for pangrams and using n_distinct function to determine if a word gets those points","functions":"n_distinct","timestamp_sec":850},{"timestamp_with_hours":"0:17:25","description":"Using map function to eliminate duplicate letters from each word's list of component letters","functions":"map","packages":"purrr","timestamp_sec":1045},{"timestamp_with_hours":"0:25:55","description":"Using acast function from reshape2 package to create a matrix of words by letters","functions":"acast","packages":"reshape2","timestamp_sec":1555},{"timestamp_with_hours":"0:27:50","description":"Using a the words/letters matrix to find valid words for a given letter combination","timestamp_sec":1670},{"timestamp_with_hours":"0:29:55","description":"Using the matrix multiplication operator %*% to find the number of \"forbidden\" letters for each word","functions":"%*%","timestamp_sec":1795},{"timestamp_with_hours":"0:42:05","description":"Using microbenchmark function from microbenchmark package to test how long it takes to run a function","functions":"microbenchmark","packages":"microbenchmark","timestamp_sec":2525},{"timestamp_with_hours":"0:43:35","description":"Using combn function to get the actual combinations of 6 letters (not just the count)","functions":"combn","timestamp_sec":2615},{"timestamp_with_hours":"0:45:15","description":"Using map function to get scores for different combinations of letters created above","functions":"map","timestamp_sec":2715},{"timestamp_with_hours":"0:47:30","description":"Using which.max function to find the position of the max value in a vector","functions":"which.max","timestamp_sec":2850},{"timestamp_with_hours":"1:05:10","description":"Using t function to transpose a matrix","functions":"t","timestamp_sec":3910},{"timestamp_with_hours":"1:19:15","description":"Summary of screencast","timestamp_sec":4755}]</script>

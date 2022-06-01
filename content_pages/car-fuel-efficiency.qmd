@@ -1,0 +1,24 @@
+---
+title: |
+  Car Fuel Efficiency
+description: |
+  Natural splines for regression
+date: 2019-10-14
+date-format: long
+---
+
+Notable topics: Natural splines for regression
+
+Recorded on: 2019-10-14
+
+Timestamps by: Alex Cookson
+
+[View code](https://github.com/dgrtwo/data-screencasts/blob/master/car-economy.Rmd)
+
+## Full screencast
+
+<iframe class="video" src="https://www.youtube.com/embed/RpeioixHOHw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+## Timestamps
+
+<script id="timestamps" type="application-json">[{"timestamp_with_hours":"0:3:20","description":"Using select and sort and colnames functions to sort variables in alphabetical order","functions":"select | sort | colnames","timestamp_sec":200},{"timestamp_with_hours":"0:10:00","description":"Adding geom_abline for y = x to a scatter plot for comparison","functions":"geom_abline","timestamp_sec":600},{"timestamp_with_hours":"0:18:00","description":"Visualising using geom_boxplot for mpg by vehicle class (size of car)","functions":"geom_boxplot","timestamp_sec":1080},{"timestamp_with_hours":"0:24:45","description":"Start of explanation of prediction goals","timestamp_sec":1485},{"timestamp_with_hours":"0:27:00","description":"Creating train and test sets, along with trick using sample_frac function to randomly re-arrange all rows in a dataset","functions":"sample_frac","timestamp_sec":1620},{"timestamp_with_hours":"0:28:35","description":"First step of developing linear model: visually adding geom_smooth","functions":"geom_smooth","timestamp_sec":1715},{"timestamp_with_hours":"0:30:00","description":"Using augment function to add extra variables from model to original dataset (fitted values and residuals, especially)","functions":"augment","timestamp_sec":1800},{"timestamp_with_hours":"0:30:45","description":"Creating residuals plot and explaining what you want and don't want to see","timestamp_sec":1845},{"timestamp_with_hours":"0:31:50","description":"Explanation of splines","timestamp_sec":1910},{"timestamp_with_hours":"0:33:30","description":"Visualising effect of regressing using natural splines","timestamp_sec":2010},{"timestamp_with_hours":"0:35:10","description":"Creating a tibble to test different degrees of freedom (1:10) for natural splines","timestamp_sec":2110},{"timestamp_with_hours":"0:36:30","description":"Using unnest function to get tidy versions of different models","functions":"unnest","timestamp_sec":2190},{"timestamp_with_hours":"0:37:55","description":"Visualising fitted values of all 6 different models at the same time","timestamp_sec":2275},{"timestamp_with_hours":"0:42:10","description":"Investigating whether the model got \"better\" as we added degrees of freedom to the natural splines, using the glance function","functions":"glance","timestamp_sec":2530},{"timestamp_with_hours":"0:47:45","description":"Using ANOVA to perform a statistical test on whether natural splines as a group explain variation in MPG","timestamp_sec":2865},{"timestamp_with_hours":"0:48:30","description":"Exploring colinearity of dependant variables (displacement and cylinders)","timestamp_sec":2910},{"timestamp_with_hours":"0:55:10","description":"Binning years into every two years using floor function","functions":"floor","timestamp_sec":3310},{"timestamp_with_hours":"0:56:40","description":"Using summarise_at function to do quick averaging of multiple variables","functions":"summarise_at","timestamp_sec":3400}]</script>

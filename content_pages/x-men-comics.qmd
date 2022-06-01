@@ -1,0 +1,24 @@
+---
+title: |
+  X-Men Comics
+description: |
+  Data manipulation, Lollipop graph, Grouping using floor division
+date: 2020-06-29
+date-format: long
+---
+
+Notable topics: Data manipulation, Lollipop graph, Grouping using floor division
+
+Recorded on: 2020-06-29
+
+Timestamps by: Eric Fletcher
+
+[View code](https://github.com/dgrtwo/data-screencasts/blob/master/uncanny-xmen.Rmd)
+
+## Full screencast
+
+<iframe class="video" src="https://www.youtube.com/embed/NY0-IFet5AM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+## Timestamps
+
+<script id="timestamps" type="application-json">[{"timestamp_with_hours":"0:07:25","description":"Using `separate` to separate the name from secrete identity in the `character` column","functions":"separate","packages":"tidyr","timestamp_sec":445},{"timestamp_with_hours":"0:09:55","description":"Using `summarize` and `across` to find the frequency of the action variables and find out how many issues each action was used for each character","functions":"summarize | across","packages":"dplyr","timestamp_sec":595},{"timestamp_with_hours":"0:13:25","description":"Create a `geom_col` chart to visualize which character speaks in the most issues","functions":"geom_col | fct_reorder","packages":"ggplot2 | forcats","timestamp_sec":805},{"timestamp_with_hours":"0:18:35","description":"Create a `geom_point` chart to visualize each character’s average lines per issue in which the character is depicted","functions":"geom_point | geom_text | geom_text_repel | \nsummarize","packages":"ggplot2 | ggrepel | dplyr","timestamp_sec":1115},{"timestamp_with_hours":"0:22:05","description":"Create a `geom_point` chart to visualize each character’s average thoughts per issue in which the character is depicted","functions":"geom_point | geom_text | geom_text_repel | \nsummarize","packages":"ggplot2 | ggrepel | dplyr","timestamp_sec":1325},{"timestamp_with_hours":"0:23:10","description":"Create a `geom_point` chart to visualize character’s speech versus thought ratio per issue in which the character is depicted","functions":"geom_point | geom_text | geom_text_repel | \nsummarize","packages":"ggplot2 | ggrepel | dplyr","timestamp_sec":1390},{"timestamp_with_hours":"0:30:05","description":"Create a `geom_point` to visualize character’s number of lines while in costume versus not in costume","functions":"geom_point | pivot_longer | fct_reorder","packages":"ggplot2 | tidyr | forcats","timestamp_sec":1805},{"timestamp_with_hours":"0:34:30","description":"Create a `geom_point` chart to visualize the lines in costume versus lines out of costume ratio","functions":"geom_point | geom_text | geom_text_repel | \nsummarize","packages":"ggplot2 | ggrepel | dplyr","timestamp_sec":2070},{"timestamp_with_hours":"0:39:20","description":"Create a `lollipop graph` using `geom_point` and `geom_errorbarh` to visualize the lines in costume versus lines out of costume ratio and their distance from 1.0 (1 to 1)","functions":"geom_point | fct_reorder | geom_errorbarh","packages":"ggplot2 | forcats","timestamp_sec":2360},{"timestamp_with_hours":"0:45:00","description":"Use `summarize` to find the frequency of each location and the total number of unique issues where the location is used","functions":"summarize | group_by | arrange","packages":"dplyr","timestamp_sec":2700},{"timestamp_with_hours":"0:46:00","description":"Use `summarize` and `fct_lump` to count how many issues each author has written while lumping together all authors except the most frequent","functions":"summarize | fct_lump","packages":"dplyr | forcats","timestamp_sec":2760},{"timestamp_with_hours":"0:47:25","description":"Use `summarize` and `fct_lump` to see if the authors rates of passing the Bechdel test differ from one another","functions":"summarize | fct_lump","packages":"dplyr | forcats","timestamp_sec":2845},{"timestamp_with_hours":"0:52:45","description":"Create a `geom_line` chart to visualize if the rates of passing the Bechdel test changed over time and `floor division` `%/%` to generate 20 observations per group","functions":"geom_line | summarize","packages":"dplyr","timestamp_sec":3165},{"timestamp_with_hours":"0:54:35","description":"Create a `geom_col` to visualize the amount of lines each character has per issue over time giving context to Bechdel test passing rates","functions":"geom_col | summarize | fct_lump | facet_wrap","packages":"ggplot | dplyr | forcats","timestamp_sec":3275},{"timestamp_with_hours":"1:00:00","description":"Summary of screencast","timestamp_sec":3600}]</script>

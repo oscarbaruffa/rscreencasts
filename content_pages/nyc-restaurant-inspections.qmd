@@ -1,0 +1,24 @@
+---
+title: |
+  NYC Restaurant Inspections
+description: |
+  Multiple t-test models (broom package), Principal Component Analysis (PCA)
+date: 2018-12-10
+date-format: long
+---
+
+Notable topics: Multiple t-test models (broom package), Principal Component Analysis (PCA)
+
+Recorded on: 2018-12-10
+
+Timestamps by: Alex Cookson
+
+[View code](https://github.com/dgrtwo/data-screencasts/blob/master/nyc-restaurants.Rmd)
+
+## Full screencast
+
+<iframe class="video" src="https://www.youtube.com/embed/em4FXPf4H-Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+## Timestamps
+
+<script id="timestamps" type="application-json">[{"timestamp_with_hours":"0:18:45","description":"Separating column using separate function","functions":"separate","timestamp_sec":1125},{"timestamp_with_hours":"0:21:15","description":"Taking distinct observation, but keeping the remaining variables using distinct function with .keep_all argument","functions":"distinct","timestamp_sec":1275},{"timestamp_with_hours":"0:25:00","description":"Using broom package and nest function to perform multiple t-tests at the same time","functions":"nest | t.test","packages":"broom","timestamp_sec":1500},{"timestamp_with_hours":"0:26:20","description":"Tidying nested t-test models using broom package","packages":"broom","timestamp_sec":1580},{"timestamp_with_hours":"0:27:00","description":"Creating TIE fighter plot of estimates of means and their confidence intervals","timestamp_sec":1620},{"timestamp_with_hours":"0:28:45","description":"Recode long description using regex to remove everything after a parenthesis","timestamp_sec":1725},{"timestamp_with_hours":"0:33:45","description":"Using cut function to manually bin data along user-specified intervals","functions":"cut","timestamp_sec":2025},{"timestamp_with_hours":"0:42:00","description":"Asking, \"What type of violations tend to occur more in some cuisines than others?\"","timestamp_sec":2520},{"timestamp_with_hours":"0:42:45","description":"Using semi_join function to get the most recent inspection of all the restaurants","functions":"semi_join","timestamp_sec":2565},{"timestamp_with_hours":"0:52:00","description":"Asking, \"What violations tend to occur together?\"","timestamp_sec":3120},{"timestamp_with_hours":"0:53:00","description":"Using widyr package function pairwise_cor (pairwise correlation) to find co-occurrence of violation types","functions":"pairwise_cor","packages":"widyr","timestamp_sec":3180},{"timestamp_with_hours":"0:55:30","description":"Beginning of PCA (Principal Component Analysis) using widely_svd function","functions":"widely_svd","timestamp_sec":3330},{"timestamp_with_hours":"0:58:00","description":"Actually typing in the widely_svd function","functions":"widely_svd","timestamp_sec":3480},{"timestamp_with_hours":"0:58:15","description":"Reviewing and explaining output of widely_svd function","functions":"widely_svd","timestamp_sec":3495},{"timestamp_with_hours":"1:01:30","description":"Creating graph of opposing elements of a PCA dimension","timestamp_sec":3690},{"timestamp_with_hours":"1:02:00","description":"Shortening string using str_sub function","functions":"str_sub","timestamp_sec":3720},{"timestamp_with_hours":"1:04:00","description":"Reference to Julia Silge's PCA walkthrough using StackOverflow data: https://juliasilge.com/blog/stack-overflow-pca/","timestamp_sec":3840}]</script>

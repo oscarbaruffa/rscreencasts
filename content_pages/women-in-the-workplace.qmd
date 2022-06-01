@@ -1,0 +1,24 @@
+---
+title: |
+  Women in the Workplace
+description: |
+  Interactive scatterplot (plotly and shiny packages)
+date: 2019-03-04
+date-format: long
+---
+
+Notable topics: Interactive scatterplot (plotly and shiny packages)
+
+Recorded on: 2019-03-04
+
+Timestamps by: Alex Cookson
+
+[View code](https://github.com/dgrtwo/data-screencasts/blob/master/women-workplace.Rmd)
+
+## Full screencast
+
+<iframe class="video" src="https://www.youtube.com/embed/fv9SQ4IFNr4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+## Timestamps
+
+<script id="timestamps" type="application-json">[{"timestamp_with_hours":"0:5:50","description":"Writing a custom function that summarizes variables based on their names (then abandoning the idea)","timestamp_sec":350},{"timestamp_with_hours":"0:9:15","description":"Using complete.cases function to find observations that have an NA value in any variable","functions":"complete.cases","timestamp_sec":555},{"timestamp_with_hours":"0:9:50","description":"Using subsetting within a summarise function to calculate a weighted mean when dealing with 0 or NA values in some observations","timestamp_sec":590},{"timestamp_with_hours":"0:12:20","description":"Debugging what is causing NA values to appear in the summarise output (finds the error at 13:25)","timestamp_sec":740},{"timestamp_with_hours":"0:17:50","description":"Hypothesizing about one sector illustrating a variation of Simpson's Paradox","timestamp_sec":1070},{"timestamp_with_hours":"0:25:25","description":"Creating a scatterplot with a logarithmic scale and using scale_colour_gradient2 function to encode data to point colour","functions":"scale_colour_gradient2","timestamp_sec":1525},{"timestamp_with_hours":"0:30:00","description":"Creating an interactive plot (tooltips show up on hover) using ggplotly function from plotly package","functions":"ggplotly","packages":"plotly","timestamp_sec":1800},{"timestamp_with_hours":"0:33:20","description":"Fiddling with scale_size_continuous function's range argument to specify point size on a scatterplot (which are encoded to total workers)","timestamp_sec":2000},{"timestamp_with_hours":"0:34:50","description":"Explanation of why healthcare sector is a good example of Simpson's Paradox","timestamp_sec":2090},{"timestamp_with_hours":"0:43:15","description":"Starting to create a shiny app with \"occupation\" as only input (many tweaks in subsequent minutes to make it work)","packages":"shiny","timestamp_sec":2595},{"timestamp_with_hours":"0:47:55","description":"Tweaking size (height) of graph in shiny app","packages":"shiny","timestamp_sec":2875},{"timestamp_with_hours":"0:54:05","description":"Summary of screencast","timestamp_sec":3245}]</script>

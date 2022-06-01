@@ -1,0 +1,24 @@
+---
+title: |
+  Horror Movie Profits
+description: |
+  Graphing for EDA (Exploratory Data Analysis)
+date: 2018-10-22
+date-format: long
+---
+
+Notable topics: Graphing for EDA (Exploratory Data Analysis)
+
+Recorded on: 2018-10-22
+
+Timestamps by: Alex Cookson
+
+[View code](https://github.com/dgrtwo/data-screencasts/blob/master/horror-movie-ratings.Rmd)
+
+## Full screencast
+
+<iframe class="video" src="https://www.youtube.com/embed/3-DRwg9yeNA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+## Timestamps
+
+<script id="timestamps" type="application-json">[{"timestamp_with_hours":"0:2:50","description":"Using parse_date function from lubridate package to convert date formatted as character to date class (should have used mdy function though)","functions":"parse_date","packages":"lubridate","timestamp_sec":170},{"timestamp_with_hours":"0:7:45","description":"Using fct_lump function to aggregate distributors into top 6 (by number of movies) and and \"Other\" category","functions":"fct_lump","timestamp_sec":465},{"timestamp_with_hours":"0:8:50","description":"Investigating strange numbers in the data and discovering duplication","timestamp_sec":530},{"timestamp_with_hours":"0:12:40","description":"Using problems function to look at parsing errors when importing data","functions":"problems","timestamp_sec":760},{"timestamp_with_hours":"0:14:35","description":"Using arrange and distinct function and its .keep_all argument to de-duplicate observations","functions":"arrange | distinct","timestamp_sec":875},{"timestamp_with_hours":"0:16:10","description":"Using geom_boxplot function to create a boxplot of budget by distributor","functions":"goem_boxplot","timestamp_sec":970},{"timestamp_with_hours":"0:19:20","description":"Using floor function to bin release years into decades (e.g., \"1970\" and \"1973\" both become \"1970\")","functions":"floor","timestamp_sec":1160},{"timestamp_with_hours":"0:21:30","description":"Using summarise_at function to apply the same function to multiple variables at the same time","functions":"summarise_at","timestamp_sec":1290},{"timestamp_with_hours":"0:24:10","description":"Using geom_line to visualize multiple metrics at the same time","functions":"geom_line","timestamp_sec":1450},{"timestamp_with_hours":"0:26:00","description":"Using facet_wrap function to graph small multiples of genre-budget boxplots by distributor","functions":"facet_wrap","timestamp_sec":1560},{"timestamp_with_hours":"0:28:35","description":"Starting analysis of profit ratio of movies","timestamp_sec":1715},{"timestamp_with_hours":"0:32:50","description":"Using paste0 function in a custom function to show labels of multiple (e.g., \"4X\" or \"6X\" to mean \"4 times\" or \"6 times\")","functions":"paste0","timestamp_sec":1970},{"timestamp_with_hours":"0:41:20","description":"Starting analysis of the most common genres over time","timestamp_sec":2480},{"timestamp_with_hours":"0:45:55","description":"Starting analysis of the most profitable individual horror movies","timestamp_sec":2755},{"timestamp_with_hours":"0:51:45","description":"Using paste0 function to add release date of movie to labels in a bar graph","functions":"paste0","timestamp_sec":3105},{"timestamp_with_hours":"0:53:25","description":"Using geom_text function, along with its check_overlap argument, to add labels to some points on a scatterplot","functions":"geom_text","timestamp_sec":3205},{"timestamp_with_hours":"0:58:10","description":"Using ggplotly function from plotly package to create an interactive scatterplot","functions":"ggplotly","packages":"plotly","timestamp_sec":3490},{"timestamp_with_hours":"1:00:55","description":"Reviewing unexplored areas of investigation","timestamp_sec":3655}]</script>

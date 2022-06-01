@@ -1,0 +1,24 @@
+---
+title: |
+  Nobel Prize Winners
+description: |
+  Data manipulation, Graphing for EDA (Exploratory Data Analysis)
+date: 2019-05-23
+date-format: long
+---
+
+Notable topics: Data manipulation, Graphing for EDA (Exploratory Data Analysis)
+
+Recorded on: 2019-05-23
+
+Timestamps by: Alex Cookson
+
+[View code](https://github.com/dgrtwo/data-screencasts/blob/master/nobel-prize.Rmd)
+
+## Full screencast
+
+<iframe class="video" src="https://www.youtube.com/embed/yWSpLfmES7w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+## Timestamps
+
+<script id="timestamps" type="application-json">[{"timestamp_with_hours":"0:2:00","description":"Creating a stacked bar plot using geom_col and the aes function's fill argument (also bins years into decades with truncated division operator %/%)","functions":"geom_col | %/%","timestamp_sec":120},{"timestamp_with_hours":"0:3:30","description":"Using n_distinct function to quickly count unique years in a group","functions":"n_distinct","timestamp_sec":210},{"timestamp_with_hours":"0:9:00","description":"Using distinct function and its .keep_all argument to de-duplicate data","functions":"distinct","timestamp_sec":540},{"timestamp_with_hours":"0:10:50","description":"Using coalesce function to replace NAs in a variable (similar to SQL COALESCE verb)","functions":"coalesce","timestamp_sec":650},{"timestamp_with_hours":"0:16:10","description":"Using year function from lubridate package to calculate (approx.) age of laureates at time of award","functions":"year","packages":"lubridate","timestamp_sec":970},{"timestamp_with_hours":"0:16:50","description":"Using fct_reorder function to arrange boxplot graph by the median age of winners","functions":"fct_reorder","timestamp_sec":1010},{"timestamp_with_hours":"0:22:50","description":"Defining a new variable within the count function (like doing a mutate in the count function)","functions":"count","timestamp_sec":1370},{"timestamp_with_hours":"0:23:40","description":"Creating a small multiples bar plot using geom_col and facet_wrap functions","functions":"geom_col | facet_wrap","timestamp_sec":1420},{"timestamp_with_hours":"0:26:15","description":"Importing income data from WDI package to explore relationship between high/low income countries and winners","functions":"WDIsearch","packages":"WDI","timestamp_sec":1575},{"timestamp_with_hours":"0:33:45","description":"Using fct_relevel to change the levels of a categorical income variable (e.g., \"Upper middle income\") so that the ordering makes sense","functions":"fct_relevel","timestamp_sec":2025},{"timestamp_with_hours":"0:36:25","description":"Starting to explore new dataset of nobel laureate publications","timestamp_sec":2185},{"timestamp_with_hours":"0:44:25","description":"Taking the mean of a subset of data without needing to fully filter the data beforehand","functions":"mean","timestamp_sec":2665},{"timestamp_with_hours":"0:49:15","description":"Using rank function and its ties.method argument to add the ordinal number of a laureate's publication (e.g., 1st paper, 2nd paper)","functions":"rank","timestamp_sec":2955},{"timestamp_with_hours":"1:05:10","description":"Lots of playing around with exploratory histograms (geom_histogram)","functions":"geom_histogram","timestamp_sec":3910},{"timestamp_with_hours":"1:06:45","description":"Discussion of right-censoring as an issue (people winning the Nobel prize but still having active careers)","timestamp_sec":4005},{"timestamp_with_hours":"1:10:20","description":"Summary of screencast","timestamp_sec":4220}]</script>

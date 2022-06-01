@@ -1,0 +1,24 @@
+---
+title: |
+  R Downloads
+description: |
+  Data manipulation (especially time series)
+date: 2018-10-29
+date-format: long
+---
+
+Notable topics: Data manipulation (especially time series)
+
+Recorded on: 2018-10-29
+
+Timestamps by: Alex Cookson
+
+[View code](https://github.com/dgrtwo/data-screencasts/blob/master/r-downloads.Rmd)
+
+## Full screencast
+
+<iframe class="video" src="https://www.youtube.com/embed/nms9F-XubJU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+## Timestamps
+
+<script id="timestamps" type="application-json">[{"timestamp_with_hours":"0:5:20","description":"Using geom_line function to visualize changes over time","functions":"geom_line","timestamp_sec":320},{"timestamp_with_hours":"0:7:35","description":"Starting to decompose time series data into day-of-week trend and overall trend (lots of lubridate package functions)","packages":"lubridate","timestamp_sec":455},{"timestamp_with_hours":"0:9:50","description":"Using floor_date function from lubridate package to round dates down to the week level","timestamp_sec":590},{"timestamp_with_hours":"0:10:05","description":"Using min function to drop incomplete/partial week at the start of the dataset","timestamp_sec":605},{"timestamp_with_hours":"0:12:20","description":"Using countrycode function from countrycode package to replace two-letter country codes with full names (e.g., \"CA\" becomes \"Canada\")","functions":"countrycode","packages":"countrycode","timestamp_sec":740},{"timestamp_with_hours":"0:17:20","description":"Using fct_lump function to get top N categories within a categorical variable and classify the rest as \"Other\"","functions":"fct_lump","timestamp_sec":1040},{"timestamp_with_hours":"0:20:30","description":"Using hour function from lubridate package to pull out integer hour value from a datetime variable","functions":"hour","packages":"lubridate","timestamp_sec":1230},{"timestamp_with_hours":"0:22:20","description":"Using facet_wrap function to graph small multiples of downloads by country, then changing scales argument to allow different scales on y-axis","functions":"facet_wrap","timestamp_sec":1340},{"timestamp_with_hours":"0:31:00","description":"Starting analysis of downloads by IP address","timestamp_sec":1860},{"timestamp_with_hours":"0:35:20","description":"Using as.POSIXlt to combine separate date and time variables to get a single datetime variable","functions":"as.POSIXlt","timestamp_sec":2120},{"timestamp_with_hours":"0:36:35","description":"Using lag function to calculate time between downloads (time between events) per IP address (comparable to SQL window function)","functions":"lag","timestamp_sec":2195},{"timestamp_with_hours":"0:38:05","description":"Using as.numeric function to convert variable from a time interval object to a numeric variable (number in seconds)","functions":"as.numeric","timestamp_sec":2285},{"timestamp_with_hours":"0:38:40","description":"Explanation of a bimodal log-normal distribution","timestamp_sec":2320},{"timestamp_with_hours":"0:39:05","description":"Handy trick for setting easy-to-interpret intervals for time data on scale_x_log10 function's breaks argument","functions":"scale_x_log10","timestamp_sec":2345},{"timestamp_with_hours":"0:47:40","description":"Starting to explore package downloads","timestamp_sec":2860},{"timestamp_with_hours":"0:52:15","description":"Adding 1 to the numerator and denominator when calculating a ratio to get around dividing by zero","timestamp_sec":3135},{"timestamp_with_hours":"0:57:55","description":"Showing how to look at package download data over time using cran_downloads function from the cranlogs package","functions":"cran_downloads","packages":"cranlogs","timestamp_sec":3475}]</script>

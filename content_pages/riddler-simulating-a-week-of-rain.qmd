@@ -1,0 +1,24 @@
+---
+title: |
+  Riddler: Simulating a Week of Rain
+description: |
+  Simulation
+date: 2018-12-11
+date-format: long
+---
+
+Notable topics: Simulation
+
+Recorded on: 2018-12-11
+
+Timestamps by: Alex Cookson
+
+[View code](NA)
+
+## Full screencast
+
+<iframe class="video" src="https://www.youtube.com/embed/TDzd73z8thU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+## Timestamps
+
+<script id="timestamps" type="application-json">[{"timestamp_with_hours":"0:1:20","description":"Using crossing function to get all combinations of specified variables (100 trials of 5 days)","functions":"crossing","timestamp_sec":80},{"timestamp_with_hours":"0:2:35","description":"Using rbinom function to simulate whether it rains or not","functions":"rbinom","timestamp_sec":155},{"timestamp_with_hours":"0:3:15","description":"Using ifelse function to set starting number of umbrellas at beginning of week","functions":"ifelse","timestamp_sec":195},{"timestamp_with_hours":"0:4:20","description":"Explanation of structure of simulation and approach to determining number of umbrellas in each location","timestamp_sec":260},{"timestamp_with_hours":"0:5:30","description":"Changing structure so that we have a row for each day's morning or evening","timestamp_sec":330},{"timestamp_with_hours":"0:7:10","description":"Using group_by, ifelse, and row_number functions to set starting number of umbrellas for each trial","functions":"group_by | ifelse | row_number","timestamp_sec":430},{"timestamp_with_hours":"0:8:45","description":"Using case_when function to returns different values for multiple logical checks (allows for more outputs than ifelse)","functions":"case_when","timestamp_sec":525},{"timestamp_with_hours":"0:10:20","description":"Using cumsum function to create a running tally of number of umbrellas in each location","functions":"cumsum","timestamp_sec":620},{"timestamp_with_hours":"0:11:25","description":"Explanation of output of simulated data","timestamp_sec":685},{"timestamp_with_hours":"0:12:30","description":"Using any function to check if any day had a negative \"umbrella count\" (indicating there wasn't an umbrella available when raining)","timestamp_sec":750},{"timestamp_with_hours":"0:15:40","description":"Asking, \"When was the first time Louie got wet?\"","timestamp_sec":940},{"timestamp_with_hours":"0:17:10","description":"Creating a custom vector to convert an integer to a weekday (e.g., 2 = Tue)","timestamp_sec":1030}]</script>

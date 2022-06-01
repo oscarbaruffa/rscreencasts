@@ -1,0 +1,24 @@
+---
+title: |
+  CRAN Package Code
+description: |
+  Graphing for EDA (Exploratory Data Analysis)
+date: 2019-12-29
+date-format: long
+---
+
+Notable topics: Graphing for EDA (Exploratory Data Analysis)
+
+Recorded on: 2019-12-29
+
+Timestamps by: Alex Cookson
+
+[View code](https://github.com/dgrtwo/data-screencasts/blob/master/cran-code.Rmd)
+
+## Full screencast
+
+<iframe class="video" src="https://www.youtube.com/embed/dr4qw8o0nYU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+## Timestamps
+
+<script id="timestamps" type="application-json">[{"timestamp_with_hours":"0:4:30","description":"Summarizing many things by language (e.g., lines of code, comment/code ratio)","timestamp_sec":270},{"timestamp_with_hours":"0:9:35","description":"Using gather function to consolidate multiple metrics into one dimension, then visualizing by facetting by metric","functions":"gather","timestamp_sec":575},{"timestamp_with_hours":"0:11:20","description":"Setting ncol = 1 within facet_wrap function to get facetted graphs to stack vertically","functions":"facet_wrap","timestamp_sec":680},{"timestamp_with_hours":"0:11:30","description":"Using reorder_within function (tidytext package) to properly reorder factors within each facet","functions":"reorder_within","packages":"tidytext","timestamp_sec":690},{"timestamp_with_hours":"0:16:00","description":"Using geom_text label to add language name as label to scatter points","functions":"geom_text","timestamp_sec":960},{"timestamp_with_hours":"0:20:00","description":"Completing preliminary overview and looking at distribution of R code in packages","timestamp_sec":1200},{"timestamp_with_hours":"0:26:15","description":"Using str_extract to extract only letters and names from character vector (using regex)","functions":"str_extract","timestamp_sec":1575},{"timestamp_with_hours":"0:34:00","description":"Re-ordering the order of categorical variables in the legend using guides function","functions":"guides","timestamp_sec":2040},{"timestamp_with_hours":"0:36:00","description":"Investigating comment/code ratio","timestamp_sec":2160},{"timestamp_with_hours":"0:43:05","description":"Importing additional package data (looking around for a bit, then starting to actually import ~46:00)","timestamp_sec":2585},{"timestamp_with_hours":"0:54:40","description":"Importing even more additional data (available packages)","timestamp_sec":3280},{"timestamp_with_hours":"0:57:50","description":"Using separate_rows function to separate delimited values","functions":"separate_rows","timestamp_sec":3470},{"timestamp_with_hours":"0:58:45","description":"Using extract function and regex to pull out specific types of characters from a string","functions":"extract","timestamp_sec":3525},{"timestamp_with_hours":"1:05:35","description":"Summary of screencast","timestamp_sec":3935}]</script>

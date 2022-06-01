@@ -1,0 +1,24 @@
+---
+title: |
+  Media Franchise Revenue
+description: |
+  Data manipulation (especially re-ordering factors)
+date: 2019-06-21
+date-format: long
+---
+
+Notable topics: Data manipulation (especially re-ordering factors)
+
+Recorded on: 2019-06-21
+
+Timestamps by: Alex Cookson
+
+[View code](https://github.com/dgrtwo/data-screencasts/blob/master/media-franchises.Rmd)
+
+## Full screencast
+
+<iframe class="video" src="https://www.youtube.com/embed/1xsbTs9-a50" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+## Timestamps
+
+<script id="timestamps" type="application-json">[{"timestamp_with_hours":"0:9:15","description":"Explaining use of semi_join function to aggregate and filter groups","functions":"semi_join","timestamp_sec":555},{"timestamp_with_hours":"0:11:00","description":"Putting the largest categories on the bottom of a stacked bar chart","timestamp_sec":660},{"timestamp_with_hours":"0:14:30","description":"Using glue function as alternative to paste for combining text, plus good explanation of it","functions":"glue","packages":"glue","timestamp_sec":870},{"timestamp_with_hours":"0:19:30","description":"Multiple re-ordering using fct_reorder function of facetted graph (he works through several obstacles)","functions":"fct_reorder","timestamp_sec":1170},{"timestamp_with_hours":"0:20:40","description":"Re-ordering the position of facetted graphs so that highest total revenue is at top left","timestamp_sec":1240},{"timestamp_with_hours":"0:26:00","description":"Investigating relationship between year created and revenue","timestamp_sec":1560},{"timestamp_with_hours":"0:26:40","description":"Creating scatter plot with points scaled by size and labelled points (geom_text function)","functions":"geom_text","timestamp_sec":1600},{"timestamp_with_hours":"0:29:30","description":"Summary of screencast up to this point","timestamp_sec":1770},{"timestamp_with_hours":"0:29:50","description":"Starting analysis original media of franchise (e.g., novel, video game, animated film) and revenue type (e.g., box office, merchandise)","timestamp_sec":1790},{"timestamp_with_hours":"0:33:35","description":"Graphing original media and revenue category as facetted bar plot with lots of reordering (ends at around 38:40)","functions":"fct_reorder","timestamp_sec":2015},{"timestamp_with_hours":"0:40:30","description":"Alternative visualization of original media/revenue category using heat map","functions":"geom_tile","timestamp_sec":2430},{"timestamp_with_hours":"0:41:20","description":"Using scale_fill_gradient2 function to specify custom colour scale","functions":"scale_fill_gradient2","timestamp_sec":2480},{"timestamp_with_hours":"0:42:05","description":"Getting rid of gridlines in graph using theme function's panel.grid argument","timestamp_sec":2525},{"timestamp_with_hours":"0:44:05","description":"Using fct_rev function to reverse levels of factors","functions":"fct_rev","timestamp_sec":2645},{"timestamp_with_hours":"0:44:35","description":"Fixing overlapping axis text with tweaks to theme function's axis.text argument","timestamp_sec":2675},{"timestamp_with_hours":"0:46:05","description":"Reviewing visualization that inspired this dataset","timestamp_sec":2765},{"timestamp_with_hours":"0:47:25","description":"Adding text of total revenue to the end of each bar in a previous graph","timestamp_sec":2845},{"timestamp_with_hours":"0:50:20","description":"Using paste0 function at add a \"B\" (for \"billions\") to the end of text labels on graph","functions":"paste0","timestamp_sec":3020},{"timestamp_with_hours":"0:51:35","description":"Using expand_limits functions to give more space for text labels not to get cut off","functions":"expand_limits","timestamp_sec":3095},{"timestamp_with_hours":"0:53:45","description":"Summary of screencast","timestamp_sec":3225}]</script>

@@ -1,0 +1,24 @@
+---
+title: |
+  Broadway Musicals
+description: |
+  Creating an interactive dashboard with shinymetrics and tidymetrics, moving windows, period aggregation
+date: 2020-04-27
+date-format: long
+---
+
+Notable topics: Creating an interactive dashboard with shinymetrics and tidymetrics, moving windows, period aggregation
+
+Recorded on: 2020-04-27
+
+Timestamps by: Eric Fletcher
+
+[View code](https://github.com/dgrtwo/data-screencasts/blob/master/broadway.Rmd)
+
+## Full screencast
+
+<iframe class="video" src="https://www.youtube.com/embed/OhY5ZaILRpg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+## Timestamps
+
+<script id="timestamps" type="application-json">[{"timestamp_with_hours":"0:8:15","description":"Use the `cross_by_periods ` function from the `tidymetrics` package to aggregate data over time (`month`, `quarter`, and `year`) then visualize with `geom_line`.","functions":"rename | cross_by_periods","packages":"tidymetrics","timestamp_sec":495},{"timestamp_with_hours":"0:14:00","description":"Use the `cross_by_periods ` function from the `tidymetrics`  package with `windows = c(28))` to create a 4-week rolling average across `month`, `quarter`, and `year`.","functions":"cross_by_periods","packages":"tidymetrics","timestamp_sec":840},{"timestamp_with_hours":"0:21:50","description":"Create and `interactive dashboard` using the `shinymetrics` and `tidymetrics` packages.","functions":"use_metrics_scaffold | create_metrics","packages":"shinymetrics | Tidaymetrics","timestamp_sec":1310},{"timestamp_with_hours":"0:25:00","description":"Use the `str_remove` function from the `stringr` package to remove matched pattern in a string.","functions":"str_remove","packages":"stringr","timestamp_sec":1500},{"timestamp_with_hours":"0:25:20","description":"Use the `cross_by_dimensions` function from the `tidymetrics` package which acts as an extended `group_by` that allows complete summaries across each individual dimension and possible combinations.","functions":"cross_by_dimensions","packages":"tidymetrics","timestamp_sec":1520},{"timestamp_with_hours":"0:41:25","description":"Use the `shinybones` package to create an interactive dashboard to visualize all 3 metrics at the same time.","packages":"shinybones","timestamp_sec":2485}]</script>

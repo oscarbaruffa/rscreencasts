@@ -1,0 +1,24 @@
+---
+title: |
+  Ninja Warrior
+description: |
+  Log-odds with `tidylo` package, Graphing with `ggplot2`
+date: 2020-12-14
+date-format: long
+---
+
+Notable topics: Log-odds with `tidylo` package, Graphing with `ggplot2`
+
+Recorded on: 2020-12-14
+
+Timestamps by: Alex Cookson
+
+[View code](NA)
+
+## Full screencast
+
+<iframe class="video" src="https://www.youtube.com/embed/4AhXvMsCooM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+## Timestamps
+
+<script id="timestamps" type="application-json">[{"timestamp_with_hours":"0:2:35","description":"Inspecting the dataset","timestamp_sec":155},{"timestamp_with_hours":"0:6:40","description":"Using `geom_histogram` to look at distribution of obstacles in a stage","functions":"geom_histogram","timestamp_sec":400},{"timestamp_with_hours":"0:9:05","description":"Using `str_remove` function to clean stage names (remove \"(Regional/City)\")","functions":"str_remove","timestamp_sec":545},{"timestamp_with_hours":"0:10:40","description":"Asking, \"Are there obstacles that are more common in the Finals than Qualifying rounds?\"","timestamp_sec":640},{"timestamp_with_hours":"0:10:50","description":"Using `bind_log_odds` function from `tidylo` package to calculate log-odds of obstacles within a stage type","functions":"bind_log_odds","packages":"tidylo","timestamp_sec":650},{"timestamp_with_hours":"0:16:05","description":"Using `unite` function to combine two columns","functions":"unite","timestamp_sec":965},{"timestamp_with_hours":"0:18:20","description":"Graphing the average position of different obstacles with many, many tweaks to make it look nice","timestamp_sec":1100},{"timestamp_with_hours":"0:23:10","description":"Creating a stacked bar plot of which obstacles appear in which order","timestamp_sec":1390},{"timestamp_with_hours":"0:30:30","description":"Turning stacked bar plot visualization into a custom function","timestamp_sec":1830},{"timestamp_with_hours":"0:37:40","description":"Asking, \"Is there data on how difficult an obstacle is?\"","timestamp_sec":2260},{"timestamp_with_hours":"0:45:30","description":"Visualizing which obstacles appear in different seasons with `geom_tile` and a lot of tweaking","functions":"geom_tile","timestamp_sec":2730},{"timestamp_with_hours":"0:50:22","description":"Reviewing the result of the previous step (obstacles in different seasons)","timestamp_sec":3022},{"timestamp_with_hours":"0:59:25","description":"Summary of screencast","timestamp_sec":3565}]</script>

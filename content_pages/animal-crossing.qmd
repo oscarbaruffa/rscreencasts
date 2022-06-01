@@ -1,0 +1,24 @@
+---
+title: |
+  Animal Crossing
+description: |
+  Topic modelling (stm package)
+date: 2020-05-04
+date-format: long
+---
+
+Notable topics: Topic modelling (stm package)
+
+Recorded on: 2020-05-04
+
+Timestamps by: Alex Cookson
+
+[View code](https://github.com/dgrtwo/data-screencasts/blob/master/animal-crossing.Rmd)
+
+## Full screencast
+
+<iframe class="video" src="https://www.youtube.com/embed/Xt7ACiedRRI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+## Timestamps
+
+<script id="timestamps" type="application-json">[{"timestamp_with_hours":"0:5:05","description":"Starting text analysis of critic reviews of Animal Crossing","timestamp_sec":305},{"timestamp_with_hours":"0:7:50","description":"Using floor_date function from lubridate package to round dates down to nearest month (then week)","functions":"floor_date","packages":"lubridate","timestamp_sec":470},{"timestamp_with_hours":"0:9:00","description":"Using unnest_tokens function and anti_join functions from tidytext package to break reviews into individual words and remove stop words","functions":"unnest_tokens | anti_join","packages":"tidytext","timestamp_sec":540},{"timestamp_with_hours":"0:10:35","description":"Taking the average rating associated with individual words (simple approach to gauge sentiment)","timestamp_sec":635},{"timestamp_with_hours":"0:12:30","description":"Using geom_line and geom_point to graph ratings over time","functions":"geom_line","timestamp_sec":750},{"timestamp_with_hours":"0:14:40","description":"Using mean function and logical statement to calculate percentages that meet a certain condition","functions":"mean","timestamp_sec":880},{"timestamp_with_hours":"0:22:30","description":"Using geom_text to visualize what words are associated with positive/negative reviews","functions":"geom_text","timestamp_sec":1350},{"timestamp_with_hours":"0:27:00","description":"Disclaimer that this exploration is not text regression -- wine ratings screencast is a good resource for that","timestamp_sec":1620},{"timestamp_with_hours":"0:28:30","description":"Starting to do topic modelling","timestamp_sec":1710},{"timestamp_with_hours":"0:30:45","description":"Explanation of stm function from stm package","functions":"stm","packages":"stm","timestamp_sec":1845},{"timestamp_with_hours":"0:34:30","description":"Explanation of stm function's output (topic modelling output)","functions":"stm","packages":"stm","timestamp_sec":2070},{"timestamp_with_hours":"0:36:55","description":"Changing the number of topics from 4 to 6","timestamp_sec":2215},{"timestamp_with_hours":"0:37:40","description":"Explanation of how topic modelling works conceptually","timestamp_sec":2260},{"timestamp_with_hours":"0:40:55","description":"Using tidy function from broom package to find which \"documents\" (reviews) were the \"strongest\" representation of each topic","functions":"tidy","packages":"broom","timestamp_sec":2455},{"timestamp_with_hours":"0:44:50","description":"Noting that there might be a scraping issue resulting in review text being repeated","timestamp_sec":2690},{"timestamp_with_hours":"0:46:05","description":"(Unsuccessfully) Using str_sub function to help fix repeated review text by locating where in the review text starts being repeated","functions":"str_sub","timestamp_sec":2765},{"timestamp_with_hours":"0:48:20","description":"(Unsuccessfully) Using str_replace and map2_chr functions, as well as regex cpaturing groups to fix repeated text","functions":"str_replace | map2","timestamp_sec":2900},{"timestamp_with_hours":"0:52:00","description":"Looking at the association between review grade and gamma of the topic model (how \"strong\" a review represents a topic)","timestamp_sec":3120},{"timestamp_with_hours":"0:53:55","description":"Using cor function with method = \"spearman\" to calculate correlation based on rank instead of actual values","functions":"cor","timestamp_sec":3235},{"timestamp_with_hours":"0:57:35","description":"Summary of screencast","timestamp_sec":3455}]</script>

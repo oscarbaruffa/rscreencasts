@@ -1,0 +1,24 @@
+---
+title: |
+  Caribou Locations
+description: |
+  Maps with `ggplot2`, Calculating distance and speed with `geosphere`
+date: 2020-06-22
+date-format: long
+---
+
+Notable topics: Maps with `ggplot2`, Calculating distance and speed with `geosphere`
+
+Recorded on: 2020-06-22
+
+Timestamps by: Eric Fletcher
+
+[View code](https://github.com/dgrtwo/data-screencasts/blob/master/caribou-locations.Rmd)
+
+## Full screencast
+
+<iframe class="video" src="https://www.youtube.com/embed/7G7SVODhVo4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+## Timestamps
+
+<script id="timestamps" type="application-json">[{"timestamp_with_hours":"0:4:00","description":"Use `summarize` and `across` to calculate the proportion of `NA` values in the `individuals` dataset. Note, you do not need to use `list()`.","functions":"summarize | across","packages":"dplyr","timestamp_sec":240},{"timestamp_with_hours":"0:9:00","description":"Use `ggplot` and `borders` from the `ggplot2` package to create a map of `Canada` with `deploy_on_longitude` and `deploy_on_latitude` from the `individuals` dataset.","functions":"ggplot | borders","packages":"ggplot2","timestamp_sec":540},{"timestamp_with_hours":"0:13:50","description":"Import Canada province `shapefile` using the `sf` package. [Unsuccessful]","functions":"read_sf","packages":"sf","timestamp_sec":830},{"timestamp_with_hours":"0:25:00","description":"Use `min` and `max` from `base r ` within `summarize` to find out the `start` and `end` dates for each caribou in the `locations` dataset.","functions":"min | max","packages":"base","timestamp_sec":1500},{"timestamp_with_hours":"0:27:15","description":"Use `sample` from `base r` to pick one single caribou at a time then use the subset with `geom_path` from `ggplot2` to track the path a that caribou takes over time.  `color = factor(floor_date(timestamp, \"quarter\")` is used to color the path according to what quarter the observation occured in.","functions":"sample | geom_path","packages":"base | ggplot2","timestamp_sec":1635},{"timestamp_with_hours":"0:35:15","description":"Use `as.Date` from `base r` and `floor_date` from the `lubridate` package to convert `timestamp` variable into quarters then `facet_wrap` the previous plot by `quarter`.","functions":"as.Date | floor_date","packages":"base | lubridate","timestamp_sec":2115},{"timestamp_with_hours":"0:37:15","description":"Within `mutate`, use `as.numeric(difftime(timestamp, lag(timestamp), unit = \"hours\"))`  from `base r` to figure out the gap in time between observations.","functions":"difftime | lag","packages":"base","timestamp_sec":2235},{"timestamp_with_hours":"0:43:05","description":"Use `distHaversine` from the `geosphere` package to calculate distance in `km` then convert it to speed in `kph`.","functions":"distHaversine | cbind","packages":"geosphere","timestamp_sec":2585},{"timestamp_with_hours":"1:00:00","description":"Summary of dataset.","timestamp_sec":3600}]</script>

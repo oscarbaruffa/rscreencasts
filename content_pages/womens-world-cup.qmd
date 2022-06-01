@@ -1,0 +1,24 @@
+---
+title: |
+  Women's World Cup
+description: |
+  NA
+date: 2019-07-21
+date-format: long
+---
+
+Notable topics: NA
+
+Recorded on: 2019-07-21
+
+Timestamps by: Alex Cookson
+
+[View code](https://github.com/dgrtwo/data-screencasts/blob/master/womens-world-cup.Rmd)
+
+## Full screencast
+
+<iframe class="video" src="https://www.youtube.com/embed/ZOQSuapvHqA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+## Timestamps
+
+<script id="timestamps" type="application-json">[{"timestamp_with_hours":"0:2:15","description":"Adding country names using countrycode package","packages":"countrycode","timestamp_sec":135},{"timestamp_with_hours":"0:3:45","description":"Web scraping country codes from Wikipedia","timestamp_sec":225},{"timestamp_with_hours":"0:6:00","description":"Combining tables that are separate lists into one dataframe","timestamp_sec":360},{"timestamp_with_hours":"0:14:00","description":"Using rev function (reverse) to turn multiple rows of soccer match scores into one row (base team and opposing team)","functions":"rev","timestamp_sec":840},{"timestamp_with_hours":"0:26:30","description":"Applying a geom_smooth linear model line to a scatter plot, then facetting it","functions":"geom_smooth","timestamp_sec":1590},{"timestamp_with_hours":"0:28:30","description":"Adding a line with a slope of 1 (x = y) using geom_abline","functions":"geom_abline","timestamp_sec":1710},{"timestamp_with_hours":"0:40:00","description":"Pulling out elements of a list that is embedded in a dataframe","timestamp_sec":2400},{"timestamp_with_hours":"1:09:45","description":"Using glue function to add context to facet titles","functions":"glue","packages":"glue","timestamp_sec":4185}]</script>

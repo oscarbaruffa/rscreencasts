@@ -1,0 +1,24 @@
+---
+title: |
+  Transit Costs
+description: |
+  EDA (Exploratory Data Analysis) with boxplots, interactive Shiny dashboard
+date: 2021-01-04
+date-format: long
+---
+
+Notable topics: EDA (Exploratory Data Analysis) with boxplots, interactive Shiny dashboard
+
+Recorded on: 2021-01-04
+
+Timestamps by: Alex Cookson
+
+[View code](https://github.com/dgrtwo/data-screencasts/blob/master/2021_01_05_transit_costs.Rmd)
+
+## Full screencast
+
+<iframe class="video" src="https://www.youtube.com/embed/8jNQzce13SE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+## Timestamps
+
+<script id="timestamps" type="application-json">[{"timestamp_with_hours":"0:4:45","description":"Using `countrycode` function from `countrycode` package to convert two-letter country codes to country names","functions":"countrycode","packages":"countrycode","timestamp_sec":285},{"timestamp_with_hours":"0:6:20","description":"Using `geom_errorbarh` function to visualize start and end times of transit projects","functions":"geom_errorbarh","timestamp_sec":380},{"timestamp_with_hours":"0:7:15","description":"Using `fct_reorder` function to reorder lines by project midpoint year","functions":"fct_reorder","timestamp_sec":435},{"timestamp_with_hours":"0:9:10","description":"Using `as.numeric` to convert character field (real_cost) to proper numeric field","functions":"as.numeric","timestamp_sec":550},{"timestamp_with_hours":"0:10:20","description":"Using `mutate_at` function to apply the same function (`as.numeric`) to multiple fields in one line of code","functions":"mutate_at","timestamp_sec":620},{"timestamp_with_hours":"0:13:40","description":"Using `geom_boxplot` and `fct_lump` to visualize cost per kilometre by country as boxplots","functions":"geom_boxplot | fct_lump","timestamp_sec":820},{"timestamp_with_hours":"0:15:35","description":"Using `glue` function from `glue` package to combine fields to make easy-to-read labels on a graph","functions":"glue","packages":"glue","timestamp_sec":935},{"timestamp_with_hours":"0:19:15","description":"Splitting boxplots into whether they are railroads (rr) or not, using `factor` function and `fill` argument","functions":"factor","timestamp_sec":1155},{"timestamp_with_hours":"0:24:15","description":"Investigating sources of missing data for Shanghai","timestamp_sec":1455},{"timestamp_with_hours":"0:31:35","description":"Using `geom_jitter` with `geom_boxplot` to show distribution of items within each group","functions":"geom_jitter","timestamp_sec":1895},{"timestamp_with_hours":"0:33:00","description":"Setting `geom_boxplot` argument `outlier.size = -1` as a hack to get rid of boxplot-generated outlier points","functions":"geom_boxplot","timestamp_sec":1980},{"timestamp_with_hours":"0:40:40","description":"Starting to build a `shiny` app","packages":"shiny","timestamp_sec":2440},{"timestamp_with_hours":"0:48:55","description":"Review of preliminary `shiny` app","packages":"shiny","timestamp_sec":2935},{"timestamp_with_hours":"0:58:00","description":"Screencast summary","timestamp_sec":3480},{"timestamp_with_hours":"1:00:25","description":"Showing how to upload code to GitHub in RStudio","timestamp_sec":3625}]</script>

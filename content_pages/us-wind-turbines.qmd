@@ -1,0 +1,24 @@
+---
+title: |
+  US Wind Turbines
+description: |
+  Animated map (gganimate package)
+date: 2018-11-05
+date-format: long
+---
+
+Notable topics: Animated map (gganimate package)
+
+Recorded on: 2018-11-05
+
+Timestamps by: Alex Cookson
+
+[View code](https://github.com/dgrtwo/data-screencasts/blob/master/us-wind.Rmd)
+
+## Full screencast
+
+<iframe class="video" src="https://www.youtube.com/embed/O1oDIQV6VKU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+## Timestamps
+
+<script id="timestamps" type="application-json">[{"timestamp_with_hours":"0:3:50","description":"Using count function to explore categorical variables","functions":"count","timestamp_sec":230},{"timestamp_with_hours":"0:5:00","description":"Creating a quick-and-dirty map using geom_point function and latitude and longitude data","functions":"geom_point","timestamp_sec":300},{"timestamp_with_hours":"0:6:10","description":"Explaining need for mapproj package when plotting maps in ggplot2","functions":"coord_map","packages":"mapproj","timestamp_sec":370},{"timestamp_with_hours":"0:7:35","description":"Using borders function to add US state borders to map","functions":"borders","timestamp_sec":455},{"timestamp_with_hours":"0:10:45","description":"Using fct_lump to get the top 6 project categories and put the rest in a lumped \"Other\" category","functions":"fct_lump","timestamp_sec":645},{"timestamp_with_hours":"0:11:30","description":"Changing data so that certain categories' points appear in front of other categories' points on the map","timestamp_sec":690},{"timestamp_with_hours":"0:14:15","description":"Taking the centroid (average longitude and latitude) of points across a geographic area as a way to aggregate categories to one point","timestamp_sec":855},{"timestamp_with_hours":"0:19:40","description":"Using ifelse function to clean missing data that is coded as \"-9999\"","functions":"ifelse","timestamp_sec":1180},{"timestamp_with_hours":"0:26:00","description":"Asking, \"How has turbine capacity changed over time?\"","timestamp_sec":1560},{"timestamp_with_hours":"0:33:15","description":"Exploring different models of wind turbines","timestamp_sec":1995},{"timestamp_with_hours":"0:38:00","description":"Using mutate_if function to find NA values (coded as -9999) in multiple columns and replace them with an actual NA","functions":"mutate_if","timestamp_sec":2280},{"timestamp_with_hours":"0:45:40","description":"Reviewing documentation for gganimate package","packages":"gganimate","timestamp_sec":2740},{"timestamp_with_hours":"0:47:00","description":"Attempting to set up gganimate map","packages":"gganimate","timestamp_sec":2820},{"timestamp_with_hours":"0:48:55","description":"Understanding gganimate package using a \"Hello World\" / toy example, then trying to debug turbine animation","packages":"gganimate","timestamp_sec":2935},{"timestamp_with_hours":"0:56:45","description":"Using is.infinite function to get rid of troublesome Inf values","functions":"is.infinite","timestamp_sec":3405},{"timestamp_with_hours":"0:57:55","description":"Quick hack for getting cumulative data from a table using crossing function (though it does end up with some duplication)","functions":"crossing","timestamp_sec":3475},{"timestamp_with_hours":"1:01:45","description":"Diagnosis of gganimate issue (points between integer years are being interpolated)","packages":"gganimate","timestamp_sec":3705},{"timestamp_with_hours":"1:04:35","description":"Pseudo-successful gganimate map (cumulative points show up, but some points are missing)","packages":"gganimate","timestamp_sec":3875},{"timestamp_with_hours":"1:05:40","description":"Summary of screencast","timestamp_sec":3940}]</script>

@@ -1,0 +1,24 @@
+---
+title: |
+  Malaria Incidence
+description: |
+  Map visualization
+date: 2018-11-11
+date-format: long
+---
+
+Notable topics: Map visualization
+
+Recorded on: 2018-11-11
+
+Timestamps by: Alex Cookson
+
+[View code](https://github.com/dgrtwo/data-screencasts/blob/master/malaria.Rmd)
+
+## Full screencast
+
+<iframe class="video" src="https://www.youtube.com/embed/5_6O2oDy5Jk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+## Timestamps
+
+<script id="timestamps" type="application-json">[{"timestamp_with_hours":"0:2:45","description":"Importing data using the malariaAtlas package","packages":"malariaAtlas","timestamp_sec":165},{"timestamp_with_hours":"0:14:10","description":"Using geom_line function to visualize malaria prevalence over time","functions":"geom_line","timestamp_sec":850},{"timestamp_with_hours":"0:15:10","description":"Quick map visualization using longitude and latitude coordinates and the geom_point function","functions":"geom_point","timestamp_sec":910},{"timestamp_with_hours":"0:18:40","description":"Using borders function to add Kenyan country borders to map","functions":"borders","timestamp_sec":1120},{"timestamp_with_hours":"0:19:50","description":"Using scale_colour_gradient2 function to change the colour scale of points on the map","functions":"scale_colour_gradient2","timestamp_sec":1190},{"timestamp_with_hours":"0:20:40","description":"Using arrange function to ensure that certain points on a map appear in front of/behind other points","functions":"arrange","timestamp_sec":1240},{"timestamp_with_hours":"0:21:50","description":"Aggregating data into decades using the truncated division operator %/%","functions":"%/%","timestamp_sec":1310},{"timestamp_with_hours":"0:24:45","description":"Starting to look at aggregated malaria data (instead of country-specific data)","timestamp_sec":1485},{"timestamp_with_hours":"0:26:50","description":"Using sample and unique functions to randomly select a few countries, which are then graphed","functions":"sample | unique","timestamp_sec":1610},{"timestamp_with_hours":"0:28:30","description":"Using last function to select the most recent observation from a set of arranged data","functions":"last","timestamp_sec":1710},{"timestamp_with_hours":"0:32:55","description":"Creating a Bland-Altman plot to explore relationship between current incidence and change in incidence in past 15 years","timestamp_sec":1975},{"timestamp_with_hours":"0:35:45","description":"Using anti_join function to find which countries are not in the malaria dataset","functions":"anti_join","timestamp_sec":2145},{"timestamp_with_hours":"0:36:40","description":"Using the iso3166 dataset set in the maps package to match three-letter country code (i.e., the ISO 3166 code) with country names","packages":"maps","timestamp_sec":2200},{"timestamp_with_hours":"0:38:30","description":"Creating a world map using geom_polygon function (and eventually theme_void and coord_map functions)","functions":"geom_polygon | theme_void | coord_map","timestamp_sec":2310},{"timestamp_with_hours":"0:39:00","description":"Getting rid of Antarctica from world map","timestamp_sec":2340},{"timestamp_with_hours":"0:42:35","description":"Using facet_wrap function to create small multiples of world map for different time periods","functions":"facet_wrap","timestamp_sec":2555},{"timestamp_with_hours":"0:47:30","description":"Starting to create an animated map of malaria deaths (actual code writing starts at 57:45)","timestamp_sec":2850},{"timestamp_with_hours":"0:51:25","description":"Starting with a single year after working through some bugs","timestamp_sec":3085},{"timestamp_with_hours":"0:52:10","description":"Using regex_inner_join function from the fuzzyjoin package to join map datasets because one of them has values in regular expressions","functions":"regex_inner_join","packages":"fuzzyjoin","timestamp_sec":3130},{"timestamp_with_hours":"0:55:15","description":"As alternative to fuzzyjoin package in above step, using str_remove function to get rid of unwanted regex","functions":"str_remove","timestamp_sec":3315},{"timestamp_with_hours":"0:57:45","description":"Starting to turn static map into an animation using gganimate package","packages":"gganimate","timestamp_sec":3465},{"timestamp_with_hours":"1:02:00","description":"The actual animated map","timestamp_sec":3720},{"timestamp_with_hours":"1:02:35","description":"Using countrycode package to filter down to countries in a specific continent (Africa, in this case)","functions":"countrycode","packages":"countrycode","timestamp_sec":3755},{"timestamp_with_hours":"1:03:55","description":"Summary of screencast","timestamp_sec":3835}]</script>

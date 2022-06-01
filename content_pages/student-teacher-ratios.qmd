@@ -1,0 +1,24 @@
+---
+title: |
+  Student-Teacher Ratios
+description: |
+  WDI package (World Development Indicators)
+date: 2019-05-09
+date-format: long
+---
+
+Notable topics: WDI package (World Development Indicators)
+
+Recorded on: 2019-05-09
+
+Timestamps by: Alex Cookson
+
+[View code](https://github.com/dgrtwo/data-screencasts/blob/master/student-teacher-ratios.Rmd)
+
+## Full screencast
+
+<iframe class="video" src="https://www.youtube.com/embed/NoUHdrailxA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+## Timestamps
+
+<script id="timestamps" type="application-json">[{"timestamp_with_hours":"0:7:30","description":"Using slice function to select 10 highest and 10 lowest student-teacher ratios (like a filter using row numbers)","functions":"slice","timestamp_sec":450},{"timestamp_with_hours":"0:12:35","description":"Adding GDP per capita to a dataset using WDI package","packages":"WDI","timestamp_sec":755},{"timestamp_with_hours":"0:17:40","description":"Using geom_text to add labels to points on a scatterplot","functions":"geom_text","timestamp_sec":1060},{"timestamp_with_hours":"0:19:00","description":"Using WDIsearch function from WDI package to search for country population data","functions":"WDIsearch","packages":"WDI","timestamp_sec":1140},{"timestamp_with_hours":"0:23:20","description":"Explanation of trick with geom_text function's check_overlap argument to get label for US to appear by rearranging row order","timestamp_sec":1400},{"timestamp_with_hours":"0:25:45","description":"Using comma_format function from scales format to get more readable numeric legend (e.g., \"500,000,000\" instead of \"5e+08\")","functions":"comma_format","packages":"scales","timestamp_sec":1545},{"timestamp_with_hours":"0:27:55","description":"Exploring different education-related indicators in the WDI package","packages":"WDI","timestamp_sec":1675},{"timestamp_with_hours":"0:31:55","description":"Using spread function (now pivot_wider) to turn data from tidy to wide format","functions":"spread | pivot_wider","timestamp_sec":1915},{"timestamp_with_hours":"0:32:15","description":"Using to_snake_case function from snakecase package to conver field names to snake_case","functions":"to_snake_case","packages":"snakecase","timestamp_sec":1935},{"timestamp_with_hours":"0:48:30","description":"Exploring female/male school secondary school enrollment","timestamp_sec":2910},{"timestamp_with_hours":"0:51:50","description":"Note of caution on keeping confounders in mind when interpreting scatterplots","timestamp_sec":3110},{"timestamp_with_hours":"0:52:30","description":"Creating a linear regression of secondary school enrollment to explore confounders","functions":"lm","timestamp_sec":3150},{"timestamp_with_hours":"0:54:30","description":"Discussing the actual confounder (GDP per capita) in the linear regression above","timestamp_sec":3270},{"timestamp_with_hours":"0:57:20","description":"Adding world region as another potential confounder","timestamp_sec":3440},{"timestamp_with_hours":"0:58:00","description":"Using aov function (ANOVA) to explore confounders further","functions":"aov","timestamp_sec":3480},{"timestamp_with_hours":"1:06:50","description":"Reviewing and interpreting the final linear regression model","timestamp_sec":4010},{"timestamp_with_hours":"1:08:00","description":"Using cor function (correlation) to get correlation matrix for three variables (and brief explanation of multi-collinearity)","functions":"cor","timestamp_sec":4080},{"timestamp_with_hours":"1:10:10","description":"Summary of screencast","timestamp_sec":4210}]</script>

@@ -1,0 +1,24 @@
+---
+title: |
+  Riddler: Simulating Replacing Die Sides
+description: |
+  accumulate() function for simulation
+date: 2020-03-29
+date-format: long
+---
+
+Notable topics: accumulate() function for simulation
+
+Recorded on: 2020-03-29
+
+Timestamps by: Alex Cookson
+
+[View code](https://github.com/dgrtwo/data-screencasts/blob/master/riddler-die-reroll.Rmd)
+
+## Full screencast
+
+<iframe class="video" src="https://www.youtube.com/embed/XEsNpxl5b1M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+## Timestamps
+
+<script id="timestamps" type="application-json">[{"timestamp_with_hours":"0:0:45","description":"Explaining why the recursive nature of this problem is well-suited to simulation","timestamp_sec":45},{"timestamp_with_hours":"0:2:05","description":"Introducing the accumulate function as a tool for simulation","functions":"accumulate","timestamp_sec":125},{"timestamp_with_hours":"0:3:50","description":"Creating a condition to call the done function","timestamp_sec":230},{"timestamp_with_hours":"0:7:00","description":"After creating a function to simulate one round of the problem, using replicate function to run simulation many times","functions":"replicate","timestamp_sec":420},{"timestamp_with_hours":"0:7:15","description":"Using qplot function to quickly create a histogram of simulations","functions":"qplot","timestamp_sec":435},{"timestamp_with_hours":"0:7:40","description":"Making observations on the distribution of simulations (looks kind of like a gamma distribution)","timestamp_sec":460},{"timestamp_with_hours":"0:10:05","description":"Observing that the distribution is kind of log-normal (but that doesn't really apply because we're using integers)","timestamp_sec":605},{"timestamp_with_hours":"0:10:35","description":"Using table and sort functions to find the most common number of rolls","functions":"table | sort","timestamp_sec":635},{"timestamp_with_hours":"0:11:20","description":"Starting the Extra Credit portion of the problem (N-sided die)","timestamp_sec":680},{"timestamp_with_hours":"0:11:40","description":"Using the crossing function to set up a tibble to run simulations","functions":"crossing","timestamp_sec":700},{"timestamp_with_hours":"0:12:35","description":"Using map_dbl function to apply a set of simulations to each possibility of N sides","functions":"map_dbl","timestamp_sec":755},{"timestamp_with_hours":"0:13:30","description":"Spotting an error in the formula for simulating one round (6-sided die was hard-coded)","timestamp_sec":810},{"timestamp_with_hours":"0:16:40","description":"Using simple linear regression with the lm function to find the relationship between number of sides and average number of rolls","functions":"lm","timestamp_sec":1000},{"timestamp_with_hours":"0:17:20","description":"Reviewing distributions for different N-sided dice","timestamp_sec":1040},{"timestamp_with_hours":"0:18:00","description":"Calculating variance, standard deviation, and coefficient of variation to get hints on the distribution (and ruling out Poisson)","timestamp_sec":1080}]</script>

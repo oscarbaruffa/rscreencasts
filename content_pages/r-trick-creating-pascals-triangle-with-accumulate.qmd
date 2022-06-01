@@ -1,0 +1,24 @@
+---
+title: |
+  R trick: Creating Pascal's Triangle with accumulate()
+description: |
+  accumulate() function for recursive formulas
+date: 2020-03-28
+date-format: long
+---
+
+Notable topics: accumulate() function for recursive formulas
+
+Recorded on: 2020-03-28
+
+Timestamps by: Alex Cookson
+
+[View code](https://github.com/dgrtwo/data-screencasts/blob/master/pascals-triangle.Rmd)
+
+## Full screencast
+
+<iframe class="video" src="https://www.youtube.com/embed/rUK9Wz9B2n0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+## Timestamps
+
+<script id="timestamps" type="application-json">[{"timestamp_with_hours":"0:1:10","description":"Simple explanation of accumulate function","functions":"accumulate","timestamp_sec":70},{"timestamp_with_hours":"0:1:30","description":"Example using letters","timestamp_sec":90},{"timestamp_with_hours":"0:2:55","description":"Using tilde ~ to create an anonymous function","functions":"~","timestamp_sec":175},{"timestamp_with_hours":"0:4:35","description":"Introducing Pascal's Triangle","timestamp_sec":275},{"timestamp_with_hours":"0:6:25","description":"Starting to create Pascal's triangle in R","timestamp_sec":385},{"timestamp_with_hours":"0:8:05","description":"Concerting the conceptual solution into an accumulate function","functions":"accumulate","timestamp_sec":485}]</script>

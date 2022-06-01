@@ -1,0 +1,24 @@
+---
+title: |
+  African-American Achievements
+description: |
+  `plotly` interactive timeline, Wikipedia web scraping
+date: 2020-06-08
+date-format: long
+---
+
+Notable topics: `plotly` interactive timeline, Wikipedia web scraping
+
+Recorded on: 2020-06-08
+
+Timestamps by: Eric Fletcher
+
+[View code](https://github.com/dgrtwo/data-screencasts/blob/master/african-american-achievements.Rmd)
+
+## Full screencast
+
+<iframe class="video" src="https://www.youtube.com/embed/-W-OopvhNPo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+## Timestamps
+
+<script id="timestamps" type="application-json">[{"timestamp_with_hours":"0:8:20","description":"Use ` fct_reorder` from the `forcats` package to reorder the `category` factor levels by sorting along  `n`.","functions":"fct_reorder","packages":"forcats","timestamp_sec":500},{"timestamp_with_hours":"0:11:35","description":"Use `str_remove` from the `stringr` package to remove anything after a bracket or parenthesis from the `person` variable with the `regular expression` `\"[\\\\[\\\\(].*\"` David then discusses how web scraping may be a better option than parsing the strings.","functions":"str_remove","packages":"stringr","timestamp_sec":695},{"timestamp_with_hours":"0:12:25","description":"Use `str_trim` from the `stringr` package to remove the `whitespace` from the `person` variable. David then discusses how web scraping may be a better option than parsing the strings.","functions":"str_trim","packages":"stringr","timestamp_sec":745},{"timestamp_with_hours":"0:15:50","description":"Create an interactive `plotly` timeline.","functions":"ggplotly","packages":"plotly","timestamp_sec":950},{"timestamp_with_hours":"0:18:20","description":"Use `ylim(c(-.1, 1))` to set scale limits moving the `geom_point` to the bottom of the graph.","functions":"ylim","packages":"ggplot2","timestamp_sec":1100},{"timestamp_with_hours":"0:19:30","description":"Use `paste0` from `base R` to concatenate the `accomplishment` and `person` with `\": \"` in between the two displayed in the timeline hover label.","functions":"paste0","packages":"base","timestamp_sec":1170},{"timestamp_with_hours":"0:20:30","description":"Set `y` to `category` in `ggplot` `aesthetics` to get 8 separate timelines on one plot, one for each category. Doing this allows David to remove the `ylim` mentioned above.","functions":"aes","packages":"ggplot2","timestamp_sec":1230},{"timestamp_with_hours":"0:22:25","description":"Use the `plotly` `tooltip = text` parameter to get just a single line of text in the `plotly` hover labels.","functions":"tooltip","packages":"plotly","timestamp_sec":1345},{"timestamp_with_hours":"0:26:05","description":"Use `glue` from the `glue` package to reformat `text` with `\\n` included so that the single line of text can now be broken up into 2 separate lines in the hover labels.","functions":"glue","packages":"glue","timestamp_sec":1565},{"timestamp_with_hours":"0:33:55","description":"Use `separate_rows` from the `tidyr` package to separate the `occupation_s` variable from the `science` dataset into multiple columns delimited by a semicolon with `sep = \"; \"`","functions":"separate_rows","packages":"tidyr","timestamp_sec":2035},{"timestamp_with_hours":"0:34:25","description":"Use `str_to_title` from the `stringr` package to conver the case to title case in the `occupation_s` variable.","functions":"str_to_title","packages":"stringr","timestamp_sec":2065},{"timestamp_with_hours":"0:35:15","description":"Use `str_detect` from the `stringr` package to detect the presence of `statistician` from within the `occupation_s` variable with `regex(\"statistician\", ignore_case = TRUE)` to perform a case-insensitive search.","functions":"str_detect","packages":"stringr","timestamp_sec":2115},{"timestamp_with_hours":"0:41:55","description":"Use the `rvest` package with `Selector Gadget`  to scrape additional information about the individual from their `Wikipedia` infobox.","functions":"read_html | html_nodes | html_table | setNames","packages":"rvest","timestamp_sec":2515},{"timestamp_with_hours":"0:49:15","description":"Use `map` and `possibly` from the `purrr` package to separate out the downloading of data from parsing the useful information. David then turns the infobox extraction step into an `anonymous function` using `.%>%` dot-pipe.","functions":"map | possibly | read_html","packages":"purrr","timestamp_sec":2955},{"timestamp_with_hours":"0:58:40","description":"Summary of screencast.","timestamp_sec":3520}]</script>

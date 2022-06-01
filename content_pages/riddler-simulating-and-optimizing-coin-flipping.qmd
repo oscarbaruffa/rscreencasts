@@ -1,0 +1,24 @@
+---
+title: |
+  Riddler: Simulating and Optimizing Coin Flipping
+description: |
+  Simulation
+date: 2020-05-02
+date-format: long
+---
+
+Notable topics: Simulation
+
+Recorded on: 2020-05-02
+
+Timestamps by: Alex Cookson
+
+[View code](https://github.com/dgrtwo/data-screencasts/blob/master/riddler-prisoner-coin-flip.Rmd)
+
+## Full screencast
+
+<iframe class="video" src="https://www.youtube.com/embed/nmS3UZSWYRo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+## Timestamps
+
+<script id="timestamps" type="application-json">[{"timestamp_with_hours":"0:2:15","description":"Using `crossing` function to set up \"tidy\" simulation (gives you all possible combinations of values you provide it)","functions":"crossing","timestamp_sec":135},{"timestamp_with_hours":"0:3:00","description":"Using `rbinom` function to simulate the number of prisoners who choose to flip, then using `rbinom` again to simulate number of tails","functions":"rbinom","timestamp_sec":180},{"timestamp_with_hours":"0:7:20","description":"Using `dbinom` function (probability mass function) to see probabilities of any given number of prisoners choosing to flip","functions":"dbinom","timestamp_sec":440},{"timestamp_with_hours":"0:10:15","description":"Using `map_dbl` function to iterate a function, making sure to return a `dbl`-class object","functions":"map_dbl","timestamp_sec":615},{"timestamp_with_hours":"0:11:25","description":"Using `seq_len(n)` instead of `1:n` to be slightly more efficient","functions":"seq_len","timestamp_sec":685},{"timestamp_with_hours":"0:12:20","description":"Using `optimise` function to conduct single-dimension optimisation (for analytical solution to this question)","functions":"optimise","timestamp_sec":740},{"timestamp_with_hours":"0:14:15","description":"Using backticks (`like this`) for inline R functions in RMarkdown","timestamp_sec":855},{"timestamp_with_hours":"0:15:15","description":"Starting the Extra Credit portion of the problem (N prisoners instead of 4)","timestamp_sec":915},{"timestamp_with_hours":"0:16:30","description":"Using `map2_dbl` function to iterate a function that requires two inputs (and make sure it returns a `dbl`-class object)","functions":"map2_dbl","timestamp_sec":990},{"timestamp_with_hours":"0:20:05","description":"Reviewing visualisation of probabilties with a varying numbers of prisoners","timestamp_sec":1205},{"timestamp_with_hours":"0:21:30","description":"Tweaking graph to look nicer","timestamp_sec":1290},{"timestamp_with_hours":"0:22:00","description":"Get the exact optimal probability value for each number of prisoners","timestamp_sec":1320},{"timestamp_with_hours":"0:22:45","description":"Troubleshooting `optimise` function to work when iterated over different numbers of prisoners","functions":"optimise","timestamp_sec":1365},{"timestamp_with_hours":"0:23:45","description":"Using `unnest_wider` function to disaggregate a list, but put different elements on separate columns (not separate rows, which `unnest` does","functions":"unnest_wider","timestamp_sec":1425},{"timestamp_with_hours":"0:25:30","description":"Explanation of what happens to probabilities as number of prisoners increases","timestamp_sec":1530},{"timestamp_with_hours":"0:29:45","description":"Summary of screencast","timestamp_sec":1785}]</script>

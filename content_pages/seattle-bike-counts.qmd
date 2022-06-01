@@ -1,0 +1,24 @@
+---
+title: |
+  Seattle Bike Counts
+description: |
+  NA
+date: 2019-04-04
+date-format: long
+---
+
+Notable topics: NA
+
+Recorded on: 2019-04-04
+
+Timestamps by: Alex Cookson
+
+[View code](https://github.com/dgrtwo/data-screencasts/blob/master/bike_traffic.Rmd)
+
+## Full screencast
+
+<iframe class="video" src="https://www.youtube.com/embed/sBho2GJE5lc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+## Timestamps
+
+<script id="timestamps" type="application-json">[{"timestamp_with_hours":"0:6:15","description":"Using summarise_all / summarise_at function to aggregate multiple variables at the same time","functions":"summarise_all | summarise_at","timestamp_sec":375},{"timestamp_with_hours":"0:8:15","description":"Using magnitude instead of absolute numbers to see trends in time of day","timestamp_sec":495},{"timestamp_with_hours":"0:12:00","description":"Dividing time into categories (four categories for times of day, e.g., morning commute, night) using between function","functions":"between","timestamp_sec":720},{"timestamp_with_hours":"0:15:00","description":"Looking for systematically missing data (which would bias the results of the analysis)","timestamp_sec":900},{"timestamp_with_hours":"0:19:45","description":"Summarising using a filter in the arguments based on whether the time window is during a commute time","timestamp_sec":1185},{"timestamp_with_hours":"0:22:45","description":"Combining day of week and hour using functions in the lubridate package and as.difftime function (but then he uses facetting as an easier method)","functions":"as.difftime","packages":"lubridate","timestamp_sec":1365},{"timestamp_with_hours":"0:26:30","description":"Normalizing day of week data to percent of weekly traffic","timestamp_sec":1590},{"timestamp_with_hours":"0:42:00","description":"Starting analysis of directions of travel by time of day (commute vs. reverse-commute)","timestamp_sec":2520},{"timestamp_with_hours":"0:43:45","description":"Filtering out weekend days using wday function from lubridate package","functions":"wday","packages":"lubridate","timestamp_sec":2625},{"timestamp_with_hours":"0:45:30","description":"Using spread function to create new variable of ratio of bike counts at different commute times","functions":"spread","timestamp_sec":2730},{"timestamp_with_hours":"0:47:30","description":"Visualizing ratio of bike counts by time of day","timestamp_sec":2850},{"timestamp_with_hours":"0:50:15","description":"Visualizing ratio by hour instead of time of day","timestamp_sec":3015},{"timestamp_with_hours":"0:52:50","description":"Ordering crossing in graph by when the average trip happened using mean of hour weighted by bike count","timestamp_sec":3170},{"timestamp_with_hours":"0:54:50","description":"Quick and dirty filter when creating a new variable within a mutate function","functions":"mutate","timestamp_sec":3290}]</script>

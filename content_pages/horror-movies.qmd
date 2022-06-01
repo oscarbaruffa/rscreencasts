@@ -1,0 +1,24 @@
+---
+title: |
+  Horror Movies
+description: |
+  ANOVA, Text mining (tidytext package), LASSO regression (glmnet package)
+date: 2019-10-21
+date-format: long
+---
+
+Notable topics: ANOVA, Text mining (tidytext package), LASSO regression (glmnet package)
+
+Recorded on: 2019-10-21
+
+Timestamps by: Alex Cookson
+
+[View code](https://github.com/dgrtwo/data-screencasts/blob/master/horror-movie-ratings.Rmd)
+
+## Full screencast
+
+<iframe class="video" src="https://www.youtube.com/embed/yFRSTlk3kRQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+## Timestamps
+
+<script id="timestamps" type="application-json">[{"timestamp_with_hours":"0:4:15","description":"Extracting digits (release year) from character string using regex, along with good explanation of extract function","functions":"extract","timestamp_sec":255},{"timestamp_with_hours":"0:8:00","description":"Quick check on why parse_number is unable to parse some values -- is it because they are NA or some other reason?","functions":"parse_number","timestamp_sec":480},{"timestamp_with_hours":"0:9:45","description":"Visually investigating correlation between budget and rating","timestamp_sec":585},{"timestamp_with_hours":"0:11:50","description":"Investigating correlation between MPAA rating (PG-13, R, etc.) and rating using boxplots","timestamp_sec":710},{"timestamp_with_hours":"0:12:50","description":"Using pull function to quickly check levels of a factor","functions":"pull","timestamp_sec":770},{"timestamp_with_hours":"0:13:30","description":"Using ANOVA to check difference of variation within groups (MPAA rating) than between groups","timestamp_sec":810},{"timestamp_with_hours":"0:15:40","description":"Separating genre using separate_rows function (instead of str_split and unnest)","functions":"separate_rows","timestamp_sec":940},{"timestamp_with_hours":"0:18:00","description":"Removing boilerplate \"Directed by...\" and \"With...\" part of plot variable and isolating plot, first using regex, then by using separate function with periods as separator","functions":"separate","timestamp_sec":1080},{"timestamp_with_hours":"0:20:40","description":"Unnesting word tokens, removing stop words, and counting appearances","timestamp_sec":1240},{"timestamp_with_hours":"0:21:20","description":"Aggregating by word to find words that appear in high- or low-rated movies","timestamp_sec":1280},{"timestamp_with_hours":"0:23:00","description":"Discussing potential confounding factors for ratings associated with specific words","timestamp_sec":1380},{"timestamp_with_hours":"0:24:50","description":"Searching for duplicated movie titles","timestamp_sec":1490},{"timestamp_with_hours":"0:25:50","description":"De-duping using distinct function","timestamp_sec":1550},{"timestamp_with_hours":"0:26:55","description":"Loading in and explaining glmnet package","packages":"glmnet","timestamp_sec":1615},{"timestamp_with_hours":"0:28:00","description":"Using movie titles to pull out ratings using rownmaes and match functions to create an index of which rating to pull out of the original dataset","timestamp_sec":1680},{"timestamp_with_hours":"0:29:10","description":"Actually using glmnet function to create lasso model","timestamp_sec":1750},{"timestamp_with_hours":"0:34:05","description":"Showing built-in plot of lasso lambda against mean-squared error","timestamp_sec":2045},{"timestamp_with_hours":"0:37:05","description":"Explaining when certain terms appeared in the lasso model as the lambda value dropped","timestamp_sec":2225},{"timestamp_with_hours":"0:41:10","description":"Gathering all variables except for title, so that the dataset is very tall","timestamp_sec":2470},{"timestamp_with_hours":"0:42:35","description":"Using unite function to combine two variables (better alternative to paste)","functions":"unite","timestamp_sec":2555},{"timestamp_with_hours":"0:45:45","description":"Creating a new lasso with tons of new variables other than plot words","timestamp_sec":2745}]</script>

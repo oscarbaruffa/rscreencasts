@@ -1,0 +1,24 @@
+---
+title: |
+  Palmer Penguins
+description: |
+  Modeling (logistic regression, k-nearest neighbors, decision tree, multiclass logistic regression) with cross validated accuracy
+date: 2020-07-27
+date-format: long
+---
+
+Notable topics: Modeling (logistic regression, k-nearest neighbors, decision tree, multiclass logistic regression) with cross validated accuracy
+
+Recorded on: 2020-07-27
+
+Timestamps by: Eric Fletcher
+
+[View code](https://github.com/dgrtwo/data-screencasts/blob/master/2020_07_28_penguins.Rmd)
+
+## Full screencast
+
+<iframe class="video" src="https://www.youtube.com/embed/ImpXawPNCfM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+## Timestamps
+
+<script id="timestamps" type="application-json">[{"timestamp_with_hours":"0:11:17","description":"Create a pivoted histogram plot to visualize the distribution of penguin metrics using `pivot_longer`, `geom_histogram`, and `facet_wrap`","functions":"pivot_longer | geom_histogram | facet_wrap","packages":"tidyr | ggplot2","timestamp_sec":677},{"timestamp_with_hours":"0:14:40","description":"Create a pivoted density plot  to visualize the distribution of penguin metrics using `geom_density` and `facet_wrap`","functions":"geom_density | facet_wrap","packages":"ggplot2","timestamp_sec":880},{"timestamp_with_hours":"0:15:21","description":"Create a pivoted boxplot plot to visualize the distribution of penguin metrics using `geom_boxplot` and `facet_wrap`","functions":"geom_boxplot | facet_wrap","packages":"ggplot2","timestamp_sec":921},{"timestamp_with_hours":"0:17:50","description":"Create a bar plot to show penguin species changed over time","functions":"geom_bar","packages":"ggplot2","timestamp_sec":1070},{"timestamp_with_hours":"0:18:25","description":"Create a bar plot to show specie counts per island","functions":"geom_bar","packages":"ggplot2","timestamp_sec":1105},{"timestamp_with_hours":"0:20:00","description":"Create a logistic regression model to predict if a penguin is Adelie or not using bill length with cross validaiton of metrics","functions":"initital_split | training | logistic_reg | set_engine |\nfit | fct_lump | predict | metrics | vfold_cv | \nfit_resamples | collect_metrics |","packages":"tidymodels | rsample | parsnip\nyardstick |","timestamp_sec":1200},{"timestamp_with_hours":"0:39:35","description":"Create second logistic regression model using 4 predictive metrics (bill length, bill depth, flipper length, body mass) and then compare the accuracy of both models","functions":"initital_split | training | logistic_reg | set_engine |\nfit | fct_lump | predict | metrics | vfold_cv | \nfit_resamples | collect_metrics |","packages":"tidymodels | rsample | parsnip\nyardstick |","timestamp_sec":2375},{"timestamp_with_hours":"0:43:25","description":"Create a k-nearest neighbor model and then compare accuracy against logistic regression models to see which has the highest cross validated accuracy","functions":"nearest_neighbor | initital_split | training | logistic_reg |\nset_engine | fit | fct_lump | predict | metrics | vfold_cv | \nfit_resamples | collect_metrics","packages":"tidymodels | rsample | parsnip\nyardstick |","timestamp_sec":2605},{"timestamp_with_hours":"0:53:05","description":"What is the accuracy of the testing holdout data on the k-nearest neighbor model?","functions":"testing | predict | metrics","packages":"rsample | stats | yardstick","timestamp_sec":3185},{"timestamp_with_hours":"1:05:40","description":"Create a decision tree and then compare accuracy against the previous models to see which has the highest cross validated accuracy + how to extract a decision tree","functions":"decision_tree | set_engine","packages":"parsnip","timestamp_sec":3940},{"timestamp_with_hours":"1:10:45","description":"Perform multi class regression using `multinom_reg`","functions":"multinom_reg | set_engine | fit_resamples","packages":"parsnip | tune","timestamp_sec":4245},{"timestamp_with_hours":"1:19:40","description":"Summary of screencast","timestamp_sec":4780}]</script>
