@@ -5,6 +5,8 @@ description: |
   Simulation
 date: 2020-11-22
 date-format: long
+aliases:
+  - "Riddler: Simulating a Circular Random Walk.html"
 ---
 
 Notable topics: Simulation
@@ -15,10 +17,168 @@ Timestamps by: Alex Cookson
 
 [View code](NA)
 
-## Full screencast
+## Screencast
 
-<iframe class="video" src="https://www.youtube.com/embed/b1oKh9eeqkY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div id="yt-player" data-video-id="b1oKh9eeqkY"></div>
 
 ## Timestamps
 
-<script id="timestamps" type="application-json">[{"timestamp_with_hours":"0:1:25","description":"Using `sample()` and `cumsum()` to simulate a random walk","functions":"sample | cumsum","timestamp_sec":85},{"timestamp_with_hours":"0:2:30","description":"Using `%%` (modulo operator) to \"close\" the circle (set the number of people in the circle)","functions":"%%","timestamp_sec":150},{"timestamp_with_hours":"0:3:40","description":"Using `crossing` function to set up \"tidy\" simulation (gives you all possible combinations of values you provide it)","functions":"crossing","timestamp_sec":220},{"timestamp_with_hours":"0:5:10","description":"Using `distinct` function and its `.keep_all` argument to get only the first unique set of the variables you give it","functions":"distinct","timestamp_sec":310},{"timestamp_with_hours":"0:8:15","description":"Visualizing the number of steps it takes for the sauce to reach people at differents seats","timestamp_sec":495},{"timestamp_with_hours":"0:13:40","description":"Visualizing the distribution of number of steps it takes to reach each seat","timestamp_sec":820},{"timestamp_with_hours":"0:26:30","description":"Investigating the parabolic shape of average number of steps to reach a given seat","timestamp_sec":1590},{"timestamp_with_hours":"0:28:40","description":"Using `lm` and `I` functions to calculate formula of the parabola describing average number of steps","functions":"lm | I","timestamp_sec":1720},{"timestamp_with_hours":"0:30:15","description":"Starting to vary the size of the table","timestamp_sec":1815},{"timestamp_with_hours":"0:38:45","description":"Summary of screencast","timestamp_sec":2325}]</script>
+```{=html}
+<div id="topics">
+  <div class="topic">
+    <h3 id="ts-85">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(85, this)">0:1:25</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">sample</span><span class="badge-functions badge bg-info">cumsum</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using <code>sample()</code> and <code>cumsum()</code> to simulate a random walk</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-150">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(150, this)">0:2:30</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">%%</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using <code>%%</code> (modulo operator) to &quot;close&quot; the circle (set the number of people in the circle)</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-220">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(220, this)">0:3:40</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">crossing</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using <code>crossing</code> function to set up &quot;tidy&quot; simulation (gives you all possible combinations of values you provide it)</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-310">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(310, this)">0:5:10</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">distinct</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using <code>distinct</code> function and its <code>.keep_all</code> argument to get only the first unique set of the variables you give it</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-495">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(495, this)">0:8:15</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Visualizing the number of steps it takes for the sauce to reach people at differents seats</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-820">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(820, this)">0:13:40</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Visualizing the distribution of number of steps it takes to reach each seat</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1590">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1590, this)">0:26:30</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Investigating the parabolic shape of average number of steps to reach a given seat</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1720">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1720, this)">0:28:40</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">lm</span><span class="badge-functions badge bg-info">I</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using <code>lm</code> and <code>I</code> functions to calculate formula of the parabola describing average number of steps</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1815">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1815, this)">0:30:15</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Starting to vary the size of the table</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2325">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2325, this)">0:38:45</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Summary of screencast</p>
+
+    </div>
+  </div>
+</div>
+```
+     
+<script>
+// 2. This code loads the IFrame Player API code asynchronously.
+var tag = document.createElement("script");
+
+tag.src = "https://www.youtube.com/iframe_api";
+var firstScriptTag = document.getElementsByTagName("script")[0];
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+// 3. This function creates an <iframe> (and YouTube player)
+//    after the API code downloads.
+var videoId = document.getElementById("yt-player").dataset.videoId;
+var player;
+function onYouTubeIframeAPIReady() {
+  player = new YT.Player("yt-player", {
+    height: "486",
+    width: "864",
+    videoId: videoId,
+    playerVars: {
+      "playsinline": 1
+    },
+    events: {
+      onStateChange: function(event) {
+        if (event.data == YT.PlayerState.PLAYING) {
+          followTimestamps()
+        }
+      }
+    }
+  });
+}
+
+function playerSkipToTimestamp(seconds, tsElement) {
+  player.seekTo(seconds, true)
+  tsElement.scrollIntoView()
+  document.getElementById("screencast").scrollIntoView()
+}
+
+const timestamps = Array.from(document.querySelectorAll('.topic h3[id^="ts-"]'))
+  .map(el => el.id.replace('ts-', ''))
+
+function followTimestamps() {
+  if (player.getPlayerState() !== 1) {
+    return
+  }
+  const currentTime = `${Math.floor(player.getCurrentTime())}`
+  if (timestamps.includes(currentTime)) {
+    const el = document.getElementById(`ts-${currentTime}`)
+    if (el) {
+      el.scrollIntoView()
+      document.getElementById("screencast").scrollIntoView()
+    }
+  }
+  setTimeout(followTimestamps, 1000)
+}
+</script>

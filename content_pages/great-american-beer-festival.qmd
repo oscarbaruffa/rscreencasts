@@ -5,6 +5,8 @@ description: |
   Log odds ratio, Logistic regression, TIE Fighter plot
 date: 2020-10-19
 date-format: long
+aliases:
+  - "Great American Beer Festival.html"
 ---
 
 Notable topics: Log odds ratio, Logistic regression, TIE Fighter plot
@@ -15,10 +17,298 @@ Timestamps by: Eric Fletcher
 
 [View code](https://github.com/dgrtwo/data-screencasts/blob/master/2020_10_20_beer_awards.Rmd)
 
-## Full screencast
+## Screencast
 
-<iframe class="video" src="https://www.youtube.com/embed/BV_afpCDQ70" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div id="yt-player" data-video-id="BV_afpCDQ70"></div>
 
 ## Timestamps
 
-<script id="timestamps" type="application-json">[{"timestamp_with_hours":"0:8:20","description":"Use `pivot_wider` with `values_fill = list(value =0))` from the `tidyr` package along with `mutate(value = 1)` to pivot the `medal` variable from `long` to `wide` adding a 1 for the medal type awarded and 0 for the remaining medal types in the row.","functions":"pivot_wider","packages":"tidyr","timestamp_sec":500},{"timestamp_with_hours":"0:11:25","description":"Use `fct_lump` from the `forcats` package to lump together all the beers except for the N most frequent.","functions":"fct_lump","packages":"forcats","timestamp_sec":685},{"timestamp_with_hours":"0:12:25","description":"Use `str_to_upper` from the `stringr` package to convert the case of the `state` variable to uppercase.","functions":"str_to_upper","packages":"stringr","timestamp_sec":745},{"timestamp_with_hours":"0:12:25","description":"Use `fct_relevel` from the the `forcats` package in order to reorder the `medal` factor levels.","functions":"fct_relevel","packages":"forcats","timestamp_sec":745},{"timestamp_with_hours":"0:13:25","description":"Use `fct_reorder` from the `forcats` package to sort `beer_name` factor levels by sorting along `n`.","functions":"fct_reorder","packages":"forcats","timestamp_sec":805},{"timestamp_with_hours":"0:14:30","description":"Use `glue` from the `glue` package to concatenate `beer_name` and `brewery` on the y-axis.","functions":"glue","packages":"glue","timestamp_sec":870},{"timestamp_with_hours":"0:15:00","description":"Use `ties.mthod = \"first\" ` within `fct_lump` to show only the first `brewery` when a tie exists between them.","functions":"fct_lump","packages":"forcats","timestamp_sec":900},{"timestamp_with_hours":"0:19:25","description":"Use `setdiff` from the `dplyr` package and the `state.abb` built in vector from the `datasets` package  to check which states are missing from the dataset.","functions":"state.abb | setdiff","packages":"datasets","timestamp_sec":1165},{"timestamp_with_hours":"0:21:25","description":"Use `summarize` from the `dplyr` package to calculate the `number of medals` with `n_medals = n()`, `number of beers` with `n_distinct`, `number of gold medals` with `sum()`, and `weighted medal totals` using `sum(as.integer()` because `medal` is an ordered factor, so 1 for each bronze, 2 for each silver, and 3 for each gold.","functions":"summarize","packages":"dplyr","timestamp_sec":1285},{"timestamp_with_hours":"0:26:05","description":"Import `Craft Beers Dataset` from `Kaggle` using `read_csv` from the `readr` package.","functions":"read_csv","packages":"readr","timestamp_sec":1565},{"timestamp_with_hours":"0:28:00","description":"Use `inner_join` from the `dplyr` package to join together the 2 datasets from `kaggle`.","functions":"inner_join","packages":"dplyr","timestamp_sec":1680},{"timestamp_with_hours":"0:29:40","description":"Use `semi_join` from the `dplyr` package to join together to see if the beer names match with the `kaggle` dataset.  Ends up at a dead end with not enough matches between the datasets.","functions":"semi_join","packages":"dplyr","timestamp_sec":1780},{"timestamp_with_hours":"0:33:05","description":"Use `bind_log_odds` from the `tidylo` package to show the representation of each beer category for each state compared to the categories across the other states.","functions":"bind_log_odds","packages":"tidylo","timestamp_sec":1985},{"timestamp_with_hours":"0:33:35","description":"Use `complete` from the `tidyr` package in order to turn missing values into explicit missing values.","functions":"complete","packages":"tidyr","timestamp_sec":2015},{"timestamp_with_hours":"0:35:30","description":"Use `reorder_within` from the `tidytext` package and `scale_y_reordered` from the `tidytext` package in order to reorder the bars within each facet panel.","functions":"reorder_within | scale_y_reordered | facet_wrap","packages":"tidytext","timestamp_sec":2130},{"timestamp_with_hours":"0:36:40","description":"Use `fct_reorder` from the `forcats` package to reorder the `facet panels` in descending order.","functions":"fct_reorder","packages":"forcats","timestamp_sec":2200},{"timestamp_with_hours":"0:39:35","description":"For the previous plot, use `fill = log_odds_weighted > 0` in the `ggplot` `aes` argument to highlight the positive and negative values.","functions":"fill","packages":"ggplot2","timestamp_sec":2375},{"timestamp_with_hours":"0:41:45","description":"Use `add_count` from the `dplyr` package to add a `year_total` variable which shows the total awards for each year. Then use this to calculate the percent change in totals medals per state using `mutate(pct_year = n / year)`","functions":"add_count | mutate","packages":"dplyr","timestamp_sec":2505},{"timestamp_with_hours":"0:44:40","description":"Use `glm` from the `stats` package to create a `logistic regression` model to find out if their is a statistical trend in the probability of award success over time.","functions":"glm | cbind","packages":"stats","timestamp_sec":2680},{"timestamp_with_hours":"0:47:15","description":"Exapnd on the previous model by using the `broom` package to fit multiple `logistic regressions` across multiple states instead of doing it for an individual state at a time.","functions":"group_by | summarize | list | glm|mutate | map","packages":"broom | purrr","timestamp_sec":2835},{"timestamp_with_hours":"0:50:25","description":"Use `conf.int = TRUE` to add `confidence bounds` to the `logistic regression` output then use it to create a `TIE Fighter` plot to show which states become more or less frequent medal winners over time.","functions":"conf.int","timestamp_sec":3025},{"timestamp_with_hours":"0:53:00","description":"Use the `state.name` dataset with `match` from `base r`  to change state abbreviation to the state name.","functions":"state.name | match","packages":"datasets","timestamp_sec":3180},{"timestamp_with_hours":"0:55:00","description":"Summary of screencast.","timestamp_sec":3300}]</script>
+```{=html}
+<div id="topics">
+  <div class="topic">
+    <h3 id="ts-500">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(500, this)">0:8:20</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">pivot_wider</span></div><div><span class="badge-packages badge bg-primary">tidyr</span></div></div>
+    <div class="topic_description">
+      <p>Use <code>pivot_wider</code> with <code>values_fill = list(value =0))</code> from the <code>tidyr</code> package along with <code>mutate(value = 1)</code> to pivot the <code>medal</code> variable from <code>long</code> to <code>wide</code> adding a 1 for the medal type awarded and 0 for the remaining medal types in the row.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-685">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(685, this)">0:11:25</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">fct_lump</span></div><div><span class="badge-packages badge bg-primary">forcats</span></div></div>
+    <div class="topic_description">
+      <p>Use <code>fct_lump</code> from the <code>forcats</code> package to lump together all the beers except for the N most frequent.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-745">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(745, this)">0:12:25</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">str_to_upper</span></div><div><span class="badge-packages badge bg-primary">stringr</span></div></div>
+    <div class="topic_description">
+      <p>Use <code>str_to_upper</code> from the <code>stringr</code> package to convert the case of the <code>state</code> variable to uppercase.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-745">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(745, this)">0:12:25</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">fct_relevel</span></div><div><span class="badge-packages badge bg-primary">forcats</span></div></div>
+    <div class="topic_description">
+      <p>Use <code>fct_relevel</code> from the the <code>forcats</code> package in order to reorder the <code>medal</code> factor levels.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-805">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(805, this)">0:13:25</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">fct_reorder</span></div><div><span class="badge-packages badge bg-primary">forcats</span></div></div>
+    <div class="topic_description">
+      <p>Use <code>fct_reorder</code> from the <code>forcats</code> package to sort <code>beer_name</code> factor levels by sorting along <code>n</code>.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-870">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(870, this)">0:14:30</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">glue</span></div><div><span class="badge-packages badge bg-primary">glue</span></div></div>
+    <div class="topic_description">
+      <p>Use <code>glue</code> from the <code>glue</code> package to concatenate <code>beer_name</code> and <code>brewery</code> on the y-axis.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-900">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(900, this)">0:15:00</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">fct_lump</span></div><div><span class="badge-packages badge bg-primary">forcats</span></div></div>
+    <div class="topic_description">
+      <p>Use <code>ties.mthod = &quot;first&quot; </code> within <code>fct_lump</code> to show only the first <code>brewery</code> when a tie exists between them.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1165">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1165, this)">0:19:25</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">state.abb</span><span class="badge-functions badge bg-info">setdiff</span></div><div><span class="badge-packages badge bg-primary">datasets</span></div></div>
+    <div class="topic_description">
+      <p>Use <code>setdiff</code> from the <code>dplyr</code> package and the <code>state.abb</code> built in vector from the <code>datasets</code> package  to check which states are missing from the dataset.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1285">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1285, this)">0:21:25</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">summarize</span></div><div><span class="badge-packages badge bg-primary">dplyr</span></div></div>
+    <div class="topic_description">
+      <p>Use <code>summarize</code> from the <code>dplyr</code> package to calculate the <code>number of medals</code> with <code>n_medals = n()</code>, <code>number of beers</code> with <code>n_distinct</code>, <code>number of gold medals</code> with <code>sum()</code>, and <code>weighted medal totals</code> using <code>sum(as.integer()</code> because <code>medal</code> is an ordered factor, so 1 for each bronze, 2 for each silver, and 3 for each gold.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1565">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1565, this)">0:26:05</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">read_csv</span></div><div><span class="badge-packages badge bg-primary">readr</span></div></div>
+    <div class="topic_description">
+      <p>Import <code>Craft Beers Dataset</code> from <code>Kaggle</code> using <code>read_csv</code> from the <code>readr</code> package.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1680">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1680, this)">0:28:00</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">inner_join</span></div><div><span class="badge-packages badge bg-primary">dplyr</span></div></div>
+    <div class="topic_description">
+      <p>Use <code>inner_join</code> from the <code>dplyr</code> package to join together the 2 datasets from <code>kaggle</code>.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1780">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1780, this)">0:29:40</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">semi_join</span></div><div><span class="badge-packages badge bg-primary">dplyr</span></div></div>
+    <div class="topic_description">
+      <p>Use <code>semi_join</code> from the <code>dplyr</code> package to join together to see if the beer names match with the <code>kaggle</code> dataset.  Ends up at a dead end with not enough matches between the datasets.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1985">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1985, this)">0:33:05</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">bind_log_odds</span></div><div><span class="badge-packages badge bg-primary">tidylo</span></div></div>
+    <div class="topic_description">
+      <p>Use <code>bind_log_odds</code> from the <code>tidylo</code> package to show the representation of each beer category for each state compared to the categories across the other states.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2015">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2015, this)">0:33:35</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">complete</span></div><div><span class="badge-packages badge bg-primary">tidyr</span></div></div>
+    <div class="topic_description">
+      <p>Use <code>complete</code> from the <code>tidyr</code> package in order to turn missing values into explicit missing values.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2130">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2130, this)">0:35:30</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">reorder_within</span><span class="badge-functions badge bg-info">scale_y_reordered</span><span class="badge-functions badge bg-info">facet_wrap</span></div><div><span class="badge-packages badge bg-primary">tidytext</span></div></div>
+    <div class="topic_description">
+      <p>Use <code>reorder_within</code> from the <code>tidytext</code> package and <code>scale_y_reordered</code> from the <code>tidytext</code> package in order to reorder the bars within each facet panel.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2200">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2200, this)">0:36:40</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">fct_reorder</span></div><div><span class="badge-packages badge bg-primary">forcats</span></div></div>
+    <div class="topic_description">
+      <p>Use <code>fct_reorder</code> from the <code>forcats</code> package to reorder the <code>facet panels</code> in descending order.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2375">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2375, this)">0:39:35</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">fill</span></div><div><span class="badge-packages badge bg-primary">ggplot2</span></div></div>
+    <div class="topic_description">
+      <p>For the previous plot, use <code>fill = log_odds_weighted &gt; 0</code> in the <code>ggplot</code> <code>aes</code> argument to highlight the positive and negative values.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2505">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2505, this)">0:41:45</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">add_count</span><span class="badge-functions badge bg-info">mutate</span></div><div><span class="badge-packages badge bg-primary">dplyr</span></div></div>
+    <div class="topic_description">
+      <p>Use <code>add_count</code> from the <code>dplyr</code> package to add a <code>year_total</code> variable which shows the total awards for each year. Then use this to calculate the percent change in totals medals per state using <code>mutate(pct_year = n / year)</code></p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2680">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2680, this)">0:44:40</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">glm</span><span class="badge-functions badge bg-info">cbind</span></div><div><span class="badge-packages badge bg-primary">stats</span></div></div>
+    <div class="topic_description">
+      <p>Use <code>glm</code> from the <code>stats</code> package to create a <code>logistic regression</code> model to find out if their is a statistical trend in the probability of award success over time.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2835">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2835, this)">0:47:15</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">group_by</span><span class="badge-functions badge bg-info">summarize</span><span class="badge-functions badge bg-info">list</span><span class="badge-functions badge bg-info">glm</span><span class="badge-functions badge bg-info">mutate</span><span class="badge-functions badge bg-info">map</span></div><div><span class="badge-packages badge bg-primary">broom</span><span class="badge-packages badge bg-primary">purrr</span></div></div>
+    <div class="topic_description">
+      <p>Exapnd on the previous model by using the <code>broom</code> package to fit multiple <code>logistic regressions</code> across multiple states instead of doing it for an individual state at a time.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-3025">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(3025, this)">0:50:25</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">conf.int</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Use <code>conf.int = TRUE</code> to add <code>confidence bounds</code> to the <code>logistic regression</code> output then use it to create a <code>TIE Fighter</code> plot to show which states become more or less frequent medal winners over time.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-3180">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(3180, this)">0:53:00</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">state.name</span><span class="badge-functions badge bg-info">match</span></div><div><span class="badge-packages badge bg-primary">datasets</span></div></div>
+    <div class="topic_description">
+      <p>Use the <code>state.name</code> dataset with <code>match</code> from <code>base r</code>  to change state abbreviation to the state name.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-3300">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(3300, this)">0:55:00</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Summary of screencast.</p>
+
+    </div>
+  </div>
+</div>
+```
+     
+<script>
+// 2. This code loads the IFrame Player API code asynchronously.
+var tag = document.createElement("script");
+
+tag.src = "https://www.youtube.com/iframe_api";
+var firstScriptTag = document.getElementsByTagName("script")[0];
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+// 3. This function creates an <iframe> (and YouTube player)
+//    after the API code downloads.
+var videoId = document.getElementById("yt-player").dataset.videoId;
+var player;
+function onYouTubeIframeAPIReady() {
+  player = new YT.Player("yt-player", {
+    height: "486",
+    width: "864",
+    videoId: videoId,
+    playerVars: {
+      "playsinline": 1
+    },
+    events: {
+      onStateChange: function(event) {
+        if (event.data == YT.PlayerState.PLAYING) {
+          followTimestamps()
+        }
+      }
+    }
+  });
+}
+
+function playerSkipToTimestamp(seconds, tsElement) {
+  player.seekTo(seconds, true)
+  tsElement.scrollIntoView()
+  document.getElementById("screencast").scrollIntoView()
+}
+
+const timestamps = Array.from(document.querySelectorAll('.topic h3[id^="ts-"]'))
+  .map(el => el.id.replace('ts-', ''))
+
+function followTimestamps() {
+  if (player.getPlayerState() !== 1) {
+    return
+  }
+  const currentTime = `${Math.floor(player.getCurrentTime())}`
+  if (timestamps.includes(currentTime)) {
+    const el = document.getElementById(`ts-${currentTime}`)
+    if (el) {
+      el.scrollIntoView()
+      document.getElementById("screencast").scrollIntoView()
+    }
+  }
+  setTimeout(followTimestamps, 1000)
+}
+</script>

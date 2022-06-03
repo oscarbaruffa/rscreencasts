@@ -5,6 +5,8 @@ description: |
   Data manipulation (especially time series)
 date: 2018-10-29
 date-format: long
+aliases:
+  - "R Downloads.html"
 ---
 
 Notable topics: Data manipulation (especially time series)
@@ -15,10 +17,238 @@ Timestamps by: Alex Cookson
 
 [View code](https://github.com/dgrtwo/data-screencasts/blob/master/r-downloads.Rmd)
 
-## Full screencast
+## Screencast
 
-<iframe class="video" src="https://www.youtube.com/embed/nms9F-XubJU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div id="yt-player" data-video-id="nms9F-XubJU"></div>
 
 ## Timestamps
 
-<script id="timestamps" type="application-json">[{"timestamp_with_hours":"0:5:20","description":"Using geom_line function to visualize changes over time","functions":"geom_line","timestamp_sec":320},{"timestamp_with_hours":"0:7:35","description":"Starting to decompose time series data into day-of-week trend and overall trend (lots of lubridate package functions)","packages":"lubridate","timestamp_sec":455},{"timestamp_with_hours":"0:9:50","description":"Using floor_date function from lubridate package to round dates down to the week level","timestamp_sec":590},{"timestamp_with_hours":"0:10:05","description":"Using min function to drop incomplete/partial week at the start of the dataset","timestamp_sec":605},{"timestamp_with_hours":"0:12:20","description":"Using countrycode function from countrycode package to replace two-letter country codes with full names (e.g., \"CA\" becomes \"Canada\")","functions":"countrycode","packages":"countrycode","timestamp_sec":740},{"timestamp_with_hours":"0:17:20","description":"Using fct_lump function to get top N categories within a categorical variable and classify the rest as \"Other\"","functions":"fct_lump","timestamp_sec":1040},{"timestamp_with_hours":"0:20:30","description":"Using hour function from lubridate package to pull out integer hour value from a datetime variable","functions":"hour","packages":"lubridate","timestamp_sec":1230},{"timestamp_with_hours":"0:22:20","description":"Using facet_wrap function to graph small multiples of downloads by country, then changing scales argument to allow different scales on y-axis","functions":"facet_wrap","timestamp_sec":1340},{"timestamp_with_hours":"0:31:00","description":"Starting analysis of downloads by IP address","timestamp_sec":1860},{"timestamp_with_hours":"0:35:20","description":"Using as.POSIXlt to combine separate date and time variables to get a single datetime variable","functions":"as.POSIXlt","timestamp_sec":2120},{"timestamp_with_hours":"0:36:35","description":"Using lag function to calculate time between downloads (time between events) per IP address (comparable to SQL window function)","functions":"lag","timestamp_sec":2195},{"timestamp_with_hours":"0:38:05","description":"Using as.numeric function to convert variable from a time interval object to a numeric variable (number in seconds)","functions":"as.numeric","timestamp_sec":2285},{"timestamp_with_hours":"0:38:40","description":"Explanation of a bimodal log-normal distribution","timestamp_sec":2320},{"timestamp_with_hours":"0:39:05","description":"Handy trick for setting easy-to-interpret intervals for time data on scale_x_log10 function's breaks argument","functions":"scale_x_log10","timestamp_sec":2345},{"timestamp_with_hours":"0:47:40","description":"Starting to explore package downloads","timestamp_sec":2860},{"timestamp_with_hours":"0:52:15","description":"Adding 1 to the numerator and denominator when calculating a ratio to get around dividing by zero","timestamp_sec":3135},{"timestamp_with_hours":"0:57:55","description":"Showing how to look at package download data over time using cran_downloads function from the cranlogs package","functions":"cran_downloads","packages":"cranlogs","timestamp_sec":3475}]</script>
+```{=html}
+<div id="topics">
+  <div class="topic">
+    <h3 id="ts-320">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(320, this)">0:5:20</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">geom_line</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using geom_line function to visualize changes over time</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-455">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(455, this)">0:7:35</button>
+    </h3>
+    <div class="topic_badges"><div></div><div><span class="badge-packages badge bg-primary">lubridate</span></div></div>
+    <div class="topic_description">
+      <p>Starting to decompose time series data into day-of-week trend and overall trend (lots of lubridate package functions)</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-590">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(590, this)">0:9:50</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Using floor_date function from lubridate package to round dates down to the week level</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-605">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(605, this)">0:10:05</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Using min function to drop incomplete/partial week at the start of the dataset</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-740">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(740, this)">0:12:20</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">countrycode</span></div><div><span class="badge-packages badge bg-primary">countrycode</span></div></div>
+    <div class="topic_description">
+      <p>Using countrycode function from countrycode package to replace two-letter country codes with full names (e.g., &quot;CA&quot; becomes &quot;Canada&quot;)</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1040">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1040, this)">0:17:20</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">fct_lump</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using fct_lump function to get top N categories within a categorical variable and classify the rest as &quot;Other&quot;</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1230">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1230, this)">0:20:30</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">hour</span></div><div><span class="badge-packages badge bg-primary">lubridate</span></div></div>
+    <div class="topic_description">
+      <p>Using hour function from lubridate package to pull out integer hour value from a datetime variable</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1340">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1340, this)">0:22:20</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">facet_wrap</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using facet_wrap function to graph small multiples of downloads by country, then changing scales argument to allow different scales on y-axis</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1860">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1860, this)">0:31:00</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Starting analysis of downloads by IP address</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2120">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2120, this)">0:35:20</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">as.POSIXlt</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using as.POSIXlt to combine separate date and time variables to get a single datetime variable</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2195">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2195, this)">0:36:35</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">lag</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using lag function to calculate time between downloads (time between events) per IP address (comparable to SQL window function)</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2285">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2285, this)">0:38:05</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">as.numeric</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using as.numeric function to convert variable from a time interval object to a numeric variable (number in seconds)</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2320">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2320, this)">0:38:40</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Explanation of a bimodal log-normal distribution</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2345">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2345, this)">0:39:05</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">scale_x_log10</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Handy trick for setting easy-to-interpret intervals for time data on scale_x_log10 function's breaks argument</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2860">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2860, this)">0:47:40</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Starting to explore package downloads</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-3135">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(3135, this)">0:52:15</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Adding 1 to the numerator and denominator when calculating a ratio to get around dividing by zero</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-3475">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(3475, this)">0:57:55</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">cran_downloads</span></div><div><span class="badge-packages badge bg-primary">cranlogs</span></div></div>
+    <div class="topic_description">
+      <p>Showing how to look at package download data over time using cran_downloads function from the cranlogs package</p>
+
+    </div>
+  </div>
+</div>
+```
+     
+<script>
+// 2. This code loads the IFrame Player API code asynchronously.
+var tag = document.createElement("script");
+
+tag.src = "https://www.youtube.com/iframe_api";
+var firstScriptTag = document.getElementsByTagName("script")[0];
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+// 3. This function creates an <iframe> (and YouTube player)
+//    after the API code downloads.
+var videoId = document.getElementById("yt-player").dataset.videoId;
+var player;
+function onYouTubeIframeAPIReady() {
+  player = new YT.Player("yt-player", {
+    height: "486",
+    width: "864",
+    videoId: videoId,
+    playerVars: {
+      "playsinline": 1
+    },
+    events: {
+      onStateChange: function(event) {
+        if (event.data == YT.PlayerState.PLAYING) {
+          followTimestamps()
+        }
+      }
+    }
+  });
+}
+
+function playerSkipToTimestamp(seconds, tsElement) {
+  player.seekTo(seconds, true)
+  tsElement.scrollIntoView()
+  document.getElementById("screencast").scrollIntoView()
+}
+
+const timestamps = Array.from(document.querySelectorAll('.topic h3[id^="ts-"]'))
+  .map(el => el.id.replace('ts-', ''))
+
+function followTimestamps() {
+  if (player.getPlayerState() !== 1) {
+    return
+  }
+  const currentTime = `${Math.floor(player.getCurrentTime())}`
+  if (timestamps.includes(currentTime)) {
+    const el = document.getElementById(`ts-${currentTime}`)
+    if (el) {
+      el.scrollIntoView()
+      document.getElementById("screencast").scrollIntoView()
+    }
+  }
+  setTimeout(followTimestamps, 1000)
+}
+</script>

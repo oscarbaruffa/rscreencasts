@@ -5,6 +5,8 @@ description: |
   Data manipulation, Lollipop graph, Grouping using floor division
 date: 2020-06-29
 date-format: long
+aliases:
+  - "X-Men Comics.html"
 ---
 
 Notable topics: Data manipulation, Lollipop graph, Grouping using floor division
@@ -15,10 +17,218 @@ Timestamps by: Eric Fletcher
 
 [View code](https://github.com/dgrtwo/data-screencasts/blob/master/uncanny-xmen.Rmd)
 
-## Full screencast
+## Screencast
 
-<iframe class="video" src="https://www.youtube.com/embed/NY0-IFet5AM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div id="yt-player" data-video-id="NY0-IFet5AM"></div>
 
 ## Timestamps
 
-<script id="timestamps" type="application-json">[{"timestamp_with_hours":"0:07:25","description":"Using `separate` to separate the name from secrete identity in the `character` column","functions":"separate","packages":"tidyr","timestamp_sec":445},{"timestamp_with_hours":"0:09:55","description":"Using `summarize` and `across` to find the frequency of the action variables and find out how many issues each action was used for each character","functions":"summarize | across","packages":"dplyr","timestamp_sec":595},{"timestamp_with_hours":"0:13:25","description":"Create a `geom_col` chart to visualize which character speaks in the most issues","functions":"geom_col | fct_reorder","packages":"ggplot2 | forcats","timestamp_sec":805},{"timestamp_with_hours":"0:18:35","description":"Create a `geom_point` chart to visualize each character’s average lines per issue in which the character is depicted","functions":"geom_point | geom_text | geom_text_repel | \nsummarize","packages":"ggplot2 | ggrepel | dplyr","timestamp_sec":1115},{"timestamp_with_hours":"0:22:05","description":"Create a `geom_point` chart to visualize each character’s average thoughts per issue in which the character is depicted","functions":"geom_point | geom_text | geom_text_repel | \nsummarize","packages":"ggplot2 | ggrepel | dplyr","timestamp_sec":1325},{"timestamp_with_hours":"0:23:10","description":"Create a `geom_point` chart to visualize character’s speech versus thought ratio per issue in which the character is depicted","functions":"geom_point | geom_text | geom_text_repel | \nsummarize","packages":"ggplot2 | ggrepel | dplyr","timestamp_sec":1390},{"timestamp_with_hours":"0:30:05","description":"Create a `geom_point` to visualize character’s number of lines while in costume versus not in costume","functions":"geom_point | pivot_longer | fct_reorder","packages":"ggplot2 | tidyr | forcats","timestamp_sec":1805},{"timestamp_with_hours":"0:34:30","description":"Create a `geom_point` chart to visualize the lines in costume versus lines out of costume ratio","functions":"geom_point | geom_text | geom_text_repel | \nsummarize","packages":"ggplot2 | ggrepel | dplyr","timestamp_sec":2070},{"timestamp_with_hours":"0:39:20","description":"Create a `lollipop graph` using `geom_point` and `geom_errorbarh` to visualize the lines in costume versus lines out of costume ratio and their distance from 1.0 (1 to 1)","functions":"geom_point | fct_reorder | geom_errorbarh","packages":"ggplot2 | forcats","timestamp_sec":2360},{"timestamp_with_hours":"0:45:00","description":"Use `summarize` to find the frequency of each location and the total number of unique issues where the location is used","functions":"summarize | group_by | arrange","packages":"dplyr","timestamp_sec":2700},{"timestamp_with_hours":"0:46:00","description":"Use `summarize` and `fct_lump` to count how many issues each author has written while lumping together all authors except the most frequent","functions":"summarize | fct_lump","packages":"dplyr | forcats","timestamp_sec":2760},{"timestamp_with_hours":"0:47:25","description":"Use `summarize` and `fct_lump` to see if the authors rates of passing the Bechdel test differ from one another","functions":"summarize | fct_lump","packages":"dplyr | forcats","timestamp_sec":2845},{"timestamp_with_hours":"0:52:45","description":"Create a `geom_line` chart to visualize if the rates of passing the Bechdel test changed over time and `floor division` `%/%` to generate 20 observations per group","functions":"geom_line | summarize","packages":"dplyr","timestamp_sec":3165},{"timestamp_with_hours":"0:54:35","description":"Create a `geom_col` to visualize the amount of lines each character has per issue over time giving context to Bechdel test passing rates","functions":"geom_col | summarize | fct_lump | facet_wrap","packages":"ggplot | dplyr | forcats","timestamp_sec":3275},{"timestamp_with_hours":"1:00:00","description":"Summary of screencast","timestamp_sec":3600}]</script>
+```{=html}
+<div id="topics">
+  <div class="topic">
+    <h3 id="ts-445">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(445, this)">0:07:25</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">separate</span></div><div><span class="badge-packages badge bg-primary">tidyr</span></div></div>
+    <div class="topic_description">
+      <p>Using <code>separate</code> to separate the name from secrete identity in the <code>character</code> column</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-595">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(595, this)">0:09:55</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">summarize</span><span class="badge-functions badge bg-info">across</span></div><div><span class="badge-packages badge bg-primary">dplyr</span></div></div>
+    <div class="topic_description">
+      <p>Using <code>summarize</code> and <code>across</code> to find the frequency of the action variables and find out how many issues each action was used for each character</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-805">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(805, this)">0:13:25</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">geom_col</span><span class="badge-functions badge bg-info">fct_reorder</span></div><div><span class="badge-packages badge bg-primary">ggplot2</span><span class="badge-packages badge bg-primary">forcats</span></div></div>
+    <div class="topic_description">
+      <p>Create a <code>geom_col</code> chart to visualize which character speaks in the most issues</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1115">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1115, this)">0:18:35</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">geom_point</span><span class="badge-functions badge bg-info">geom_text</span><span class="badge-functions badge bg-info">geom_text_repel</span><span class="badge-functions badge bg-info">summarize</span></div><div><span class="badge-packages badge bg-primary">ggplot2</span><span class="badge-packages badge bg-primary">ggrepel</span><span class="badge-packages badge bg-primary">dplyr</span></div></div>
+    <div class="topic_description">
+      <p>Create a <code>geom_point</code> chart to visualize each character’s average lines per issue in which the character is depicted</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1325">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1325, this)">0:22:05</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">geom_point</span><span class="badge-functions badge bg-info">geom_text</span><span class="badge-functions badge bg-info">geom_text_repel</span><span class="badge-functions badge bg-info">summarize</span></div><div><span class="badge-packages badge bg-primary">ggplot2</span><span class="badge-packages badge bg-primary">ggrepel</span><span class="badge-packages badge bg-primary">dplyr</span></div></div>
+    <div class="topic_description">
+      <p>Create a <code>geom_point</code> chart to visualize each character’s average thoughts per issue in which the character is depicted</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1390">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1390, this)">0:23:10</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">geom_point</span><span class="badge-functions badge bg-info">geom_text</span><span class="badge-functions badge bg-info">geom_text_repel</span><span class="badge-functions badge bg-info">summarize</span></div><div><span class="badge-packages badge bg-primary">ggplot2</span><span class="badge-packages badge bg-primary">ggrepel</span><span class="badge-packages badge bg-primary">dplyr</span></div></div>
+    <div class="topic_description">
+      <p>Create a <code>geom_point</code> chart to visualize character’s speech versus thought ratio per issue in which the character is depicted</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1805">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1805, this)">0:30:05</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">geom_point</span><span class="badge-functions badge bg-info">pivot_longer</span><span class="badge-functions badge bg-info">fct_reorder</span></div><div><span class="badge-packages badge bg-primary">ggplot2</span><span class="badge-packages badge bg-primary">tidyr</span><span class="badge-packages badge bg-primary">forcats</span></div></div>
+    <div class="topic_description">
+      <p>Create a <code>geom_point</code> to visualize character’s number of lines while in costume versus not in costume</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2070">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2070, this)">0:34:30</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">geom_point</span><span class="badge-functions badge bg-info">geom_text</span><span class="badge-functions badge bg-info">geom_text_repel</span><span class="badge-functions badge bg-info">summarize</span></div><div><span class="badge-packages badge bg-primary">ggplot2</span><span class="badge-packages badge bg-primary">ggrepel</span><span class="badge-packages badge bg-primary">dplyr</span></div></div>
+    <div class="topic_description">
+      <p>Create a <code>geom_point</code> chart to visualize the lines in costume versus lines out of costume ratio</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2360">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2360, this)">0:39:20</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">geom_point</span><span class="badge-functions badge bg-info">fct_reorder</span><span class="badge-functions badge bg-info">geom_errorbarh</span></div><div><span class="badge-packages badge bg-primary">ggplot2</span><span class="badge-packages badge bg-primary">forcats</span></div></div>
+    <div class="topic_description">
+      <p>Create a <code>lollipop graph</code> using <code>geom_point</code> and <code>geom_errorbarh</code> to visualize the lines in costume versus lines out of costume ratio and their distance from 1.0 (1 to 1)</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2700">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2700, this)">0:45:00</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">summarize</span><span class="badge-functions badge bg-info">group_by</span><span class="badge-functions badge bg-info">arrange</span></div><div><span class="badge-packages badge bg-primary">dplyr</span></div></div>
+    <div class="topic_description">
+      <p>Use <code>summarize</code> to find the frequency of each location and the total number of unique issues where the location is used</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2760">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2760, this)">0:46:00</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">summarize</span><span class="badge-functions badge bg-info">fct_lump</span></div><div><span class="badge-packages badge bg-primary">dplyr</span><span class="badge-packages badge bg-primary">forcats</span></div></div>
+    <div class="topic_description">
+      <p>Use <code>summarize</code> and <code>fct_lump</code> to count how many issues each author has written while lumping together all authors except the most frequent</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2845">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2845, this)">0:47:25</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">summarize</span><span class="badge-functions badge bg-info">fct_lump</span></div><div><span class="badge-packages badge bg-primary">dplyr</span><span class="badge-packages badge bg-primary">forcats</span></div></div>
+    <div class="topic_description">
+      <p>Use <code>summarize</code> and <code>fct_lump</code> to see if the authors rates of passing the Bechdel test differ from one another</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-3165">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(3165, this)">0:52:45</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">geom_line</span><span class="badge-functions badge bg-info">summarize</span></div><div><span class="badge-packages badge bg-primary">dplyr</span></div></div>
+    <div class="topic_description">
+      <p>Create a <code>geom_line</code> chart to visualize if the rates of passing the Bechdel test changed over time and <code>floor division</code> <code>%/%</code> to generate 20 observations per group</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-3275">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(3275, this)">0:54:35</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">geom_col</span><span class="badge-functions badge bg-info">summarize</span><span class="badge-functions badge bg-info">fct_lump</span><span class="badge-functions badge bg-info">facet_wrap</span></div><div><span class="badge-packages badge bg-primary">ggplot</span><span class="badge-packages badge bg-primary">dplyr</span><span class="badge-packages badge bg-primary">forcats</span></div></div>
+    <div class="topic_description">
+      <p>Create a <code>geom_col</code> to visualize the amount of lines each character has per issue over time giving context to Bechdel test passing rates</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-3600">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(3600, this)">1:00:00</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Summary of screencast</p>
+
+    </div>
+  </div>
+</div>
+```
+     
+<script>
+// 2. This code loads the IFrame Player API code asynchronously.
+var tag = document.createElement("script");
+
+tag.src = "https://www.youtube.com/iframe_api";
+var firstScriptTag = document.getElementsByTagName("script")[0];
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+// 3. This function creates an <iframe> (and YouTube player)
+//    after the API code downloads.
+var videoId = document.getElementById("yt-player").dataset.videoId;
+var player;
+function onYouTubeIframeAPIReady() {
+  player = new YT.Player("yt-player", {
+    height: "486",
+    width: "864",
+    videoId: videoId,
+    playerVars: {
+      "playsinline": 1
+    },
+    events: {
+      onStateChange: function(event) {
+        if (event.data == YT.PlayerState.PLAYING) {
+          followTimestamps()
+        }
+      }
+    }
+  });
+}
+
+function playerSkipToTimestamp(seconds, tsElement) {
+  player.seekTo(seconds, true)
+  tsElement.scrollIntoView()
+  document.getElementById("screencast").scrollIntoView()
+}
+
+const timestamps = Array.from(document.querySelectorAll('.topic h3[id^="ts-"]'))
+  .map(el => el.id.replace('ts-', ''))
+
+function followTimestamps() {
+  if (player.getPlayerState() !== 1) {
+    return
+  }
+  const currentTime = `${Math.floor(player.getCurrentTime())}`
+  if (timestamps.includes(currentTime)) {
+    const el = document.getElementById(`ts-${currentTime}`)
+    if (el) {
+      el.scrollIntoView()
+      document.getElementById("screencast").scrollIntoView()
+    }
+  }
+  setTimeout(followTimestamps, 1000)
+}
+</script>

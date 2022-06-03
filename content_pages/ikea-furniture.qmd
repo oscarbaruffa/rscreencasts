@@ -5,6 +5,8 @@ description: |
   Linear model, Coefficient/TIE fighter plot, Boxplots, Log scale discussion, Calculating volume
 date: 2020-11-02
 date-format: long
+aliases:
+  - "IKEA Furniture.html"
 ---
 
 Notable topics: Linear model, Coefficient/TIE fighter plot, Boxplots, Log scale discussion, Calculating volume
@@ -15,10 +17,258 @@ Timestamps by: Eric Fletcher
 
 [View code](https://github.com/dgrtwo/data-screencasts/blob/master/2020_11_03_ikea.Rmd)
 
-## Full screencast
+## Screencast
 
-<iframe class="video" src="https://www.youtube.com/embed/lY0YLDZhT88" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div id="yt-player" data-video-id="lY0YLDZhT88"></div>
 
 ## Timestamps
 
-<script id="timestamps" type="application-json">[{"timestamp_with_hours":"0:4:30","description":"Use `fct_reorder` from the `forcats` package to reorder the factor levels for `category` sorted along `n`.","functions":"fct_reorder","packages":"forcats","timestamp_sec":270},{"timestamp_with_hours":"0:6:00","description":"Brief explanation of why `scale_x_log10` is needed given the distribution of `category` and `price` with `geom_boxplot`.","functions":"scale_x_log_10 | geom_boxplot","packages":"ggplot2","timestamp_sec":360},{"timestamp_with_hours":"0:7:00","description":"Using `geom_jitter` with `geom_boxplot` to show how many items are within each `category`.","functions":"geom_jitter | geom_boxplot","packages":"ggplot2","timestamp_sec":420},{"timestamp_with_hours":"0:8:00","description":"Use `add_count` from the `dplyr` package and  `glue` from the `glue` package to concatenate the `category` name with `category_total` on the `geom_boxplot` y-axis.","functions":"glue | add_count","packages":"glue | dplyr","timestamp_sec":480},{"timestamp_with_hours":"0:9:00","description":"Convert from `Saudi Riyals` to `United States Dollars`.","functions":"mutate","packages":"dplyr","timestamp_sec":540},{"timestamp_with_hours":"0:11:05","description":"Create a `ridgeplot` - AKA `joyplot` - using `ggridges` package showing the distribution of `price` across `category`.","functions":"geom_density_ridges","packages":"ggridges","timestamp_sec":665},{"timestamp_with_hours":"0:12:50","description":"Discussion on `distributions` and when to use a `log scale`.","timestamp_sec":770},{"timestamp_with_hours":"0:19:20","description":"Use `fct_lump` from the `forcats` package to lump together all the levels in `category` except for the `n` most frequent.","functions":"fct_lump","packages":"forcats","timestamp_sec":1160},{"timestamp_with_hours":"0:21:00","description":"Use `scale_fill_discrete` from the `ggplot2` package with `guide = guide_legend(reverse = TRUE)` to reverse the `fill legend`.","functions":"scale_fill_discrete","packages":"ggplot2","timestamp_sec":1260},{"timestamp_with_hours":"0:24:20","description":"Use `str_trim`  from the `stringr` package to remove whitespace from the `short_description` variable. David then decides to use `str_replace_all` instead with the following regular expression `\"\\\\s+\", \" \"` to replace all whitespace with a single space instead.","functions":"str_trim | str_replace_all","packages":"stringr","timestamp_sec":1460},{"timestamp_with_hours":"0:25:30","description":"Use `separate` from the `tidyr` package with `extra = \"merge\"` and `fill = \"right\"` to separate item description from item dimension.","functions":"separate","packages":"tidyr","timestamp_sec":1530},{"timestamp_with_hours":"0:26:45","description":"Use `extract` from the `tidyr` package with the regular expression `\"[\\\\d\\\\-xX]+) cm\"` to extract the numbers before `cm`.","functions":"extract","packages":"tidyr","timestamp_sec":1605},{"timestamp_with_hours":"0:29:50","description":"Use `unite` from the `tidyr` package to paste together the `category` and `main_description` columns into a new column named `category_and_description`.","functions":"unite","packages":"tidyr","timestamp_sec":1790},{"timestamp_with_hours":"0:32:45","description":"Calculate the volume given the `depth`, `height`, and `width` of each item in dataset in liters using `depth * height * width / 1000`. At 36:15, David decides to change to `cubic meters` instead using `depth * height * width / 1000000`.","functions":"mutate","packages":"dplyr","timestamp_sec":1965},{"timestamp_with_hours":"0:44:20","description":"Use `str_squish` from the `stringr` package to remove whitespace from the start to the end of the `short_description` variable.","functions":"str_squish","packages":"stringr","timestamp_sec":2660},{"timestamp_with_hours":"0:48:00","description":"Use `lm` from the `stats` package to create a linear model on a `log, log scale` to predict the price of an item based on volume + category. David then uses `fct_relevel` to reorder the factor levels for `category` such that `tables & desks` is first (starting point) since it's the most frequent item in the category variable and it's price distribution is in the middle.","functions":"lm","packages":"stats","timestamp_sec":2880},{"timestamp_with_hours":"0:53:00","description":"Use the `broom` package to turn the model output into a coefficient / TIE fighter plot.","functions":"tidy | geom_point | geom_errorbarh | geom_vline","packages":"broom","timestamp_sec":3180},{"timestamp_with_hours":"0:56:20","description":"Use `str_remove` from the `stringr` package to remove `category` from the start of the strings on the y-axis using the regular expression `\"^category\"`","functions":"str_remove","packages":"stringr","timestamp_sec":3380},{"timestamp_with_hours":"0:57:50","description":"Summary of screencast.","timestamp_sec":3470}]</script>
+```{=html}
+<div id="topics">
+  <div class="topic">
+    <h3 id="ts-270">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(270, this)">0:4:30</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">fct_reorder</span></div><div><span class="badge-packages badge bg-primary">forcats</span></div></div>
+    <div class="topic_description">
+      <p>Use <code>fct_reorder</code> from the <code>forcats</code> package to reorder the factor levels for <code>category</code> sorted along <code>n</code>.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-360">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(360, this)">0:6:00</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">scale_x_log_10</span><span class="badge-functions badge bg-info">geom_boxplot</span></div><div><span class="badge-packages badge bg-primary">ggplot2</span></div></div>
+    <div class="topic_description">
+      <p>Brief explanation of why <code>scale_x_log10</code> is needed given the distribution of <code>category</code> and <code>price</code> with <code>geom_boxplot</code>.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-420">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(420, this)">0:7:00</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">geom_jitter</span><span class="badge-functions badge bg-info">geom_boxplot</span></div><div><span class="badge-packages badge bg-primary">ggplot2</span></div></div>
+    <div class="topic_description">
+      <p>Using <code>geom_jitter</code> with <code>geom_boxplot</code> to show how many items are within each <code>category</code>.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-480">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(480, this)">0:8:00</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">glue</span><span class="badge-functions badge bg-info">add_count</span></div><div><span class="badge-packages badge bg-primary">glue</span><span class="badge-packages badge bg-primary">dplyr</span></div></div>
+    <div class="topic_description">
+      <p>Use <code>add_count</code> from the <code>dplyr</code> package and  <code>glue</code> from the <code>glue</code> package to concatenate the <code>category</code> name with <code>category_total</code> on the <code>geom_boxplot</code> y-axis.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-540">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(540, this)">0:9:00</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">mutate</span></div><div><span class="badge-packages badge bg-primary">dplyr</span></div></div>
+    <div class="topic_description">
+      <p>Convert from <code>Saudi Riyals</code> to <code>United States Dollars</code>.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-665">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(665, this)">0:11:05</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">geom_density_ridges</span></div><div><span class="badge-packages badge bg-primary">ggridges</span></div></div>
+    <div class="topic_description">
+      <p>Create a <code>ridgeplot</code> - AKA <code>joyplot</code> - using <code>ggridges</code> package showing the distribution of <code>price</code> across <code>category</code>.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-770">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(770, this)">0:12:50</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Discussion on <code>distributions</code> and when to use a <code>log scale</code>.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1160">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1160, this)">0:19:20</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">fct_lump</span></div><div><span class="badge-packages badge bg-primary">forcats</span></div></div>
+    <div class="topic_description">
+      <p>Use <code>fct_lump</code> from the <code>forcats</code> package to lump together all the levels in <code>category</code> except for the <code>n</code> most frequent.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1260">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1260, this)">0:21:00</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">scale_fill_discrete</span></div><div><span class="badge-packages badge bg-primary">ggplot2</span></div></div>
+    <div class="topic_description">
+      <p>Use <code>scale_fill_discrete</code> from the <code>ggplot2</code> package with <code>guide = guide_legend(reverse = TRUE)</code> to reverse the <code>fill legend</code>.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1460">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1460, this)">0:24:20</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">str_trim</span><span class="badge-functions badge bg-info">str_replace_all</span></div><div><span class="badge-packages badge bg-primary">stringr</span></div></div>
+    <div class="topic_description">
+      <p>Use <code>str_trim</code>  from the <code>stringr</code> package to remove whitespace from the <code>short_description</code> variable. David then decides to use <code>str_replace_all</code> instead with the following regular expression <code>&quot;\\s+&quot;, &quot; &quot;</code> to replace all whitespace with a single space instead.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1530">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1530, this)">0:25:30</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">separate</span></div><div><span class="badge-packages badge bg-primary">tidyr</span></div></div>
+    <div class="topic_description">
+      <p>Use <code>separate</code> from the <code>tidyr</code> package with <code>extra = &quot;merge&quot;</code> and <code>fill = &quot;right&quot;</code> to separate item description from item dimension.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1605">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1605, this)">0:26:45</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">extract</span></div><div><span class="badge-packages badge bg-primary">tidyr</span></div></div>
+    <div class="topic_description">
+      <p>Use <code>extract</code> from the <code>tidyr</code> package with the regular expression <code>&quot;[\\d\\-xX]+) cm&quot;</code> to extract the numbers before <code>cm</code>.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1790">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1790, this)">0:29:50</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">unite</span></div><div><span class="badge-packages badge bg-primary">tidyr</span></div></div>
+    <div class="topic_description">
+      <p>Use <code>unite</code> from the <code>tidyr</code> package to paste together the <code>category</code> and <code>main_description</code> columns into a new column named <code>category_and_description</code>.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1965">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1965, this)">0:32:45</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">mutate</span></div><div><span class="badge-packages badge bg-primary">dplyr</span></div></div>
+    <div class="topic_description">
+      <p>Calculate the volume given the <code>depth</code>, <code>height</code>, and <code>width</code> of each item in dataset in liters using <code>depth * height * width / 1000</code>. At 36:15, David decides to change to <code>cubic meters</code> instead using <code>depth * height * width / 1000000</code>.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2660">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2660, this)">0:44:20</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">str_squish</span></div><div><span class="badge-packages badge bg-primary">stringr</span></div></div>
+    <div class="topic_description">
+      <p>Use <code>str_squish</code> from the <code>stringr</code> package to remove whitespace from the start to the end of the <code>short_description</code> variable.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2880">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2880, this)">0:48:00</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">lm</span></div><div><span class="badge-packages badge bg-primary">stats</span></div></div>
+    <div class="topic_description">
+      <p>Use <code>lm</code> from the <code>stats</code> package to create a linear model on a <code>log, log scale</code> to predict the price of an item based on volume + category. David then uses <code>fct_relevel</code> to reorder the factor levels for <code>category</code> such that <code>tables &amp; desks</code> is first (starting point) since it's the most frequent item in the category variable and it's price distribution is in the middle.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-3180">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(3180, this)">0:53:00</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">tidy</span><span class="badge-functions badge bg-info">geom_point</span><span class="badge-functions badge bg-info">geom_errorbarh</span><span class="badge-functions badge bg-info">geom_vline</span></div><div><span class="badge-packages badge bg-primary">broom</span></div></div>
+    <div class="topic_description">
+      <p>Use the <code>broom</code> package to turn the model output into a coefficient / TIE fighter plot.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-3380">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(3380, this)">0:56:20</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">str_remove</span></div><div><span class="badge-packages badge bg-primary">stringr</span></div></div>
+    <div class="topic_description">
+      <p>Use <code>str_remove</code> from the <code>stringr</code> package to remove <code>category</code> from the start of the strings on the y-axis using the regular expression <code>&quot;^category&quot;</code></p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-3470">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(3470, this)">0:57:50</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Summary of screencast.</p>
+
+    </div>
+  </div>
+</div>
+```
+     
+<script>
+// 2. This code loads the IFrame Player API code asynchronously.
+var tag = document.createElement("script");
+
+tag.src = "https://www.youtube.com/iframe_api";
+var firstScriptTag = document.getElementsByTagName("script")[0];
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+// 3. This function creates an <iframe> (and YouTube player)
+//    after the API code downloads.
+var videoId = document.getElementById("yt-player").dataset.videoId;
+var player;
+function onYouTubeIframeAPIReady() {
+  player = new YT.Player("yt-player", {
+    height: "486",
+    width: "864",
+    videoId: videoId,
+    playerVars: {
+      "playsinline": 1
+    },
+    events: {
+      onStateChange: function(event) {
+        if (event.data == YT.PlayerState.PLAYING) {
+          followTimestamps()
+        }
+      }
+    }
+  });
+}
+
+function playerSkipToTimestamp(seconds, tsElement) {
+  player.seekTo(seconds, true)
+  tsElement.scrollIntoView()
+  document.getElementById("screencast").scrollIntoView()
+}
+
+const timestamps = Array.from(document.querySelectorAll('.topic h3[id^="ts-"]'))
+  .map(el => el.id.replace('ts-', ''))
+
+function followTimestamps() {
+  if (player.getPlayerState() !== 1) {
+    return
+  }
+  const currentTime = `${Math.floor(player.getCurrentTime())}`
+  if (timestamps.includes(currentTime)) {
+    const el = document.getElementById(`ts-${currentTime}`)
+    if (el) {
+      el.scrollIntoView()
+      document.getElementById("screencast").scrollIntoView()
+    }
+  }
+  setTimeout(followTimestamps, 1000)
+}
+</script>

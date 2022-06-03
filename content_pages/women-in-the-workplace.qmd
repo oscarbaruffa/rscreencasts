@@ -5,6 +5,8 @@ description: |
   Interactive scatterplot (plotly and shiny packages)
 date: 2019-03-04
 date-format: long
+aliases:
+  - "Women in the Workplace.html"
 ---
 
 Notable topics: Interactive scatterplot (plotly and shiny packages)
@@ -15,10 +17,188 @@ Timestamps by: Alex Cookson
 
 [View code](https://github.com/dgrtwo/data-screencasts/blob/master/women-workplace.Rmd)
 
-## Full screencast
+## Screencast
 
-<iframe class="video" src="https://www.youtube.com/embed/fv9SQ4IFNr4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div id="yt-player" data-video-id="fv9SQ4IFNr4"></div>
 
 ## Timestamps
 
-<script id="timestamps" type="application-json">[{"timestamp_with_hours":"0:5:50","description":"Writing a custom function that summarizes variables based on their names (then abandoning the idea)","timestamp_sec":350},{"timestamp_with_hours":"0:9:15","description":"Using complete.cases function to find observations that have an NA value in any variable","functions":"complete.cases","timestamp_sec":555},{"timestamp_with_hours":"0:9:50","description":"Using subsetting within a summarise function to calculate a weighted mean when dealing with 0 or NA values in some observations","timestamp_sec":590},{"timestamp_with_hours":"0:12:20","description":"Debugging what is causing NA values to appear in the summarise output (finds the error at 13:25)","timestamp_sec":740},{"timestamp_with_hours":"0:17:50","description":"Hypothesizing about one sector illustrating a variation of Simpson's Paradox","timestamp_sec":1070},{"timestamp_with_hours":"0:25:25","description":"Creating a scatterplot with a logarithmic scale and using scale_colour_gradient2 function to encode data to point colour","functions":"scale_colour_gradient2","timestamp_sec":1525},{"timestamp_with_hours":"0:30:00","description":"Creating an interactive plot (tooltips show up on hover) using ggplotly function from plotly package","functions":"ggplotly","packages":"plotly","timestamp_sec":1800},{"timestamp_with_hours":"0:33:20","description":"Fiddling with scale_size_continuous function's range argument to specify point size on a scatterplot (which are encoded to total workers)","timestamp_sec":2000},{"timestamp_with_hours":"0:34:50","description":"Explanation of why healthcare sector is a good example of Simpson's Paradox","timestamp_sec":2090},{"timestamp_with_hours":"0:43:15","description":"Starting to create a shiny app with \"occupation\" as only input (many tweaks in subsequent minutes to make it work)","packages":"shiny","timestamp_sec":2595},{"timestamp_with_hours":"0:47:55","description":"Tweaking size (height) of graph in shiny app","packages":"shiny","timestamp_sec":2875},{"timestamp_with_hours":"0:54:05","description":"Summary of screencast","timestamp_sec":3245}]</script>
+```{=html}
+<div id="topics">
+  <div class="topic">
+    <h3 id="ts-350">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(350, this)">0:5:50</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Writing a custom function that summarizes variables based on their names (then abandoning the idea)</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-555">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(555, this)">0:9:15</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">complete.cases</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using complete.cases function to find observations that have an NA value in any variable</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-590">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(590, this)">0:9:50</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Using subsetting within a summarise function to calculate a weighted mean when dealing with 0 or NA values in some observations</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-740">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(740, this)">0:12:20</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Debugging what is causing NA values to appear in the summarise output (finds the error at 13:25)</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1070">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1070, this)">0:17:50</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Hypothesizing about one sector illustrating a variation of Simpson's Paradox</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1525">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1525, this)">0:25:25</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">scale_colour_gradient2</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Creating a scatterplot with a logarithmic scale and using scale_colour_gradient2 function to encode data to point colour</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1800">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1800, this)">0:30:00</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">ggplotly</span></div><div><span class="badge-packages badge bg-primary">plotly</span></div></div>
+    <div class="topic_description">
+      <p>Creating an interactive plot (tooltips show up on hover) using ggplotly function from plotly package</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2000">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2000, this)">0:33:20</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Fiddling with scale_size_continuous function's range argument to specify point size on a scatterplot (which are encoded to total workers)</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2090">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2090, this)">0:34:50</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Explanation of why healthcare sector is a good example of Simpson's Paradox</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2595">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2595, this)">0:43:15</button>
+    </h3>
+    <div class="topic_badges"><div></div><div><span class="badge-packages badge bg-primary">shiny</span></div></div>
+    <div class="topic_description">
+      <p>Starting to create a shiny app with &quot;occupation&quot; as only input (many tweaks in subsequent minutes to make it work)</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2875">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2875, this)">0:47:55</button>
+    </h3>
+    <div class="topic_badges"><div></div><div><span class="badge-packages badge bg-primary">shiny</span></div></div>
+    <div class="topic_description">
+      <p>Tweaking size (height) of graph in shiny app</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-3245">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(3245, this)">0:54:05</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Summary of screencast</p>
+
+    </div>
+  </div>
+</div>
+```
+     
+<script>
+// 2. This code loads the IFrame Player API code asynchronously.
+var tag = document.createElement("script");
+
+tag.src = "https://www.youtube.com/iframe_api";
+var firstScriptTag = document.getElementsByTagName("script")[0];
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+// 3. This function creates an <iframe> (and YouTube player)
+//    after the API code downloads.
+var videoId = document.getElementById("yt-player").dataset.videoId;
+var player;
+function onYouTubeIframeAPIReady() {
+  player = new YT.Player("yt-player", {
+    height: "486",
+    width: "864",
+    videoId: videoId,
+    playerVars: {
+      "playsinline": 1
+    },
+    events: {
+      onStateChange: function(event) {
+        if (event.data == YT.PlayerState.PLAYING) {
+          followTimestamps()
+        }
+      }
+    }
+  });
+}
+
+function playerSkipToTimestamp(seconds, tsElement) {
+  player.seekTo(seconds, true)
+  tsElement.scrollIntoView()
+  document.getElementById("screencast").scrollIntoView()
+}
+
+const timestamps = Array.from(document.querySelectorAll('.topic h3[id^="ts-"]'))
+  .map(el => el.id.replace('ts-', ''))
+
+function followTimestamps() {
+  if (player.getPlayerState() !== 1) {
+    return
+  }
+  const currentTime = `${Math.floor(player.getCurrentTime())}`
+  if (timestamps.includes(currentTime)) {
+    const el = document.getElementById(`ts-${currentTime}`)
+    if (el) {
+      el.scrollIntoView()
+      document.getElementById("screencast").scrollIntoView()
+    }
+  }
+  setTimeout(followTimestamps, 1000)
+}
+</script>

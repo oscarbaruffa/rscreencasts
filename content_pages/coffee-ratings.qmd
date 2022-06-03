@@ -5,6 +5,8 @@ description: |
   Ridgeline plot, Pairwise correlation, Network plot, Singular value decomposition, Linear model
 date: 2020-07-06
 date-format: long
+aliases:
+  - "Coffee Ratings.html"
 ---
 
 Notable topics: Ridgeline plot, Pairwise correlation, Network plot, Singular value decomposition, Linear model
@@ -15,10 +17,258 @@ Timestamps by: Eric Fletcher
 
 [View code](https://github.com/dgrtwo/data-screencasts/blob/master/coffee-ratings.Rmd)
 
-## Full screencast
+## Screencast
 
-<iframe class="video" src="https://www.youtube.com/embed/-1x8Kpyndss" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div id="yt-player" data-video-id="-1x8Kpyndss"></div>
 
 ## Timestamps
 
-<script id="timestamps" type="application-json">[{"timestamp_with_hours":"0:08:15","description":"Using `fct_lump` within `count` and then `mutate` to lump the variety of coffee together except for the most frequent","functions":"count | mutate | fct_lump","packages":"forcats","timestamp_sec":495},{"timestamp_with_hours":"0:08:50","description":"Create a `geom_boxplot` to visualize the variety and the distribution of `total_cup_points`","functions":"geom_boxplot","packages":"ggplot2","timestamp_sec":530},{"timestamp_with_hours":"0:09:55","description":"Create a `geom_histogram`  to visualize the variety and the distribution of `total_cup_points`","functions":"geom_histogram","packages":"ggplot2","timestamp_sec":595},{"timestamp_with_hours":"0:11:40","description":"Using `fct_reorder` to reorder `variety` by sorting it along `total_cup_points` in ascending order","functions":"fct_reorder","packages":"fct_reorder","timestamp_sec":700},{"timestamp_with_hours":"0:12:35","description":"Using `summarize` with `across` to calculate the percent of missing data (NA) for each rating variable","functions":"summarize | across","packages":"dplyr","timestamp_sec":755},{"timestamp_with_hours":"0:15:20","description":"Create a bar chart using `geom_col` with `fct_lump` to visualize the frequency of top countries","functions":"geom_col | fct_lump","packages":"ggplot2 | forcats","timestamp_sec":920},{"timestamp_with_hours":"0:20:35","description":"Using `pivot_longer` to pivot the rating metrics for wide format to long format","functions":"pivot_longer","packages":"tidyr","timestamp_sec":1235},{"timestamp_with_hours":"0:21:30","description":"Create a `geom_line` chart to see if the `sum` of the rating categories equal to the `total_cup_points` column","functions":"geom_line","packages":"ggplot2","timestamp_sec":1290},{"timestamp_with_hours":"0:23:10","description":"Create a `geom_density_ridges` chart to show the distribution of ratings across each rating metric","functions":"geom_density_ridges","packages":"ggridges","timestamp_sec":1390},{"timestamp_with_hours":"0:24:35","description":"Using `summarize` with `mean` and `sd` to show the average rating per metric with its standard deviation","functions":"summarize","packages":"dplyr","timestamp_sec":1475},{"timestamp_with_hours":"0:26:15","description":"Using `pairwise_cor` to find correlations amongst the rating metrics","functions":"pairwise_cor","packages":"widyr","timestamp_sec":1575},{"timestamp_with_hours":"0:27:20","description":"Create a `network plot` to show the clustering of the rating metrics","functions":"graph_from_data_frame  | ggraph | geom_edge_link | geom_node_point  | geom_node_text","packages":"ggraph | igraph","timestamp_sec":1640},{"timestamp_with_hours":"0:29:35","description":"Using `widely_svd` to visualize the biggest source of variation with the rating metrics (Singular value decomposition)","functions":"widely_svd | geom_col | reorder_within | scale_y_reordered","packages":"widyr | tidytext","timestamp_sec":1775},{"timestamp_with_hours":"0:37:40","description":"Create a `geom_histogram` to visualize the distribution of altitude","functions":"geom_histogram","packages":"ggplot2","timestamp_sec":2260},{"timestamp_with_hours":"0:40:20","description":"Using `pmin` to set a maximum numeric altitude value of 3000","functions":"pmin","packages":"base","timestamp_sec":2420},{"timestamp_with_hours":"0:41:05","description":"Create a `geom-point` chart to visualize the correlation between altitude and quality (`total_cup_points`)","functions":"geom_point | geom_smooth","packages":"ggplot2","timestamp_sec":2465},{"timestamp_with_hours":"0:42:00","description":"Using `summarize` with `cor` to show the correlation between altitude and each rating metric","functions":"summarize | cor","packages":"dplyr | stats","timestamp_sec":2520},{"timestamp_with_hours":"0:44:25","description":"Create a linear model `lm` for each rating metric then visualize the results using a `geom_line` chart to show how each kilometer of altitude contributes to the score","functions":"lm | geom_point | tidy | map | geom_errorbarh","packages":"stats | broom | purrr | ggplot2","timestamp_sec":2665},{"timestamp_with_hours":"0:50:35","description":"Summary of screencast","timestamp_sec":3035}]</script>
+```{=html}
+<div id="topics">
+  <div class="topic">
+    <h3 id="ts-495">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(495, this)">0:08:15</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">count</span><span class="badge-functions badge bg-info">mutate</span><span class="badge-functions badge bg-info">fct_lump</span></div><div><span class="badge-packages badge bg-primary">forcats</span></div></div>
+    <div class="topic_description">
+      <p>Using <code>fct_lump</code> within <code>count</code> and then <code>mutate</code> to lump the variety of coffee together except for the most frequent</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-530">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(530, this)">0:08:50</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">geom_boxplot</span></div><div><span class="badge-packages badge bg-primary">ggplot2</span></div></div>
+    <div class="topic_description">
+      <p>Create a <code>geom_boxplot</code> to visualize the variety and the distribution of <code>total_cup_points</code></p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-595">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(595, this)">0:09:55</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">geom_histogram</span></div><div><span class="badge-packages badge bg-primary">ggplot2</span></div></div>
+    <div class="topic_description">
+      <p>Create a <code>geom_histogram</code>  to visualize the variety and the distribution of <code>total_cup_points</code></p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-700">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(700, this)">0:11:40</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">fct_reorder</span></div><div><span class="badge-packages badge bg-primary">fct_reorder</span></div></div>
+    <div class="topic_description">
+      <p>Using <code>fct_reorder</code> to reorder <code>variety</code> by sorting it along <code>total_cup_points</code> in ascending order</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-755">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(755, this)">0:12:35</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">summarize</span><span class="badge-functions badge bg-info">across</span></div><div><span class="badge-packages badge bg-primary">dplyr</span></div></div>
+    <div class="topic_description">
+      <p>Using <code>summarize</code> with <code>across</code> to calculate the percent of missing data (NA) for each rating variable</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-920">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(920, this)">0:15:20</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">geom_col</span><span class="badge-functions badge bg-info">fct_lump</span></div><div><span class="badge-packages badge bg-primary">ggplot2</span><span class="badge-packages badge bg-primary">forcats</span></div></div>
+    <div class="topic_description">
+      <p>Create a bar chart using <code>geom_col</code> with <code>fct_lump</code> to visualize the frequency of top countries</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1235">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1235, this)">0:20:35</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">pivot_longer</span></div><div><span class="badge-packages badge bg-primary">tidyr</span></div></div>
+    <div class="topic_description">
+      <p>Using <code>pivot_longer</code> to pivot the rating metrics for wide format to long format</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1290">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1290, this)">0:21:30</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">geom_line</span></div><div><span class="badge-packages badge bg-primary">ggplot2</span></div></div>
+    <div class="topic_description">
+      <p>Create a <code>geom_line</code> chart to see if the <code>sum</code> of the rating categories equal to the <code>total_cup_points</code> column</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1390">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1390, this)">0:23:10</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">geom_density_ridges</span></div><div><span class="badge-packages badge bg-primary">ggridges</span></div></div>
+    <div class="topic_description">
+      <p>Create a <code>geom_density_ridges</code> chart to show the distribution of ratings across each rating metric</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1475">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1475, this)">0:24:35</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">summarize</span></div><div><span class="badge-packages badge bg-primary">dplyr</span></div></div>
+    <div class="topic_description">
+      <p>Using <code>summarize</code> with <code>mean</code> and <code>sd</code> to show the average rating per metric with its standard deviation</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1575">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1575, this)">0:26:15</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">pairwise_cor</span></div><div><span class="badge-packages badge bg-primary">widyr</span></div></div>
+    <div class="topic_description">
+      <p>Using <code>pairwise_cor</code> to find correlations amongst the rating metrics</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1640">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1640, this)">0:27:20</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">graph_from_data_frame</span><span class="badge-functions badge bg-info">ggraph</span><span class="badge-functions badge bg-info">geom_edge_link</span><span class="badge-functions badge bg-info">geom_node_point</span><span class="badge-functions badge bg-info">geom_node_text</span></div><div><span class="badge-packages badge bg-primary">ggraph</span><span class="badge-packages badge bg-primary">igraph</span></div></div>
+    <div class="topic_description">
+      <p>Create a <code>network plot</code> to show the clustering of the rating metrics</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1775">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1775, this)">0:29:35</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">widely_svd</span><span class="badge-functions badge bg-info">geom_col</span><span class="badge-functions badge bg-info">reorder_within</span><span class="badge-functions badge bg-info">scale_y_reordered</span></div><div><span class="badge-packages badge bg-primary">widyr</span><span class="badge-packages badge bg-primary">tidytext</span></div></div>
+    <div class="topic_description">
+      <p>Using <code>widely_svd</code> to visualize the biggest source of variation with the rating metrics (Singular value decomposition)</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2260">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2260, this)">0:37:40</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">geom_histogram</span></div><div><span class="badge-packages badge bg-primary">ggplot2</span></div></div>
+    <div class="topic_description">
+      <p>Create a <code>geom_histogram</code> to visualize the distribution of altitude</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2420">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2420, this)">0:40:20</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">pmin</span></div><div><span class="badge-packages badge bg-primary">base</span></div></div>
+    <div class="topic_description">
+      <p>Using <code>pmin</code> to set a maximum numeric altitude value of 3000</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2465">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2465, this)">0:41:05</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">geom_point</span><span class="badge-functions badge bg-info">geom_smooth</span></div><div><span class="badge-packages badge bg-primary">ggplot2</span></div></div>
+    <div class="topic_description">
+      <p>Create a <code>geom-point</code> chart to visualize the correlation between altitude and quality (<code>total_cup_points</code>)</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2520">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2520, this)">0:42:00</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">summarize</span><span class="badge-functions badge bg-info">cor</span></div><div><span class="badge-packages badge bg-primary">dplyr</span><span class="badge-packages badge bg-primary">stats</span></div></div>
+    <div class="topic_description">
+      <p>Using <code>summarize</code> with <code>cor</code> to show the correlation between altitude and each rating metric</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2665">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2665, this)">0:44:25</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">lm</span><span class="badge-functions badge bg-info">geom_point</span><span class="badge-functions badge bg-info">tidy</span><span class="badge-functions badge bg-info">map</span><span class="badge-functions badge bg-info">geom_errorbarh</span></div><div><span class="badge-packages badge bg-primary">stats</span><span class="badge-packages badge bg-primary">broom</span><span class="badge-packages badge bg-primary">purrr</span><span class="badge-packages badge bg-primary">ggplot2</span></div></div>
+    <div class="topic_description">
+      <p>Create a linear model <code>lm</code> for each rating metric then visualize the results using a <code>geom_line</code> chart to show how each kilometer of altitude contributes to the score</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-3035">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(3035, this)">0:50:35</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Summary of screencast</p>
+
+    </div>
+  </div>
+</div>
+```
+     
+<script>
+// 2. This code loads the IFrame Player API code asynchronously.
+var tag = document.createElement("script");
+
+tag.src = "https://www.youtube.com/iframe_api";
+var firstScriptTag = document.getElementsByTagName("script")[0];
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+// 3. This function creates an <iframe> (and YouTube player)
+//    after the API code downloads.
+var videoId = document.getElementById("yt-player").dataset.videoId;
+var player;
+function onYouTubeIframeAPIReady() {
+  player = new YT.Player("yt-player", {
+    height: "486",
+    width: "864",
+    videoId: videoId,
+    playerVars: {
+      "playsinline": 1
+    },
+    events: {
+      onStateChange: function(event) {
+        if (event.data == YT.PlayerState.PLAYING) {
+          followTimestamps()
+        }
+      }
+    }
+  });
+}
+
+function playerSkipToTimestamp(seconds, tsElement) {
+  player.seekTo(seconds, true)
+  tsElement.scrollIntoView()
+  document.getElementById("screencast").scrollIntoView()
+}
+
+const timestamps = Array.from(document.querySelectorAll('.topic h3[id^="ts-"]'))
+  .map(el => el.id.replace('ts-', ''))
+
+function followTimestamps() {
+  if (player.getPlayerState() !== 1) {
+    return
+  }
+  const currentTime = `${Math.floor(player.getCurrentTime())}`
+  if (timestamps.includes(currentTime)) {
+    const el = document.getElementById(`ts-${currentTime}`)
+    if (el) {
+      el.scrollIntoView()
+      document.getElementById("screencast").scrollIntoView()
+    }
+  }
+  setTimeout(followTimestamps, 1000)
+}
+</script>

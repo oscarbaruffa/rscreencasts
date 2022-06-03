@@ -5,6 +5,8 @@ description: |
   accumulate() function for simulation
 date: 2020-03-29
 date-format: long
+aliases:
+  - "Riddler: Simulating Replacing Die Sides.html"
 ---
 
 Notable topics: accumulate() function for simulation
@@ -15,10 +17,218 @@ Timestamps by: Alex Cookson
 
 [View code](https://github.com/dgrtwo/data-screencasts/blob/master/riddler-die-reroll.Rmd)
 
-## Full screencast
+## Screencast
 
-<iframe class="video" src="https://www.youtube.com/embed/XEsNpxl5b1M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div id="yt-player" data-video-id="XEsNpxl5b1M"></div>
 
 ## Timestamps
 
-<script id="timestamps" type="application-json">[{"timestamp_with_hours":"0:0:45","description":"Explaining why the recursive nature of this problem is well-suited to simulation","timestamp_sec":45},{"timestamp_with_hours":"0:2:05","description":"Introducing the accumulate function as a tool for simulation","functions":"accumulate","timestamp_sec":125},{"timestamp_with_hours":"0:3:50","description":"Creating a condition to call the done function","timestamp_sec":230},{"timestamp_with_hours":"0:7:00","description":"After creating a function to simulate one round of the problem, using replicate function to run simulation many times","functions":"replicate","timestamp_sec":420},{"timestamp_with_hours":"0:7:15","description":"Using qplot function to quickly create a histogram of simulations","functions":"qplot","timestamp_sec":435},{"timestamp_with_hours":"0:7:40","description":"Making observations on the distribution of simulations (looks kind of like a gamma distribution)","timestamp_sec":460},{"timestamp_with_hours":"0:10:05","description":"Observing that the distribution is kind of log-normal (but that doesn't really apply because we're using integers)","timestamp_sec":605},{"timestamp_with_hours":"0:10:35","description":"Using table and sort functions to find the most common number of rolls","functions":"table | sort","timestamp_sec":635},{"timestamp_with_hours":"0:11:20","description":"Starting the Extra Credit portion of the problem (N-sided die)","timestamp_sec":680},{"timestamp_with_hours":"0:11:40","description":"Using the crossing function to set up a tibble to run simulations","functions":"crossing","timestamp_sec":700},{"timestamp_with_hours":"0:12:35","description":"Using map_dbl function to apply a set of simulations to each possibility of N sides","functions":"map_dbl","timestamp_sec":755},{"timestamp_with_hours":"0:13:30","description":"Spotting an error in the formula for simulating one round (6-sided die was hard-coded)","timestamp_sec":810},{"timestamp_with_hours":"0:16:40","description":"Using simple linear regression with the lm function to find the relationship between number of sides and average number of rolls","functions":"lm","timestamp_sec":1000},{"timestamp_with_hours":"0:17:20","description":"Reviewing distributions for different N-sided dice","timestamp_sec":1040},{"timestamp_with_hours":"0:18:00","description":"Calculating variance, standard deviation, and coefficient of variation to get hints on the distribution (and ruling out Poisson)","timestamp_sec":1080}]</script>
+```{=html}
+<div id="topics">
+  <div class="topic">
+    <h3 id="ts-45">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(45, this)">0:0:45</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Explaining why the recursive nature of this problem is well-suited to simulation</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-125">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(125, this)">0:2:05</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">accumulate</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Introducing the accumulate function as a tool for simulation</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-230">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(230, this)">0:3:50</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Creating a condition to call the done function</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-420">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(420, this)">0:7:00</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">replicate</span></div><div></div></div>
+    <div class="topic_description">
+      <p>After creating a function to simulate one round of the problem, using replicate function to run simulation many times</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-435">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(435, this)">0:7:15</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">qplot</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using qplot function to quickly create a histogram of simulations</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-460">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(460, this)">0:7:40</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Making observations on the distribution of simulations (looks kind of like a gamma distribution)</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-605">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(605, this)">0:10:05</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Observing that the distribution is kind of log-normal (but that doesn't really apply because we're using integers)</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-635">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(635, this)">0:10:35</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">table</span><span class="badge-functions badge bg-info">sort</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using table and sort functions to find the most common number of rolls</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-680">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(680, this)">0:11:20</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Starting the Extra Credit portion of the problem (N-sided die)</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-700">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(700, this)">0:11:40</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">crossing</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using the crossing function to set up a tibble to run simulations</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-755">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(755, this)">0:12:35</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">map_dbl</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using map_dbl function to apply a set of simulations to each possibility of N sides</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-810">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(810, this)">0:13:30</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Spotting an error in the formula for simulating one round (6-sided die was hard-coded)</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1000">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1000, this)">0:16:40</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">lm</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using simple linear regression with the lm function to find the relationship between number of sides and average number of rolls</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1040">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1040, this)">0:17:20</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Reviewing distributions for different N-sided dice</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1080">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1080, this)">0:18:00</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Calculating variance, standard deviation, and coefficient of variation to get hints on the distribution (and ruling out Poisson)</p>
+
+    </div>
+  </div>
+</div>
+```
+     
+<script>
+// 2. This code loads the IFrame Player API code asynchronously.
+var tag = document.createElement("script");
+
+tag.src = "https://www.youtube.com/iframe_api";
+var firstScriptTag = document.getElementsByTagName("script")[0];
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+// 3. This function creates an <iframe> (and YouTube player)
+//    after the API code downloads.
+var videoId = document.getElementById("yt-player").dataset.videoId;
+var player;
+function onYouTubeIframeAPIReady() {
+  player = new YT.Player("yt-player", {
+    height: "486",
+    width: "864",
+    videoId: videoId,
+    playerVars: {
+      "playsinline": 1
+    },
+    events: {
+      onStateChange: function(event) {
+        if (event.data == YT.PlayerState.PLAYING) {
+          followTimestamps()
+        }
+      }
+    }
+  });
+}
+
+function playerSkipToTimestamp(seconds, tsElement) {
+  player.seekTo(seconds, true)
+  tsElement.scrollIntoView()
+  document.getElementById("screencast").scrollIntoView()
+}
+
+const timestamps = Array.from(document.querySelectorAll('.topic h3[id^="ts-"]'))
+  .map(el => el.id.replace('ts-', ''))
+
+function followTimestamps() {
+  if (player.getPlayerState() !== 1) {
+    return
+  }
+  const currentTime = `${Math.floor(player.getCurrentTime())}`
+  if (timestamps.includes(currentTime)) {
+    const el = document.getElementById(`ts-${currentTime}`)
+    if (el) {
+      el.scrollIntoView()
+      document.getElementById("screencast").scrollIntoView()
+    }
+  }
+  setTimeout(followTimestamps, 1000)
+}
+</script>

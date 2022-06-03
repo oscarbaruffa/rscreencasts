@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-0.9.301">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="dcterms.date" content="2020-11-09">
+<meta name="description" content="Joining tables, Animated world choropleth, Adding IQR to geom_line, World development indicators package">
+
+<title>R Screencasts - Historical Phones</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+span.underline{text-decoration: underline;}
+div.column{display: inline-block; vertical-align: top; width: 50%;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+</style>
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<link href="../images/favicon-32x32.png" rel="icon" type="image/png">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link id="quarto-text-highlighting-styles" href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+<script defer="" data-domain="rscreencasts.com" src="https://plausible.io/js/script.outbound-links.js"></script>
+
+<meta property="og:title" content="R Screencasts - Historical Phones">
+<meta property="og:description" content="Awesome data analysis screencasts from a top Data Scientist">
+<meta property="og:image" content="https://www.rscreencasts.com/images/rscreencasts_social.png">
+<meta property="og:url" content="https://www.rscreencasts.com/">
+<meta property="og:site_name" content="R Screencasts">
+
+<meta name="twitter:title" content="R Screencasts - Historical Phones">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image:alt" content="Awesome data analysis screencasts from a top Data Scientist">
+<meta name="twitter:site" content="@oscarbaruffa">
+<meta name="twitter:description" content="Awesome data analysis screencasts from a top Data Scientists">
+<meta name="twitter:image" content="https://www.rscreencasts.com/images/rscreencasts_social.png">
+
+
+<link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">R Screencasts</span>
+  </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../index.html">Home</a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../resources.html">Resources</a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../about.html">About</a>
+  </li>  
+</ul>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#screencast" id="toc-screencast" class="nav-link active" data-scroll-target="#screencast">Screencast</a></li>
+  <li><a href="#timestamps" id="toc-timestamps" class="nav-link" data-scroll-target="#timestamps">Timestamps</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><p>Historical Phones</p></h1>
+</div>
+
+<div>
+  <div class="description">
+    <p>Joining tables, Animated world choropleth, Adding IQR to geom_line, World development indicators package</p>
+  </div>
+</div>
+
+
+
+
+<div class="quarto-title-meta">
+
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">November 9, 2020</p>
+    </div>
+  </div>
+    
+  </div>
+  
+
+</header>
+
+<p>Notable topics: Joining tables, Animated world choropleth, Adding IQR to geom_line, World development indicators package</p>
+<p>Recorded on: 2020-11-09</p>
+<p>Timestamps by: Eric Fletcher</p>
+<p><a href="https://github.com/dgrtwo/data-screencasts/blob/master/2020_11_10_phone_history.Rmd">View code</a></p>
+<section id="screencast" class="level2">
+<h2 class="anchored" data-anchor-id="screencast">Screencast</h2>
+<div id="yt-player" data-video-id="pJPqAIb8MKA">
+
+</div>
+</section>
+<section id="timestamps" class="level2">
+<h2 class="anchored" data-anchor-id="timestamps">Timestamps</h2>
+<div id="topics">
+  <div class="topic">
+    <h3 id="ts-135" class="anchored">
+      <button class="btn btn-link btn-timestamp" onclick="playerSkipToTimestamp(135, this)">0:2:15</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">bind_rows</span></div><div><span class="badge-packages badge bg-primary">dplyr</span></div></div>
+    <div class="topic_description">
+      <p>Use <code>bind_rows</code> from the <code>dplyr</code> package to combine the two data sets.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-450" class="anchored">
+      <button class="btn btn-link btn-timestamp" onclick="playerSkipToTimestamp(450, this)">0:7:30</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">ggplot</span><span class="badge-functions badge bg-info">group</span></div><div><span class="badge-packages badge bg-primary">ggplot2</span></div></div>
+    <div class="topic_description">
+      <p>Use <code>group = interaction(type, country)</code> within <code>ggplot</code> <code>aes()</code> to set the interaction <code>type</code> with every single <code>country</code> on one plot.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-570" class="anchored">
+      <button class="btn btn-link btn-timestamp" onclick="playerSkipToTimestamp(570, this)">0:9:30</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">semi_join</span><span class="badge-functions badge bg-info">top_n</span></div><div><span class="badge-packages badge bg-primary">dplyr</span></div></div>
+    <div class="topic_description">
+      <p>Use <code>semi_join</code> from the <code>dplyr</code> package to join rows from <code>phones</code> with a match in <code>country_sizes</code>.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-840" class="anchored">
+      <button class="btn btn-link btn-timestamp" onclick="playerSkipToTimestamp(840, this)">0:14:00</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">quantile</span><span class="badge-functions badge bg-info">geom_ribbon</span></div><div><span class="badge-packages badge bg-primary">stats</span><span class="badge-packages badge bg-primary">ggplot2</span></div></div>
+    <div class="topic_description">
+      <p>Use <code>quantile</code> from the <code>stats</code> package within <code>summarize</code> to show the 25th, and 75th quantiles (interquartile range) on the plot.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1070" class="anchored">
+      <button class="btn btn-link btn-timestamp" onclick="playerSkipToTimestamp(1070, this)">0:17:50</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">WDI</span><span class="badge-functions badge bg-info">select</span></div><div><span class="badge-packages badge bg-primary">WDI</span><span class="badge-packages badge bg-primary">dplyr</span></div></div>
+    <div class="topic_description">
+      <p>Import the <code>wdi</code> package (World Development Indicators from the World Bank) with <code>extra = TRUE</code> in order to get the <code>iso3c</code> code and <code>income</code> level for each country.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1185" class="anchored">
+      <button class="btn btn-link btn-timestamp" onclick="playerSkipToTimestamp(1185, this)">0:19:45</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">inner_join</span></div><div><span class="badge-packages badge bg-primary">dplyr</span></div></div>
+    <div class="topic_description">
+      <p>Use <code>inner_join</code> from the <code>dplyr</code> package to join the <code>WDI</code> data with the <code>phones</code> data.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1235" class="anchored">
+      <button class="btn btn-link btn-timestamp" onclick="playerSkipToTimestamp(1235, this)">0:20:35</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">fct_relevel</span></div><div><span class="badge-packages badge bg-primary">forcats</span></div></div>
+    <div class="topic_description">
+      <p>Use <code>fct_relevel</code> from the <code>forcats</code> package to reorder <code>income</code> factor levels in ascending order.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1265" class="anchored">
+      <button class="btn btn-link btn-timestamp" onclick="playerSkipToTimestamp(1265, this)">0:21:05</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">.</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Create an <code>anonymous function</code> using <code>.</code> (dot).</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1770" class="anchored">
+      <button class="btn btn-link btn-timestamp" onclick="playerSkipToTimestamp(1770, this)">0:29:30</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">inner_join</span><span class="badge-functions badge bg-info">geom_abline</span></div><div><span class="badge-packages badge bg-primary">dplyr</span><span class="badge-packages badge bg-primary">ggplot2</span></div></div>
+    <div class="topic_description">
+      <p>Use <code>inner_join</code> from the <code>dplyr</code> package to join the <code>mobile</code> data and <code>landline</code> data together with a <code>geom_abline</code> to see how different the total populations are between the two datasets.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1860" class="anchored">
+      <button class="btn btn-link btn-timestamp" onclick="playerSkipToTimestamp(1860, this)">0:31:00</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">geom_hline</span></div><div><span class="badge-packages badge bg-primary">ggplot2</span></div></div>
+    <div class="topic_description">
+      <p>Use <code>geom_hline</code> to add a refrence line to the plot shwoing when each country crossed the 50 per 100 subscription mark.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2120" class="anchored">
+      <button class="btn btn-link btn-timestamp" onclick="playerSkipToTimestamp(2120, this)">0:35:20</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">summarize</span><span class="badge-functions badge bg-info">min</span></div><div><span class="badge-packages badge bg-primary">dplyr</span></div></div>
+    <div class="topic_description">
+      <p>Use <code>summarize</code> from the <code>dplyr</code> package with <code>min(year([Mobile &gt;= 50]))</code> to find the year in which each country crossed the 50 per 100 subscription mark.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2120" class="anchored">
+      <button class="btn btn-link btn-timestamp" onclick="playerSkipToTimestamp(2120, this)">0:35:20</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">summarize</span><span class="badge-functions badge bg-info">max</span></div><div><span class="badge-packages badge bg-primary">dplyr</span></div></div>
+    <div class="topic_description">
+      <p>Use <code>summarize</code> from the <code>dplyr</code> package with <code>max(Mobile)</code> to find the peak number of mobile subscriptions per country.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2120" class="anchored">
+      <button class="btn btn-link btn-timestamp" onclick="playerSkipToTimestamp(2120, this)">0:35:20</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">na_if</span><span class="badge-functions badge bg-info">summarize</span></div><div><span class="badge-packages badge bg-primary">dplyr</span></div></div>
+    <div class="topic_description">
+      <p>Use <code>na_if</code> from the <code>dplyr</code> package within <code>summarize</code> to change <code>Inf</code> to <code>NA</code>.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2300" class="anchored">
+      <button class="btn btn-link btn-timestamp" onclick="playerSkipToTimestamp(2300, this)">0:38:20</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">WDIsearch</span></div><div><span class="badge-packages badge bg-primary">WDI</span></div></div>
+    <div class="topic_description">
+      <p>Using the <code>WDIsearch</code> function to search the <code>WDI</code> package for proper GDP per capita indicator. Ended up using the <code>NY.GDP.PCAP.PP.KD</code> indicator.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2345" class="anchored">
+      <button class="btn btn-link btn-timestamp" onclick="playerSkipToTimestamp(2345, this)">0:39:05</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">WDI</span><span class="badge-functions badge bg-info">select</span></div><div><span class="badge-packages badge bg-primary">WDI</span><span class="badge-packages badge bg-primary">dplyr</span></div></div>
+    <div class="topic_description">
+      <p>Adding the <code>GDP</code> data from the <code>WDI</code> package to the <code>country_incomes</code> table.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2392" class="anchored">
+      <button class="btn btn-link btn-timestamp" onclick="playerSkipToTimestamp(2392, this)">0:39:52</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">inner_join</span></div><div><span class="badge-packages badge bg-primary">dplyr</span></div></div>
+    <div class="topic_description">
+      <p>Using the <code>inner_join</code> function from the <code>dplyr</code> package to join the <code>phones</code> table with the <code>country_incomes</code> table pulling in the <code>gdp_per_capita</code> variable.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2545" class="anchored">
+      <button class="btn btn-link btn-timestamp" onclick="playerSkipToTimestamp(2545, this)">0:42:25</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">WDIsearch</span></div><div><span class="badge-packages badge bg-primary">WDI</span></div></div>
+    <div class="topic_description">
+      <p>Using the <code>WDIsearch</code> function to search the <code>WDI</code> package for proper population indicator. Ended up using the <code>SP.POP.TOTL</code> indicator.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-3000" class="anchored">
+      <button class="btn btn-link btn-timestamp" onclick="playerSkipToTimestamp(3000, this)">0:50:00</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">map_data</span><span class="badge-functions badge bg-info">iso3166</span><span class="badge-functions badge bg-info">regex_left_join</span><span class="badge-functions badge bg-info">left_join</span><span class="badge-functions badge bg-info">transition_manual</span></div><div><span class="badge-packages badge bg-primary">maps</span><span class="badge-packages badge bg-primary">ggplot2</span><span class="badge-packages badge bg-primary">fuzzyjoin</span><span class="badge-packages badge bg-primary">gganimate</span></div></div>
+    <div class="topic_description">
+      <p>Create an animated choropleth world map with <code>fill = subscriptions</code>.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-3600" class="anchored">
+      <button class="btn btn-link btn-timestamp" onclick="playerSkipToTimestamp(3600, this)">1:00:00</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Summary of screencast</p>
+
+    </div>
+  </div>
+</div>
+<script>
+// 2. This code loads the IFrame Player API code asynchronously.
+var tag = document.createElement("script");
+
+tag.src = "https://www.youtube.com/iframe_api";
+var firstScriptTag = document.getElementsByTagName("script")[0];
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+// 3. This function creates an <iframe> (and YouTube player)
+//    after the API code downloads.
+var videoId = document.getElementById("yt-player").dataset.videoId;
+var player;
+function onYouTubeIframeAPIReady() {
+  player = new YT.Player("yt-player", {
+    height: "486",
+    width: "864",
+    videoId: videoId,
+    playerVars: {
+      "playsinline": 1
+    },
+    events: {
+      onStateChange: function(event) {
+        if (event.data == YT.PlayerState.PLAYING) {
+          followTimestamps()
+        }
+      }
+    }
+  });
+}
+
+function playerSkipToTimestamp(seconds, tsElement) {
+  player.seekTo(seconds, true)
+  tsElement.scrollIntoView()
+  document.getElementById("screencast").scrollIntoView()
+}
+
+const timestamps = Array.from(document.querySelectorAll('.topic h3[id^="ts-"]'))
+  .map(el => el.id.replace('ts-', ''))
+
+function followTimestamps() {
+  if (player.getPlayerState() !== 1) {
+    return
+  }
+  const currentTime = `${Math.floor(player.getCurrentTime())}`
+  if (timestamps.includes(currentTime)) {
+    const el = document.getElementById(`ts-${currentTime}`)
+    if (el) {
+      el.scrollIntoView()
+      document.getElementById("screencast").scrollIntoView()
+    }
+  }
+  setTimeout(followTimestamps, 1000)
+}
+</script>
+
+
+</section>
+
+</main> <!-- /main -->
+<script type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    setTimeout(function() {
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      let href = ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+});
+</script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+      <div class="nav-footer-center">Vids by <a href="https://twitter.com/drob">David Robinson</a>. Timestamps &amp; rich content by <a href="https://twitter.com/alexcookson">Alex Cookson</a> and <a href="https://twitter.com/iamericfletcher">Eric Fletcher</a>. Website by <a href="https://twitter.com/OscarBaruffa">Oscar Baruffa</a>, sign up to my <a href="https://oscarbaruffa.com/newsletter/">newsletter</a> for R, data and careers</div>
+  </div>
+</footer>
+
+
+
+</body></html>

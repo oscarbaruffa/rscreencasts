@@ -5,6 +5,8 @@ description: |
   Static map with `ggplot2`, Interactive map with `leaflet`, Animated map with `gganimate`
 date: 2020-05-11
 date-format: long
+aliases:
+  - "Volcano Eruptions.html"
 ---
 
 Notable topics: Static map with `ggplot2`, Interactive map with `leaflet`, Animated map with `gganimate`
@@ -15,10 +17,259 @@ Timestamps by: Eric Fletcher
 
 [View code](https://github.com/dgrtwo/data-screencasts/blob/master/volcano-eruptions.Rmd)
 
-## Full screencast
+## Screencast
 
-<iframe class="video" src="https://www.youtube.com/embed/pZINGjQ86Hc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div id="yt-player" data-video-id="pZINGjQ86Hc"></div>
 
 ## Timestamps
 
-<script id="timestamps" type="application-json">[{"timestamp_with_hours":"0:7:00","description":"Change the `last_eruption_year` into `years_ago` by using `mutate` from the `dplyr` package with `years_ago = 2020 - as.numeric(last_eruption_year))`. In the plot David includes `+1` to account for 0 values in the `years_ago` variable.","functions":"mutate","packages":"dplyr","timestamp_sec":420},{"timestamp_with_hours":"0:9:50","description":"Use `str_detect` from the `stringr` package to search the `volcano_name` variable for `Vesuvius` when not sure if spelling is correct.","functions":"str_detect","packages":"stringr","timestamp_sec":590},{"timestamp_with_hours":"0:12:50","description":"Use the `longitude` and `latitude` to create a world map showing where the volcanoes are located.","functions":"grom_point | theme_map | borders","packages":"ggplot2 | ggthemes","timestamp_sec":770},{"timestamp_with_hours":"0:15:30","description":"Use `fct_lump` from the`forcats` package to lump together all `primary_volcano_type` factor levels except for the `n` most frequent.","functions":"fct_lump","packages":"forcats","timestamp_sec":930},{"timestamp_with_hours":"0:16:25","description":"Use `str_remove` from the `stringr` package with the regular expression `\"\\\\(.\\\\)\"` to remove the parentheses.","functions":"str_remove","packages":"stringr","timestamp_sec":985},{"timestamp_with_hours":"0:18:30","description":"Use the `leaflet` package to create an interactive map with popup information about each volcano.","functions":"leaflet | addTiles | addCircleMarkers","packages":"leaflet","timestamp_sec":1110},{"timestamp_with_hours":"0:24:10","description":"Use `glue` from the `glue` package to create an `HTML` string by concatenating `volcano_name` and `primary_volcano_type` between `HTML <p><\/p> tags`.","functions":"glue","packages":"glue","timestamp_sec":1450},{"timestamp_with_hours":"0:27:15","description":"Use the `DT` package to turn the `leaflet` popup information into a `datatable`.","functions":"gather | nest | map","packages":"DT","timestamp_sec":1635},{"timestamp_with_hours":"0:31:40","description":"Use `str_replace_all` fromt he `stringr` package to replace all the underscores `_` in `volcano_name` with space. Then use `str_to_title` from the `stringr` package to convert the `volcano_name` variable to title case.","functions":"str_replace | str_to_title","packages":"stringr","timestamp_sec":1900},{"timestamp_with_hours":"0:32:05","description":"Use `kable` with `format = HTML`  from the `knitr` package instead of `DT` to make turning the data into `HTML` much easier.","functions":"kable","packages":"knitr","timestamp_sec":1925},{"timestamp_with_hours":"0:34:05","description":"Use `paste0` from `base` R to bold the `Volcano Name`, `Primary Volcano Type`, and `Last Eruption Year` in the `leaflet` popup.","functions":"paste0","packages":"base","timestamp_sec":2045},{"timestamp_with_hours":"0:34:50","description":"Use `replace_na` from the `tidyr` package to replace `unknown` with `NA`.","functions":"replace_na","packages":"tidyr","timestamp_sec":2090},{"timestamp_with_hours":"0:37:15","description":"Use `addMeasure` from the `leaflet` package to add a tool to the map that allows for the measuring of distance between points.","functions":"addMeasure","packages":"leaflet","timestamp_sec":2235},{"timestamp_with_hours":"0:39:30","description":"Use `colorNumeric` from the `leaflet` package to color the points based on their `population within 5km`. To accomplish this, David creates 2 new variables: 1) `transformed_pop` to get the population on a `log2` scale & 2) `pop_color` which uses the `colorNumeric` function to generate the color hex values based on `transformed_pop`.","functions":"colorNumeric","packages":"leaflet","timestamp_sec":2370},{"timestamp_with_hours":"0:46:30","description":"Use the `gganimate` package to create an animated map.","functions":"transition_time | frame_time","packages":"gganimate","timestamp_sec":2790},{"timestamp_with_hours":"0:48:45","description":"Use `geom_point` from the `ggplot2` package with `size = .00001 * 10 ^ vei` so the size of the points are then proportional to the `volume` metrics provided in the `Volcano Eruption Index`. The metrics are in `Km^3`.","functions":"geom_point","packages":"ggplot2","timestamp_sec":2925},{"timestamp_with_hours":"0:50:20","description":"Use `scale_size_continuous` from the `ggplot2` package with `range = c(.1, 6)` to make the smaller points smaller and larger points larger.","functions":"scale_size_continuous","packages":"ggplot2","timestamp_sec":3020},{"timestamp_with_hours":"0:50:55","description":"Use `scale_color_gradient2` from the `ggplot2` package to apply color gradient to each point based on the volcano size and whether its low or high.","functions":"scale_color_gradient2","packages":"ggplot2","timestamp_sec":3055},{"timestamp_with_hours":"0:59:40","description":"Summary of screencast while waiting for `gganimate` map to render. \n\nAlso, brief discussion on using `transition_reveal` instead of `transition_time` to keep the point on the map instead of replacing them in each frame.","functions":"transition_reveal","packages":"gganimate","timestamp_sec":3580}]</script>
+```{=html}
+<div id="topics">
+  <div class="topic">
+    <h3 id="ts-420">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(420, this)">0:7:00</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">mutate</span></div><div><span class="badge-packages badge bg-primary">dplyr</span></div></div>
+    <div class="topic_description">
+      <p>Change the <code>last_eruption_year</code> into <code>years_ago</code> by using <code>mutate</code> from the <code>dplyr</code> package with <code>years_ago = 2020 - as.numeric(last_eruption_year))</code>. In the plot David includes <code>+1</code> to account for 0 values in the <code>years_ago</code> variable.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-590">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(590, this)">0:9:50</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">str_detect</span></div><div><span class="badge-packages badge bg-primary">stringr</span></div></div>
+    <div class="topic_description">
+      <p>Use <code>str_detect</code> from the <code>stringr</code> package to search the <code>volcano_name</code> variable for <code>Vesuvius</code> when not sure if spelling is correct.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-770">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(770, this)">0:12:50</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">grom_point</span><span class="badge-functions badge bg-info">theme_map</span><span class="badge-functions badge bg-info">borders</span></div><div><span class="badge-packages badge bg-primary">ggplot2</span><span class="badge-packages badge bg-primary">ggthemes</span></div></div>
+    <div class="topic_description">
+      <p>Use the <code>longitude</code> and <code>latitude</code> to create a world map showing where the volcanoes are located.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-930">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(930, this)">0:15:30</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">fct_lump</span></div><div><span class="badge-packages badge bg-primary">forcats</span></div></div>
+    <div class="topic_description">
+      <p>Use <code>fct_lump</code> from the<code>forcats</code> package to lump together all <code>primary_volcano_type</code> factor levels except for the <code>n</code> most frequent.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-985">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(985, this)">0:16:25</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">str_remove</span></div><div><span class="badge-packages badge bg-primary">stringr</span></div></div>
+    <div class="topic_description">
+      <p>Use <code>str_remove</code> from the <code>stringr</code> package with the regular expression <code>&quot;\\(.\\)&quot;</code> to remove the parentheses.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1110">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1110, this)">0:18:30</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">leaflet</span><span class="badge-functions badge bg-info">addTiles</span><span class="badge-functions badge bg-info">addCircleMarkers</span></div><div><span class="badge-packages badge bg-primary">leaflet</span></div></div>
+    <div class="topic_description">
+      <p>Use the <code>leaflet</code> package to create an interactive map with popup information about each volcano.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1450">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1450, this)">0:24:10</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">glue</span></div><div><span class="badge-packages badge bg-primary">glue</span></div></div>
+    <div class="topic_description">
+      <p>Use <code>glue</code> from the <code>glue</code> package to create an <code>HTML</code> string by concatenating <code>volcano_name</code> and <code>primary_volcano_type</code> between <code>HTML &lt;p&gt;&lt;/p&gt; tags</code>.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1635">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1635, this)">0:27:15</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">gather</span><span class="badge-functions badge bg-info">nest</span><span class="badge-functions badge bg-info">map</span></div><div><span class="badge-packages badge bg-primary">DT</span></div></div>
+    <div class="topic_description">
+      <p>Use the <code>DT</code> package to turn the <code>leaflet</code> popup information into a <code>datatable</code>.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1900">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1900, this)">0:31:40</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">str_replace</span><span class="badge-functions badge bg-info">str_to_title</span></div><div><span class="badge-packages badge bg-primary">stringr</span></div></div>
+    <div class="topic_description">
+      <p>Use <code>str_replace_all</code> fromt he <code>stringr</code> package to replace all the underscores <code>_</code> in <code>volcano_name</code> with space. Then use <code>str_to_title</code> from the <code>stringr</code> package to convert the <code>volcano_name</code> variable to title case.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1925">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1925, this)">0:32:05</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">kable</span></div><div><span class="badge-packages badge bg-primary">knitr</span></div></div>
+    <div class="topic_description">
+      <p>Use <code>kable</code> with <code>format = HTML</code>  from the <code>knitr</code> package instead of <code>DT</code> to make turning the data into <code>HTML</code> much easier.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2045">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2045, this)">0:34:05</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">paste0</span></div><div><span class="badge-packages badge bg-primary">base</span></div></div>
+    <div class="topic_description">
+      <p>Use <code>paste0</code> from <code>base</code> R to bold the <code>Volcano Name</code>, <code>Primary Volcano Type</code>, and <code>Last Eruption Year</code> in the <code>leaflet</code> popup.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2090">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2090, this)">0:34:50</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">replace_na</span></div><div><span class="badge-packages badge bg-primary">tidyr</span></div></div>
+    <div class="topic_description">
+      <p>Use <code>replace_na</code> from the <code>tidyr</code> package to replace <code>unknown</code> with <code>NA</code>.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2235">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2235, this)">0:37:15</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">addMeasure</span></div><div><span class="badge-packages badge bg-primary">leaflet</span></div></div>
+    <div class="topic_description">
+      <p>Use <code>addMeasure</code> from the <code>leaflet</code> package to add a tool to the map that allows for the measuring of distance between points.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2370">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2370, this)">0:39:30</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">colorNumeric</span></div><div><span class="badge-packages badge bg-primary">leaflet</span></div></div>
+    <div class="topic_description">
+      <p>Use <code>colorNumeric</code> from the <code>leaflet</code> package to color the points based on their <code>population within 5km</code>. To accomplish this, David creates 2 new variables: 1) <code>transformed_pop</code> to get the population on a <code>log2</code> scale &amp; 2) <code>pop_color</code> which uses the <code>colorNumeric</code> function to generate the color hex values based on <code>transformed_pop</code>.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2790">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2790, this)">0:46:30</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">transition_time</span><span class="badge-functions badge bg-info">frame_time</span></div><div><span class="badge-packages badge bg-primary">gganimate</span></div></div>
+    <div class="topic_description">
+      <p>Use the <code>gganimate</code> package to create an animated map.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2925">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2925, this)">0:48:45</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">geom_point</span></div><div><span class="badge-packages badge bg-primary">ggplot2</span></div></div>
+    <div class="topic_description">
+      <p>Use <code>geom_point</code> from the <code>ggplot2</code> package with <code>size = .00001 * 10 ^ vei</code> so the size of the points are then proportional to the <code>volume</code> metrics provided in the <code>Volcano Eruption Index</code>. The metrics are in <code>Km^3</code>.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-3020">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(3020, this)">0:50:20</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">scale_size_continuous</span></div><div><span class="badge-packages badge bg-primary">ggplot2</span></div></div>
+    <div class="topic_description">
+      <p>Use <code>scale_size_continuous</code> from the <code>ggplot2</code> package with <code>range = c(.1, 6)</code> to make the smaller points smaller and larger points larger.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-3055">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(3055, this)">0:50:55</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">scale_color_gradient2</span></div><div><span class="badge-packages badge bg-primary">ggplot2</span></div></div>
+    <div class="topic_description">
+      <p>Use <code>scale_color_gradient2</code> from the <code>ggplot2</code> package to apply color gradient to each point based on the volcano size and whether its low or high.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-3580">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(3580, this)">0:59:40</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">transition_reveal</span></div><div><span class="badge-packages badge bg-primary">gganimate</span></div></div>
+    <div class="topic_description">
+      <p>Summary of screencast while waiting for <code>gganimate</code> map to render.</p>
+<p>Also, brief discussion on using <code>transition_reveal</code> instead of <code>transition_time</code> to keep the point on the map instead of replacing them in each frame.</p>
+
+    </div>
+  </div>
+</div>
+```
+     
+<script>
+// 2. This code loads the IFrame Player API code asynchronously.
+var tag = document.createElement("script");
+
+tag.src = "https://www.youtube.com/iframe_api";
+var firstScriptTag = document.getElementsByTagName("script")[0];
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+// 3. This function creates an <iframe> (and YouTube player)
+//    after the API code downloads.
+var videoId = document.getElementById("yt-player").dataset.videoId;
+var player;
+function onYouTubeIframeAPIReady() {
+  player = new YT.Player("yt-player", {
+    height: "486",
+    width: "864",
+    videoId: videoId,
+    playerVars: {
+      "playsinline": 1
+    },
+    events: {
+      onStateChange: function(event) {
+        if (event.data == YT.PlayerState.PLAYING) {
+          followTimestamps()
+        }
+      }
+    }
+  });
+}
+
+function playerSkipToTimestamp(seconds, tsElement) {
+  player.seekTo(seconds, true)
+  tsElement.scrollIntoView()
+  document.getElementById("screencast").scrollIntoView()
+}
+
+const timestamps = Array.from(document.querySelectorAll('.topic h3[id^="ts-"]'))
+  .map(el => el.id.replace('ts-', ''))
+
+function followTimestamps() {
+  if (player.getPlayerState() !== 1) {
+    return
+  }
+  const currentTime = `${Math.floor(player.getCurrentTime())}`
+  if (timestamps.includes(currentTime)) {
+    const el = document.getElementById(`ts-${currentTime}`)
+    if (el) {
+      el.scrollIntoView()
+      document.getElementById("screencast").scrollIntoView()
+    }
+  }
+  setTimeout(followTimestamps, 1000)
+}
+</script>

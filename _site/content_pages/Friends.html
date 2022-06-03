@@ -2,11 +2,11 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-0.9.388">
+<meta name="generator" content="quarto-0.9.301">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2020-09-08">
+<meta name="dcterms.date" content="2020-09-07">
 <meta name="description" content="Data Manipulation, Linear Modeling, Pairwise Correlation, Text Mining">
 
 <title>R Screencasts - Friends</title>
@@ -112,22 +112,8 @@ ul.task-list{list-style: none;}
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#full-screencast" id="toc-full-screencast" class="nav-link active" data-scroll-target="#full-screencast">Full screencast</a></li>
-  <li><a href="#timestamps" id="toc-timestamps" class="nav-link" data-scroll-target="#timestamps">Timestamps</a>
-  <ul class="collapse">
-  <li><a href="#section" id="toc-section" class="nav-link" data-scroll-target="#section">0:7:30</a></li>
-  <li><a href="#section-1" id="toc-section-1" class="nav-link" data-scroll-target="#section-1">0:9:35</a></li>
-  <li><a href="#section-2" id="toc-section-2" class="nav-link" data-scroll-target="#section-2">0:12:07</a></li>
-  <li><a href="#section-3" id="toc-section-3" class="nav-link" data-scroll-target="#section-3">0:12:30</a></li>
-  <li><a href="#section-4" id="toc-section-4" class="nav-link" data-scroll-target="#section-4">0:15:45</a></li>
-  <li><a href="#section-5" id="toc-section-5" class="nav-link" data-scroll-target="#section-5">0:19:95</a></li>
-  <li><a href="#section-6" id="toc-section-6" class="nav-link" data-scroll-target="#section-6">0:21:35</a></li>
-  <li><a href="#section-7" id="toc-section-7" class="nav-link" data-scroll-target="#section-7">0:26:45</a></li>
-  <li><a href="#section-8" id="toc-section-8" class="nav-link" data-scroll-target="#section-8">0:34:05</a></li>
-  <li><a href="#section-9" id="toc-section-9" class="nav-link" data-scroll-target="#section-9">0:42:00</a></li>
-  <li><a href="#section-10" id="toc-section-10" class="nav-link" data-scroll-target="#section-10">0:54:15</a></li>
-  <li><a href="#section-11" id="toc-section-11" class="nav-link" data-scroll-target="#section-11">1:00:25</a></li>
-  </ul></li>
+  <li><a href="#screencast" id="toc-screencast" class="nav-link active" data-scroll-target="#screencast">Screencast</a></li>
+  <li><a href="#timestamps" id="toc-timestamps" class="nav-link" data-scroll-target="#timestamps">Timestamps</a></li>
   </ul>
 </nav>
     </div>
@@ -136,12 +122,12 @@ ul.task-list{list-style: none;}
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Friends</h1>
+<h1 class="title"><p>Friends</p></h1>
 </div>
 
 <div>
   <div class="description">
-    Data Manipulation, Linear Modeling, Pairwise Correlation, Text Mining
+    <p>Data Manipulation, Linear Modeling, Pairwise Correlation, Text Mining</p>
   </div>
 </div>
 
@@ -154,7 +140,7 @@ ul.task-list{list-style: none;}
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">September 8, 2020</p>
+      <p class="date">September 7, 2020</p>
     </div>
   </div>
     
@@ -164,130 +150,211 @@ ul.task-list{list-style: none;}
 </header>
 
 <p>Notable topics: Data Manipulation, Linear Modeling, Pairwise Correlation, Text Mining</p>
-<p>Recorded on: 2020-09-08</p>
+<p>Recorded on: 2020-09-07</p>
 <p>Timestamps by: Eric Fletcher</p>
 <p><a href="https://github.com/dgrtwo/data-screencasts/blob/master/2020_09_08_friends.Rmd">View code</a></p>
-<section id="full-screencast" class="level2">
-<h2 class="anchored" data-anchor-id="full-screencast">Full screencast</h2>
-<iframe class="video" src="https://www.youtube.com/embed/bgcBEBqVnx8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
-</iframe>
+<section id="screencast" class="level2">
+<h2 class="anchored" data-anchor-id="screencast">Screencast</h2>
+<div id="yt-player" data-video-id="bgcBEBqVnx8">
+
+</div>
 </section>
 <section id="timestamps" class="level2">
 <h2 class="anchored" data-anchor-id="timestamps">Timestamps</h2>
-<section id="section" class="level3">
-<h3 class="anchored" data-anchor-id="section">0:7:30</h3>
-<p>Use <code>dplyr</code> package’s <code>count</code> function to count the unique values of multiple variables.</p>
-<p>count</p>
-<p>dplyr</p>
-<iframe class="video" src="https://www.youtube.com/embed/bgcBEBqVnx8?start=450" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
-</iframe>
-</section>
-<section id="section-1" class="level3">
-<h3 class="anchored" data-anchor-id="section-1">0:9:35</h3>
-<p>Use <code>geom_col</code> to show how many lines of dialogue there is for each character. Use <code>fct_reorder</code> to reorder the <code>speaker</code> factor levels by sorting along <code>n</code>.</p>
-<p>geom_col | fct_reorder</p>
-<p>ggplot | forcats</p>
-<iframe class="video" src="https://www.youtube.com/embed/bgcBEBqVnx8?start=575" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
-</iframe>
-</section>
-<section id="section-2" class="level3">
-<h3 class="anchored" data-anchor-id="section-2">0:12:07</h3>
-<p>Use <code>semi_join</code> to join <code>friends</code> dataset with <code>main_cast</code> with <code>by = "speaker</code> returning all rows from <code>friends</code> with a match in <code>main_cast</code>.</p>
-<p>semi_join</p>
-<p>dplyr</p>
-<iframe class="video" src="https://www.youtube.com/embed/bgcBEBqVnx8?start=727" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
-</iframe>
-</section>
-<section id="section-3" class="level3">
-<h3 class="anchored" data-anchor-id="section-3">0:12:30</h3>
-<p>Use <code>unite</code> to create the <code>episode_number</code> variable which pastes together <code>season</code> and <code>episode</code> with <code>sep = "."</code>.</p>
+<div id="topics">
+  <div class="topic">
+    <h3 id="ts-450" class="anchored">
+      <button class="btn btn-link btn-timestamp" onclick="playerSkipToTimestamp(450, this)">0:7:30</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">count</span></div><div><span class="badge-packages badge bg-primary">dplyr</span></div></div>
+    <div class="topic_description">
+      <p>Use <code>dplyr</code> package's <code>count</code> function to count the unique values of multiple variables.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-575" class="anchored">
+      <button class="btn btn-link btn-timestamp" onclick="playerSkipToTimestamp(575, this)">0:9:35</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">geom_col</span><span class="badge-functions badge bg-info">fct_reorder</span></div><div><span class="badge-packages badge bg-primary">ggplot</span><span class="badge-packages badge bg-primary">forcats</span></div></div>
+    <div class="topic_description">
+      <p>Use <code>geom_col</code> to show how many lines of dialogue there is for each character. Use <code>fct_reorder</code> to reorder the <code>speaker</code> factor levels by sorting along <code>n</code>.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-727" class="anchored">
+      <button class="btn btn-link btn-timestamp" onclick="playerSkipToTimestamp(727, this)">0:12:07</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">semi_join</span></div><div><span class="badge-packages badge bg-primary">dplyr</span></div></div>
+    <div class="topic_description">
+      <p>Use <code>semi_join</code> to join <code>friends</code> dataset with <code>main_cast</code> with <code>by = "speaker</code> returning all rows from <code>friends</code> with a match in <code>main_cast</code>.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-750" class="anchored">
+      <button class="btn btn-link btn-timestamp" onclick="playerSkipToTimestamp(750, this)">0:12:30</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">unite</span><span class="badge-functions badge bg-info">inner_join</span><span class="badge-functions badge bg-info">glue</span><span class="badge-functions badge bg-info">fct_reorder</span></div><div><span class="badge-packages badge bg-primary">tidyr</span><span class="badge-packages badge bg-primary">glue</span><span class="badge-packages badge bg-primary">forcats</span></div></div>
+    <div class="topic_description">
+      <p>Use <code>unite</code> to create the <code>episode_number</code> variable which pastes together <code>season</code> and <code>episode</code> with <code>sep = "."</code>.</p>
 <p>Then, use <code>inner_join</code> to combine above dataset with <code>friends_info</code> with <code>by = c("season", "episode")</code>.</p>
 <p>Then, use <code>mutate</code> and the <code>glue</code> package instead to combine <code>{ season }.{ episode } { title }</code>.</p>
-<p>Then use <code>fct_reorder(episode_title, season + .001 * episode)</code> to order it by <code>season</code> first then <code>episode</code>.</p>
-<p>unite | inner_join | glue | fct_reorder</p>
-<p>tidyr | glue |forcats</p>
-<iframe class="video" src="https://www.youtube.com/embed/bgcBEBqVnx8?start=750" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
-</iframe>
-</section>
-<section id="section-4" class="level3">
-<h3 class="anchored" data-anchor-id="section-4">0:15:45</h3>
-<p>Use <code>geom_point</code> to visualize <code>episode_title</code> and <code>us_views_millions</code>.</p>
+<p>Then use <code>fct_reorder(episode_title, season + .001 * episode)</code>  to order it by <code>season</code> first then <code>episode</code>.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-945" class="anchored">
+      <button class="btn btn-link btn-timestamp" onclick="playerSkipToTimestamp(945, this)">0:15:45</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">geom_point</span><span class="badge-functions badge bg-info">as.integer</span><span class="badge-functions badge bg-info">geom_text</span><span class="badge-functions badge bg-info">geom_line</span></div><div><span class="badge-packages badge bg-primary">ggplot</span><span class="badge-packages badge bg-primary">base</span></div></div>
+    <div class="topic_description">
+      <p>Use <code>geom_point</code> to visualize <code>episode_title</code> and <code>us_views_millions</code>.</p>
 <p>Use <code>as.integer</code> to change <code>episode_title</code> to integer class.</p>
 <p>Add labels to <code>geom_point</code> using <code>geom_text</code> with <code>check_overlap = TRUE</code> so text that overlaps previous text in the same layer will not be plotted.</p>
-<p>geom_point | as.integer | geom_text | geom_line</p>
-<p>ggplot | base</p>
-<iframe class="video" src="https://www.youtube.com/embed/bgcBEBqVnx8?start=945" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
-</iframe>
-</section>
-<section id="section-5" class="level3">
-<h3 class="anchored" data-anchor-id="section-5">0:19:95</h3>
-<p>Run the above plot again using <code>imdb_rating</code> instead of <code>us_views_millions</code></p>
-<p>geom_point | as.integer | geom_text | geom_line</p>
-<p>ggplot | base</p>
-<iframe class="video" src="https://www.youtube.com/embed/bgcBEBqVnx8?start=1235" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
-</iframe>
-</section>
-<section id="section-6" class="level3">
-<h3 class="anchored" data-anchor-id="section-6">0:21:35</h3>
-<p>Ahead of modeling:</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1235" class="anchored">
+      <button class="btn btn-link btn-timestamp" onclick="playerSkipToTimestamp(1235, this)">0:19:95</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">geom_point</span><span class="badge-functions badge bg-info">as.integer</span><span class="badge-functions badge bg-info">geom_text</span><span class="badge-functions badge bg-info">geom_line</span></div><div><span class="badge-packages badge bg-primary">ggplot</span><span class="badge-packages badge bg-primary">base</span></div></div>
+    <div class="topic_description">
+      <p>Run the above plot again using <code>imdb_rating</code> instead of <code>us_views_millions</code></p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1295" class="anchored">
+      <button class="btn btn-link btn-timestamp" onclick="playerSkipToTimestamp(1295, this)">0:21:35</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">semi_join</span><span class="badge-functions badge bg-info">geom_boxplot</span><span class="badge-functions badge bg-info">coord_flip</span><span class="badge-functions badge bg-info">fct_reorder</span><span class="badge-functions badge bg-info">complete</span><span class="badge-functions badge bg-info">fill</span><span class="badge-functions badge bg-info">scale_x_log10</span></div><div><span class="badge-packages badge bg-primary">dplyr</span><span class="badge-packages badge bg-primary">ggplot</span><span class="badge-packages badge bg-primary">forcats</span><span class="badge-packages badge bg-primary">tidyr</span><span class="badge-packages badge bg-primary">tidyr</span></div></div>
+    <div class="topic_description">
+      <p>Ahead of modeling:</p>
 <p>Use <code>geom_boxplot</code> to visualize the distribution of speaking for main characters.</p>
 <p>Use the <code>complete</code> function with <code>fill = list(n = 0)</code> to replace existing explicit missing values in the data set.</p>
 <p>Demonstration of how to account for missing <code>imdb_rating</code> values using the <code>fill</code> function with <code>.direction = "downup"</code> to keep the imdb rating across the same title.</p>
-<p>semi_join | geom_boxplot | coord_flip | fct_reorder | complete | fill | scale_x_log10</p>
-<p>dplyr | ggplot | forcats | tidyr | tidyr</p>
-<iframe class="video" src="https://www.youtube.com/embed/bgcBEBqVnx8?start=1295" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
-</iframe>
-</section>
-<section id="section-7" class="level3">
-<h3 class="anchored" data-anchor-id="section-7">0:26:45</h3>
-<p>Ahead of modeling:</p>
-<p>Use <code>summarize</code> with <code>cor(log2(n), imdb_rating)</code> to find the correlation between speaker and imdb rating – the fact that the correlation is positive for all speakers gives David a suspicion that some episodes are longer than others because they’re in 2 parts with higher ratings due to important moments. David addresses this <code>confounding factor</code> by including <code>percentage of lines</code> instead of <code>number of lines</code>.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1605" class="anchored">
+      <button class="btn btn-link btn-timestamp" onclick="playerSkipToTimestamp(1605, this)">0:26:45</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">semi_join</span><span class="badge-functions badge bg-info">summarize</span><span class="badge-functions badge bg-info">add_count</span><span class="badge-functions badge bg-info">geom_boxplot</span><span class="badge-functions badge bg-info">geom_smooth</span><span class="badge-functions badge bg-info">geom_point</span></div><div><span class="badge-packages badge bg-primary">dplyr</span><span class="badge-packages badge bg-primary">ggplot</span></div></div>
+    <div class="topic_description">
+      <p>Ahead of modeling:</p>
+<p>Use <code>summarize</code> with <code>cor(log2(n), imdb_rating)</code> to find the correlation between speaker and imdb rating -- the fact that the correlation is positive for all speakers gives David a suspicion that some episodes are longer than others because they're in 2 parts with higher ratings due to important moments. David addresses this <code>confounding factor</code> by including <code>percentage of lines</code> instead of <code>number of lines</code>.</p>
 <p>Visualize results with <code>geom_boxplot</code>, <code>geom_point</code> with <code>geom_smooth</code>.</p>
-<p>semi_join | summarize | add_count | geom_boxplot | geom_smooth | geom_point</p>
-<p>dplyr | ggplot</p>
-<iframe class="video" src="https://www.youtube.com/embed/bgcBEBqVnx8?start=1605" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
-</iframe>
-</section>
-<section id="section-8" class="level3">
-<h3 class="anchored" data-anchor-id="section-8">0:34:05</h3>
-<p>Use a <code>linear model</code> to predict imdb rating based on various variables.</p>
-<p>spread | across | semi_join | lm | aov</p>
-<p>tidyr | dplyr | stats</p>
-<iframe class="video" src="https://www.youtube.com/embed/bgcBEBqVnx8?start=2045" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
-</iframe>
-</section>
-<section id="section-9" class="level3">
-<h3 class="anchored" data-anchor-id="section-9">0:42:00</h3>
-<p>Use the <code>tidytext</code> and <code>tidylo</code> packages to see what words are most common amongst characters, and whether they are said more times than would be expected by chance.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2045" class="anchored">
+      <button class="btn btn-link btn-timestamp" onclick="playerSkipToTimestamp(2045, this)">0:34:05</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">spread</span><span class="badge-functions badge bg-info">across</span><span class="badge-functions badge bg-info">semi_join</span><span class="badge-functions badge bg-info">lm</span><span class="badge-functions badge bg-info">aov</span></div><div><span class="badge-packages badge bg-primary">tidyr</span><span class="badge-packages badge bg-primary">dplyr</span><span class="badge-packages badge bg-primary">stats</span></div></div>
+    <div class="topic_description">
+      <p>Use a <code>linear model</code> to predict imdb rating based on various variables.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2520" class="anchored">
+      <button class="btn btn-link btn-timestamp" onclick="playerSkipToTimestamp(2520, this)">0:42:00</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">unnest_tokens</span><span class="badge-functions badge bg-info">anti_join</span><span class="badge-functions badge bg-info">bind_log_odds</span><span class="badge-functions badge bg-info">semi_join</span><span class="badge-functions badge bg-info">geom_col</span><span class="badge-functions badge bg-info">scale_y_reordered</span></div><div><span class="badge-packages badge bg-primary">tidytext</span><span class="badge-packages badge bg-primary">tidylo</span><span class="badge-packages badge bg-primary">ggplot</span></div></div>
+    <div class="topic_description">
+      <p>Use the <code>tidytext</code> and <code>tidylo</code> packages to see what words are most common amongst characters, and whether they are said more times than would be expected by chance.</p>
 <p>Use <code>geom_col</code> to visualize the most overrepresented words per character according to <code>log_odds_weighted</code>.</p>
-<p>unnest_tokens | anti_join | bind_log_odds | semi_join | geom_col | scale_y_reordered</p>
-<p>tidytext | tidylo | ggplot</p>
-<iframe class="video" src="https://www.youtube.com/embed/bgcBEBqVnx8?start=2520" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
-</iframe>
-</section>
-<section id="section-10" class="level3">
-<h3 class="anchored" data-anchor-id="section-10">0:54:15</h3>
-<p>Use the <code>widyr</code> package and <code>pairwise correlation</code> to determine which characters tend to appear in the same scences together?</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-3255" class="anchored">
+      <button class="btn btn-link btn-timestamp" onclick="playerSkipToTimestamp(3255, this)">0:54:15</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">unite</span><span class="badge-functions badge bg-info">semi_join</span><span class="badge-functions badge bg-info">pairwise_corr</span></div><div><span class="badge-packages badge bg-primary">widyr</span><span class="badge-packages badge bg-primary">tidyr</span></div></div>
+    <div class="topic_description">
+      <p>Use the <code>widyr</code> package and <code>pairwise correlation</code> to determine which characters tend to appear in the same scences together?</p>
 <p>Use <code>geom_col</code> to visualize the correlation between characters.</p>
-<p>unite | semi_join | pairwise_corr</p>
-<p>widyr | tidyr</p>
-<iframe class="video" src="https://www.youtube.com/embed/bgcBEBqVnx8?start=3255" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
-</iframe>
-</section>
-<section id="section-11" class="level3">
-<h3 class="anchored" data-anchor-id="section-11">1:00:25</h3>
-<p>Summary of screencast.</p>
-<p>NA</p>
-<p>NA</p>
-<iframe class="video" src="https://www.youtube.com/embed/bgcBEBqVnx8?start=3625" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
-</iframe>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-3625" class="anchored">
+      <button class="btn btn-link btn-timestamp" onclick="playerSkipToTimestamp(3625, this)">1:00:25</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Summary of screencast.</p>
+
+    </div>
+  </div>
+</div>
+<script>
+// 2. This code loads the IFrame Player API code asynchronously.
+var tag = document.createElement("script");
+
+tag.src = "https://www.youtube.com/iframe_api";
+var firstScriptTag = document.getElementsByTagName("script")[0];
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+// 3. This function creates an <iframe> (and YouTube player)
+//    after the API code downloads.
+var videoId = document.getElementById("yt-player").dataset.videoId;
+var player;
+function onYouTubeIframeAPIReady() {
+  player = new YT.Player("yt-player", {
+    height: "486",
+    width: "864",
+    videoId: videoId,
+    playerVars: {
+      "playsinline": 1
+    },
+    events: {
+      onStateChange: function(event) {
+        if (event.data == YT.PlayerState.PLAYING) {
+          followTimestamps()
+        }
+      }
+    }
+  });
+}
+
+function playerSkipToTimestamp(seconds, tsElement) {
+  player.seekTo(seconds, true)
+  tsElement.scrollIntoView()
+  document.getElementById("screencast").scrollIntoView()
+}
+
+const timestamps = Array.from(document.querySelectorAll('.topic h3[id^="ts-"]'))
+  .map(el => el.id.replace('ts-', ''))
+
+function followTimestamps() {
+  if (player.getPlayerState() !== 1) {
+    return
+  }
+  const currentTime = `${Math.floor(player.getCurrentTime())}`
+  if (timestamps.includes(currentTime)) {
+    const el = document.getElementById(`ts-${currentTime}`)
+    if (el) {
+      el.scrollIntoView()
+      document.getElementById("screencast").scrollIntoView()
+    }
+  }
+  setTimeout(followTimestamps, 1000)
+}
+</script>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->
-<script id="quarto-html-after-body" type="application/javascript">
+<script type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const icon = "";
   const anchorJS = new window.AnchorJS();

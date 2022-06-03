@@ -5,6 +5,8 @@ description: |
   Survival analysis
 date: 2018-12-17
 date-format: long
+aliases:
+  - "Dolphins.html"
 ---
 
 Notable topics: Survival analysis
@@ -15,10 +17,318 @@ Timestamps by: Alex Cookson
 
 [View code](NA)
 
-## Full screencast
+## Screencast
 
-<iframe class="video" src="https://www.youtube.com/embed/KiqpX-gNIS4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div id="yt-player" data-video-id="KiqpX-gNIS4"></div>
 
 ## Timestamps
 
-<script id="timestamps" type="application-json">[{"timestamp_with_hours":"0:6:25","description":"Using year function from lubridate package to simplify calculating age of dolphins","timestamp_sec":385},{"timestamp_with_hours":"0:8:30","description":"Combining count and fct_lump functions to get counts of top 5 species (with other species lumped in \"Other\")","functions":"count | fct_lump","timestamp_sec":510},{"timestamp_with_hours":"0:9:55","description":"Creating boxplot of species and age","timestamp_sec":595},{"timestamp_with_hours":"0:11:50","description":"Dealing with different types of NA (double, logical) (he doesn't get it in this case, but it's still useful)","timestamp_sec":710},{"timestamp_with_hours":"0:15:30","description":"Adding acquisition type as colour dimension to histogram","timestamp_sec":930},{"timestamp_with_hours":"0:16:00","description":"Creating a spinogram of acquisition type over time (alternative to histogram) using geom_area","functions":"geom_area","timestamp_sec":960},{"timestamp_with_hours":"0:17:25","description":"Binning year into decade using truncated division operator %/%","functions":"%/%","timestamp_sec":1045},{"timestamp_with_hours":"0:19:10","description":"Fixing annoying triangular gaps in spinogram using complete function to fill in gaps in data","functions":"complete","timestamp_sec":1150},{"timestamp_with_hours":"0:21:15","description":"Using fct_reorder function to reorder acquisition type (bigger categories are placed on the bottom of the spinogram)","functions":"fct_reorder","timestamp_sec":1275},{"timestamp_with_hours":"0:23:25","description":"Adding vertical dashed reference line using geom_vline function","functions":"geom_vline","timestamp_sec":1405},{"timestamp_with_hours":"0:24:05","description":"Starting analysis of acquisition location","timestamp_sec":1445},{"timestamp_with_hours":"0:27:05","description":"Matching messy text data with regex to aggregate into a few categories variables with fuzzyjoin package","functions":"regex_left_join","packages":"fuzzyjoin","timestamp_sec":1625},{"timestamp_with_hours":"0:31:30","description":"Using distinct function's .keep_all argument to keep only one row per animal ID","functions":"distinct","timestamp_sec":1890},{"timestamp_with_hours":"0:33:10","description":"Using coalesce function to conditionally replace NAs (same functionality as SQL verb)","functions":"coalesce","timestamp_sec":1990},{"timestamp_with_hours":"0:40:00","description":"Starting survival analysis","timestamp_sec":2400},{"timestamp_with_hours":"0:46:25","description":"Using survfit function from survival package to get a baseline survival curve (i.e., not regressed on any independent variables)","functions":"survfit","packages":"survival","timestamp_sec":2785},{"timestamp_with_hours":"0:47:30","description":"Fixing cases where death year is before birth year","timestamp_sec":2850},{"timestamp_with_hours":"0:48:30","description":"Fixing specification of survfit model to better fit the format of our data (right-censored data)","timestamp_sec":2910},{"timestamp_with_hours":"0:50:10","description":"Built-in plot of baseline survival model (estimation of percentage survival at a given age)","timestamp_sec":3010},{"timestamp_with_hours":"0:50:30","description":"Using broom package to tidy the survival model data (which is better for ggplot2 plotting)","functions":"tidy","packages":"broom","timestamp_sec":3030},{"timestamp_with_hours":"0:52:20","description":"Fitting survival curve based on sex","timestamp_sec":3140},{"timestamp_with_hours":"0:54:25","description":"Cox proportional hazards model (to investigate association of survival time and one or more predictors)","timestamp_sec":3265},{"timestamp_with_hours":"0:55:50","description":"Explanation of why dolphins with unknown sex likely have a systematic bias with their data","timestamp_sec":3350},{"timestamp_with_hours":"0:57:25","description":"Investigating whether being born in captivity is associated with different survival rates","timestamp_sec":3445},{"timestamp_with_hours":"1:00:10","description":"Summary of screencast","timestamp_sec":3610}]</script>
+```{=html}
+<div id="topics">
+  <div class="topic">
+    <h3 id="ts-385">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(385, this)">0:6:25</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Using year function from lubridate package to simplify calculating age of dolphins</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-510">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(510, this)">0:8:30</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">count</span><span class="badge-functions badge bg-info">fct_lump</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Combining count and fct_lump functions to get counts of top 5 species (with other species lumped in &quot;Other&quot;)</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-595">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(595, this)">0:9:55</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Creating boxplot of species and age</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-710">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(710, this)">0:11:50</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Dealing with different types of NA (double, logical) (he doesn't get it in this case, but it's still useful)</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-930">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(930, this)">0:15:30</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Adding acquisition type as colour dimension to histogram</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-960">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(960, this)">0:16:00</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">geom_area</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Creating a spinogram of acquisition type over time (alternative to histogram) using geom_area</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1045">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1045, this)">0:17:25</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">%/%</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Binning year into decade using truncated division operator %/%</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1150">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1150, this)">0:19:10</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">complete</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Fixing annoying triangular gaps in spinogram using complete function to fill in gaps in data</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1275">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1275, this)">0:21:15</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">fct_reorder</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using fct_reorder function to reorder acquisition type (bigger categories are placed on the bottom of the spinogram)</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1405">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1405, this)">0:23:25</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">geom_vline</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Adding vertical dashed reference line using geom_vline function</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1445">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1445, this)">0:24:05</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Starting analysis of acquisition location</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1625">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1625, this)">0:27:05</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">regex_left_join</span></div><div><span class="badge-packages badge bg-primary">fuzzyjoin</span></div></div>
+    <div class="topic_description">
+      <p>Matching messy text data with regex to aggregate into a few categories variables with fuzzyjoin package</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1890">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1890, this)">0:31:30</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">distinct</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using distinct function's .keep_all argument to keep only one row per animal ID</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1990">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1990, this)">0:33:10</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">coalesce</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using coalesce function to conditionally replace NAs (same functionality as SQL verb)</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2400">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2400, this)">0:40:00</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Starting survival analysis</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2785">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2785, this)">0:46:25</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">survfit</span></div><div><span class="badge-packages badge bg-primary">survival</span></div></div>
+    <div class="topic_description">
+      <p>Using survfit function from survival package to get a baseline survival curve (i.e., not regressed on any independent variables)</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2850">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2850, this)">0:47:30</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Fixing cases where death year is before birth year</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2910">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2910, this)">0:48:30</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Fixing specification of survfit model to better fit the format of our data (right-censored data)</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-3010">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(3010, this)">0:50:10</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Built-in plot of baseline survival model (estimation of percentage survival at a given age)</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-3030">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(3030, this)">0:50:30</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">tidy</span></div><div><span class="badge-packages badge bg-primary">broom</span></div></div>
+    <div class="topic_description">
+      <p>Using broom package to tidy the survival model data (which is better for ggplot2 plotting)</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-3140">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(3140, this)">0:52:20</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Fitting survival curve based on sex</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-3265">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(3265, this)">0:54:25</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Cox proportional hazards model (to investigate association of survival time and one or more predictors)</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-3350">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(3350, this)">0:55:50</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Explanation of why dolphins with unknown sex likely have a systematic bias with their data</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-3445">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(3445, this)">0:57:25</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Investigating whether being born in captivity is associated with different survival rates</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-3610">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(3610, this)">1:00:10</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Summary of screencast</p>
+
+    </div>
+  </div>
+</div>
+```
+     
+<script>
+// 2. This code loads the IFrame Player API code asynchronously.
+var tag = document.createElement("script");
+
+tag.src = "https://www.youtube.com/iframe_api";
+var firstScriptTag = document.getElementsByTagName("script")[0];
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+// 3. This function creates an <iframe> (and YouTube player)
+//    after the API code downloads.
+var videoId = document.getElementById("yt-player").dataset.videoId;
+var player;
+function onYouTubeIframeAPIReady() {
+  player = new YT.Player("yt-player", {
+    height: "486",
+    width: "864",
+    videoId: videoId,
+    playerVars: {
+      "playsinline": 1
+    },
+    events: {
+      onStateChange: function(event) {
+        if (event.data == YT.PlayerState.PLAYING) {
+          followTimestamps()
+        }
+      }
+    }
+  });
+}
+
+function playerSkipToTimestamp(seconds, tsElement) {
+  player.seekTo(seconds, true)
+  tsElement.scrollIntoView()
+  document.getElementById("screencast").scrollIntoView()
+}
+
+const timestamps = Array.from(document.querySelectorAll('.topic h3[id^="ts-"]'))
+  .map(el => el.id.replace('ts-', ''))
+
+function followTimestamps() {
+  if (player.getPlayerState() !== 1) {
+    return
+  }
+  const currentTime = `${Math.floor(player.getCurrentTime())}`
+  if (timestamps.includes(currentTime)) {
+    const el = document.getElementById(`ts-${currentTime}`)
+    if (el) {
+      el.scrollIntoView()
+      document.getElementById("screencast").scrollIntoView()
+    }
+  }
+  setTimeout(followTimestamps, 1000)
+}
+</script>

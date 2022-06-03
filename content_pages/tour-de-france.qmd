@@ -5,6 +5,8 @@ description: |
   Survival analysis, Animated bar graph (gganimate package)
 date: 2020-04-06
 date-format: long
+aliases:
+  - "Tour de France.html"
 ---
 
 Notable topics: Survival analysis, Animated bar graph (gganimate package)
@@ -15,10 +17,238 @@ Timestamps by: Alex Cookson
 
 [View code](https://github.com/dgrtwo/data-screencasts/blob/master/tour-de-france.Rmd)
 
-## Full screencast
+## Screencast
 
-<iframe class="video" src="https://www.youtube.com/embed/vT-DElIaKtE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div id="yt-player" data-video-id="vT-DElIaKtE"></div>
 
 ## Timestamps
 
-<script id="timestamps" type="application-json">[{"timestamp_with_hours":"0:3:55","description":"Getting an overview of the data","timestamp_sec":235},{"timestamp_with_hours":"0:8:55","description":"Aggregating data into decades using the truncated division operator %/%","functions":"%/%","timestamp_sec":535},{"timestamp_with_hours":"0:21:50","description":"Noting that death data is right-censored (i.e., some winners are still alive)","timestamp_sec":1310},{"timestamp_with_hours":"0:24:05","description":"Using transmute function, which combines functionality of mutate (to create new variables) and select (to choose variables to keep)","functions":"transmute","timestamp_sec":1445},{"timestamp_with_hours":"0:25:30","description":"Using survfit function from survival package to conduct survival analysis","functions":"survfit","packages":"survival","timestamp_sec":1530},{"timestamp_with_hours":"0:27:30","description":"Using glance function from broom package to get a one-row model summary of the survival model","functions":"glance","packages":"broom","timestamp_sec":1650},{"timestamp_with_hours":"0:31:00","description":"Using extract function to pull out a string matching a regular expression from a variable (stage number in this case)","functions":"extract","timestamp_sec":1860},{"timestamp_with_hours":"0:34:30","description":"Theorizing that there is a parsing issue with the original data's time field","timestamp_sec":2070},{"timestamp_with_hours":"0:41:15","description":"Using group_by function's built-in \"peeling\" feature, where a summarise call will \"peel away\" one group but left other groupings intact","functions":"group_by","timestamp_sec":2475},{"timestamp_with_hours":"0:42:05","description":"Using rank function, then upgrading to percent_rank function to give percentile rankings (between 0 and 1)","functions":"rank | percent_rank","timestamp_sec":2525},{"timestamp_with_hours":"0:47:50","description":"Using geom_smooth function with method argument as \"lm\" to plot a linear regression","functions":"geom_smooth","timestamp_sec":2870},{"timestamp_with_hours":"0:48:10","description":"Using cut function to bin numbers (percentiles in this case) into categories","functions":"cut","timestamp_sec":2890},{"timestamp_with_hours":"0:50:25","description":"Reviewing boxplots exploring relationship between first-stage performance and overall Tour performance","timestamp_sec":3025},{"timestamp_with_hours":"0:51:30","description":"Starting to create an animation using gganimate package","packages":"gganimate","timestamp_sec":3090},{"timestamp_with_hours":"0:56:00","description":"Actually writing the code to create the animation","timestamp_sec":3360},{"timestamp_with_hours":"0:58:20","description":"Using reorder_within function from tidytext package to re-order factors that have the same name across multiple groups","functions":"reorder_within","packages":"tidytext","timestamp_sec":3500},{"timestamp_with_hours":"1:02:40","description":"Summary of screencast","timestamp_sec":3760}]</script>
+```{=html}
+<div id="topics">
+  <div class="topic">
+    <h3 id="ts-235">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(235, this)">0:3:55</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Getting an overview of the data</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-535">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(535, this)">0:8:55</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">%/%</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Aggregating data into decades using the truncated division operator %/%</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1310">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1310, this)">0:21:50</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Noting that death data is right-censored (i.e., some winners are still alive)</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1445">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1445, this)">0:24:05</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">transmute</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using transmute function, which combines functionality of mutate (to create new variables) and select (to choose variables to keep)</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1530">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1530, this)">0:25:30</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">survfit</span></div><div><span class="badge-packages badge bg-primary">survival</span></div></div>
+    <div class="topic_description">
+      <p>Using survfit function from survival package to conduct survival analysis</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1650">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1650, this)">0:27:30</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">glance</span></div><div><span class="badge-packages badge bg-primary">broom</span></div></div>
+    <div class="topic_description">
+      <p>Using glance function from broom package to get a one-row model summary of the survival model</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1860">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1860, this)">0:31:00</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">extract</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using extract function to pull out a string matching a regular expression from a variable (stage number in this case)</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2070">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2070, this)">0:34:30</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Theorizing that there is a parsing issue with the original data's time field</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2475">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2475, this)">0:41:15</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">group_by</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using group_by function's built-in &quot;peeling&quot; feature, where a summarise call will &quot;peel away&quot; one group but left other groupings intact</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2525">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2525, this)">0:42:05</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">rank</span><span class="badge-functions badge bg-info">percent_rank</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using rank function, then upgrading to percent_rank function to give percentile rankings (between 0 and 1)</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2870">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2870, this)">0:47:50</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">geom_smooth</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using geom_smooth function with method argument as &quot;lm&quot; to plot a linear regression</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2890">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2890, this)">0:48:10</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">cut</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using cut function to bin numbers (percentiles in this case) into categories</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-3025">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(3025, this)">0:50:25</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Reviewing boxplots exploring relationship between first-stage performance and overall Tour performance</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-3090">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(3090, this)">0:51:30</button>
+    </h3>
+    <div class="topic_badges"><div></div><div><span class="badge-packages badge bg-primary">gganimate</span></div></div>
+    <div class="topic_description">
+      <p>Starting to create an animation using gganimate package</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-3360">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(3360, this)">0:56:00</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Actually writing the code to create the animation</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-3500">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(3500, this)">0:58:20</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">reorder_within</span></div><div><span class="badge-packages badge bg-primary">tidytext</span></div></div>
+    <div class="topic_description">
+      <p>Using reorder_within function from tidytext package to re-order factors that have the same name across multiple groups</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-3760">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(3760, this)">1:02:40</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Summary of screencast</p>
+
+    </div>
+  </div>
+</div>
+```
+     
+<script>
+// 2. This code loads the IFrame Player API code asynchronously.
+var tag = document.createElement("script");
+
+tag.src = "https://www.youtube.com/iframe_api";
+var firstScriptTag = document.getElementsByTagName("script")[0];
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+// 3. This function creates an <iframe> (and YouTube player)
+//    after the API code downloads.
+var videoId = document.getElementById("yt-player").dataset.videoId;
+var player;
+function onYouTubeIframeAPIReady() {
+  player = new YT.Player("yt-player", {
+    height: "486",
+    width: "864",
+    videoId: videoId,
+    playerVars: {
+      "playsinline": 1
+    },
+    events: {
+      onStateChange: function(event) {
+        if (event.data == YT.PlayerState.PLAYING) {
+          followTimestamps()
+        }
+      }
+    }
+  });
+}
+
+function playerSkipToTimestamp(seconds, tsElement) {
+  player.seekTo(seconds, true)
+  tsElement.scrollIntoView()
+  document.getElementById("screencast").scrollIntoView()
+}
+
+const timestamps = Array.from(document.querySelectorAll('.topic h3[id^="ts-"]'))
+  .map(el => el.id.replace('ts-', ''))
+
+function followTimestamps() {
+  if (player.getPlayerState() !== 1) {
+    return
+  }
+  const currentTime = `${Math.floor(player.getCurrentTime())}`
+  if (timestamps.includes(currentTime)) {
+    const el = document.getElementById(`ts-${currentTime}`)
+    if (el) {
+      el.scrollIntoView()
+      document.getElementById("screencast").scrollIntoView()
+    }
+  }
+  setTimeout(followTimestamps, 1000)
+}
+</script>

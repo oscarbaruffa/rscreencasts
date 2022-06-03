@@ -5,6 +5,8 @@ description: |
   Data manipulation, Country flags, Slope graph, Function creation
 date: 2020-08-03
 date-format: long
+aliases:
+  - "European Energy.html"
 ---
 
 Notable topics: Data manipulation, Country flags, Slope graph, Function creation
@@ -15,10 +17,238 @@ Timestamps by: Eric Fletcher
 
 [View code](https://github.com/dgrtwo/data-screencasts/blob/master/2020_08_04_europe_energy.Rmd)
 
-## Full screencast
+## Screencast
 
-<iframe class="video" src="https://www.youtube.com/embed/Rcmu5e-9FSc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div id="yt-player" data-video-id="Rcmu5e-9FSc"></div>
 
 ## Timestamps
 
-<script id="timestamps" type="application-json">[{"timestamp_with_hours":"0:01:50","description":"Using `count` to get an overview of scategorical data","functions":"count","packages":"dplyr","timestamp_sec":110},{"timestamp_with_hours":"0:07:25","description":"Using `pivot_longer` and `gather` to pivot date variables from wide to long","functions":"pivot_longer | gather","packages":"tidyr","timestamp_sec":445},{"timestamp_with_hours":"0:09:00","description":"Using `as.integer` to change `year` variable from `character` to `integer` class","functions":"as.integer","packages":"base","timestamp_sec":540},{"timestamp_with_hours":"0:10:10","description":"Using `fct_reorder` to reorder stacked barplot","functions":"fct_reorder","packages":"forcats","timestamp_sec":610},{"timestamp_with_hours":"0:10:30","description":"Using `scale_y_continuous`  with `labels = comma` from `scales` package to insert a comma every three digits on the y-axis","functions":"scale_y_continuous | comma","packages":"ggplot2 | scales","timestamp_sec":630},{"timestamp_with_hours":"0:16:35","description":"Using `replace_na` and `list` to replace `NA` values in `country_name` column with United Kingdom","functions":"replace_na","packages":"tidyr","timestamp_sec":995},{"timestamp_with_hours":"0:18:05","description":"Using `fct_lump` to lump factor levels together except for the 10 most frequent for each facet panel","functions":"fct_lump","packages":"forcats","timestamp_sec":1085},{"timestamp_with_hours":"0:20:10","description":"Using `reorder_within` with `fun = sum` and `scale_y_reordered` to reorder the categories within each facet panel","functions":"reorder_within | scale_y_reordered","packages":"tidytext","timestamp_sec":1210},{"timestamp_with_hours":"0:24:30","description":"Using `ggflags` package to add country flags | Debugging strategies include 1) minimal reproducible example and 2) binary search","functions":"geom_flag","packages":"ggfalgs","timestamp_sec":1470},{"timestamp_with_hours":"0:29:20","description":"(Unsuccessfully) Using `fct_recode` to rename the ISO two-digit identifier for the United Kingdom from the UK to GB","functions":"fct_recode","packages":"forcats","timestamp_sec":1760},{"timestamp_with_hours":"0:33:20","description":"Using `ifelse` to replace the ISO two-digit identifier for the United Kingdom from UK to GB & from EL to GR fro Greece | Debugging included","functions":"ifelse","packages":"base","timestamp_sec":2000},{"timestamp_with_hours":"0:40:45","description":"Using `str_to_lower` to convert observations in `country` column to lower case","functions":"str_to_lower","packages":"stringr","timestamp_sec":2445},{"timestamp_with_hours":"0:45:00","description":"Creating a `slope graph` to show differences in Nuclear production (2106 versus 2018) | Using `scale_y_log10` to increase distance between points | Using `ggflags` for country flags","functions":"geom_point | geom_line | \nscale_y_log10 | geom_flag","packages":"ggplot2 | ggflags","timestamp_sec":2700},{"timestamp_with_hours":"0:47:00","description":"Using `scale_x_continuous` with `breaks = c(2016, 2018)` to show only 2016 and 2018 on x-axis","functions":"scale_x_continuous","packages":"ggplot2","timestamp_sec":2820},{"timestamp_with_hours":"0:48:20","description":"Extend x-axis limits using `scale_x_continuous` with `limits = c(2015, 2019)` and `geom_text` with an `ifelse` within `hjust` to alternate labels for the right and left side of `slope graph`","functions":"scale_x_continuous | geom_text","packages":"ggplot2","timestamp_sec":2900},{"timestamp_with_hours":"0:52:40","description":"Creating a slopegraph function","functions":"function","packages":"base","timestamp_sec":3160},{"timestamp_with_hours":"1:00:00","description":"Summary of screencast","timestamp_sec":3600}]</script>
+```{=html}
+<div id="topics">
+  <div class="topic">
+    <h3 id="ts-110">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(110, this)">0:01:50</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">count</span></div><div><span class="badge-packages badge bg-primary">dplyr</span></div></div>
+    <div class="topic_description">
+      <p>Using <code>count</code> to get an overview of scategorical data</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-445">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(445, this)">0:07:25</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">pivot_longer</span><span class="badge-functions badge bg-info">gather</span></div><div><span class="badge-packages badge bg-primary">tidyr</span></div></div>
+    <div class="topic_description">
+      <p>Using <code>pivot_longer</code> and <code>gather</code> to pivot date variables from wide to long</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-540">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(540, this)">0:09:00</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">as.integer</span></div><div><span class="badge-packages badge bg-primary">base</span></div></div>
+    <div class="topic_description">
+      <p>Using <code>as.integer</code> to change <code>year</code> variable from <code>character</code> to <code>integer</code> class</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-610">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(610, this)">0:10:10</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">fct_reorder</span></div><div><span class="badge-packages badge bg-primary">forcats</span></div></div>
+    <div class="topic_description">
+      <p>Using <code>fct_reorder</code> to reorder stacked barplot</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-630">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(630, this)">0:10:30</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">scale_y_continuous</span><span class="badge-functions badge bg-info">comma</span></div><div><span class="badge-packages badge bg-primary">ggplot2</span><span class="badge-packages badge bg-primary">scales</span></div></div>
+    <div class="topic_description">
+      <p>Using <code>scale_y_continuous</code>  with <code>labels = comma</code> from <code>scales</code> package to insert a comma every three digits on the y-axis</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-995">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(995, this)">0:16:35</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">replace_na</span></div><div><span class="badge-packages badge bg-primary">tidyr</span></div></div>
+    <div class="topic_description">
+      <p>Using <code>replace_na</code> and <code>list</code> to replace <code>NA</code> values in <code>country_name</code> column with United Kingdom</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1085">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1085, this)">0:18:05</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">fct_lump</span></div><div><span class="badge-packages badge bg-primary">forcats</span></div></div>
+    <div class="topic_description">
+      <p>Using <code>fct_lump</code> to lump factor levels together except for the 10 most frequent for each facet panel</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1210">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1210, this)">0:20:10</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">reorder_within</span><span class="badge-functions badge bg-info">scale_y_reordered</span></div><div><span class="badge-packages badge bg-primary">tidytext</span></div></div>
+    <div class="topic_description">
+      <p>Using <code>reorder_within</code> with <code>fun = sum</code> and <code>scale_y_reordered</code> to reorder the categories within each facet panel</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1470">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1470, this)">0:24:30</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">geom_flag</span></div><div><span class="badge-packages badge bg-primary">ggfalgs</span></div></div>
+    <div class="topic_description">
+      <p>Using <code>ggflags</code> package to add country flags | Debugging strategies include 1) minimal reproducible example and 2) binary search</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1760">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1760, this)">0:29:20</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">fct_recode</span></div><div><span class="badge-packages badge bg-primary">forcats</span></div></div>
+    <div class="topic_description">
+      <p>(Unsuccessfully) Using <code>fct_recode</code> to rename the ISO two-digit identifier for the United Kingdom from the UK to GB</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2000">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2000, this)">0:33:20</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">ifelse</span></div><div><span class="badge-packages badge bg-primary">base</span></div></div>
+    <div class="topic_description">
+      <p>Using <code>ifelse</code> to replace the ISO two-digit identifier for the United Kingdom from UK to GB &amp; from EL to GR fro Greece | Debugging included</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2445">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2445, this)">0:40:45</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">str_to_lower</span></div><div><span class="badge-packages badge bg-primary">stringr</span></div></div>
+    <div class="topic_description">
+      <p>Using <code>str_to_lower</code> to convert observations in <code>country</code> column to lower case</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2700">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2700, this)">0:45:00</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">geom_point</span><span class="badge-functions badge bg-info">geom_line</span><span class="badge-functions badge bg-info">scale_y_log10</span><span class="badge-functions badge bg-info">geom_flag</span></div><div><span class="badge-packages badge bg-primary">ggplot2</span><span class="badge-packages badge bg-primary">ggflags</span></div></div>
+    <div class="topic_description">
+      <p>Creating a <code>slope graph</code> to show differences in Nuclear production (2106 versus 2018) | Using <code>scale_y_log10</code> to increase distance between points | Using <code>ggflags</code> for country flags</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2820">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2820, this)">0:47:00</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">scale_x_continuous</span></div><div><span class="badge-packages badge bg-primary">ggplot2</span></div></div>
+    <div class="topic_description">
+      <p>Using <code>scale_x_continuous</code> with <code>breaks = c(2016, 2018)</code> to show only 2016 and 2018 on x-axis</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2900">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2900, this)">0:48:20</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">scale_x_continuous</span><span class="badge-functions badge bg-info">geom_text</span></div><div><span class="badge-packages badge bg-primary">ggplot2</span></div></div>
+    <div class="topic_description">
+      <p>Extend x-axis limits using <code>scale_x_continuous</code> with <code>limits = c(2015, 2019)</code> and <code>geom_text</code> with an <code>ifelse</code> within <code>hjust</code> to alternate labels for the right and left side of <code>slope graph</code></p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-3160">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(3160, this)">0:52:40</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">function</span></div><div><span class="badge-packages badge bg-primary">base</span></div></div>
+    <div class="topic_description">
+      <p>Creating a slopegraph function</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-3600">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(3600, this)">1:00:00</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Summary of screencast</p>
+
+    </div>
+  </div>
+</div>
+```
+     
+<script>
+// 2. This code loads the IFrame Player API code asynchronously.
+var tag = document.createElement("script");
+
+tag.src = "https://www.youtube.com/iframe_api";
+var firstScriptTag = document.getElementsByTagName("script")[0];
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+// 3. This function creates an <iframe> (and YouTube player)
+//    after the API code downloads.
+var videoId = document.getElementById("yt-player").dataset.videoId;
+var player;
+function onYouTubeIframeAPIReady() {
+  player = new YT.Player("yt-player", {
+    height: "486",
+    width: "864",
+    videoId: videoId,
+    playerVars: {
+      "playsinline": 1
+    },
+    events: {
+      onStateChange: function(event) {
+        if (event.data == YT.PlayerState.PLAYING) {
+          followTimestamps()
+        }
+      }
+    }
+  });
+}
+
+function playerSkipToTimestamp(seconds, tsElement) {
+  player.seekTo(seconds, true)
+  tsElement.scrollIntoView()
+  document.getElementById("screencast").scrollIntoView()
+}
+
+const timestamps = Array.from(document.querySelectorAll('.topic h3[id^="ts-"]'))
+  .map(el => el.id.replace('ts-', ''))
+
+function followTimestamps() {
+  if (player.getPlayerState() !== 1) {
+    return
+  }
+  const currentTime = `${Math.floor(player.getCurrentTime())}`
+  if (timestamps.includes(currentTime)) {
+    const el = document.getElementById(`ts-${currentTime}`)
+    if (el) {
+      el.scrollIntoView()
+      document.getElementById("screencast").scrollIntoView()
+    }
+  }
+  setTimeout(followTimestamps, 1000)
+}
+</script>

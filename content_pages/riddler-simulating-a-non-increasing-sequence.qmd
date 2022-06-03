@@ -5,6 +5,8 @@ description: |
   Simulation
 date: 2020-04-05
 date-format: long
+aliases:
+  - "Riddler: Simulating a Non-increasing Sequence.html"
 ---
 
 Notable topics: Simulation
@@ -15,10 +17,178 @@ Timestamps by: Alex Cookson
 
 [View code](https://github.com/dgrtwo/data-screencasts/blob/master/riddler-die-roll-low.Rmd)
 
-## Full screencast
+## Screencast
 
-<iframe class="video" src="https://www.youtube.com/embed/aR6jf6ZzlFk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div id="yt-player" data-video-id="aR6jf6ZzlFk"></div>
 
 ## Timestamps
 
-<script id="timestamps" type="application-json">[{"timestamp_with_hours":"0:2:20","description":"Introducing accumulate functon as a possible solution (but not used here)","functions":"accumulate","timestamp_sec":140},{"timestamp_with_hours":"0:3:20","description":"Using sample function to simulate 1000 rolls of a 10-sided die","functions":"sample","timestamp_sec":200},{"timestamp_with_hours":"0:3:40","description":"Explanation of dividing sample rolls into streaks (instead of using logic similar to a while loop)","timestamp_sec":220},{"timestamp_with_hours":"0:4:55","description":"Using cumsum function to separate 1000 rolls into individual sequences (which end when a 0 is rolled)","functions":"cumsum","timestamp_sec":295},{"timestamp_with_hours":"0:5:50","description":"Using lag function to \"shift\" sequence numbering down by one row","functions":"lag","timestamp_sec":350},{"timestamp_with_hours":"0:7:35","description":"Using cummax and lag functions to check whether a roll is less than the highest value rolled previously in the sequence","functions":"cummax | lag","timestamp_sec":455},{"timestamp_with_hours":"0:9:30","description":"Fixing previous step with cummin function (instead of cummax) and dropping the lag function","functions":"cummin","timestamp_sec":570},{"timestamp_with_hours":"0:13:05","description":"Finished simulation code and starting to calculate scores","timestamp_sec":785},{"timestamp_with_hours":"0:13:10","description":"Using -row_number function (note the minus sign!) to calculate decimal position of number in the score","functions":"row_number","timestamp_sec":790},{"timestamp_with_hours":"0:15:30","description":"Investigating the distribution of scores","timestamp_sec":930},{"timestamp_with_hours":"0:16:25","description":"Using seq function in the breaks argument of scale_x_continuous to set custom, evenly-spaced axis ticks and labels","functions":"seq | scale_x_continuous","timestamp_sec":985}]</script>
+```{=html}
+<div id="topics">
+  <div class="topic">
+    <h3 id="ts-140">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(140, this)">0:2:20</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">accumulate</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Introducing accumulate functon as a possible solution (but not used here)</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-200">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(200, this)">0:3:20</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">sample</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using sample function to simulate 1000 rolls of a 10-sided die</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-220">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(220, this)">0:3:40</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Explanation of dividing sample rolls into streaks (instead of using logic similar to a while loop)</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-295">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(295, this)">0:4:55</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">cumsum</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using cumsum function to separate 1000 rolls into individual sequences (which end when a 0 is rolled)</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-350">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(350, this)">0:5:50</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">lag</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using lag function to &quot;shift&quot; sequence numbering down by one row</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-455">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(455, this)">0:7:35</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">cummax</span><span class="badge-functions badge bg-info">lag</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using cummax and lag functions to check whether a roll is less than the highest value rolled previously in the sequence</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-570">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(570, this)">0:9:30</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">cummin</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Fixing previous step with cummin function (instead of cummax) and dropping the lag function</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-785">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(785, this)">0:13:05</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Finished simulation code and starting to calculate scores</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-790">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(790, this)">0:13:10</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">row_number</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using -row_number function (note the minus sign!) to calculate decimal position of number in the score</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-930">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(930, this)">0:15:30</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Investigating the distribution of scores</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-985">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(985, this)">0:16:25</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">seq</span><span class="badge-functions badge bg-info">scale_x_continuous</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using seq function in the breaks argument of scale_x_continuous to set custom, evenly-spaced axis ticks and labels</p>
+
+    </div>
+  </div>
+</div>
+```
+     
+<script>
+// 2. This code loads the IFrame Player API code asynchronously.
+var tag = document.createElement("script");
+
+tag.src = "https://www.youtube.com/iframe_api";
+var firstScriptTag = document.getElementsByTagName("script")[0];
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+// 3. This function creates an <iframe> (and YouTube player)
+//    after the API code downloads.
+var videoId = document.getElementById("yt-player").dataset.videoId;
+var player;
+function onYouTubeIframeAPIReady() {
+  player = new YT.Player("yt-player", {
+    height: "486",
+    width: "864",
+    videoId: videoId,
+    playerVars: {
+      "playsinline": 1
+    },
+    events: {
+      onStateChange: function(event) {
+        if (event.data == YT.PlayerState.PLAYING) {
+          followTimestamps()
+        }
+      }
+    }
+  });
+}
+
+function playerSkipToTimestamp(seconds, tsElement) {
+  player.seekTo(seconds, true)
+  tsElement.scrollIntoView()
+  document.getElementById("screencast").scrollIntoView()
+}
+
+const timestamps = Array.from(document.querySelectorAll('.topic h3[id^="ts-"]'))
+  .map(el => el.id.replace('ts-', ''))
+
+function followTimestamps() {
+  if (player.getPlayerState() !== 1) {
+    return
+  }
+  const currentTime = `${Math.floor(player.getCurrentTime())}`
+  if (timestamps.includes(currentTime)) {
+    const el = document.getElementById(`ts-${currentTime}`)
+    if (el) {
+      el.scrollIntoView()
+      document.getElementById("screencast").scrollIntoView()
+    }
+  }
+  setTimeout(followTimestamps, 1000)
+}
+</script>

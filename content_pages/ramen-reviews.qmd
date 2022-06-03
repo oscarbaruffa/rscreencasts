@@ -5,6 +5,8 @@ description: |
   Web scraping (rvest package)
 date: 2019-06-03
 date-format: long
+aliases:
+  - "Ramen Reviews.html"
 ---
 
 Notable topics: Web scraping (rvest package)
@@ -15,10 +17,408 @@ Timestamps by: Alex Cookson
 
 [View code](https://github.com/dgrtwo/data-screencasts/blob/master/ramen-ratings.Rmd)
 
-## Full screencast
+## Screencast
 
-<iframe class="video" src="https://www.youtube.com/embed/tCa2di7aEP4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div id="yt-player" data-video-id="tCa2di7aEP4"></div>
 
 ## Timestamps
 
-<script id="timestamps" type="application-json">[{"timestamp_with_hours":"0:1:45","description":"Looking at the website the data came from","timestamp_sec":105},{"timestamp_with_hours":"0:2:55","description":"Using gather function (now pivot_longer) to convert wide data to long (tidy) format","functions":"gather","timestamp_sec":175},{"timestamp_with_hours":"0:4:15","description":"Graphing counts of all categorical variables at once, then exploring them","timestamp_sec":255},{"timestamp_with_hours":"0:5:35","description":"Using fct_lump function to lump three categorical variables to the top N categories and \"Other\"","functions":"fct_lump","timestamp_sec":335},{"timestamp_with_hours":"0:7:45","description":"Using reorder_within function to re-order factors that have the same name across multiple facets","functions":"reorder_within","timestamp_sec":465},{"timestamp_with_hours":"0:9:10","description":"Using lm function (linear model) to predict star rating","functions":"lm","timestamp_sec":550},{"timestamp_with_hours":"0:9:50","description":"Visualising effects (and 95% CI) of indendent variables in linear model with a coefficient plot (TIE fighter plot)","timestamp_sec":590},{"timestamp_with_hours":"0:11:30","description":"Using fct_relevel function to get \"Other\" as the base reference level for categorical independent variables in a linear model","functions":"fct_relevel","timestamp_sec":690},{"timestamp_with_hours":"0:13:05","description":"Using extract function and regex to split a camelCase variable into two separate variables","functions":"extract","timestamp_sec":785},{"timestamp_with_hours":"0:14:45","description":"Using facet_wrap function to split coefficient / TIE fighter plot into three separate plots, based on type of coefficient","functions":"facet_wrap","timestamp_sec":885},{"timestamp_with_hours":"0:15:40","description":"Using geom_vline function to add reference line to graph","functions":"geom_vline","timestamp_sec":940},{"timestamp_with_hours":"0:17:20","description":"Using unnest_tokens function from tidytext package to explore the relationship between variety (a sparse categorical variable) and star rating","functions":"unnest_tokens","packages":"tidytext","timestamp_sec":1040},{"timestamp_with_hours":"0:18:55","description":"Explanation of how he would approach variety variable with Lasso regression","timestamp_sec":1135},{"timestamp_with_hours":"0:19:35","description":"Web scraping the using rvest package and SelectorGadget (Chrome Extension CSS selector)","packages":"rvest","timestamp_sec":1175},{"timestamp_with_hours":"0:21:20","description":"Actually writing code for web scraping, using read_html, html_node, and html_table functions","functions":"read_html | html_node | html_table","packages":"rvest","timestamp_sec":1280},{"timestamp_with_hours":"0:22:25","description":"Using clean_names function from janitor package to clean up names of variables","functions":"clean_names","packages":"janitor","timestamp_sec":1345},{"timestamp_with_hours":"0:23:05","description":"Explanation of web scraping task: get full review text using the links from the review summary table scraped above","timestamp_sec":1385},{"timestamp_with_hours":"0:25:40","description":"Using parse_number function as alternative to as.integer function to cleverly drop extra weird text in review number","functions":"parse_number","timestamp_sec":1540},{"timestamp_with_hours":"0:26:45","description":"Using SelectorGadget (Chrome Extension CSS selector) to identify part of page that contains review text","timestamp_sec":1605},{"timestamp_with_hours":"0:27:35","description":"Using html_nodes, html_text, and str_subset functions to write custom function to scrape review text identified in step above","functions":"html_nodes | html_text | str_subset","packages":"rvest","timestamp_sec":1655},{"timestamp_with_hours":"0:29:15","description":"Adding message function to custom scraping function to display URLs as they are being scraped","functions":"message","timestamp_sec":1755},{"timestamp_with_hours":"0:30:15","description":"Using unnest_tokens and anti_join functions to split review text into individual words and remove stop words (e.g., \"the\", \"or\", \"and\")","functions":"unnest_tokens | anti_join","timestamp_sec":1815},{"timestamp_with_hours":"0:31:05","description":"Catching a mistake in the custom function causing it to read the same URL every time","timestamp_sec":1865},{"timestamp_with_hours":"0:31:55","description":"Using str_detect function to filter out review paragraphs without a keyword in it","functions":"str_detect","timestamp_sec":1915},{"timestamp_with_hours":"0:32:40","description":"Using str_remove function and regex to get rid of string that follows a specific pattern","functions":"str_remove","timestamp_sec":1960},{"timestamp_with_hours":"0:34:10","description":"Explanation of possibly and safely functions in purrr package","functions":"possibly | safely","packages":"purrr","timestamp_sec":2050},{"timestamp_with_hours":"0:37:45","description":"Reviewing output of the URL that failed to scrape, including using character(0) as a default null value","timestamp_sec":2265},{"timestamp_with_hours":"0:48:00","description":"Using pairwise_cor function from widyr package to see which words tend to appear in reviews together","functions":"pairwise_cor","packages":"widyr","timestamp_sec":2880},{"timestamp_with_hours":"0:51:05","description":"Using igraph and ggraph packages to make network plot of word correlations","packages":"igraph | ggraph","timestamp_sec":3065},{"timestamp_with_hours":"0:51:55","description":"Using geom_node_text function to add labels to network plot","functions":"geom_node_text","packages":"igraph | ggraph","timestamp_sec":3115},{"timestamp_with_hours":"0:52:35","description":"Including all words (not just those connected to others) as vertices in the network plot","packages":"igraph | ggraph","timestamp_sec":3155},{"timestamp_with_hours":"0:54:40","description":"Tweaking and refining network plot aesthetics (vertex size and colour)","timestamp_sec":3280},{"timestamp_with_hours":"0:56:00","description":"Weird hack for getting a dark outline on hard-to-see vertex points","timestamp_sec":3360},{"timestamp_with_hours":"0:59:15","description":"Summary of screencast","timestamp_sec":3555}]</script>
+```{=html}
+<div id="topics">
+  <div class="topic">
+    <h3 id="ts-105">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(105, this)">0:1:45</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Looking at the website the data came from</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-175">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(175, this)">0:2:55</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">gather</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using gather function (now pivot_longer) to convert wide data to long (tidy) format</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-255">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(255, this)">0:4:15</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Graphing counts of all categorical variables at once, then exploring them</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-335">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(335, this)">0:5:35</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">fct_lump</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using fct_lump function to lump three categorical variables to the top N categories and &quot;Other&quot;</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-465">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(465, this)">0:7:45</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">reorder_within</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using reorder_within function to re-order factors that have the same name across multiple facets</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-550">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(550, this)">0:9:10</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">lm</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using lm function (linear model) to predict star rating</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-590">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(590, this)">0:9:50</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Visualising effects (and 95% CI) of indendent variables in linear model with a coefficient plot (TIE fighter plot)</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-690">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(690, this)">0:11:30</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">fct_relevel</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using fct_relevel function to get &quot;Other&quot; as the base reference level for categorical independent variables in a linear model</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-785">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(785, this)">0:13:05</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">extract</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using extract function and regex to split a camelCase variable into two separate variables</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-885">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(885, this)">0:14:45</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">facet_wrap</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using facet_wrap function to split coefficient / TIE fighter plot into three separate plots, based on type of coefficient</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-940">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(940, this)">0:15:40</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">geom_vline</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using geom_vline function to add reference line to graph</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1040">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1040, this)">0:17:20</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">unnest_tokens</span></div><div><span class="badge-packages badge bg-primary">tidytext</span></div></div>
+    <div class="topic_description">
+      <p>Using unnest_tokens function from tidytext package to explore the relationship between variety (a sparse categorical variable) and star rating</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1135">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1135, this)">0:18:55</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Explanation of how he would approach variety variable with Lasso regression</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1175">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1175, this)">0:19:35</button>
+    </h3>
+    <div class="topic_badges"><div></div><div><span class="badge-packages badge bg-primary">rvest</span></div></div>
+    <div class="topic_description">
+      <p>Web scraping the using rvest package and SelectorGadget (Chrome Extension CSS selector)</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1280">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1280, this)">0:21:20</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">read_html</span><span class="badge-functions badge bg-info">html_node</span><span class="badge-functions badge bg-info">html_table</span></div><div><span class="badge-packages badge bg-primary">rvest</span></div></div>
+    <div class="topic_description">
+      <p>Actually writing code for web scraping, using read_html, html_node, and html_table functions</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1345">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1345, this)">0:22:25</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">clean_names</span></div><div><span class="badge-packages badge bg-primary">janitor</span></div></div>
+    <div class="topic_description">
+      <p>Using clean_names function from janitor package to clean up names of variables</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1385">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1385, this)">0:23:05</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Explanation of web scraping task: get full review text using the links from the review summary table scraped above</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1540">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1540, this)">0:25:40</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">parse_number</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using parse_number function as alternative to as.integer function to cleverly drop extra weird text in review number</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1605">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1605, this)">0:26:45</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Using SelectorGadget (Chrome Extension CSS selector) to identify part of page that contains review text</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1655">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1655, this)">0:27:35</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">html_nodes</span><span class="badge-functions badge bg-info">html_text</span><span class="badge-functions badge bg-info">str_subset</span></div><div><span class="badge-packages badge bg-primary">rvest</span></div></div>
+    <div class="topic_description">
+      <p>Using html_nodes, html_text, and str_subset functions to write custom function to scrape review text identified in step above</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1755">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1755, this)">0:29:15</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">message</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Adding message function to custom scraping function to display URLs as they are being scraped</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1815">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1815, this)">0:30:15</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">unnest_tokens</span><span class="badge-functions badge bg-info">anti_join</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using unnest_tokens and anti_join functions to split review text into individual words and remove stop words (e.g., &quot;the&quot;, &quot;or&quot;, &quot;and&quot;)</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1865">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1865, this)">0:31:05</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Catching a mistake in the custom function causing it to read the same URL every time</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1915">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1915, this)">0:31:55</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">str_detect</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using str_detect function to filter out review paragraphs without a keyword in it</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1960">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1960, this)">0:32:40</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">str_remove</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using str_remove function and regex to get rid of string that follows a specific pattern</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2050">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2050, this)">0:34:10</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">possibly</span><span class="badge-functions badge bg-info">safely</span></div><div><span class="badge-packages badge bg-primary">purrr</span></div></div>
+    <div class="topic_description">
+      <p>Explanation of possibly and safely functions in purrr package</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2265">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2265, this)">0:37:45</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Reviewing output of the URL that failed to scrape, including using character(0) as a default null value</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2880">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2880, this)">0:48:00</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">pairwise_cor</span></div><div><span class="badge-packages badge bg-primary">widyr</span></div></div>
+    <div class="topic_description">
+      <p>Using pairwise_cor function from widyr package to see which words tend to appear in reviews together</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-3065">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(3065, this)">0:51:05</button>
+    </h3>
+    <div class="topic_badges"><div></div><div><span class="badge-packages badge bg-primary">igraph</span><span class="badge-packages badge bg-primary">ggraph</span></div></div>
+    <div class="topic_description">
+      <p>Using igraph and ggraph packages to make network plot of word correlations</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-3115">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(3115, this)">0:51:55</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">geom_node_text</span></div><div><span class="badge-packages badge bg-primary">igraph</span><span class="badge-packages badge bg-primary">ggraph</span></div></div>
+    <div class="topic_description">
+      <p>Using geom_node_text function to add labels to network plot</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-3155">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(3155, this)">0:52:35</button>
+    </h3>
+    <div class="topic_badges"><div></div><div><span class="badge-packages badge bg-primary">igraph</span><span class="badge-packages badge bg-primary">ggraph</span></div></div>
+    <div class="topic_description">
+      <p>Including all words (not just those connected to others) as vertices in the network plot</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-3280">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(3280, this)">0:54:40</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Tweaking and refining network plot aesthetics (vertex size and colour)</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-3360">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(3360, this)">0:56:00</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Weird hack for getting a dark outline on hard-to-see vertex points</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-3555">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(3555, this)">0:59:15</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Summary of screencast</p>
+
+    </div>
+  </div>
+</div>
+```
+     
+<script>
+// 2. This code loads the IFrame Player API code asynchronously.
+var tag = document.createElement("script");
+
+tag.src = "https://www.youtube.com/iframe_api";
+var firstScriptTag = document.getElementsByTagName("script")[0];
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+// 3. This function creates an <iframe> (and YouTube player)
+//    after the API code downloads.
+var videoId = document.getElementById("yt-player").dataset.videoId;
+var player;
+function onYouTubeIframeAPIReady() {
+  player = new YT.Player("yt-player", {
+    height: "486",
+    width: "864",
+    videoId: videoId,
+    playerVars: {
+      "playsinline": 1
+    },
+    events: {
+      onStateChange: function(event) {
+        if (event.data == YT.PlayerState.PLAYING) {
+          followTimestamps()
+        }
+      }
+    }
+  });
+}
+
+function playerSkipToTimestamp(seconds, tsElement) {
+  player.seekTo(seconds, true)
+  tsElement.scrollIntoView()
+  document.getElementById("screencast").scrollIntoView()
+}
+
+const timestamps = Array.from(document.querySelectorAll('.topic h3[id^="ts-"]'))
+  .map(el => el.id.replace('ts-', ''))
+
+function followTimestamps() {
+  if (player.getPlayerState() !== 1) {
+    return
+  }
+  const currentTime = `${Math.floor(player.getCurrentTime())}`
+  if (timestamps.includes(currentTime)) {
+    const el = document.getElementById(`ts-${currentTime}`)
+    if (el) {
+      el.scrollIntoView()
+      document.getElementById("screencast").scrollIntoView()
+    }
+  }
+  setTimeout(followTimestamps, 1000)
+}
+</script>

@@ -5,6 +5,8 @@ description: |
   Data cleaning (getting messy data into tidy format)
 date: 2019-02-21
 date-format: long
+aliases:
+  - "US PhDs.html"
 ---
 
 Notable topics: Data cleaning (getting messy data into tidy format)
@@ -15,10 +17,238 @@ Timestamps by: Alex Cookson
 
 [View code](https://github.com/dgrtwo/data-screencasts/blob/master/us_phds.Rmd)
 
-## Full screencast
+## Screencast
 
-<iframe class="video" src="https://www.youtube.com/embed/KzRP40PzopY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div id="yt-player" data-video-id="KzRP40PzopY"></div>
 
 ## Timestamps
 
-<script id="timestamps" type="application-json">[{"timestamp_with_hours":"0:3:15","description":"Using read_xlsx function to read in Excel spreadsheet, including skipping first few rows that don't have data","functions":"read_xlsx","timestamp_sec":195},{"timestamp_with_hours":"0:7:25","description":"Overview of starting very messy data","timestamp_sec":445},{"timestamp_with_hours":"0:8:20","description":"Using gather function to clean up wide dataset","functions":"gather","timestamp_sec":500},{"timestamp_with_hours":"0:9:20","description":"Using fill function to fill in NA values with a entries in a previous observation","functions":"fill","timestamp_sec":560},{"timestamp_with_hours":"0:10:10","description":"Cleaning variable that has number and percent in it, on top of one another using a combination of ifelse and fill functions","functions":"fill | ifelse","timestamp_sec":610},{"timestamp_with_hours":"0:12:00","description":"Using spread function on cleaned data to separate number and percent by year","functions":"spread","timestamp_sec":720},{"timestamp_with_hours":"0:13:50","description":"Spotted a mistake where he had the wrong string on str_detect function","functions":"str_detect","timestamp_sec":830},{"timestamp_with_hours":"0:16:50","description":"Using sample function to get 6 random fields of study to graph","functions":"sample","timestamp_sec":1010},{"timestamp_with_hours":"0:18:50","description":"Cleaning another dataset, which is much easier to clean","timestamp_sec":1130},{"timestamp_with_hours":"0:19:05","description":"Renaming the first field, even without knowing the exact name","timestamp_sec":1145},{"timestamp_with_hours":"0:21:55","description":"Cleaning another dataset","timestamp_sec":1315},{"timestamp_with_hours":"0:23:10","description":"Discussing challenge of when indentation is used in original dataset (for group / sub-group distinction)","timestamp_sec":1390},{"timestamp_with_hours":"0:25:20","description":"Starting to separate out data that is appended to one another in the original dataset (all, male, female)","timestamp_sec":1520},{"timestamp_with_hours":"0:27:30","description":"Removing field with long name using contains function","functions":"contains","timestamp_sec":1650},{"timestamp_with_hours":"0:28:10","description":"Using fct_recode function to rename an oddly-named category in a categorical variable (ifelse function is probably a better alternative)","functions":"fct_recode","timestamp_sec":1690},{"timestamp_with_hours":"0:35:30","description":"Discussing solution to broad major field description and fine major field description (meaningfully indented in original data)","timestamp_sec":2130},{"timestamp_with_hours":"0:39:40","description":"Using setdiff function to separate broad and fine major fields","functions":"setdiff","timestamp_sec":2380}]</script>
+```{=html}
+<div id="topics">
+  <div class="topic">
+    <h3 id="ts-195">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(195, this)">0:3:15</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">read_xlsx</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using read_xlsx function to read in Excel spreadsheet, including skipping first few rows that don't have data</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-445">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(445, this)">0:7:25</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Overview of starting very messy data</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-500">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(500, this)">0:8:20</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">gather</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using gather function to clean up wide dataset</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-560">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(560, this)">0:9:20</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">fill</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using fill function to fill in NA values with a entries in a previous observation</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-610">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(610, this)">0:10:10</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">fill</span><span class="badge-functions badge bg-info">ifelse</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Cleaning variable that has number and percent in it, on top of one another using a combination of ifelse and fill functions</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-720">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(720, this)">0:12:00</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">spread</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using spread function on cleaned data to separate number and percent by year</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-830">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(830, this)">0:13:50</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">str_detect</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Spotted a mistake where he had the wrong string on str_detect function</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1010">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1010, this)">0:16:50</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">sample</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using sample function to get 6 random fields of study to graph</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1130">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1130, this)">0:18:50</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Cleaning another dataset, which is much easier to clean</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1145">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1145, this)">0:19:05</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Renaming the first field, even without knowing the exact name</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1315">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1315, this)">0:21:55</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Cleaning another dataset</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1390">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1390, this)">0:23:10</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Discussing challenge of when indentation is used in original dataset (for group / sub-group distinction)</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1520">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1520, this)">0:25:20</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Starting to separate out data that is appended to one another in the original dataset (all, male, female)</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1650">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1650, this)">0:27:30</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">contains</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Removing field with long name using contains function</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1690">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1690, this)">0:28:10</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">fct_recode</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using fct_recode function to rename an oddly-named category in a categorical variable (ifelse function is probably a better alternative)</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2130">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2130, this)">0:35:30</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Discussing solution to broad major field description and fine major field description (meaningfully indented in original data)</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2380">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2380, this)">0:39:40</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">setdiff</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using setdiff function to separate broad and fine major fields</p>
+
+    </div>
+  </div>
+</div>
+```
+     
+<script>
+// 2. This code loads the IFrame Player API code asynchronously.
+var tag = document.createElement("script");
+
+tag.src = "https://www.youtube.com/iframe_api";
+var firstScriptTag = document.getElementsByTagName("script")[0];
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+// 3. This function creates an <iframe> (and YouTube player)
+//    after the API code downloads.
+var videoId = document.getElementById("yt-player").dataset.videoId;
+var player;
+function onYouTubeIframeAPIReady() {
+  player = new YT.Player("yt-player", {
+    height: "486",
+    width: "864",
+    videoId: videoId,
+    playerVars: {
+      "playsinline": 1
+    },
+    events: {
+      onStateChange: function(event) {
+        if (event.data == YT.PlayerState.PLAYING) {
+          followTimestamps()
+        }
+      }
+    }
+  });
+}
+
+function playerSkipToTimestamp(seconds, tsElement) {
+  player.seekTo(seconds, true)
+  tsElement.scrollIntoView()
+  document.getElementById("screencast").scrollIntoView()
+}
+
+const timestamps = Array.from(document.querySelectorAll('.topic h3[id^="ts-"]'))
+  .map(el => el.id.replace('ts-', ''))
+
+function followTimestamps() {
+  if (player.getPlayerState() !== 1) {
+    return
+  }
+  const currentTime = `${Math.floor(player.getCurrentTime())}`
+  if (timestamps.includes(currentTime)) {
+    const el = document.getElementById(`ts-${currentTime}`)
+    if (el) {
+      el.scrollIntoView()
+      document.getElementById("screencast").scrollIntoView()
+    }
+  }
+  setTimeout(followTimestamps, 1000)
+}
+</script>

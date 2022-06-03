@@ -5,6 +5,8 @@ description: |
   Data Manipulation, Empirical Bayes, Logistic Regression Model
 date: 2020-09-21
 date-format: long
+aliases:
+  - "Himalayan Climbers.html"
 ---
 
 Notable topics: Data Manipulation, Empirical Bayes, Logistic Regression Model
@@ -15,10 +17,260 @@ Timestamps by: Eric Fletcher
 
 [View code](https://github.com/dgrtwo/data-screencasts/blob/master/2020_09_22_himalayan_climbers.Rmd)
 
-## Full screencast
+## Screencast
 
-<iframe class="video" src="https://www.youtube.com/embed/WT7FMn-_jPY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div id="yt-player" data-video-id="WT7FMn-_jPY"></div>
 
 ## Timestamps
 
-<script id="timestamps" type="application-json">[{"timestamp_with_hours":"0:3:00","description":"Create a `geom_col` chart to visualize the top 50 tallest mountains.\r\n\r\nUse `fct_reorder` to reorder the `peak_name` factor levels by sorting along the `height_metres` variable.","functions":"ggplot | fct_reorder","packages":"ggplot | forcats","timestamp_sec":180},{"timestamp_with_hours":"0:8:50","description":"Use `summarize` with `across` to get the total number of climbs, climbers, deaths, and first year climbed. \r\n\r\nUse `mutate` to calculate the percent death rate for members and hired staff.\r\n\r\nUse `inner_join` and `select` to join with `peaks` dataset by `peak_id`.","functions":"summarize | across | arrange | mutate | inner_join","packages":"dplyr","timestamp_sec":530},{"timestamp_with_hours":"0:11:20","description":"Touching on statistical `noise` and how it impacts the death rate for mountains with fewer number of climbs, and how to account for it using various statistical methods including `Beta Binomial Regression` & `Empirical Bayes`.","timestamp_sec":680},{"timestamp_with_hours":"0:14:30","description":"Further description of `Empirical Bayes` and how to account for not overestimating death rate for mountains with fewer climbers.\r\n\r\nRecommended reading: [Introduction to Empirical Bayes: Examples from Baseball Statistics](http://varianceexplained.org/r/empirical-bayes-book/) by David Robinson","timestamp_sec":870},{"timestamp_with_hours":"0:17:00","description":"Use the `ebbr` package (Empirical Bayes for Binomial in R) to create an Empirical Bayes Estimate for each mountain by fitting prior distribution across data and adjusting the death rates down or up based on the prior distributions. \r\n\r\nUse a `geom_point` chart to visualize the difference between the raw death rate and new `ebbr` fitted death rate.","functions":"add_ebb_estimate | geom_point | geom_abline","packages":"ebbr | ggplot","timestamp_sec":1020},{"timestamp_with_hours":"0:21:20","description":"Use `geom_point` to visualize how deadly each mountain is with `geom_errorbarh` representing the 95% credible interval between minimum and maximum values.","functions":"ggplot | fct_reorder | geom_errorbarh","packages":"ggplot | forcats","timestamp_sec":1280},{"timestamp_with_hours":"0:26:35","description":"Use `geom_point` to visualize the relationship between `death rate` and `height` of mountain.  \r\n\r\nThere is not a clear relationship, but David does briefly mention how one could use `Beta Binomial Regression` to further inspect for possible relationships / trends.","functions":"geom_point","packages":"ggplot | forcats","timestamp_sec":1595},{"timestamp_with_hours":"0:28:00","description":"Use `geom_histogram` and `geom_boxplot` to visualize the distribution of time it took climbers to go from basecamp to the mountain’s high point for successful climbs only.\r\n\r\nUse `mutate` to calculate the number of days it took climbers to get from basecamp to the highpoint.\r\n\r\nAdd column to data using `case_when` and `str_detect` to identify strings in `termination_reason` that contain the word `Success` and rename them to `Success` & how to use a `vector` and `%in%` to change multiple values in `termination_reason` to `NA` and rest to `Failed`.\r\n\r\nUse `fct_lump` to show the top 10 mountains while lumping the other factor levels (mountains) into `other`.","functions":"mutate | case_when | str_detect |fct_lump | fct_reorder","packages":"dplyr | stringr | forcats","timestamp_sec":1680},{"timestamp_with_hours":"0:35:30","description":"For just Mount Everest, use `geom_histogram` and `geom_density` with `fill = success` to visualize the days from basecamp to highpoint for climbs that ended in `success`, `failure` or `other`.","functions":"geom_histogram | geom_density","packages":"ggplot","timestamp_sec":2130},{"timestamp_with_hours":"0:38:40","description":"For just Mount Everest, use `geom_histogram` to see the distribution of climbs per year.","functions":"geom_histogram","packages":"ggplot","timestamp_sec":2320},{"timestamp_with_hours":"0:39:55","description":"For just Mount Everest, use ‘geom_line` and `geom_point` to visualize `pct_death` over time by decade.\r\n\r\nUse `mutate` with `pmax` and `integer division` to create a decade variable that lumps together the data for 1970 and before.","functions":"mutate | pmax | geom_line | geom_point","packages":"ggplot | base | dplyr","timestamp_sec":2395},{"timestamp_with_hours":"0:41:30","description":"Write a function for summary statistics such as `n_climbs`, `pct_success`, `first_climb`, `pct_death`, ‘pct_hired_staff_death`.","functions":"function","timestamp_sec":2490},{"timestamp_with_hours":"0:46:20","description":"For just Mount Everest, use `geom_line` and `geom_point` to visualize `pct_success` over time by decade.","functions":"mutate | pmax | geom_line | geom_point","packages":"ggplot | base | dplyr","timestamp_sec":2780},{"timestamp_with_hours":"0:47:10","description":"For just Mount Everest, use `geom_line` and `geom_point` to visualize `pct_hired_staff_deaths ` over time by decade.\r\n\r\nDavid decides to visualize the `pct_hired_staff_deaths` and `pct_death` charts together on the same plot.","functions":"mutate | pmax | geom_line | geom_point","packages":"ggplot | base | dplyr","timestamp_sec":2830},{"timestamp_with_hours":"0:50:45","description":"For just Mount Everest, fit a logistic regression model to predict the probability of death with `format.pval` to calculate the `p.value`.\r\n\r\nUse `fct_lump` to lump together all `expedition_role` factors except for the n most frequent.","functions":"fct_lump | glm | format.pval","packages":"forcats | stats | broom | base","timestamp_sec":3045},{"timestamp_with_hours":"0:56:30","description":"Use `group_by` with `integer division` and `summarize` to calculate `n_climbers` and `pct_death` for age bucketed into decades.","functions":"group_by | summarize","packages":"dplyr","timestamp_sec":3390},{"timestamp_with_hours":"0:59:45","description":"Use `geom_point` and `geom_errorbarh` to visualize the logistic regression model with confident intervals.","functions":"geom_point | geom_errorbarh | conf.int","packages":"ggplot | broom","timestamp_sec":3585},{"timestamp_with_hours":"1:03:30","description":"Summary of screencast","timestamp_sec":3810}]</script>
+```{=html}
+<div id="topics">
+  <div class="topic">
+    <h3 id="ts-180">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(180, this)">0:3:00</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">ggplot</span><span class="badge-functions badge bg-info">fct_reorder</span></div><div><span class="badge-packages badge bg-primary">ggplot</span><span class="badge-packages badge bg-primary">forcats</span></div></div>
+    <div class="topic_description">
+      <p>Create a <code>geom_col</code> chart to visualize the top 50 tallest mountains.</p>
+<p>Use <code>fct_reorder</code> to reorder the <code>peak_name</code> factor levels by sorting along the <code>height_metres</code> variable.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-530">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(530, this)">0:8:50</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">summarize</span><span class="badge-functions badge bg-info">across</span><span class="badge-functions badge bg-info">arrange</span><span class="badge-functions badge bg-info">mutate</span><span class="badge-functions badge bg-info">inner_join</span></div><div><span class="badge-packages badge bg-primary">dplyr</span></div></div>
+    <div class="topic_description">
+      <p>Use <code>summarize</code> with <code>across</code> to get the total number of climbs, climbers, deaths, and first year climbed.</p>
+<p>Use <code>mutate</code> to calculate the percent death rate for members and hired staff.</p>
+<p>Use <code>inner_join</code> and <code>select</code> to join with <code>peaks</code> dataset by <code>peak_id</code>.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-680">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(680, this)">0:11:20</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Touching on statistical <code>noise</code> and how it impacts the death rate for mountains with fewer number of climbs, and how to account for it using various statistical methods including <code>Beta Binomial Regression</code> &amp; <code>Empirical Bayes</code>.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-870">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(870, this)">0:14:30</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Further description of <code>Empirical Bayes</code> and how to account for not overestimating death rate for mountains with fewer climbers.</p>
+<p>Recommended reading: <a href="http://varianceexplained.org/r/empirical-bayes-book/">Introduction to Empirical Bayes: Examples from Baseball Statistics</a> by David Robinson</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1020">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1020, this)">0:17:00</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">add_ebb_estimate</span><span class="badge-functions badge bg-info">geom_point</span><span class="badge-functions badge bg-info">geom_abline</span></div><div><span class="badge-packages badge bg-primary">ebbr</span><span class="badge-packages badge bg-primary">ggplot</span></div></div>
+    <div class="topic_description">
+      <p>Use the <code>ebbr</code> package (Empirical Bayes for Binomial in R) to create an Empirical Bayes Estimate for each mountain by fitting prior distribution across data and adjusting the death rates down or up based on the prior distributions.</p>
+<p>Use a <code>geom_point</code> chart to visualize the difference between the raw death rate and new <code>ebbr</code> fitted death rate.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1280">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1280, this)">0:21:20</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">ggplot</span><span class="badge-functions badge bg-info">fct_reorder</span><span class="badge-functions badge bg-info">geom_errorbarh</span></div><div><span class="badge-packages badge bg-primary">ggplot</span><span class="badge-packages badge bg-primary">forcats</span></div></div>
+    <div class="topic_description">
+      <p>Use <code>geom_point</code> to visualize how deadly each mountain is with <code>geom_errorbarh</code> representing the 95% credible interval between minimum and maximum values.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1595">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1595, this)">0:26:35</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">geom_point</span></div><div><span class="badge-packages badge bg-primary">ggplot</span><span class="badge-packages badge bg-primary">forcats</span></div></div>
+    <div class="topic_description">
+      <p>Use <code>geom_point</code> to visualize the relationship between <code>death rate</code> and <code>height</code> of mountain.</p>
+<p>There is not a clear relationship, but David does briefly mention how one could use <code>Beta Binomial Regression</code> to further inspect for possible relationships / trends.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1680">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1680, this)">0:28:00</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">mutate</span><span class="badge-functions badge bg-info">case_when</span><span class="badge-functions badge bg-info">str_detect</span><span class="badge-functions badge bg-info">fct_lump</span><span class="badge-functions badge bg-info">fct_reorder</span></div><div><span class="badge-packages badge bg-primary">dplyr</span><span class="badge-packages badge bg-primary">stringr</span><span class="badge-packages badge bg-primary">forcats</span></div></div>
+    <div class="topic_description">
+      <p>Use <code>geom_histogram</code> and <code>geom_boxplot</code> to visualize the distribution of time it took climbers to go from basecamp to the mountain’s high point for successful climbs only.</p>
+<p>Use <code>mutate</code> to calculate the number of days it took climbers to get from basecamp to the highpoint.</p>
+<p>Add column to data using <code>case_when</code> and <code>str_detect</code> to identify strings in <code>termination_reason</code> that contain the word <code>Success</code> and rename them to <code>Success</code> &amp; how to use a <code>vector</code> and <code>%in%</code> to change multiple values in <code>termination_reason</code> to <code>NA</code> and rest to <code>Failed</code>.</p>
+<p>Use <code>fct_lump</code> to show the top 10 mountains while lumping the other factor levels (mountains) into <code>other</code>.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2130">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2130, this)">0:35:30</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">geom_histogram</span><span class="badge-functions badge bg-info">geom_density</span></div><div><span class="badge-packages badge bg-primary">ggplot</span></div></div>
+    <div class="topic_description">
+      <p>For just Mount Everest, use <code>geom_histogram</code> and <code>geom_density</code> with <code>fill = success</code> to visualize the days from basecamp to highpoint for climbs that ended in <code>success</code>, <code>failure</code> or <code>other</code>.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2320">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2320, this)">0:38:40</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">geom_histogram</span></div><div><span class="badge-packages badge bg-primary">ggplot</span></div></div>
+    <div class="topic_description">
+      <p>For just Mount Everest, use <code>geom_histogram</code> to see the distribution of climbs per year.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2395">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2395, this)">0:39:55</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">mutate</span><span class="badge-functions badge bg-info">pmax</span><span class="badge-functions badge bg-info">geom_line</span><span class="badge-functions badge bg-info">geom_point</span></div><div><span class="badge-packages badge bg-primary">ggplot</span><span class="badge-packages badge bg-primary">base</span><span class="badge-packages badge bg-primary">dplyr</span></div></div>
+    <div class="topic_description">
+      <p>For just Mount Everest, use ‘geom_line<code>and</code>geom_point<code>to visualize</code>pct_death` over time by decade.</p>
+<p>Use <code>mutate</code> with <code>pmax</code> and <code>integer division</code> to create a decade variable that lumps together the data for 1970 and before.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2490">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2490, this)">0:41:30</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">function</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Write a function for summary statistics such as <code>n_climbs</code>, <code>pct_success</code>, <code>first_climb</code>, <code>pct_death</code>, ‘pct_hired_staff_death`.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2780">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2780, this)">0:46:20</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">mutate</span><span class="badge-functions badge bg-info">pmax</span><span class="badge-functions badge bg-info">geom_line</span><span class="badge-functions badge bg-info">geom_point</span></div><div><span class="badge-packages badge bg-primary">ggplot</span><span class="badge-packages badge bg-primary">base</span><span class="badge-packages badge bg-primary">dplyr</span></div></div>
+    <div class="topic_description">
+      <p>For just Mount Everest, use <code>geom_line</code> and <code>geom_point</code> to visualize <code>pct_success</code> over time by decade.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2830">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2830, this)">0:47:10</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">mutate</span><span class="badge-functions badge bg-info">pmax</span><span class="badge-functions badge bg-info">geom_line</span><span class="badge-functions badge bg-info">geom_point</span></div><div><span class="badge-packages badge bg-primary">ggplot</span><span class="badge-packages badge bg-primary">base</span><span class="badge-packages badge bg-primary">dplyr</span></div></div>
+    <div class="topic_description">
+      <p>For just Mount Everest, use <code>geom_line</code> and <code>geom_point</code> to visualize <code>pct_hired_staff_deaths </code> over time by decade.</p>
+<p>David decides to visualize the <code>pct_hired_staff_deaths</code> and <code>pct_death</code> charts together on the same plot.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-3045">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(3045, this)">0:50:45</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">fct_lump</span><span class="badge-functions badge bg-info">glm</span><span class="badge-functions badge bg-info">format.pval</span></div><div><span class="badge-packages badge bg-primary">forcats</span><span class="badge-packages badge bg-primary">stats</span><span class="badge-packages badge bg-primary">broom</span><span class="badge-packages badge bg-primary">base</span></div></div>
+    <div class="topic_description">
+      <p>For just Mount Everest, fit a logistic regression model to predict the probability of death with <code>format.pval</code> to calculate the <code>p.value</code>.</p>
+<p>Use <code>fct_lump</code> to lump together all <code>expedition_role</code> factors except for the n most frequent.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-3390">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(3390, this)">0:56:30</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">group_by</span><span class="badge-functions badge bg-info">summarize</span></div><div><span class="badge-packages badge bg-primary">dplyr</span></div></div>
+    <div class="topic_description">
+      <p>Use <code>group_by</code> with <code>integer division</code> and <code>summarize</code> to calculate <code>n_climbers</code> and <code>pct_death</code> for age bucketed into decades.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-3585">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(3585, this)">0:59:45</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">geom_point</span><span class="badge-functions badge bg-info">geom_errorbarh</span><span class="badge-functions badge bg-info">conf.int</span></div><div><span class="badge-packages badge bg-primary">ggplot</span><span class="badge-packages badge bg-primary">broom</span></div></div>
+    <div class="topic_description">
+      <p>Use <code>geom_point</code> and <code>geom_errorbarh</code> to visualize the logistic regression model with confident intervals.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-3810">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(3810, this)">1:03:30</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Summary of screencast</p>
+
+    </div>
+  </div>
+</div>
+```
+     
+<script>
+// 2. This code loads the IFrame Player API code asynchronously.
+var tag = document.createElement("script");
+
+tag.src = "https://www.youtube.com/iframe_api";
+var firstScriptTag = document.getElementsByTagName("script")[0];
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+// 3. This function creates an <iframe> (and YouTube player)
+//    after the API code downloads.
+var videoId = document.getElementById("yt-player").dataset.videoId;
+var player;
+function onYouTubeIframeAPIReady() {
+  player = new YT.Player("yt-player", {
+    height: "486",
+    width: "864",
+    videoId: videoId,
+    playerVars: {
+      "playsinline": 1
+    },
+    events: {
+      onStateChange: function(event) {
+        if (event.data == YT.PlayerState.PLAYING) {
+          followTimestamps()
+        }
+      }
+    }
+  });
+}
+
+function playerSkipToTimestamp(seconds, tsElement) {
+  player.seekTo(seconds, true)
+  tsElement.scrollIntoView()
+  document.getElementById("screencast").scrollIntoView()
+}
+
+const timestamps = Array.from(document.querySelectorAll('.topic h3[id^="ts-"]'))
+  .map(el => el.id.replace('ts-', ''))
+
+function followTimestamps() {
+  if (player.getPlayerState() !== 1) {
+    return
+  }
+  const currentTime = `${Math.floor(player.getCurrentTime())}`
+  if (timestamps.includes(currentTime)) {
+    const el = document.getElementById(`ts-${currentTime}`)
+    if (el) {
+      el.scrollIntoView()
+      document.getElementById("screencast").scrollIntoView()
+    }
+  }
+  setTimeout(followTimestamps, 1000)
+}
+</script>

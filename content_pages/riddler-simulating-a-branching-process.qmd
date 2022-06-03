@@ -5,6 +5,8 @@ description: |
   Simulation, Probability distributions (Exponential and Geometric)
 date: 2020-04-12
 date-format: long
+aliases:
+  - "Riddler: Simulating a Branching Process.html"
 ---
 
 Notable topics: Simulation, Probability distributions (Exponential and Geometric)
@@ -15,10 +17,258 @@ Timestamps by: Alex Cookson
 
 [View code](https://github.com/dgrtwo/data-screencasts/blob/master/gdpr.Rmd)
 
-## Full screencast
+## Screencast
 
-<iframe class="video" src="https://www.youtube.com/embed/QtThluGted0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div id="yt-player" data-video-id="QtThluGted0"></div>
 
 ## Timestamps
 
-<script id="timestamps" type="application-json">[{"timestamp_with_hours":"0:0:35","description":"Explanation of a Poisson process","timestamp_sec":35},{"timestamp_with_hours":"0:2:40","description":"Asking \"How long do you have to wait for X to happen?\", which the Exponential distribution can answer","timestamp_sec":160},{"timestamp_with_hours":"0:4:20","description":"Using `rexp` function to generate numbers from the Exponential distribution","functions":"rexp","timestamp_sec":260},{"timestamp_with_hours":"0:5:25","description":"Using a vector of rates inside the `rexp` function (to explore consecutive waiting times)","functions":"rexp","timestamp_sec":325},{"timestamp_with_hours":"0:7:05","description":"Using `cumsum` function to calculate total waiting time until hitting a specific number in the Poisson process","timestamp_sec":425},{"timestamp_with_hours":"0:7:35","description":"Using `which` function to determine the first instance > 3 in a vector","functions":"which","timestamp_sec":455},{"timestamp_with_hours":"0:9:20","description":"Using `replicate` function to do a quick simulation of the function just written","functions":"replicate","timestamp_sec":560},{"timestamp_with_hours":"0:10:55","description":"Discussing methods of making the simulation function faster","timestamp_sec":655},{"timestamp_with_hours":"0:12:00","description":"Using `crossing` function to set up \"tidy\" simulation (gives you all possible combinations of values you provide it)","functions":"crossing","timestamp_sec":720},{"timestamp_with_hours":"0:13:15","description":"Noting how the consecutive waiting times seems to follow the Harmonic series","timestamp_sec":795},{"timestamp_with_hours":"0:17:10","description":"Noticing that we are missing trials with 0 comments and fixing","timestamp_sec":1030},{"timestamp_with_hours":"0:20:25","description":"Using `nls` function (non-linear least squares) to test how well the data fits with an exponential curve","functions":"nls","timestamp_sec":1225},{"timestamp_with_hours":"0:23:05","description":"Visualizing fit between data and the exponential curve calculated with `nls` in previous step","timestamp_sec":1385},{"timestamp_with_hours":"0:23:50","description":"Using `augment` function to added fitted values of the `nls` function","functions":"augment","timestamp_sec":1430},{"timestamp_with_hours":"0:26:00","description":"Exploring whether the data actually follows a Geometric distribution","timestamp_sec":1560},{"timestamp_with_hours":"0:30:55","description":"Explanation of the Geometric distribution as it applies to this question","timestamp_sec":1855},{"timestamp_with_hours":"0:34:05","description":"Generalizing the question to ask how long it takes to get to multiple comments (not just 3)","timestamp_sec":2045},{"timestamp_with_hours":"0:38:45","description":"Explanation of why we subtract 1 when fitting an exponential curve","timestamp_sec":2325},{"timestamp_with_hours":"0:46:00","description":"Summary of screencast","timestamp_sec":2760}]</script>
+```{=html}
+<div id="topics">
+  <div class="topic">
+    <h3 id="ts-35">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(35, this)">0:0:35</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Explanation of a Poisson process</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-160">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(160, this)">0:2:40</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Asking &quot;How long do you have to wait for X to happen?&quot;, which the Exponential distribution can answer</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-260">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(260, this)">0:4:20</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">rexp</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using <code>rexp</code> function to generate numbers from the Exponential distribution</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-325">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(325, this)">0:5:25</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">rexp</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using a vector of rates inside the <code>rexp</code> function (to explore consecutive waiting times)</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-425">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(425, this)">0:7:05</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Using <code>cumsum</code> function to calculate total waiting time until hitting a specific number in the Poisson process</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-455">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(455, this)">0:7:35</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">which</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using <code>which</code> function to determine the first instance &gt; 3 in a vector</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-560">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(560, this)">0:9:20</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">replicate</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using <code>replicate</code> function to do a quick simulation of the function just written</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-655">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(655, this)">0:10:55</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Discussing methods of making the simulation function faster</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-720">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(720, this)">0:12:00</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">crossing</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using <code>crossing</code> function to set up &quot;tidy&quot; simulation (gives you all possible combinations of values you provide it)</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-795">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(795, this)">0:13:15</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Noting how the consecutive waiting times seems to follow the Harmonic series</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1030">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1030, this)">0:17:10</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Noticing that we are missing trials with 0 comments and fixing</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1225">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1225, this)">0:20:25</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">nls</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using <code>nls</code> function (non-linear least squares) to test how well the data fits with an exponential curve</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1385">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1385, this)">0:23:05</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Visualizing fit between data and the exponential curve calculated with <code>nls</code> in previous step</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1430">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1430, this)">0:23:50</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">augment</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using <code>augment</code> function to added fitted values of the <code>nls</code> function</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1560">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1560, this)">0:26:00</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Exploring whether the data actually follows a Geometric distribution</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1855">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1855, this)">0:30:55</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Explanation of the Geometric distribution as it applies to this question</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2045">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2045, this)">0:34:05</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Generalizing the question to ask how long it takes to get to multiple comments (not just 3)</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2325">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2325, this)">0:38:45</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Explanation of why we subtract 1 when fitting an exponential curve</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2760">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2760, this)">0:46:00</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Summary of screencast</p>
+
+    </div>
+  </div>
+</div>
+```
+     
+<script>
+// 2. This code loads the IFrame Player API code asynchronously.
+var tag = document.createElement("script");
+
+tag.src = "https://www.youtube.com/iframe_api";
+var firstScriptTag = document.getElementsByTagName("script")[0];
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+// 3. This function creates an <iframe> (and YouTube player)
+//    after the API code downloads.
+var videoId = document.getElementById("yt-player").dataset.videoId;
+var player;
+function onYouTubeIframeAPIReady() {
+  player = new YT.Player("yt-player", {
+    height: "486",
+    width: "864",
+    videoId: videoId,
+    playerVars: {
+      "playsinline": 1
+    },
+    events: {
+      onStateChange: function(event) {
+        if (event.data == YT.PlayerState.PLAYING) {
+          followTimestamps()
+        }
+      }
+    }
+  });
+}
+
+function playerSkipToTimestamp(seconds, tsElement) {
+  player.seekTo(seconds, true)
+  tsElement.scrollIntoView()
+  document.getElementById("screencast").scrollIntoView()
+}
+
+const timestamps = Array.from(document.querySelectorAll('.topic h3[id^="ts-"]'))
+  .map(el => el.id.replace('ts-', ''))
+
+function followTimestamps() {
+  if (player.getPlayerState() !== 1) {
+    return
+  }
+  const currentTime = `${Math.floor(player.getCurrentTime())}`
+  if (timestamps.includes(currentTime)) {
+    const el = document.getElementById(`ts-${currentTime}`)
+    if (el) {
+      el.scrollIntoView()
+      document.getElementById("screencast").scrollIntoView()
+    }
+  }
+  setTimeout(followTimestamps, 1000)
+}
+</script>

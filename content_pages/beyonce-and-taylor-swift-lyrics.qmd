@@ -5,6 +5,8 @@ description: |
   Text analysis, `tf_idf`, Log odds ratio, Diverging bar graph, Lollipop graph
 date: 2020-09-28
 date-format: long
+aliases:
+  - "Beyonce and Taylor Swift Lyrics.html"
 ---
 
 Notable topics: Text analysis, `tf_idf`, Log odds ratio, Diverging bar graph, Lollipop graph
@@ -15,10 +17,269 @@ Timestamps by: Eric Fletcher
 
 [View code](https://github.com/dgrtwo/data-screencasts/blob/master/2020_09_29_taylor_swift_beyonce.Rmd)
 
-## Full screencast
+## Screencast
 
-<iframe class="video" src="https://www.youtube.com/embed/vYbDyfv_v4Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div id="yt-player" data-video-id="vYbDyfv_v4Q"></div>
 
 ## Timestamps
 
-<script id="timestamps" type="application-json">[{"timestamp_with_hours":"0:7:50","description":"Use `fct_reorder` from the `forcats` package to reorder `title` factor levels by sorting along the `sales` variable in `geom_col` plot.","functions":"fct_reorder","packages":"forcats","timestamp_sec":470},{"timestamp_with_hours":"0:8:10","description":"Use `labels = dollar` from the `scales` package to format the `geom_col` x-axis values as currency.","functions":"labels","packages":"scales","timestamp_sec":490},{"timestamp_with_hours":"0:11:15","description":"Use `rename_all(str_to_lower)` to convert variable names to lowercase.","functions":"rename_all | str_to_lower","packages":"dplyr | stringr","timestamp_sec":675},{"timestamp_with_hours":"0:12:45","description":"Use `unnest_tokens` from the `tidytext` package to split the lyrics into one-lyric-per-row.","functions":"unnest_tokens","packages":"tidytext","timestamp_sec":765},{"timestamp_with_hours":"0:13:00","description":"Use `anti_join` from the `tidytext` package to find the most common words int he lyrics without `stop_words`.","functions":"anti_join","packages":"dplyr","timestamp_sec":780},{"timestamp_with_hours":"0:15:15","description":"Use `bind_tf_idf` from the `tidytext` package to determine `tf` - the proportion each word has in each album and `idf` - how specific each word is to each particular album.","functions":"bind_tf_idf","packages":"tidytext","timestamp_sec":915},{"timestamp_with_hours":"0:17:45","description":"Use `reorder_within` with `scale_y_reordered` in order to reorder the bars within each `facet panel`. David replaces `top_n` with `slice_max` from the `dplyr` package in order to show the top 10 words with `ties = FALSE`.","functions":"reorder_within | scale_y_reordered | slice_max","packages":"tidytext | dplyr","timestamp_sec":1065},{"timestamp_with_hours":"0:20:45","description":"Use `bind_log_odds` from the `tidylo` package to calculate the `log odds ratio` of album and words, that is how much more common is the word in a specific album than across all the other albums.","functions":"bind_log_odds","packages":"tidylo","timestamp_sec":1245},{"timestamp_with_hours":"0:23:10","description":"Use `filter(str_length(word) <= 3)` to come up with a list in order to remove common filler words like `ah`, `uh`, `ha`, `ey`, `eeh`, and `huh`.","functions":"filter | str_length","packages":"dplyr | stringr","timestamp_sec":1390},{"timestamp_with_hours":"0:27:00","description":"Use `mdy` from the `lubridate` package and `str_remove(released, \" \\\\(.*)\"))` from the `stringr` package to parse the dates in the `released` variable.","functions":"distinct | mdy | str_remove","packages":"dplyr | lubridate | stringr","timestamp_sec":1620},{"timestamp_with_hours":"0:28:15","description":"Use `inner_join` from the `dplyr` package to join `taylor_swift_words` with `release_dates`. \n \n David ends up having to use `fct_recode` since the albums `reputation` and `folklore` were nor `lowercase` in a previous table thus excluding them from the `inner_join`.","functions":"inner_join | fct_recode","packages":"dplyr | forcats","timestamp_sec":1695},{"timestamp_with_hours":"0:28:30","description":"Use `fct_reorder` from the `forcats` package to reorder `album` factor levels by sorting along the `released` variable to be used in the `faceted` `geom_col`.","functions":"fct_reorder | geom_col","packages":"forcats | ggplot2","timestamp_sec":1710},{"timestamp_with_hours":"0:34:40","description":"Use `bind_rows` from hte `dplyr` package to bind `ts` with `beyonce` with `unnest_tokens` from the `tidytext` package to get one lyric per row per artist.","functions":"bind_rows | unnest_tokens","packages":"dplyr | tidytext","timestamp_sec":2080},{"timestamp_with_hours":"0:38:40","description":"Use `bind_log_odds` to figure out which words are more likely to come from a Taylor Swift or Beyonce song?","functions":"bind_log_odds","packages":"tidylo","timestamp_sec":2320},{"timestamp_with_hours":"0:41:10","description":"Use `slice_max` from the `dplyr` package to select the top 100 words by `num_words_total` and then the top 25 by `log_odds_weighted`. Results are used to create a diverging bar chart showing which words are most common between Beyonce and Taylor Swift songs.","functions":"slice_max | geom_col | ifelse | fct_reorder","packages":"dplyr | ggplot2 | forcats","timestamp_sec":2470},{"timestamp_with_hours":"0:44:40","description":"Use `scale_x_continuous` to make the `log_odds_weighted` scale more interpretable.","functions":"scale_x_continuous","packages":"ggplot2","timestamp_sec":2680},{"timestamp_with_hours":"0:50:45","description":"Take the previous plot and turn it into a `lollipop graph` with `geom_point(aes(size = num_words_total, color = direction))`","functions":"geom_col | geom_point | geom_vline","packages":"ggplot2","timestamp_sec":3045},{"timestamp_with_hours":"0:53:05","description":"Use `ifelse` to change the `1x` value on the x-axis to `same`.","functions":"ifelse","packages":"base","timestamp_sec":3185},{"timestamp_with_hours":"0:54:15","description":"Create a `geom_point` with `geom_abline` to show the most popular words they use in common.","functions":"pivot_wider | clean_names | geom_abline | geom_point | slice_max | scale_y_log_10 | scale_x_log_10 | geom_text","packages":"tidyr | ggplot2 | dplyr","timestamp_sec":3255},{"timestamp_with_hours":"1:01:55","description":"Summary of screencast.","timestamp_sec":3715}]</script>
+```{=html}
+<div id="topics">
+  <div class="topic">
+    <h3 id="ts-470">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(470, this)">0:7:50</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">fct_reorder</span></div><div><span class="badge-packages badge bg-primary">forcats</span></div></div>
+    <div class="topic_description">
+      <p>Use <code>fct_reorder</code> from the <code>forcats</code> package to reorder <code>title</code> factor levels by sorting along the <code>sales</code> variable in <code>geom_col</code> plot.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-490">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(490, this)">0:8:10</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">labels</span></div><div><span class="badge-packages badge bg-primary">scales</span></div></div>
+    <div class="topic_description">
+      <p>Use <code>labels = dollar</code> from the <code>scales</code> package to format the <code>geom_col</code> x-axis values as currency.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-675">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(675, this)">0:11:15</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">rename_all</span><span class="badge-functions badge bg-info">str_to_lower</span></div><div><span class="badge-packages badge bg-primary">dplyr</span><span class="badge-packages badge bg-primary">stringr</span></div></div>
+    <div class="topic_description">
+      <p>Use <code>rename_all(str_to_lower)</code> to convert variable names to lowercase.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-765">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(765, this)">0:12:45</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">unnest_tokens</span></div><div><span class="badge-packages badge bg-primary">tidytext</span></div></div>
+    <div class="topic_description">
+      <p>Use <code>unnest_tokens</code> from the <code>tidytext</code> package to split the lyrics into one-lyric-per-row.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-780">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(780, this)">0:13:00</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">anti_join</span></div><div><span class="badge-packages badge bg-primary">dplyr</span></div></div>
+    <div class="topic_description">
+      <p>Use <code>anti_join</code> from the <code>tidytext</code> package to find the most common words int he lyrics without <code>stop_words</code>.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-915">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(915, this)">0:15:15</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">bind_tf_idf</span></div><div><span class="badge-packages badge bg-primary">tidytext</span></div></div>
+    <div class="topic_description">
+      <p>Use <code>bind_tf_idf</code> from the <code>tidytext</code> package to determine <code>tf</code> - the proportion each word has in each album and <code>idf</code> - how specific each word is to each particular album.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1065">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1065, this)">0:17:45</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">reorder_within</span><span class="badge-functions badge bg-info">scale_y_reordered</span><span class="badge-functions badge bg-info">slice_max</span></div><div><span class="badge-packages badge bg-primary">tidytext</span><span class="badge-packages badge bg-primary">dplyr</span></div></div>
+    <div class="topic_description">
+      <p>Use <code>reorder_within</code> with <code>scale_y_reordered</code> in order to reorder the bars within each <code>facet panel</code>. David replaces <code>top_n</code> with <code>slice_max</code> from the <code>dplyr</code> package in order to show the top 10 words with <code>ties = FALSE</code>.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1245">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1245, this)">0:20:45</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">bind_log_odds</span></div><div><span class="badge-packages badge bg-primary">tidylo</span></div></div>
+    <div class="topic_description">
+      <p>Use <code>bind_log_odds</code> from the <code>tidylo</code> package to calculate the <code>log odds ratio</code> of album and words, that is how much more common is the word in a specific album than across all the other albums.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1390">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1390, this)">0:23:10</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">filter</span><span class="badge-functions badge bg-info">str_length</span></div><div><span class="badge-packages badge bg-primary">dplyr</span><span class="badge-packages badge bg-primary">stringr</span></div></div>
+    <div class="topic_description">
+      <p>Use <code>filter(str_length(word) &lt;= 3)</code> to come up with a list in order to remove common filler words like <code>ah</code>, <code>uh</code>, <code>ha</code>, <code>ey</code>, <code>eeh</code>, and <code>huh</code>.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1620">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1620, this)">0:27:00</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">distinct</span><span class="badge-functions badge bg-info">mdy</span><span class="badge-functions badge bg-info">str_remove</span></div><div><span class="badge-packages badge bg-primary">dplyr</span><span class="badge-packages badge bg-primary">lubridate</span><span class="badge-packages badge bg-primary">stringr</span></div></div>
+    <div class="topic_description">
+      <p>Use <code>mdy</code> from the <code>lubridate</code> package and <code>str_remove(released, &quot; \\(.*)&quot;))</code> from the <code>stringr</code> package to parse the dates in the <code>released</code> variable.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1695">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1695, this)">0:28:15</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">inner_join</span><span class="badge-functions badge bg-info">fct_recode</span></div><div><span class="badge-packages badge bg-primary">dplyr</span><span class="badge-packages badge bg-primary">forcats</span></div></div>
+    <div class="topic_description">
+      <p>Use <code>inner_join</code> from the <code>dplyr</code> package to join <code>taylor_swift_words</code> with <code>release_dates</code>.</p>
+<p>David ends up having to use <code>fct_recode</code> since the albums <code>reputation</code> and <code>folklore</code> were nor <code>lowercase</code> in a previous table thus excluding them from the <code>inner_join</code>.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1710">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1710, this)">0:28:30</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">fct_reorder</span><span class="badge-functions badge bg-info">geom_col</span></div><div><span class="badge-packages badge bg-primary">forcats</span><span class="badge-packages badge bg-primary">ggplot2</span></div></div>
+    <div class="topic_description">
+      <p>Use <code>fct_reorder</code> from the <code>forcats</code> package to reorder <code>album</code> factor levels by sorting along the <code>released</code> variable to be used in the <code>faceted</code> <code>geom_col</code>.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2080">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2080, this)">0:34:40</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">bind_rows</span><span class="badge-functions badge bg-info">unnest_tokens</span></div><div><span class="badge-packages badge bg-primary">dplyr</span><span class="badge-packages badge bg-primary">tidytext</span></div></div>
+    <div class="topic_description">
+      <p>Use <code>bind_rows</code> from hte <code>dplyr</code> package to bind <code>ts</code> with <code>beyonce</code> with <code>unnest_tokens</code> from the <code>tidytext</code> package to get one lyric per row per artist.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2320">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2320, this)">0:38:40</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">bind_log_odds</span></div><div><span class="badge-packages badge bg-primary">tidylo</span></div></div>
+    <div class="topic_description">
+      <p>Use <code>bind_log_odds</code> to figure out which words are more likely to come from a Taylor Swift or Beyonce song?</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2470">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2470, this)">0:41:10</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">slice_max</span><span class="badge-functions badge bg-info">geom_col</span><span class="badge-functions badge bg-info">ifelse</span><span class="badge-functions badge bg-info">fct_reorder</span></div><div><span class="badge-packages badge bg-primary">dplyr</span><span class="badge-packages badge bg-primary">ggplot2</span><span class="badge-packages badge bg-primary">forcats</span></div></div>
+    <div class="topic_description">
+      <p>Use <code>slice_max</code> from the <code>dplyr</code> package to select the top 100 words by <code>num_words_total</code> and then the top 25 by <code>log_odds_weighted</code>. Results are used to create a diverging bar chart showing which words are most common between Beyonce and Taylor Swift songs.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2680">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2680, this)">0:44:40</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">scale_x_continuous</span></div><div><span class="badge-packages badge bg-primary">ggplot2</span></div></div>
+    <div class="topic_description">
+      <p>Use <code>scale_x_continuous</code> to make the <code>log_odds_weighted</code> scale more interpretable.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-3045">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(3045, this)">0:50:45</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">geom_col</span><span class="badge-functions badge bg-info">geom_point</span><span class="badge-functions badge bg-info">geom_vline</span></div><div><span class="badge-packages badge bg-primary">ggplot2</span></div></div>
+    <div class="topic_description">
+      <p>Take the previous plot and turn it into a <code>lollipop graph</code> with <code>geom_point(aes(size = num_words_total, color = direction))</code></p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-3185">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(3185, this)">0:53:05</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">ifelse</span></div><div><span class="badge-packages badge bg-primary">base</span></div></div>
+    <div class="topic_description">
+      <p>Use <code>ifelse</code> to change the <code>1x</code> value on the x-axis to <code>same</code>.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-3255">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(3255, this)">0:54:15</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">pivot_wider</span><span class="badge-functions badge bg-info">clean_names</span><span class="badge-functions badge bg-info">geom_abline</span><span class="badge-functions badge bg-info">geom_point</span><span class="badge-functions badge bg-info">slice_max</span><span class="badge-functions badge bg-info">scale_y_log_10</span><span class="badge-functions badge bg-info">scale_x_log_10</span><span class="badge-functions badge bg-info">geom_text</span></div><div><span class="badge-packages badge bg-primary">tidyr</span><span class="badge-packages badge bg-primary">ggplot2</span><span class="badge-packages badge bg-primary">dplyr</span></div></div>
+    <div class="topic_description">
+      <p>Create a <code>geom_point</code> with <code>geom_abline</code> to show the most popular words they use in common.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-3715">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(3715, this)">1:01:55</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Summary of screencast.</p>
+
+    </div>
+  </div>
+</div>
+```
+     
+<script>
+// 2. This code loads the IFrame Player API code asynchronously.
+var tag = document.createElement("script");
+
+tag.src = "https://www.youtube.com/iframe_api";
+var firstScriptTag = document.getElementsByTagName("script")[0];
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+// 3. This function creates an <iframe> (and YouTube player)
+//    after the API code downloads.
+var videoId = document.getElementById("yt-player").dataset.videoId;
+var player;
+function onYouTubeIframeAPIReady() {
+  player = new YT.Player("yt-player", {
+    height: "486",
+    width: "864",
+    videoId: videoId,
+    playerVars: {
+      "playsinline": 1
+    },
+    events: {
+      onStateChange: function(event) {
+        if (event.data == YT.PlayerState.PLAYING) {
+          followTimestamps()
+        }
+      }
+    }
+  });
+}
+
+function playerSkipToTimestamp(seconds, tsElement) {
+  player.seekTo(seconds, true)
+  tsElement.scrollIntoView()
+  document.getElementById("screencast").scrollIntoView()
+}
+
+const timestamps = Array.from(document.querySelectorAll('.topic h3[id^="ts-"]'))
+  .map(el => el.id.replace('ts-', ''))
+
+function followTimestamps() {
+  if (player.getPlayerState() !== 1) {
+    return
+  }
+  const currentTime = `${Math.floor(player.getCurrentTime())}`
+  if (timestamps.includes(currentTime)) {
+    const el = document.getElementById(`ts-${currentTime}`)
+    if (el) {
+      el.scrollIntoView()
+      document.getElementById("screencast").scrollIntoView()
+    }
+  }
+  setTimeout(followTimestamps, 1000)
+}
+</script>

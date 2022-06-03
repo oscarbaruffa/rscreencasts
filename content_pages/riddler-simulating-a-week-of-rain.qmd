@@ -5,6 +5,8 @@ description: |
   Simulation
 date: 2018-12-11
 date-format: long
+aliases:
+  - "Riddler: Simulating a Week of Rain.html"
 ---
 
 Notable topics: Simulation
@@ -15,10 +17,188 @@ Timestamps by: Alex Cookson
 
 [View code](NA)
 
-## Full screencast
+## Screencast
 
-<iframe class="video" src="https://www.youtube.com/embed/TDzd73z8thU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div id="yt-player" data-video-id="TDzd73z8thU"></div>
 
 ## Timestamps
 
-<script id="timestamps" type="application-json">[{"timestamp_with_hours":"0:1:20","description":"Using crossing function to get all combinations of specified variables (100 trials of 5 days)","functions":"crossing","timestamp_sec":80},{"timestamp_with_hours":"0:2:35","description":"Using rbinom function to simulate whether it rains or not","functions":"rbinom","timestamp_sec":155},{"timestamp_with_hours":"0:3:15","description":"Using ifelse function to set starting number of umbrellas at beginning of week","functions":"ifelse","timestamp_sec":195},{"timestamp_with_hours":"0:4:20","description":"Explanation of structure of simulation and approach to determining number of umbrellas in each location","timestamp_sec":260},{"timestamp_with_hours":"0:5:30","description":"Changing structure so that we have a row for each day's morning or evening","timestamp_sec":330},{"timestamp_with_hours":"0:7:10","description":"Using group_by, ifelse, and row_number functions to set starting number of umbrellas for each trial","functions":"group_by | ifelse | row_number","timestamp_sec":430},{"timestamp_with_hours":"0:8:45","description":"Using case_when function to returns different values for multiple logical checks (allows for more outputs than ifelse)","functions":"case_when","timestamp_sec":525},{"timestamp_with_hours":"0:10:20","description":"Using cumsum function to create a running tally of number of umbrellas in each location","functions":"cumsum","timestamp_sec":620},{"timestamp_with_hours":"0:11:25","description":"Explanation of output of simulated data","timestamp_sec":685},{"timestamp_with_hours":"0:12:30","description":"Using any function to check if any day had a negative \"umbrella count\" (indicating there wasn't an umbrella available when raining)","timestamp_sec":750},{"timestamp_with_hours":"0:15:40","description":"Asking, \"When was the first time Louie got wet?\"","timestamp_sec":940},{"timestamp_with_hours":"0:17:10","description":"Creating a custom vector to convert an integer to a weekday (e.g., 2 = Tue)","timestamp_sec":1030}]</script>
+```{=html}
+<div id="topics">
+  <div class="topic">
+    <h3 id="ts-80">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(80, this)">0:1:20</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">crossing</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using crossing function to get all combinations of specified variables (100 trials of 5 days)</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-155">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(155, this)">0:2:35</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">rbinom</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using rbinom function to simulate whether it rains or not</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-195">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(195, this)">0:3:15</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">ifelse</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using ifelse function to set starting number of umbrellas at beginning of week</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-260">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(260, this)">0:4:20</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Explanation of structure of simulation and approach to determining number of umbrellas in each location</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-330">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(330, this)">0:5:30</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Changing structure so that we have a row for each day's morning or evening</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-430">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(430, this)">0:7:10</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">group_by</span><span class="badge-functions badge bg-info">ifelse</span><span class="badge-functions badge bg-info">row_number</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using group_by, ifelse, and row_number functions to set starting number of umbrellas for each trial</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-525">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(525, this)">0:8:45</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">case_when</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using case_when function to returns different values for multiple logical checks (allows for more outputs than ifelse)</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-620">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(620, this)">0:10:20</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">cumsum</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using cumsum function to create a running tally of number of umbrellas in each location</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-685">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(685, this)">0:11:25</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Explanation of output of simulated data</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-750">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(750, this)">0:12:30</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Using any function to check if any day had a negative &quot;umbrella count&quot; (indicating there wasn't an umbrella available when raining)</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-940">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(940, this)">0:15:40</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Asking, &quot;When was the first time Louie got wet?&quot;</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1030">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1030, this)">0:17:10</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Creating a custom vector to convert an integer to a weekday (e.g., 2 = Tue)</p>
+
+    </div>
+  </div>
+</div>
+```
+     
+<script>
+// 2. This code loads the IFrame Player API code asynchronously.
+var tag = document.createElement("script");
+
+tag.src = "https://www.youtube.com/iframe_api";
+var firstScriptTag = document.getElementsByTagName("script")[0];
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+// 3. This function creates an <iframe> (and YouTube player)
+//    after the API code downloads.
+var videoId = document.getElementById("yt-player").dataset.videoId;
+var player;
+function onYouTubeIframeAPIReady() {
+  player = new YT.Player("yt-player", {
+    height: "486",
+    width: "864",
+    videoId: videoId,
+    playerVars: {
+      "playsinline": 1
+    },
+    events: {
+      onStateChange: function(event) {
+        if (event.data == YT.PlayerState.PLAYING) {
+          followTimestamps()
+        }
+      }
+    }
+  });
+}
+
+function playerSkipToTimestamp(seconds, tsElement) {
+  player.seekTo(seconds, true)
+  tsElement.scrollIntoView()
+  document.getElementById("screencast").scrollIntoView()
+}
+
+const timestamps = Array.from(document.querySelectorAll('.topic h3[id^="ts-"]'))
+  .map(el => el.id.replace('ts-', ''))
+
+function followTimestamps() {
+  if (player.getPlayerState() !== 1) {
+    return
+  }
+  const currentTime = `${Math.floor(player.getCurrentTime())}`
+  if (timestamps.includes(currentTime)) {
+    const el = document.getElementById(`ts-${currentTime}`)
+    if (el) {
+      el.scrollIntoView()
+      document.getElementById("screencast").scrollIntoView()
+    }
+  }
+  setTimeout(followTimestamps, 1000)
+}
+</script>

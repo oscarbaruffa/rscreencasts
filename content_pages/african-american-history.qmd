@@ -5,6 +5,8 @@ description: |
   Network diagram, Wordcloud
 date: 2020-06-15
 date-format: long
+aliases:
+  - "African-American History.html"
 ---
 
 Notable topics: Network diagram, Wordcloud
@@ -15,10 +17,218 @@ Timestamps by: Eric Fletcher
 
 [View code](https://github.com/dgrtwo/data-screencasts/blob/master/african-american-history.Rmd)
 
-## Full screencast
+## Screencast
 
-<iframe class="video" src="https://www.youtube.com/embed/2L-jA-Me3zg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div id="yt-player" data-video-id="2L-jA-Me3zg"></div>
 
 ## Timestamps
 
-<script id="timestamps" type="application-json">[{"timestamp_with_hours":"0:6:55","description":"Use `fct_lump` from the `forcats` package to lump together all the factor levels in `ship_name` except the `n` most frequent. Used within `filter` with `! = \"Other\"` to remove `other`.","functions":"fct_lump","packages":"forcats","timestamp_sec":415},{"timestamp_with_hours":"0:8:00","description":"use `fct_reorder` from the `forcats` package to reorder the `ship_name` factor levels y sorting along the `n_slaves_arrived` variable.","functions":"fct_reorder","packages":"forcats","timestamp_sec":480},{"timestamp_with_hours":"0:10:20","description":"Add `geom_vline` to `geom_histogram` to annotate the plot with a vertical line indicating the Revolutionary War and the Civil War.","functions":"geom_vline","packages":"ggplot2","timestamp_sec":620},{"timestamp_with_hours":"0:13:00","description":"Use `truncated division` within `count` to create a new `decade` variable equal to `10 * (year_arrival %/% 10))`","functions":"count","packages":"dplyr","timestamp_sec":780},{"timestamp_with_hours":"0:17:20","description":"Use `str_trunc` from the `stringr` package to truncate the titles in each facet panel accounting for the slave ports with really long names.","functions":"str_trunc","packages":"stringr","timestamp_sec":1040},{"timestamp_with_hours":"0:18:05","description":"Another option for accounting for long titles in the facet panels is to use `strip.text` within `theme` with `element_text(size = 6)`","functions":"theme","packages":"ggplot2","timestamp_sec":1085},{"timestamp_with_hours":"0:26:55","description":"Use the `ggraph` package to create a `network diagram` using `port_origin` and `port_arrival`.","functions":"ggraph | geom_edge_link | geom_node_point | geom_node_text","packages":"ggraph","timestamp_sec":1615},{"timestamp_with_hours":"0:29:05","description":"Use `arrow` from the `grid` package to add directional arrows to the points in the `network diagram`.","functions":"arrow","packages":"grid","timestamp_sec":1745},{"timestamp_with_hours":"0:29:40","description":"Use `scale_width_size_continuous` from the `ggraph` packge to adjust the size of the points in the `network diagram`.","functions":"scale_edge_size_continuous","packages":"ggraph","timestamp_sec":1780},{"timestamp_with_hours":"0:35:25","description":"Within `summarize` use `mean(n_slaves_arrived, na.rm = TRUE) * n())` to come up with an estimated total numer of slaves since 49% of the data is missing.","functions":"summarize | mean","packages":"dplyr","timestamp_sec":2125},{"timestamp_with_hours":"0:48:20","description":"Create a faceted stacked percent barplot (spinogram) showing the percentage of `black_free`, `black_slaves`, `white`, and `other` for each region.","functions":"geom_col | facet_wrap","packages":"ggplot2","timestamp_sec":2900},{"timestamp_with_hours":"0:51:00","description":"Use the `wordcloud` package to create a `wordcloud` with the `african_names` dataset. David hsa issues with the `wordcloud` package and opts to use `ggwordcloud` instead. Also, mentions the `worldcloud2` package.","functions":"wordcloud | geom_text_wordcloud","packages":"wordcloud | ggwordcloud","timestamp_sec":3060},{"timestamp_with_hours":"0:55:20","description":"Use `fct_recode` from the `forcats` package to change the factor levels for the `gender` variable while renaming `Man = \"Boy\"` and `Woman = \"Girl\"`","functions":"fct_recode","packages":"forcats","timestamp_sec":3320},{"timestamp_with_hours":"0:57:20","description":"Use `reorder_within` from the `tidytext` package to reorder the `geom_col` by `n` within `gender` variable for each facet panel.","functions":"reorder_within","packages":"tidytext","timestamp_sec":3440},{"timestamp_with_hours":"0:59:00","description":"Summary of screencast.","timestamp_sec":3540}]</script>
+```{=html}
+<div id="topics">
+  <div class="topic">
+    <h3 id="ts-415">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(415, this)">0:6:55</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">fct_lump</span></div><div><span class="badge-packages badge bg-primary">forcats</span></div></div>
+    <div class="topic_description">
+      <p>Use <code>fct_lump</code> from the <code>forcats</code> package to lump together all the factor levels in <code>ship_name</code> except the <code>n</code> most frequent. Used within <code>filter</code> with <code>! = &quot;Other&quot;</code> to remove <code>other</code>.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-480">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(480, this)">0:8:00</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">fct_reorder</span></div><div><span class="badge-packages badge bg-primary">forcats</span></div></div>
+    <div class="topic_description">
+      <p>use <code>fct_reorder</code> from the <code>forcats</code> package to reorder the <code>ship_name</code> factor levels y sorting along the <code>n_slaves_arrived</code> variable.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-620">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(620, this)">0:10:20</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">geom_vline</span></div><div><span class="badge-packages badge bg-primary">ggplot2</span></div></div>
+    <div class="topic_description">
+      <p>Add <code>geom_vline</code> to <code>geom_histogram</code> to annotate the plot with a vertical line indicating the Revolutionary War and the Civil War.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-780">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(780, this)">0:13:00</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">count</span></div><div><span class="badge-packages badge bg-primary">dplyr</span></div></div>
+    <div class="topic_description">
+      <p>Use <code>truncated division</code> within <code>count</code> to create a new <code>decade</code> variable equal to <code>10 * (year_arrival %/% 10))</code></p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1040">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1040, this)">0:17:20</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">str_trunc</span></div><div><span class="badge-packages badge bg-primary">stringr</span></div></div>
+    <div class="topic_description">
+      <p>Use <code>str_trunc</code> from the <code>stringr</code> package to truncate the titles in each facet panel accounting for the slave ports with really long names.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1085">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1085, this)">0:18:05</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">theme</span></div><div><span class="badge-packages badge bg-primary">ggplot2</span></div></div>
+    <div class="topic_description">
+      <p>Another option for accounting for long titles in the facet panels is to use <code>strip.text</code> within <code>theme</code> with <code>element_text(size = 6)</code></p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1615">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1615, this)">0:26:55</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">ggraph</span><span class="badge-functions badge bg-info">geom_edge_link</span><span class="badge-functions badge bg-info">geom_node_point</span><span class="badge-functions badge bg-info">geom_node_text</span></div><div><span class="badge-packages badge bg-primary">ggraph</span></div></div>
+    <div class="topic_description">
+      <p>Use the <code>ggraph</code> package to create a <code>network diagram</code> using <code>port_origin</code> and <code>port_arrival</code>.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1745">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1745, this)">0:29:05</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">arrow</span></div><div><span class="badge-packages badge bg-primary">grid</span></div></div>
+    <div class="topic_description">
+      <p>Use <code>arrow</code> from the <code>grid</code> package to add directional arrows to the points in the <code>network diagram</code>.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1780">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1780, this)">0:29:40</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">scale_edge_size_continuous</span></div><div><span class="badge-packages badge bg-primary">ggraph</span></div></div>
+    <div class="topic_description">
+      <p>Use <code>scale_width_size_continuous</code> from the <code>ggraph</code> packge to adjust the size of the points in the <code>network diagram</code>.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2125">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2125, this)">0:35:25</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">summarize</span><span class="badge-functions badge bg-info">mean</span></div><div><span class="badge-packages badge bg-primary">dplyr</span></div></div>
+    <div class="topic_description">
+      <p>Within <code>summarize</code> use <code>mean(n_slaves_arrived, na.rm = TRUE) * n())</code> to come up with an estimated total numer of slaves since 49% of the data is missing.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2900">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2900, this)">0:48:20</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">geom_col</span><span class="badge-functions badge bg-info">facet_wrap</span></div><div><span class="badge-packages badge bg-primary">ggplot2</span></div></div>
+    <div class="topic_description">
+      <p>Create a faceted stacked percent barplot (spinogram) showing the percentage of <code>black_free</code>, <code>black_slaves</code>, <code>white</code>, and <code>other</code> for each region.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-3060">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(3060, this)">0:51:00</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">wordcloud</span><span class="badge-functions badge bg-info">geom_text_wordcloud</span></div><div><span class="badge-packages badge bg-primary">wordcloud</span><span class="badge-packages badge bg-primary">ggwordcloud</span></div></div>
+    <div class="topic_description">
+      <p>Use the <code>wordcloud</code> package to create a <code>wordcloud</code> with the <code>african_names</code> dataset. David hsa issues with the <code>wordcloud</code> package and opts to use <code>ggwordcloud</code> instead. Also, mentions the <code>worldcloud2</code> package.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-3320">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(3320, this)">0:55:20</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">fct_recode</span></div><div><span class="badge-packages badge bg-primary">forcats</span></div></div>
+    <div class="topic_description">
+      <p>Use <code>fct_recode</code> from the <code>forcats</code> package to change the factor levels for the <code>gender</code> variable while renaming <code>Man = &quot;Boy&quot;</code> and <code>Woman = &quot;Girl&quot;</code></p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-3440">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(3440, this)">0:57:20</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">reorder_within</span></div><div><span class="badge-packages badge bg-primary">tidytext</span></div></div>
+    <div class="topic_description">
+      <p>Use <code>reorder_within</code> from the <code>tidytext</code> package to reorder the <code>geom_col</code> by <code>n</code> within <code>gender</code> variable for each facet panel.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-3540">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(3540, this)">0:59:00</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Summary of screencast.</p>
+
+    </div>
+  </div>
+</div>
+```
+     
+<script>
+// 2. This code loads the IFrame Player API code asynchronously.
+var tag = document.createElement("script");
+
+tag.src = "https://www.youtube.com/iframe_api";
+var firstScriptTag = document.getElementsByTagName("script")[0];
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+// 3. This function creates an <iframe> (and YouTube player)
+//    after the API code downloads.
+var videoId = document.getElementById("yt-player").dataset.videoId;
+var player;
+function onYouTubeIframeAPIReady() {
+  player = new YT.Player("yt-player", {
+    height: "486",
+    width: "864",
+    videoId: videoId,
+    playerVars: {
+      "playsinline": 1
+    },
+    events: {
+      onStateChange: function(event) {
+        if (event.data == YT.PlayerState.PLAYING) {
+          followTimestamps()
+        }
+      }
+    }
+  });
+}
+
+function playerSkipToTimestamp(seconds, tsElement) {
+  player.seekTo(seconds, true)
+  tsElement.scrollIntoView()
+  document.getElementById("screencast").scrollIntoView()
+}
+
+const timestamps = Array.from(document.querySelectorAll('.topic h3[id^="ts-"]'))
+  .map(el => el.id.replace('ts-', ''))
+
+function followTimestamps() {
+  if (player.getPlayerState() !== 1) {
+    return
+  }
+  const currentTime = `${Math.floor(player.getCurrentTime())}`
+  if (timestamps.includes(currentTime)) {
+    const el = document.getElementById(`ts-${currentTime}`)
+    if (el) {
+      el.scrollIntoView()
+      document.getElementById("screencast").scrollIntoView()
+    }
+  }
+  setTimeout(followTimestamps, 1000)
+}
+</script>

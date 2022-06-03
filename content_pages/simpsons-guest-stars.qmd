@@ -5,6 +5,8 @@ description: |
   Text mining (tidytext package)
 date: 2019-08-29
 date-format: long
+aliases:
+  - "Simpsons Guest Stars.html"
 ---
 
 Notable topics: Text mining (tidytext package)
@@ -15,10 +17,228 @@ Timestamps by: Alex Cookson
 
 [View code](https://github.com/dgrtwo/data-screencasts/blob/master/simpsons-guests.Rmd)
 
-## Full screencast
+## Screencast
 
-<iframe class="video" src="https://www.youtube.com/embed/EYuuAGDeGrQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div id="yt-player" data-video-id="EYuuAGDeGrQ"></div>
 
 ## Timestamps
 
-<script id="timestamps" type="application-json">[{"timestamp_with_hours":"0:4:15","description":"Using str_detect function to find guests that played themselves","functions":"str_detect","timestamp_sec":255},{"timestamp_with_hours":"0:7:55","description":"Using separate_rows function and regex to get delimited values onto different rows (e.g., \"Edna Krabappel; Ms. Melon\" gets split into two rows)","functions":"separate_rows","timestamp_sec":475},{"timestamp_with_hours":"0:9:55","description":"Using parse_number function to convert a numeric variable coded as character to a proper numeric variable","functions":"parse_number","timestamp_sec":595},{"timestamp_with_hours":"0:14:45","description":"Downloading and importing supplementary dataset of dialogue","timestamp_sec":885},{"timestamp_with_hours":"0:16:10","description":"Using semi_join function to filter dataframe based on values that appear in another dataframe","functions":"semi_join","timestamp_sec":970},{"timestamp_with_hours":"0:18:05","description":"Using anti_join function to check which values in a dataframe do not appear in another dataframe","functions":"anti_join","timestamp_sec":1085},{"timestamp_with_hours":"0:20:50","description":"Using ifelse function to recode a single value with another (i.e., \"Edna Krapabbel\" becomes \"Edna Krabappel-Flanders\")","functions":"ifelse","timestamp_sec":1250},{"timestamp_with_hours":"0:26:20","description":"Explaining the goal of all the data cleaning steps","timestamp_sec":1580},{"timestamp_with_hours":"0:31:25","description":"Using sample function to get an example line for each character","functions":"sample","timestamp_sec":1885},{"timestamp_with_hours":"0:33:20","description":"Setting geom_histogram function's binwidth and center arguments to get specific bin sizes","functions":"geom_histogram","timestamp_sec":2000},{"timestamp_with_hours":"0:37:25","description":"Using unnest_tokens and anti_join functions from tidytext package to split dialogue into individual words and remove stop words (e.g., \"the\", \"or\", \"and\")","functions":"unnest_tokens | anti_join","packages":"tidytext","timestamp_sec":2245},{"timestamp_with_hours":"0:38:55","description":"Using bind_tf_idf function from tidytext package to get the TF-IDF (term frequency-inverse document frequency) of individual words","functions":"bind_tf_idf","packages":"tidytext","timestamp_sec":2335},{"timestamp_with_hours":"0:42:50","description":"Using top_n function to get the top 1 TF-IDF value for each role","functions":"top_n","timestamp_sec":2570},{"timestamp_with_hours":"0:44:05","description":"Using paste0 function to combine two character variables (e.g., \"Groundskeeper Willie\" and \"ach\" (separate variables) become \"Groundskeeper Willie: ach\")","functions":"paste0","timestamp_sec":2645},{"timestamp_with_hours":"0:48:10","description":"Explanation of what TF-IDF (text frequency-inverse document frequency) tells us and how it is a \"catchphrase detector\"","timestamp_sec":2890},{"timestamp_with_hours":"0:56:40","description":"Summary of screencast","timestamp_sec":3400}]</script>
+```{=html}
+<div id="topics">
+  <div class="topic">
+    <h3 id="ts-255">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(255, this)">0:4:15</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">str_detect</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using str_detect function to find guests that played themselves</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-475">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(475, this)">0:7:55</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">separate_rows</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using separate_rows function and regex to get delimited values onto different rows (e.g., &quot;Edna Krabappel; Ms. Melon&quot; gets split into two rows)</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-595">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(595, this)">0:9:55</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">parse_number</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using parse_number function to convert a numeric variable coded as character to a proper numeric variable</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-885">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(885, this)">0:14:45</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Downloading and importing supplementary dataset of dialogue</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-970">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(970, this)">0:16:10</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">semi_join</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using semi_join function to filter dataframe based on values that appear in another dataframe</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1085">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1085, this)">0:18:05</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">anti_join</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using anti_join function to check which values in a dataframe do not appear in another dataframe</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1250">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1250, this)">0:20:50</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">ifelse</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using ifelse function to recode a single value with another (i.e., &quot;Edna Krapabbel&quot; becomes &quot;Edna Krabappel-Flanders&quot;)</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1580">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1580, this)">0:26:20</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Explaining the goal of all the data cleaning steps</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1885">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1885, this)">0:31:25</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">sample</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using sample function to get an example line for each character</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2000">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2000, this)">0:33:20</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">geom_histogram</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Setting geom_histogram function's binwidth and center arguments to get specific bin sizes</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2245">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2245, this)">0:37:25</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">unnest_tokens</span><span class="badge-functions badge bg-info">anti_join</span></div><div><span class="badge-packages badge bg-primary">tidytext</span></div></div>
+    <div class="topic_description">
+      <p>Using unnest_tokens and anti_join functions from tidytext package to split dialogue into individual words and remove stop words (e.g., &quot;the&quot;, &quot;or&quot;, &quot;and&quot;)</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2335">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2335, this)">0:38:55</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">bind_tf_idf</span></div><div><span class="badge-packages badge bg-primary">tidytext</span></div></div>
+    <div class="topic_description">
+      <p>Using bind_tf_idf function from tidytext package to get the TF-IDF (term frequency-inverse document frequency) of individual words</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2570">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2570, this)">0:42:50</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">top_n</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using top_n function to get the top 1 TF-IDF value for each role</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2645">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2645, this)">0:44:05</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">paste0</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using paste0 function to combine two character variables (e.g., &quot;Groundskeeper Willie&quot; and &quot;ach&quot; (separate variables) become &quot;Groundskeeper Willie: ach&quot;)</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2890">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2890, this)">0:48:10</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Explanation of what TF-IDF (text frequency-inverse document frequency) tells us and how it is a &quot;catchphrase detector&quot;</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-3400">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(3400, this)">0:56:40</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Summary of screencast</p>
+
+    </div>
+  </div>
+</div>
+```
+     
+<script>
+// 2. This code loads the IFrame Player API code asynchronously.
+var tag = document.createElement("script");
+
+tag.src = "https://www.youtube.com/iframe_api";
+var firstScriptTag = document.getElementsByTagName("script")[0];
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+// 3. This function creates an <iframe> (and YouTube player)
+//    after the API code downloads.
+var videoId = document.getElementById("yt-player").dataset.videoId;
+var player;
+function onYouTubeIframeAPIReady() {
+  player = new YT.Player("yt-player", {
+    height: "486",
+    width: "864",
+    videoId: videoId,
+    playerVars: {
+      "playsinline": 1
+    },
+    events: {
+      onStateChange: function(event) {
+        if (event.data == YT.PlayerState.PLAYING) {
+          followTimestamps()
+        }
+      }
+    }
+  });
+}
+
+function playerSkipToTimestamp(seconds, tsElement) {
+  player.seekTo(seconds, true)
+  tsElement.scrollIntoView()
+  document.getElementById("screencast").scrollIntoView()
+}
+
+const timestamps = Array.from(document.querySelectorAll('.topic h3[id^="ts-"]'))
+  .map(el => el.id.replace('ts-', ''))
+
+function followTimestamps() {
+  if (player.getPlayerState() !== 1) {
+    return
+  }
+  const currentTime = `${Math.floor(player.getCurrentTime())}`
+  if (timestamps.includes(currentTime)) {
+    const el = document.getElementById(`ts-${currentTime}`)
+    if (el) {
+      el.scrollIntoView()
+      document.getElementById("screencast").scrollIntoView()
+    }
+  }
+  setTimeout(followTimestamps, 1000)
+}
+</script>

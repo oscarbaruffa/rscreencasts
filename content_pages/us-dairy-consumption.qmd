@@ -5,6 +5,8 @@ description: |
   Time series analysis, Forecasting (sweep package)
 date: 2019-01-28
 date-format: long
+aliases:
+  - "US Dairy Consumption.html"
 ---
 
 Notable topics: Time series analysis, Forecasting (sweep package)
@@ -15,10 +17,348 @@ Timestamps by: Alex Cookson
 
 [View code](https://github.com/dgrtwo/data-screencasts/blob/master/us-dairy.Rmd)
 
-## Full screencast
+## Screencast
 
-<iframe class="video" src="https://www.youtube.com/embed/13iG_HkEPVc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div id="yt-player" data-video-id="13iG_HkEPVc"></div>
 
 ## Timestamps
 
-<script id="timestamps" type="application-json">[{"timestamp_with_hours":"0:2:50","description":"Identifying the need for a gather step","timestamp_sec":170},{"timestamp_with_hours":"0:4:40","description":"Changing snake case to title case using str_to_title and str_replace_all functions","functions":"str_to_title | str_replace_all","timestamp_sec":280},{"timestamp_with_hours":"0:6:20","description":"Identifying need for separating categories into major and minor categories (e.g., \"Cheese Other\" can be divided into \"Cheese\" and \"Other\")","timestamp_sec":380},{"timestamp_with_hours":"0:7:10","description":"Using separate function to split categories into major and minor categories (good explanation of \"extra\" argument, which merges additional separations into one field)","functions":"separate","timestamp_sec":430},{"timestamp_with_hours":"0:8:20","description":"Using coalesce function to deal with NAs resulting from above step","functions":"coalesce","timestamp_sec":500},{"timestamp_with_hours":"0:10:30","description":"Dealing with graph of minor category that is linked to multiple major categories (\"Other\" linked to \"Cheese\" and \"Frozen\")","timestamp_sec":630},{"timestamp_with_hours":"0:13:10","description":"Introducing fct_lump function as an approach to work with many categories","functions":"fct_lump","timestamp_sec":790},{"timestamp_with_hours":"0:14:50","description":"Introducing facetting (facet_wrap function) as second alternative to working with many categories","functions":"facet_wrap","timestamp_sec":890},{"timestamp_with_hours":"0:15:50","description":"Dealing with \"Other\" category having two parts to it by using ifelse function in the cleaning step (e.g., go from \"Other\" to \"Other Cheese\")","timestamp_sec":950},{"timestamp_with_hours":"0:19:45","description":"Looking at page for the sweep package","packages":"sweep","timestamp_sec":1185},{"timestamp_with_hours":"0:21:20","description":"Using tk_ts function to coerce a tibble to a timeseries","functions":"tk_ts","packages":"sweep","timestamp_sec":1280},{"timestamp_with_hours":"0:22:10","description":"Turning year column (numeric) into a date by adding number of years to Jan 1, 0001","timestamp_sec":1330},{"timestamp_with_hours":"0:26:00","description":"Nesting time series object into each combination of category and product","timestamp_sec":1560},{"timestamp_with_hours":"0:27:50","description":"Applying ETS (Error, Trend, Seasonal) model to each time series","timestamp_sec":1670},{"timestamp_with_hours":"0:28:10","description":"Using sw_glance function (sweep package's version of glance function) to pull out model parameters from model field created in above step","functions":"sw_glance","packages":"sweep","timestamp_sec":1690},{"timestamp_with_hours":"0:29:45","description":"Using sw_augment function to append fitted values and residuals from the model to the original data","functions":"sw_augment","timestamp_sec":1785},{"timestamp_with_hours":"0:30:50","description":"Visualising actual and fitted values on the same graph to get a look at the ETS model","timestamp_sec":1850},{"timestamp_with_hours":"0:32:10","description":"Using Arima function (note the capital A) as alternative to ETS (not sure what difference is between arima and Arima)","functions":"Arima","timestamp_sec":1930},{"timestamp_with_hours":"0:35:00","description":"Forecasting into the future using an ETS model using various functions: unnest, sw_sweep, forecast","functions":"sw_sweep | forecast","packages":"sweep","timestamp_sec":2100},{"timestamp_with_hours":"0:37:45","description":"Using geom_ribbon function to add confidence bounds to forecast","functions":"geom_ribbon","timestamp_sec":2265},{"timestamp_with_hours":"0:40:20","description":"Forecasting using auto-ARIMA (instead of ETS)","timestamp_sec":2420},{"timestamp_with_hours":"0:40:55","description":"Applying two forecasting methods at the same time (auto-ARIMA and ETS) using the crossing function","functions":"crossing","timestamp_sec":2455},{"timestamp_with_hours":"0:41:55","description":"Quick test of how invoke function works (used to call a function easily, e.g., when it is a character string instead of called directly)","functions":"invoke","timestamp_sec":2515},{"timestamp_with_hours":"0:47:35","description":"Removing only one part of legend (line type of solid or dashed) using scale_linetype_discrete function","functions":"scale_linetype_discrete","timestamp_sec":2855},{"timestamp_with_hours":"0:51:25","description":"Using gather function to clean up new dataset","functions":"gather","timestamp_sec":3085},{"timestamp_with_hours":"0:52:05","description":"Using fct_recode to fix a typo in a categorical variable","functions":"fct_recode","timestamp_sec":3125},{"timestamp_with_hours":"0:56:00","description":"Copy-pasting previous forecasting code to cheese and reviewing any changes needed","timestamp_sec":3360},{"timestamp_with_hours":"0:57:20","description":"Discussing alternative approach: creating interactive visualisation using shiny package to do direct comparisons","packages":"shiny","timestamp_sec":3440}]</script>
+```{=html}
+<div id="topics">
+  <div class="topic">
+    <h3 id="ts-170">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(170, this)">0:2:50</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Identifying the need for a gather step</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-280">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(280, this)">0:4:40</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">str_to_title</span><span class="badge-functions badge bg-info">str_replace_all</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Changing snake case to title case using str_to_title and str_replace_all functions</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-380">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(380, this)">0:6:20</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Identifying need for separating categories into major and minor categories (e.g., &quot;Cheese Other&quot; can be divided into &quot;Cheese&quot; and &quot;Other&quot;)</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-430">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(430, this)">0:7:10</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">separate</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using separate function to split categories into major and minor categories (good explanation of &quot;extra&quot; argument, which merges additional separations into one field)</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-500">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(500, this)">0:8:20</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">coalesce</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using coalesce function to deal with NAs resulting from above step</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-630">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(630, this)">0:10:30</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Dealing with graph of minor category that is linked to multiple major categories (&quot;Other&quot; linked to &quot;Cheese&quot; and &quot;Frozen&quot;)</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-790">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(790, this)">0:13:10</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">fct_lump</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Introducing fct_lump function as an approach to work with many categories</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-890">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(890, this)">0:14:50</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">facet_wrap</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Introducing facetting (facet_wrap function) as second alternative to working with many categories</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-950">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(950, this)">0:15:50</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Dealing with &quot;Other&quot; category having two parts to it by using ifelse function in the cleaning step (e.g., go from &quot;Other&quot; to &quot;Other Cheese&quot;)</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1185">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1185, this)">0:19:45</button>
+    </h3>
+    <div class="topic_badges"><div></div><div><span class="badge-packages badge bg-primary">sweep</span></div></div>
+    <div class="topic_description">
+      <p>Looking at page for the sweep package</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1280">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1280, this)">0:21:20</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">tk_ts</span></div><div><span class="badge-packages badge bg-primary">sweep</span></div></div>
+    <div class="topic_description">
+      <p>Using tk_ts function to coerce a tibble to a timeseries</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1330">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1330, this)">0:22:10</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Turning year column (numeric) into a date by adding number of years to Jan 1, 0001</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1560">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1560, this)">0:26:00</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Nesting time series object into each combination of category and product</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1670">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1670, this)">0:27:50</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Applying ETS (Error, Trend, Seasonal) model to each time series</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1690">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1690, this)">0:28:10</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">sw_glance</span></div><div><span class="badge-packages badge bg-primary">sweep</span></div></div>
+    <div class="topic_description">
+      <p>Using sw_glance function (sweep package's version of glance function) to pull out model parameters from model field created in above step</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1785">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1785, this)">0:29:45</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">sw_augment</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using sw_augment function to append fitted values and residuals from the model to the original data</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1850">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1850, this)">0:30:50</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Visualising actual and fitted values on the same graph to get a look at the ETS model</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1930">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1930, this)">0:32:10</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">Arima</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using Arima function (note the capital A) as alternative to ETS (not sure what difference is between arima and Arima)</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2100">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2100, this)">0:35:00</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">sw_sweep</span><span class="badge-functions badge bg-info">forecast</span></div><div><span class="badge-packages badge bg-primary">sweep</span></div></div>
+    <div class="topic_description">
+      <p>Forecasting into the future using an ETS model using various functions: unnest, sw_sweep, forecast</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2265">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2265, this)">0:37:45</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">geom_ribbon</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using geom_ribbon function to add confidence bounds to forecast</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2420">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2420, this)">0:40:20</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Forecasting using auto-ARIMA (instead of ETS)</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2455">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2455, this)">0:40:55</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">crossing</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Applying two forecasting methods at the same time (auto-ARIMA and ETS) using the crossing function</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2515">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2515, this)">0:41:55</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">invoke</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Quick test of how invoke function works (used to call a function easily, e.g., when it is a character string instead of called directly)</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2855">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2855, this)">0:47:35</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">scale_linetype_discrete</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Removing only one part of legend (line type of solid or dashed) using scale_linetype_discrete function</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-3085">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(3085, this)">0:51:25</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">gather</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using gather function to clean up new dataset</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-3125">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(3125, this)">0:52:05</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">fct_recode</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using fct_recode to fix a typo in a categorical variable</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-3360">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(3360, this)">0:56:00</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Copy-pasting previous forecasting code to cheese and reviewing any changes needed</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-3440">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(3440, this)">0:57:20</button>
+    </h3>
+    <div class="topic_badges"><div></div><div><span class="badge-packages badge bg-primary">shiny</span></div></div>
+    <div class="topic_description">
+      <p>Discussing alternative approach: creating interactive visualisation using shiny package to do direct comparisons</p>
+
+    </div>
+  </div>
+</div>
+```
+     
+<script>
+// 2. This code loads the IFrame Player API code asynchronously.
+var tag = document.createElement("script");
+
+tag.src = "https://www.youtube.com/iframe_api";
+var firstScriptTag = document.getElementsByTagName("script")[0];
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+// 3. This function creates an <iframe> (and YouTube player)
+//    after the API code downloads.
+var videoId = document.getElementById("yt-player").dataset.videoId;
+var player;
+function onYouTubeIframeAPIReady() {
+  player = new YT.Player("yt-player", {
+    height: "486",
+    width: "864",
+    videoId: videoId,
+    playerVars: {
+      "playsinline": 1
+    },
+    events: {
+      onStateChange: function(event) {
+        if (event.data == YT.PlayerState.PLAYING) {
+          followTimestamps()
+        }
+      }
+    }
+  });
+}
+
+function playerSkipToTimestamp(seconds, tsElement) {
+  player.seekTo(seconds, true)
+  tsElement.scrollIntoView()
+  document.getElementById("screencast").scrollIntoView()
+}
+
+const timestamps = Array.from(document.querySelectorAll('.topic h3[id^="ts-"]'))
+  .map(el => el.id.replace('ts-', ''))
+
+function followTimestamps() {
+  if (player.getPlayerState() !== 1) {
+    return
+  }
+  const currentTime = `${Math.floor(player.getCurrentTime())}`
+  if (timestamps.includes(currentTime)) {
+    const el = document.getElementById(`ts-${currentTime}`)
+    if (el) {
+      el.scrollIntoView()
+      document.getElementById("screencast").scrollIntoView()
+    }
+  }
+  setTimeout(followTimestamps, 1000)
+}
+</script>

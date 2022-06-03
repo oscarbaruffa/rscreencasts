@@ -5,6 +5,8 @@ description: |
   Text mining (tidytext package), LASSO regression (glmnet package)
 date: 2020-03-15
 date-format: long
+aliases:
+  - "The Office.html"
 ---
 
 Notable topics: Text mining (tidytext package), LASSO regression (glmnet package)
@@ -15,10 +17,368 @@ Timestamps by: Alex Cookson
 
 [View code](https://github.com/dgrtwo/data-screencasts/blob/master/office-transcripts.Rmd)
 
-## Full screencast
+## Screencast
 
-<iframe class="video" src="https://www.youtube.com/embed/_IvAubTDQME" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div id="yt-player" data-video-id="_IvAubTDQME"></div>
 
 ## Timestamps
 
-<script id="timestamps" type="application-json">[{"timestamp_with_hours":"0:1:45","description":"Overview of transcripts data","timestamp_sec":105},{"timestamp_with_hours":"0:2:25","description":"Overview of ratintgs data","timestamp_sec":145},{"timestamp_with_hours":"0:4:10","description":"Using fct_inorder function to create a factor with levels based on when they appear in the dataframe","functions":"fct_inorder","timestamp_sec":250},{"timestamp_with_hours":"0:4:50","description":"Using theme and element_text to turn axis labels 90 degrees","functions":"theme | element_text","timestamp_sec":290},{"timestamp_with_hours":"0:5:55","description":"Creating a line graph with points at each observation (using geom_line and geom_point)","functions":"geom_line | geom_point","timestamp_sec":355},{"timestamp_with_hours":"0:7:10","description":"Adding text labels to very high and very low-rated episodes","timestamp_sec":430},{"timestamp_with_hours":"0:8:50","description":"Using theme function's panel.grid.major argument to get rid of some extraneous gridlines, using element_blank function","functions":"theme | element_blank","timestamp_sec":530},{"timestamp_with_hours":"0:10:15","description":"Using geom_text_repel from ggrepel package to experiment with different labelling (before abandoning this approach)","functions":"geom_text_repel","packages":"ggrepel","timestamp_sec":615},{"timestamp_with_hours":"0:12:45","description":"Using row_number function to add episode_number field to make graphing easier","functions":"row_number","timestamp_sec":765},{"timestamp_with_hours":"0:14:05","description":"Explanation of why number of ratings (votes) is relevant to interpreting the graph","timestamp_sec":845},{"timestamp_with_hours":"0:19:10","description":"Using unnest_tokens function from tidytext package to split full-sentence text field to individual words","functions":"unnest_tokens","packages":"tidytext","timestamp_sec":1150},{"timestamp_with_hours":"0:20:10","description":"Using anti_join function to filter out stop words (e.g., and, or, the)","functions":"anti_join","timestamp_sec":1210},{"timestamp_with_hours":"0:22:25","description":"Using str_remove_all function to get rid of quotation marks from character names (quirks that might pop up when parsing)","functions":"str_remove_all","timestamp_sec":1345},{"timestamp_with_hours":"0:25:40","description":"Asking, \"Are there words that are specific to certain characters?\" (using bind_tf_idf function)","functions":"bind_tf_idf","packages":"tidytext","timestamp_sec":1540},{"timestamp_with_hours":"0:32:25","description":"Using reorder_within function to re-order factors within a grouping (when a term appears in multiple groups) and scale_x_reordered function to graph","functions":"reorder_within | scale_x_reordered","timestamp_sec":1945},{"timestamp_with_hours":"0:37:05","description":"Asking, \"What effects the popularity of an episode?\"","timestamp_sec":2225},{"timestamp_with_hours":"0:37:55","description":"Dealing with inconsistent episode names between datasets","timestamp_sec":2275},{"timestamp_with_hours":"0:41:25","description":"Using str_remove function and some regex to remove \"(Parts 1&2)\" from some episode names","functions":"str_remove","timestamp_sec":2485},{"timestamp_with_hours":"0:42:45","description":"Using str_to_lower function to further align episode names (addresses inconsistent capitalization)","functions":"str_to_lower","timestamp_sec":2565},{"timestamp_with_hours":"0:52:20","description":"Setting up dataframe of features for a LASSO regression, with director and writer each being a feature with its own line","timestamp_sec":3140},{"timestamp_with_hours":"0:52:55","description":"Using separate_rows function to separate episodes with multiple writers so that each has their own row","functions":"separate_rows","timestamp_sec":3175},{"timestamp_with_hours":"0:58:25","description":"Using log2 function to transform number of lines fields to something more useable (since it is log-normally distributed)","functions":"log2","timestamp_sec":3505},{"timestamp_with_hours":"1:00:20","description":"Using cast_sparse function from tidytext package to create a sparse matrix of features by episode","functions":"cast_sparse","packages":"tidytext","timestamp_sec":3620},{"timestamp_with_hours":"1:01:55","description":"Using semi_join function as a \"filtering join\"","functions":"semi_join","timestamp_sec":3715},{"timestamp_with_hours":"1:02:30","description":"Setting up dataframes (after we have our features) to run LASSO regression","timestamp_sec":3750},{"timestamp_with_hours":"1:03:50","description":"Using cv.glmnet function from glmnet package to run a cross-validated LASSO regression","functions":"cv.glmnet","packages":"glmnet","timestamp_sec":3830},{"timestamp_with_hours":"1:05:35","description":"Explanation of how to pick a lambda penalty parameter","timestamp_sec":3935},{"timestamp_with_hours":"1:05:55","description":"Explanation of output of LASSO model","timestamp_sec":3955},{"timestamp_with_hours":"1:09:25","description":"Outline of why David likes regularized linear models (which is what LASSO is)","timestamp_sec":4165},{"timestamp_with_hours":"1:10:55","description":"Summary of screencast","timestamp_sec":4255}]</script>
+```{=html}
+<div id="topics">
+  <div class="topic">
+    <h3 id="ts-105">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(105, this)">0:1:45</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Overview of transcripts data</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-145">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(145, this)">0:2:25</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Overview of ratintgs data</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-250">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(250, this)">0:4:10</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">fct_inorder</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using fct_inorder function to create a factor with levels based on when they appear in the dataframe</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-290">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(290, this)">0:4:50</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">theme</span><span class="badge-functions badge bg-info">element_text</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using theme and element_text to turn axis labels 90 degrees</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-355">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(355, this)">0:5:55</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">geom_line</span><span class="badge-functions badge bg-info">geom_point</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Creating a line graph with points at each observation (using geom_line and geom_point)</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-430">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(430, this)">0:7:10</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Adding text labels to very high and very low-rated episodes</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-530">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(530, this)">0:8:50</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">theme</span><span class="badge-functions badge bg-info">element_blank</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using theme function's panel.grid.major argument to get rid of some extraneous gridlines, using element_blank function</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-615">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(615, this)">0:10:15</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">geom_text_repel</span></div><div><span class="badge-packages badge bg-primary">ggrepel</span></div></div>
+    <div class="topic_description">
+      <p>Using geom_text_repel from ggrepel package to experiment with different labelling (before abandoning this approach)</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-765">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(765, this)">0:12:45</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">row_number</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using row_number function to add episode_number field to make graphing easier</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-845">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(845, this)">0:14:05</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Explanation of why number of ratings (votes) is relevant to interpreting the graph</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1150">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1150, this)">0:19:10</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">unnest_tokens</span></div><div><span class="badge-packages badge bg-primary">tidytext</span></div></div>
+    <div class="topic_description">
+      <p>Using unnest_tokens function from tidytext package to split full-sentence text field to individual words</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1210">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1210, this)">0:20:10</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">anti_join</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using anti_join function to filter out stop words (e.g., and, or, the)</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1345">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1345, this)">0:22:25</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">str_remove_all</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using str_remove_all function to get rid of quotation marks from character names (quirks that might pop up when parsing)</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1540">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1540, this)">0:25:40</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">bind_tf_idf</span></div><div><span class="badge-packages badge bg-primary">tidytext</span></div></div>
+    <div class="topic_description">
+      <p>Asking, &quot;Are there words that are specific to certain characters?&quot; (using bind_tf_idf function)</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1945">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1945, this)">0:32:25</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">reorder_within</span><span class="badge-functions badge bg-info">scale_x_reordered</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using reorder_within function to re-order factors within a grouping (when a term appears in multiple groups) and scale_x_reordered function to graph</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2225">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2225, this)">0:37:05</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Asking, &quot;What effects the popularity of an episode?&quot;</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2275">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2275, this)">0:37:55</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Dealing with inconsistent episode names between datasets</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2485">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2485, this)">0:41:25</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">str_remove</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using str_remove function and some regex to remove &quot;(Parts 1&amp;2)&quot; from some episode names</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2565">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2565, this)">0:42:45</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">str_to_lower</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using str_to_lower function to further align episode names (addresses inconsistent capitalization)</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-3140">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(3140, this)">0:52:20</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Setting up dataframe of features for a LASSO regression, with director and writer each being a feature with its own line</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-3175">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(3175, this)">0:52:55</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">separate_rows</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using separate_rows function to separate episodes with multiple writers so that each has their own row</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-3505">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(3505, this)">0:58:25</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">log2</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using log2 function to transform number of lines fields to something more useable (since it is log-normally distributed)</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-3620">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(3620, this)">1:00:20</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">cast_sparse</span></div><div><span class="badge-packages badge bg-primary">tidytext</span></div></div>
+    <div class="topic_description">
+      <p>Using cast_sparse function from tidytext package to create a sparse matrix of features by episode</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-3715">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(3715, this)">1:01:55</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">semi_join</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using semi_join function as a &quot;filtering join&quot;</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-3750">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(3750, this)">1:02:30</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Setting up dataframes (after we have our features) to run LASSO regression</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-3830">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(3830, this)">1:03:50</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">cv.glmnet</span></div><div><span class="badge-packages badge bg-primary">glmnet</span></div></div>
+    <div class="topic_description">
+      <p>Using cv.glmnet function from glmnet package to run a cross-validated LASSO regression</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-3935">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(3935, this)">1:05:35</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Explanation of how to pick a lambda penalty parameter</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-3955">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(3955, this)">1:05:55</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Explanation of output of LASSO model</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-4165">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(4165, this)">1:09:25</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Outline of why David likes regularized linear models (which is what LASSO is)</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-4255">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(4255, this)">1:10:55</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Summary of screencast</p>
+
+    </div>
+  </div>
+</div>
+```
+     
+<script>
+// 2. This code loads the IFrame Player API code asynchronously.
+var tag = document.createElement("script");
+
+tag.src = "https://www.youtube.com/iframe_api";
+var firstScriptTag = document.getElementsByTagName("script")[0];
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+// 3. This function creates an <iframe> (and YouTube player)
+//    after the API code downloads.
+var videoId = document.getElementById("yt-player").dataset.videoId;
+var player;
+function onYouTubeIframeAPIReady() {
+  player = new YT.Player("yt-player", {
+    height: "486",
+    width: "864",
+    videoId: videoId,
+    playerVars: {
+      "playsinline": 1
+    },
+    events: {
+      onStateChange: function(event) {
+        if (event.data == YT.PlayerState.PLAYING) {
+          followTimestamps()
+        }
+      }
+    }
+  });
+}
+
+function playerSkipToTimestamp(seconds, tsElement) {
+  player.seekTo(seconds, true)
+  tsElement.scrollIntoView()
+  document.getElementById("screencast").scrollIntoView()
+}
+
+const timestamps = Array.from(document.querySelectorAll('.topic h3[id^="ts-"]'))
+  .map(el => el.id.replace('ts-', ''))
+
+function followTimestamps() {
+  if (player.getPlayerState() !== 1) {
+    return
+  }
+  const currentTime = `${Math.floor(player.getCurrentTime())}`
+  if (timestamps.includes(currentTime)) {
+    const el = document.getElementById(`ts-${currentTime}`)
+    if (el) {
+      el.scrollIntoView()
+      document.getElementById("screencast").scrollIntoView()
+    }
+  }
+  setTimeout(followTimestamps, 1000)
+}
+</script>

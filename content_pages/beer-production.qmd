@@ -5,6 +5,8 @@ description: |
   tidymetrics package demonstration, Animated map (gganimate package)
 date: 2020-03-31
 date-format: long
+aliases:
+  - "Beer Production.html"
 ---
 
 Notable topics: tidymetrics package demonstration, Animated map (gganimate package)
@@ -15,10 +17,318 @@ Timestamps by: Alex Cookson
 
 [View code](https://github.com/dgrtwo/data-screencasts/blob/master/beer-production.Rmd)
 
-## Full screencast
+## Screencast
 
-<iframe class="video" src="https://www.youtube.com/embed/1R4X09w7tQ8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div id="yt-player" data-video-id="1R4X09w7tQ8"></div>
 
 ## Timestamps
 
-<script id="timestamps" type="application-json">[{"timestamp_with_hours":"0:4:25","description":"Asking, \"What ingredients are used in beer?\"","timestamp_sec":265},{"timestamp_with_hours":"0:4:40","description":"Using filter and max functions to look at the most recent period of time","functions":"filter | max","timestamp_sec":280},{"timestamp_with_hours":"0:7:25","description":"Using paste and ymd functions (ymd is from lubridate package) to convert year-month field into an date-formatted field","functions":"paste | ymd","timestamp_sec":445},{"timestamp_with_hours":"0:9:20","description":"Spotting potential missing or mis-parsed data","timestamp_sec":560},{"timestamp_with_hours":"0:13:50","description":"Introducing the tidymetrics framework","timestamp_sec":830},{"timestamp_with_hours":"0:14:45","description":"Using install_github function to install tidymetrics from GitHub","functions":"install_github","timestamp_sec":885},{"timestamp_with_hours":"0:15:25","description":"Using cross_by_dimensions function from tidymetrics package to get aggregations at different levels of multiple dimensions","functions":"cross_by_dimensions","packages":"tidymetrics","timestamp_sec":925},{"timestamp_with_hours":"0:18:10","description":"Using cross_by_periods function from tidymetrics package to also get aggregations for different intervals (e.g, month, quarter, year)","functions":"cross_by_periods","packages":"tidymetrics","timestamp_sec":1090},{"timestamp_with_hours":"0:22:00","description":"Using use_metrics_scaffold function from tidymetrics package to create framework for documenting dimensions in RMarkdown YAML header","functions":"use_metrics_scaffold","packages":"tidymetrics","timestamp_sec":1320},{"timestamp_with_hours":"0:24:00","description":"Using create_metrics function from tidymetrics package to save data as a tibble with useful metadata (good for visualizing interactively)","functions":"create_metrics","packages":"tidymetrics","timestamp_sec":1440},{"timestamp_with_hours":"0:25:15","description":"Using preview_metric function from shinymetrics package (still under development as of 2020-04-24) to demonstrate shinymetrics","functions":"preview_metrics","packages":"shinymetrics","timestamp_sec":1515},{"timestamp_with_hours":"0:27:35","description":"Succesfuly getting shinymetrics to work","packages":"shinymetrics","timestamp_sec":1655},{"timestamp_with_hours":"0:28:25","description":"Explanation of the shinymetrics bug David ran into","packages":"shinymetrics","timestamp_sec":1705},{"timestamp_with_hours":"0:34:10","description":"Changing order of ordinal variable (e.g., \"1,000 to 10,000\" and \"10,000 to 20,000\") using the parse_number, fct_lump, and coalesce functions","functions":"parse_number | fct_lump | coalesce","timestamp_sec":2050},{"timestamp_with_hours":"0:41:25","description":"Asking, \"Where is beer produced?\"","timestamp_sec":2485},{"timestamp_with_hours":"0:46:45","description":"Looking up sf package documentation to refresh memory on how to draw state borders for a map","packages":"sf","timestamp_sec":2805},{"timestamp_with_hours":"0:48:55","description":"Using match function and state.abb vector (state abbreviations) from sf package to perform a lookup of state names","functions":"match","timestamp_sec":2935},{"timestamp_with_hours":"0:51:05","description":"Using geom_sf function (and working through some hiccoughs) to create a choropleth map","functions":"geom_sf","packages":"sf","timestamp_sec":3065},{"timestamp_with_hours":"0:52:30","description":"Using theme_map function from ggthemes package to get more appropriate styling for maps","functions":"theme_map","packages":"ggthemes","timestamp_sec":3150},{"timestamp_with_hours":"0:55:40","description":"Experimenting with how to get the legend to display in the bottom right corner","timestamp_sec":3340},{"timestamp_with_hours":"0:58:25","description":"Starting to build an animation of consumption patterns over time using gganimate package","packages":"gganimate","timestamp_sec":3505},{"timestamp_with_hours":"1:03:40","description":"Getting the year being animated to show up in the title of a gganimate map","packages":"gganimate","timestamp_sec":3820},{"timestamp_with_hours":"1:05:40","description":"Summary of screencast","timestamp_sec":3940},{"timestamp_with_hours":"1:06:50","description":"Spotting a mistake in a group_by call causing the percentages not to add up properly","timestamp_sec":4010},{"timestamp_with_hours":"1:09:10","description":"Brief extra overview of tidymetrics code","packages":"tidymetrics","timestamp_sec":4150}]</script>
+```{=html}
+<div id="topics">
+  <div class="topic">
+    <h3 id="ts-265">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(265, this)">0:4:25</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Asking, &quot;What ingredients are used in beer?&quot;</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-280">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(280, this)">0:4:40</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">filter</span><span class="badge-functions badge bg-info">max</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using filter and max functions to look at the most recent period of time</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-445">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(445, this)">0:7:25</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">paste</span><span class="badge-functions badge bg-info">ymd</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using paste and ymd functions (ymd is from lubridate package) to convert year-month field into an date-formatted field</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-560">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(560, this)">0:9:20</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Spotting potential missing or mis-parsed data</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-830">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(830, this)">0:13:50</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Introducing the tidymetrics framework</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-885">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(885, this)">0:14:45</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">install_github</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using install_github function to install tidymetrics from GitHub</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-925">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(925, this)">0:15:25</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">cross_by_dimensions</span></div><div><span class="badge-packages badge bg-primary">tidymetrics</span></div></div>
+    <div class="topic_description">
+      <p>Using cross_by_dimensions function from tidymetrics package to get aggregations at different levels of multiple dimensions</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1090">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1090, this)">0:18:10</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">cross_by_periods</span></div><div><span class="badge-packages badge bg-primary">tidymetrics</span></div></div>
+    <div class="topic_description">
+      <p>Using cross_by_periods function from tidymetrics package to also get aggregations for different intervals (e.g, month, quarter, year)</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1320">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1320, this)">0:22:00</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">use_metrics_scaffold</span></div><div><span class="badge-packages badge bg-primary">tidymetrics</span></div></div>
+    <div class="topic_description">
+      <p>Using use_metrics_scaffold function from tidymetrics package to create framework for documenting dimensions in RMarkdown YAML header</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1440">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1440, this)">0:24:00</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">create_metrics</span></div><div><span class="badge-packages badge bg-primary">tidymetrics</span></div></div>
+    <div class="topic_description">
+      <p>Using create_metrics function from tidymetrics package to save data as a tibble with useful metadata (good for visualizing interactively)</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1515">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1515, this)">0:25:15</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">preview_metrics</span></div><div><span class="badge-packages badge bg-primary">shinymetrics</span></div></div>
+    <div class="topic_description">
+      <p>Using preview_metric function from shinymetrics package (still under development as of 2020-04-24) to demonstrate shinymetrics</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1655">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1655, this)">0:27:35</button>
+    </h3>
+    <div class="topic_badges"><div></div><div><span class="badge-packages badge bg-primary">shinymetrics</span></div></div>
+    <div class="topic_description">
+      <p>Succesfuly getting shinymetrics to work</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1705">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1705, this)">0:28:25</button>
+    </h3>
+    <div class="topic_badges"><div></div><div><span class="badge-packages badge bg-primary">shinymetrics</span></div></div>
+    <div class="topic_description">
+      <p>Explanation of the shinymetrics bug David ran into</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2050">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2050, this)">0:34:10</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">parse_number</span><span class="badge-functions badge bg-info">fct_lump</span><span class="badge-functions badge bg-info">coalesce</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Changing order of ordinal variable (e.g., &quot;1,000 to 10,000&quot; and &quot;10,000 to 20,000&quot;) using the parse_number, fct_lump, and coalesce functions</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2485">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2485, this)">0:41:25</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Asking, &quot;Where is beer produced?&quot;</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2805">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2805, this)">0:46:45</button>
+    </h3>
+    <div class="topic_badges"><div></div><div><span class="badge-packages badge bg-primary">sf</span></div></div>
+    <div class="topic_description">
+      <p>Looking up sf package documentation to refresh memory on how to draw state borders for a map</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2935">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2935, this)">0:48:55</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">match</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using match function and state.abb vector (state abbreviations) from sf package to perform a lookup of state names</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-3065">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(3065, this)">0:51:05</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">geom_sf</span></div><div><span class="badge-packages badge bg-primary">sf</span></div></div>
+    <div class="topic_description">
+      <p>Using geom_sf function (and working through some hiccoughs) to create a choropleth map</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-3150">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(3150, this)">0:52:30</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">theme_map</span></div><div><span class="badge-packages badge bg-primary">ggthemes</span></div></div>
+    <div class="topic_description">
+      <p>Using theme_map function from ggthemes package to get more appropriate styling for maps</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-3340">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(3340, this)">0:55:40</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Experimenting with how to get the legend to display in the bottom right corner</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-3505">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(3505, this)">0:58:25</button>
+    </h3>
+    <div class="topic_badges"><div></div><div><span class="badge-packages badge bg-primary">gganimate</span></div></div>
+    <div class="topic_description">
+      <p>Starting to build an animation of consumption patterns over time using gganimate package</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-3820">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(3820, this)">1:03:40</button>
+    </h3>
+    <div class="topic_badges"><div></div><div><span class="badge-packages badge bg-primary">gganimate</span></div></div>
+    <div class="topic_description">
+      <p>Getting the year being animated to show up in the title of a gganimate map</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-3940">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(3940, this)">1:05:40</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Summary of screencast</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-4010">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(4010, this)">1:06:50</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Spotting a mistake in a group_by call causing the percentages not to add up properly</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-4150">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(4150, this)">1:09:10</button>
+    </h3>
+    <div class="topic_badges"><div></div><div><span class="badge-packages badge bg-primary">tidymetrics</span></div></div>
+    <div class="topic_description">
+      <p>Brief extra overview of tidymetrics code</p>
+
+    </div>
+  </div>
+</div>
+```
+     
+<script>
+// 2. This code loads the IFrame Player API code asynchronously.
+var tag = document.createElement("script");
+
+tag.src = "https://www.youtube.com/iframe_api";
+var firstScriptTag = document.getElementsByTagName("script")[0];
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+// 3. This function creates an <iframe> (and YouTube player)
+//    after the API code downloads.
+var videoId = document.getElementById("yt-player").dataset.videoId;
+var player;
+function onYouTubeIframeAPIReady() {
+  player = new YT.Player("yt-player", {
+    height: "486",
+    width: "864",
+    videoId: videoId,
+    playerVars: {
+      "playsinline": 1
+    },
+    events: {
+      onStateChange: function(event) {
+        if (event.data == YT.PlayerState.PLAYING) {
+          followTimestamps()
+        }
+      }
+    }
+  });
+}
+
+function playerSkipToTimestamp(seconds, tsElement) {
+  player.seekTo(seconds, true)
+  tsElement.scrollIntoView()
+  document.getElementById("screencast").scrollIntoView()
+}
+
+const timestamps = Array.from(document.querySelectorAll('.topic h3[id^="ts-"]'))
+  .map(el => el.id.replace('ts-', ''))
+
+function followTimestamps() {
+  if (player.getPlayerState() !== 1) {
+    return
+  }
+  const currentTime = `${Math.floor(player.getCurrentTime())}`
+  if (timestamps.includes(currentTime)) {
+    const el = document.getElementById(`ts-${currentTime}`)
+    if (el) {
+      el.scrollIntoView()
+      document.getElementById("screencast").scrollIntoView()
+    }
+  }
+  setTimeout(followTimestamps, 1000)
+}
+</script>

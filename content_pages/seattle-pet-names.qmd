@@ -5,6 +5,8 @@ description: |
   Hypergeometric hypothesis testing, Adjusting for multiple hypothesis testing
 date: 2019-03-15
 date-format: long
+aliases:
+  - "Seattle Pet Names.html"
 ---
 
 Notable topics: Hypergeometric hypothesis testing, Adjusting for multiple hypothesis testing
@@ -15,10 +17,338 @@ Timestamps by: Alex Cookson
 
 [View code](https://github.com/dgrtwo/data-screencasts/blob/master/seattle-pets.Rmd)
 
-## Full screencast
+## Screencast
 
-<iframe class="video" src="https://www.youtube.com/embed/EF4A4OtQprg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div id="yt-player" data-video-id="EF4A4OtQprg"></div>
 
 ## Timestamps
 
-<script id="timestamps" type="application-json">[{"timestamp_with_hours":"0:2:40","description":"Using mdy function from lubridate package to convert character-formatted date to date-class","functions":"mdy","packages":"lubridate","timestamp_sec":160},{"timestamp_with_hours":"0:4:20","description":"Exploratory bar graph showing top species of cats, using geom_col function","functions":"geom_col","timestamp_sec":260},{"timestamp_with_hours":"0:6:30","description":"Specifying facet_wrap function's ncol argument to get graphs stacked vertically (instead of side-by-side)","functions":"facet_wrap","timestamp_sec":390},{"timestamp_with_hours":"0:9:55","description":"Asking, \"Are some animal names associated with particular dog breeds?\"","timestamp_sec":595},{"timestamp_with_hours":"0:11:15","description":"Explanation of add_count function","functions":"add_count","timestamp_sec":675},{"timestamp_with_hours":"0:12:35","description":"Adding up various metrics (e.g., number of names overall, number of breeds overall), but note a mistake that gets fixed at 17:05","timestamp_sec":755},{"timestamp_with_hours":"0:16:10","description":"Calculating a ratio for names that appear over-represented within a breed, then explaining how small samples can be misleading","timestamp_sec":970},{"timestamp_with_hours":"0:17:05","description":"Spotting and fixing an aggregation mistake","timestamp_sec":1025},{"timestamp_with_hours":"0:17:55","description":"Explanation of how to investigate which names might be over-represented within a breed","timestamp_sec":1075},{"timestamp_with_hours":"0:18:55","description":"Explanation of how to use hypergeometric distribution to test for name over-representation","timestamp_sec":1135},{"timestamp_with_hours":"0:20:40","description":"Using phyper function to calculate p-values for a one-sided hypergeometric test","functions":"phyper","timestamp_sec":1240},{"timestamp_with_hours":"0:23:30","description":"Additional explanation of hypergeometric distribution","timestamp_sec":1410},{"timestamp_with_hours":"0:24:00","description":"First investigation of why and how to interpret a p-value histogram (second at 29:45, third at 37:45, and answer at 39:30)","timestamp_sec":1440},{"timestamp_with_hours":"0:25:15","description":"Noticing that we are missing zeros (i.e., having a breed/name combination with 0 dogs), which is important for the hypergeometric test","timestamp_sec":1515},{"timestamp_with_hours":"0:27:10","description":"Using complete function to turn implicit zeros (for breed/name combination) into explicit zeros","functions":"complete","timestamp_sec":1630},{"timestamp_with_hours":"0:29:45","description":"Second investigation of p-value histogram (after adding in implicit zeros)","timestamp_sec":1785},{"timestamp_with_hours":"0:31:55","description":"Explanation of multiple hypothesis testing and correction methods (e.g., Bonferroni, Holm), and applying using p.adjust function","functions":"p.adjust","timestamp_sec":1915},{"timestamp_with_hours":"0:34:25","description":"Explanation of False Discovery Rate (FDR) control as a method for correcting for multiple hypothesis testing, and applying using p.adjust function","functions":"p.adjust","timestamp_sec":2065},{"timestamp_with_hours":"0:37:45","description":"Third investigation of p-value histogram, to hunt for under-represented names","timestamp_sec":2265},{"timestamp_with_hours":"0:39:30","description":"Answer to why the p-value distribution is not well-behaved","timestamp_sec":2370},{"timestamp_with_hours":"0:42:40","description":"Using crossing function to created a simulated dataset to explore how different values affect the p-value","functions":"crossing","timestamp_sec":2560},{"timestamp_with_hours":"0:44:55","description":"Explanation of how total number of names and total number of breeds affects p-value","timestamp_sec":2695},{"timestamp_with_hours":"0:46:00","description":"More general explanation of what different shapes of p-value histogram might indicate","timestamp_sec":2760},{"timestamp_with_hours":"0:47:30","description":"Renaming variables within a transmute function, using backticks to get names with spaces in them","functions":"transmute","timestamp_sec":2850},{"timestamp_with_hours":"0:49:20","description":"Using kable function from the knitr package to create a nice-looking table","functions":"kable","packages":"knitr","timestamp_sec":2960},{"timestamp_with_hours":"0:50:00","description":"Explanation of one-side p-value (as opposed to two-sided p-value)","timestamp_sec":3000},{"timestamp_with_hours":"0:53:55","description":"Summary of screencast","timestamp_sec":3235}]</script>
+```{=html}
+<div id="topics">
+  <div class="topic">
+    <h3 id="ts-160">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(160, this)">0:2:40</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">mdy</span></div><div><span class="badge-packages badge bg-primary">lubridate</span></div></div>
+    <div class="topic_description">
+      <p>Using mdy function from lubridate package to convert character-formatted date to date-class</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-260">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(260, this)">0:4:20</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">geom_col</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Exploratory bar graph showing top species of cats, using geom_col function</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-390">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(390, this)">0:6:30</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">facet_wrap</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Specifying facet_wrap function's ncol argument to get graphs stacked vertically (instead of side-by-side)</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-595">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(595, this)">0:9:55</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Asking, &quot;Are some animal names associated with particular dog breeds?&quot;</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-675">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(675, this)">0:11:15</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">add_count</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Explanation of add_count function</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-755">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(755, this)">0:12:35</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Adding up various metrics (e.g., number of names overall, number of breeds overall), but note a mistake that gets fixed at 17:05</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-970">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(970, this)">0:16:10</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Calculating a ratio for names that appear over-represented within a breed, then explaining how small samples can be misleading</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1025">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1025, this)">0:17:05</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Spotting and fixing an aggregation mistake</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1075">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1075, this)">0:17:55</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Explanation of how to investigate which names might be over-represented within a breed</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1135">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1135, this)">0:18:55</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Explanation of how to use hypergeometric distribution to test for name over-representation</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1240">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1240, this)">0:20:40</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">phyper</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using phyper function to calculate p-values for a one-sided hypergeometric test</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1410">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1410, this)">0:23:30</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Additional explanation of hypergeometric distribution</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1440">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1440, this)">0:24:00</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>First investigation of why and how to interpret a p-value histogram (second at 29:45, third at 37:45, and answer at 39:30)</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1515">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1515, this)">0:25:15</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Noticing that we are missing zeros (i.e., having a breed/name combination with 0 dogs), which is important for the hypergeometric test</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1630">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1630, this)">0:27:10</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">complete</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using complete function to turn implicit zeros (for breed/name combination) into explicit zeros</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1785">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1785, this)">0:29:45</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Second investigation of p-value histogram (after adding in implicit zeros)</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1915">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1915, this)">0:31:55</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">p.adjust</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Explanation of multiple hypothesis testing and correction methods (e.g., Bonferroni, Holm), and applying using p.adjust function</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2065">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2065, this)">0:34:25</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">p.adjust</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Explanation of False Discovery Rate (FDR) control as a method for correcting for multiple hypothesis testing, and applying using p.adjust function</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2265">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2265, this)">0:37:45</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Third investigation of p-value histogram, to hunt for under-represented names</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2370">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2370, this)">0:39:30</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Answer to why the p-value distribution is not well-behaved</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2560">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2560, this)">0:42:40</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">crossing</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using crossing function to created a simulated dataset to explore how different values affect the p-value</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2695">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2695, this)">0:44:55</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Explanation of how total number of names and total number of breeds affects p-value</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2760">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2760, this)">0:46:00</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>More general explanation of what different shapes of p-value histogram might indicate</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2850">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2850, this)">0:47:30</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">transmute</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Renaming variables within a transmute function, using backticks to get names with spaces in them</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2960">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2960, this)">0:49:20</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">kable</span></div><div><span class="badge-packages badge bg-primary">knitr</span></div></div>
+    <div class="topic_description">
+      <p>Using kable function from the knitr package to create a nice-looking table</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-3000">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(3000, this)">0:50:00</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Explanation of one-side p-value (as opposed to two-sided p-value)</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-3235">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(3235, this)">0:53:55</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Summary of screencast</p>
+
+    </div>
+  </div>
+</div>
+```
+     
+<script>
+// 2. This code loads the IFrame Player API code asynchronously.
+var tag = document.createElement("script");
+
+tag.src = "https://www.youtube.com/iframe_api";
+var firstScriptTag = document.getElementsByTagName("script")[0];
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+// 3. This function creates an <iframe> (and YouTube player)
+//    after the API code downloads.
+var videoId = document.getElementById("yt-player").dataset.videoId;
+var player;
+function onYouTubeIframeAPIReady() {
+  player = new YT.Player("yt-player", {
+    height: "486",
+    width: "864",
+    videoId: videoId,
+    playerVars: {
+      "playsinline": 1
+    },
+    events: {
+      onStateChange: function(event) {
+        if (event.data == YT.PlayerState.PLAYING) {
+          followTimestamps()
+        }
+      }
+    }
+  });
+}
+
+function playerSkipToTimestamp(seconds, tsElement) {
+  player.seekTo(seconds, true)
+  tsElement.scrollIntoView()
+  document.getElementById("screencast").scrollIntoView()
+}
+
+const timestamps = Array.from(document.querySelectorAll('.topic h3[id^="ts-"]'))
+  .map(el => el.id.replace('ts-', ''))
+
+function followTimestamps() {
+  if (player.getPlayerState() !== 1) {
+    return
+  }
+  const currentTime = `${Math.floor(player.getCurrentTime())}`
+  if (timestamps.includes(currentTime)) {
+    const el = document.getElementById(`ts-${currentTime}`)
+    if (el) {
+      el.scrollIntoView()
+      document.getElementById("screencast").scrollIntoView()
+    }
+  }
+  setTimeout(followTimestamps, 1000)
+}
+</script>

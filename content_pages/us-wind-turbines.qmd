@@ -5,6 +5,8 @@ description: |
   Animated map (gganimate package)
 date: 2018-11-05
 date-format: long
+aliases:
+  - "US Wind Turbines.html"
 ---
 
 Notable topics: Animated map (gganimate package)
@@ -15,10 +17,258 @@ Timestamps by: Alex Cookson
 
 [View code](https://github.com/dgrtwo/data-screencasts/blob/master/us-wind.Rmd)
 
-## Full screencast
+## Screencast
 
-<iframe class="video" src="https://www.youtube.com/embed/O1oDIQV6VKU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div id="yt-player" data-video-id="O1oDIQV6VKU"></div>
 
 ## Timestamps
 
-<script id="timestamps" type="application-json">[{"timestamp_with_hours":"0:3:50","description":"Using count function to explore categorical variables","functions":"count","timestamp_sec":230},{"timestamp_with_hours":"0:5:00","description":"Creating a quick-and-dirty map using geom_point function and latitude and longitude data","functions":"geom_point","timestamp_sec":300},{"timestamp_with_hours":"0:6:10","description":"Explaining need for mapproj package when plotting maps in ggplot2","functions":"coord_map","packages":"mapproj","timestamp_sec":370},{"timestamp_with_hours":"0:7:35","description":"Using borders function to add US state borders to map","functions":"borders","timestamp_sec":455},{"timestamp_with_hours":"0:10:45","description":"Using fct_lump to get the top 6 project categories and put the rest in a lumped \"Other\" category","functions":"fct_lump","timestamp_sec":645},{"timestamp_with_hours":"0:11:30","description":"Changing data so that certain categories' points appear in front of other categories' points on the map","timestamp_sec":690},{"timestamp_with_hours":"0:14:15","description":"Taking the centroid (average longitude and latitude) of points across a geographic area as a way to aggregate categories to one point","timestamp_sec":855},{"timestamp_with_hours":"0:19:40","description":"Using ifelse function to clean missing data that is coded as \"-9999\"","functions":"ifelse","timestamp_sec":1180},{"timestamp_with_hours":"0:26:00","description":"Asking, \"How has turbine capacity changed over time?\"","timestamp_sec":1560},{"timestamp_with_hours":"0:33:15","description":"Exploring different models of wind turbines","timestamp_sec":1995},{"timestamp_with_hours":"0:38:00","description":"Using mutate_if function to find NA values (coded as -9999) in multiple columns and replace them with an actual NA","functions":"mutate_if","timestamp_sec":2280},{"timestamp_with_hours":"0:45:40","description":"Reviewing documentation for gganimate package","packages":"gganimate","timestamp_sec":2740},{"timestamp_with_hours":"0:47:00","description":"Attempting to set up gganimate map","packages":"gganimate","timestamp_sec":2820},{"timestamp_with_hours":"0:48:55","description":"Understanding gganimate package using a \"Hello World\" / toy example, then trying to debug turbine animation","packages":"gganimate","timestamp_sec":2935},{"timestamp_with_hours":"0:56:45","description":"Using is.infinite function to get rid of troublesome Inf values","functions":"is.infinite","timestamp_sec":3405},{"timestamp_with_hours":"0:57:55","description":"Quick hack for getting cumulative data from a table using crossing function (though it does end up with some duplication)","functions":"crossing","timestamp_sec":3475},{"timestamp_with_hours":"1:01:45","description":"Diagnosis of gganimate issue (points between integer years are being interpolated)","packages":"gganimate","timestamp_sec":3705},{"timestamp_with_hours":"1:04:35","description":"Pseudo-successful gganimate map (cumulative points show up, but some points are missing)","packages":"gganimate","timestamp_sec":3875},{"timestamp_with_hours":"1:05:40","description":"Summary of screencast","timestamp_sec":3940}]</script>
+```{=html}
+<div id="topics">
+  <div class="topic">
+    <h3 id="ts-230">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(230, this)">0:3:50</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">count</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using count function to explore categorical variables</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-300">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(300, this)">0:5:00</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">geom_point</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Creating a quick-and-dirty map using geom_point function and latitude and longitude data</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-370">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(370, this)">0:6:10</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">coord_map</span></div><div><span class="badge-packages badge bg-primary">mapproj</span></div></div>
+    <div class="topic_description">
+      <p>Explaining need for mapproj package when plotting maps in ggplot2</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-455">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(455, this)">0:7:35</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">borders</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using borders function to add US state borders to map</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-645">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(645, this)">0:10:45</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">fct_lump</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using fct_lump to get the top 6 project categories and put the rest in a lumped &quot;Other&quot; category</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-690">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(690, this)">0:11:30</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Changing data so that certain categories' points appear in front of other categories' points on the map</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-855">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(855, this)">0:14:15</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Taking the centroid (average longitude and latitude) of points across a geographic area as a way to aggregate categories to one point</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1180">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1180, this)">0:19:40</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">ifelse</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using ifelse function to clean missing data that is coded as &quot;-9999&quot;</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1560">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1560, this)">0:26:00</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Asking, &quot;How has turbine capacity changed over time?&quot;</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1995">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1995, this)">0:33:15</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Exploring different models of wind turbines</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2280">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2280, this)">0:38:00</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">mutate_if</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using mutate_if function to find NA values (coded as -9999) in multiple columns and replace them with an actual NA</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2740">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2740, this)">0:45:40</button>
+    </h3>
+    <div class="topic_badges"><div></div><div><span class="badge-packages badge bg-primary">gganimate</span></div></div>
+    <div class="topic_description">
+      <p>Reviewing documentation for gganimate package</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2820">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2820, this)">0:47:00</button>
+    </h3>
+    <div class="topic_badges"><div></div><div><span class="badge-packages badge bg-primary">gganimate</span></div></div>
+    <div class="topic_description">
+      <p>Attempting to set up gganimate map</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2935">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2935, this)">0:48:55</button>
+    </h3>
+    <div class="topic_badges"><div></div><div><span class="badge-packages badge bg-primary">gganimate</span></div></div>
+    <div class="topic_description">
+      <p>Understanding gganimate package using a &quot;Hello World&quot; / toy example, then trying to debug turbine animation</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-3405">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(3405, this)">0:56:45</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">is.infinite</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using is.infinite function to get rid of troublesome Inf values</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-3475">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(3475, this)">0:57:55</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">crossing</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Quick hack for getting cumulative data from a table using crossing function (though it does end up with some duplication)</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-3705">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(3705, this)">1:01:45</button>
+    </h3>
+    <div class="topic_badges"><div></div><div><span class="badge-packages badge bg-primary">gganimate</span></div></div>
+    <div class="topic_description">
+      <p>Diagnosis of gganimate issue (points between integer years are being interpolated)</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-3875">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(3875, this)">1:04:35</button>
+    </h3>
+    <div class="topic_badges"><div></div><div><span class="badge-packages badge bg-primary">gganimate</span></div></div>
+    <div class="topic_description">
+      <p>Pseudo-successful gganimate map (cumulative points show up, but some points are missing)</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-3940">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(3940, this)">1:05:40</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Summary of screencast</p>
+
+    </div>
+  </div>
+</div>
+```
+     
+<script>
+// 2. This code loads the IFrame Player API code asynchronously.
+var tag = document.createElement("script");
+
+tag.src = "https://www.youtube.com/iframe_api";
+var firstScriptTag = document.getElementsByTagName("script")[0];
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+// 3. This function creates an <iframe> (and YouTube player)
+//    after the API code downloads.
+var videoId = document.getElementById("yt-player").dataset.videoId;
+var player;
+function onYouTubeIframeAPIReady() {
+  player = new YT.Player("yt-player", {
+    height: "486",
+    width: "864",
+    videoId: videoId,
+    playerVars: {
+      "playsinline": 1
+    },
+    events: {
+      onStateChange: function(event) {
+        if (event.data == YT.PlayerState.PLAYING) {
+          followTimestamps()
+        }
+      }
+    }
+  });
+}
+
+function playerSkipToTimestamp(seconds, tsElement) {
+  player.seekTo(seconds, true)
+  tsElement.scrollIntoView()
+  document.getElementById("screencast").scrollIntoView()
+}
+
+const timestamps = Array.from(document.querySelectorAll('.topic h3[id^="ts-"]'))
+  .map(el => el.id.replace('ts-', ''))
+
+function followTimestamps() {
+  if (player.getPlayerState() !== 1) {
+    return
+  }
+  const currentTime = `${Math.floor(player.getCurrentTime())}`
+  if (timestamps.includes(currentTime)) {
+    const el = document.getElementById(`ts-${currentTime}`)
+    if (el) {
+      el.scrollIntoView()
+      document.getElementById("screencast").scrollIntoView()
+    }
+  }
+  setTimeout(followTimestamps, 1000)
+}
+</script>

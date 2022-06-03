@@ -5,6 +5,8 @@ description: |
   Data manipulation, Web scraping (rvest package) and SelectorGadget
 date: 2020-08-17
 date-format: long
+aliases:
+  - "Plants in Danger.html"
 ---
 
 Notable topics: Data manipulation, Web scraping (rvest package) and SelectorGadget
@@ -15,10 +17,200 @@ Timestamps by: Eric Fletcher
 
 [View code](https://github.com/dgrtwo/data-screencasts/blob/master/2020_08_18_extinct_plants.Rmd)
 
-## Full screencast
+## Screencast
 
-<iframe class="video" src="https://www.youtube.com/embed/f7Rc1bvMgZY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div id="yt-player" data-video-id="f7Rc1bvMgZY"></div>
 
 ## Timestamps
 
-<script id="timestamps" type="application-json">[{"timestamp_with_hours":"0:2:00","description":"Using `count`, `fct_lump`, and `fct_reorder` to get an overview of categorical data","functions":"count | fct_lump | fct_reorder","packages":"dplyr | forcats","timestamp_sec":120},{"timestamp_with_hours":"0:5:00","description":"Using `fct_relevel` to reorder the \"Before 1900\" level to the first location leaving the other levels in their existing order","functions":"fct_relevel","packages":"forcats","timestamp_sec":300},{"timestamp_with_hours":"0:8:05","description":"Using `n` and `sum` in `fct_reorder` to reorder factor levels when there are multiple categories in `count`","functions":"fct_reorder","packages":"forcats","timestamp_sec":485},{"timestamp_with_hours":"0:12:00","description":"Using `reorder_within` and `scale_y_reordered` such that the values are ordered within each facet","functions":"reorder_within | scale_y_reordered","packages":"tidytext","timestamp_sec":720},{"timestamp_with_hours":"0:14:55","description":"Using `axis.text.x\" to rotate overlapping labels","functions":"axis.text.x","packages":"ggplot2","timestamp_sec":895},{"timestamp_with_hours":"0:19:05","description":"Using `filter` and `fct_lump` to lump all levels except for the 8 most frequest facet panels","functions":"filter | fct_lump","packages":"dplyr | forcats","timestamp_sec":1145},{"timestamp_with_hours":"0:26:55","description":"Using `separate` to separate the character column `binomial_name` into multiple columns (genus and species)","functions":"separate","packages":"tidyr","timestamp_sec":1615},{"timestamp_with_hours":"0:28:20","description":"Using `fct_lump` within `count` to lump all levels except for the 8 most frequent genus","functions":"fct_lump","packages":"forcats","timestamp_sec":1700},{"timestamp_with_hours":"0:45:30","description":"Using `rvest` and `SelectorGadget` to web scrape list of species","functions":"read_html | html_nodes | html_text","packages":"rvest","timestamp_sec":2730},{"timestamp_with_hours":"0:49:35","description":"Using `str_trim` to remove whitespace from character string","functions":"str_trim","packages":"stringr","timestamp_sec":2975},{"timestamp_with_hours":"0:50:00","description":"Using `separate` to separate character string into genus, species, and rest/citation columns and using `extra = \"merge\"` to merge extra pieces into the rest/citation column","functions":"separate","packages":"tidyr","timestamp_sec":3000},{"timestamp_with_hours":"0:51:00","description":"Using `rvest` and `SelectorGadget` to web scrape image links","functions":"read_html | html_nodes | html_text \nhtml_attr | inner_join | paste0 | map","packages":"rvest | dplyr\npurrr","timestamp_sec":3060},{"timestamp_with_hours":"0:57:50","description":"Summary of screencast","timestamp_sec":3470}]</script>
+```{=html}
+<div id="topics">
+  <div class="topic">
+    <h3 id="ts-120">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(120, this)">0:2:00</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">count</span><span class="badge-functions badge bg-info">fct_lump</span><span class="badge-functions badge bg-info">fct_reorder</span></div><div><span class="badge-packages badge bg-primary">dplyr</span><span class="badge-packages badge bg-primary">forcats</span></div></div>
+    <div class="topic_description">
+      <p>Using <code>count</code>, <code>fct_lump</code>, and <code>fct_reorder</code> to get an overview of categorical data</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-300">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(300, this)">0:5:00</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">fct_relevel</span></div><div><span class="badge-packages badge bg-primary">forcats</span></div></div>
+    <div class="topic_description">
+      <p>Using <code>fct_relevel</code> to reorder the &quot;Before 1900&quot; level to the first location leaving the other levels in their existing order</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-485">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(485, this)">0:8:05</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">fct_reorder</span></div><div><span class="badge-packages badge bg-primary">forcats</span></div></div>
+    <div class="topic_description">
+      <p>Using <code>n</code> and <code>sum</code> in <code>fct_reorder</code> to reorder factor levels when there are multiple categories in <code>count</code></p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-720">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(720, this)">0:12:00</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">reorder_within</span><span class="badge-functions badge bg-info">scale_y_reordered</span></div><div><span class="badge-packages badge bg-primary">tidytext</span></div></div>
+    <div class="topic_description">
+      <p>Using <code>reorder_within</code> and <code>scale_y_reordered</code> such that the values are ordered within each facet</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-895">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(895, this)">0:14:55</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">axis.text.x</span></div><div><span class="badge-packages badge bg-primary">ggplot2</span></div></div>
+    <div class="topic_description">
+      <p>Using `axis.text.x&quot; to rotate overlapping labels</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1145">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1145, this)">0:19:05</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">filter</span><span class="badge-functions badge bg-info">fct_lump</span></div><div><span class="badge-packages badge bg-primary">dplyr</span><span class="badge-packages badge bg-primary">forcats</span></div></div>
+    <div class="topic_description">
+      <p>Using <code>filter</code> and <code>fct_lump</code> to lump all levels except for the 8 most frequest facet panels</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1615">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1615, this)">0:26:55</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">separate</span></div><div><span class="badge-packages badge bg-primary">tidyr</span></div></div>
+    <div class="topic_description">
+      <p>Using <code>separate</code> to separate the character column <code>binomial_name</code> into multiple columns (genus and species)</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1700">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1700, this)">0:28:20</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">fct_lump</span></div><div><span class="badge-packages badge bg-primary">forcats</span></div></div>
+    <div class="topic_description">
+      <p>Using <code>fct_lump</code> within <code>count</code> to lump all levels except for the 8 most frequent genus</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2730">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2730, this)">0:45:30</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">read_html</span><span class="badge-functions badge bg-info">html_nodes</span><span class="badge-functions badge bg-info">html_text</span></div><div><span class="badge-packages badge bg-primary">rvest</span></div></div>
+    <div class="topic_description">
+      <p>Using <code>rvest</code> and <code>SelectorGadget</code> to web scrape list of species</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2975">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2975, this)">0:49:35</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">str_trim</span></div><div><span class="badge-packages badge bg-primary">stringr</span></div></div>
+    <div class="topic_description">
+      <p>Using <code>str_trim</code> to remove whitespace from character string</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-3000">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(3000, this)">0:50:00</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">separate</span></div><div><span class="badge-packages badge bg-primary">tidyr</span></div></div>
+    <div class="topic_description">
+      <p>Using <code>separate</code> to separate character string into genus, species, and rest/citation columns and using <code>extra = &quot;merge&quot;</code> to merge extra pieces into the rest/citation column</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-3060">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(3060, this)">0:51:00</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">read_html</span><span class="badge-functions badge bg-info">html_nodes</span><span class="badge-functions badge bg-info">html_text 
+html_attr</span><span class="badge-functions badge bg-info">inner_join</span><span class="badge-functions badge bg-info">paste0</span><span class="badge-functions badge bg-info">map</span></div><div><span class="badge-packages badge bg-primary">rvest</span><span class="badge-packages badge bg-primary">dplyr
+purrr</span></div></div>
+    <div class="topic_description">
+      <p>Using <code>rvest</code> and <code>SelectorGadget</code> to web scrape image links</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-3470">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(3470, this)">0:57:50</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Summary of screencast</p>
+
+    </div>
+  </div>
+</div>
+```
+     
+<script>
+// 2. This code loads the IFrame Player API code asynchronously.
+var tag = document.createElement("script");
+
+tag.src = "https://www.youtube.com/iframe_api";
+var firstScriptTag = document.getElementsByTagName("script")[0];
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+// 3. This function creates an <iframe> (and YouTube player)
+//    after the API code downloads.
+var videoId = document.getElementById("yt-player").dataset.videoId;
+var player;
+function onYouTubeIframeAPIReady() {
+  player = new YT.Player("yt-player", {
+    height: "486",
+    width: "864",
+    videoId: videoId,
+    playerVars: {
+      "playsinline": 1
+    },
+    events: {
+      onStateChange: function(event) {
+        if (event.data == YT.PlayerState.PLAYING) {
+          followTimestamps()
+        }
+      }
+    }
+  });
+}
+
+function playerSkipToTimestamp(seconds, tsElement) {
+  player.seekTo(seconds, true)
+  tsElement.scrollIntoView()
+  document.getElementById("screencast").scrollIntoView()
+}
+
+const timestamps = Array.from(document.querySelectorAll('.topic h3[id^="ts-"]'))
+  .map(el => el.id.replace('ts-', ''))
+
+function followTimestamps() {
+  if (player.getPlayerState() !== 1) {
+    return
+  }
+  const currentTime = `${Math.floor(player.getCurrentTime())}`
+  if (timestamps.includes(currentTime)) {
+    const el = document.getElementById(`ts-${currentTime}`)
+    if (el) {
+      el.scrollIntoView()
+      document.getElementById("screencast").scrollIntoView()
+    }
+  }
+  setTimeout(followTimestamps, 1000)
+}
+</script>

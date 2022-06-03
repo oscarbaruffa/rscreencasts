@@ -5,6 +5,8 @@ description: |
   Simulation with matrixes
 date: 2020-01-05
 date-format: long
+aliases:
+  - "Riddler: Spelling Bee Honeycomb.html"
 ---
 
 Notable topics: Simulation with matrixes
@@ -15,10 +17,228 @@ Timestamps by: Alex Cookson
 
 [View code](https://github.com/dgrtwo/data-screencasts/blob/master/honeycomb-puzzle.Rmd)
 
-## Full screencast
+## Screencast
 
-<iframe class="video" src="https://www.youtube.com/embed/wFZhuQEfEYA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div id="yt-player" data-video-id="wFZhuQEfEYA"></div>
 
 ## Timestamps
 
-<script id="timestamps" type="application-json">[{"timestamp_with_hours":"0:2:00","description":"Using read_lines function to import a plain text file (.txt)","functions":"read_lines","timestamp_sec":120},{"timestamp_with_hours":"0:2:35","description":"Using str_detect function to filter out words that do not contain the letter \"g\"","functions":"str_detect","timestamp_sec":155},{"timestamp_with_hours":"0:3:25","description":"Using str_split function to get a list of a word's individual letters","functions":"str_split","timestamp_sec":205},{"timestamp_with_hours":"0:3:55","description":"Using setdiff function to find words with invalid letters (letters that are not in the puzzle honeycomb) -- also needs map function (at 4:35)","functions":"setdiff","timestamp_sec":235},{"timestamp_with_hours":"0:10:45","description":"Changing existing code to make a function that will calculate scores for letter combinations","timestamp_sec":645},{"timestamp_with_hours":"0:14:10","description":"Noticing the rule about bonus points for pangrams and using n_distinct function to determine if a word gets those points","functions":"n_distinct","timestamp_sec":850},{"timestamp_with_hours":"0:17:25","description":"Using map function to eliminate duplicate letters from each word's list of component letters","functions":"map","packages":"purrr","timestamp_sec":1045},{"timestamp_with_hours":"0:25:55","description":"Using acast function from reshape2 package to create a matrix of words by letters","functions":"acast","packages":"reshape2","timestamp_sec":1555},{"timestamp_with_hours":"0:27:50","description":"Using a the words/letters matrix to find valid words for a given letter combination","timestamp_sec":1670},{"timestamp_with_hours":"0:29:55","description":"Using the matrix multiplication operator %*% to find the number of \"forbidden\" letters for each word","functions":"%*%","timestamp_sec":1795},{"timestamp_with_hours":"0:42:05","description":"Using microbenchmark function from microbenchmark package to test how long it takes to run a function","functions":"microbenchmark","packages":"microbenchmark","timestamp_sec":2525},{"timestamp_with_hours":"0:43:35","description":"Using combn function to get the actual combinations of 6 letters (not just the count)","functions":"combn","timestamp_sec":2615},{"timestamp_with_hours":"0:45:15","description":"Using map function to get scores for different combinations of letters created above","functions":"map","timestamp_sec":2715},{"timestamp_with_hours":"0:47:30","description":"Using which.max function to find the position of the max value in a vector","functions":"which.max","timestamp_sec":2850},{"timestamp_with_hours":"1:05:10","description":"Using t function to transpose a matrix","functions":"t","timestamp_sec":3910},{"timestamp_with_hours":"1:19:15","description":"Summary of screencast","timestamp_sec":4755}]</script>
+```{=html}
+<div id="topics">
+  <div class="topic">
+    <h3 id="ts-120">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(120, this)">0:2:00</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">read_lines</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using read_lines function to import a plain text file (.txt)</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-155">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(155, this)">0:2:35</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">str_detect</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using str_detect function to filter out words that do not contain the letter &quot;g&quot;</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-205">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(205, this)">0:3:25</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">str_split</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using str_split function to get a list of a word's individual letters</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-235">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(235, this)">0:3:55</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">setdiff</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using setdiff function to find words with invalid letters (letters that are not in the puzzle honeycomb) -- also needs map function (at 4:35)</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-645">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(645, this)">0:10:45</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Changing existing code to make a function that will calculate scores for letter combinations</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-850">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(850, this)">0:14:10</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">n_distinct</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Noticing the rule about bonus points for pangrams and using n_distinct function to determine if a word gets those points</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1045">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1045, this)">0:17:25</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">map</span></div><div><span class="badge-packages badge bg-primary">purrr</span></div></div>
+    <div class="topic_description">
+      <p>Using map function to eliminate duplicate letters from each word's list of component letters</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1555">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1555, this)">0:25:55</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">acast</span></div><div><span class="badge-packages badge bg-primary">reshape2</span></div></div>
+    <div class="topic_description">
+      <p>Using acast function from reshape2 package to create a matrix of words by letters</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1670">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1670, this)">0:27:50</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Using a the words/letters matrix to find valid words for a given letter combination</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1795">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1795, this)">0:29:55</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">%*%</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using the matrix multiplication operator %*% to find the number of &quot;forbidden&quot; letters for each word</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2525">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2525, this)">0:42:05</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">microbenchmark</span></div><div><span class="badge-packages badge bg-primary">microbenchmark</span></div></div>
+    <div class="topic_description">
+      <p>Using microbenchmark function from microbenchmark package to test how long it takes to run a function</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2615">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2615, this)">0:43:35</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">combn</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using combn function to get the actual combinations of 6 letters (not just the count)</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2715">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2715, this)">0:45:15</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">map</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using map function to get scores for different combinations of letters created above</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2850">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2850, this)">0:47:30</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">which.max</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using which.max function to find the position of the max value in a vector</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-3910">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(3910, this)">1:05:10</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">t</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using t function to transpose a matrix</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-4755">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(4755, this)">1:19:15</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Summary of screencast</p>
+
+    </div>
+  </div>
+</div>
+```
+     
+<script>
+// 2. This code loads the IFrame Player API code asynchronously.
+var tag = document.createElement("script");
+
+tag.src = "https://www.youtube.com/iframe_api";
+var firstScriptTag = document.getElementsByTagName("script")[0];
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+// 3. This function creates an <iframe> (and YouTube player)
+//    after the API code downloads.
+var videoId = document.getElementById("yt-player").dataset.videoId;
+var player;
+function onYouTubeIframeAPIReady() {
+  player = new YT.Player("yt-player", {
+    height: "486",
+    width: "864",
+    videoId: videoId,
+    playerVars: {
+      "playsinline": 1
+    },
+    events: {
+      onStateChange: function(event) {
+        if (event.data == YT.PlayerState.PLAYING) {
+          followTimestamps()
+        }
+      }
+    }
+  });
+}
+
+function playerSkipToTimestamp(seconds, tsElement) {
+  player.seekTo(seconds, true)
+  tsElement.scrollIntoView()
+  document.getElementById("screencast").scrollIntoView()
+}
+
+const timestamps = Array.from(document.querySelectorAll('.topic h3[id^="ts-"]'))
+  .map(el => el.id.replace('ts-', ''))
+
+function followTimestamps() {
+  if (player.getPlayerState() !== 1) {
+    return
+  }
+  const currentTime = `${Math.floor(player.getCurrentTime())}`
+  if (timestamps.includes(currentTime)) {
+    const el = document.getElementById(`ts-${currentTime}`)
+    if (el) {
+      el.scrollIntoView()
+      document.getElementById("screencast").scrollIntoView()
+    }
+  }
+  setTimeout(followTimestamps, 1000)
+}
+</script>

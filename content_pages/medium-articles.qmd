@@ -5,6 +5,8 @@ description: |
   Text mining (tidytext package)
 date: 2018-12-03
 date-format: long
+aliases:
+  - "Medium Articles.html"
 ---
 
 Notable topics: Text mining (tidytext package)
@@ -15,10 +17,378 @@ Timestamps by: Alex Cookson
 
 [View code](https://github.com/dgrtwo/data-screencasts/blob/master/medium-datasci.Rmd)
 
-## Full screencast
+## Screencast
 
-<iframe class="video" src="https://www.youtube.com/embed/C69QyycHsgE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div id="yt-player" data-video-id="C69QyycHsgE"></div>
 
 ## Timestamps
 
-<script id="timestamps" type="application-json">[{"timestamp_with_hours":"0:5:40","description":"Using summarise_at and starts_with functions to quickly sum up all variables starting with \"tag_\"","functions":"summarise_at | starts_with","timestamp_sec":340},{"timestamp_with_hours":"0:6:55","description":"Using gather function (now pivot_longer) to convert topic tag variables from wide to tall (tidy) format","functions":"gather","timestamp_sec":415},{"timestamp_with_hours":"0:8:10","description":"Explanation of how gathering step above will let us find the most/least common tags","timestamp_sec":490},{"timestamp_with_hours":"0:9:00","description":"Explanation of using median (instead of mean) as measure of central tendency for number of claps an article got","functions":"median","timestamp_sec":540},{"timestamp_with_hours":"0:9:50","description":"Visualizing log-normal (ish) distribution of number of claps an article gets","timestamp_sec":590},{"timestamp_with_hours":"0:12:05","description":"Using pmin function to bin reading times of 10 minutes or more to cap out at 10 minutes","functions":"pmin","timestamp_sec":725},{"timestamp_with_hours":"0:12:35","description":"Changing scale_x_continuous function's breaks argument to get custom labels and tick marks on a histogram","functions":"scale_x_continuous","timestamp_sec":755},{"timestamp_with_hours":"0:14:35","description":"Discussion of using mean vs. median as measure of central tendency for reading time (he decides on mean)","timestamp_sec":875},{"timestamp_with_hours":"0:16:00","description":"Starting text mining analysis","timestamp_sec":960},{"timestamp_with_hours":"0:16:40","description":"Using unnest_tokens function from tidytext package to split character string into individual words","functions":"unnest_tokens","packages":"tidytext","timestamp_sec":1000},{"timestamp_with_hours":"0:17:50","description":"Explanation of stop words and using anti_join function from tidytext package to get rid of them","functions":"anti_join","packages":"tidytext","timestamp_sec":1070},{"timestamp_with_hours":"0:20:20","description":"Using str_detect function to filter out \"words\" that are just numbers (e.g., \"2\", \"35\")","functions":"str_detect","timestamp_sec":1220},{"timestamp_with_hours":"0:22:35","description":"Quick analysis of which individual words are associated with more/fewer claps (\"What are the hype words?\")","timestamp_sec":1355},{"timestamp_with_hours":"0:25:15","description":"Using geometric mean as alternative to median to get more distinction between words (note 27:33 where he makes a quick fix)","timestamp_sec":1515},{"timestamp_with_hours":"0:28:10","description":"Starting analysis of clusters of related words (e.g., \"neural\" is linked to \"network\")","timestamp_sec":1690},{"timestamp_with_hours":"0:30:30","description":"Finding correlations pairs of words using pairwise_cor function from widyr package","functions":"pairwise_cor","packages":"widyr","timestamp_sec":1830},{"timestamp_with_hours":"0:34:00","description":"Using ggraph and igraph packages to make network plot of correlated pairs of words","packages":"ggraph | igraph","timestamp_sec":2040},{"timestamp_with_hours":"0:35:00","description":"Using geom_node_text to add labels for points (vertices) in the network plot","functions":"geom_node_text","timestamp_sec":2100},{"timestamp_with_hours":"0:38:40","description":"Filtering original data to only include words appear in the network plot (150 word pairs with most correlation)","timestamp_sec":2320},{"timestamp_with_hours":"0:40:10","description":"Adding colour as a dimension to the network plot, representing geometric mean of claps","timestamp_sec":2410},{"timestamp_with_hours":"0:40:50","description":"Changing default colour scale to one with Blue = Low and High = Red with scale_colour_gradient2 function","functions":"scale_colour_gradient2","timestamp_sec":2450},{"timestamp_with_hours":"0:43:15","description":"Adding dark outlines to points on network plot with a hack","timestamp_sec":2595},{"timestamp_with_hours":"0:44:45","description":"Starting to predict number of claps based on title tag (Lasso regression)","timestamp_sec":2685},{"timestamp_with_hours":"0:45:50","description":"Explanation of data format needed to conduct Lasso regression (and using cast_sparse function to get sparse matrix)","functions":"cast_sparse","timestamp_sec":2750},{"timestamp_with_hours":"0:47:45","description":"Bringing in number of claps to the sparse matrix (un-tidy methods)","timestamp_sec":2865},{"timestamp_with_hours":"0:49:00","description":"Using cv.glmnet function (cv = cross validated) from glmnet package to run Lasso regression","functions":"cv.glmnet","packages":"glmnet","timestamp_sec":2940},{"timestamp_with_hours":"0:49:55","description":"Finding and fixing mistake in defining Lasso model","timestamp_sec":2995},{"timestamp_with_hours":"0:51:05","description":"Explanation of Lasso model","timestamp_sec":3065},{"timestamp_with_hours":"0:52:35","description":"Using tidy function from the broom package to tidy up the Lasso model","functions":"tidy","packages":"broom","timestamp_sec":3155},{"timestamp_with_hours":"0:54:35","description":"Visualizing how specific words affect the prediction of claps as lambda (Lasso's penalty parameter) changes","timestamp_sec":3275},{"timestamp_with_hours":"1:00:20","description":"Summary of screencast","timestamp_sec":3620}]</script>
+```{=html}
+<div id="topics">
+  <div class="topic">
+    <h3 id="ts-340">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(340, this)">0:5:40</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">summarise_at</span><span class="badge-functions badge bg-info">starts_with</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using summarise_at and starts_with functions to quickly sum up all variables starting with &quot;tag_&quot;</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-415">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(415, this)">0:6:55</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">gather</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using gather function (now pivot_longer) to convert topic tag variables from wide to tall (tidy) format</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-490">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(490, this)">0:8:10</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Explanation of how gathering step above will let us find the most/least common tags</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-540">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(540, this)">0:9:00</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">median</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Explanation of using median (instead of mean) as measure of central tendency for number of claps an article got</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-590">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(590, this)">0:9:50</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Visualizing log-normal (ish) distribution of number of claps an article gets</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-725">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(725, this)">0:12:05</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">pmin</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using pmin function to bin reading times of 10 minutes or more to cap out at 10 minutes</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-755">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(755, this)">0:12:35</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">scale_x_continuous</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Changing scale_x_continuous function's breaks argument to get custom labels and tick marks on a histogram</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-875">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(875, this)">0:14:35</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Discussion of using mean vs. median as measure of central tendency for reading time (he decides on mean)</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-960">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(960, this)">0:16:00</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Starting text mining analysis</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1000">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1000, this)">0:16:40</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">unnest_tokens</span></div><div><span class="badge-packages badge bg-primary">tidytext</span></div></div>
+    <div class="topic_description">
+      <p>Using unnest_tokens function from tidytext package to split character string into individual words</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1070">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1070, this)">0:17:50</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">anti_join</span></div><div><span class="badge-packages badge bg-primary">tidytext</span></div></div>
+    <div class="topic_description">
+      <p>Explanation of stop words and using anti_join function from tidytext package to get rid of them</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1220">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1220, this)">0:20:20</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">str_detect</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using str_detect function to filter out &quot;words&quot; that are just numbers (e.g., &quot;2&quot;, &quot;35&quot;)</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1355">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1355, this)">0:22:35</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Quick analysis of which individual words are associated with more/fewer claps (&quot;What are the hype words?&quot;)</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1515">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1515, this)">0:25:15</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Using geometric mean as alternative to median to get more distinction between words (note 27:33 where he makes a quick fix)</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1690">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1690, this)">0:28:10</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Starting analysis of clusters of related words (e.g., &quot;neural&quot; is linked to &quot;network&quot;)</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1830">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1830, this)">0:30:30</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">pairwise_cor</span></div><div><span class="badge-packages badge bg-primary">widyr</span></div></div>
+    <div class="topic_description">
+      <p>Finding correlations pairs of words using pairwise_cor function from widyr package</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2040">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2040, this)">0:34:00</button>
+    </h3>
+    <div class="topic_badges"><div></div><div><span class="badge-packages badge bg-primary">ggraph</span><span class="badge-packages badge bg-primary">igraph</span></div></div>
+    <div class="topic_description">
+      <p>Using ggraph and igraph packages to make network plot of correlated pairs of words</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2100">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2100, this)">0:35:00</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">geom_node_text</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using geom_node_text to add labels for points (vertices) in the network plot</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2320">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2320, this)">0:38:40</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Filtering original data to only include words appear in the network plot (150 word pairs with most correlation)</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2410">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2410, this)">0:40:10</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Adding colour as a dimension to the network plot, representing geometric mean of claps</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2450">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2450, this)">0:40:50</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">scale_colour_gradient2</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Changing default colour scale to one with Blue = Low and High = Red with scale_colour_gradient2 function</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2595">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2595, this)">0:43:15</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Adding dark outlines to points on network plot with a hack</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2685">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2685, this)">0:44:45</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Starting to predict number of claps based on title tag (Lasso regression)</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2750">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2750, this)">0:45:50</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">cast_sparse</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Explanation of data format needed to conduct Lasso regression (and using cast_sparse function to get sparse matrix)</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2865">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2865, this)">0:47:45</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Bringing in number of claps to the sparse matrix (un-tidy methods)</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2940">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2940, this)">0:49:00</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">cv.glmnet</span></div><div><span class="badge-packages badge bg-primary">glmnet</span></div></div>
+    <div class="topic_description">
+      <p>Using cv.glmnet function (cv = cross validated) from glmnet package to run Lasso regression</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2995">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2995, this)">0:49:55</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Finding and fixing mistake in defining Lasso model</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-3065">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(3065, this)">0:51:05</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Explanation of Lasso model</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-3155">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(3155, this)">0:52:35</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">tidy</span></div><div><span class="badge-packages badge bg-primary">broom</span></div></div>
+    <div class="topic_description">
+      <p>Using tidy function from the broom package to tidy up the Lasso model</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-3275">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(3275, this)">0:54:35</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Visualizing how specific words affect the prediction of claps as lambda (Lasso's penalty parameter) changes</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-3620">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(3620, this)">1:00:20</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Summary of screencast</p>
+
+    </div>
+  </div>
+</div>
+```
+     
+<script>
+// 2. This code loads the IFrame Player API code asynchronously.
+var tag = document.createElement("script");
+
+tag.src = "https://www.youtube.com/iframe_api";
+var firstScriptTag = document.getElementsByTagName("script")[0];
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+// 3. This function creates an <iframe> (and YouTube player)
+//    after the API code downloads.
+var videoId = document.getElementById("yt-player").dataset.videoId;
+var player;
+function onYouTubeIframeAPIReady() {
+  player = new YT.Player("yt-player", {
+    height: "486",
+    width: "864",
+    videoId: videoId,
+    playerVars: {
+      "playsinline": 1
+    },
+    events: {
+      onStateChange: function(event) {
+        if (event.data == YT.PlayerState.PLAYING) {
+          followTimestamps()
+        }
+      }
+    }
+  });
+}
+
+function playerSkipToTimestamp(seconds, tsElement) {
+  player.seekTo(seconds, true)
+  tsElement.scrollIntoView()
+  document.getElementById("screencast").scrollIntoView()
+}
+
+const timestamps = Array.from(document.querySelectorAll('.topic h3[id^="ts-"]'))
+  .map(el => el.id.replace('ts-', ''))
+
+function followTimestamps() {
+  if (player.getPlayerState() !== 1) {
+    return
+  }
+  const currentTime = `${Math.floor(player.getCurrentTime())}`
+  if (timestamps.includes(currentTime)) {
+    const el = document.getElementById(`ts-${currentTime}`)
+    if (el) {
+      el.scrollIntoView()
+      document.getElementById("screencast").scrollIntoView()
+    }
+  }
+  setTimeout(followTimestamps, 1000)
+}
+</script>

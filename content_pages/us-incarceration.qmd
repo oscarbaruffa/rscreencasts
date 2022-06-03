@@ -5,6 +5,8 @@ description: |
   Animated map (gganimate package), Dealing with missing data
 date: 2019-01-24
 date-format: long
+aliases:
+  - "US Incarceration.html"
 ---
 
 Notable topics: Animated map (gganimate package), Dealing with missing data
@@ -15,10 +17,238 @@ Timestamps by: Alex Cookson
 
 [View code](NA)
 
-## Full screencast
+## Screencast
 
-<iframe class="video" src="https://www.youtube.com/embed/78kv808ZU6o" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div id="yt-player" data-video-id="78kv808ZU6o"></div>
 
 ## Timestamps
 
-<script id="timestamps" type="application-json">[{"timestamp_with_hours":"0:4:30","description":"Creating a facetted (small multiples) line graph of incarceration rate by urbanicity and race over time","functions":"facet_wrap","timestamp_sec":270},{"timestamp_with_hours":"0:7:45","description":"Discussion of statistical testing of incarceration rates by urbanicity (e.g., rural, suburban)","timestamp_sec":465},{"timestamp_with_hours":"0:11:25","description":"Exploring the extent of missing data on prison population","timestamp_sec":685},{"timestamp_with_hours":"0:14:15","description":"Using any function to filter down to states that have at least one (hence the any function) row of non-missing data","functions":"any","timestamp_sec":855},{"timestamp_with_hours":"0:18:40","description":"Using cut function to manually bin data along user-specified intervals","functions":"cut","timestamp_sec":1120},{"timestamp_with_hours":"0:24:15","description":"Starting to create a choropleth map of incarceration rate by state","timestamp_sec":1455},{"timestamp_with_hours":"0:26:20","description":"Using match function to match two-letter state abbreviation to full state name, in order to get data needed to create a map","functions":"match","timestamp_sec":1580},{"timestamp_with_hours":"0:28:00","description":"Actually typing the code (now that we have the necessary data) to create a choropleth map","timestamp_sec":1680},{"timestamp_with_hours":"0:33:05","description":"Using str_remove function and regex to chop off the end of county names (e.g., \"Allen Parish\" becomes \"Allen\")","functions":"str_remove","timestamp_sec":1985},{"timestamp_with_hours":"0:33:30","description":"Making choropleth more specific by drilling down to county-level data","timestamp_sec":2010},{"timestamp_with_hours":"0:41:10","description":"Starting to make an animated choropleth map using gganimate","packages":"gganimate","timestamp_sec":2470},{"timestamp_with_hours":"0:42:20","description":"Using modulo operator %% to choose every 5th year","functions":"%%","timestamp_sec":2540},{"timestamp_with_hours":"0:43:45","description":"Using scale_fill_gradient2 function's limits argument to exclude unusally high values that were blowing out the scale","functions":"scale_fill_gradient2","timestamp_sec":2625},{"timestamp_with_hours":"0:48:15","description":"Using summarise_at function to apply the same function to multiple fields at the same time","functions":"summarise_at","timestamp_sec":2895},{"timestamp_with_hours":"0:50:10","description":"Starting to investigate missing data (how much is missing, where is it missing, etc.)","timestamp_sec":3010},{"timestamp_with_hours":"0:54:50","description":"Creating a line graph that excludes counties with missing data","timestamp_sec":3290},{"timestamp_with_hours":"0:57:05","description":"Summary of screencast","timestamp_sec":3425}]</script>
+```{=html}
+<div id="topics">
+  <div class="topic">
+    <h3 id="ts-270">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(270, this)">0:4:30</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">facet_wrap</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Creating a facetted (small multiples) line graph of incarceration rate by urbanicity and race over time</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-465">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(465, this)">0:7:45</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Discussion of statistical testing of incarceration rates by urbanicity (e.g., rural, suburban)</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-685">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(685, this)">0:11:25</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Exploring the extent of missing data on prison population</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-855">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(855, this)">0:14:15</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">any</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using any function to filter down to states that have at least one (hence the any function) row of non-missing data</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1120">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1120, this)">0:18:40</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">cut</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using cut function to manually bin data along user-specified intervals</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1455">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1455, this)">0:24:15</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Starting to create a choropleth map of incarceration rate by state</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1580">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1580, this)">0:26:20</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">match</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using match function to match two-letter state abbreviation to full state name, in order to get data needed to create a map</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1680">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1680, this)">0:28:00</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Actually typing the code (now that we have the necessary data) to create a choropleth map</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1985">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1985, this)">0:33:05</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">str_remove</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using str_remove function and regex to chop off the end of county names (e.g., &quot;Allen Parish&quot; becomes &quot;Allen&quot;)</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2010">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2010, this)">0:33:30</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Making choropleth more specific by drilling down to county-level data</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2470">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2470, this)">0:41:10</button>
+    </h3>
+    <div class="topic_badges"><div></div><div><span class="badge-packages badge bg-primary">gganimate</span></div></div>
+    <div class="topic_description">
+      <p>Starting to make an animated choropleth map using gganimate</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2540">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2540, this)">0:42:20</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">%%</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using modulo operator %% to choose every 5th year</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2625">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2625, this)">0:43:45</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">scale_fill_gradient2</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using scale_fill_gradient2 function's limits argument to exclude unusally high values that were blowing out the scale</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2895">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2895, this)">0:48:15</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">summarise_at</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using summarise_at function to apply the same function to multiple fields at the same time</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-3010">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(3010, this)">0:50:10</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Starting to investigate missing data (how much is missing, where is it missing, etc.)</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-3290">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(3290, this)">0:54:50</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Creating a line graph that excludes counties with missing data</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-3425">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(3425, this)">0:57:05</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Summary of screencast</p>
+
+    </div>
+  </div>
+</div>
+```
+     
+<script>
+// 2. This code loads the IFrame Player API code asynchronously.
+var tag = document.createElement("script");
+
+tag.src = "https://www.youtube.com/iframe_api";
+var firstScriptTag = document.getElementsByTagName("script")[0];
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+// 3. This function creates an <iframe> (and YouTube player)
+//    after the API code downloads.
+var videoId = document.getElementById("yt-player").dataset.videoId;
+var player;
+function onYouTubeIframeAPIReady() {
+  player = new YT.Player("yt-player", {
+    height: "486",
+    width: "864",
+    videoId: videoId,
+    playerVars: {
+      "playsinline": 1
+    },
+    events: {
+      onStateChange: function(event) {
+        if (event.data == YT.PlayerState.PLAYING) {
+          followTimestamps()
+        }
+      }
+    }
+  });
+}
+
+function playerSkipToTimestamp(seconds, tsElement) {
+  player.seekTo(seconds, true)
+  tsElement.scrollIntoView()
+  document.getElementById("screencast").scrollIntoView()
+}
+
+const timestamps = Array.from(document.querySelectorAll('.topic h3[id^="ts-"]'))
+  .map(el => el.id.replace('ts-', ''))
+
+function followTimestamps() {
+  if (player.getPlayerState() !== 1) {
+    return
+  }
+  const currentTime = `${Math.floor(player.getCurrentTime())}`
+  if (timestamps.includes(currentTime)) {
+    const el = document.getElementById(`ts-${currentTime}`)
+    if (el) {
+      el.scrollIntoView()
+      document.getElementById("screencast").scrollIntoView()
+    }
+  }
+  setTimeout(followTimestamps, 1000)
+}
+</script>

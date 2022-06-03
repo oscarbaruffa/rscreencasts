@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-0.9.301">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="dcterms.date" content="2020-09-28">
+<meta name="description" content="Text analysis, tf_idf, Log odds ratio, Diverging bar graph, Lollipop graph">
+
+<title>R Screencasts - Beyonce and Taylor Swift Lyrics</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+span.underline{text-decoration: underline;}
+div.column{display: inline-block; vertical-align: top; width: 50%;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+</style>
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<link href="../images/favicon-32x32.png" rel="icon" type="image/png">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link id="quarto-text-highlighting-styles" href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+<script defer="" data-domain="rscreencasts.com" src="https://plausible.io/js/script.outbound-links.js"></script>
+
+<meta property="og:title" content="R Screencasts - Beyonce and Taylor Swift Lyrics">
+<meta property="og:description" content="Awesome data analysis screencasts from a top Data Scientist">
+<meta property="og:image" content="https://www.rscreencasts.com/images/rscreencasts_social.png">
+<meta property="og:url" content="https://www.rscreencasts.com/">
+<meta property="og:site_name" content="R Screencasts">
+
+<meta name="twitter:title" content="R Screencasts - Beyonce and Taylor Swift Lyrics">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image:alt" content="Awesome data analysis screencasts from a top Data Scientist">
+<meta name="twitter:site" content="@oscarbaruffa">
+<meta name="twitter:description" content="Awesome data analysis screencasts from a top Data Scientists">
+<meta name="twitter:image" content="https://www.rscreencasts.com/images/rscreencasts_social.png">
+
+
+<link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">R Screencasts</span>
+  </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../index.html">Home</a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../resources.html">Resources</a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../about.html">About</a>
+  </li>  
+</ul>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#screencast" id="toc-screencast" class="nav-link active" data-scroll-target="#screencast">Screencast</a></li>
+  <li><a href="#timestamps" id="toc-timestamps" class="nav-link" data-scroll-target="#timestamps">Timestamps</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><p>Beyonce and Taylor Swift Lyrics</p></h1>
+</div>
+
+<div>
+  <div class="description">
+    <p>Text analysis, <code>tf_idf</code>, Log odds ratio, Diverging bar graph, Lollipop graph</p>
+  </div>
+</div>
+
+
+
+
+<div class="quarto-title-meta">
+
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">September 28, 2020</p>
+    </div>
+  </div>
+    
+  </div>
+  
+
+</header>
+
+<p>Notable topics: Text analysis, <code>tf_idf</code>, Log odds ratio, Diverging bar graph, Lollipop graph</p>
+<p>Recorded on: 2020-09-28</p>
+<p>Timestamps by: Eric Fletcher</p>
+<p><a href="https://github.com/dgrtwo/data-screencasts/blob/master/2020_09_29_taylor_swift_beyonce.Rmd">View code</a></p>
+<section id="screencast" class="level2">
+<h2 class="anchored" data-anchor-id="screencast">Screencast</h2>
+<div id="yt-player" data-video-id="vYbDyfv_v4Q">
+
+</div>
+</section>
+<section id="timestamps" class="level2">
+<h2 class="anchored" data-anchor-id="timestamps">Timestamps</h2>
+<div id="topics">
+  <div class="topic">
+    <h3 id="ts-470" class="anchored">
+      <button class="btn btn-link btn-timestamp" onclick="playerSkipToTimestamp(470, this)">0:7:50</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">fct_reorder</span></div><div><span class="badge-packages badge bg-primary">forcats</span></div></div>
+    <div class="topic_description">
+      <p>Use <code>fct_reorder</code> from the <code>forcats</code> package to reorder <code>title</code> factor levels by sorting along the <code>sales</code> variable in <code>geom_col</code> plot.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-490" class="anchored">
+      <button class="btn btn-link btn-timestamp" onclick="playerSkipToTimestamp(490, this)">0:8:10</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">labels</span></div><div><span class="badge-packages badge bg-primary">scales</span></div></div>
+    <div class="topic_description">
+      <p>Use <code>labels = dollar</code> from the <code>scales</code> package to format the <code>geom_col</code> x-axis values as currency.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-675" class="anchored">
+      <button class="btn btn-link btn-timestamp" onclick="playerSkipToTimestamp(675, this)">0:11:15</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">rename_all</span><span class="badge-functions badge bg-info">str_to_lower</span></div><div><span class="badge-packages badge bg-primary">dplyr</span><span class="badge-packages badge bg-primary">stringr</span></div></div>
+    <div class="topic_description">
+      <p>Use <code>rename_all(str_to_lower)</code> to convert variable names to lowercase.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-765" class="anchored">
+      <button class="btn btn-link btn-timestamp" onclick="playerSkipToTimestamp(765, this)">0:12:45</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">unnest_tokens</span></div><div><span class="badge-packages badge bg-primary">tidytext</span></div></div>
+    <div class="topic_description">
+      <p>Use <code>unnest_tokens</code> from the <code>tidytext</code> package to split the lyrics into one-lyric-per-row.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-780" class="anchored">
+      <button class="btn btn-link btn-timestamp" onclick="playerSkipToTimestamp(780, this)">0:13:00</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">anti_join</span></div><div><span class="badge-packages badge bg-primary">dplyr</span></div></div>
+    <div class="topic_description">
+      <p>Use <code>anti_join</code> from the <code>tidytext</code> package to find the most common words int he lyrics without <code>stop_words</code>.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-915" class="anchored">
+      <button class="btn btn-link btn-timestamp" onclick="playerSkipToTimestamp(915, this)">0:15:15</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">bind_tf_idf</span></div><div><span class="badge-packages badge bg-primary">tidytext</span></div></div>
+    <div class="topic_description">
+      <p>Use <code>bind_tf_idf</code> from the <code>tidytext</code> package to determine <code>tf</code> - the proportion each word has in each album and <code>idf</code> - how specific each word is to each particular album.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1065" class="anchored">
+      <button class="btn btn-link btn-timestamp" onclick="playerSkipToTimestamp(1065, this)">0:17:45</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">reorder_within</span><span class="badge-functions badge bg-info">scale_y_reordered</span><span class="badge-functions badge bg-info">slice_max</span></div><div><span class="badge-packages badge bg-primary">tidytext</span><span class="badge-packages badge bg-primary">dplyr</span></div></div>
+    <div class="topic_description">
+      <p>Use <code>reorder_within</code> with <code>scale_y_reordered</code> in order to reorder the bars within each <code>facet panel</code>. David replaces <code>top_n</code> with <code>slice_max</code> from the <code>dplyr</code> package in order to show the top 10 words with <code>ties = FALSE</code>.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1245" class="anchored">
+      <button class="btn btn-link btn-timestamp" onclick="playerSkipToTimestamp(1245, this)">0:20:45</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">bind_log_odds</span></div><div><span class="badge-packages badge bg-primary">tidylo</span></div></div>
+    <div class="topic_description">
+      <p>Use <code>bind_log_odds</code> from the <code>tidylo</code> package to calculate the <code>log odds ratio</code> of album and words, that is how much more common is the word in a specific album than across all the other albums.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1390" class="anchored">
+      <button class="btn btn-link btn-timestamp" onclick="playerSkipToTimestamp(1390, this)">0:23:10</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">filter</span><span class="badge-functions badge bg-info">str_length</span></div><div><span class="badge-packages badge bg-primary">dplyr</span><span class="badge-packages badge bg-primary">stringr</span></div></div>
+    <div class="topic_description">
+      <p>Use <code>filter(str_length(word) &lt;= 3)</code> to come up with a list in order to remove common filler words like <code>ah</code>, <code>uh</code>, <code>ha</code>, <code>ey</code>, <code>eeh</code>, and <code>huh</code>.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1620" class="anchored">
+      <button class="btn btn-link btn-timestamp" onclick="playerSkipToTimestamp(1620, this)">0:27:00</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">distinct</span><span class="badge-functions badge bg-info">mdy</span><span class="badge-functions badge bg-info">str_remove</span></div><div><span class="badge-packages badge bg-primary">dplyr</span><span class="badge-packages badge bg-primary">lubridate</span><span class="badge-packages badge bg-primary">stringr</span></div></div>
+    <div class="topic_description">
+      <p>Use <code>mdy</code> from the <code>lubridate</code> package and <code>str_remove(released, " \\(.*)"))</code> from the <code>stringr</code> package to parse the dates in the <code>released</code> variable.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1695" class="anchored">
+      <button class="btn btn-link btn-timestamp" onclick="playerSkipToTimestamp(1695, this)">0:28:15</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">inner_join</span><span class="badge-functions badge bg-info">fct_recode</span></div><div><span class="badge-packages badge bg-primary">dplyr</span><span class="badge-packages badge bg-primary">forcats</span></div></div>
+    <div class="topic_description">
+      <p>Use <code>inner_join</code> from the <code>dplyr</code> package to join <code>taylor_swift_words</code> with <code>release_dates</code>.</p>
+<p>David ends up having to use <code>fct_recode</code> since the albums <code>reputation</code> and <code>folklore</code> were nor <code>lowercase</code> in a previous table thus excluding them from the <code>inner_join</code>.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1710" class="anchored">
+      <button class="btn btn-link btn-timestamp" onclick="playerSkipToTimestamp(1710, this)">0:28:30</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">fct_reorder</span><span class="badge-functions badge bg-info">geom_col</span></div><div><span class="badge-packages badge bg-primary">forcats</span><span class="badge-packages badge bg-primary">ggplot2</span></div></div>
+    <div class="topic_description">
+      <p>Use <code>fct_reorder</code> from the <code>forcats</code> package to reorder <code>album</code> factor levels by sorting along the <code>released</code> variable to be used in the <code>faceted</code> <code>geom_col</code>.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2080" class="anchored">
+      <button class="btn btn-link btn-timestamp" onclick="playerSkipToTimestamp(2080, this)">0:34:40</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">bind_rows</span><span class="badge-functions badge bg-info">unnest_tokens</span></div><div><span class="badge-packages badge bg-primary">dplyr</span><span class="badge-packages badge bg-primary">tidytext</span></div></div>
+    <div class="topic_description">
+      <p>Use <code>bind_rows</code> from hte <code>dplyr</code> package to bind <code>ts</code> with <code>beyonce</code> with <code>unnest_tokens</code> from the <code>tidytext</code> package to get one lyric per row per artist.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2320" class="anchored">
+      <button class="btn btn-link btn-timestamp" onclick="playerSkipToTimestamp(2320, this)">0:38:40</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">bind_log_odds</span></div><div><span class="badge-packages badge bg-primary">tidylo</span></div></div>
+    <div class="topic_description">
+      <p>Use <code>bind_log_odds</code> to figure out which words are more likely to come from a Taylor Swift or Beyonce song?</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2470" class="anchored">
+      <button class="btn btn-link btn-timestamp" onclick="playerSkipToTimestamp(2470, this)">0:41:10</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">slice_max</span><span class="badge-functions badge bg-info">geom_col</span><span class="badge-functions badge bg-info">ifelse</span><span class="badge-functions badge bg-info">fct_reorder</span></div><div><span class="badge-packages badge bg-primary">dplyr</span><span class="badge-packages badge bg-primary">ggplot2</span><span class="badge-packages badge bg-primary">forcats</span></div></div>
+    <div class="topic_description">
+      <p>Use <code>slice_max</code> from the <code>dplyr</code> package to select the top 100 words by <code>num_words_total</code> and then the top 25 by <code>log_odds_weighted</code>. Results are used to create a diverging bar chart showing which words are most common between Beyonce and Taylor Swift songs.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2680" class="anchored">
+      <button class="btn btn-link btn-timestamp" onclick="playerSkipToTimestamp(2680, this)">0:44:40</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">scale_x_continuous</span></div><div><span class="badge-packages badge bg-primary">ggplot2</span></div></div>
+    <div class="topic_description">
+      <p>Use <code>scale_x_continuous</code> to make the <code>log_odds_weighted</code> scale more interpretable.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-3045" class="anchored">
+      <button class="btn btn-link btn-timestamp" onclick="playerSkipToTimestamp(3045, this)">0:50:45</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">geom_col</span><span class="badge-functions badge bg-info">geom_point</span><span class="badge-functions badge bg-info">geom_vline</span></div><div><span class="badge-packages badge bg-primary">ggplot2</span></div></div>
+    <div class="topic_description">
+      <p>Take the previous plot and turn it into a <code>lollipop graph</code> with <code>geom_point(aes(size = num_words_total, color = direction))</code></p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-3185" class="anchored">
+      <button class="btn btn-link btn-timestamp" onclick="playerSkipToTimestamp(3185, this)">0:53:05</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">ifelse</span></div><div><span class="badge-packages badge bg-primary">base</span></div></div>
+    <div class="topic_description">
+      <p>Use <code>ifelse</code> to change the <code>1x</code> value on the x-axis to <code>same</code>.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-3255" class="anchored">
+      <button class="btn btn-link btn-timestamp" onclick="playerSkipToTimestamp(3255, this)">0:54:15</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">pivot_wider</span><span class="badge-functions badge bg-info">clean_names</span><span class="badge-functions badge bg-info">geom_abline</span><span class="badge-functions badge bg-info">geom_point</span><span class="badge-functions badge bg-info">slice_max</span><span class="badge-functions badge bg-info">scale_y_log_10</span><span class="badge-functions badge bg-info">scale_x_log_10</span><span class="badge-functions badge bg-info">geom_text</span></div><div><span class="badge-packages badge bg-primary">tidyr</span><span class="badge-packages badge bg-primary">ggplot2</span><span class="badge-packages badge bg-primary">dplyr</span></div></div>
+    <div class="topic_description">
+      <p>Create a <code>geom_point</code> with <code>geom_abline</code> to show the most popular words they use in common.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-3715" class="anchored">
+      <button class="btn btn-link btn-timestamp" onclick="playerSkipToTimestamp(3715, this)">1:01:55</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Summary of screencast.</p>
+
+    </div>
+  </div>
+</div>
+<script>
+// 2. This code loads the IFrame Player API code asynchronously.
+var tag = document.createElement("script");
+
+tag.src = "https://www.youtube.com/iframe_api";
+var firstScriptTag = document.getElementsByTagName("script")[0];
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+// 3. This function creates an <iframe> (and YouTube player)
+//    after the API code downloads.
+var videoId = document.getElementById("yt-player").dataset.videoId;
+var player;
+function onYouTubeIframeAPIReady() {
+  player = new YT.Player("yt-player", {
+    height: "486",
+    width: "864",
+    videoId: videoId,
+    playerVars: {
+      "playsinline": 1
+    },
+    events: {
+      onStateChange: function(event) {
+        if (event.data == YT.PlayerState.PLAYING) {
+          followTimestamps()
+        }
+      }
+    }
+  });
+}
+
+function playerSkipToTimestamp(seconds, tsElement) {
+  player.seekTo(seconds, true)
+  tsElement.scrollIntoView()
+  document.getElementById("screencast").scrollIntoView()
+}
+
+const timestamps = Array.from(document.querySelectorAll('.topic h3[id^="ts-"]'))
+  .map(el => el.id.replace('ts-', ''))
+
+function followTimestamps() {
+  if (player.getPlayerState() !== 1) {
+    return
+  }
+  const currentTime = `${Math.floor(player.getCurrentTime())}`
+  if (timestamps.includes(currentTime)) {
+    const el = document.getElementById(`ts-${currentTime}`)
+    if (el) {
+      el.scrollIntoView()
+      document.getElementById("screencast").scrollIntoView()
+    }
+  }
+  setTimeout(followTimestamps, 1000)
+}
+</script>
+
+
+</section>
+
+</main> <!-- /main -->
+<script type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    setTimeout(function() {
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      let href = ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+});
+</script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+      <div class="nav-footer-center">Vids by <a href="https://twitter.com/drob">David Robinson</a>. Timestamps &amp; rich content by <a href="https://twitter.com/alexcookson">Alex Cookson</a> and <a href="https://twitter.com/iamericfletcher">Eric Fletcher</a>. Website by <a href="https://twitter.com/OscarBaruffa">Oscar Baruffa</a>, sign up to my <a href="https://oscarbaruffa.com/newsletter/">newsletter</a> for R, data and careers</div>
+  </div>
+</footer>
+
+
+
+</body></html>

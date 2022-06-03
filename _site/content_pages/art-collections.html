@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-0.9.301">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="dcterms.date" content="2021-01-11">
+<meta name="description" content="geom_area plot, distributions, calculating area (square meters) and ratio (width / height)">
+
+<title>R Screencasts - Art Collections</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+span.underline{text-decoration: underline;}
+div.column{display: inline-block; vertical-align: top; width: 50%;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+</style>
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<link href="../images/favicon-32x32.png" rel="icon" type="image/png">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link id="quarto-text-highlighting-styles" href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+<script defer="" data-domain="rscreencasts.com" src="https://plausible.io/js/script.outbound-links.js"></script>
+
+<meta property="og:title" content="R Screencasts - Art Collections">
+<meta property="og:description" content="Awesome data analysis screencasts from a top Data Scientist">
+<meta property="og:image" content="https://www.rscreencasts.com/images/rscreencasts_social.png">
+<meta property="og:url" content="https://www.rscreencasts.com/">
+<meta property="og:site_name" content="R Screencasts">
+
+<meta name="twitter:title" content="R Screencasts - Art Collections">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image:alt" content="Awesome data analysis screencasts from a top Data Scientist">
+<meta name="twitter:site" content="@oscarbaruffa">
+<meta name="twitter:description" content="Awesome data analysis screencasts from a top Data Scientists">
+<meta name="twitter:image" content="https://www.rscreencasts.com/images/rscreencasts_social.png">
+
+
+<link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">R Screencasts</span>
+  </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../index.html">Home</a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../resources.html">Resources</a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../about.html">About</a>
+  </li>  
+</ul>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#screencast" id="toc-screencast" class="nav-link active" data-scroll-target="#screencast">Screencast</a></li>
+  <li><a href="#timestamps" id="toc-timestamps" class="nav-link" data-scroll-target="#timestamps">Timestamps</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><p>Art Collections</p></h1>
+</div>
+
+<div>
+  <div class="description">
+    <p>geom_area plot, distributions, calculating area (square meters) and ratio (width / height)</p>
+  </div>
+</div>
+
+
+
+
+<div class="quarto-title-meta">
+
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">January 11, 2021</p>
+    </div>
+  </div>
+    
+  </div>
+  
+
+</header>
+
+<p>Notable topics: geom_area plot, distributions, calculating area (square meters) and ratio (width / height)</p>
+<p>Recorded on: 2021-01-11</p>
+<p>Timestamps by: Eric Fletcher</p>
+<p><a href="https://github.com/dgrtwo/data-screencasts/blob/master/2021_01_12_tate_art.Rmd">View code</a></p>
+<section id="screencast" class="level2">
+<h2 class="anchored" data-anchor-id="screencast">Screencast</h2>
+<div id="yt-player" data-video-id="AqwA5EJfLXo">
+
+</div>
+</section>
+<section id="timestamps" class="level2">
+<h2 class="anchored" data-anchor-id="timestamps">Timestamps</h2>
+<div id="topics">
+  <div class="topic">
+    <h3 id="ts-115" class="anchored">
+      <button class="btn btn-link btn-timestamp" onclick="playerSkipToTimestamp(115, this)">0:1:55</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">clean_names</span></div><div><span class="badge-packages badge bg-primary">janitor</span></div></div>
+    <div class="topic_description">
+      <p>Using <code>clean_names</code> to convert variable names from <code>camelcase</code> to <code>snakecase</code>.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-245" class="anchored">
+      <button class="btn btn-link btn-timestamp" onclick="playerSkipToTimestamp(245, this)">0:4:05</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">fct_reorder</span><span class="badge-functions badge bg-info">geom_col</span></div><div><span class="badge-packages badge bg-primary">forcats</span><span class="badge-packages badge bg-primary">ggplot2</span></div></div>
+    <div class="topic_description">
+      <p>Use <code>fct_reorder</code> to reorder <code>geom_col</code> columns in ascending order.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-290" class="anchored">
+      <button class="btn btn-link btn-timestamp" onclick="playerSkipToTimestamp(290, this)">0:4:50</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">extract</span><span class="badge-functions badge bg-info">separate</span></div><div><span class="badge-packages badge bg-primary">tidyr</span></div></div>
+    <div class="topic_description">
+      <p>"Use <code>extract</code> to extract a character column into multiple columns using the regular expression <code>""(.*) on (.*)""</code> at <code>6:05</code> David decides to change this to: Use <code>separate</code> with <code>sep = "" on ""</code> and <code>fill = ""left""</code> and <code>extra = ""merge""</code> to control what happens when there are not enoughor too many pieces. at <code>7:10</code> David decides to change to <code>fill = ""right""</code>."</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-470" class="anchored">
+      <button class="btn btn-link btn-timestamp" onclick="playerSkipToTimestamp(470, this)">0:7:50</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">replace_na</span></div><div><span class="badge-packages badge bg-primary">tidyr</span></div></div>
+    <div class="topic_description">
+      <p>Use <code>replace_na</code> to replace NAs with specified values. In this case replace them with <code>Missing</code>.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-625" class="anchored">
+      <button class="btn btn-link btn-timestamp" onclick="playerSkipToTimestamp(625, this)">0:10:25</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">fct_lump</span><span class="badge-functions badge bg-info">filter</span></div><div><span class="badge-packages badge bg-primary">forcats</span><span class="badge-packages badge bg-primary">dplyr</span></div></div>
+    <div class="topic_description">
+      <p>"Use <code>fct_lump</code> to lump <code>artist</code> and <code>medium</code> levels except for the n most frequent. at <code>11:30</code> David decides to use <code>filter(fct_lump(artist, 16) != ""Other"")</code> to get rid of the artist <code>Other</code> category. "</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-835" class="anchored">
+      <button class="btn btn-link btn-timestamp" onclick="playerSkipToTimestamp(835, this)">0:13:55</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">geom_area</span></div><div><span class="badge-packages badge bg-primary">ggplot2</span></div></div>
+    <div class="topic_description">
+      <p>"Create a <code>geom_area</code> plot to show the distribution of paintings by medium over time. At <code>15:35</code> David decides to change from count to percentage to make it easier to show the difference in composition using <code>mutate(pct = n / sum)</code>."</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-860" class="anchored">
+      <button class="btn btn-link btn-timestamp" onclick="playerSkipToTimestamp(860, this)">0:14:20</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">count</span><span class="badge-functions badge bg-info">round</span></div><div><span class="badge-packages badge bg-primary">base</span><span class="badge-packages badge bg-primary">dplyr</span></div></div>
+    <div class="topic_description">
+      <p>Bucket <code>year</code> variable into decades using <code>round(year -1)</code> to round the year to the nearest 10.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-995" class="anchored">
+      <button class="btn btn-link btn-timestamp" onclick="playerSkipToTimestamp(995, this)">0:16:35</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">scale_y_continuous</span></div><div><span class="badge-packages badge bg-primary">scales</span></div></div>
+    <div class="topic_description">
+      <p>Use <code>scale_y_continuous(labels = scales::percent)</code> to change y-axis labels to percent format.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1115" class="anchored">
+      <button class="btn btn-link btn-timestamp" onclick="playerSkipToTimestamp(1115, this)">0:18:35</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">facet_wrap</span><span class="badge-functions badge bg-info">geom_col</span></div><div><span class="badge-packages badge bg-primary">ggplot2</span></div></div>
+    <div class="topic_description">
+      <p>Turn the <code>geom_area</code> plot into a faceted <code>geom_col</code>.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1295" class="anchored">
+      <button class="btn btn-link btn-timestamp" onclick="playerSkipToTimestamp(1295, this)">0:21:35</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">mutate</span><span class="badge-functions badge bg-info">group_by</span><span class="badge-functions badge bg-info">summarize</span><span class="badge-functions badge bg-info">complete</span></div><div><span class="badge-packages badge bg-primary">dplyr</span><span class="badge-packages badge bg-primary">tidyr</span></div></div>
+    <div class="topic_description">
+      <p>"Calculate the percentage of artists for each medium per decade. "</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1760" class="anchored">
+      <button class="btn btn-link btn-timestamp" onclick="playerSkipToTimestamp(1760, this)">0:29:20</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">filter</span><span class="badge-functions badge bg-info">mutate</span><span class="badge-functions badge bg-info">ggplot</span><span class="badge-functions badge bg-info">geom_histogram</span><span class="badge-functions badge bg-info">scale_x_log10</span><span class="badge-functions badge bg-info">geom_vline</span></div><div><span class="badge-packages badge bg-primary">dplyr</span><span class="badge-packages badge bg-primary">ggplot2</span></div></div>
+    <div class="topic_description">
+      <p>Calculate the distribution of the area (square meters) and ratio (width / height) of the art pieces.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2305" class="anchored">
+      <button class="btn btn-link btn-timestamp" onclick="playerSkipToTimestamp(2305, this)">0:38:25</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">mutate</span><span class="badge-functions badge bg-info">case_when</span><span class="badge-functions badge bg-info">geom_area</span><span class="badge-functions badge bg-info">complete</span></div><div><span class="badge-packages badge bg-primary">dplyr</span><span class="badge-packages badge bg-primary">ggplot2</span></div></div>
+    <div class="topic_description">
+      <p>Categorize the pieces by shape(landscape, portait, scquare) based on their ratio then plot using <code>geom_area</code> to look at the composition over time.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2495" class="anchored">
+      <button class="btn btn-link btn-timestamp" onclick="playerSkipToTimestamp(2495, this)">0:41:35</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">group_by</span><span class="badge-functions badge bg-info">summarize</span><span class="badge-functions badge bg-info">filter</span><span class="badge-functions badge bg-info">ggplot</span><span class="badge-functions badge bg-info">geom_line</span><span class="badge-functions badge bg-info">geom_point</span></div><div><span class="badge-packages badge bg-primary">dplyr</span><span class="badge-packages badge bg-primary">ggplot2</span></div></div>
+    <div class="topic_description">
+      <p>Craete a <code>line plot</code> showing the median ratio by decade over time.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2655" class="anchored">
+      <button class="btn btn-link btn-timestamp" onclick="playerSkipToTimestamp(2655, this)">0:44:15</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">group_by</span><span class="badge-functions badge bg-info">summarize</span><span class="badge-functions badge bg-info">filter</span><span class="badge-functions badge bg-info">ggplot</span><span class="badge-functions badge bg-info">geom_line</span><span class="badge-functions badge bg-info">geom_point</span></div><div><span class="badge-packages badge bg-primary">dplyr</span><span class="badge-packages badge bg-primary">ggplot2</span></div></div>
+    <div class="topic_description">
+      <p>Craete a <code>line plot</code> showing the median area by decade over time.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2765" class="anchored">
+      <button class="btn btn-link btn-timestamp" onclick="playerSkipToTimestamp(2765, this)">0:46:05</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">mutate</span><span class="badge-functions badge bg-info">filter</span><span class="badge-functions badge bg-info">ggplot</span><span class="badge-functions badge bg-info">geom_boxplot</span><span class="badge-functions badge bg-info">scale_y_log10</span></div><div><span class="badge-packages badge bg-primary">dplyr</span><span class="badge-packages badge bg-primary">ggplot2</span></div></div>
+    <div class="topic_description">
+      <p>Create a <code>boxplot</code> showing the distribution of area over time.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2905" class="anchored">
+      <button class="btn btn-link btn-timestamp" onclick="playerSkipToTimestamp(2905, this)">0:48:25</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">group_by</span><span class="badge-functions badge bg-info">summarize</span><span class="badge-functions badge bg-info">arrange</span></div><div><span class="badge-packages badge bg-primary">dplyr</span></div></div>
+    <div class="topic_description">
+      <p>Create various <code>summary statistics</code> for the artists such as <code>avg_year</code>, first_year<code>, </code>last_year<code>, </code>n_pieces<code>, </code>median_area<code>, </code>median_ratio`.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-3060" class="anchored">
+      <button class="btn btn-link btn-timestamp" onclick="playerSkipToTimestamp(3060, this)">0:51:00</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">filter</span><span class="badge-functions badge bg-info">add_count</span><span class="badge-functions badge bg-info">mutate</span><span class="badge-functions badge bg-info">ggplot</span><span class="badge-functions badge bg-info">geom_boxplot</span><span class="badge-functions badge bg-info">scale_x_log10</span><span class="badge-functions badge bg-info">geom_vline</span><span class="badge-functions badge bg-info">glue</span></div><div><span class="badge-packages badge bg-primary">dplyr</span><span class="badge-packages badge bg-primary">ggplot2</span><span class="badge-packages badge bg-primary">glue</span></div></div>
+    <div class="topic_description">
+      <p>Create a <code>boxplot</code> showing the distribution of ratio over time for n amount of artists. Use <code>glue</code> to concatonate number of pieces for each artist ont he y axis.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-3380" class="anchored">
+      <button class="btn btn-link btn-timestamp" onclick="playerSkipToTimestamp(3380, this)">0:56:20</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">filter</span><span class="badge-functions badge bg-info">add_count</span><span class="badge-functions badge bg-info">mutate</span><span class="badge-functions badge bg-info">ggplot</span><span class="badge-functions badge bg-info">geom_boxplot</span><span class="badge-functions badge bg-info">scale_x_log10</span><span class="badge-functions badge bg-info">geom_vline</span><span class="badge-functions badge bg-info">glue</span></div><div><span class="badge-packages badge bg-primary">dplyr</span><span class="badge-packages badge bg-primary">ggplot2</span><span class="badge-packages badge bg-primary">glue</span></div></div>
+    <div class="topic_description">
+      <p>Create a <code>boxplot</code> showing the distribution of ratio over time for each medium. Use <code>glue</code> to concatonate number of pieces for each medium on the y axis.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-3550" class="anchored">
+      <button class="btn btn-link btn-timestamp" onclick="playerSkipToTimestamp(3550, this)">0:59:10</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Summary of screencast</p>
+
+    </div>
+  </div>
+</div>
+<script>
+// 2. This code loads the IFrame Player API code asynchronously.
+var tag = document.createElement("script");
+
+tag.src = "https://www.youtube.com/iframe_api";
+var firstScriptTag = document.getElementsByTagName("script")[0];
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+// 3. This function creates an <iframe> (and YouTube player)
+//    after the API code downloads.
+var videoId = document.getElementById("yt-player").dataset.videoId;
+var player;
+function onYouTubeIframeAPIReady() {
+  player = new YT.Player("yt-player", {
+    height: "486",
+    width: "864",
+    videoId: videoId,
+    playerVars: {
+      "playsinline": 1
+    },
+    events: {
+      onStateChange: function(event) {
+        if (event.data == YT.PlayerState.PLAYING) {
+          followTimestamps()
+        }
+      }
+    }
+  });
+}
+
+function playerSkipToTimestamp(seconds, tsElement) {
+  player.seekTo(seconds, true)
+  tsElement.scrollIntoView()
+  document.getElementById("screencast").scrollIntoView()
+}
+
+const timestamps = Array.from(document.querySelectorAll('.topic h3[id^="ts-"]'))
+  .map(el => el.id.replace('ts-', ''))
+
+function followTimestamps() {
+  if (player.getPlayerState() !== 1) {
+    return
+  }
+  const currentTime = `${Math.floor(player.getCurrentTime())}`
+  if (timestamps.includes(currentTime)) {
+    const el = document.getElementById(`ts-${currentTime}`)
+    if (el) {
+      el.scrollIntoView()
+      document.getElementById("screencast").scrollIntoView()
+    }
+  }
+  setTimeout(followTimestamps, 1000)
+}
+</script>
+
+
+</section>
+
+</main> <!-- /main -->
+<script type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    setTimeout(function() {
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      let href = ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+});
+</script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+      <div class="nav-footer-center">Vids by <a href="https://twitter.com/drob">David Robinson</a>. Timestamps &amp; rich content by <a href="https://twitter.com/alexcookson">Alex Cookson</a> and <a href="https://twitter.com/iamericfletcher">Eric Fletcher</a>. Website by <a href="https://twitter.com/OscarBaruffa">Oscar Baruffa</a>, sign up to my <a href="https://oscarbaruffa.com/newsletter/">newsletter</a> for R, data and careers</div>
+  </div>
+</footer>
+
+
+
+</body></html>

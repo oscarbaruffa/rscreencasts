@@ -5,6 +5,8 @@ description: |
   Data cleaning, Logistic regression
 date: 2020-05-18
 date-format: long
+aliases:
+  - "Beach Volleyball.html"
 ---
 
 Notable topics: Data cleaning, Logistic regression
@@ -15,10 +17,259 @@ Timestamps by: Eric Fletcher
 
 [View code](https://github.com/dgrtwo/data-screencasts/blob/master/beach-volleyball.Rmd)
 
-## Full screencast
+## Screencast
 
-<iframe class="video" src="https://www.youtube.com/embed/MfDdmsW3OMo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div id="yt-player" data-video-id="MfDdmsW3OMo"></div>
 
 ## Timestamps
 
-<script id="timestamps" type="application-json">[{"timestamp_with_hours":"0:5:30","description":"Use `pivot_longer` from the `dplyr` package to pivot the data set from `wide` to `long`.","functions":"pivot_longer","packages":"dplyr","timestamp_sec":330},{"timestamp_with_hours":"0:7:20","description":"Use `mutate_at` from the `dplyr` package with `starts_with` to change the class to `character` for all columns that start with `w_` and `l_`.","functions":"mutate_at","packages":"dplyr","timestamp_sec":440},{"timestamp_with_hours":"0:8:00","description":"Use `separate` from the `tidyr` package to separate the `name` variable into three columns with `extra = merge` and `fill = right`.","functions":"separate","packages":"tidyr","timestamp_sec":480},{"timestamp_with_hours":"0:10:35","description":"Use `rename` from the `dplyr` package to rename `w_player1`, `w_player2`, `l_player1`, and `l_player2`.","functions":"rename","packages":"dplyr","timestamp_sec":635},{"timestamp_with_hours":"0:12:50","description":"Use `pivot_wider` from the `dplyr` package to pivot the `name` variable from `long` to `wide`.","functions":"pivot_wider","packages":"dplyr","timestamp_sec":770},{"timestamp_with_hours":"0:15:15","description":"Use `str_to_upper` to convert the `winner_loser` `w` and `l` values to uppercase.","functions":"str_to_upper","packages":"stringr","timestamp_sec":915},{"timestamp_with_hours":"0:20:25","description":"Add unique row numbers for each match using `mutate` with `row_number` from the `dplyr` package.","functions":"row_number","packages":"dplyr","timestamp_sec":1225},{"timestamp_with_hours":"0:21:20","description":"Separate the `score` values into multiple rows using `separate_rows` from the `tidyr` package.","functions":"separate_rows","packages":"tidyr","timestamp_sec":1280},{"timestamp_with_hours":"0:22:45","description":"Use `separate` from the `tidyr` package to actual scores into two columns, one for the winners score `w_score` and another for the losers score `l_score`.","functions":"separate","packages":"tidyr","timestamp_sec":1365},{"timestamp_with_hours":"0:23:45","description":"Use `na_if` from the `dplyr` package to change the `Forfeit or other` value from the `score` variable to `NA`.","functions":"na_if","packages":"dplyr","timestamp_sec":1425},{"timestamp_with_hours":"0:24:35","description":"Use `str_remove` from the `stringr` package to remove scores that include `retired`.","functions":"str_remove","packages":"stringr","timestamp_sec":1475},{"timestamp_with_hours":"0:25:25","description":"Determine how many times the winners score `w_score` is  greter than the losers score `l_score` at least 1/3 of the time.","functions":"mutate | group_by | summarize","packages":"dplyr","timestamp_sec":1525},{"timestamp_with_hours":"0:28:30","description":"Use `summarize` from the `dplyr` package to create the summary statistics including the `number of matches`, `winning percentage`, `date of first match`, `date of most recent match`.","functions":"summarize","packages":"dplyr","timestamp_sec":1710},{"timestamp_with_hours":"0:34:15","description":"Use `type_convert` from the `readr` package to convert `character` class variables to `numeric`.","functions":"type_convert","packages":"readr","timestamp_sec":2055},{"timestamp_with_hours":"0:35:00","description":"Use `summarize_all` from the `dplyr` package to calculate the calculate which fraction of the data is not `NA`.","functions":"summarize_all","packages":"dplyr","timestamp_sec":2100},{"timestamp_with_hours":"0:42:00","description":"Use `summarize` from the `dplyr` package to determine players `number of matches`, `winning percentage`, `average attacks`, `average errors`, `average kills`, `average aces`, `average serve errors`, and `total rows with data` for years prior to 2019. \n\nThe summary statistics are then used to answer how would we could predict if a player will win in 2019 using `geom_point` and `logistic regression`. Initially, David wanted to predict performance based on players first year performance. (NOTE - David mistakingly grouped by `year` and `age`. He cathces this around 1:02:00.)","functions":"summarize | inner_join | geom_point | glm |cbind","packages":"dplyr | ggplot2","timestamp_sec":2520},{"timestamp_with_hours":"0:49:25","description":"Use  `year` from the `lubridate` package within a `group_by` to determine the `age` for each play given their `birthdate`.","functions":"summarize | year","packages":"lubridate","timestamp_sec":2965},{"timestamp_with_hours":"0:54:30","description":"Turn the summary statistics at timestamp `42:00` into a `.` DOT `%>%` PIPE function.","timestamp_sec":3270},{"timestamp_with_hours":"1:04:30","description":"Summary of screencast.","timestamp_sec":3870}]</script>
+```{=html}
+<div id="topics">
+  <div class="topic">
+    <h3 id="ts-330">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(330, this)">0:5:30</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">pivot_longer</span></div><div><span class="badge-packages badge bg-primary">dplyr</span></div></div>
+    <div class="topic_description">
+      <p>Use <code>pivot_longer</code> from the <code>dplyr</code> package to pivot the data set from <code>wide</code> to <code>long</code>.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-440">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(440, this)">0:7:20</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">mutate_at</span></div><div><span class="badge-packages badge bg-primary">dplyr</span></div></div>
+    <div class="topic_description">
+      <p>Use <code>mutate_at</code> from the <code>dplyr</code> package with <code>starts_with</code> to change the class to <code>character</code> for all columns that start with <code>w_</code> and <code>l_</code>.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-480">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(480, this)">0:8:00</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">separate</span></div><div><span class="badge-packages badge bg-primary">tidyr</span></div></div>
+    <div class="topic_description">
+      <p>Use <code>separate</code> from the <code>tidyr</code> package to separate the <code>name</code> variable into three columns with <code>extra = merge</code> and <code>fill = right</code>.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-635">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(635, this)">0:10:35</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">rename</span></div><div><span class="badge-packages badge bg-primary">dplyr</span></div></div>
+    <div class="topic_description">
+      <p>Use <code>rename</code> from the <code>dplyr</code> package to rename <code>w_player1</code>, <code>w_player2</code>, <code>l_player1</code>, and <code>l_player2</code>.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-770">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(770, this)">0:12:50</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">pivot_wider</span></div><div><span class="badge-packages badge bg-primary">dplyr</span></div></div>
+    <div class="topic_description">
+      <p>Use <code>pivot_wider</code> from the <code>dplyr</code> package to pivot the <code>name</code> variable from <code>long</code> to <code>wide</code>.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-915">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(915, this)">0:15:15</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">str_to_upper</span></div><div><span class="badge-packages badge bg-primary">stringr</span></div></div>
+    <div class="topic_description">
+      <p>Use <code>str_to_upper</code> to convert the <code>winner_loser</code> <code>w</code> and <code>l</code> values to uppercase.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1225">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1225, this)">0:20:25</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">row_number</span></div><div><span class="badge-packages badge bg-primary">dplyr</span></div></div>
+    <div class="topic_description">
+      <p>Add unique row numbers for each match using <code>mutate</code> with <code>row_number</code> from the <code>dplyr</code> package.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1280">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1280, this)">0:21:20</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">separate_rows</span></div><div><span class="badge-packages badge bg-primary">tidyr</span></div></div>
+    <div class="topic_description">
+      <p>Separate the <code>score</code> values into multiple rows using <code>separate_rows</code> from the <code>tidyr</code> package.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1365">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1365, this)">0:22:45</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">separate</span></div><div><span class="badge-packages badge bg-primary">tidyr</span></div></div>
+    <div class="topic_description">
+      <p>Use <code>separate</code> from the <code>tidyr</code> package to actual scores into two columns, one for the winners score <code>w_score</code> and another for the losers score <code>l_score</code>.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1425">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1425, this)">0:23:45</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">na_if</span></div><div><span class="badge-packages badge bg-primary">dplyr</span></div></div>
+    <div class="topic_description">
+      <p>Use <code>na_if</code> from the <code>dplyr</code> package to change the <code>Forfeit or other</code> value from the <code>score</code> variable to <code>NA</code>.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1475">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1475, this)">0:24:35</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">str_remove</span></div><div><span class="badge-packages badge bg-primary">stringr</span></div></div>
+    <div class="topic_description">
+      <p>Use <code>str_remove</code> from the <code>stringr</code> package to remove scores that include <code>retired</code>.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1525">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1525, this)">0:25:25</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">mutate</span><span class="badge-functions badge bg-info">group_by</span><span class="badge-functions badge bg-info">summarize</span></div><div><span class="badge-packages badge bg-primary">dplyr</span></div></div>
+    <div class="topic_description">
+      <p>Determine how many times the winners score <code>w_score</code> is  greter than the losers score <code>l_score</code> at least 1/3 of the time.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1710">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1710, this)">0:28:30</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">summarize</span></div><div><span class="badge-packages badge bg-primary">dplyr</span></div></div>
+    <div class="topic_description">
+      <p>Use <code>summarize</code> from the <code>dplyr</code> package to create the summary statistics including the <code>number of matches</code>, <code>winning percentage</code>, <code>date of first match</code>, <code>date of most recent match</code>.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2055">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2055, this)">0:34:15</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">type_convert</span></div><div><span class="badge-packages badge bg-primary">readr</span></div></div>
+    <div class="topic_description">
+      <p>Use <code>type_convert</code> from the <code>readr</code> package to convert <code>character</code> class variables to <code>numeric</code>.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2100">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2100, this)">0:35:00</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">summarize_all</span></div><div><span class="badge-packages badge bg-primary">dplyr</span></div></div>
+    <div class="topic_description">
+      <p>Use <code>summarize_all</code> from the <code>dplyr</code> package to calculate the calculate which fraction of the data is not <code>NA</code>.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2520">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2520, this)">0:42:00</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">summarize</span><span class="badge-functions badge bg-info">inner_join</span><span class="badge-functions badge bg-info">geom_point</span><span class="badge-functions badge bg-info">glm</span><span class="badge-functions badge bg-info">cbind</span></div><div><span class="badge-packages badge bg-primary">dplyr</span><span class="badge-packages badge bg-primary">ggplot2</span></div></div>
+    <div class="topic_description">
+      <p>Use <code>summarize</code> from the <code>dplyr</code> package to determine players <code>number of matches</code>, <code>winning percentage</code>, <code>average attacks</code>, <code>average errors</code>, <code>average kills</code>, <code>average aces</code>, <code>average serve errors</code>, and <code>total rows with data</code> for years prior to 2019.</p>
+<p>The summary statistics are then used to answer how would we could predict if a player will win in 2019 using <code>geom_point</code> and <code>logistic regression</code>. Initially, David wanted to predict performance based on players first year performance. (NOTE - David mistakingly grouped by <code>year</code> and <code>age</code>. He cathces this around 1:02:00.)</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2965">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2965, this)">0:49:25</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">summarize</span><span class="badge-functions badge bg-info">year</span></div><div><span class="badge-packages badge bg-primary">lubridate</span></div></div>
+    <div class="topic_description">
+      <p>Use  <code>year</code> from the <code>lubridate</code> package within a <code>group_by</code> to determine the <code>age</code> for each play given their <code>birthdate</code>.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-3270">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(3270, this)">0:54:30</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Turn the summary statistics at timestamp <code>42:00</code> into a <code>.</code> DOT <code>%&gt;%</code> PIPE function.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-3870">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(3870, this)">1:04:30</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Summary of screencast.</p>
+
+    </div>
+  </div>
+</div>
+```
+     
+<script>
+// 2. This code loads the IFrame Player API code asynchronously.
+var tag = document.createElement("script");
+
+tag.src = "https://www.youtube.com/iframe_api";
+var firstScriptTag = document.getElementsByTagName("script")[0];
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+// 3. This function creates an <iframe> (and YouTube player)
+//    after the API code downloads.
+var videoId = document.getElementById("yt-player").dataset.videoId;
+var player;
+function onYouTubeIframeAPIReady() {
+  player = new YT.Player("yt-player", {
+    height: "486",
+    width: "864",
+    videoId: videoId,
+    playerVars: {
+      "playsinline": 1
+    },
+    events: {
+      onStateChange: function(event) {
+        if (event.data == YT.PlayerState.PLAYING) {
+          followTimestamps()
+        }
+      }
+    }
+  });
+}
+
+function playerSkipToTimestamp(seconds, tsElement) {
+  player.seekTo(seconds, true)
+  tsElement.scrollIntoView()
+  document.getElementById("screencast").scrollIntoView()
+}
+
+const timestamps = Array.from(document.querySelectorAll('.topic h3[id^="ts-"]'))
+  .map(el => el.id.replace('ts-', ''))
+
+function followTimestamps() {
+  if (player.getPlayerState() !== 1) {
+    return
+  }
+  const currentTime = `${Math.floor(player.getCurrentTime())}`
+  if (timestamps.includes(currentTime)) {
+    const el = document.getElementById(`ts-${currentTime}`)
+    if (el) {
+      el.scrollIntoView()
+      document.getElementById("screencast").scrollIntoView()
+    }
+  }
+  setTimeout(followTimestamps, 1000)
+}
+</script>

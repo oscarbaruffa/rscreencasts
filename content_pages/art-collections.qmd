@@ -5,6 +5,8 @@ description: |
   geom_area plot, distributions, calculating area (square meters) and ratio (width / height)
 date: 2021-01-11
 date-format: long
+aliases:
+  - "Art Collections.html"
 ---
 
 Notable topics: geom_area plot, distributions, calculating area (square meters) and ratio (width / height)
@@ -15,10 +17,258 @@ Timestamps by: Eric Fletcher
 
 [View code](https://github.com/dgrtwo/data-screencasts/blob/master/2021_01_12_tate_art.Rmd)
 
-## Full screencast
+## Screencast
 
-<iframe class="video" src="https://www.youtube.com/embed/AqwA5EJfLXo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div id="yt-player" data-video-id="AqwA5EJfLXo"></div>
 
 ## Timestamps
 
-<script id="timestamps" type="application-json">[{"timestamp_with_hours":"0:1:55","description":"Using `clean_names` to convert variable names from `camelcase` to `snakecase`.","functions":"clean_names","packages":"janitor","timestamp_sec":115},{"timestamp_with_hours":"0:4:05","description":"Use `fct_reorder` to reorder `geom_col` columns in ascending order.","functions":"fct_reorder | geom_col","packages":"forcats | ggplot2","timestamp_sec":245},{"timestamp_with_hours":"0:4:50","description":"\"Use `extract` to extract a character column into multiple columns using the regular expression `\"\"(.*) on (.*)\"\"` at `6:05` David decides to change this to: Use `separate` with `sep = \"\" on \"\"` and `fill = \"\"left\"\"` and `extra = \"\"merge\"\"` to control what happens when there are not enoughor too many pieces. at `7:10` David decides to change to `fill = \"\"right\"\"`.\"","functions":"extract | separate","packages":"tidyr","timestamp_sec":290},{"timestamp_with_hours":"0:7:50","description":"Use `replace_na` to replace NAs with specified values. In this case replace them with `Missing`.","functions":"replace_na","packages":"tidyr","timestamp_sec":470},{"timestamp_with_hours":"0:10:25","description":"\"Use `fct_lump` to lump `artist` and `medium` levels except for the n most frequent. at `11:30` David decides to use `filter(fct_lump(artist, 16) != \"\"Other\"\")` to get rid of the artist `Other` category. \"","functions":"fct_lump | filter","packages":"forcats | dplyr","timestamp_sec":625},{"timestamp_with_hours":"0:13:55","description":"\"Create a `geom_area` plot to show the distribution of paintings by medium over time. At `15:35` David decides to change from count to percentage to make it easier to show the difference in composition using `mutate(pct = n / sum)`.\"","functions":"geom_area","packages":"ggplot2","timestamp_sec":835},{"timestamp_with_hours":"0:14:20","description":"Bucket `year` variable into decades using `round(year -1)` to round the year to the nearest 10.","functions":"count | round","packages":"base | dplyr","timestamp_sec":860},{"timestamp_with_hours":"0:16:35","description":"Use `scale_y_continuous(labels = scales::percent)` to change y-axis labels to percent format.","functions":"scale_y_continuous","packages":"scales","timestamp_sec":995},{"timestamp_with_hours":"0:18:35","description":"Turn the `geom_area` plot into a faceted `geom_col`.","functions":"facet_wrap | geom_col","packages":"ggplot2","timestamp_sec":1115},{"timestamp_with_hours":"0:21:35","description":"\"Calculate the percentage of artists for each medium per decade. \"","functions":"mutate | group_by | summarize | complete","packages":"dplyr | tidyr","timestamp_sec":1295},{"timestamp_with_hours":"0:29:20","description":"Calculate the distribution of the area (square meters) and ratio (width / height) of the art pieces.","functions":"filter | mutate | ggplot | geom_histogram | scale_x_log10 | geom_vline","packages":"dplyr | ggplot2","timestamp_sec":1760},{"timestamp_with_hours":"0:38:25","description":"Categorize the pieces by shape(landscape, portait, scquare) based on their ratio then plot using `geom_area` to look at the composition over time.","functions":"mutate | case_when | geom_area | complete","packages":"dplyr | ggplot2","timestamp_sec":2305},{"timestamp_with_hours":"0:41:35","description":"Craete a `line plot` showing the median ratio by decade over time.","functions":"group_by | summarize | filter | ggplot | geom_line | geom_point","packages":"dplyr | ggplot2","timestamp_sec":2495},{"timestamp_with_hours":"0:44:15","description":"Craete a `line plot` showing the median area by decade over time.","functions":"group_by | summarize | filter | ggplot | geom_line | geom_point","packages":"dplyr | ggplot2","timestamp_sec":2655},{"timestamp_with_hours":"0:46:05","description":"Create a `boxplot` showing the distribution of area over time.","functions":"mutate | filter | ggplot | geom_boxplot | scale_y_log10","packages":"dplyr | ggplot2","timestamp_sec":2765},{"timestamp_with_hours":"0:48:25","description":"Create various `summary statistics` for the artists such as `avg_year`, first_year`, `last_year`, `n_pieces`, `median_area`, `median_ratio`.","functions":"group_by | summarize | arrange","packages":"dplyr","timestamp_sec":2905},{"timestamp_with_hours":"0:51:00","description":"Create a `boxplot` showing the distribution of ratio over time for n amount of artists. Use `glue` to concatonate number of pieces for each artist ont he y axis.","functions":"filter | add_count | mutate | ggplot | geom_boxplot | scale_x_log10 | geom_vline | glue","packages":"dplyr | ggplot2 | glue","timestamp_sec":3060},{"timestamp_with_hours":"0:56:20","description":"Create a `boxplot` showing the distribution of ratio over time for each medium. Use `glue` to concatonate number of pieces for each medium on the y axis.","functions":"filter | add_count | mutate | ggplot | geom_boxplot | scale_x_log10 | geom_vline | glue","packages":"dplyr | ggplot2 | glue","timestamp_sec":3380},{"timestamp_with_hours":"0:59:10","description":"Summary of screencast","timestamp_sec":3550}]</script>
+```{=html}
+<div id="topics">
+  <div class="topic">
+    <h3 id="ts-115">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(115, this)">0:1:55</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">clean_names</span></div><div><span class="badge-packages badge bg-primary">janitor</span></div></div>
+    <div class="topic_description">
+      <p>Using <code>clean_names</code> to convert variable names from <code>camelcase</code> to <code>snakecase</code>.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-245">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(245, this)">0:4:05</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">fct_reorder</span><span class="badge-functions badge bg-info">geom_col</span></div><div><span class="badge-packages badge bg-primary">forcats</span><span class="badge-packages badge bg-primary">ggplot2</span></div></div>
+    <div class="topic_description">
+      <p>Use <code>fct_reorder</code> to reorder <code>geom_col</code> columns in ascending order.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-290">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(290, this)">0:4:50</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">extract</span><span class="badge-functions badge bg-info">separate</span></div><div><span class="badge-packages badge bg-primary">tidyr</span></div></div>
+    <div class="topic_description">
+      <p>&quot;Use <code>extract</code> to extract a character column into multiple columns using the regular expression <code>&quot;&quot;(.*) on (.*)&quot;&quot;</code> at <code>6:05</code> David decides to change this to: Use <code>separate</code> with <code>sep = &quot;&quot; on &quot;&quot;</code> and <code>fill = &quot;&quot;left&quot;&quot;</code> and <code>extra = &quot;&quot;merge&quot;&quot;</code> to control what happens when there are not enoughor too many pieces. at <code>7:10</code> David decides to change to <code>fill = &quot;&quot;right&quot;&quot;</code>.&quot;</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-470">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(470, this)">0:7:50</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">replace_na</span></div><div><span class="badge-packages badge bg-primary">tidyr</span></div></div>
+    <div class="topic_description">
+      <p>Use <code>replace_na</code> to replace NAs with specified values. In this case replace them with <code>Missing</code>.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-625">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(625, this)">0:10:25</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">fct_lump</span><span class="badge-functions badge bg-info">filter</span></div><div><span class="badge-packages badge bg-primary">forcats</span><span class="badge-packages badge bg-primary">dplyr</span></div></div>
+    <div class="topic_description">
+      <p>&quot;Use <code>fct_lump</code> to lump <code>artist</code> and <code>medium</code> levels except for the n most frequent. at <code>11:30</code> David decides to use <code>filter(fct_lump(artist, 16) != &quot;&quot;Other&quot;&quot;)</code> to get rid of the artist <code>Other</code> category. &quot;</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-835">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(835, this)">0:13:55</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">geom_area</span></div><div><span class="badge-packages badge bg-primary">ggplot2</span></div></div>
+    <div class="topic_description">
+      <p>&quot;Create a <code>geom_area</code> plot to show the distribution of paintings by medium over time. At <code>15:35</code> David decides to change from count to percentage to make it easier to show the difference in composition using <code>mutate(pct = n / sum)</code>.&quot;</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-860">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(860, this)">0:14:20</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">count</span><span class="badge-functions badge bg-info">round</span></div><div><span class="badge-packages badge bg-primary">base</span><span class="badge-packages badge bg-primary">dplyr</span></div></div>
+    <div class="topic_description">
+      <p>Bucket <code>year</code> variable into decades using <code>round(year -1)</code> to round the year to the nearest 10.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-995">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(995, this)">0:16:35</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">scale_y_continuous</span></div><div><span class="badge-packages badge bg-primary">scales</span></div></div>
+    <div class="topic_description">
+      <p>Use <code>scale_y_continuous(labels = scales::percent)</code> to change y-axis labels to percent format.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1115">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1115, this)">0:18:35</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">facet_wrap</span><span class="badge-functions badge bg-info">geom_col</span></div><div><span class="badge-packages badge bg-primary">ggplot2</span></div></div>
+    <div class="topic_description">
+      <p>Turn the <code>geom_area</code> plot into a faceted <code>geom_col</code>.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1295">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1295, this)">0:21:35</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">mutate</span><span class="badge-functions badge bg-info">group_by</span><span class="badge-functions badge bg-info">summarize</span><span class="badge-functions badge bg-info">complete</span></div><div><span class="badge-packages badge bg-primary">dplyr</span><span class="badge-packages badge bg-primary">tidyr</span></div></div>
+    <div class="topic_description">
+      <p>&quot;Calculate the percentage of artists for each medium per decade. &quot;</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1760">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1760, this)">0:29:20</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">filter</span><span class="badge-functions badge bg-info">mutate</span><span class="badge-functions badge bg-info">ggplot</span><span class="badge-functions badge bg-info">geom_histogram</span><span class="badge-functions badge bg-info">scale_x_log10</span><span class="badge-functions badge bg-info">geom_vline</span></div><div><span class="badge-packages badge bg-primary">dplyr</span><span class="badge-packages badge bg-primary">ggplot2</span></div></div>
+    <div class="topic_description">
+      <p>Calculate the distribution of the area (square meters) and ratio (width / height) of the art pieces.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2305">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2305, this)">0:38:25</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">mutate</span><span class="badge-functions badge bg-info">case_when</span><span class="badge-functions badge bg-info">geom_area</span><span class="badge-functions badge bg-info">complete</span></div><div><span class="badge-packages badge bg-primary">dplyr</span><span class="badge-packages badge bg-primary">ggplot2</span></div></div>
+    <div class="topic_description">
+      <p>Categorize the pieces by shape(landscape, portait, scquare) based on their ratio then plot using <code>geom_area</code> to look at the composition over time.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2495">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2495, this)">0:41:35</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">group_by</span><span class="badge-functions badge bg-info">summarize</span><span class="badge-functions badge bg-info">filter</span><span class="badge-functions badge bg-info">ggplot</span><span class="badge-functions badge bg-info">geom_line</span><span class="badge-functions badge bg-info">geom_point</span></div><div><span class="badge-packages badge bg-primary">dplyr</span><span class="badge-packages badge bg-primary">ggplot2</span></div></div>
+    <div class="topic_description">
+      <p>Craete a <code>line plot</code> showing the median ratio by decade over time.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2655">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2655, this)">0:44:15</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">group_by</span><span class="badge-functions badge bg-info">summarize</span><span class="badge-functions badge bg-info">filter</span><span class="badge-functions badge bg-info">ggplot</span><span class="badge-functions badge bg-info">geom_line</span><span class="badge-functions badge bg-info">geom_point</span></div><div><span class="badge-packages badge bg-primary">dplyr</span><span class="badge-packages badge bg-primary">ggplot2</span></div></div>
+    <div class="topic_description">
+      <p>Craete a <code>line plot</code> showing the median area by decade over time.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2765">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2765, this)">0:46:05</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">mutate</span><span class="badge-functions badge bg-info">filter</span><span class="badge-functions badge bg-info">ggplot</span><span class="badge-functions badge bg-info">geom_boxplot</span><span class="badge-functions badge bg-info">scale_y_log10</span></div><div><span class="badge-packages badge bg-primary">dplyr</span><span class="badge-packages badge bg-primary">ggplot2</span></div></div>
+    <div class="topic_description">
+      <p>Create a <code>boxplot</code> showing the distribution of area over time.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2905">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2905, this)">0:48:25</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">group_by</span><span class="badge-functions badge bg-info">summarize</span><span class="badge-functions badge bg-info">arrange</span></div><div><span class="badge-packages badge bg-primary">dplyr</span></div></div>
+    <div class="topic_description">
+      <p>Create various <code>summary statistics</code> for the artists such as <code>avg_year</code>, first_year<code>, </code>last_year<code>, </code>n_pieces<code>, </code>median_area<code>, </code>median_ratio`.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-3060">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(3060, this)">0:51:00</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">filter</span><span class="badge-functions badge bg-info">add_count</span><span class="badge-functions badge bg-info">mutate</span><span class="badge-functions badge bg-info">ggplot</span><span class="badge-functions badge bg-info">geom_boxplot</span><span class="badge-functions badge bg-info">scale_x_log10</span><span class="badge-functions badge bg-info">geom_vline</span><span class="badge-functions badge bg-info">glue</span></div><div><span class="badge-packages badge bg-primary">dplyr</span><span class="badge-packages badge bg-primary">ggplot2</span><span class="badge-packages badge bg-primary">glue</span></div></div>
+    <div class="topic_description">
+      <p>Create a <code>boxplot</code> showing the distribution of ratio over time for n amount of artists. Use <code>glue</code> to concatonate number of pieces for each artist ont he y axis.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-3380">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(3380, this)">0:56:20</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">filter</span><span class="badge-functions badge bg-info">add_count</span><span class="badge-functions badge bg-info">mutate</span><span class="badge-functions badge bg-info">ggplot</span><span class="badge-functions badge bg-info">geom_boxplot</span><span class="badge-functions badge bg-info">scale_x_log10</span><span class="badge-functions badge bg-info">geom_vline</span><span class="badge-functions badge bg-info">glue</span></div><div><span class="badge-packages badge bg-primary">dplyr</span><span class="badge-packages badge bg-primary">ggplot2</span><span class="badge-packages badge bg-primary">glue</span></div></div>
+    <div class="topic_description">
+      <p>Create a <code>boxplot</code> showing the distribution of ratio over time for each medium. Use <code>glue</code> to concatonate number of pieces for each medium on the y axis.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-3550">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(3550, this)">0:59:10</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Summary of screencast</p>
+
+    </div>
+  </div>
+</div>
+```
+     
+<script>
+// 2. This code loads the IFrame Player API code asynchronously.
+var tag = document.createElement("script");
+
+tag.src = "https://www.youtube.com/iframe_api";
+var firstScriptTag = document.getElementsByTagName("script")[0];
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+// 3. This function creates an <iframe> (and YouTube player)
+//    after the API code downloads.
+var videoId = document.getElementById("yt-player").dataset.videoId;
+var player;
+function onYouTubeIframeAPIReady() {
+  player = new YT.Player("yt-player", {
+    height: "486",
+    width: "864",
+    videoId: videoId,
+    playerVars: {
+      "playsinline": 1
+    },
+    events: {
+      onStateChange: function(event) {
+        if (event.data == YT.PlayerState.PLAYING) {
+          followTimestamps()
+        }
+      }
+    }
+  });
+}
+
+function playerSkipToTimestamp(seconds, tsElement) {
+  player.seekTo(seconds, true)
+  tsElement.scrollIntoView()
+  document.getElementById("screencast").scrollIntoView()
+}
+
+const timestamps = Array.from(document.querySelectorAll('.topic h3[id^="ts-"]'))
+  .map(el => el.id.replace('ts-', ''))
+
+function followTimestamps() {
+  if (player.getPlayerState() !== 1) {
+    return
+  }
+  const currentTime = `${Math.floor(player.getCurrentTime())}`
+  if (timestamps.includes(currentTime)) {
+    const el = document.getElementById(`ts-${currentTime}`)
+    if (el) {
+      el.scrollIntoView()
+      document.getElementById("screencast").scrollIntoView()
+    }
+  }
+  setTimeout(followTimestamps, 1000)
+}
+</script>

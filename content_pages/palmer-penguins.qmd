@@ -5,6 +5,8 @@ description: |
   Modeling (logistic regression, k-nearest neighbors, decision tree, multiclass logistic regression) with cross validated accuracy
 date: 2020-07-27
 date-format: long
+aliases:
+  - "Palmer Penguins.html"
 ---
 
 Notable topics: Modeling (logistic regression, k-nearest neighbors, decision tree, multiclass logistic regression) with cross validated accuracy
@@ -15,10 +17,191 @@ Timestamps by: Eric Fletcher
 
 [View code](https://github.com/dgrtwo/data-screencasts/blob/master/2020_07_28_penguins.Rmd)
 
-## Full screencast
+## Screencast
 
-<iframe class="video" src="https://www.youtube.com/embed/ImpXawPNCfM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div id="yt-player" data-video-id="ImpXawPNCfM"></div>
 
 ## Timestamps
 
-<script id="timestamps" type="application-json">[{"timestamp_with_hours":"0:11:17","description":"Create a pivoted histogram plot to visualize the distribution of penguin metrics using `pivot_longer`, `geom_histogram`, and `facet_wrap`","functions":"pivot_longer | geom_histogram | facet_wrap","packages":"tidyr | ggplot2","timestamp_sec":677},{"timestamp_with_hours":"0:14:40","description":"Create a pivoted density plot  to visualize the distribution of penguin metrics using `geom_density` and `facet_wrap`","functions":"geom_density | facet_wrap","packages":"ggplot2","timestamp_sec":880},{"timestamp_with_hours":"0:15:21","description":"Create a pivoted boxplot plot to visualize the distribution of penguin metrics using `geom_boxplot` and `facet_wrap`","functions":"geom_boxplot | facet_wrap","packages":"ggplot2","timestamp_sec":921},{"timestamp_with_hours":"0:17:50","description":"Create a bar plot to show penguin species changed over time","functions":"geom_bar","packages":"ggplot2","timestamp_sec":1070},{"timestamp_with_hours":"0:18:25","description":"Create a bar plot to show specie counts per island","functions":"geom_bar","packages":"ggplot2","timestamp_sec":1105},{"timestamp_with_hours":"0:20:00","description":"Create a logistic regression model to predict if a penguin is Adelie or not using bill length with cross validaiton of metrics","functions":"initital_split | training | logistic_reg | set_engine |\nfit | fct_lump | predict | metrics | vfold_cv | \nfit_resamples | collect_metrics |","packages":"tidymodels | rsample | parsnip\nyardstick |","timestamp_sec":1200},{"timestamp_with_hours":"0:39:35","description":"Create second logistic regression model using 4 predictive metrics (bill length, bill depth, flipper length, body mass) and then compare the accuracy of both models","functions":"initital_split | training | logistic_reg | set_engine |\nfit | fct_lump | predict | metrics | vfold_cv | \nfit_resamples | collect_metrics |","packages":"tidymodels | rsample | parsnip\nyardstick |","timestamp_sec":2375},{"timestamp_with_hours":"0:43:25","description":"Create a k-nearest neighbor model and then compare accuracy against logistic regression models to see which has the highest cross validated accuracy","functions":"nearest_neighbor | initital_split | training | logistic_reg |\nset_engine | fit | fct_lump | predict | metrics | vfold_cv | \nfit_resamples | collect_metrics","packages":"tidymodels | rsample | parsnip\nyardstick |","timestamp_sec":2605},{"timestamp_with_hours":"0:53:05","description":"What is the accuracy of the testing holdout data on the k-nearest neighbor model?","functions":"testing | predict | metrics","packages":"rsample | stats | yardstick","timestamp_sec":3185},{"timestamp_with_hours":"1:05:40","description":"Create a decision tree and then compare accuracy against the previous models to see which has the highest cross validated accuracy + how to extract a decision tree","functions":"decision_tree | set_engine","packages":"parsnip","timestamp_sec":3940},{"timestamp_with_hours":"1:10:45","description":"Perform multi class regression using `multinom_reg`","functions":"multinom_reg | set_engine | fit_resamples","packages":"parsnip | tune","timestamp_sec":4245},{"timestamp_with_hours":"1:19:40","description":"Summary of screencast","timestamp_sec":4780}]</script>
+```{=html}
+<div id="topics">
+  <div class="topic">
+    <h3 id="ts-677">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(677, this)">0:11:17</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">pivot_longer</span><span class="badge-functions badge bg-info">geom_histogram</span><span class="badge-functions badge bg-info">facet_wrap</span></div><div><span class="badge-packages badge bg-primary">tidyr</span><span class="badge-packages badge bg-primary">ggplot2</span></div></div>
+    <div class="topic_description">
+      <p>Create a pivoted histogram plot to visualize the distribution of penguin metrics using <code>pivot_longer</code>, <code>geom_histogram</code>, and <code>facet_wrap</code></p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-880">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(880, this)">0:14:40</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">geom_density</span><span class="badge-functions badge bg-info">facet_wrap</span></div><div><span class="badge-packages badge bg-primary">ggplot2</span></div></div>
+    <div class="topic_description">
+      <p>Create a pivoted density plot  to visualize the distribution of penguin metrics using <code>geom_density</code> and <code>facet_wrap</code></p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-921">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(921, this)">0:15:21</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">geom_boxplot</span><span class="badge-functions badge bg-info">facet_wrap</span></div><div><span class="badge-packages badge bg-primary">ggplot2</span></div></div>
+    <div class="topic_description">
+      <p>Create a pivoted boxplot plot to visualize the distribution of penguin metrics using <code>geom_boxplot</code> and <code>facet_wrap</code></p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1070">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1070, this)">0:17:50</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">geom_bar</span></div><div><span class="badge-packages badge bg-primary">ggplot2</span></div></div>
+    <div class="topic_description">
+      <p>Create a bar plot to show penguin species changed over time</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1105">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1105, this)">0:18:25</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">geom_bar</span></div><div><span class="badge-packages badge bg-primary">ggplot2</span></div></div>
+    <div class="topic_description">
+      <p>Create a bar plot to show specie counts per island</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1200">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1200, this)">0:20:00</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">initital_split</span><span class="badge-functions badge bg-info">training</span><span class="badge-functions badge bg-info">logistic_reg</span><span class="badge-functions badge bg-info">set_engine</span><span class="badge-functions badge bg-info">fit</span><span class="badge-functions badge bg-info">fct_lump</span><span class="badge-functions badge bg-info">predict</span><span class="badge-functions badge bg-info">metrics</span><span class="badge-functions badge bg-info">vfold_cv</span><span class="badge-functions badge bg-info">fit_resamples</span><span class="badge-functions badge bg-info">collect_metrics</span></div><div><span class="badge-packages badge bg-primary">tidymodels</span><span class="badge-packages badge bg-primary">rsample</span><span class="badge-packages badge bg-primary">parsnip
+yardstick</span></div></div>
+    <div class="topic_description">
+      <p>Create a logistic regression model to predict if a penguin is Adelie or not using bill length with cross validaiton of metrics</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2375">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2375, this)">0:39:35</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">initital_split</span><span class="badge-functions badge bg-info">training</span><span class="badge-functions badge bg-info">logistic_reg</span><span class="badge-functions badge bg-info">set_engine</span><span class="badge-functions badge bg-info">fit</span><span class="badge-functions badge bg-info">fct_lump</span><span class="badge-functions badge bg-info">predict</span><span class="badge-functions badge bg-info">metrics</span><span class="badge-functions badge bg-info">vfold_cv</span><span class="badge-functions badge bg-info">fit_resamples</span><span class="badge-functions badge bg-info">collect_metrics</span></div><div><span class="badge-packages badge bg-primary">tidymodels</span><span class="badge-packages badge bg-primary">rsample</span><span class="badge-packages badge bg-primary">parsnip
+yardstick</span></div></div>
+    <div class="topic_description">
+      <p>Create second logistic regression model using 4 predictive metrics (bill length, bill depth, flipper length, body mass) and then compare the accuracy of both models</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2605">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2605, this)">0:43:25</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">nearest_neighbor</span><span class="badge-functions badge bg-info">initital_split</span><span class="badge-functions badge bg-info">training</span><span class="badge-functions badge bg-info">logistic_reg</span><span class="badge-functions badge bg-info">set_engine</span><span class="badge-functions badge bg-info">fit</span><span class="badge-functions badge bg-info">fct_lump</span><span class="badge-functions badge bg-info">predict</span><span class="badge-functions badge bg-info">metrics</span><span class="badge-functions badge bg-info">vfold_cv</span><span class="badge-functions badge bg-info">fit_resamples</span><span class="badge-functions badge bg-info">collect_metrics</span></div><div><span class="badge-packages badge bg-primary">tidymodels</span><span class="badge-packages badge bg-primary">rsample</span><span class="badge-packages badge bg-primary">parsnip
+yardstick</span></div></div>
+    <div class="topic_description">
+      <p>Create a k-nearest neighbor model and then compare accuracy against logistic regression models to see which has the highest cross validated accuracy</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-3185">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(3185, this)">0:53:05</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">testing</span><span class="badge-functions badge bg-info">predict</span><span class="badge-functions badge bg-info">metrics</span></div><div><span class="badge-packages badge bg-primary">rsample</span><span class="badge-packages badge bg-primary">stats</span><span class="badge-packages badge bg-primary">yardstick</span></div></div>
+    <div class="topic_description">
+      <p>What is the accuracy of the testing holdout data on the k-nearest neighbor model?</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-3940">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(3940, this)">1:05:40</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">decision_tree</span><span class="badge-functions badge bg-info">set_engine</span></div><div><span class="badge-packages badge bg-primary">parsnip</span></div></div>
+    <div class="topic_description">
+      <p>Create a decision tree and then compare accuracy against the previous models to see which has the highest cross validated accuracy + how to extract a decision tree</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-4245">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(4245, this)">1:10:45</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">multinom_reg</span><span class="badge-functions badge bg-info">set_engine</span><span class="badge-functions badge bg-info">fit_resamples</span></div><div><span class="badge-packages badge bg-primary">parsnip</span><span class="badge-packages badge bg-primary">tune</span></div></div>
+    <div class="topic_description">
+      <p>Perform multi class regression using <code>multinom_reg</code></p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-4780">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(4780, this)">1:19:40</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Summary of screencast</p>
+
+    </div>
+  </div>
+</div>
+```
+     
+<script>
+// 2. This code loads the IFrame Player API code asynchronously.
+var tag = document.createElement("script");
+
+tag.src = "https://www.youtube.com/iframe_api";
+var firstScriptTag = document.getElementsByTagName("script")[0];
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+// 3. This function creates an <iframe> (and YouTube player)
+//    after the API code downloads.
+var videoId = document.getElementById("yt-player").dataset.videoId;
+var player;
+function onYouTubeIframeAPIReady() {
+  player = new YT.Player("yt-player", {
+    height: "486",
+    width: "864",
+    videoId: videoId,
+    playerVars: {
+      "playsinline": 1
+    },
+    events: {
+      onStateChange: function(event) {
+        if (event.data == YT.PlayerState.PLAYING) {
+          followTimestamps()
+        }
+      }
+    }
+  });
+}
+
+function playerSkipToTimestamp(seconds, tsElement) {
+  player.seekTo(seconds, true)
+  tsElement.scrollIntoView()
+  document.getElementById("screencast").scrollIntoView()
+}
+
+const timestamps = Array.from(document.querySelectorAll('.topic h3[id^="ts-"]'))
+  .map(el => el.id.replace('ts-', ''))
+
+function followTimestamps() {
+  if (player.getPlayerState() !== 1) {
+    return
+  }
+  const currentTime = `${Math.floor(player.getCurrentTime())}`
+  if (timestamps.includes(currentTime)) {
+    const el = document.getElementById(`ts-${currentTime}`)
+    if (el) {
+      el.scrollIntoView()
+      document.getElementById("screencast").scrollIntoView()
+    }
+  }
+  setTimeout(followTimestamps, 1000)
+}
+</script>

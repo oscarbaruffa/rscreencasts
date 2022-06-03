@@ -5,6 +5,8 @@ description: |
   NA
 date: 2019-09-30
 date-format: long
+aliases:
+  - "Pizza Ratings.html"
 ---
 
 Notable topics: NA
@@ -15,10 +17,278 @@ Timestamps by: Alex Cookson
 
 [View code](https://github.com/dgrtwo/data-screencasts/blob/master/nyc-pizza.Rmd)
 
-## Full screencast
+## Screencast
 
-<iframe class="video" src="https://www.youtube.com/embed/Mkac8DHScps" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div id="yt-player" data-video-id="Mkac8DHScps"></div>
 
 ## Timestamps
 
-<script id="timestamps" type="application-json">[{"timestamp_with_hours":"0:4:45","description":"Transforming time into something more readable (from time value of seconds since Unix epoch [1970-01-01] ), then converting it into a date","timestamp_sec":285},{"timestamp_with_hours":"0:9:05","description":"Formatting x-axis text so that it is rotated and readable, then re-ordering using fct_relevel function so that it is in its proper ordinal order","functions":"fct_relevel","timestamp_sec":545},{"timestamp_with_hours":"0:11:00","description":"Converting string answers to integer counterparts to get an overall numeric value for how good each place is","timestamp_sec":660},{"timestamp_with_hours":"0:12:30","description":"Commentary on speed of mutate calculation within or without a group (non-grouped is slightly faster)","timestamp_sec":750},{"timestamp_with_hours":"0:15:30","description":"Re-ordering groups by total votes using fct_reorder function, while still maintaining the groups themselves","functions":"fct_reorder","timestamp_sec":930},{"timestamp_with_hours":"0:19:15","description":"Using glue package to combine place name and total respondents","functions":"glue","packages":"glue","timestamp_sec":1155},{"timestamp_with_hours":"0:20:30","description":"Using statistical test to give confidence intervals on average score","timestamp_sec":1230},{"timestamp_with_hours":"0:22:15","description":"Actually using the t.test function with toy example","functions":"t.test","timestamp_sec":1335},{"timestamp_with_hours":"0:23:15","description":"Using weighted linear model instead (which doesn't end up working)","timestamp_sec":1395},{"timestamp_with_hours":"0:26:00","description":"Using custom function with rep function to get vector of repeated scores (sneaky way of weighting) so that we can perform a proper t-test","functions":"rep","timestamp_sec":1560},{"timestamp_with_hours":"0:27:30","description":"Summarizing t-test function into a list (alternative to nesting)","timestamp_sec":1650},{"timestamp_with_hours":"0:31:20","description":"Adding error bars using geom_errorbarh to make a TIE fighter plot that shows confidence intervals","functions":"geom_errorbarh","timestamp_sec":1880},{"timestamp_with_hours":"0:36:30","description":"Bringing in additional data from Barstool ratings (to supplement survey of Open R meetup NY)","timestamp_sec":2190},{"timestamp_with_hours":"0:39:45","description":"Getting survey data to the place level so that we can add an additional dataset","timestamp_sec":2385},{"timestamp_with_hours":"0:41:15","description":"Checking for duplicates in the joined data","timestamp_sec":2475},{"timestamp_with_hours":"0:42:15","description":"Calling off the planned analysis due to low sample sizes (too much noise, not enough overlap between datasets)","timestamp_sec":2535},{"timestamp_with_hours":"0:45:15","description":"Looking at Barstool data on its own","timestamp_sec":2715},{"timestamp_with_hours":"0:55:15","description":"Renaming all variables with a certain string pattern in them","timestamp_sec":3315},{"timestamp_with_hours":"0:58:00","description":"Comparing Dave's reviews with all other critics","timestamp_sec":3480},{"timestamp_with_hours":"0:59:15","description":"Adding geom_abline showing x = y as comparison for geom_smooth linear model line","functions":"geom_abline","timestamp_sec":3555},{"timestamp_with_hours":"1:02:30","description":"Changing the location of the aes() to change what the legend icons look like for size aesthetic","timestamp_sec":3750}]</script>
+```{=html}
+<div id="topics">
+  <div class="topic">
+    <h3 id="ts-285">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(285, this)">0:4:45</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Transforming time into something more readable (from time value of seconds since Unix epoch [1970-01-01] ), then converting it into a date</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-545">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(545, this)">0:9:05</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">fct_relevel</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Formatting x-axis text so that it is rotated and readable, then re-ordering using fct_relevel function so that it is in its proper ordinal order</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-660">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(660, this)">0:11:00</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Converting string answers to integer counterparts to get an overall numeric value for how good each place is</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-750">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(750, this)">0:12:30</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Commentary on speed of mutate calculation within or without a group (non-grouped is slightly faster)</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-930">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(930, this)">0:15:30</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">fct_reorder</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Re-ordering groups by total votes using fct_reorder function, while still maintaining the groups themselves</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1155">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1155, this)">0:19:15</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">glue</span></div><div><span class="badge-packages badge bg-primary">glue</span></div></div>
+    <div class="topic_description">
+      <p>Using glue package to combine place name and total respondents</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1230">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1230, this)">0:20:30</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Using statistical test to give confidence intervals on average score</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1335">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1335, this)">0:22:15</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">t.test</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Actually using the t.test function with toy example</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1395">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1395, this)">0:23:15</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Using weighted linear model instead (which doesn't end up working)</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1560">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1560, this)">0:26:00</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">rep</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using custom function with rep function to get vector of repeated scores (sneaky way of weighting) so that we can perform a proper t-test</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1650">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1650, this)">0:27:30</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Summarizing t-test function into a list (alternative to nesting)</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1880">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1880, this)">0:31:20</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">geom_errorbarh</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Adding error bars using geom_errorbarh to make a TIE fighter plot that shows confidence intervals</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2190">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2190, this)">0:36:30</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Bringing in additional data from Barstool ratings (to supplement survey of Open R meetup NY)</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2385">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2385, this)">0:39:45</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Getting survey data to the place level so that we can add an additional dataset</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2475">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2475, this)">0:41:15</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Checking for duplicates in the joined data</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2535">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2535, this)">0:42:15</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Calling off the planned analysis due to low sample sizes (too much noise, not enough overlap between datasets)</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2715">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2715, this)">0:45:15</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Looking at Barstool data on its own</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-3315">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(3315, this)">0:55:15</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Renaming all variables with a certain string pattern in them</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-3480">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(3480, this)">0:58:00</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Comparing Dave's reviews with all other critics</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-3555">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(3555, this)">0:59:15</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">geom_abline</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Adding geom_abline showing x = y as comparison for geom_smooth linear model line</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-3750">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(3750, this)">1:02:30</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Changing the location of the aes() to change what the legend icons look like for size aesthetic</p>
+
+    </div>
+  </div>
+</div>
+```
+     
+<script>
+// 2. This code loads the IFrame Player API code asynchronously.
+var tag = document.createElement("script");
+
+tag.src = "https://www.youtube.com/iframe_api";
+var firstScriptTag = document.getElementsByTagName("script")[0];
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+// 3. This function creates an <iframe> (and YouTube player)
+//    after the API code downloads.
+var videoId = document.getElementById("yt-player").dataset.videoId;
+var player;
+function onYouTubeIframeAPIReady() {
+  player = new YT.Player("yt-player", {
+    height: "486",
+    width: "864",
+    videoId: videoId,
+    playerVars: {
+      "playsinline": 1
+    },
+    events: {
+      onStateChange: function(event) {
+        if (event.data == YT.PlayerState.PLAYING) {
+          followTimestamps()
+        }
+      }
+    }
+  });
+}
+
+function playerSkipToTimestamp(seconds, tsElement) {
+  player.seekTo(seconds, true)
+  tsElement.scrollIntoView()
+  document.getElementById("screencast").scrollIntoView()
+}
+
+const timestamps = Array.from(document.querySelectorAll('.topic h3[id^="ts-"]'))
+  .map(el => el.id.replace('ts-', ''))
+
+function followTimestamps() {
+  if (player.getPlayerState() !== 1) {
+    return
+  }
+  const currentTime = `${Math.floor(player.getCurrentTime())}`
+  if (timestamps.includes(currentTime)) {
+    const el = document.getElementById(`ts-${currentTime}`)
+    if (el) {
+      el.scrollIntoView()
+      document.getElementById("screencast").scrollIntoView()
+    }
+  }
+  setTimeout(followTimestamps, 1000)
+}
+</script>

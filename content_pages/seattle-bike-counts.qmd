@@ -5,6 +5,8 @@ description: |
   NA
 date: 2019-04-04
 date-format: long
+aliases:
+  - "Seattle Bike Counts.html"
 ---
 
 Notable topics: NA
@@ -15,10 +17,208 @@ Timestamps by: Alex Cookson
 
 [View code](https://github.com/dgrtwo/data-screencasts/blob/master/bike_traffic.Rmd)
 
-## Full screencast
+## Screencast
 
-<iframe class="video" src="https://www.youtube.com/embed/sBho2GJE5lc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div id="yt-player" data-video-id="sBho2GJE5lc"></div>
 
 ## Timestamps
 
-<script id="timestamps" type="application-json">[{"timestamp_with_hours":"0:6:15","description":"Using summarise_all / summarise_at function to aggregate multiple variables at the same time","functions":"summarise_all | summarise_at","timestamp_sec":375},{"timestamp_with_hours":"0:8:15","description":"Using magnitude instead of absolute numbers to see trends in time of day","timestamp_sec":495},{"timestamp_with_hours":"0:12:00","description":"Dividing time into categories (four categories for times of day, e.g., morning commute, night) using between function","functions":"between","timestamp_sec":720},{"timestamp_with_hours":"0:15:00","description":"Looking for systematically missing data (which would bias the results of the analysis)","timestamp_sec":900},{"timestamp_with_hours":"0:19:45","description":"Summarising using a filter in the arguments based on whether the time window is during a commute time","timestamp_sec":1185},{"timestamp_with_hours":"0:22:45","description":"Combining day of week and hour using functions in the lubridate package and as.difftime function (but then he uses facetting as an easier method)","functions":"as.difftime","packages":"lubridate","timestamp_sec":1365},{"timestamp_with_hours":"0:26:30","description":"Normalizing day of week data to percent of weekly traffic","timestamp_sec":1590},{"timestamp_with_hours":"0:42:00","description":"Starting analysis of directions of travel by time of day (commute vs. reverse-commute)","timestamp_sec":2520},{"timestamp_with_hours":"0:43:45","description":"Filtering out weekend days using wday function from lubridate package","functions":"wday","packages":"lubridate","timestamp_sec":2625},{"timestamp_with_hours":"0:45:30","description":"Using spread function to create new variable of ratio of bike counts at different commute times","functions":"spread","timestamp_sec":2730},{"timestamp_with_hours":"0:47:30","description":"Visualizing ratio of bike counts by time of day","timestamp_sec":2850},{"timestamp_with_hours":"0:50:15","description":"Visualizing ratio by hour instead of time of day","timestamp_sec":3015},{"timestamp_with_hours":"0:52:50","description":"Ordering crossing in graph by when the average trip happened using mean of hour weighted by bike count","timestamp_sec":3170},{"timestamp_with_hours":"0:54:50","description":"Quick and dirty filter when creating a new variable within a mutate function","functions":"mutate","timestamp_sec":3290}]</script>
+```{=html}
+<div id="topics">
+  <div class="topic">
+    <h3 id="ts-375">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(375, this)">0:6:15</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">summarise_all</span><span class="badge-functions badge bg-info">summarise_at</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using summarise_all / summarise_at function to aggregate multiple variables at the same time</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-495">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(495, this)">0:8:15</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Using magnitude instead of absolute numbers to see trends in time of day</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-720">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(720, this)">0:12:00</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">between</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Dividing time into categories (four categories for times of day, e.g., morning commute, night) using between function</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-900">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(900, this)">0:15:00</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Looking for systematically missing data (which would bias the results of the analysis)</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1185">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1185, this)">0:19:45</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Summarising using a filter in the arguments based on whether the time window is during a commute time</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1365">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1365, this)">0:22:45</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">as.difftime</span></div><div><span class="badge-packages badge bg-primary">lubridate</span></div></div>
+    <div class="topic_description">
+      <p>Combining day of week and hour using functions in the lubridate package and as.difftime function (but then he uses facetting as an easier method)</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1590">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1590, this)">0:26:30</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Normalizing day of week data to percent of weekly traffic</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2520">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2520, this)">0:42:00</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Starting analysis of directions of travel by time of day (commute vs. reverse-commute)</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2625">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2625, this)">0:43:45</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">wday</span></div><div><span class="badge-packages badge bg-primary">lubridate</span></div></div>
+    <div class="topic_description">
+      <p>Filtering out weekend days using wday function from lubridate package</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2730">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2730, this)">0:45:30</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">spread</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using spread function to create new variable of ratio of bike counts at different commute times</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2850">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2850, this)">0:47:30</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Visualizing ratio of bike counts by time of day</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-3015">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(3015, this)">0:50:15</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Visualizing ratio by hour instead of time of day</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-3170">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(3170, this)">0:52:50</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Ordering crossing in graph by when the average trip happened using mean of hour weighted by bike count</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-3290">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(3290, this)">0:54:50</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">mutate</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Quick and dirty filter when creating a new variable within a mutate function</p>
+
+    </div>
+  </div>
+</div>
+```
+     
+<script>
+// 2. This code loads the IFrame Player API code asynchronously.
+var tag = document.createElement("script");
+
+tag.src = "https://www.youtube.com/iframe_api";
+var firstScriptTag = document.getElementsByTagName("script")[0];
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+// 3. This function creates an <iframe> (and YouTube player)
+//    after the API code downloads.
+var videoId = document.getElementById("yt-player").dataset.videoId;
+var player;
+function onYouTubeIframeAPIReady() {
+  player = new YT.Player("yt-player", {
+    height: "486",
+    width: "864",
+    videoId: videoId,
+    playerVars: {
+      "playsinline": 1
+    },
+    events: {
+      onStateChange: function(event) {
+        if (event.data == YT.PlayerState.PLAYING) {
+          followTimestamps()
+        }
+      }
+    }
+  });
+}
+
+function playerSkipToTimestamp(seconds, tsElement) {
+  player.seekTo(seconds, true)
+  tsElement.scrollIntoView()
+  document.getElementById("screencast").scrollIntoView()
+}
+
+const timestamps = Array.from(document.querySelectorAll('.topic h3[id^="ts-"]'))
+  .map(el => el.id.replace('ts-', ''))
+
+function followTimestamps() {
+  if (player.getPlayerState() !== 1) {
+    return
+  }
+  const currentTime = `${Math.floor(player.getCurrentTime())}`
+  if (timestamps.includes(currentTime)) {
+    const el = document.getElementById(`ts-${currentTime}`)
+    if (el) {
+      el.scrollIntoView()
+      document.getElementById("screencast").scrollIntoView()
+    }
+  }
+  setTimeout(followTimestamps, 1000)
+}
+</script>

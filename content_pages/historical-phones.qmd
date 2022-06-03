@@ -5,6 +5,8 @@ description: |
   Joining tables, Animated world choropleth, Adding IQR to geom_line, World development indicators package
 date: 2020-11-09
 date-format: long
+aliases:
+  - "Historical Phones.html"
 ---
 
 Notable topics: Joining tables, Animated world choropleth, Adding IQR to geom_line, World development indicators package
@@ -15,10 +17,258 @@ Timestamps by: Eric Fletcher
 
 [View code](https://github.com/dgrtwo/data-screencasts/blob/master/2020_11_10_phone_history.Rmd)
 
-## Full screencast
+## Screencast
 
-<iframe class="video" src="https://www.youtube.com/embed/pJPqAIb8MKA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div id="yt-player" data-video-id="pJPqAIb8MKA"></div>
 
 ## Timestamps
 
-<script id="timestamps" type="application-json">[{"timestamp_with_hours":"0:2:15","description":"Use `bind_rows` from the `dplyr` package to combine the two data sets.","functions":"bind_rows","packages":"dplyr","timestamp_sec":135},{"timestamp_with_hours":"0:7:30","description":"Use `group = interaction(type, country)` within `ggplot` `aes()` to set the interaction `type` with every single `country` on one plot.","functions":"ggplot | group","packages":"ggplot2","timestamp_sec":450},{"timestamp_with_hours":"0:9:30","description":"Use `semi_join` from the `dplyr` package to join rows from `phones` with a match in `country_sizes`.","functions":"semi_join | top_n","packages":"dplyr","timestamp_sec":570},{"timestamp_with_hours":"0:14:00","description":"Use `quantile` from the `stats` package within `summarize` to show the 25th, and 75th quantiles (interquartile range) on the plot.","functions":"quantile | geom_ribbon","packages":"stats | ggplot2","timestamp_sec":840},{"timestamp_with_hours":"0:17:50","description":"Import the `wdi` package (World Development Indicators from the World Bank) with `extra = TRUE` in order to get the `iso3c` code and `income` level for each country.","functions":"WDI | select","packages":"WDI | dplyr","timestamp_sec":1070},{"timestamp_with_hours":"0:19:45","description":"Use `inner_join` from the `dplyr` package to join the `WDI` data with the `phones` data.","functions":"inner_join","packages":"dplyr","timestamp_sec":1185},{"timestamp_with_hours":"0:20:35","description":"Use `fct_relevel` from the `forcats` package to reorder `income` factor levels in ascending order.","functions":"fct_relevel","packages":"forcats","timestamp_sec":1235},{"timestamp_with_hours":"0:21:05","description":"Create an `anonymous function` using `.` (dot).","functions":".","timestamp_sec":1265},{"timestamp_with_hours":"0:29:30","description":"Use `inner_join` from the `dplyr` package to join the `mobile` data and `landline` data together with a `geom_abline` to see how different the total populations are between the two datasets.","functions":"inner_join | geom_abline","packages":"dplyr | ggplot2","timestamp_sec":1770},{"timestamp_with_hours":"0:31:00","description":"Use `geom_hline` to add a refrence line to the plot shwoing when each country crossed the 50 per 100 subscription mark.","functions":"geom_hline","packages":"ggplot2","timestamp_sec":1860},{"timestamp_with_hours":"0:35:20","description":"Use `summarize` from the `dplyr` package with `min(year([Mobile >= 50]))` to find the year in which each country crossed the 50 per 100 subscription mark.","functions":"summarize | min","packages":"dplyr","timestamp_sec":2120},{"timestamp_with_hours":"0:35:20","description":"Use `summarize` from the `dplyr` package with `max(Mobile)` to find the peak number of mobile subscriptions per country.","functions":"summarize | max","packages":"dplyr","timestamp_sec":2120},{"timestamp_with_hours":"0:35:20","description":"Use `na_if` from the `dplyr` package within `summarize` to change `Inf` to `NA`.","functions":"na_if | summarize","packages":"dplyr","timestamp_sec":2120},{"timestamp_with_hours":"0:38:20","description":"Using the `WDIsearch` function to search the `WDI` package for proper GDP per capita indicator. Ended up using the `NY.GDP.PCAP.PP.KD` indicator.","functions":"WDIsearch","packages":"WDI","timestamp_sec":2300},{"timestamp_with_hours":"0:39:05","description":"Adding the `GDP` data from the `WDI` package to the `country_incomes` table.","functions":"WDI | select","packages":"WDI | dplyr","timestamp_sec":2345},{"timestamp_with_hours":"0:39:52","description":"Using the `inner_join` function from the `dplyr` package to join the `phones` table with the `country_incomes` table pulling in the `gdp_per_capita` variable.","functions":"inner_join","packages":"dplyr","timestamp_sec":2392},{"timestamp_with_hours":"0:42:25","description":"Using the `WDIsearch` function to search the `WDI` package for proper population indicator. Ended up using the `SP.POP.TOTL` indicator.","functions":"WDIsearch","packages":"WDI","timestamp_sec":2545},{"timestamp_with_hours":"0:50:00","description":"Create an animated choropleth world map with `fill = subscriptions`.","functions":"map_data | iso3166 | regex_left_join | left_join | transition_manual","packages":"maps | ggplot2 | fuzzyjoin | gganimate","timestamp_sec":3000},{"timestamp_with_hours":"1:00:00","description":"Summary of screencast","timestamp_sec":3600}]</script>
+```{=html}
+<div id="topics">
+  <div class="topic">
+    <h3 id="ts-135">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(135, this)">0:2:15</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">bind_rows</span></div><div><span class="badge-packages badge bg-primary">dplyr</span></div></div>
+    <div class="topic_description">
+      <p>Use <code>bind_rows</code> from the <code>dplyr</code> package to combine the two data sets.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-450">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(450, this)">0:7:30</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">ggplot</span><span class="badge-functions badge bg-info">group</span></div><div><span class="badge-packages badge bg-primary">ggplot2</span></div></div>
+    <div class="topic_description">
+      <p>Use <code>group = interaction(type, country)</code> within <code>ggplot</code> <code>aes()</code> to set the interaction <code>type</code> with every single <code>country</code> on one plot.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-570">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(570, this)">0:9:30</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">semi_join</span><span class="badge-functions badge bg-info">top_n</span></div><div><span class="badge-packages badge bg-primary">dplyr</span></div></div>
+    <div class="topic_description">
+      <p>Use <code>semi_join</code> from the <code>dplyr</code> package to join rows from <code>phones</code> with a match in <code>country_sizes</code>.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-840">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(840, this)">0:14:00</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">quantile</span><span class="badge-functions badge bg-info">geom_ribbon</span></div><div><span class="badge-packages badge bg-primary">stats</span><span class="badge-packages badge bg-primary">ggplot2</span></div></div>
+    <div class="topic_description">
+      <p>Use <code>quantile</code> from the <code>stats</code> package within <code>summarize</code> to show the 25th, and 75th quantiles (interquartile range) on the plot.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1070">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1070, this)">0:17:50</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">WDI</span><span class="badge-functions badge bg-info">select</span></div><div><span class="badge-packages badge bg-primary">WDI</span><span class="badge-packages badge bg-primary">dplyr</span></div></div>
+    <div class="topic_description">
+      <p>Import the <code>wdi</code> package (World Development Indicators from the World Bank) with <code>extra = TRUE</code> in order to get the <code>iso3c</code> code and <code>income</code> level for each country.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1185">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1185, this)">0:19:45</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">inner_join</span></div><div><span class="badge-packages badge bg-primary">dplyr</span></div></div>
+    <div class="topic_description">
+      <p>Use <code>inner_join</code> from the <code>dplyr</code> package to join the <code>WDI</code> data with the <code>phones</code> data.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1235">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1235, this)">0:20:35</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">fct_relevel</span></div><div><span class="badge-packages badge bg-primary">forcats</span></div></div>
+    <div class="topic_description">
+      <p>Use <code>fct_relevel</code> from the <code>forcats</code> package to reorder <code>income</code> factor levels in ascending order.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1265">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1265, this)">0:21:05</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">.</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Create an <code>anonymous function</code> using <code>.</code> (dot).</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1770">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1770, this)">0:29:30</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">inner_join</span><span class="badge-functions badge bg-info">geom_abline</span></div><div><span class="badge-packages badge bg-primary">dplyr</span><span class="badge-packages badge bg-primary">ggplot2</span></div></div>
+    <div class="topic_description">
+      <p>Use <code>inner_join</code> from the <code>dplyr</code> package to join the <code>mobile</code> data and <code>landline</code> data together with a <code>geom_abline</code> to see how different the total populations are between the two datasets.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1860">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1860, this)">0:31:00</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">geom_hline</span></div><div><span class="badge-packages badge bg-primary">ggplot2</span></div></div>
+    <div class="topic_description">
+      <p>Use <code>geom_hline</code> to add a refrence line to the plot shwoing when each country crossed the 50 per 100 subscription mark.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2120">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2120, this)">0:35:20</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">summarize</span><span class="badge-functions badge bg-info">min</span></div><div><span class="badge-packages badge bg-primary">dplyr</span></div></div>
+    <div class="topic_description">
+      <p>Use <code>summarize</code> from the <code>dplyr</code> package with <code>min(year([Mobile &gt;= 50]))</code> to find the year in which each country crossed the 50 per 100 subscription mark.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2120">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2120, this)">0:35:20</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">summarize</span><span class="badge-functions badge bg-info">max</span></div><div><span class="badge-packages badge bg-primary">dplyr</span></div></div>
+    <div class="topic_description">
+      <p>Use <code>summarize</code> from the <code>dplyr</code> package with <code>max(Mobile)</code> to find the peak number of mobile subscriptions per country.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2120">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2120, this)">0:35:20</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">na_if</span><span class="badge-functions badge bg-info">summarize</span></div><div><span class="badge-packages badge bg-primary">dplyr</span></div></div>
+    <div class="topic_description">
+      <p>Use <code>na_if</code> from the <code>dplyr</code> package within <code>summarize</code> to change <code>Inf</code> to <code>NA</code>.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2300">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2300, this)">0:38:20</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">WDIsearch</span></div><div><span class="badge-packages badge bg-primary">WDI</span></div></div>
+    <div class="topic_description">
+      <p>Using the <code>WDIsearch</code> function to search the <code>WDI</code> package for proper GDP per capita indicator. Ended up using the <code>NY.GDP.PCAP.PP.KD</code> indicator.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2345">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2345, this)">0:39:05</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">WDI</span><span class="badge-functions badge bg-info">select</span></div><div><span class="badge-packages badge bg-primary">WDI</span><span class="badge-packages badge bg-primary">dplyr</span></div></div>
+    <div class="topic_description">
+      <p>Adding the <code>GDP</code> data from the <code>WDI</code> package to the <code>country_incomes</code> table.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2392">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2392, this)">0:39:52</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">inner_join</span></div><div><span class="badge-packages badge bg-primary">dplyr</span></div></div>
+    <div class="topic_description">
+      <p>Using the <code>inner_join</code> function from the <code>dplyr</code> package to join the <code>phones</code> table with the <code>country_incomes</code> table pulling in the <code>gdp_per_capita</code> variable.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2545">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2545, this)">0:42:25</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">WDIsearch</span></div><div><span class="badge-packages badge bg-primary">WDI</span></div></div>
+    <div class="topic_description">
+      <p>Using the <code>WDIsearch</code> function to search the <code>WDI</code> package for proper population indicator. Ended up using the <code>SP.POP.TOTL</code> indicator.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-3000">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(3000, this)">0:50:00</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">map_data</span><span class="badge-functions badge bg-info">iso3166</span><span class="badge-functions badge bg-info">regex_left_join</span><span class="badge-functions badge bg-info">left_join</span><span class="badge-functions badge bg-info">transition_manual</span></div><div><span class="badge-packages badge bg-primary">maps</span><span class="badge-packages badge bg-primary">ggplot2</span><span class="badge-packages badge bg-primary">fuzzyjoin</span><span class="badge-packages badge bg-primary">gganimate</span></div></div>
+    <div class="topic_description">
+      <p>Create an animated choropleth world map with <code>fill = subscriptions</code>.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-3600">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(3600, this)">1:00:00</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Summary of screencast</p>
+
+    </div>
+  </div>
+</div>
+```
+     
+<script>
+// 2. This code loads the IFrame Player API code asynchronously.
+var tag = document.createElement("script");
+
+tag.src = "https://www.youtube.com/iframe_api";
+var firstScriptTag = document.getElementsByTagName("script")[0];
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+// 3. This function creates an <iframe> (and YouTube player)
+//    after the API code downloads.
+var videoId = document.getElementById("yt-player").dataset.videoId;
+var player;
+function onYouTubeIframeAPIReady() {
+  player = new YT.Player("yt-player", {
+    height: "486",
+    width: "864",
+    videoId: videoId,
+    playerVars: {
+      "playsinline": 1
+    },
+    events: {
+      onStateChange: function(event) {
+        if (event.data == YT.PlayerState.PLAYING) {
+          followTimestamps()
+        }
+      }
+    }
+  });
+}
+
+function playerSkipToTimestamp(seconds, tsElement) {
+  player.seekTo(seconds, true)
+  tsElement.scrollIntoView()
+  document.getElementById("screencast").scrollIntoView()
+}
+
+const timestamps = Array.from(document.querySelectorAll('.topic h3[id^="ts-"]'))
+  .map(el => el.id.replace('ts-', ''))
+
+function followTimestamps() {
+  if (player.getPlayerState() !== 1) {
+    return
+  }
+  const currentTime = `${Math.floor(player.getCurrentTime())}`
+  if (timestamps.includes(currentTime)) {
+    const el = document.getElementById(`ts-${currentTime}`)
+    if (el) {
+      el.scrollIntoView()
+      document.getElementById("screencast").scrollIntoView()
+    }
+  }
+  setTimeout(followTimestamps, 1000)
+}
+</script>
