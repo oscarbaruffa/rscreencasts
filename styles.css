@@ -11,10 +11,14 @@
   scroll-snap-type: y mandatory;
 }
 
+.btn-timestamp {
+  font-size: inherit;
+  padding: 0;
+}
+
 .topic_badges .badge:first-child {
   margin-left: 0 !important;
 }
-
 
 .topic {
   display: grid;

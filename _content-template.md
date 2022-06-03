@@ -1,35 +1,37 @@
 ---
 title: |
-  {{ screencast }}
+  {{screencast}}
 description: |
-  {{ notable_topics }}
-date: {{ strftime(date, "%F") }}
+  {{notable_topics}}
+date: {{date}}
 date-format: long
 ---
 
-Notable topics: {{ notable_topics }}
+Notable topics: {{notable_topics}}
 
-Recorded on: {{ strftime(date, "%F") }}
+Recorded on: {{date}}
 
-Timestamps by: {{ contributor }}
+Timestamps by: {{contributor}}
 
-[View code]({{ browse_r_code_url }})
+[View code]({{browse_r_code_url}})
 
 ## Full screencast
 
-<div id="yt-player" data-video-id="{{ vid_key }}"></div>
+<div id="yt-player" data-video-id="{{vid_key}}"></div>
 
 ## Timestamps
 
 ```{=html}
 <div id="topics">
-{{ #timestamps }}
+{{#timestamps}}
 <div class="topic">
-  <h3><a onClick="playerSkipToTimestamp({{ timestamp_sec }})" href="#full-screencast">{{ timestamp_with_hours }}</a></h3>
-  <div class="topic_badges"><div>{{{ functions }}}</div><div>{{{ packages }}}</div></div>
-  <div class="topic_description">{{{ description }}}</div>
+  <h3 id="ts-{{timestamp_sec}}">
+    <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp({{timestamp_sec}})">{{timestamp_with_hours}}</button>
+  </h3>
+  <div class="topic_badges"><div>{{{functions}}}</div><div>{{{packages}}}</div></div>
+  <div class="topic_description">{{{description}}}</div>
 </div>
-{{ /timestamps }}
+{{/timestamps}}
 </div>
 ```
      

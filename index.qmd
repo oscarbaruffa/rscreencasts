@@ -25,12 +25,14 @@ screencasts_data_google <- read_sheet("https://docs.google.com/spreadsheets/d/1p
 
 timestamps_data_google <- read_sheet("https://docs.google.com/spreadsheets/d/1pjj_G9ncJZPGTYPkR1BYwzA6bhJoeTfY2fJeGKSbOKM/edit#gid=444382177", sheet = "Screencasts")
 
-screencasts_data <- screencasts_data_google %>% 
+screencasts_data <- 
+  screencasts_data_google %>% 
   clean_names() %>% 
   filter(complete == "x") %>% 
   arrange(screencast) %>% 
   # regex is (?<=) positive assertion, means look after this match, then the additional = is the things to match,and .+ is all characters except whitespace 
-  mutate(vid_key = str_extract(screencast_url, "(?<==).+")) %>% 
+  mutate(vid_key = str_extract(screencast_url, "(?<==).+")) %>%
+  mutate(date = strftime(date, "%F")) %>%
   identity() 
 
 screencasts_count <- screencasts_data %>% 
@@ -39,7 +41,8 @@ screencasts_count <- screencasts_data %>%
   pull()
 
 timestamps_data <- timestamps_data_google %>% 
-  clean_names()
+  clean_names() %>%
+  mutate(timestamp_sec = as.character(timestamp_sec))
 ```
 
 If you're looking for real-world examples of live data analyses, you've come to the right place.
@@ -93,24 +96,23 @@ for (entry_screencast in row.names(screencasts_data)) {
   
   screencast_name <- screencast$screencast
   
-  screencast$timestamps <- timestamps_data[
-    timestamps_data$screencast == screencast_name,
-    c("timestamp_with_hours", "description", "functions", "packages", "timestamp_sec")
-  ]
-  
-  for (badge in c("functions", "packages")) {
-    screencast$timestamps[[badge]] <-
-      map_chr(screencast$timestamps[[badge]], badgify(badge))
-  }
-  
-  screencast$timestamps$description <- 
-    map_chr(screencast$timestamps$description, commonmark::markdown_html)
+  screencast$timestamps <- 
+    timestamps_data %>%
+    filter(screencast == screencast_name) %>%
+    select(timestamp_with_hours, description, functions, packages, timestamp_sec) %>%
+    mutate(
+      functions = map_chr(functions, badgify("functions")),
+      packages = map_chr(packages, badgify("packages")),
+      description = map_chr(description, commonmark::markdown_html)
+    )
+ 
+  screencast$timestamps <- apply(screencast$timestamps, 1, as.list)
 
   content_template <- paste(readLines("_content-template.md"), collapse = "\n")
   content_text <- whisker::whisker.render(content_template, data = screencast)
     
-  file_name <- janitor::make_clean_names(screencast_name, sep_out = "-")
-  writeLines(content_text, glue("content_pages/{screencast_name}.qmd"))
+  content_file_name <- janitor::make_clean_names(screencast_name, sep_out = "-")
+  writeLines(content_text, glue("content_pages/{content_file_name}.qmd"))
 }
 ```
 
