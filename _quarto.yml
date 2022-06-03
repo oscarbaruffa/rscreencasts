@@ -2,6 +2,11 @@ project:
   type: website
   resources: 
     - "images/rscreencasts_social_preview.png"
+  render:
+    - "index.qmd"
+    - "about.qmd"
+    - "resources.qmd"
+    - "content_pages/*.qmd"
 
 website:
   title: "R Screencasts"
