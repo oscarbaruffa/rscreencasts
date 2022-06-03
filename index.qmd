@@ -108,6 +108,12 @@ for (entry_screencast in row.names(screencasts_data)) {
   
   screencast_name <- screencast$screencast
   
+  screencast$redirects <- if (!grepl(":", screencast_name)) {
+    # screencasts with valid-ish names were previously included with all their
+    # odd formatting, so this will add a redirect to the content YAML header
+    list(alias = screencast_name)
+  }
+  
   screencast$timestamps <- 
     timestamps_data %>%
     filter(screencast == screencast_name) %>%
