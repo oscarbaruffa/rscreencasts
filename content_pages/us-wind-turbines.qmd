@@ -3,7 +3,7 @@ title: |
   US Wind Turbines
 description: |
   Animated map (gganimate package)
-date: 2018-11-05
+date: 2018-11-06
 date-format: long
 aliases:
   - "US Wind Turbines.html"
@@ -11,7 +11,7 @@ aliases:
 
 Notable topics: Animated map (gganimate package)
 
-Recorded on: 2018-11-05
+Recorded on: 2018-11-06
 
 Timestamps by: Alex Cookson
 

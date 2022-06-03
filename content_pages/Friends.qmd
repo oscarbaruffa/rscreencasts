@@ -3,7 +3,7 @@ title: |
   Friends
 description: |
   Data Manipulation, Linear Modeling, Pairwise Correlation, Text Mining
-date: 2020-09-07
+date: 2020-09-08
 date-format: long
 aliases:
   - "Friends.html"
@@ -11,7 +11,7 @@ aliases:
 
 Notable topics: Data Manipulation, Linear Modeling, Pairwise Correlation, Text Mining
 
-Recorded on: 2020-09-07
+Recorded on: 2020-09-08
 
 Timestamps by: Eric Fletcher
 

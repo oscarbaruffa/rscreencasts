@@ -3,7 +3,7 @@ title: |
   US Incarceration
 description: |
   Animated map (gganimate package), Dealing with missing data
-date: 2019-01-24
+date: 2019-01-25
 date-format: long
 aliases:
   - "US Incarceration.html"
@@ -11,7 +11,7 @@ aliases:
 
 Notable topics: Animated map (gganimate package), Dealing with missing data
 
-Recorded on: 2019-01-24
+Recorded on: 2019-01-25
 
 Timestamps by: Alex Cookson
 

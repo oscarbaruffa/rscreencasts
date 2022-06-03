@@ -3,7 +3,7 @@ title: |
   Nobel Prize Winners
 description: |
   Data manipulation, Graphing for EDA (Exploratory Data Analysis)
-date: 2019-05-23
+date: 2019-05-24
 date-format: long
 aliases:
   - "Nobel Prize Winners.html"
@@ -11,7 +11,7 @@ aliases:
 
 Notable topics: Data manipulation, Graphing for EDA (Exploratory Data Analysis)
 
-Recorded on: 2019-05-23
+Recorded on: 2019-05-24
 
 Timestamps by: Alex Cookson
 

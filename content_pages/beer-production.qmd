@@ -3,7 +3,7 @@ title: |
   Beer Production
 description: |
   tidymetrics package demonstration, Animated map (gganimate package)
-date: 2020-03-31
+date: 2020-04-01
 date-format: long
 aliases:
   - "Beer Production.html"
@@ -11,7 +11,7 @@ aliases:
 
 Notable topics: tidymetrics package demonstration, Animated map (gganimate package)
 
-Recorded on: 2020-03-31
+Recorded on: 2020-04-01
 
 Timestamps by: Alex Cookson
 

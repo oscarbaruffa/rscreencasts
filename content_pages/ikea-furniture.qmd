@@ -3,7 +3,7 @@ title: |
   IKEA Furniture
 description: |
   Linear model, Coefficient/TIE fighter plot, Boxplots, Log scale discussion, Calculating volume
-date: 2020-11-02
+date: 2020-11-03
 date-format: long
 aliases:
   - "IKEA Furniture.html"
@@ -11,7 +11,7 @@ aliases:
 
 Notable topics: Linear model, Coefficient/TIE fighter plot, Boxplots, Log scale discussion, Calculating volume
 
-Recorded on: 2020-11-02
+Recorded on: 2020-11-03
 
 Timestamps by: Eric Fletcher
 

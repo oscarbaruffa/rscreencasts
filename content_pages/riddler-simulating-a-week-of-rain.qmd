@@ -3,14 +3,14 @@ title: |
   Riddler: Simulating a Week of Rain
 description: |
   Simulation
-date: 2018-12-11
+date: 2018-12-12
 date-format: long
 
 ---
 
 Notable topics: Simulation
 
-Recorded on: 2018-12-11
+Recorded on: 2018-12-12
 
 Timestamps by: Alex Cookson
 

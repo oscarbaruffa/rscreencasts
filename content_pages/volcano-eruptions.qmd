@@ -3,7 +3,7 @@ title: |
   Volcano Eruptions
 description: |
   Static map with `ggplot2`, Interactive map with `leaflet`, Animated map with `gganimate`
-date: 2020-05-11
+date: 2020-05-12
 date-format: long
 aliases:
   - "Volcano Eruptions.html"
@@ -11,7 +11,7 @@ aliases:
 
 Notable topics: Static map with `ggplot2`, Interactive map with `leaflet`, Animated map with `gganimate`
 
-Recorded on: 2020-05-11
+Recorded on: 2020-05-12
 
 Timestamps by: Eric Fletcher
 

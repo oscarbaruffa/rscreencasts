@@ -3,7 +3,7 @@ title: |
   French Train Delays
 description: |
   Heat map
-date: 2019-02-25
+date: 2019-02-26
 date-format: long
 aliases:
   - "French Train Delays.html"
@@ -11,7 +11,7 @@ aliases:
 
 Notable topics: Heat map
 
-Recorded on: 2019-02-25
+Recorded on: 2019-02-26
 
 Timestamps by: Alex Cookson
 

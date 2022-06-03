@@ -3,7 +3,7 @@ title: |
   Space Launches
 description: |
   Graphing for EDA (Exploratory Data Analysis)
-date: 2019-01-14
+date: 2019-01-15
 date-format: long
 aliases:
   - "Space Launches.html"
@@ -11,7 +11,7 @@ aliases:
 
 Notable topics: Graphing for EDA (Exploratory Data Analysis)
 
-Recorded on: 2019-01-14
+Recorded on: 2019-01-15
 
 Timestamps by: Alex Cookson
 

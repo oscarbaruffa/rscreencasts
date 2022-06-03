@@ -3,7 +3,7 @@ title: |
   NCAA Women's Basketball
 description: |
   Heatmap, Correlation analysis
-date: 2020-10-05
+date: 2020-10-06
 date-format: long
 aliases:
   - "NCAA Women's Basketball.html"
@@ -11,7 +11,7 @@ aliases:
 
 Notable topics: Heatmap, Correlation analysis
 
-Recorded on: 2020-10-05
+Recorded on: 2020-10-06
 
 Timestamps by: Eric Fletcher
 

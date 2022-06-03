@@ -3,14 +3,14 @@ title: |
   Riddler: Simulating a Non-increasing Sequence
 description: |
   Simulation
-date: 2020-04-05
+date: 2020-04-06
 date-format: long
 
 ---
 
 Notable topics: Simulation
 
-Recorded on: 2020-04-05
+Recorded on: 2020-04-06
 
 Timestamps by: Alex Cookson
 

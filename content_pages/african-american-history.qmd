@@ -3,7 +3,7 @@ title: |
   African-American History
 description: |
   Network diagram, Wordcloud
-date: 2020-06-15
+date: 2020-06-16
 date-format: long
 aliases:
   - "African-American History.html"
@@ -11,7 +11,7 @@ aliases:
 
 Notable topics: Network diagram, Wordcloud
 
-Recorded on: 2020-06-15
+Recorded on: 2020-06-16
 
 Timestamps by: Eric Fletcher
 

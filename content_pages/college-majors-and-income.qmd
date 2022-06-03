@@ -3,7 +3,7 @@ title: |
   College Majors and Income
 description: |
   Graphing for EDA (Exploratory Data Analysis)
-date: 2018-10-14
+date: 2018-10-15
 date-format: long
 aliases:
   - "College Majors and Income.html"
@@ -11,7 +11,7 @@ aliases:
 
 Notable topics: Graphing for EDA (Exploratory Data Analysis)
 
-Recorded on: 2018-10-14
+Recorded on: 2018-10-15
 
 Timestamps by: Alex Cookson
 

@@ -4,7 +4,17 @@ project:
 website:
   title: "R Screencasts"
   favicon: images/favicon-32x32.png
-  navbar:
+  twitter-card:
+    title: "R Screencasts"
+    image: "images/rscreencasts social preview.png"
+    site-url: "https://www.rscreencasts.com"
+    card-style: summary_large_image
+    description: "Awesome data analysis screencasts from a top Data Scientist"
+  open-graph:
+    title: "R Screencasts"
+    image: "images/rscreencasts social preview.png"
+    description: "Awesome data analysis screencasts from a top Data Scientist"
+    navbar:
     background: primary
     left:
       - href: index.qmd
@@ -24,7 +34,7 @@ format:
   html:
     include-in-header: 
       - plausible-analytics.html
-      - social.html
+     
     theme: flatly
     css: styles.css
     toc: true
