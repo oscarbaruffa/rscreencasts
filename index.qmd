@@ -66,7 +66,7 @@ Use the search bar to look for specific functions, packages or other keywords.
 
 Below you'll find a list of `r screencasts_count`  time-stamped screencasts.
 
-```{r create_pages, echo=FALSE, results='asis'}
+````{r create_pages, echo=FALSE, results='asis'}
 
 for (entry_screencast in row.names(screencasts_data)) {
  
@@ -76,34 +76,99 @@ for (entry_screencast in row.names(screencasts_data)) {
   timestamps_entries <- subset(timestamps_data, screencast==topic)
   topic_timestamps <- timestamps_entries[, c("timestamp_with_hours", "description", "functions", "packages", "timestamp_sec")]
   
+  badgify <- function(class) {
+    class <- paste(class, switch(
+      class,
+      functions = "badge bg-info",
+      packages = "badge bg-primary"
+    ))
+    function(x) {
+      if (is.na(x)) return("")
+      x <- strsplit(x, "\\s*\\|\\s*")[[1]]
+      paste(sprintf('<span class="badge-%s mx-1">%s</span>', class, x), collapse = "")
+    }
+  }
+  
+  for (badge in c("functions", "packages")) {
+    topic_timestamps[[badge]] <- purrr::map_chr(topic_timestamps[[badge]], badgify(badge))
+  }
+  
+  topic_timestamps$description <- purrr::map_chr(
+    topic_timestamps$description,
+    commonmark::markdown_html
+  )
+
+  timestamp_sections <- glue::glue_data(
+    topic_timestamps,
+    .na = "",
+    '<div class="topic">
+    <h3><a onClick="playerSkipToTimestamp({ timestamp_sec })" href="#full-screencast">{ timestamp_with_hours }</a></h3>
+    <div class="topic_badges"><div>{ functions }</div><div>{ packages }</div></div>
+    <div class="topic_description">{ description }</div>
+    </div>'
+  )
+  timestamp_sections <- paste(timestamp_sections, collapse = "\n")
+  
    # this text has to be left aligned for it to work properly, otherwise it gets tabbed and is not recognised as a yaml header. Might be because of the AS IS argument
    content_text <- glue::glue_data(
      screencasts_data[entry_screencast, ],
+     .open = "{{",
+     .close = "}}",
 '
 ---
 title: |
-  {screencast}
+  {{ screencast }}
 description: |
-  {notable_topics}
-date: {strftime(date, "%F")}
+  {{ notable_topics }}
+date: {{ strftime(date, "%F") }}
 date-format: long
 ---
 
-Notable topics: {notable_topics}
+Notable topics: {{ notable_topics }}
 
-Recorded on: {strftime(date, "%F")}
+Recorded on: {{ strftime(date, "%F") }}
 
-Timestamps by: {contributor}
+Timestamps by: {{ contributor }}
 
-[View code]({browse_r_code_url})
+[View code]({{ browse_r_code_url }})
 
 ## Full screencast
 
-<iframe class="video" src="https://www.youtube.com/embed/{vid_key}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div id="yt-player" data-video-id="{{ vid_key }}"></div>
 
 ## Timestamps
 
-<script id="timestamps" type="application-json">{ jsonlite::toJSON(topic_timestamps) }</script>
+```{=html}
+<div id="topics">{{ timestamp_sections }}</div>
+```
+     
+<script>
+// 2. This code loads the IFrame Player API code asynchronously.
+var tag = document.createElement("script");
+
+tag.src = "https://www.youtube.com/iframe_api";
+var firstScriptTag = document.getElementsByTagName("script")[0];
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+// 3. This function creates an <iframe> (and YouTube player)
+//    after the API code downloads.
+var videoId = document.getElementById("yt-player").dataset.videoId;
+var player;
+function onYouTubeIframeAPIReady() {
+  player = new YT.Player("yt-player", {
+    height: "486",
+    width: "864",
+    videoId: videoId,
+    playerVars: {
+      "playsinline": 1
+    }
+  });
+}
+
+function playerSkipToTimestamp(seconds) {
+  player.seekTo(seconds, true)
+}
+</script>
 '
 )
 
@@ -111,6 +176,6 @@ Timestamps by: {contributor}
    screencast_name <- janitor::make_clean_names(screencast_name, sep_out = "-")
    writeLines(content_text, glue("content_pages/{screencast_name}.qmd"))
 }
-```
+````
 
 ## All recordings
