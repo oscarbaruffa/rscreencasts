@@ -3,6 +3,7 @@
 .yt-player {
   aspect-ratio: 16 / 9;
   width: 100%;
+  max-width: 100%;
 }
 
 #topics {

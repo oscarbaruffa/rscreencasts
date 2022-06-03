@@ -15,7 +15,7 @@ Timestamps by: {{contributor}}
 
 [View code]({{browse_r_code_url}})
 
-## Full screencast
+## Screencast
 
 <div id="yt-player" data-video-id="{{vid_key}}"></div>
 
@@ -26,7 +26,7 @@ Timestamps by: {{contributor}}
 {{#timestamps}}
 <div class="topic">
   <h3 id="ts-{{timestamp_sec}}">
-    <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp({{timestamp_sec}})">{{timestamp_with_hours}}</button>
+    <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp({{timestamp_sec}}, this)">{{timestamp_with_hours}}</button>
   </h3>
   <div class="topic_badges"><div>{{{functions}}}</div><div>{{{packages}}}</div></div>
   <div class="topic_description">{{{description}}}</div>
@@ -58,7 +58,9 @@ function onYouTubeIframeAPIReady() {
   });
 }
 
-function playerSkipToTimestamp(seconds) {
+function playerSkipToTimestamp(seconds, tsElement) {
   player.seekTo(seconds, true)
+  tsElement.scrollIntoView()
+  document.getElementById("screencast").scrollIntoView()
 }
 </script>
