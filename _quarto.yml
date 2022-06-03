@@ -14,15 +14,15 @@ website:
     title: "R Screencasts"
     image: "images/rscreencasts_social_preview.png"
     description: "Awesome data analysis screencasts from a top Data Scientist"
-    navbar:
+  navbar:
     background: primary
     left:
-      - href: index.qmd
-        text: Home
-      - href: resources.qmd
-        text: Resources
-      - href: about.qmd
-        text: About
+     - href: index.qmd
+       text: Home
+     - href: resources.qmd
+       text: Resources
+     - href: about.qmd
+       text: About
   page-footer: 
     center: |
       Vids by [David Robinson](https://twitter.com/drob). 
