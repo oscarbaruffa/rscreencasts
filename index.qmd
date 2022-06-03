@@ -45,29 +45,39 @@ timestamps_data <- timestamps_data_google %>%
   mutate(timestamp_sec = as.character(timestamp_sec))
 ```
 
+::: lead
 If you're looking for real-world examples of live data analyses, you've come to the right place.
+:::
 
-David Robinson, a highly experienced Data Scientist, has recorded many screencasts where he analyses data that he's never seen before. These are fantastic examples of how to think about approaching an analysis.
+[David Robinson][drob], a highly experienced Data Scientist, has [recorded many screencasts][drob-yt-playlist] where he analyses data that he's never seen before.
+These are fantastic examples of how to think about approaching an analysis.
+You couldn't ask for a better mentor!
 
-The recordings were done as part of a weekly R programming challenge called TidyTuesday. All code is shared and all datasets are publicly available.
+The recordings were done as part of a weekly R programming challenge called [TidyTuesday]. 
+All [code is shared][drob-code] and all [datasets are publicly available][tidytuesday].
 
-> You couldn't ask for a better mentor!
+::: {.callout-note}
+### What you can learn
 
+This is a wealth of knowledge for new and experienced analysts alike!
 In each video you'll learn:
 
 - How to approach the analysis
 
-- What packages and methods he's using, and why
+- What packages and methods are being used and why
 
 - Handy R tips and tricks
 
 - How to get unstuck when something doesn't lead anywhere   
 
-This is a wealth of knowledge for new and experienced analysts alike. 
+:::
+
+::: {.callout-tip}
+## Use the search bar
 
 Use the search bar to look for specific functions, packages or other keywords. 
-
 Below you'll find a list of `r screencasts_count`  time-stamped screencasts.
+:::
 
 ```{r create_pages_function, include = FALSE}
 badgify <- function(class) {
@@ -79,7 +89,7 @@ badgify <- function(class) {
   function(x) {
     if (is.na(x)) return("")
     x <- strsplit(x, "\\s*\\|\\s*")[[1]]
-    paste(sprintf('<span class="badge-%s mx-1">%s</span>', class, x), collapse = "")
+    paste(sprintf('<span class="badge-%s">%s</span>', class, x), collapse = "")
   }
 }
 
@@ -117,3 +127,8 @@ for (entry_screencast in row.names(screencasts_data)) {
 ```
 
 ## All recordings
+
+[TidyTuesday]: https://github.com/rfordatascience/tidytuesday/
+[drob]: http://varianceexplained.org/
+[drob-code]: https://github.com/dgrtwo/data-screencasts
+[drob-yt-playlist]: https://www.youtube.com/watch?v=5ub92c-5xFQ&list=PL19ev-r1GBwkuyiwnxoHTRC8TTqP8OEi8
