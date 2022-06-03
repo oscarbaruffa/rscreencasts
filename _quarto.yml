@@ -25,12 +25,12 @@ website:
   navbar:
     background: primary
     left:
-     - href: index.qmd
-       text: Home
-     - href: resources.qmd
-       text: Resources
-     - href: about.qmd
-       text: About
+      - href: index.qmd
+        text: Home
+      - href: resources.qmd
+        text: Resources
+      - href: about.qmd
+        text: About
   page-footer: 
     center: |
       Vids by [David Robinson](https://twitter.com/drob). 

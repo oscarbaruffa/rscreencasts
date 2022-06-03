@@ -21,6 +21,13 @@
     "text": "David Robinson for recording the screencasts.\nAlex Cookson and Eric Fletcher for painstakingly time-stamping and describing all the content.\nOscar Baruffa for creating this website collating it all.\nThomas Mock for maintaining the TidyTuesday challenge.\nCountless others for R, RStudio, Quarto and a gazillion packages that make this all possible.\n\nIf you’d like to keep up to date with this website and other resources from Oscar Baruffa, sign up to the newsletter for posts about R, data and careers."
   },
   {
+    "objectID": "resources.html",
+    "href": "resources.html",
+    "title": "Resources",
+    "section": "",
+    "text": "Not on Twitter but keen to try it out? The free book Twitter for R programmers will get you started.\nWant to learn R? Here’s some free resources to get you started - one book and one video course.\nWant even more R? Check out the collection of over 250 free books covering a wide variety of fields and topics at Big Book of R."
+  },
+  {
     "objectID": "content_pages/Chopped.html",
     "href": "content_pages/Chopped.html",
     "title": "Chopped",
@@ -1741,12 +1748,5 @@
     "title": "X-Men Comics",
     "section": "Timestamps",
     "text": "Timestamps\n\n  \n    \n      0:07:25\n    \n    separatetidyr\n    \n      Using separate to separate the name from secrete identity in the character column\n\n    \n  \n  \n    \n      0:09:55\n    \n    summarizeacrossdplyr\n    \n      Using summarize and across to find the frequency of the action variables and find out how many issues each action was used for each character\n\n    \n  \n  \n    \n      0:13:25\n    \n    geom_colfct_reorderggplot2forcats\n    \n      Create a geom_col chart to visualize which character speaks in the most issues\n\n    \n  \n  \n    \n      0:18:35\n    \n    geom_pointgeom_textgeom_text_repelsummarizeggplot2ggrepeldplyr\n    \n      Create a geom_point chart to visualize each character’s average lines per issue in which the character is depicted\n\n    \n  \n  \n    \n      0:22:05\n    \n    geom_pointgeom_textgeom_text_repelsummarizeggplot2ggrepeldplyr\n    \n      Create a geom_point chart to visualize each character’s average thoughts per issue in which the character is depicted\n\n    \n  \n  \n    \n      0:23:10\n    \n    geom_pointgeom_textgeom_text_repelsummarizeggplot2ggrepeldplyr\n    \n      Create a geom_point chart to visualize character’s speech versus thought ratio per issue in which the character is depicted\n\n    \n  \n  \n    \n      0:30:05\n    \n    geom_pointpivot_longerfct_reorderggplot2tidyrforcats\n    \n      Create a geom_point to visualize character’s number of lines while in costume versus not in costume\n\n    \n  \n  \n    \n      0:34:30\n    \n    geom_pointgeom_textgeom_text_repelsummarizeggplot2ggrepeldplyr\n    \n      Create a geom_point chart to visualize the lines in costume versus lines out of costume ratio\n\n    \n  \n  \n    \n      0:39:20\n    \n    geom_pointfct_reordergeom_errorbarhggplot2forcats\n    \n      Create a lollipop graph using geom_point and geom_errorbarh to visualize the lines in costume versus lines out of costume ratio and their distance from 1.0 (1 to 1)\n\n    \n  \n  \n    \n      0:45:00\n    \n    summarizegroup_byarrangedplyr\n    \n      Use summarize to find the frequency of each location and the total number of unique issues where the location is used\n\n    \n  \n  \n    \n      0:46:00\n    \n    summarizefct_lumpdplyrforcats\n    \n      Use summarize and fct_lump to count how many issues each author has written while lumping together all authors except the most frequent\n\n    \n  \n  \n    \n      0:47:25\n    \n    summarizefct_lumpdplyrforcats\n    \n      Use summarize and fct_lump to see if the authors rates of passing the Bechdel test differ from one another\n\n    \n  \n  \n    \n      0:52:45\n    \n    geom_linesummarizedplyr\n    \n      Create a geom_line chart to visualize if the rates of passing the Bechdel test changed over time and floor division %/% to generate 20 observations per group\n\n    \n  \n  \n    \n      0:54:35\n    \n    geom_colsummarizefct_lumpfacet_wrapggplotdplyrforcats\n    \n      Create a geom_col to visualize the amount of lines each character has per issue over time giving context to Bechdel test passing rates\n\n    \n  \n  \n    \n      1:00:00\n    \n    \n    \n      Summary of screencast"
-  },
-  {
-    "objectID": "resources.html",
-    "href": "resources.html",
-    "title": "Resources",
-    "section": "",
-    "text": "Not on Twitter but keen to try it out? The free book Twitter for R programmers will get you started.\nWant to learn R? Here’s some free resources to get you started - one book and one video course.\nWant even more R? Check out the collection of over 250 free books covering a wide variety of fields and topics at Big Book of R."
   }
 ]
