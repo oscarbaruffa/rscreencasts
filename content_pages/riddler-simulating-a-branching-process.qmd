@@ -5,8 +5,7 @@ description: |
   Simulation, Probability distributions (Exponential and Geometric)
 date: 2020-04-12
 date-format: long
-aliases:
-  - "Riddler: Simulating a Branching Process.html"
+
 ---
 
 Notable topics: Simulation, Probability distributions (Exponential and Geometric)

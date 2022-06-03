@@ -5,8 +5,10 @@ description: |
   {{notable_topics}}
 date: {{date}}
 date-format: long
-aliases:
-  - "{{screencast}}.html"
+{{#redirects}}aliases:{{/redirects}}
+{{#redirects}}
+  - "{{alias}}.html"
+{{/redirects}}
 ---
 
 Notable topics: {{notable_topics}}

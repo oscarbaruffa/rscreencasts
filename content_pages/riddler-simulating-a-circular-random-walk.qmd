@@ -5,8 +5,7 @@ description: |
   Simulation
 date: 2020-11-22
 date-format: long
-aliases:
-  - "Riddler: Simulating a Circular Random Walk.html"
+
 ---
 
 Notable topics: Simulation

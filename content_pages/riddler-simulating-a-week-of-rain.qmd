@@ -5,8 +5,7 @@ description: |
   Simulation
 date: 2018-12-11
 date-format: long
-aliases:
-  - "Riddler: Simulating a Week of Rain.html"
+
 ---
 
 Notable topics: Simulation

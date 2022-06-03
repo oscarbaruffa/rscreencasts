@@ -5,8 +5,7 @@ description: |
   Simulation
 date: 2020-04-05
 date-format: long
-aliases:
-  - "Riddler: Simulating a Non-increasing Sequence.html"
+
 ---
 
 Notable topics: Simulation
