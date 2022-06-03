@@ -23,15 +23,17 @@ Timestamps by: {{contributor}}
 
 ```{=html}
 <div id="topics">
-{{#timestamps}}
-<div class="topic">
-  <h3 id="ts-{{timestamp_sec}}">
-    <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp({{timestamp_sec}}, this)">{{timestamp_with_hours}}</button>
-  </h3>
-  <div class="topic_badges"><div>{{{functions}}}</div><div>{{{packages}}}</div></div>
-  <div class="topic_description">{{{description}}}</div>
-</div>
-{{/timestamps}}
+  {{#timestamps}}
+  <div class="topic">
+    <h3 id="ts-{{timestamp_sec}}">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp({{timestamp_sec}}, this)">{{timestamp_with_hours}}</button>
+    </h3>
+    <div class="topic_badges"><div>{{{functions}}}</div><div>{{{packages}}}</div></div>
+    <div class="topic_description">
+      {{{description}}}
+    </div>
+  </div>
+  {{/timestamps}}
 </div>
 ```
      

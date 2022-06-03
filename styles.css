@@ -1,6 +1,6 @@
 /* css styles */
 
-.yt-player {
+#yt-player {
   aspect-ratio: 16 / 9;
   width: 100%;
   max-width: 100%;
@@ -23,6 +23,7 @@
 
 .topic {
   display: grid;
+  grid-template-columns: 1fr auto;
   grid-template-areas: 
     "timestamp badges"
     "desc desc";
@@ -46,7 +47,11 @@
 }
 
 .topic_badges div {
-  display: inline-block;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  justify-content: end;
+  flex-direction: row;
   margin-bottom: 0;
 }
 
