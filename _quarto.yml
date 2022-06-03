@@ -5,8 +5,11 @@ website:
   title: "R Screencasts"
   favicon: images/favicon-32x32.png
   twitter-card:
-    image: "/images/rscreencasts social preview.png"
-  navbar:
+    image: "images/rscreencasts social preview.png"
+    site-url: "https://www.rscreencasts.com"
+    card-style: summary_large_image
+    description: "Awesome data analysis screencasts from a top Data Scientist"
+    navbar:
     background: primary
     left:
       - href: index.qmd
