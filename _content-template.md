@@ -5,6 +5,8 @@ description: |
   {{notable_topics}}
 date: {{date}}
 date-format: long
+aliases:
+  - "{{screencast}}.html"
 ---
 
 Notable topics: {{notable_topics}}
