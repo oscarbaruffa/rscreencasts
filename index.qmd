@@ -90,7 +90,7 @@ badgify <- function(class) {
   function(x) {
     if (is.na(x)) return("")
     x <- strsplit(x, "\\s*\\|\\s*")[[1]]
-    paste(sprintf('<span class="badge-%s">%s</span>', class, x), collapse = "")
+    paste(glue('<span class="badge-{class}">{x}</span>'), collapse = "")
   }
 }
 
