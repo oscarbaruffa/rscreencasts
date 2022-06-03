@@ -3,7 +3,7 @@ title: |
   Transit Costs
 description: |
   EDA (Exploratory Data Analysis) with boxplots, interactive Shiny dashboard
-date: 2021-01-04
+date: 2021-01-05
 date-format: long
 aliases:
   - "Transit Costs.html"
@@ -11,7 +11,7 @@ aliases:
 
 Notable topics: EDA (Exploratory Data Analysis) with boxplots, interactive Shiny dashboard
 
-Recorded on: 2021-01-04
+Recorded on: 2021-01-05
 
 Timestamps by: Alex Cookson
 

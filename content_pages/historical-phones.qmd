@@ -3,7 +3,7 @@ title: |
   Historical Phones
 description: |
   Joining tables, Animated world choropleth, Adding IQR to geom_line, World development indicators package
-date: 2020-11-09
+date: 2020-11-10
 date-format: long
 aliases:
   - "Historical Phones.html"
@@ -11,7 +11,7 @@ aliases:
 
 Notable topics: Joining tables, Animated world choropleth, Adding IQR to geom_line, World development indicators package
 
-Recorded on: 2020-11-09
+Recorded on: 2020-11-10
 
 Timestamps by: Eric Fletcher
 

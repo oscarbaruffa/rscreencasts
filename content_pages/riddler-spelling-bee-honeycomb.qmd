@@ -3,14 +3,14 @@ title: |
   Riddler: Spelling Bee Honeycomb
 description: |
   Simulation with matrixes
-date: 2020-01-05
+date: 2020-01-06
 date-format: long
 
 ---
 
 Notable topics: Simulation with matrixes
 
-Recorded on: 2020-01-05
+Recorded on: 2020-01-06
 
 Timestamps by: Alex Cookson
 

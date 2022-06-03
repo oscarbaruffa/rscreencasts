@@ -3,7 +3,7 @@ title: |
   Animal Crossing
 description: |
   Topic modelling (stm package)
-date: 2020-05-04
+date: 2020-05-05
 date-format: long
 aliases:
   - "Animal Crossing.html"
@@ -11,7 +11,7 @@ aliases:
 
 Notable topics: Topic modelling (stm package)
 
-Recorded on: 2020-05-04
+Recorded on: 2020-05-05
 
 Timestamps by: Alex Cookson
 

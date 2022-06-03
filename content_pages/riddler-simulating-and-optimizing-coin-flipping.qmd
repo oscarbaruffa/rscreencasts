@@ -3,14 +3,14 @@ title: |
   Riddler: Simulating and Optimizing Coin Flipping
 description: |
   Simulation
-date: 2020-05-02
+date: 2020-05-03
 date-format: long
 
 ---
 
 Notable topics: Simulation
 
-Recorded on: 2020-05-02
+Recorded on: 2020-05-03
 
 Timestamps by: Alex Cookson
 

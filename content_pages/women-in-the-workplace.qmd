@@ -3,7 +3,7 @@ title: |
   Women in the Workplace
 description: |
   Interactive scatterplot (plotly and shiny packages)
-date: 2019-03-04
+date: 2019-03-05
 date-format: long
 aliases:
   - "Women in the Workplace.html"
@@ -11,7 +11,7 @@ aliases:
 
 Notable topics: Interactive scatterplot (plotly and shiny packages)
 
-Recorded on: 2019-03-04
+Recorded on: 2019-03-05
 
 Timestamps by: Alex Cookson
 

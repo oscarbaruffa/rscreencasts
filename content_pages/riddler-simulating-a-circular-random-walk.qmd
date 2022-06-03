@@ -3,14 +3,14 @@ title: |
   Riddler: Simulating a Circular Random Walk
 description: |
   Simulation
-date: 2020-11-22
+date: 2020-11-23
 date-format: long
 
 ---
 
 Notable topics: Simulation
 
-Recorded on: 2020-11-22
+Recorded on: 2020-11-23
 
 Timestamps by: Alex Cookson
 

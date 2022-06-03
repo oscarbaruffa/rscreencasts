@@ -3,7 +3,7 @@ title: |
   Maryland Bridges
 description: |
   Data manipulation, Map visualization
-date: 2018-11-26
+date: 2018-11-27
 date-format: long
 aliases:
   - "Maryland Bridges.html"
@@ -11,7 +11,7 @@ aliases:
 
 Notable topics: Data manipulation, Map visualization
 
-Recorded on: 2018-11-26
+Recorded on: 2018-11-27
 
 Timestamps by: Alex Cookson
 

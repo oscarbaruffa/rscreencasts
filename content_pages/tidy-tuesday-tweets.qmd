@@ -3,7 +3,7 @@ title: |
   TidyTuesday Tweets
 description: |
   Text mining (tidytext package)
-date: 2019-01-06
+date: 2019-01-07
 date-format: long
 aliases:
   - "TidyTuesday Tweets.html"
@@ -11,7 +11,7 @@ aliases:
 
 Notable topics: Text mining (tidytext package)
 
-Recorded on: 2019-01-06
+Recorded on: 2019-01-07
 
 Timestamps by: Alex Cookson
 

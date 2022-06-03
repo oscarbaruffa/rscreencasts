@@ -3,7 +3,7 @@ title: |
   Broadway Musicals
 description: |
   Creating an interactive dashboard with shinymetrics and tidymetrics, moving windows, period aggregation
-date: 2020-04-27
+date: 2020-04-28
 date-format: long
 aliases:
   - "Broadway Musicals.html"
@@ -11,7 +11,7 @@ aliases:
 
 Notable topics: Creating an interactive dashboard with shinymetrics and tidymetrics, moving windows, period aggregation
 
-Recorded on: 2020-04-27
+Recorded on: 2020-04-28
 
 Timestamps by: Eric Fletcher
 

@@ -3,7 +3,7 @@ title: |
   Bob Ross Paintings
 description: |
   Network graphs, Principal Component Analysis (PCA)
-date: 2019-08-11
+date: 2019-08-12
 date-format: long
 aliases:
   - "Bob Ross Paintings.html"
@@ -11,7 +11,7 @@ aliases:
 
 Notable topics: Network graphs, Principal Component Analysis (PCA)
 
-Recorded on: 2019-08-11
+Recorded on: 2019-08-12
 
 Timestamps by: Alex Cookson
 

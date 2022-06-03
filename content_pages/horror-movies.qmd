@@ -3,7 +3,7 @@ title: |
   Horror Movies
 description: |
   ANOVA, Text mining (tidytext package), LASSO regression (glmnet package)
-date: 2019-10-21
+date: 2019-10-22
 date-format: long
 aliases:
   - "Horror Movies.html"
@@ -11,7 +11,7 @@ aliases:
 
 Notable topics: ANOVA, Text mining (tidytext package), LASSO regression (glmnet package)
 
-Recorded on: 2019-10-21
+Recorded on: 2019-10-22
 
 Timestamps by: Alex Cookson
 

@@ -3,7 +3,7 @@ title: |
   NYC Squirrel Census
 description: |
   Map visualization (ggmap package)
-date: 2019-10-31
+date: 2019-11-01
 date-format: long
 aliases:
   - "NYC Squirrel Census.html"
@@ -11,7 +11,7 @@ aliases:
 
 Notable topics: Map visualization (ggmap package)
 
-Recorded on: 2019-10-31
+Recorded on: 2019-11-01
 
 Timestamps by: Alex Cookson
 

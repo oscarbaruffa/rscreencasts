@@ -3,7 +3,7 @@ title: |
   The Office
 description: |
   Text mining (tidytext package), LASSO regression (glmnet package)
-date: 2020-03-15
+date: 2020-03-16
 date-format: long
 aliases:
   - "The Office.html"
@@ -11,7 +11,7 @@ aliases:
 
 Notable topics: Text mining (tidytext package), LASSO regression (glmnet package)
 
-Recorded on: 2020-03-15
+Recorded on: 2020-03-16
 
 Timestamps by: Alex Cookson
 

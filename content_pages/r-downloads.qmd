@@ -3,7 +3,7 @@ title: |
   R Downloads
 description: |
   Data manipulation (especially time series)
-date: 2018-10-29
+date: 2018-10-30
 date-format: long
 aliases:
   - "R Downloads.html"
@@ -11,7 +11,7 @@ aliases:
 
 Notable topics: Data manipulation (especially time series)
 
-Recorded on: 2018-10-29
+Recorded on: 2018-10-30
 
 Timestamps by: Alex Cookson
 

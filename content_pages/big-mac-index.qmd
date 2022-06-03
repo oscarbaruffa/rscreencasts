@@ -3,7 +3,7 @@ title: |
   Big Mac Index
 description: |
   Data manipulation, Pairwise correlation
-date: 2020-12-21
+date: 2020-12-22
 date-format: long
 aliases:
   - "Big Mac Index.html"
@@ -11,7 +11,7 @@ aliases:
 
 Notable topics: Data manipulation, Pairwise correlation
 
-Recorded on: 2020-12-21
+Recorded on: 2020-12-22
 
 Timestamps by: Eric Fletcher
 

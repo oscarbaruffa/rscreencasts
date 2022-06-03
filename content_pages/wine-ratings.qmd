@@ -3,7 +3,7 @@ title: |
   Wine Ratings
 description: |
   Text mining (tidytext package), LASSO regression (glmnet package)
-date: 2019-05-30
+date: 2019-05-31
 date-format: long
 aliases:
   - "Wine Ratings.html"
@@ -11,7 +11,7 @@ aliases:
 
 Notable topics: Text mining (tidytext package), LASSO regression (glmnet package)
 
-Recorded on: 2019-05-30
+Recorded on: 2019-05-31
 
 Timestamps by: Alex Cookson
 
