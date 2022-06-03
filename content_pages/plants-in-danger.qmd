@@ -3,7 +3,7 @@ title: |
   Plants in Danger
 description: |
   Data manipulation, Web scraping (rvest package) and SelectorGadget
-date: 2020-08-18
+date: 2020-08-17
 date-format: long
 aliases:
   - "Plants in Danger.html"
@@ -11,7 +11,7 @@ aliases:
 
 Notable topics: Data manipulation, Web scraping (rvest package) and SelectorGadget
 
-Recorded on: 2020-08-18
+Recorded on: 2020-08-17
 
 Timestamps by: Eric Fletcher
 

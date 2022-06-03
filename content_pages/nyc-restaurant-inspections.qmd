@@ -3,7 +3,7 @@ title: |
   NYC Restaurant Inspections
 description: |
   Multiple t-test models (broom package), Principal Component Analysis (PCA)
-date: 2018-12-11
+date: 2018-12-10
 date-format: long
 aliases:
   - "NYC Restaurant Inspections.html"
@@ -11,7 +11,7 @@ aliases:
 
 Notable topics: Multiple t-test models (broom package), Principal Component Analysis (PCA)
 
-Recorded on: 2018-12-11
+Recorded on: 2018-12-10
 
 Timestamps by: Alex Cookson
 

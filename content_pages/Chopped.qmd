@@ -3,7 +3,7 @@ title: |
   Chopped
 description: |
   Data manipulation, Modeling (Linear Regression, Random Forest, and Natural Spline)
-date: 2020-08-25
+date: 2020-08-24
 date-format: long
 aliases:
   - "Chopped.html"
@@ -11,7 +11,7 @@ aliases:
 
 Notable topics: Data manipulation, Modeling (Linear Regression, Random Forest, and Natural Spline)
 
-Recorded on: 2020-08-25
+Recorded on: 2020-08-24
 
 Timestamps by: Eric Fletcher
 

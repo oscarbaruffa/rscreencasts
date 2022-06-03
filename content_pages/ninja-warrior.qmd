@@ -3,7 +3,7 @@ title: |
   Ninja Warrior
 description: |
   Log-odds with `tidylo` package, Graphing with `ggplot2`
-date: 2020-12-15
+date: 2020-12-14
 date-format: long
 aliases:
   - "Ninja Warrior.html"
@@ -11,7 +11,7 @@ aliases:
 
 Notable topics: Log-odds with `tidylo` package, Graphing with `ggplot2`
 
-Recorded on: 2020-12-15
+Recorded on: 2020-12-14
 
 Timestamps by: Alex Cookson
 

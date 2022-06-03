@@ -3,7 +3,7 @@ title: |
   Student-Teacher Ratios
 description: |
   WDI package (World Development Indicators)
-date: 2019-05-10
+date: 2019-05-09
 date-format: long
 aliases:
   - "Student-Teacher Ratios.html"
@@ -11,7 +11,7 @@ aliases:
 
 Notable topics: WDI package (World Development Indicators)
 
-Recorded on: 2019-05-10
+Recorded on: 2019-05-09
 
 Timestamps by: Alex Cookson
 

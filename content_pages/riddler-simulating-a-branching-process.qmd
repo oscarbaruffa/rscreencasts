@@ -3,14 +3,14 @@ title: |
   Riddler: Simulating a Branching Process
 description: |
   Simulation, Probability distributions (Exponential and Geometric)
-date: 2020-04-13
+date: 2020-04-12
 date-format: long
 
 ---
 
 Notable topics: Simulation, Probability distributions (Exponential and Geometric)
 
-Recorded on: 2020-04-13
+Recorded on: 2020-04-12
 
 Timestamps by: Alex Cookson
 

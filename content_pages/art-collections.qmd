@@ -3,7 +3,7 @@ title: |
   Art Collections
 description: |
   geom_area plot, distributions, calculating area (square meters) and ratio (width / height)
-date: 2021-01-12
+date: 2021-01-11
 date-format: long
 aliases:
   - "Art Collections.html"
@@ -11,7 +11,7 @@ aliases:
 
 Notable topics: geom_area plot, distributions, calculating area (square meters) and ratio (width / height)
 
-Recorded on: 2021-01-12
+Recorded on: 2021-01-11
 
 Timestamps by: Eric Fletcher
 

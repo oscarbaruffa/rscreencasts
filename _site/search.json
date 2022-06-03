@@ -1,5 +1,19 @@
 [
   {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "R Screencasts",
+    "section": "",
+    "text": "If you’re looking for real-world examples of live data analyses, you’ve come to the right place.\nDavid Robinson, a highly experienced Data Scientist, has recorded many screencasts where he analyses data that he’s never seen before. These are fantastic examples of how to think about approaching an analysis. You couldn’t ask for a better mentor!\nThe recordings were done as part of a weekly R programming challenge called TidyTuesday. All code is shared and all datasets are publicly available."
+  },
+  {
+    "objectID": "index.html#all-recordings",
+    "href": "index.html#all-recordings",
+    "title": "R Screencasts",
+    "section": "All recordings",
+    "text": "All recordings"
+  },
+  {
     "objectID": "about.html",
     "href": "about.html",
     "title": "About",
@@ -7,326 +21,11 @@
     "text": "David Robinson for recording the screencasts.\nAlex Cookson and Eric Fletcher for painstakingly time-stamping and describing all the content.\nOscar Baruffa for creating this website collating it all.\nThomas Mock for maintaining the TidyTuesday challenge.\nCountless others for R, RStudio, Quarto and a gazillion packages that make this all possible.\n\nIf you’d like to keep up to date with this website and other resources from Oscar Baruffa, sign up to the newsletter for posts about R, data and careers."
   },
   {
-    "objectID": "content_pages/african-american-achievements.html",
-    "href": "content_pages/african-american-achievements.html",
-    "title": "African-American Achievements",
-    "section": "",
-    "text": "Notable topics: plotly interactive timeline, Wikipedia web scraping\nRecorded on: 2020-06-09\nTimestamps by: Eric Fletcher\nView code"
-  },
-  {
-    "objectID": "content_pages/african-american-achievements.html#screencast",
-    "href": "content_pages/african-american-achievements.html#screencast",
-    "title": "African-American Achievements",
-    "section": "Screencast",
-    "text": "Screencast"
-  },
-  {
-    "objectID": "content_pages/african-american-achievements.html#timestamps",
-    "href": "content_pages/african-american-achievements.html#timestamps",
-    "title": "African-American Achievements",
-    "section": "Timestamps",
-    "text": "Timestamps\n\n\n  \n    \n      0:8:20\n    \n    fct_reorderforcats\n    \n      Use  fct_reorder from the forcats package to reorder the category factor levels by sorting along  n.\n\n    \n  \n  \n    \n      0:11:35\n    \n    str_removestringr\n    \n      Use str_remove from the stringr package to remove anything after a bracket or parenthesis from the person variable with the regular expression \"[\\\\[\\\\(].*\" David then discusses how web scraping may be a better option than parsing the strings.\n\n    \n  \n  \n    \n      0:12:25\n    \n    str_trimstringr\n    \n      Use str_trim from the stringr package to remove the whitespace from the person variable. David then discusses how web scraping may be a better option than parsing the strings.\n\n    \n  \n  \n    \n      0:15:50\n    \n    ggplotlyplotly\n    \n      Create an interactive plotly timeline.\n\n    \n  \n  \n    \n      0:18:20\n    \n    ylimggplot2\n    \n      Use ylim(c(-.1, 1)) to set scale limits moving the geom_point to the bottom of the graph.\n\n    \n  \n  \n    \n      0:19:30\n    \n    paste0base\n    \n      Use paste0 from base R to concatenate the accomplishment and person with \": \" in between the two displayed in the timeline hover label.\n\n    \n  \n  \n    \n      0:20:30\n    \n    aesggplot2\n    \n      Set y to category in ggplot aesthetics to get 8 separate timelines on one plot, one for each category. Doing this allows David to remove the ylim mentioned above.\n\n    \n  \n  \n    \n      0:22:25\n    \n    tooltipplotly\n    \n      Use the plotly tooltip = text parameter to get just a single line of text in the plotly hover labels.\n\n    \n  \n  \n    \n      0:26:05\n    \n    glueglue\n    \n      Use glue from the glue package to reformat text with \\n included so that the single line of text can now be broken up into 2 separate lines in the hover labels.\n\n    \n  \n  \n    \n      0:33:55\n    \n    separate_rowstidyr\n    \n      Use separate_rows from the tidyr package to separate the occupation_s variable from the science dataset into multiple columns delimited by a semicolon with sep = \"; \"\n\n    \n  \n  \n    \n      0:34:25\n    \n    str_to_titlestringr\n    \n      Use str_to_title from the stringr package to conver the case to title case in the occupation_s variable.\n\n    \n  \n  \n    \n      0:35:15\n    \n    str_detectstringr\n    \n      Use str_detect from the stringr package to detect the presence of statistician from within the occupation_s variable with regex(\"statistician\", ignore_case = TRUE) to perform a case-insensitive search.\n\n    \n  \n  \n    \n      0:41:55\n    \n    read_htmlhtml_nodeshtml_tablesetNamesrvest\n    \n      Use the rvest package with Selector Gadget  to scrape additional information about the individual from their Wikipedia infobox.\n\n    \n  \n  \n    \n      0:49:15\n    \n    mappossiblyread_htmlpurrr\n    \n      Use map and possibly from the purrr package to separate out the downloading of data from parsing the useful information. David then turns the infobox extraction step into an anonymous function using .%>% dot-pipe.\n\n    \n  \n  \n    \n      0:58:40\n    \n    \n    \n      Summary of screencast."
-  },
-  {
-    "objectID": "content_pages/african-american-history.html",
-    "href": "content_pages/african-american-history.html",
-    "title": "African-American History",
-    "section": "",
-    "text": "Notable topics: Network diagram, Wordcloud\nRecorded on: 2020-06-16\nTimestamps by: Eric Fletcher\nView code"
-  },
-  {
-    "objectID": "content_pages/african-american-history.html#screencast",
-    "href": "content_pages/african-american-history.html#screencast",
-    "title": "African-American History",
-    "section": "Screencast",
-    "text": "Screencast"
-  },
-  {
-    "objectID": "content_pages/african-american-history.html#timestamps",
-    "href": "content_pages/african-american-history.html#timestamps",
-    "title": "African-American History",
-    "section": "Timestamps",
-    "text": "Timestamps\n\n  \n    \n      0:6:55\n    \n    fct_lumpforcats\n    \n      Use fct_lump from the forcats package to lump together all the factor levels in ship_name except the n most frequent. Used within filter with ! = \"Other\" to remove other.\n\n    \n  \n  \n    \n      0:8:00\n    \n    fct_reorderforcats\n    \n      use fct_reorder from the forcats package to reorder the ship_name factor levels y sorting along the n_slaves_arrived variable.\n\n    \n  \n  \n    \n      0:10:20\n    \n    geom_vlineggplot2\n    \n      Add geom_vline to geom_histogram to annotate the plot with a vertical line indicating the Revolutionary War and the Civil War.\n\n    \n  \n  \n    \n      0:13:00\n    \n    countdplyr\n    \n      Use truncated division within count to create a new decade variable equal to 10 * (year_arrival %/% 10))\n\n    \n  \n  \n    \n      0:17:20\n    \n    str_truncstringr\n    \n      Use str_trunc from the stringr package to truncate the titles in each facet panel accounting for the slave ports with really long names.\n\n    \n  \n  \n    \n      0:18:05\n    \n    themeggplot2\n    \n      Another option for accounting for long titles in the facet panels is to use strip.text within theme with element_text(size = 6)\n\n    \n  \n  \n    \n      0:26:55\n    \n    ggraphgeom_edge_linkgeom_node_pointgeom_node_textggraph\n    \n      Use the ggraph package to create a network diagram using port_origin and port_arrival.\n\n    \n  \n  \n    \n      0:29:05\n    \n    arrowgrid\n    \n      Use arrow from the grid package to add directional arrows to the points in the network diagram.\n\n    \n  \n  \n    \n      0:29:40\n    \n    scale_edge_size_continuousggraph\n    \n      Use scale_width_size_continuous from the ggraph packge to adjust the size of the points in the network diagram.\n\n    \n  \n  \n    \n      0:35:25\n    \n    summarizemeandplyr\n    \n      Within summarize use mean(n_slaves_arrived, na.rm = TRUE) * n()) to come up with an estimated total numer of slaves since 49% of the data is missing.\n\n    \n  \n  \n    \n      0:48:20\n    \n    geom_colfacet_wrapggplot2\n    \n      Create a faceted stacked percent barplot (spinogram) showing the percentage of black_free, black_slaves, white, and other for each region.\n\n    \n  \n  \n    \n      0:51:00\n    \n    wordcloudgeom_text_wordcloudwordcloudggwordcloud\n    \n      Use the wordcloud package to create a wordcloud with the african_names dataset. David hsa issues with the wordcloud package and opts to use ggwordcloud instead. Also, mentions the worldcloud2 package.\n\n    \n  \n  \n    \n      0:55:20\n    \n    fct_recodeforcats\n    \n      Use fct_recode from the forcats package to change the factor levels for the gender variable while renaming Man = \"Boy\" and Woman = \"Girl\"\n\n    \n  \n  \n    \n      0:57:20\n    \n    reorder_withintidytext\n    \n      Use reorder_within from the tidytext package to reorder the geom_col by n within gender variable for each facet panel.\n\n    \n  \n  \n    \n      0:59:00\n    \n    \n    \n      Summary of screencast."
-  },
-  {
-    "objectID": "content_pages/animal-crossing.html",
-    "href": "content_pages/animal-crossing.html",
-    "title": "Animal Crossing",
-    "section": "",
-    "text": "Notable topics: Topic modelling (stm package)\nRecorded on: 2020-05-05\nTimestamps by: Alex Cookson\nView code"
-  },
-  {
-    "objectID": "content_pages/animal-crossing.html#screencast",
-    "href": "content_pages/animal-crossing.html#screencast",
-    "title": "Animal Crossing",
-    "section": "Screencast",
-    "text": "Screencast"
-  },
-  {
-    "objectID": "content_pages/animal-crossing.html#timestamps",
-    "href": "content_pages/animal-crossing.html#timestamps",
-    "title": "Animal Crossing",
-    "section": "Timestamps",
-    "text": "Timestamps\n\n  \n    \n      0:5:05\n    \n    \n    \n      Starting text analysis of critic reviews of Animal Crossing\n\n    \n  \n  \n    \n      0:7:50\n    \n    floor_datelubridate\n    \n      Using floor_date function from lubridate package to round dates down to nearest month (then week)\n\n    \n  \n  \n    \n      0:9:00\n    \n    unnest_tokensanti_jointidytext\n    \n      Using unnest_tokens function and anti_join functions from tidytext package to break reviews into individual words and remove stop words\n\n    \n  \n  \n    \n      0:10:35\n    \n    \n    \n      Taking the average rating associated with individual words (simple approach to gauge sentiment)\n\n    \n  \n  \n    \n      0:12:30\n    \n    geom_line\n    \n      Using geom_line and geom_point to graph ratings over time\n\n    \n  \n  \n    \n      0:14:40\n    \n    mean\n    \n      Using mean function and logical statement to calculate percentages that meet a certain condition\n\n    \n  \n  \n    \n      0:22:30\n    \n    geom_text\n    \n      Using geom_text to visualize what words are associated with positive/negative reviews\n\n    \n  \n  \n    \n      0:27:00\n    \n    \n    \n      Disclaimer that this exploration is not text regression -- wine ratings screencast is a good resource for that\n\n    \n  \n  \n    \n      0:28:30\n    \n    \n    \n      Starting to do topic modelling\n\n    \n  \n  \n    \n      0:30:45\n    \n    stmstm\n    \n      Explanation of stm function from stm package\n\n    \n  \n  \n    \n      0:34:30\n    \n    stmstm\n    \n      Explanation of stm function's output (topic modelling output)\n\n    \n  \n  \n    \n      0:36:55\n    \n    \n    \n      Changing the number of topics from 4 to 6\n\n    \n  \n  \n    \n      0:37:40\n    \n    \n    \n      Explanation of how topic modelling works conceptually\n\n    \n  \n  \n    \n      0:40:55\n    \n    tidybroom\n    \n      Using tidy function from broom package to find which \"documents\" (reviews) were the \"strongest\" representation of each topic\n\n    \n  \n  \n    \n      0:44:50\n    \n    \n    \n      Noting that there might be a scraping issue resulting in review text being repeated\n\n    \n  \n  \n    \n      0:46:05\n    \n    str_sub\n    \n      (Unsuccessfully) Using str_sub function to help fix repeated review text by locating where in the review text starts being repeated\n\n    \n  \n  \n    \n      0:48:20\n    \n    str_replacemap2\n    \n      (Unsuccessfully) Using str_replace and map2_chr functions, as well as regex cpaturing groups to fix repeated text\n\n    \n  \n  \n    \n      0:52:00\n    \n    \n    \n      Looking at the association between review grade and gamma of the topic model (how \"strong\" a review represents a topic)\n\n    \n  \n  \n    \n      0:53:55\n    \n    cor\n    \n      Using cor function with method = \"spearman\" to calculate correlation based on rank instead of actual values\n\n    \n  \n  \n    \n      0:57:35\n    \n    \n    \n      Summary of screencast"
-  },
-  {
-    "objectID": "content_pages/art-collections.html",
-    "href": "content_pages/art-collections.html",
-    "title": "Art Collections",
-    "section": "",
-    "text": "Notable topics: geom_area plot, distributions, calculating area (square meters) and ratio (width / height)\nRecorded on: 2021-01-12\nTimestamps by: Eric Fletcher\nView code"
-  },
-  {
-    "objectID": "content_pages/art-collections.html#screencast",
-    "href": "content_pages/art-collections.html#screencast",
-    "title": "Art Collections",
-    "section": "Screencast",
-    "text": "Screencast"
-  },
-  {
-    "objectID": "content_pages/art-collections.html#timestamps",
-    "href": "content_pages/art-collections.html#timestamps",
-    "title": "Art Collections",
-    "section": "Timestamps",
-    "text": "Timestamps\n\n  \n    \n      0:1:55\n    \n    clean_namesjanitor\n    \n      Using clean_names to convert variable names from camelcase to snakecase.\n\n    \n  \n  \n    \n      0:4:05\n    \n    fct_reordergeom_colforcatsggplot2\n    \n      Use fct_reorder to reorder geom_col columns in ascending order.\n\n    \n  \n  \n    \n      0:4:50\n    \n    extractseparatetidyr\n    \n      \"Use extract to extract a character column into multiple columns using the regular expression \"\"(.*) on (.*)\"\" at 6:05 David decides to change this to: Use separate with sep = \"\" on \"\" and fill = \"\"left\"\" and extra = \"\"merge\"\" to control what happens when there are not enoughor too many pieces. at 7:10 David decides to change to fill = \"\"right\"\".\"\n\n    \n  \n  \n    \n      0:7:50\n    \n    replace_natidyr\n    \n      Use replace_na to replace NAs with specified values. In this case replace them with Missing.\n\n    \n  \n  \n    \n      0:10:25\n    \n    fct_lumpfilterforcatsdplyr\n    \n      \"Use fct_lump to lump artist and medium levels except for the n most frequent. at 11:30 David decides to use filter(fct_lump(artist, 16) != \"\"Other\"\") to get rid of the artist Other category. \"\n\n    \n  \n  \n    \n      0:13:55\n    \n    geom_areaggplot2\n    \n      \"Create a geom_area plot to show the distribution of paintings by medium over time. At 15:35 David decides to change from count to percentage to make it easier to show the difference in composition using mutate(pct = n / sum).\"\n\n    \n  \n  \n    \n      0:14:20\n    \n    countroundbasedplyr\n    \n      Bucket year variable into decades using round(year -1) to round the year to the nearest 10.\n\n    \n  \n  \n    \n      0:16:35\n    \n    scale_y_continuousscales\n    \n      Use scale_y_continuous(labels = scales::percent) to change y-axis labels to percent format.\n\n    \n  \n  \n    \n      0:18:35\n    \n    facet_wrapgeom_colggplot2\n    \n      Turn the geom_area plot into a faceted geom_col.\n\n    \n  \n  \n    \n      0:21:35\n    \n    mutategroup_bysummarizecompletedplyrtidyr\n    \n      \"Calculate the percentage of artists for each medium per decade. \"\n\n    \n  \n  \n    \n      0:29:20\n    \n    filtermutateggplotgeom_histogramscale_x_log10geom_vlinedplyrggplot2\n    \n      Calculate the distribution of the area (square meters) and ratio (width / height) of the art pieces.\n\n    \n  \n  \n    \n      0:38:25\n    \n    mutatecase_whengeom_areacompletedplyrggplot2\n    \n      Categorize the pieces by shape(landscape, portait, scquare) based on their ratio then plot using geom_area to look at the composition over time.\n\n    \n  \n  \n    \n      0:41:35\n    \n    group_bysummarizefilterggplotgeom_linegeom_pointdplyrggplot2\n    \n      Craete a line plot showing the median ratio by decade over time.\n\n    \n  \n  \n    \n      0:44:15\n    \n    group_bysummarizefilterggplotgeom_linegeom_pointdplyrggplot2\n    \n      Craete a line plot showing the median area by decade over time.\n\n    \n  \n  \n    \n      0:46:05\n    \n    mutatefilterggplotgeom_boxplotscale_y_log10dplyrggplot2\n    \n      Create a boxplot showing the distribution of area over time.\n\n    \n  \n  \n    \n      0:48:25\n    \n    group_bysummarizearrangedplyr\n    \n      Create various summary statistics for the artists such as avg_year, first_year, last_year, n_pieces, median_area, median_ratio`.\n\n    \n  \n  \n    \n      0:51:00\n    \n    filteradd_countmutateggplotgeom_boxplotscale_x_log10geom_vlinegluedplyrggplot2glue\n    \n      Create a boxplot showing the distribution of ratio over time for n amount of artists. Use glue to concatonate number of pieces for each artist ont he y axis.\n\n    \n  \n  \n    \n      0:56:20\n    \n    filteradd_countmutateggplotgeom_boxplotscale_x_log10geom_vlinegluedplyrggplot2glue\n    \n      Create a boxplot showing the distribution of ratio over time for each medium. Use glue to concatonate number of pieces for each medium on the y axis.\n\n    \n  \n  \n    \n      0:59:10\n    \n    \n    \n      Summary of screencast"
-  },
-  {
-    "objectID": "content_pages/australian-animal-outcomes.html",
-    "href": "content_pages/australian-animal-outcomes.html",
-    "title": "Australian Animal Outcomes",
-    "section": "",
-    "text": "Notable topics: Data manipulation, Web Scraping (rvest package) and SelectorGadget, Animated Choropleth Map\nRecorded on: 2020-07-21\nTimestamps by: Eric Fletcher\nView code"
-  },
-  {
-    "objectID": "content_pages/australian-animal-outcomes.html#screencast",
-    "href": "content_pages/australian-animal-outcomes.html#screencast",
-    "title": "Australian Animal Outcomes",
-    "section": "Screencast",
-    "text": "Screencast"
-  },
-  {
-    "objectID": "content_pages/australian-animal-outcomes.html#timestamps",
-    "href": "content_pages/australian-animal-outcomes.html#timestamps",
-    "title": "Australian Animal Outcomes",
-    "section": "Timestamps",
-    "text": "Timestamps\n\n\n  \n    \n      0:1:20\n    \n    use_tidytemplatetidytuesdayR\n    \n      Using use_tidytemplate to open the project dataset with the package's tidytemplate Rmd\n\n    \n  \n  \n    \n      0:4:30\n    \n    renamedplyr\n    \n      Using rename to rename Total column to total\n\n    \n  \n  \n    \n      0:6:20\n    \n    fct_reorderforcats\n    \n      Using fct_reorder to reorder stacked barplot with weight = sum\n\n    \n  \n  \n    \n      0:7:00\n    \n    fct_lumpforcats\n    \n      Using fct_lump with w = n to lump together outcome factor levels displaying the most frequenct with rest lumped into other\n\n    \n  \n  \n    \n      0:9:15\n    \n    fct_recodeforcats\n    \n      Using fct_recode to combine the factor level In Stock with Currently In Care\n\n    \n  \n  \n    \n      0:12:10\n    \n    fct_reorderforcats\n    \n      Using fct_reorder to reorder facet_wrap panels\n\n    \n  \n  \n    \n      0:13:03\n    \n    scale_y_continuousggplot2scales\n    \n      Using scale_y_continuous with labels = comma to separate digits with comma\n\n    \n  \n  \n    \n      0:14:10\n    \n    completetidyr\n    \n      Using complete to complete account for missing combinations of data where the value is 0 in the released column\n\n    \n  \n  \n    \n      0:16:10\n    \n    maxbase\n    \n      Using max (year) within filter to subset the data displaying only the most recent year\n\n    \n  \n  \n    \n      0:19:30\n    \n    pivot_longertidyr\n    \n      Using pivot_longer to pivot location variables from wide to long\n\n    \n  \n  \n    \n      0:21:45\n    \n    read_htmlhtml_nodesmaprvestjanitor\n    \n      Web Scaraping table from Wikipedia with SelectorGadget and Rvest\n\n    \n  \n  \n    \n      0:25:45\n    \n    str_to_upperstringr\n    \n      Using str_to_upper to upper case the values in the shorthand column\n\n    \n  \n  \n    \n      0:27:13\n    \n    parse_numberreadr\n    \n      Using parse_number to remove commas from population and area columns\n\n    \n  \n  \n    \n      0:28:55\n    \n    bind_rowsdplyr\n    \n      Using bind_rows to bind the two web scraped tables from Wikipedia together by row and column\n\n    \n  \n  \n    \n      0:29:35\n    \n    inner_joindplyr\n    \n      Using inner_join to combine the Wikipedia table with the original data set\n\n    \n  \n  \n    \n      0:29:47\n    \n    mutatedplyr\n    \n      Using mutate to create new per_capita_million column to show outcome on a per million people basis\n\n    \n  \n  \n    \n      0:37:25\n    \n    summarizedplyr\n    \n      Using summarize to create new column pct_euthanized showing percent of cats and dogs euthanized over time. Formula accounts for 0 values thus avoiding a resulting empty vector.\n\n    \n  \n  \n    \n      0:39:10\n    \n    scale_y_continuousggplot2scales\n    \n      Using scale_y_continuous with labels = percent to add percentage sign to y-axis values\n\n    \n  \n  \n    \n      0:42:45\n    \n    read_sfgeom_sfsf_simplifysfggplot2\n    \n      Create a choropleth map of Australia using an Australian States Shapefile using the sf and ggplot2 packages | Troubleshooting begins at 44:25 (downsizing / downsampling with sf_simplify)\n\n    \n  \n  \n    \n      0:55:45\n    \n    transition_manualgganimate\n    \n      Add animation to the map of Australia showing the percent of cats euthanized by region using gganimate\n\n    \n  \n  \n    \n      1:01:35\n    \n    \n    \n      Summary of screencast"
-  },
-  {
-    "objectID": "content_pages/beach-volleyball.html",
-    "href": "content_pages/beach-volleyball.html",
-    "title": "Beach Volleyball",
-    "section": "",
-    "text": "Notable topics: Data cleaning, Logistic regression\nRecorded on: 2020-05-19\nTimestamps by: Eric Fletcher\nView code"
-  },
-  {
-    "objectID": "content_pages/beach-volleyball.html#screencast",
-    "href": "content_pages/beach-volleyball.html#screencast",
-    "title": "Beach Volleyball",
-    "section": "Screencast",
-    "text": "Screencast"
-  },
-  {
-    "objectID": "content_pages/beach-volleyball.html#timestamps",
-    "href": "content_pages/beach-volleyball.html#timestamps",
-    "title": "Beach Volleyball",
-    "section": "Timestamps",
-    "text": "Timestamps\n\n  \n    \n      0:5:30\n    \n    pivot_longerdplyr\n    \n      Use pivot_longer from the dplyr package to pivot the data set from wide to long.\n\n    \n  \n  \n    \n      0:7:20\n    \n    mutate_atdplyr\n    \n      Use mutate_at from the dplyr package with starts_with to change the class to character for all columns that start with w_ and l_.\n\n    \n  \n  \n    \n      0:8:00\n    \n    separatetidyr\n    \n      Use separate from the tidyr package to separate the name variable into three columns with extra = merge and fill = right.\n\n    \n  \n  \n    \n      0:10:35\n    \n    renamedplyr\n    \n      Use rename from the dplyr package to rename w_player1, w_player2, l_player1, and l_player2.\n\n    \n  \n  \n    \n      0:12:50\n    \n    pivot_widerdplyr\n    \n      Use pivot_wider from the dplyr package to pivot the name variable from long to wide.\n\n    \n  \n  \n    \n      0:15:15\n    \n    str_to_upperstringr\n    \n      Use str_to_upper to convert the winner_loser w and l values to uppercase.\n\n    \n  \n  \n    \n      0:20:25\n    \n    row_numberdplyr\n    \n      Add unique row numbers for each match using mutate with row_number from the dplyr package.\n\n    \n  \n  \n    \n      0:21:20\n    \n    separate_rowstidyr\n    \n      Separate the score values into multiple rows using separate_rows from the tidyr package.\n\n    \n  \n  \n    \n      0:22:45\n    \n    separatetidyr\n    \n      Use separate from the tidyr package to actual scores into two columns, one for the winners score w_score and another for the losers score l_score.\n\n    \n  \n  \n    \n      0:23:45\n    \n    na_ifdplyr\n    \n      Use na_if from the dplyr package to change the Forfeit or other value from the score variable to NA.\n\n    \n  \n  \n    \n      0:24:35\n    \n    str_removestringr\n    \n      Use str_remove from the stringr package to remove scores that include retired.\n\n    \n  \n  \n    \n      0:25:25\n    \n    mutategroup_bysummarizedplyr\n    \n      Determine how many times the winners score w_score is  greter than the losers score l_score at least 1/3 of the time.\n\n    \n  \n  \n    \n      0:28:30\n    \n    summarizedplyr\n    \n      Use summarize from the dplyr package to create the summary statistics including the number of matches, winning percentage, date of first match, date of most recent match.\n\n    \n  \n  \n    \n      0:34:15\n    \n    type_convertreadr\n    \n      Use type_convert from the readr package to convert character class variables to numeric.\n\n    \n  \n  \n    \n      0:35:00\n    \n    summarize_alldplyr\n    \n      Use summarize_all from the dplyr package to calculate the calculate which fraction of the data is not NA.\n\n    \n  \n  \n    \n      0:42:00\n    \n    summarizeinner_joingeom_pointglmcbinddplyrggplot2\n    \n      Use summarize from the dplyr package to determine players number of matches, winning percentage, average attacks, average errors, average kills, average aces, average serve errors, and total rows with data for years prior to 2019.\nThe summary statistics are then used to answer how would we could predict if a player will win in 2019 using geom_point and logistic regression. Initially, David wanted to predict performance based on players first year performance. (NOTE - David mistakingly grouped by year and age. He cathces this around 1:02:00.)\n\n    \n  \n  \n    \n      0:49:25\n    \n    summarizeyearlubridate\n    \n      Use  year from the lubridate package within a group_by to determine the age for each play given their birthdate.\n\n    \n  \n  \n    \n      0:54:30\n    \n    \n    \n      Turn the summary statistics at timestamp 42:00 into a . DOT %>% PIPE function.\n\n    \n  \n  \n    \n      1:04:30\n    \n    \n    \n      Summary of screencast."
-  },
-  {
-    "objectID": "content_pages/beer-production.html",
-    "href": "content_pages/beer-production.html",
-    "title": "Beer Production",
-    "section": "",
-    "text": "Notable topics: tidymetrics package demonstration, Animated map (gganimate package)\nRecorded on: 2020-04-01\nTimestamps by: Alex Cookson\nView code"
-  },
-  {
-    "objectID": "content_pages/beer-production.html#screencast",
-    "href": "content_pages/beer-production.html#screencast",
-    "title": "Beer Production",
-    "section": "Screencast",
-    "text": "Screencast"
-  },
-  {
-    "objectID": "content_pages/beer-production.html#timestamps",
-    "href": "content_pages/beer-production.html#timestamps",
-    "title": "Beer Production",
-    "section": "Timestamps",
-    "text": "Timestamps\n\n  \n    \n      0:4:25\n    \n    \n    \n      Asking, \"What ingredients are used in beer?\"\n\n    \n  \n  \n    \n      0:4:40\n    \n    filtermax\n    \n      Using filter and max functions to look at the most recent period of time\n\n    \n  \n  \n    \n      0:7:25\n    \n    pasteymd\n    \n      Using paste and ymd functions (ymd is from lubridate package) to convert year-month field into an date-formatted field\n\n    \n  \n  \n    \n      0:9:20\n    \n    \n    \n      Spotting potential missing or mis-parsed data\n\n    \n  \n  \n    \n      0:13:50\n    \n    \n    \n      Introducing the tidymetrics framework\n\n    \n  \n  \n    \n      0:14:45\n    \n    install_github\n    \n      Using install_github function to install tidymetrics from GitHub\n\n    \n  \n  \n    \n      0:15:25\n    \n    cross_by_dimensionstidymetrics\n    \n      Using cross_by_dimensions function from tidymetrics package to get aggregations at different levels of multiple dimensions\n\n    \n  \n  \n    \n      0:18:10\n    \n    cross_by_periodstidymetrics\n    \n      Using cross_by_periods function from tidymetrics package to also get aggregations for different intervals (e.g, month, quarter, year)\n\n    \n  \n  \n    \n      0:22:00\n    \n    use_metrics_scaffoldtidymetrics\n    \n      Using use_metrics_scaffold function from tidymetrics package to create framework for documenting dimensions in RMarkdown YAML header\n\n    \n  \n  \n    \n      0:24:00\n    \n    create_metricstidymetrics\n    \n      Using create_metrics function from tidymetrics package to save data as a tibble with useful metadata (good for visualizing interactively)\n\n    \n  \n  \n    \n      0:25:15\n    \n    preview_metricsshinymetrics\n    \n      Using preview_metric function from shinymetrics package (still under development as of 2020-04-24) to demonstrate shinymetrics\n\n    \n  \n  \n    \n      0:27:35\n    \n    shinymetrics\n    \n      Succesfuly getting shinymetrics to work\n\n    \n  \n  \n    \n      0:28:25\n    \n    shinymetrics\n    \n      Explanation of the shinymetrics bug David ran into\n\n    \n  \n  \n    \n      0:34:10\n    \n    parse_numberfct_lumpcoalesce\n    \n      Changing order of ordinal variable (e.g., \"1,000 to 10,000\" and \"10,000 to 20,000\") using the parse_number, fct_lump, and coalesce functions\n\n    \n  \n  \n    \n      0:41:25\n    \n    \n    \n      Asking, \"Where is beer produced?\"\n\n    \n  \n  \n    \n      0:46:45\n    \n    sf\n    \n      Looking up sf package documentation to refresh memory on how to draw state borders for a map\n\n    \n  \n  \n    \n      0:48:55\n    \n    match\n    \n      Using match function and state.abb vector (state abbreviations) from sf package to perform a lookup of state names\n\n    \n  \n  \n    \n      0:51:05\n    \n    geom_sfsf\n    \n      Using geom_sf function (and working through some hiccoughs) to create a choropleth map\n\n    \n  \n  \n    \n      0:52:30\n    \n    theme_mapggthemes\n    \n      Using theme_map function from ggthemes package to get more appropriate styling for maps\n\n    \n  \n  \n    \n      0:55:40\n    \n    \n    \n      Experimenting with how to get the legend to display in the bottom right corner\n\n    \n  \n  \n    \n      0:58:25\n    \n    gganimate\n    \n      Starting to build an animation of consumption patterns over time using gganimate package\n\n    \n  \n  \n    \n      1:03:40\n    \n    gganimate\n    \n      Getting the year being animated to show up in the title of a gganimate map\n\n    \n  \n  \n    \n      1:05:40\n    \n    \n    \n      Summary of screencast\n\n    \n  \n  \n    \n      1:06:50\n    \n    \n    \n      Spotting a mistake in a group_by call causing the percentages not to add up properly\n\n    \n  \n  \n    \n      1:09:10\n    \n    tidymetrics\n    \n      Brief extra overview of tidymetrics code"
-  },
-  {
-    "objectID": "content_pages/beyonce-and-taylor-swift-lyrics.html",
-    "href": "content_pages/beyonce-and-taylor-swift-lyrics.html",
-    "title": "Beyonce and Taylor Swift Lyrics",
-    "section": "",
-    "text": "Notable topics: Text analysis, tf_idf, Log odds ratio, Diverging bar graph, Lollipop graph\nRecorded on: 2020-09-29\nTimestamps by: Eric Fletcher\nView code"
-  },
-  {
-    "objectID": "content_pages/beyonce-and-taylor-swift-lyrics.html#screencast",
-    "href": "content_pages/beyonce-and-taylor-swift-lyrics.html#screencast",
-    "title": "Beyonce and Taylor Swift Lyrics",
-    "section": "Screencast",
-    "text": "Screencast"
-  },
-  {
-    "objectID": "content_pages/beyonce-and-taylor-swift-lyrics.html#timestamps",
-    "href": "content_pages/beyonce-and-taylor-swift-lyrics.html#timestamps",
-    "title": "Beyonce and Taylor Swift Lyrics",
-    "section": "Timestamps",
-    "text": "Timestamps\n\n\n  \n    \n      0:7:50\n    \n    fct_reorderforcats\n    \n      Use fct_reorder from the forcats package to reorder title factor levels by sorting along the sales variable in geom_col plot.\n\n    \n  \n  \n    \n      0:8:10\n    \n    labelsscales\n    \n      Use labels = dollar from the scales package to format the geom_col x-axis values as currency.\n\n    \n  \n  \n    \n      0:11:15\n    \n    rename_allstr_to_lowerdplyrstringr\n    \n      Use rename_all(str_to_lower) to convert variable names to lowercase.\n\n    \n  \n  \n    \n      0:12:45\n    \n    unnest_tokenstidytext\n    \n      Use unnest_tokens from the tidytext package to split the lyrics into one-lyric-per-row.\n\n    \n  \n  \n    \n      0:13:00\n    \n    anti_joindplyr\n    \n      Use anti_join from the tidytext package to find the most common words int he lyrics without stop_words.\n\n    \n  \n  \n    \n      0:15:15\n    \n    bind_tf_idftidytext\n    \n      Use bind_tf_idf from the tidytext package to determine tf - the proportion each word has in each album and idf - how specific each word is to each particular album.\n\n    \n  \n  \n    \n      0:17:45\n    \n    reorder_withinscale_y_reorderedslice_maxtidytextdplyr\n    \n      Use reorder_within with scale_y_reordered in order to reorder the bars within each facet panel. David replaces top_n with slice_max from the dplyr package in order to show the top 10 words with ties = FALSE.\n\n    \n  \n  \n    \n      0:20:45\n    \n    bind_log_oddstidylo\n    \n      Use bind_log_odds from the tidylo package to calculate the log odds ratio of album and words, that is how much more common is the word in a specific album than across all the other albums.\n\n    \n  \n  \n    \n      0:23:10\n    \n    filterstr_lengthdplyrstringr\n    \n      Use filter(str_length(word) <= 3) to come up with a list in order to remove common filler words like ah, uh, ha, ey, eeh, and huh.\n\n    \n  \n  \n    \n      0:27:00\n    \n    distinctmdystr_removedplyrlubridatestringr\n    \n      Use mdy from the lubridate package and str_remove(released, \" \\\\(.*)\")) from the stringr package to parse the dates in the released variable.\n\n    \n  \n  \n    \n      0:28:15\n    \n    inner_joinfct_recodedplyrforcats\n    \n      Use inner_join from the dplyr package to join taylor_swift_words with release_dates.\nDavid ends up having to use fct_recode since the albums reputation and folklore were nor lowercase in a previous table thus excluding them from the inner_join.\n\n    \n  \n  \n    \n      0:28:30\n    \n    fct_reordergeom_colforcatsggplot2\n    \n      Use fct_reorder from the forcats package to reorder album factor levels by sorting along the released variable to be used in the faceted geom_col.\n\n    \n  \n  \n    \n      0:34:40\n    \n    bind_rowsunnest_tokensdplyrtidytext\n    \n      Use bind_rows from hte dplyr package to bind ts with beyonce with unnest_tokens from the tidytext package to get one lyric per row per artist.\n\n    \n  \n  \n    \n      0:38:40\n    \n    bind_log_oddstidylo\n    \n      Use bind_log_odds to figure out which words are more likely to come from a Taylor Swift or Beyonce song?\n\n    \n  \n  \n    \n      0:41:10\n    \n    slice_maxgeom_colifelsefct_reorderdplyrggplot2forcats\n    \n      Use slice_max from the dplyr package to select the top 100 words by num_words_total and then the top 25 by log_odds_weighted. Results are used to create a diverging bar chart showing which words are most common between Beyonce and Taylor Swift songs.\n\n    \n  \n  \n    \n      0:44:40\n    \n    scale_x_continuousggplot2\n    \n      Use scale_x_continuous to make the log_odds_weighted scale more interpretable.\n\n    \n  \n  \n    \n      0:50:45\n    \n    geom_colgeom_pointgeom_vlineggplot2\n    \n      Take the previous plot and turn it into a lollipop graph with geom_point(aes(size = num_words_total, color = direction))\n\n    \n  \n  \n    \n      0:53:05\n    \n    ifelsebase\n    \n      Use ifelse to change the 1x value on the x-axis to same.\n\n    \n  \n  \n    \n      0:54:15\n    \n    pivot_widerclean_namesgeom_ablinegeom_pointslice_maxscale_y_log_10scale_x_log_10geom_texttidyrggplot2dplyr\n    \n      Create a geom_point with geom_abline to show the most popular words they use in common.\n\n    \n  \n  \n    \n      1:01:55\n    \n    \n    \n      Summary of screencast."
-  },
-  {
-    "objectID": "content_pages/big-mac-index.html",
-    "href": "content_pages/big-mac-index.html",
-    "title": "Big Mac Index",
-    "section": "",
-    "text": "Notable topics: Data manipulation, Pairwise correlation\nRecorded on: 2020-12-22\nTimestamps by: Eric Fletcher\nView code"
-  },
-  {
-    "objectID": "content_pages/big-mac-index.html#screencast",
-    "href": "content_pages/big-mac-index.html#screencast",
-    "title": "Big Mac Index",
-    "section": "Screencast",
-    "text": "Screencast"
-  },
-  {
-    "objectID": "content_pages/big-mac-index.html#timestamps",
-    "href": "content_pages/big-mac-index.html#timestamps",
-    "title": "Big Mac Index",
-    "section": "Timestamps",
-    "text": "Timestamps\n\n  \n    \n      0:5:45\n    \n    add_countdplyr\n    \n      Use the add_count function from the dplyr package with name = \"country_total\" to count the number of observations by group in the name variable.\n\n    \n  \n  \n    \n      0:5:55\n    \n    filtermaxdplyrbase\n    \n      Use filter from the dplyr package with country_total == max(country_total) to filter the data for countries where every data point is provided.\n\n    \n  \n  \n    \n      0:6:30\n    \n    renamedplyr\n    \n      Use the rename function from the dplyr package to rename the name variable to country_name.\n\n    \n  \n  \n    \n      0:6:45\n    \n    themeggplot2\n    \n      Use theme(legend.position = \"none\") to hide the legend generated by the geom_line plot.\n\n    \n  \n  \n    \n      0:7:00\n    \n    expand_limitsggplot2\n    \n      Use the expand_limits function from the ggplot2 package with y = 0 so that each facet panel has a y-axis that starts at the same point, in this case 0.\n\n    \n  \n  \n    \n      0:8:30\n    \n    fct_reorderforcats\n    \n      Reorder facet panels using the fct_reorder from the forcats package with a function passed in to the .fun argument to calculate the ratio between max and min values in the local_price variable.  At 12:00, David changes from using max and min to last and first to calculate the Big Mac inflation rate.\n\n    \n  \n  \n    \n      0:13:20\n    \n    scale_x_log10ggplot2\n    \n      Use scale_x_log10 from the ggplot2 package to change the breaks for the x-axis while also applying a log10 tranformation.\n\n    \n  \n  \n    \n      0:15:05\n    \n    geom_textpaste0ggplot2base\n    \n      Use geom_text from the from the ggplot2 with paste0 package to add labels to each bar in the plot indicating how many time X the price of a Big Mac increased from 2000 to 2020.\n\n    \n  \n  \n    \n      0:28:10\n    \n    geom_lineggplot2\n    \n      Add two lines to a plot using 2 geom_line  with  color = argument and y= argument to distinguish between the two lines.\n\n    \n  \n  \n    \n      0:34:05\n    \n    geom_hlineggplot2\n    \n      Use geom_hline from the ggplot2 package to add horizontal reference line to each facet panel.\n\n    \n  \n  \n    \n      0:35:40\n    \n    themeggplot2\n    \n      Use theme from the ggplot2 package with axis.text.x = element_text(angle = 90, hjust = 1) to rmake the x-axis labels horizontal in order to avoid overcrowding.\n\n    \n  \n  \n    \n      0:38:25\n    \n    geom_textgeom_text_repelggplot2ggrepel\n    \n      Use geom_text to add country names to each point in geom_point plot. David then opts to use geom_text_repel from the ggrepel package instead to avoid overcrowding.\n\n    \n  \n  \n    \n      0:38:40\n    \n    geom_smoothggplot2\n    \n      Use geom_smooth from the ggplot2 package with lm smoothing method to help show the linear trend when comparing gdp_dollar to usd_raw.\n\n    \n  \n  \n    \n      0:47:00\n    \n    transition_manualtransition_timegganimate\n    \n      Use the gganimate package to animate the GDP per capital versus adjusted big mac index relative to USD over time.\n\n    \n  \n  \n    \n      0:53:05\n    \n    str_to_upperstr_removestringr\n    \n      Use str_to_upper and str_remove to remove _adjusted from base_currency while uppercasing the characters that remain.\n\n    \n  \n  \n    \n      0:58:05\n    \n    pairwise_corwidyr\n    \n      Use pairwise_cor from the widyr package to perform pairwise correlation to figure out which countries Big Mac prices tend to move together over time.\n\n    \n  \n  \n    \n      1:00:50\n    \n    \n    \n      Screencast summary."
-  },
-  {
-    "objectID": "content_pages/bird-collisions.html",
-    "href": "content_pages/bird-collisions.html",
-    "title": "Bird Collisions",
-    "section": "",
-    "text": "Notable topics: Bootstrapping\nRecorded on: 2019-05-03\nTimestamps by: Alex Cookson\nView code"
-  },
-  {
-    "objectID": "content_pages/bird-collisions.html#screencast",
-    "href": "content_pages/bird-collisions.html#screencast",
-    "title": "Bird Collisions",
-    "section": "Screencast",
-    "text": "Screencast"
-  },
-  {
-    "objectID": "content_pages/bird-collisions.html#timestamps",
-    "href": "content_pages/bird-collisions.html#timestamps",
-    "title": "Bird Collisions",
-    "section": "Timestamps",
-    "text": "Timestamps\n\n  \n    \n      0:2:45\n    \n    \n    \n      Analyzing when NAs appear in a dimension\n\n    \n  \n  \n    \n      0:7:30\n    \n    gather\n    \n      Looking at multiple categorical variable at the same time by gathering them into one column and eventually graphing each as a different facet\n\n    \n  \n  \n    \n      0:9:30\n    \n    \n    \n      Re-order facet graphs according to which ones have the fewest categories in them to ones that have the most\n\n    \n  \n  \n    \n      0:20:45\n    \n    \n    \n      Geometric mean for estimating counts when there are a lot of low values (1-3 bird collisions, in this case)\n\n    \n  \n  \n    \n      0:23:15\n    \n    \n    \n      Filling in \"blank\" observations where there were no observations made\n\n    \n  \n  \n    \n      0:27:00\n    \n    \n    \n      Using log+1 to convert a dimension with values of 0 into a log scale\n\n    \n  \n  \n    \n      0:29:00\n    \n    \n    \n      Adding confidence bounds for data using a geometric mean (where he first gets the idea of bootstrapping)\n\n    \n  \n  \n    \n      0:32:00\n    \n    \n    \n      Actual coding of bootstrap starts\n\n    \n  \n  \n    \n      0:38:30\n    \n    \n    \n      Adding confidence bounds using bootstrap data\n\n    \n  \n  \n    \n      0:42:00\n    \n    \n    \n      Investigating potential confounding variables\n\n    \n  \n  \n    \n      0:44:15\n    \n    \n    \n      Discussing approaches to dealing with confounding variables\n\n    \n  \n  \n    \n      0:46:45\n    \n    complete\n    \n      Using complete function to get explicit NA values"
-  },
-  {
-    "objectID": "content_pages/board-game-reviews.html",
-    "href": "content_pages/board-game-reviews.html",
-    "title": "Board Game Reviews",
-    "section": "",
-    "text": "Notable topics: LASSO regression (glmnet package)\nRecorded on: 2019-03-15\nTimestamps by: Alex Cookson\nView code"
-  },
-  {
-    "objectID": "content_pages/board-game-reviews.html#screencast",
-    "href": "content_pages/board-game-reviews.html#screencast",
-    "title": "Board Game Reviews",
-    "section": "Screencast",
-    "text": "Screencast"
-  },
-  {
-    "objectID": "content_pages/board-game-reviews.html#timestamps",
-    "href": "content_pages/board-game-reviews.html#timestamps",
-    "title": "Board Game Reviews",
-    "section": "Timestamps",
-    "text": "Timestamps\n\n  \n    \n      0:2:50\n    \n    \n    \n      Starting EDA (exploratory data analysis) with counts of categorical variables\n\n    \n  \n  \n    \n      0:7:25\n    \n    scale_x_log10\n    \n      Specifying scale_x_log10 function's breaks argument to get sensisble tick marks for time on histogram\n\n    \n  \n  \n    \n      0:8:45\n    \n    geom_histogram\n    \n      Tweaking geom_histogram function's binwidth argument to get something that makes sense for log scale\n\n    \n  \n  \n    \n      0:10:10\n    \n    separate_rows\n    \n      Using separate_rows to break down comma-separated values for three different categorical variables\n\n    \n  \n  \n    \n      0:15:55\n    \n    top_n\n    \n      Using top_n to get top 20 observations from each of several categories (not quite right, fixed at 17:47)\n\n    \n  \n  \n    \n      0:16:15\n    \n    facet_wrap\n    \n      Troubleshooting various issues with facetted graph (e.g., ordering, values appearing in multiple categories)\n\n    \n  \n  \n    \n      0:19:55\n    \n    lm\n    \n      Starting prediction of average rating with a linear model\n\n    \n  \n  \n    \n      0:20:50\n    \n    \n    \n      Splitting data into train/test sets (training/holdout)\n\n    \n  \n  \n    \n      0:22:55\n    \n    \n    \n      Investigating relationship between max number of players and average rating (to determine if it should be in linear model)\n\n    \n  \n  \n    \n      0:25:05\n    \n    \n    \n      Exploring average rating over time (\"Do newer games tend to be rated higher/lower?\")\n\n    \n  \n  \n    \n      0:27:35\n    \n    \n    \n      Discussing necessity of controlling for year a game was published in the linear model\n\n    \n  \n  \n    \n      0:28:30\n    \n    \n    \n      Non-model approach to exploring relationship between game features (e.g., card game, made in Germany) on average rating\n\n    \n  \n  \n    \n      0:30:50\n    \n    geom_boxplot\n    \n      Using geom_boxplot function to create boxplot of average ratings for most common game features\n\n    \n  \n  \n    \n      0:34:05\n    \n    unite\n    \n      Using unite function to combine multiple variables into one\n\n    \n  \n  \n    \n      0:37:25\n    \n    \n    \n      Introducing Lasso regression as good option when you have many features likely to be correlated with one another\n\n    \n  \n  \n    \n      0:38:15\n    \n    \n    \n      Writing code to set up Lasso regression using glmnet and tidytext packages\n\n    \n  \n  \n    \n      0:40:05\n    \n    \n    \n      Adding average rating to the feature matrix (warning: method is messy)\n\n    \n  \n  \n    \n      0:41:40\n    \n    setdiff\n    \n      Using setdiff function to find games that are in one set, but not in another (while setting up matrix for Lasso regression)\n\n    \n  \n  \n    \n      0:44:15\n    \n    \n    \n      Spotting the error stemming from the step above (calling row names from the wrong data)\n\n    \n  \n  \n    \n      0:45:45\n    \n    glmnetglmnet\n    \n      Explaining what a Lasso regression does, including the penalty parameter lambda\n\n    \n  \n  \n    \n      0:48:35\n    \n    cv.glmnetglmnet\n    \n      Using a cross-validated Lasso model to choose the level of the penalty parameter (lambda)\n\n    \n  \n  \n    \n      0:51:35\n    \n    \n    \n      Adding non-categorical variables to the Lasso model to control for them (e.g., max number of players)\n\n    \n  \n  \n    \n      0:55:15\n    \n    unite\n    \n      Using unite function to combine multiple variables into one, separated by a colon\n\n    \n  \n  \n    \n      0:58:45\n    \n    \n    \n      Graphing the top 20 coefficients in the Lasso model that have the biggest effect on predicted average rating\n\n    \n  \n  \n    \n      1:00:55\n    \n    yardstick\n    \n      Mentioning the yardstick package as a way to evaluate the model's performance\n\n    \n  \n  \n    \n      1:01:15\n    \n    \n    \n      Discussing drawbacks of linear models like Lasso (can't do non-linear relationships or interaction effects)"
-  },
-  {
-    "objectID": "content_pages/bob-ross-paintings.html",
-    "href": "content_pages/bob-ross-paintings.html",
-    "title": "Bob Ross Paintings",
-    "section": "",
-    "text": "Notable topics: Network graphs, Principal Component Analysis (PCA)\nRecorded on: 2019-08-12\nTimestamps by: Alex Cookson\nView code"
-  },
-  {
-    "objectID": "content_pages/bob-ross-paintings.html#screencast",
-    "href": "content_pages/bob-ross-paintings.html#screencast",
-    "title": "Bob Ross Paintings",
-    "section": "Screencast",
-    "text": "Screencast"
-  },
-  {
-    "objectID": "content_pages/bob-ross-paintings.html#timestamps",
-    "href": "content_pages/bob-ross-paintings.html#timestamps",
-    "title": "Bob Ross Paintings",
-    "section": "Timestamps",
-    "text": "Timestamps\n\n  \n    \n      0:1:40\n    \n    clean_namesjanitor\n    \n      Using clean_names function in janitor package to get field names to snake_case\n\n    \n  \n  \n    \n      0:1:50\n    \n    gather\n    \n      Using gather function to get wide elements into tall (tidy) format\n\n    \n  \n  \n    \n      0:2:35\n    \n    str_to_titlestr_replace\n    \n      Cleaning text (str_to_title, str_replace) to get into nicer-to-read format\n\n    \n  \n  \n    \n      0:3:30\n    \n    str_remove_all\n    \n      Using str_remove_all function to trim trimming quotation marks and backslashes\n\n    \n  \n  \n    \n      0:4:40\n    \n    extract\n    \n      Using extract function to extract the season number and episode number from episode field; uses regex capturing groups\n\n    \n  \n  \n    \n      0:14:00\n    \n    add_count\n    \n      Using add_count function's name argument to specify field's name\n\n    \n  \n  \n    \n      0:15:35\n    \n    \n    \n      Getting into whether the elements of Ross's paintings changed over time (e.g., are mountains more/less common over time?)\n\n    \n  \n  \n    \n      0:20:00\n    \n    broom\n    \n      Quick point: could have used logistic regression to see change over time of elements\n\n    \n  \n  \n    \n      0:21:10\n    \n    widyr\n    \n      Asking, \"What elements tends to appear together?\" prompting clustering analysis\n\n    \n  \n  \n    \n      0:22:15\n    \n    pairwise_corwidyr\n    \n      Using pairwise_cor to see which elements tend to appear together\n\n    \n  \n  \n    \n      0:22:50\n    \n    \n    \n      Discussion of a blind spot of pairwise correlation (high or perfect correlation on elements that only appear once or twice)\n\n    \n  \n  \n    \n      0:28:05\n    \n    \n    \n      Asking, \"What are clusters of elements that belong together?\"\n\n    \n  \n  \n    \n      0:28:30\n    \n    ggraphigraph\n    \n      Creating network plot using ggraph and igraph packages\n\n    \n  \n  \n    \n      0:30:15\n    \n    \n    \n      Reviewing network plot for interesting clusters (e.g., beach cluster, mountain cluster, structure cluster)\n\n    \n  \n  \n    \n      0:31:55\n    \n    \n    \n      Explanation of Principal Component Analysis (PCA)\n\n    \n  \n  \n    \n      0:34:35\n    \n    \n    \n      Start of actual PCA coding\n\n    \n  \n  \n    \n      0:34:50\n    \n    acastreshape2\n    \n      Using acast function to create matrix of painting titles x painting elements (initially wrong, corrected at 36:30)\n\n    \n  \n  \n    \n      0:36:55\n    \n    tcolSumscolMeans\n    \n      Centering the matrix data using t function (transpose of matrix), colSums function, and colMeans function\n\n    \n  \n  \n    \n      0:38:15\n    \n    svd\n    \n      Using svd function to performn singular value decomposition, then tidying with broom package\n\n    \n  \n  \n    \n      0:39:55\n    \n    \n    \n      Exploring one principal component to get a better feel for what PCA is doing\n\n    \n  \n  \n    \n      0:43:20\n    \n    reorder_withintidytext\n    \n      Using reorder_within function to re-order factors within a grouping\n\n    \n  \n  \n    \n      0:48:00\n    \n    \n    \n      Exploring different matrix names in PCA (u, v, d)\n\n    \n  \n  \n    \n      0:56:50\n    \n    \n    \n      Looking at top 6 principal components of painting elements\n\n    \n  \n  \n    \n      0:57:45\n    \n    \n    \n      Showing percentage of variation that each principal component is responsible for"
-  },
-  {
-    "objectID": "content_pages/broadway-musicals.html",
-    "href": "content_pages/broadway-musicals.html",
-    "title": "Broadway Musicals",
-    "section": "",
-    "text": "Notable topics: Creating an interactive dashboard with shinymetrics and tidymetrics, moving windows, period aggregation\nRecorded on: 2020-04-28\nTimestamps by: Eric Fletcher\nView code"
-  },
-  {
-    "objectID": "content_pages/broadway-musicals.html#screencast",
-    "href": "content_pages/broadway-musicals.html#screencast",
-    "title": "Broadway Musicals",
-    "section": "Screencast",
-    "text": "Screencast"
-  },
-  {
-    "objectID": "content_pages/broadway-musicals.html#timestamps",
-    "href": "content_pages/broadway-musicals.html#timestamps",
-    "title": "Broadway Musicals",
-    "section": "Timestamps",
-    "text": "Timestamps\n\n  \n    \n      0:8:15\n    \n    renamecross_by_periodstidymetrics\n    \n      Use the cross_by_periods  function from the tidymetrics package to aggregate data over time (month, quarter, and year) then visualize with geom_line.\n\n    \n  \n  \n    \n      0:14:00\n    \n    cross_by_periodstidymetrics\n    \n      Use the cross_by_periods  function from the tidymetrics  package with windows = c(28)) to create a 4-week rolling average across month, quarter, and year.\n\n    \n  \n  \n    \n      0:21:50\n    \n    use_metrics_scaffoldcreate_metricsshinymetricsTidaymetrics\n    \n      Create and interactive dashboard using the shinymetrics and tidymetrics packages.\n\n    \n  \n  \n    \n      0:25:00\n    \n    str_removestringr\n    \n      Use the str_remove function from the stringr package to remove matched pattern in a string.\n\n    \n  \n  \n    \n      0:25:20\n    \n    cross_by_dimensionstidymetrics\n    \n      Use the cross_by_dimensions function from the tidymetrics package which acts as an extended group_by that allows complete summaries across each individual dimension and possible combinations.\n\n    \n  \n  \n    \n      0:41:25\n    \n    shinybones\n    \n      Use the shinybones package to create an interactive dashboard to visualize all 3 metrics at the same time."
-  },
-  {
-    "objectID": "content_pages/car-fuel-efficiency.html",
-    "href": "content_pages/car-fuel-efficiency.html",
-    "title": "Car Fuel Efficiency",
-    "section": "",
-    "text": "Notable topics: Natural splines for regression\nRecorded on: 2019-10-15\nTimestamps by: Alex Cookson\nView code"
-  },
-  {
-    "objectID": "content_pages/car-fuel-efficiency.html#screencast",
-    "href": "content_pages/car-fuel-efficiency.html#screencast",
-    "title": "Car Fuel Efficiency",
-    "section": "Screencast",
-    "text": "Screencast"
-  },
-  {
-    "objectID": "content_pages/car-fuel-efficiency.html#timestamps",
-    "href": "content_pages/car-fuel-efficiency.html#timestamps",
-    "title": "Car Fuel Efficiency",
-    "section": "Timestamps",
-    "text": "Timestamps\n\n  \n    \n      0:3:20\n    \n    selectsortcolnames\n    \n      Using select and sort and colnames functions to sort variables in alphabetical order\n\n    \n  \n  \n    \n      0:10:00\n    \n    geom_abline\n    \n      Adding geom_abline for y = x to a scatter plot for comparison\n\n    \n  \n  \n    \n      0:18:00\n    \n    geom_boxplot\n    \n      Visualising using geom_boxplot for mpg by vehicle class (size of car)\n\n    \n  \n  \n    \n      0:24:45\n    \n    \n    \n      Start of explanation of prediction goals\n\n    \n  \n  \n    \n      0:27:00\n    \n    sample_frac\n    \n      Creating train and test sets, along with trick using sample_frac function to randomly re-arrange all rows in a dataset\n\n    \n  \n  \n    \n      0:28:35\n    \n    geom_smooth\n    \n      First step of developing linear model: visually adding geom_smooth\n\n    \n  \n  \n    \n      0:30:00\n    \n    augment\n    \n      Using augment function to add extra variables from model to original dataset (fitted values and residuals, especially)\n\n    \n  \n  \n    \n      0:30:45\n    \n    \n    \n      Creating residuals plot and explaining what you want and don't want to see\n\n    \n  \n  \n    \n      0:31:50\n    \n    \n    \n      Explanation of splines\n\n    \n  \n  \n    \n      0:33:30\n    \n    \n    \n      Visualising effect of regressing using natural splines\n\n    \n  \n  \n    \n      0:35:10\n    \n    \n    \n      Creating a tibble to test different degrees of freedom (1:10) for natural splines\n\n    \n  \n  \n    \n      0:36:30\n    \n    unnest\n    \n      Using unnest function to get tidy versions of different models\n\n    \n  \n  \n    \n      0:37:55\n    \n    \n    \n      Visualising fitted values of all 6 different models at the same time\n\n    \n  \n  \n    \n      0:42:10\n    \n    glance\n    \n      Investigating whether the model got \"better\" as we added degrees of freedom to the natural splines, using the glance function\n\n    \n  \n  \n    \n      0:47:45\n    \n    \n    \n      Using ANOVA to perform a statistical test on whether natural splines as a group explain variation in MPG\n\n    \n  \n  \n    \n      0:48:30\n    \n    \n    \n      Exploring colinearity of dependant variables (displacement and cylinders)\n\n    \n  \n  \n    \n      0:55:10\n    \n    floor\n    \n      Binning years into every two years using floor function\n\n    \n  \n  \n    \n      0:56:40\n    \n    summarise_at\n    \n      Using summarise_at function to do quick averaging of multiple variables"
-  },
-  {
-    "objectID": "content_pages/caribou-locations.html",
-    "href": "content_pages/caribou-locations.html",
-    "title": "Caribou Locations",
-    "section": "",
-    "text": "Notable topics: Maps with ggplot2, Calculating distance and speed with geosphere\nRecorded on: 2020-06-23\nTimestamps by: Eric Fletcher\nView code"
-  },
-  {
-    "objectID": "content_pages/caribou-locations.html#screencast",
-    "href": "content_pages/caribou-locations.html#screencast",
-    "title": "Caribou Locations",
-    "section": "Screencast",
-    "text": "Screencast"
-  },
-  {
-    "objectID": "content_pages/caribou-locations.html#timestamps",
-    "href": "content_pages/caribou-locations.html#timestamps",
-    "title": "Caribou Locations",
-    "section": "Timestamps",
-    "text": "Timestamps\n\n  \n    \n      0:4:00\n    \n    summarizeacrossdplyr\n    \n      Use summarize and across to calculate the proportion of NA values in the individuals dataset. Note, you do not need to use list().\n\n    \n  \n  \n    \n      0:9:00\n    \n    ggplotbordersggplot2\n    \n      Use ggplot and borders from the ggplot2 package to create a map of Canada with deploy_on_longitude and deploy_on_latitude from the individuals dataset.\n\n    \n  \n  \n    \n      0:13:50\n    \n    read_sfsf\n    \n      Import Canada province shapefile using the sf package. [Unsuccessful]\n\n    \n  \n  \n    \n      0:25:00\n    \n    minmaxbase\n    \n      Use min and max from base r  within summarize to find out the start and end dates for each caribou in the locations dataset.\n\n    \n  \n  \n    \n      0:27:15\n    \n    samplegeom_pathbaseggplot2\n    \n      Use sample from base r to pick one single caribou at a time then use the subset with geom_path from ggplot2 to track the path a that caribou takes over time.  color = factor(floor_date(timestamp, \"quarter\") is used to color the path according to what quarter the observation occured in.\n\n    \n  \n  \n    \n      0:35:15\n    \n    as.Datefloor_datebaselubridate\n    \n      Use as.Date from base r and floor_date from the lubridate package to convert timestamp variable into quarters then facet_wrap the previous plot by quarter.\n\n    \n  \n  \n    \n      0:37:15\n    \n    difftimelagbase\n    \n      Within mutate, use as.numeric(difftime(timestamp, lag(timestamp), unit = \"hours\"))  from base r to figure out the gap in time between observations.\n\n    \n  \n  \n    \n      0:43:05\n    \n    distHaversinecbindgeosphere\n    \n      Use distHaversine from the geosphere package to calculate distance in km then convert it to speed in kph.\n\n    \n  \n  \n    \n      1:00:00\n    \n    \n    \n      Summary of dataset."
-  },
-  {
     "objectID": "content_pages/Chopped.html",
     "href": "content_pages/Chopped.html",
     "title": "Chopped",
     "section": "",
-    "text": "Notable topics: Data manipulation, Modeling (Linear Regression, Random Forest, and Natural Spline)\nRecorded on: 2020-08-25\nTimestamps by: Eric Fletcher\nView code"
+    "text": "Notable topics: Data manipulation, Modeling (Linear Regression, Random Forest, and Natural Spline)\nRecorded on: 2020-08-24\nTimestamps by: Eric Fletcher\nView code"
   },
   {
     "objectID": "content_pages/Chopped.html#screencast",
@@ -347,7 +46,7 @@
     "href": "content_pages/Cocktails.html",
     "title": "Cocktails",
     "section": "",
-    "text": "Notable topics: Pairwise correlation, Network diagram, Principal component analysis (PCA)\nRecorded on: 2020-05-26\nTimestamps by: Eric Fletcher\nView code"
+    "text": "Notable topics: Pairwise correlation, Network diagram, Principal component analysis (PCA)\nRecorded on: 2020-05-25\nTimestamps by: Eric Fletcher\nView code"
   },
   {
     "objectID": "content_pages/Cocktails.html#screencast",
@@ -364,11 +63,368 @@
     "text": "Timestamps\n\n  \n    \n      0:6:20\n    \n    fct_reorderforcats\n    \n      Use fct_reorder from the forcats package to reorder the ingredient factor levels along n.\n\n    \n  \n  \n    \n      0:7:40\n    \n    fct_lumpforcats\n    \n      Use fct_lump from the forcats package to lump together all the levels except the n most frequent in the category and ingredient variables.\n\n    \n  \n  \n    \n      0:11:30\n    \n    pairwise_corwidyr\n    \n      Use pairwise_cor from the widyr package to find the correlation between the ingredients.\n\n    \n  \n  \n    \n      0:16:00\n    \n    reorder_withinscale_x_reorderedtidytext\n    \n      Use reorder_within from the tidytext package with scale_x_reordered  to reorder the the columns in each facet.\n\n    \n  \n  \n    \n      0:19:45\n    \n    graph_from_data_frameggraphgeom_edge_linkgeom_node_pointgeom_node_labeligraphggraph\n    \n      Use the ggraph and igraph packages to create a network diagram\n\n    \n  \n  \n    \n      0:25:15\n    \n    extracttidyr\n    \n      Use extract from the tidyr package with regex = (.*) oz to create a new variable amount which doesn't include the oz.\n\n    \n  \n  \n    \n      0:26:40\n    \n    extracttidyr\n    \n      Use extract with regex to turn the strings in the new amount variable into separate columns for the ones, numerator, and denominator.\n\n    \n  \n  \n    \n      0:28:53\n    \n    replace_natidyr\n    \n      Use replace_na from the tidyr package to replace NA with zeros in the ones, numberator, and denominator columns. David ends up reaplcing the zero in the denominator column with ones in order for the calculation to work.\n\n    \n  \n  \n    \n      0:31:49\n    \n    geom_text_repelggrepel\n    \n      Use geom_text_repel from the ggrepel package to add ingredient labels to the geom_point plot.\n\n    \n  \n  \n    \n      0:32:30\n    \n    na_ifdplyr\n    \n      Use na_if from the dplyr package to replace zeros with NA\n\n    \n  \n  \n    \n      0:34:25\n    \n    scale_size_continuousggplot2\n    \n      Use scale_size_continuous with labels = percent_format() to convert size legend values to percent.\n\n    \n  \n  \n    \n      0:36:35\n    \n    graph_from_data_framegeom_node_pointigraphggraph\n    \n      Change the size of the points in the network diagram proportional to n using vertices = ingredient_info within graph_from_data_frame and aes(size = n) within geom_node_point.\n\n    \n  \n  \n    \n      0:48:05\n    \n    widely_svdtop_nabsgeom_colreorder_withinscale_y_reorderedfacet_wrapwidyr\n    \n      Use widely_svd from the widyr package to perform principle component analysis on the ingredients.\n\n    \n  \n  \n    \n      0:52:32\n    \n    paste0base\n    \n      Use paste0  to concatenate PC and dimension in the facet panel titles.\n\n    \n  \n  \n    \n      0:57:00\n    \n    \n    \n      Summary of screencast."
   },
   {
+    "objectID": "content_pages/Dolphins.html",
+    "href": "content_pages/Dolphins.html",
+    "title": "Dolphins",
+    "section": "",
+    "text": "Notable topics: Survival analysis\nRecorded on: 2018-12-17\nTimestamps by: Alex Cookson\nView code"
+  },
+  {
+    "objectID": "content_pages/Dolphins.html#screencast",
+    "href": "content_pages/Dolphins.html#screencast",
+    "title": "Dolphins",
+    "section": "Screencast",
+    "text": "Screencast"
+  },
+  {
+    "objectID": "content_pages/Dolphins.html#timestamps",
+    "href": "content_pages/Dolphins.html#timestamps",
+    "title": "Dolphins",
+    "section": "Timestamps",
+    "text": "Timestamps\n\n  \n    \n      0:6:25\n    \n    \n    \n      Using year function from lubridate package to simplify calculating age of dolphins\n\n    \n  \n  \n    \n      0:8:30\n    \n    countfct_lump\n    \n      Combining count and fct_lump functions to get counts of top 5 species (with other species lumped in \"Other\")\n\n    \n  \n  \n    \n      0:9:55\n    \n    \n    \n      Creating boxplot of species and age\n\n    \n  \n  \n    \n      0:11:50\n    \n    \n    \n      Dealing with different types of NA (double, logical) (he doesn't get it in this case, but it's still useful)\n\n    \n  \n  \n    \n      0:15:30\n    \n    \n    \n      Adding acquisition type as colour dimension to histogram\n\n    \n  \n  \n    \n      0:16:00\n    \n    geom_area\n    \n      Creating a spinogram of acquisition type over time (alternative to histogram) using geom_area\n\n    \n  \n  \n    \n      0:17:25\n    \n    %/%\n    \n      Binning year into decade using truncated division operator %/%\n\n    \n  \n  \n    \n      0:19:10\n    \n    complete\n    \n      Fixing annoying triangular gaps in spinogram using complete function to fill in gaps in data\n\n    \n  \n  \n    \n      0:21:15\n    \n    fct_reorder\n    \n      Using fct_reorder function to reorder acquisition type (bigger categories are placed on the bottom of the spinogram)\n\n    \n  \n  \n    \n      0:23:25\n    \n    geom_vline\n    \n      Adding vertical dashed reference line using geom_vline function\n\n    \n  \n  \n    \n      0:24:05\n    \n    \n    \n      Starting analysis of acquisition location\n\n    \n  \n  \n    \n      0:27:05\n    \n    regex_left_joinfuzzyjoin\n    \n      Matching messy text data with regex to aggregate into a few categories variables with fuzzyjoin package\n\n    \n  \n  \n    \n      0:31:30\n    \n    distinct\n    \n      Using distinct function's .keep_all argument to keep only one row per animal ID\n\n    \n  \n  \n    \n      0:33:10\n    \n    coalesce\n    \n      Using coalesce function to conditionally replace NAs (same functionality as SQL verb)\n\n    \n  \n  \n    \n      0:40:00\n    \n    \n    \n      Starting survival analysis\n\n    \n  \n  \n    \n      0:46:25\n    \n    survfitsurvival\n    \n      Using survfit function from survival package to get a baseline survival curve (i.e., not regressed on any independent variables)\n\n    \n  \n  \n    \n      0:47:30\n    \n    \n    \n      Fixing cases where death year is before birth year\n\n    \n  \n  \n    \n      0:48:30\n    \n    \n    \n      Fixing specification of survfit model to better fit the format of our data (right-censored data)\n\n    \n  \n  \n    \n      0:50:10\n    \n    \n    \n      Built-in plot of baseline survival model (estimation of percentage survival at a given age)\n\n    \n  \n  \n    \n      0:50:30\n    \n    tidybroom\n    \n      Using broom package to tidy the survival model data (which is better for ggplot2 plotting)\n\n    \n  \n  \n    \n      0:52:20\n    \n    \n    \n      Fitting survival curve based on sex\n\n    \n  \n  \n    \n      0:54:25\n    \n    \n    \n      Cox proportional hazards model (to investigate association of survival time and one or more predictors)\n\n    \n  \n  \n    \n      0:55:50\n    \n    \n    \n      Explanation of why dolphins with unknown sex likely have a systematic bias with their data\n\n    \n  \n  \n    \n      0:57:25\n    \n    \n    \n      Investigating whether being born in captivity is associated with different survival rates\n\n    \n  \n  \n    \n      1:00:10\n    \n    \n    \n      Summary of screencast"
+  },
+  {
+    "objectID": "content_pages/Friends.html",
+    "href": "content_pages/Friends.html",
+    "title": "Friends",
+    "section": "",
+    "text": "Notable topics: Data Manipulation, Linear Modeling, Pairwise Correlation, Text Mining\nRecorded on: 2020-09-07\nTimestamps by: Eric Fletcher\nView code"
+  },
+  {
+    "objectID": "content_pages/Friends.html#screencast",
+    "href": "content_pages/Friends.html#screencast",
+    "title": "Friends",
+    "section": "Screencast",
+    "text": "Screencast"
+  },
+  {
+    "objectID": "content_pages/Friends.html#timestamps",
+    "href": "content_pages/Friends.html#timestamps",
+    "title": "Friends",
+    "section": "Timestamps",
+    "text": "Timestamps\n\n  \n    \n      0:7:30\n    \n    countdplyr\n    \n      Use dplyr package's count function to count the unique values of multiple variables.\n\n    \n  \n  \n    \n      0:9:35\n    \n    geom_colfct_reorderggplotforcats\n    \n      Use geom_col to show how many lines of dialogue there is for each character. Use fct_reorder to reorder the speaker factor levels by sorting along n.\n\n    \n  \n  \n    \n      0:12:07\n    \n    semi_joindplyr\n    \n      Use semi_join to join friends dataset with main_cast with by = \"speaker returning all rows from friends with a match in main_cast.\n\n    \n  \n  \n    \n      0:12:30\n    \n    uniteinner_joingluefct_reordertidyrglueforcats\n    \n      Use unite to create the episode_number variable which pastes together season and episode with sep = \".\".\nThen, use inner_join to combine above dataset with friends_info with by = c(\"season\", \"episode\").\nThen, use mutate and the glue package instead to combine { season }.{ episode } { title }.\nThen use fct_reorder(episode_title, season + .001 * episode)  to order it by season first then episode.\n\n    \n  \n  \n    \n      0:15:45\n    \n    geom_pointas.integergeom_textgeom_lineggplotbase\n    \n      Use geom_point to visualize episode_title and us_views_millions.\nUse as.integer to change episode_title to integer class.\nAdd labels to geom_point using geom_text with check_overlap = TRUE so text that overlaps previous text in the same layer will not be plotted.\n\n    \n  \n  \n    \n      0:19:95\n    \n    geom_pointas.integergeom_textgeom_lineggplotbase\n    \n      Run the above plot again using imdb_rating instead of us_views_millions\n\n    \n  \n  \n    \n      0:21:35\n    \n    semi_joingeom_boxplotcoord_flipfct_reordercompletefillscale_x_log10dplyrggplotforcatstidyrtidyr\n    \n      Ahead of modeling:\nUse geom_boxplot to visualize the distribution of speaking for main characters.\nUse the complete function with fill = list(n = 0) to replace existing explicit missing values in the data set.\nDemonstration of how to account for missing imdb_rating values using the fill function with .direction = \"downup\" to keep the imdb rating across the same title.\n\n    \n  \n  \n    \n      0:26:45\n    \n    semi_joinsummarizeadd_countgeom_boxplotgeom_smoothgeom_pointdplyrggplot\n    \n      Ahead of modeling:\nUse summarize with cor(log2(n), imdb_rating) to find the correlation between speaker and imdb rating -- the fact that the correlation is positive for all speakers gives David a suspicion that some episodes are longer than others because they're in 2 parts with higher ratings due to important moments. David addresses this confounding factor by including percentage of lines instead of number of lines.\nVisualize results with geom_boxplot, geom_point with geom_smooth.\n\n    \n  \n  \n    \n      0:34:05\n    \n    spreadacrosssemi_joinlmaovtidyrdplyrstats\n    \n      Use a linear model to predict imdb rating based on various variables.\n\n    \n  \n  \n    \n      0:42:00\n    \n    unnest_tokensanti_joinbind_log_oddssemi_joingeom_colscale_y_reorderedtidytexttidyloggplot\n    \n      Use the tidytext and tidylo packages to see what words are most common amongst characters, and whether they are said more times than would be expected by chance.\nUse geom_col to visualize the most overrepresented words per character according to log_odds_weighted.\n\n    \n  \n  \n    \n      0:54:15\n    \n    unitesemi_joinpairwise_corrwidyrtidyr\n    \n      Use the widyr package and pairwise correlation to determine which characters tend to appear in the same scences together?\nUse geom_col to visualize the correlation between characters.\n\n    \n  \n  \n    \n      1:00:25\n    \n    \n    \n      Summary of screencast."
+  },
+  {
+    "objectID": "content_pages/african-american-achievements.html",
+    "href": "content_pages/african-american-achievements.html",
+    "title": "African-American Achievements",
+    "section": "",
+    "text": "Notable topics: plotly interactive timeline, Wikipedia web scraping\nRecorded on: 2020-06-08\nTimestamps by: Eric Fletcher\nView code"
+  },
+  {
+    "objectID": "content_pages/african-american-achievements.html#screencast",
+    "href": "content_pages/african-american-achievements.html#screencast",
+    "title": "African-American Achievements",
+    "section": "Screencast",
+    "text": "Screencast"
+  },
+  {
+    "objectID": "content_pages/african-american-achievements.html#timestamps",
+    "href": "content_pages/african-american-achievements.html#timestamps",
+    "title": "African-American Achievements",
+    "section": "Timestamps",
+    "text": "Timestamps\n\n\n  \n    \n      0:8:20\n    \n    fct_reorderforcats\n    \n      Use  fct_reorder from the forcats package to reorder the category factor levels by sorting along  n.\n\n    \n  \n  \n    \n      0:11:35\n    \n    str_removestringr\n    \n      Use str_remove from the stringr package to remove anything after a bracket or parenthesis from the person variable with the regular expression \"[\\\\[\\\\(].*\" David then discusses how web scraping may be a better option than parsing the strings.\n\n    \n  \n  \n    \n      0:12:25\n    \n    str_trimstringr\n    \n      Use str_trim from the stringr package to remove the whitespace from the person variable. David then discusses how web scraping may be a better option than parsing the strings.\n\n    \n  \n  \n    \n      0:15:50\n    \n    ggplotlyplotly\n    \n      Create an interactive plotly timeline.\n\n    \n  \n  \n    \n      0:18:20\n    \n    ylimggplot2\n    \n      Use ylim(c(-.1, 1)) to set scale limits moving the geom_point to the bottom of the graph.\n\n    \n  \n  \n    \n      0:19:30\n    \n    paste0base\n    \n      Use paste0 from base R to concatenate the accomplishment and person with \": \" in between the two displayed in the timeline hover label.\n\n    \n  \n  \n    \n      0:20:30\n    \n    aesggplot2\n    \n      Set y to category in ggplot aesthetics to get 8 separate timelines on one plot, one for each category. Doing this allows David to remove the ylim mentioned above.\n\n    \n  \n  \n    \n      0:22:25\n    \n    tooltipplotly\n    \n      Use the plotly tooltip = text parameter to get just a single line of text in the plotly hover labels.\n\n    \n  \n  \n    \n      0:26:05\n    \n    glueglue\n    \n      Use glue from the glue package to reformat text with \\n included so that the single line of text can now be broken up into 2 separate lines in the hover labels.\n\n    \n  \n  \n    \n      0:33:55\n    \n    separate_rowstidyr\n    \n      Use separate_rows from the tidyr package to separate the occupation_s variable from the science dataset into multiple columns delimited by a semicolon with sep = \"; \"\n\n    \n  \n  \n    \n      0:34:25\n    \n    str_to_titlestringr\n    \n      Use str_to_title from the stringr package to conver the case to title case in the occupation_s variable.\n\n    \n  \n  \n    \n      0:35:15\n    \n    str_detectstringr\n    \n      Use str_detect from the stringr package to detect the presence of statistician from within the occupation_s variable with regex(\"statistician\", ignore_case = TRUE) to perform a case-insensitive search.\n\n    \n  \n  \n    \n      0:41:55\n    \n    read_htmlhtml_nodeshtml_tablesetNamesrvest\n    \n      Use the rvest package with Selector Gadget  to scrape additional information about the individual from their Wikipedia infobox.\n\n    \n  \n  \n    \n      0:49:15\n    \n    mappossiblyread_htmlpurrr\n    \n      Use map and possibly from the purrr package to separate out the downloading of data from parsing the useful information. David then turns the infobox extraction step into an anonymous function using .%>% dot-pipe.\n\n    \n  \n  \n    \n      0:58:40\n    \n    \n    \n      Summary of screencast."
+  },
+  {
+    "objectID": "content_pages/african-american-history.html",
+    "href": "content_pages/african-american-history.html",
+    "title": "African-American History",
+    "section": "",
+    "text": "Notable topics: Network diagram, Wordcloud\nRecorded on: 2020-06-15\nTimestamps by: Eric Fletcher\nView code"
+  },
+  {
+    "objectID": "content_pages/african-american-history.html#screencast",
+    "href": "content_pages/african-american-history.html#screencast",
+    "title": "African-American History",
+    "section": "Screencast",
+    "text": "Screencast"
+  },
+  {
+    "objectID": "content_pages/african-american-history.html#timestamps",
+    "href": "content_pages/african-american-history.html#timestamps",
+    "title": "African-American History",
+    "section": "Timestamps",
+    "text": "Timestamps\n\n  \n    \n      0:6:55\n    \n    fct_lumpforcats\n    \n      Use fct_lump from the forcats package to lump together all the factor levels in ship_name except the n most frequent. Used within filter with ! = \"Other\" to remove other.\n\n    \n  \n  \n    \n      0:8:00\n    \n    fct_reorderforcats\n    \n      use fct_reorder from the forcats package to reorder the ship_name factor levels y sorting along the n_slaves_arrived variable.\n\n    \n  \n  \n    \n      0:10:20\n    \n    geom_vlineggplot2\n    \n      Add geom_vline to geom_histogram to annotate the plot with a vertical line indicating the Revolutionary War and the Civil War.\n\n    \n  \n  \n    \n      0:13:00\n    \n    countdplyr\n    \n      Use truncated division within count to create a new decade variable equal to 10 * (year_arrival %/% 10))\n\n    \n  \n  \n    \n      0:17:20\n    \n    str_truncstringr\n    \n      Use str_trunc from the stringr package to truncate the titles in each facet panel accounting for the slave ports with really long names.\n\n    \n  \n  \n    \n      0:18:05\n    \n    themeggplot2\n    \n      Another option for accounting for long titles in the facet panels is to use strip.text within theme with element_text(size = 6)\n\n    \n  \n  \n    \n      0:26:55\n    \n    ggraphgeom_edge_linkgeom_node_pointgeom_node_textggraph\n    \n      Use the ggraph package to create a network diagram using port_origin and port_arrival.\n\n    \n  \n  \n    \n      0:29:05\n    \n    arrowgrid\n    \n      Use arrow from the grid package to add directional arrows to the points in the network diagram.\n\n    \n  \n  \n    \n      0:29:40\n    \n    scale_edge_size_continuousggraph\n    \n      Use scale_width_size_continuous from the ggraph packge to adjust the size of the points in the network diagram.\n\n    \n  \n  \n    \n      0:35:25\n    \n    summarizemeandplyr\n    \n      Within summarize use mean(n_slaves_arrived, na.rm = TRUE) * n()) to come up with an estimated total numer of slaves since 49% of the data is missing.\n\n    \n  \n  \n    \n      0:48:20\n    \n    geom_colfacet_wrapggplot2\n    \n      Create a faceted stacked percent barplot (spinogram) showing the percentage of black_free, black_slaves, white, and other for each region.\n\n    \n  \n  \n    \n      0:51:00\n    \n    wordcloudgeom_text_wordcloudwordcloudggwordcloud\n    \n      Use the wordcloud package to create a wordcloud with the african_names dataset. David hsa issues with the wordcloud package and opts to use ggwordcloud instead. Also, mentions the worldcloud2 package.\n\n    \n  \n  \n    \n      0:55:20\n    \n    fct_recodeforcats\n    \n      Use fct_recode from the forcats package to change the factor levels for the gender variable while renaming Man = \"Boy\" and Woman = \"Girl\"\n\n    \n  \n  \n    \n      0:57:20\n    \n    reorder_withintidytext\n    \n      Use reorder_within from the tidytext package to reorder the geom_col by n within gender variable for each facet panel.\n\n    \n  \n  \n    \n      0:59:00\n    \n    \n    \n      Summary of screencast."
+  },
+  {
+    "objectID": "content_pages/animal-crossing.html",
+    "href": "content_pages/animal-crossing.html",
+    "title": "Animal Crossing",
+    "section": "",
+    "text": "Notable topics: Topic modelling (stm package)\nRecorded on: 2020-05-04\nTimestamps by: Alex Cookson\nView code"
+  },
+  {
+    "objectID": "content_pages/animal-crossing.html#screencast",
+    "href": "content_pages/animal-crossing.html#screencast",
+    "title": "Animal Crossing",
+    "section": "Screencast",
+    "text": "Screencast"
+  },
+  {
+    "objectID": "content_pages/animal-crossing.html#timestamps",
+    "href": "content_pages/animal-crossing.html#timestamps",
+    "title": "Animal Crossing",
+    "section": "Timestamps",
+    "text": "Timestamps\n\n  \n    \n      0:5:05\n    \n    \n    \n      Starting text analysis of critic reviews of Animal Crossing\n\n    \n  \n  \n    \n      0:7:50\n    \n    floor_datelubridate\n    \n      Using floor_date function from lubridate package to round dates down to nearest month (then week)\n\n    \n  \n  \n    \n      0:9:00\n    \n    unnest_tokensanti_jointidytext\n    \n      Using unnest_tokens function and anti_join functions from tidytext package to break reviews into individual words and remove stop words\n\n    \n  \n  \n    \n      0:10:35\n    \n    \n    \n      Taking the average rating associated with individual words (simple approach to gauge sentiment)\n\n    \n  \n  \n    \n      0:12:30\n    \n    geom_line\n    \n      Using geom_line and geom_point to graph ratings over time\n\n    \n  \n  \n    \n      0:14:40\n    \n    mean\n    \n      Using mean function and logical statement to calculate percentages that meet a certain condition\n\n    \n  \n  \n    \n      0:22:30\n    \n    geom_text\n    \n      Using geom_text to visualize what words are associated with positive/negative reviews\n\n    \n  \n  \n    \n      0:27:00\n    \n    \n    \n      Disclaimer that this exploration is not text regression -- wine ratings screencast is a good resource for that\n\n    \n  \n  \n    \n      0:28:30\n    \n    \n    \n      Starting to do topic modelling\n\n    \n  \n  \n    \n      0:30:45\n    \n    stmstm\n    \n      Explanation of stm function from stm package\n\n    \n  \n  \n    \n      0:34:30\n    \n    stmstm\n    \n      Explanation of stm function's output (topic modelling output)\n\n    \n  \n  \n    \n      0:36:55\n    \n    \n    \n      Changing the number of topics from 4 to 6\n\n    \n  \n  \n    \n      0:37:40\n    \n    \n    \n      Explanation of how topic modelling works conceptually\n\n    \n  \n  \n    \n      0:40:55\n    \n    tidybroom\n    \n      Using tidy function from broom package to find which \"documents\" (reviews) were the \"strongest\" representation of each topic\n\n    \n  \n  \n    \n      0:44:50\n    \n    \n    \n      Noting that there might be a scraping issue resulting in review text being repeated\n\n    \n  \n  \n    \n      0:46:05\n    \n    str_sub\n    \n      (Unsuccessfully) Using str_sub function to help fix repeated review text by locating where in the review text starts being repeated\n\n    \n  \n  \n    \n      0:48:20\n    \n    str_replacemap2\n    \n      (Unsuccessfully) Using str_replace and map2_chr functions, as well as regex cpaturing groups to fix repeated text\n\n    \n  \n  \n    \n      0:52:00\n    \n    \n    \n      Looking at the association between review grade and gamma of the topic model (how \"strong\" a review represents a topic)\n\n    \n  \n  \n    \n      0:53:55\n    \n    cor\n    \n      Using cor function with method = \"spearman\" to calculate correlation based on rank instead of actual values\n\n    \n  \n  \n    \n      0:57:35\n    \n    \n    \n      Summary of screencast"
+  },
+  {
+    "objectID": "content_pages/art-collections.html",
+    "href": "content_pages/art-collections.html",
+    "title": "Art Collections",
+    "section": "",
+    "text": "Notable topics: geom_area plot, distributions, calculating area (square meters) and ratio (width / height)\nRecorded on: 2021-01-11\nTimestamps by: Eric Fletcher\nView code"
+  },
+  {
+    "objectID": "content_pages/art-collections.html#screencast",
+    "href": "content_pages/art-collections.html#screencast",
+    "title": "Art Collections",
+    "section": "Screencast",
+    "text": "Screencast"
+  },
+  {
+    "objectID": "content_pages/art-collections.html#timestamps",
+    "href": "content_pages/art-collections.html#timestamps",
+    "title": "Art Collections",
+    "section": "Timestamps",
+    "text": "Timestamps\n\n  \n    \n      0:1:55\n    \n    clean_namesjanitor\n    \n      Using clean_names to convert variable names from camelcase to snakecase.\n\n    \n  \n  \n    \n      0:4:05\n    \n    fct_reordergeom_colforcatsggplot2\n    \n      Use fct_reorder to reorder geom_col columns in ascending order.\n\n    \n  \n  \n    \n      0:4:50\n    \n    extractseparatetidyr\n    \n      \"Use extract to extract a character column into multiple columns using the regular expression \"\"(.*) on (.*)\"\" at 6:05 David decides to change this to: Use separate with sep = \"\" on \"\" and fill = \"\"left\"\" and extra = \"\"merge\"\" to control what happens when there are not enoughor too many pieces. at 7:10 David decides to change to fill = \"\"right\"\".\"\n\n    \n  \n  \n    \n      0:7:50\n    \n    replace_natidyr\n    \n      Use replace_na to replace NAs with specified values. In this case replace them with Missing.\n\n    \n  \n  \n    \n      0:10:25\n    \n    fct_lumpfilterforcatsdplyr\n    \n      \"Use fct_lump to lump artist and medium levels except for the n most frequent. at 11:30 David decides to use filter(fct_lump(artist, 16) != \"\"Other\"\") to get rid of the artist Other category. \"\n\n    \n  \n  \n    \n      0:13:55\n    \n    geom_areaggplot2\n    \n      \"Create a geom_area plot to show the distribution of paintings by medium over time. At 15:35 David decides to change from count to percentage to make it easier to show the difference in composition using mutate(pct = n / sum).\"\n\n    \n  \n  \n    \n      0:14:20\n    \n    countroundbasedplyr\n    \n      Bucket year variable into decades using round(year -1) to round the year to the nearest 10.\n\n    \n  \n  \n    \n      0:16:35\n    \n    scale_y_continuousscales\n    \n      Use scale_y_continuous(labels = scales::percent) to change y-axis labels to percent format.\n\n    \n  \n  \n    \n      0:18:35\n    \n    facet_wrapgeom_colggplot2\n    \n      Turn the geom_area plot into a faceted geom_col.\n\n    \n  \n  \n    \n      0:21:35\n    \n    mutategroup_bysummarizecompletedplyrtidyr\n    \n      \"Calculate the percentage of artists for each medium per decade. \"\n\n    \n  \n  \n    \n      0:29:20\n    \n    filtermutateggplotgeom_histogramscale_x_log10geom_vlinedplyrggplot2\n    \n      Calculate the distribution of the area (square meters) and ratio (width / height) of the art pieces.\n\n    \n  \n  \n    \n      0:38:25\n    \n    mutatecase_whengeom_areacompletedplyrggplot2\n    \n      Categorize the pieces by shape(landscape, portait, scquare) based on their ratio then plot using geom_area to look at the composition over time.\n\n    \n  \n  \n    \n      0:41:35\n    \n    group_bysummarizefilterggplotgeom_linegeom_pointdplyrggplot2\n    \n      Craete a line plot showing the median ratio by decade over time.\n\n    \n  \n  \n    \n      0:44:15\n    \n    group_bysummarizefilterggplotgeom_linegeom_pointdplyrggplot2\n    \n      Craete a line plot showing the median area by decade over time.\n\n    \n  \n  \n    \n      0:46:05\n    \n    mutatefilterggplotgeom_boxplotscale_y_log10dplyrggplot2\n    \n      Create a boxplot showing the distribution of area over time.\n\n    \n  \n  \n    \n      0:48:25\n    \n    group_bysummarizearrangedplyr\n    \n      Create various summary statistics for the artists such as avg_year, first_year, last_year, n_pieces, median_area, median_ratio`.\n\n    \n  \n  \n    \n      0:51:00\n    \n    filteradd_countmutateggplotgeom_boxplotscale_x_log10geom_vlinegluedplyrggplot2glue\n    \n      Create a boxplot showing the distribution of ratio over time for n amount of artists. Use glue to concatonate number of pieces for each artist ont he y axis.\n\n    \n  \n  \n    \n      0:56:20\n    \n    filteradd_countmutateggplotgeom_boxplotscale_x_log10geom_vlinegluedplyrggplot2glue\n    \n      Create a boxplot showing the distribution of ratio over time for each medium. Use glue to concatonate number of pieces for each medium on the y axis.\n\n    \n  \n  \n    \n      0:59:10\n    \n    \n    \n      Summary of screencast"
+  },
+  {
+    "objectID": "content_pages/australian-animal-outcomes.html",
+    "href": "content_pages/australian-animal-outcomes.html",
+    "title": "Australian Animal Outcomes",
+    "section": "",
+    "text": "Notable topics: Data manipulation, Web Scraping (rvest package) and SelectorGadget, Animated Choropleth Map\nRecorded on: 2020-07-20\nTimestamps by: Eric Fletcher\nView code"
+  },
+  {
+    "objectID": "content_pages/australian-animal-outcomes.html#screencast",
+    "href": "content_pages/australian-animal-outcomes.html#screencast",
+    "title": "Australian Animal Outcomes",
+    "section": "Screencast",
+    "text": "Screencast"
+  },
+  {
+    "objectID": "content_pages/australian-animal-outcomes.html#timestamps",
+    "href": "content_pages/australian-animal-outcomes.html#timestamps",
+    "title": "Australian Animal Outcomes",
+    "section": "Timestamps",
+    "text": "Timestamps\n\n\n  \n    \n      0:1:20\n    \n    use_tidytemplatetidytuesdayR\n    \n      Using use_tidytemplate to open the project dataset with the package's tidytemplate Rmd\n\n    \n  \n  \n    \n      0:4:30\n    \n    renamedplyr\n    \n      Using rename to rename Total column to total\n\n    \n  \n  \n    \n      0:6:20\n    \n    fct_reorderforcats\n    \n      Using fct_reorder to reorder stacked barplot with weight = sum\n\n    \n  \n  \n    \n      0:7:00\n    \n    fct_lumpforcats\n    \n      Using fct_lump with w = n to lump together outcome factor levels displaying the most frequenct with rest lumped into other\n\n    \n  \n  \n    \n      0:9:15\n    \n    fct_recodeforcats\n    \n      Using fct_recode to combine the factor level In Stock with Currently In Care\n\n    \n  \n  \n    \n      0:12:10\n    \n    fct_reorderforcats\n    \n      Using fct_reorder to reorder facet_wrap panels\n\n    \n  \n  \n    \n      0:13:03\n    \n    scale_y_continuousggplot2scales\n    \n      Using scale_y_continuous with labels = comma to separate digits with comma\n\n    \n  \n  \n    \n      0:14:10\n    \n    completetidyr\n    \n      Using complete to complete account for missing combinations of data where the value is 0 in the released column\n\n    \n  \n  \n    \n      0:16:10\n    \n    maxbase\n    \n      Using max (year) within filter to subset the data displaying only the most recent year\n\n    \n  \n  \n    \n      0:19:30\n    \n    pivot_longertidyr\n    \n      Using pivot_longer to pivot location variables from wide to long\n\n    \n  \n  \n    \n      0:21:45\n    \n    read_htmlhtml_nodesmaprvestjanitor\n    \n      Web Scaraping table from Wikipedia with SelectorGadget and Rvest\n\n    \n  \n  \n    \n      0:25:45\n    \n    str_to_upperstringr\n    \n      Using str_to_upper to upper case the values in the shorthand column\n\n    \n  \n  \n    \n      0:27:13\n    \n    parse_numberreadr\n    \n      Using parse_number to remove commas from population and area columns\n\n    \n  \n  \n    \n      0:28:55\n    \n    bind_rowsdplyr\n    \n      Using bind_rows to bind the two web scraped tables from Wikipedia together by row and column\n\n    \n  \n  \n    \n      0:29:35\n    \n    inner_joindplyr\n    \n      Using inner_join to combine the Wikipedia table with the original data set\n\n    \n  \n  \n    \n      0:29:47\n    \n    mutatedplyr\n    \n      Using mutate to create new per_capita_million column to show outcome on a per million people basis\n\n    \n  \n  \n    \n      0:37:25\n    \n    summarizedplyr\n    \n      Using summarize to create new column pct_euthanized showing percent of cats and dogs euthanized over time. Formula accounts for 0 values thus avoiding a resulting empty vector.\n\n    \n  \n  \n    \n      0:39:10\n    \n    scale_y_continuousggplot2scales\n    \n      Using scale_y_continuous with labels = percent to add percentage sign to y-axis values\n\n    \n  \n  \n    \n      0:42:45\n    \n    read_sfgeom_sfsf_simplifysfggplot2\n    \n      Create a choropleth map of Australia using an Australian States Shapefile using the sf and ggplot2 packages | Troubleshooting begins at 44:25 (downsizing / downsampling with sf_simplify)\n\n    \n  \n  \n    \n      0:55:45\n    \n    transition_manualgganimate\n    \n      Add animation to the map of Australia showing the percent of cats euthanized by region using gganimate\n\n    \n  \n  \n    \n      1:01:35\n    \n    \n    \n      Summary of screencast"
+  },
+  {
+    "objectID": "content_pages/beach-volleyball.html",
+    "href": "content_pages/beach-volleyball.html",
+    "title": "Beach Volleyball",
+    "section": "",
+    "text": "Notable topics: Data cleaning, Logistic regression\nRecorded on: 2020-05-18\nTimestamps by: Eric Fletcher\nView code"
+  },
+  {
+    "objectID": "content_pages/beach-volleyball.html#screencast",
+    "href": "content_pages/beach-volleyball.html#screencast",
+    "title": "Beach Volleyball",
+    "section": "Screencast",
+    "text": "Screencast"
+  },
+  {
+    "objectID": "content_pages/beach-volleyball.html#timestamps",
+    "href": "content_pages/beach-volleyball.html#timestamps",
+    "title": "Beach Volleyball",
+    "section": "Timestamps",
+    "text": "Timestamps\n\n  \n    \n      0:5:30\n    \n    pivot_longerdplyr\n    \n      Use pivot_longer from the dplyr package to pivot the data set from wide to long.\n\n    \n  \n  \n    \n      0:7:20\n    \n    mutate_atdplyr\n    \n      Use mutate_at from the dplyr package with starts_with to change the class to character for all columns that start with w_ and l_.\n\n    \n  \n  \n    \n      0:8:00\n    \n    separatetidyr\n    \n      Use separate from the tidyr package to separate the name variable into three columns with extra = merge and fill = right.\n\n    \n  \n  \n    \n      0:10:35\n    \n    renamedplyr\n    \n      Use rename from the dplyr package to rename w_player1, w_player2, l_player1, and l_player2.\n\n    \n  \n  \n    \n      0:12:50\n    \n    pivot_widerdplyr\n    \n      Use pivot_wider from the dplyr package to pivot the name variable from long to wide.\n\n    \n  \n  \n    \n      0:15:15\n    \n    str_to_upperstringr\n    \n      Use str_to_upper to convert the winner_loser w and l values to uppercase.\n\n    \n  \n  \n    \n      0:20:25\n    \n    row_numberdplyr\n    \n      Add unique row numbers for each match using mutate with row_number from the dplyr package.\n\n    \n  \n  \n    \n      0:21:20\n    \n    separate_rowstidyr\n    \n      Separate the score values into multiple rows using separate_rows from the tidyr package.\n\n    \n  \n  \n    \n      0:22:45\n    \n    separatetidyr\n    \n      Use separate from the tidyr package to actual scores into two columns, one for the winners score w_score and another for the losers score l_score.\n\n    \n  \n  \n    \n      0:23:45\n    \n    na_ifdplyr\n    \n      Use na_if from the dplyr package to change the Forfeit or other value from the score variable to NA.\n\n    \n  \n  \n    \n      0:24:35\n    \n    str_removestringr\n    \n      Use str_remove from the stringr package to remove scores that include retired.\n\n    \n  \n  \n    \n      0:25:25\n    \n    mutategroup_bysummarizedplyr\n    \n      Determine how many times the winners score w_score is  greter than the losers score l_score at least 1/3 of the time.\n\n    \n  \n  \n    \n      0:28:30\n    \n    summarizedplyr\n    \n      Use summarize from the dplyr package to create the summary statistics including the number of matches, winning percentage, date of first match, date of most recent match.\n\n    \n  \n  \n    \n      0:34:15\n    \n    type_convertreadr\n    \n      Use type_convert from the readr package to convert character class variables to numeric.\n\n    \n  \n  \n    \n      0:35:00\n    \n    summarize_alldplyr\n    \n      Use summarize_all from the dplyr package to calculate the calculate which fraction of the data is not NA.\n\n    \n  \n  \n    \n      0:42:00\n    \n    summarizeinner_joingeom_pointglmcbinddplyrggplot2\n    \n      Use summarize from the dplyr package to determine players number of matches, winning percentage, average attacks, average errors, average kills, average aces, average serve errors, and total rows with data for years prior to 2019.\nThe summary statistics are then used to answer how would we could predict if a player will win in 2019 using geom_point and logistic regression. Initially, David wanted to predict performance based on players first year performance. (NOTE - David mistakingly grouped by year and age. He cathces this around 1:02:00.)\n\n    \n  \n  \n    \n      0:49:25\n    \n    summarizeyearlubridate\n    \n      Use  year from the lubridate package within a group_by to determine the age for each play given their birthdate.\n\n    \n  \n  \n    \n      0:54:30\n    \n    \n    \n      Turn the summary statistics at timestamp 42:00 into a . DOT %>% PIPE function.\n\n    \n  \n  \n    \n      1:04:30\n    \n    \n    \n      Summary of screencast."
+  },
+  {
+    "objectID": "content_pages/beer-production.html",
+    "href": "content_pages/beer-production.html",
+    "title": "Beer Production",
+    "section": "",
+    "text": "Notable topics: tidymetrics package demonstration, Animated map (gganimate package)\nRecorded on: 2020-03-31\nTimestamps by: Alex Cookson\nView code"
+  },
+  {
+    "objectID": "content_pages/beer-production.html#screencast",
+    "href": "content_pages/beer-production.html#screencast",
+    "title": "Beer Production",
+    "section": "Screencast",
+    "text": "Screencast"
+  },
+  {
+    "objectID": "content_pages/beer-production.html#timestamps",
+    "href": "content_pages/beer-production.html#timestamps",
+    "title": "Beer Production",
+    "section": "Timestamps",
+    "text": "Timestamps\n\n  \n    \n      0:4:25\n    \n    \n    \n      Asking, \"What ingredients are used in beer?\"\n\n    \n  \n  \n    \n      0:4:40\n    \n    filtermax\n    \n      Using filter and max functions to look at the most recent period of time\n\n    \n  \n  \n    \n      0:7:25\n    \n    pasteymd\n    \n      Using paste and ymd functions (ymd is from lubridate package) to convert year-month field into an date-formatted field\n\n    \n  \n  \n    \n      0:9:20\n    \n    \n    \n      Spotting potential missing or mis-parsed data\n\n    \n  \n  \n    \n      0:13:50\n    \n    \n    \n      Introducing the tidymetrics framework\n\n    \n  \n  \n    \n      0:14:45\n    \n    install_github\n    \n      Using install_github function to install tidymetrics from GitHub\n\n    \n  \n  \n    \n      0:15:25\n    \n    cross_by_dimensionstidymetrics\n    \n      Using cross_by_dimensions function from tidymetrics package to get aggregations at different levels of multiple dimensions\n\n    \n  \n  \n    \n      0:18:10\n    \n    cross_by_periodstidymetrics\n    \n      Using cross_by_periods function from tidymetrics package to also get aggregations for different intervals (e.g, month, quarter, year)\n\n    \n  \n  \n    \n      0:22:00\n    \n    use_metrics_scaffoldtidymetrics\n    \n      Using use_metrics_scaffold function from tidymetrics package to create framework for documenting dimensions in RMarkdown YAML header\n\n    \n  \n  \n    \n      0:24:00\n    \n    create_metricstidymetrics\n    \n      Using create_metrics function from tidymetrics package to save data as a tibble with useful metadata (good for visualizing interactively)\n\n    \n  \n  \n    \n      0:25:15\n    \n    preview_metricsshinymetrics\n    \n      Using preview_metric function from shinymetrics package (still under development as of 2020-04-24) to demonstrate shinymetrics\n\n    \n  \n  \n    \n      0:27:35\n    \n    shinymetrics\n    \n      Succesfuly getting shinymetrics to work\n\n    \n  \n  \n    \n      0:28:25\n    \n    shinymetrics\n    \n      Explanation of the shinymetrics bug David ran into\n\n    \n  \n  \n    \n      0:34:10\n    \n    parse_numberfct_lumpcoalesce\n    \n      Changing order of ordinal variable (e.g., \"1,000 to 10,000\" and \"10,000 to 20,000\") using the parse_number, fct_lump, and coalesce functions\n\n    \n  \n  \n    \n      0:41:25\n    \n    \n    \n      Asking, \"Where is beer produced?\"\n\n    \n  \n  \n    \n      0:46:45\n    \n    sf\n    \n      Looking up sf package documentation to refresh memory on how to draw state borders for a map\n\n    \n  \n  \n    \n      0:48:55\n    \n    match\n    \n      Using match function and state.abb vector (state abbreviations) from sf package to perform a lookup of state names\n\n    \n  \n  \n    \n      0:51:05\n    \n    geom_sfsf\n    \n      Using geom_sf function (and working through some hiccoughs) to create a choropleth map\n\n    \n  \n  \n    \n      0:52:30\n    \n    theme_mapggthemes\n    \n      Using theme_map function from ggthemes package to get more appropriate styling for maps\n\n    \n  \n  \n    \n      0:55:40\n    \n    \n    \n      Experimenting with how to get the legend to display in the bottom right corner\n\n    \n  \n  \n    \n      0:58:25\n    \n    gganimate\n    \n      Starting to build an animation of consumption patterns over time using gganimate package\n\n    \n  \n  \n    \n      1:03:40\n    \n    gganimate\n    \n      Getting the year being animated to show up in the title of a gganimate map\n\n    \n  \n  \n    \n      1:05:40\n    \n    \n    \n      Summary of screencast\n\n    \n  \n  \n    \n      1:06:50\n    \n    \n    \n      Spotting a mistake in a group_by call causing the percentages not to add up properly\n\n    \n  \n  \n    \n      1:09:10\n    \n    tidymetrics\n    \n      Brief extra overview of tidymetrics code"
+  },
+  {
+    "objectID": "content_pages/beyonce-and-taylor-swift-lyrics.html",
+    "href": "content_pages/beyonce-and-taylor-swift-lyrics.html",
+    "title": "Beyonce and Taylor Swift Lyrics",
+    "section": "",
+    "text": "Notable topics: Text analysis, tf_idf, Log odds ratio, Diverging bar graph, Lollipop graph\nRecorded on: 2020-09-28\nTimestamps by: Eric Fletcher\nView code"
+  },
+  {
+    "objectID": "content_pages/beyonce-and-taylor-swift-lyrics.html#screencast",
+    "href": "content_pages/beyonce-and-taylor-swift-lyrics.html#screencast",
+    "title": "Beyonce and Taylor Swift Lyrics",
+    "section": "Screencast",
+    "text": "Screencast"
+  },
+  {
+    "objectID": "content_pages/beyonce-and-taylor-swift-lyrics.html#timestamps",
+    "href": "content_pages/beyonce-and-taylor-swift-lyrics.html#timestamps",
+    "title": "Beyonce and Taylor Swift Lyrics",
+    "section": "Timestamps",
+    "text": "Timestamps\n\n\n  \n    \n      0:7:50\n    \n    fct_reorderforcats\n    \n      Use fct_reorder from the forcats package to reorder title factor levels by sorting along the sales variable in geom_col plot.\n\n    \n  \n  \n    \n      0:8:10\n    \n    labelsscales\n    \n      Use labels = dollar from the scales package to format the geom_col x-axis values as currency.\n\n    \n  \n  \n    \n      0:11:15\n    \n    rename_allstr_to_lowerdplyrstringr\n    \n      Use rename_all(str_to_lower) to convert variable names to lowercase.\n\n    \n  \n  \n    \n      0:12:45\n    \n    unnest_tokenstidytext\n    \n      Use unnest_tokens from the tidytext package to split the lyrics into one-lyric-per-row.\n\n    \n  \n  \n    \n      0:13:00\n    \n    anti_joindplyr\n    \n      Use anti_join from the tidytext package to find the most common words int he lyrics without stop_words.\n\n    \n  \n  \n    \n      0:15:15\n    \n    bind_tf_idftidytext\n    \n      Use bind_tf_idf from the tidytext package to determine tf - the proportion each word has in each album and idf - how specific each word is to each particular album.\n\n    \n  \n  \n    \n      0:17:45\n    \n    reorder_withinscale_y_reorderedslice_maxtidytextdplyr\n    \n      Use reorder_within with scale_y_reordered in order to reorder the bars within each facet panel. David replaces top_n with slice_max from the dplyr package in order to show the top 10 words with ties = FALSE.\n\n    \n  \n  \n    \n      0:20:45\n    \n    bind_log_oddstidylo\n    \n      Use bind_log_odds from the tidylo package to calculate the log odds ratio of album and words, that is how much more common is the word in a specific album than across all the other albums.\n\n    \n  \n  \n    \n      0:23:10\n    \n    filterstr_lengthdplyrstringr\n    \n      Use filter(str_length(word) <= 3) to come up with a list in order to remove common filler words like ah, uh, ha, ey, eeh, and huh.\n\n    \n  \n  \n    \n      0:27:00\n    \n    distinctmdystr_removedplyrlubridatestringr\n    \n      Use mdy from the lubridate package and str_remove(released, \" \\\\(.*)\")) from the stringr package to parse the dates in the released variable.\n\n    \n  \n  \n    \n      0:28:15\n    \n    inner_joinfct_recodedplyrforcats\n    \n      Use inner_join from the dplyr package to join taylor_swift_words with release_dates.\nDavid ends up having to use fct_recode since the albums reputation and folklore were nor lowercase in a previous table thus excluding them from the inner_join.\n\n    \n  \n  \n    \n      0:28:30\n    \n    fct_reordergeom_colforcatsggplot2\n    \n      Use fct_reorder from the forcats package to reorder album factor levels by sorting along the released variable to be used in the faceted geom_col.\n\n    \n  \n  \n    \n      0:34:40\n    \n    bind_rowsunnest_tokensdplyrtidytext\n    \n      Use bind_rows from hte dplyr package to bind ts with beyonce with unnest_tokens from the tidytext package to get one lyric per row per artist.\n\n    \n  \n  \n    \n      0:38:40\n    \n    bind_log_oddstidylo\n    \n      Use bind_log_odds to figure out which words are more likely to come from a Taylor Swift or Beyonce song?\n\n    \n  \n  \n    \n      0:41:10\n    \n    slice_maxgeom_colifelsefct_reorderdplyrggplot2forcats\n    \n      Use slice_max from the dplyr package to select the top 100 words by num_words_total and then the top 25 by log_odds_weighted. Results are used to create a diverging bar chart showing which words are most common between Beyonce and Taylor Swift songs.\n\n    \n  \n  \n    \n      0:44:40\n    \n    scale_x_continuousggplot2\n    \n      Use scale_x_continuous to make the log_odds_weighted scale more interpretable.\n\n    \n  \n  \n    \n      0:50:45\n    \n    geom_colgeom_pointgeom_vlineggplot2\n    \n      Take the previous plot and turn it into a lollipop graph with geom_point(aes(size = num_words_total, color = direction))\n\n    \n  \n  \n    \n      0:53:05\n    \n    ifelsebase\n    \n      Use ifelse to change the 1x value on the x-axis to same.\n\n    \n  \n  \n    \n      0:54:15\n    \n    pivot_widerclean_namesgeom_ablinegeom_pointslice_maxscale_y_log_10scale_x_log_10geom_texttidyrggplot2dplyr\n    \n      Create a geom_point with geom_abline to show the most popular words they use in common.\n\n    \n  \n  \n    \n      1:01:55\n    \n    \n    \n      Summary of screencast."
+  },
+  {
+    "objectID": "content_pages/big-mac-index.html",
+    "href": "content_pages/big-mac-index.html",
+    "title": "Big Mac Index",
+    "section": "",
+    "text": "Notable topics: Data manipulation, Pairwise correlation\nRecorded on: 2020-12-21\nTimestamps by: Eric Fletcher\nView code"
+  },
+  {
+    "objectID": "content_pages/big-mac-index.html#screencast",
+    "href": "content_pages/big-mac-index.html#screencast",
+    "title": "Big Mac Index",
+    "section": "Screencast",
+    "text": "Screencast"
+  },
+  {
+    "objectID": "content_pages/big-mac-index.html#timestamps",
+    "href": "content_pages/big-mac-index.html#timestamps",
+    "title": "Big Mac Index",
+    "section": "Timestamps",
+    "text": "Timestamps\n\n  \n    \n      0:5:45\n    \n    add_countdplyr\n    \n      Use the add_count function from the dplyr package with name = \"country_total\" to count the number of observations by group in the name variable.\n\n    \n  \n  \n    \n      0:5:55\n    \n    filtermaxdplyrbase\n    \n      Use filter from the dplyr package with country_total == max(country_total) to filter the data for countries where every data point is provided.\n\n    \n  \n  \n    \n      0:6:30\n    \n    renamedplyr\n    \n      Use the rename function from the dplyr package to rename the name variable to country_name.\n\n    \n  \n  \n    \n      0:6:45\n    \n    themeggplot2\n    \n      Use theme(legend.position = \"none\") to hide the legend generated by the geom_line plot.\n\n    \n  \n  \n    \n      0:7:00\n    \n    expand_limitsggplot2\n    \n      Use the expand_limits function from the ggplot2 package with y = 0 so that each facet panel has a y-axis that starts at the same point, in this case 0.\n\n    \n  \n  \n    \n      0:8:30\n    \n    fct_reorderforcats\n    \n      Reorder facet panels using the fct_reorder from the forcats package with a function passed in to the .fun argument to calculate the ratio between max and min values in the local_price variable.  At 12:00, David changes from using max and min to last and first to calculate the Big Mac inflation rate.\n\n    \n  \n  \n    \n      0:13:20\n    \n    scale_x_log10ggplot2\n    \n      Use scale_x_log10 from the ggplot2 package to change the breaks for the x-axis while also applying a log10 tranformation.\n\n    \n  \n  \n    \n      0:15:05\n    \n    geom_textpaste0ggplot2base\n    \n      Use geom_text from the from the ggplot2 with paste0 package to add labels to each bar in the plot indicating how many time X the price of a Big Mac increased from 2000 to 2020.\n\n    \n  \n  \n    \n      0:28:10\n    \n    geom_lineggplot2\n    \n      Add two lines to a plot using 2 geom_line  with  color = argument and y= argument to distinguish between the two lines.\n\n    \n  \n  \n    \n      0:34:05\n    \n    geom_hlineggplot2\n    \n      Use geom_hline from the ggplot2 package to add horizontal reference line to each facet panel.\n\n    \n  \n  \n    \n      0:35:40\n    \n    themeggplot2\n    \n      Use theme from the ggplot2 package with axis.text.x = element_text(angle = 90, hjust = 1) to rmake the x-axis labels horizontal in order to avoid overcrowding.\n\n    \n  \n  \n    \n      0:38:25\n    \n    geom_textgeom_text_repelggplot2ggrepel\n    \n      Use geom_text to add country names to each point in geom_point plot. David then opts to use geom_text_repel from the ggrepel package instead to avoid overcrowding.\n\n    \n  \n  \n    \n      0:38:40\n    \n    geom_smoothggplot2\n    \n      Use geom_smooth from the ggplot2 package with lm smoothing method to help show the linear trend when comparing gdp_dollar to usd_raw.\n\n    \n  \n  \n    \n      0:47:00\n    \n    transition_manualtransition_timegganimate\n    \n      Use the gganimate package to animate the GDP per capital versus adjusted big mac index relative to USD over time.\n\n    \n  \n  \n    \n      0:53:05\n    \n    str_to_upperstr_removestringr\n    \n      Use str_to_upper and str_remove to remove _adjusted from base_currency while uppercasing the characters that remain.\n\n    \n  \n  \n    \n      0:58:05\n    \n    pairwise_corwidyr\n    \n      Use pairwise_cor from the widyr package to perform pairwise correlation to figure out which countries Big Mac prices tend to move together over time.\n\n    \n  \n  \n    \n      1:00:50\n    \n    \n    \n      Screencast summary."
+  },
+  {
+    "objectID": "content_pages/bird-collisions.html",
+    "href": "content_pages/bird-collisions.html",
+    "title": "Bird Collisions",
+    "section": "",
+    "text": "Notable topics: Bootstrapping\nRecorded on: 2019-05-02\nTimestamps by: Alex Cookson\nView code"
+  },
+  {
+    "objectID": "content_pages/bird-collisions.html#screencast",
+    "href": "content_pages/bird-collisions.html#screencast",
+    "title": "Bird Collisions",
+    "section": "Screencast",
+    "text": "Screencast"
+  },
+  {
+    "objectID": "content_pages/bird-collisions.html#timestamps",
+    "href": "content_pages/bird-collisions.html#timestamps",
+    "title": "Bird Collisions",
+    "section": "Timestamps",
+    "text": "Timestamps\n\n  \n    \n      0:2:45\n    \n    \n    \n      Analyzing when NAs appear in a dimension\n\n    \n  \n  \n    \n      0:7:30\n    \n    gather\n    \n      Looking at multiple categorical variable at the same time by gathering them into one column and eventually graphing each as a different facet\n\n    \n  \n  \n    \n      0:9:30\n    \n    \n    \n      Re-order facet graphs according to which ones have the fewest categories in them to ones that have the most\n\n    \n  \n  \n    \n      0:20:45\n    \n    \n    \n      Geometric mean for estimating counts when there are a lot of low values (1-3 bird collisions, in this case)\n\n    \n  \n  \n    \n      0:23:15\n    \n    \n    \n      Filling in \"blank\" observations where there were no observations made\n\n    \n  \n  \n    \n      0:27:00\n    \n    \n    \n      Using log+1 to convert a dimension with values of 0 into a log scale\n\n    \n  \n  \n    \n      0:29:00\n    \n    \n    \n      Adding confidence bounds for data using a geometric mean (where he first gets the idea of bootstrapping)\n\n    \n  \n  \n    \n      0:32:00\n    \n    \n    \n      Actual coding of bootstrap starts\n\n    \n  \n  \n    \n      0:38:30\n    \n    \n    \n      Adding confidence bounds using bootstrap data\n\n    \n  \n  \n    \n      0:42:00\n    \n    \n    \n      Investigating potential confounding variables\n\n    \n  \n  \n    \n      0:44:15\n    \n    \n    \n      Discussing approaches to dealing with confounding variables\n\n    \n  \n  \n    \n      0:46:45\n    \n    complete\n    \n      Using complete function to get explicit NA values"
+  },
+  {
+    "objectID": "content_pages/board-game-reviews.html",
+    "href": "content_pages/board-game-reviews.html",
+    "title": "Board Game Reviews",
+    "section": "",
+    "text": "Notable topics: LASSO regression (glmnet package)\nRecorded on: 2019-03-14\nTimestamps by: Alex Cookson\nView code"
+  },
+  {
+    "objectID": "content_pages/board-game-reviews.html#screencast",
+    "href": "content_pages/board-game-reviews.html#screencast",
+    "title": "Board Game Reviews",
+    "section": "Screencast",
+    "text": "Screencast"
+  },
+  {
+    "objectID": "content_pages/board-game-reviews.html#timestamps",
+    "href": "content_pages/board-game-reviews.html#timestamps",
+    "title": "Board Game Reviews",
+    "section": "Timestamps",
+    "text": "Timestamps\n\n  \n    \n      0:2:50\n    \n    \n    \n      Starting EDA (exploratory data analysis) with counts of categorical variables\n\n    \n  \n  \n    \n      0:7:25\n    \n    scale_x_log10\n    \n      Specifying scale_x_log10 function's breaks argument to get sensisble tick marks for time on histogram\n\n    \n  \n  \n    \n      0:8:45\n    \n    geom_histogram\n    \n      Tweaking geom_histogram function's binwidth argument to get something that makes sense for log scale\n\n    \n  \n  \n    \n      0:10:10\n    \n    separate_rows\n    \n      Using separate_rows to break down comma-separated values for three different categorical variables\n\n    \n  \n  \n    \n      0:15:55\n    \n    top_n\n    \n      Using top_n to get top 20 observations from each of several categories (not quite right, fixed at 17:47)\n\n    \n  \n  \n    \n      0:16:15\n    \n    facet_wrap\n    \n      Troubleshooting various issues with facetted graph (e.g., ordering, values appearing in multiple categories)\n\n    \n  \n  \n    \n      0:19:55\n    \n    lm\n    \n      Starting prediction of average rating with a linear model\n\n    \n  \n  \n    \n      0:20:50\n    \n    \n    \n      Splitting data into train/test sets (training/holdout)\n\n    \n  \n  \n    \n      0:22:55\n    \n    \n    \n      Investigating relationship between max number of players and average rating (to determine if it should be in linear model)\n\n    \n  \n  \n    \n      0:25:05\n    \n    \n    \n      Exploring average rating over time (\"Do newer games tend to be rated higher/lower?\")\n\n    \n  \n  \n    \n      0:27:35\n    \n    \n    \n      Discussing necessity of controlling for year a game was published in the linear model\n\n    \n  \n  \n    \n      0:28:30\n    \n    \n    \n      Non-model approach to exploring relationship between game features (e.g., card game, made in Germany) on average rating\n\n    \n  \n  \n    \n      0:30:50\n    \n    geom_boxplot\n    \n      Using geom_boxplot function to create boxplot of average ratings for most common game features\n\n    \n  \n  \n    \n      0:34:05\n    \n    unite\n    \n      Using unite function to combine multiple variables into one\n\n    \n  \n  \n    \n      0:37:25\n    \n    \n    \n      Introducing Lasso regression as good option when you have many features likely to be correlated with one another\n\n    \n  \n  \n    \n      0:38:15\n    \n    \n    \n      Writing code to set up Lasso regression using glmnet and tidytext packages\n\n    \n  \n  \n    \n      0:40:05\n    \n    \n    \n      Adding average rating to the feature matrix (warning: method is messy)\n\n    \n  \n  \n    \n      0:41:40\n    \n    setdiff\n    \n      Using setdiff function to find games that are in one set, but not in another (while setting up matrix for Lasso regression)\n\n    \n  \n  \n    \n      0:44:15\n    \n    \n    \n      Spotting the error stemming from the step above (calling row names from the wrong data)\n\n    \n  \n  \n    \n      0:45:45\n    \n    glmnetglmnet\n    \n      Explaining what a Lasso regression does, including the penalty parameter lambda\n\n    \n  \n  \n    \n      0:48:35\n    \n    cv.glmnetglmnet\n    \n      Using a cross-validated Lasso model to choose the level of the penalty parameter (lambda)\n\n    \n  \n  \n    \n      0:51:35\n    \n    \n    \n      Adding non-categorical variables to the Lasso model to control for them (e.g., max number of players)\n\n    \n  \n  \n    \n      0:55:15\n    \n    unite\n    \n      Using unite function to combine multiple variables into one, separated by a colon\n\n    \n  \n  \n    \n      0:58:45\n    \n    \n    \n      Graphing the top 20 coefficients in the Lasso model that have the biggest effect on predicted average rating\n\n    \n  \n  \n    \n      1:00:55\n    \n    yardstick\n    \n      Mentioning the yardstick package as a way to evaluate the model's performance\n\n    \n  \n  \n    \n      1:01:15\n    \n    \n    \n      Discussing drawbacks of linear models like Lasso (can't do non-linear relationships or interaction effects)"
+  },
+  {
+    "objectID": "content_pages/bob-ross-paintings.html",
+    "href": "content_pages/bob-ross-paintings.html",
+    "title": "Bob Ross Paintings",
+    "section": "",
+    "text": "Notable topics: Network graphs, Principal Component Analysis (PCA)\nRecorded on: 2019-08-11\nTimestamps by: Alex Cookson\nView code"
+  },
+  {
+    "objectID": "content_pages/bob-ross-paintings.html#screencast",
+    "href": "content_pages/bob-ross-paintings.html#screencast",
+    "title": "Bob Ross Paintings",
+    "section": "Screencast",
+    "text": "Screencast"
+  },
+  {
+    "objectID": "content_pages/bob-ross-paintings.html#timestamps",
+    "href": "content_pages/bob-ross-paintings.html#timestamps",
+    "title": "Bob Ross Paintings",
+    "section": "Timestamps",
+    "text": "Timestamps\n\n  \n    \n      0:1:40\n    \n    clean_namesjanitor\n    \n      Using clean_names function in janitor package to get field names to snake_case\n\n    \n  \n  \n    \n      0:1:50\n    \n    gather\n    \n      Using gather function to get wide elements into tall (tidy) format\n\n    \n  \n  \n    \n      0:2:35\n    \n    str_to_titlestr_replace\n    \n      Cleaning text (str_to_title, str_replace) to get into nicer-to-read format\n\n    \n  \n  \n    \n      0:3:30\n    \n    str_remove_all\n    \n      Using str_remove_all function to trim trimming quotation marks and backslashes\n\n    \n  \n  \n    \n      0:4:40\n    \n    extract\n    \n      Using extract function to extract the season number and episode number from episode field; uses regex capturing groups\n\n    \n  \n  \n    \n      0:14:00\n    \n    add_count\n    \n      Using add_count function's name argument to specify field's name\n\n    \n  \n  \n    \n      0:15:35\n    \n    \n    \n      Getting into whether the elements of Ross's paintings changed over time (e.g., are mountains more/less common over time?)\n\n    \n  \n  \n    \n      0:20:00\n    \n    broom\n    \n      Quick point: could have used logistic regression to see change over time of elements\n\n    \n  \n  \n    \n      0:21:10\n    \n    widyr\n    \n      Asking, \"What elements tends to appear together?\" prompting clustering analysis\n\n    \n  \n  \n    \n      0:22:15\n    \n    pairwise_corwidyr\n    \n      Using pairwise_cor to see which elements tend to appear together\n\n    \n  \n  \n    \n      0:22:50\n    \n    \n    \n      Discussion of a blind spot of pairwise correlation (high or perfect correlation on elements that only appear once or twice)\n\n    \n  \n  \n    \n      0:28:05\n    \n    \n    \n      Asking, \"What are clusters of elements that belong together?\"\n\n    \n  \n  \n    \n      0:28:30\n    \n    ggraphigraph\n    \n      Creating network plot using ggraph and igraph packages\n\n    \n  \n  \n    \n      0:30:15\n    \n    \n    \n      Reviewing network plot for interesting clusters (e.g., beach cluster, mountain cluster, structure cluster)\n\n    \n  \n  \n    \n      0:31:55\n    \n    \n    \n      Explanation of Principal Component Analysis (PCA)\n\n    \n  \n  \n    \n      0:34:35\n    \n    \n    \n      Start of actual PCA coding\n\n    \n  \n  \n    \n      0:34:50\n    \n    acastreshape2\n    \n      Using acast function to create matrix of painting titles x painting elements (initially wrong, corrected at 36:30)\n\n    \n  \n  \n    \n      0:36:55\n    \n    tcolSumscolMeans\n    \n      Centering the matrix data using t function (transpose of matrix), colSums function, and colMeans function\n\n    \n  \n  \n    \n      0:38:15\n    \n    svd\n    \n      Using svd function to performn singular value decomposition, then tidying with broom package\n\n    \n  \n  \n    \n      0:39:55\n    \n    \n    \n      Exploring one principal component to get a better feel for what PCA is doing\n\n    \n  \n  \n    \n      0:43:20\n    \n    reorder_withintidytext\n    \n      Using reorder_within function to re-order factors within a grouping\n\n    \n  \n  \n    \n      0:48:00\n    \n    \n    \n      Exploring different matrix names in PCA (u, v, d)\n\n    \n  \n  \n    \n      0:56:50\n    \n    \n    \n      Looking at top 6 principal components of painting elements\n\n    \n  \n  \n    \n      0:57:45\n    \n    \n    \n      Showing percentage of variation that each principal component is responsible for"
+  },
+  {
+    "objectID": "content_pages/broadway-musicals.html",
+    "href": "content_pages/broadway-musicals.html",
+    "title": "Broadway Musicals",
+    "section": "",
+    "text": "Notable topics: Creating an interactive dashboard with shinymetrics and tidymetrics, moving windows, period aggregation\nRecorded on: 2020-04-27\nTimestamps by: Eric Fletcher\nView code"
+  },
+  {
+    "objectID": "content_pages/broadway-musicals.html#screencast",
+    "href": "content_pages/broadway-musicals.html#screencast",
+    "title": "Broadway Musicals",
+    "section": "Screencast",
+    "text": "Screencast"
+  },
+  {
+    "objectID": "content_pages/broadway-musicals.html#timestamps",
+    "href": "content_pages/broadway-musicals.html#timestamps",
+    "title": "Broadway Musicals",
+    "section": "Timestamps",
+    "text": "Timestamps\n\n  \n    \n      0:8:15\n    \n    renamecross_by_periodstidymetrics\n    \n      Use the cross_by_periods  function from the tidymetrics package to aggregate data over time (month, quarter, and year) then visualize with geom_line.\n\n    \n  \n  \n    \n      0:14:00\n    \n    cross_by_periodstidymetrics\n    \n      Use the cross_by_periods  function from the tidymetrics  package with windows = c(28)) to create a 4-week rolling average across month, quarter, and year.\n\n    \n  \n  \n    \n      0:21:50\n    \n    use_metrics_scaffoldcreate_metricsshinymetricsTidaymetrics\n    \n      Create and interactive dashboard using the shinymetrics and tidymetrics packages.\n\n    \n  \n  \n    \n      0:25:00\n    \n    str_removestringr\n    \n      Use the str_remove function from the stringr package to remove matched pattern in a string.\n\n    \n  \n  \n    \n      0:25:20\n    \n    cross_by_dimensionstidymetrics\n    \n      Use the cross_by_dimensions function from the tidymetrics package which acts as an extended group_by that allows complete summaries across each individual dimension and possible combinations.\n\n    \n  \n  \n    \n      0:41:25\n    \n    shinybones\n    \n      Use the shinybones package to create an interactive dashboard to visualize all 3 metrics at the same time."
+  },
+  {
+    "objectID": "content_pages/car-fuel-efficiency.html",
+    "href": "content_pages/car-fuel-efficiency.html",
+    "title": "Car Fuel Efficiency",
+    "section": "",
+    "text": "Notable topics: Natural splines for regression\nRecorded on: 2019-10-14\nTimestamps by: Alex Cookson\nView code"
+  },
+  {
+    "objectID": "content_pages/car-fuel-efficiency.html#screencast",
+    "href": "content_pages/car-fuel-efficiency.html#screencast",
+    "title": "Car Fuel Efficiency",
+    "section": "Screencast",
+    "text": "Screencast"
+  },
+  {
+    "objectID": "content_pages/car-fuel-efficiency.html#timestamps",
+    "href": "content_pages/car-fuel-efficiency.html#timestamps",
+    "title": "Car Fuel Efficiency",
+    "section": "Timestamps",
+    "text": "Timestamps\n\n  \n    \n      0:3:20\n    \n    selectsortcolnames\n    \n      Using select and sort and colnames functions to sort variables in alphabetical order\n\n    \n  \n  \n    \n      0:10:00\n    \n    geom_abline\n    \n      Adding geom_abline for y = x to a scatter plot for comparison\n\n    \n  \n  \n    \n      0:18:00\n    \n    geom_boxplot\n    \n      Visualising using geom_boxplot for mpg by vehicle class (size of car)\n\n    \n  \n  \n    \n      0:24:45\n    \n    \n    \n      Start of explanation of prediction goals\n\n    \n  \n  \n    \n      0:27:00\n    \n    sample_frac\n    \n      Creating train and test sets, along with trick using sample_frac function to randomly re-arrange all rows in a dataset\n\n    \n  \n  \n    \n      0:28:35\n    \n    geom_smooth\n    \n      First step of developing linear model: visually adding geom_smooth\n\n    \n  \n  \n    \n      0:30:00\n    \n    augment\n    \n      Using augment function to add extra variables from model to original dataset (fitted values and residuals, especially)\n\n    \n  \n  \n    \n      0:30:45\n    \n    \n    \n      Creating residuals plot and explaining what you want and don't want to see\n\n    \n  \n  \n    \n      0:31:50\n    \n    \n    \n      Explanation of splines\n\n    \n  \n  \n    \n      0:33:30\n    \n    \n    \n      Visualising effect of regressing using natural splines\n\n    \n  \n  \n    \n      0:35:10\n    \n    \n    \n      Creating a tibble to test different degrees of freedom (1:10) for natural splines\n\n    \n  \n  \n    \n      0:36:30\n    \n    unnest\n    \n      Using unnest function to get tidy versions of different models\n\n    \n  \n  \n    \n      0:37:55\n    \n    \n    \n      Visualising fitted values of all 6 different models at the same time\n\n    \n  \n  \n    \n      0:42:10\n    \n    glance\n    \n      Investigating whether the model got \"better\" as we added degrees of freedom to the natural splines, using the glance function\n\n    \n  \n  \n    \n      0:47:45\n    \n    \n    \n      Using ANOVA to perform a statistical test on whether natural splines as a group explain variation in MPG\n\n    \n  \n  \n    \n      0:48:30\n    \n    \n    \n      Exploring colinearity of dependant variables (displacement and cylinders)\n\n    \n  \n  \n    \n      0:55:10\n    \n    floor\n    \n      Binning years into every two years using floor function\n\n    \n  \n  \n    \n      0:56:40\n    \n    summarise_at\n    \n      Using summarise_at function to do quick averaging of multiple variables"
+  },
+  {
+    "objectID": "content_pages/caribou-locations.html",
+    "href": "content_pages/caribou-locations.html",
+    "title": "Caribou Locations",
+    "section": "",
+    "text": "Notable topics: Maps with ggplot2, Calculating distance and speed with geosphere\nRecorded on: 2020-06-22\nTimestamps by: Eric Fletcher\nView code"
+  },
+  {
+    "objectID": "content_pages/caribou-locations.html#screencast",
+    "href": "content_pages/caribou-locations.html#screencast",
+    "title": "Caribou Locations",
+    "section": "Screencast",
+    "text": "Screencast"
+  },
+  {
+    "objectID": "content_pages/caribou-locations.html#timestamps",
+    "href": "content_pages/caribou-locations.html#timestamps",
+    "title": "Caribou Locations",
+    "section": "Timestamps",
+    "text": "Timestamps\n\n  \n    \n      0:4:00\n    \n    summarizeacrossdplyr\n    \n      Use summarize and across to calculate the proportion of NA values in the individuals dataset. Note, you do not need to use list().\n\n    \n  \n  \n    \n      0:9:00\n    \n    ggplotbordersggplot2\n    \n      Use ggplot and borders from the ggplot2 package to create a map of Canada with deploy_on_longitude and deploy_on_latitude from the individuals dataset.\n\n    \n  \n  \n    \n      0:13:50\n    \n    read_sfsf\n    \n      Import Canada province shapefile using the sf package. [Unsuccessful]\n\n    \n  \n  \n    \n      0:25:00\n    \n    minmaxbase\n    \n      Use min and max from base r  within summarize to find out the start and end dates for each caribou in the locations dataset.\n\n    \n  \n  \n    \n      0:27:15\n    \n    samplegeom_pathbaseggplot2\n    \n      Use sample from base r to pick one single caribou at a time then use the subset with geom_path from ggplot2 to track the path a that caribou takes over time.  color = factor(floor_date(timestamp, \"quarter\") is used to color the path according to what quarter the observation occured in.\n\n    \n  \n  \n    \n      0:35:15\n    \n    as.Datefloor_datebaselubridate\n    \n      Use as.Date from base r and floor_date from the lubridate package to convert timestamp variable into quarters then facet_wrap the previous plot by quarter.\n\n    \n  \n  \n    \n      0:37:15\n    \n    difftimelagbase\n    \n      Within mutate, use as.numeric(difftime(timestamp, lag(timestamp), unit = \"hours\"))  from base r to figure out the gap in time between observations.\n\n    \n  \n  \n    \n      0:43:05\n    \n    distHaversinecbindgeosphere\n    \n      Use distHaversine from the geosphere package to calculate distance in km then convert it to speed in kph.\n\n    \n  \n  \n    \n      1:00:00\n    \n    \n    \n      Summary of dataset."
+  },
+  {
     "objectID": "content_pages/coffee-ratings.html",
     "href": "content_pages/coffee-ratings.html",
     "title": "Coffee Ratings",
     "section": "",
-    "text": "Notable topics: Ridgeline plot, Pairwise correlation, Network plot, Singular value decomposition, Linear model\nRecorded on: 2020-07-07\nTimestamps by: Eric Fletcher\nView code"
+    "text": "Notable topics: Ridgeline plot, Pairwise correlation, Network plot, Singular value decomposition, Linear model\nRecorded on: 2020-07-06\nTimestamps by: Eric Fletcher\nView code"
   },
   {
     "objectID": "content_pages/coffee-ratings.html#screencast",
@@ -389,7 +445,7 @@
     "href": "content_pages/college-majors-and-income.html",
     "title": "College Majors and Income",
     "section": "",
-    "text": "Notable topics: Graphing for EDA (Exploratory Data Analysis)\nRecorded on: 2018-10-15\nTimestamps by: Alex Cookson\nView code"
+    "text": "Notable topics: Graphing for EDA (Exploratory Data Analysis)\nRecorded on: 2018-10-14\nTimestamps by: Alex Cookson\nView code"
   },
   {
     "objectID": "content_pages/college-majors-and-income.html#screencast",
@@ -410,7 +466,7 @@
     "href": "content_pages/cord-19-data-package.html",
     "title": "CORD-19 Data Package",
     "section": "",
-    "text": "Notable topics: R package development and documentation-writing\nRecorded on: 2020-03-19\nTimestamps by: Alex Cookson\nView code"
+    "text": "Notable topics: R package development and documentation-writing\nRecorded on: 2020-03-18\nTimestamps by: Alex Cookson\nView code"
   },
   {
     "objectID": "content_pages/cord-19-data-package.html#screencast",
@@ -431,7 +487,7 @@
     "href": "content_pages/covid-19-open-research-dataset-cord-19.html",
     "title": "COVID-19 Open Research Dataset (CORD-19)",
     "section": "",
-    "text": "Notable topics: JSON formatted data\nRecorded on: 2020-03-18\nTimestamps by: Alex Cookson\nView code"
+    "text": "Notable topics: JSON formatted data\nRecorded on: 2020-03-17\nTimestamps by: Alex Cookson\nView code"
   },
   {
     "objectID": "content_pages/covid-19-open-research-dataset-cord-19.html#screencast",
@@ -452,7 +508,7 @@
     "href": "content_pages/cran-package-code.html",
     "title": "CRAN Package Code",
     "section": "",
-    "text": "Notable topics: Graphing for EDA (Exploratory Data Analysis)\nRecorded on: 2019-12-30\nTimestamps by: Alex Cookson\nView code"
+    "text": "Notable topics: Graphing for EDA (Exploratory Data Analysis)\nRecorded on: 2019-12-29\nTimestamps by: Alex Cookson\nView code"
   },
   {
     "objectID": "content_pages/cran-package-code.html#screencast",
@@ -469,32 +525,11 @@
     "text": "Timestamps\n\n  \n    \n      0:4:30\n    \n    \n    \n      Summarizing many things by language (e.g., lines of code, comment/code ratio)\n\n    \n  \n  \n    \n      0:9:35\n    \n    gather\n    \n      Using gather function to consolidate multiple metrics into one dimension, then visualizing by facetting by metric\n\n    \n  \n  \n    \n      0:11:20\n    \n    facet_wrap\n    \n      Setting ncol = 1 within facet_wrap function to get facetted graphs to stack vertically\n\n    \n  \n  \n    \n      0:11:30\n    \n    reorder_withintidytext\n    \n      Using reorder_within function (tidytext package) to properly reorder factors within each facet\n\n    \n  \n  \n    \n      0:16:00\n    \n    geom_text\n    \n      Using geom_text label to add language name as label to scatter points\n\n    \n  \n  \n    \n      0:20:00\n    \n    \n    \n      Completing preliminary overview and looking at distribution of R code in packages\n\n    \n  \n  \n    \n      0:26:15\n    \n    str_extract\n    \n      Using str_extract to extract only letters and names from character vector (using regex)\n\n    \n  \n  \n    \n      0:34:00\n    \n    guides\n    \n      Re-ordering the order of categorical variables in the legend using guides function\n\n    \n  \n  \n    \n      0:36:00\n    \n    \n    \n      Investigating comment/code ratio\n\n    \n  \n  \n    \n      0:43:05\n    \n    \n    \n      Importing additional package data (looking around for a bit, then starting to actually import ~46:00)\n\n    \n  \n  \n    \n      0:54:40\n    \n    \n    \n      Importing even more additional data (available packages)\n\n    \n  \n  \n    \n      0:57:50\n    \n    separate_rows\n    \n      Using separate_rows function to separate delimited values\n\n    \n  \n  \n    \n      0:58:45\n    \n    extract\n    \n      Using extract function and regex to pull out specific types of characters from a string\n\n    \n  \n  \n    \n      1:05:35\n    \n    \n    \n      Summary of screencast"
   },
   {
-    "objectID": "content_pages/Dolphins.html",
-    "href": "content_pages/Dolphins.html",
-    "title": "Dolphins",
-    "section": "",
-    "text": "Notable topics: Survival analysis\nRecorded on: 2018-12-18\nTimestamps by: Alex Cookson\nView code"
-  },
-  {
-    "objectID": "content_pages/Dolphins.html#screencast",
-    "href": "content_pages/Dolphins.html#screencast",
-    "title": "Dolphins",
-    "section": "Screencast",
-    "text": "Screencast"
-  },
-  {
-    "objectID": "content_pages/Dolphins.html#timestamps",
-    "href": "content_pages/Dolphins.html#timestamps",
-    "title": "Dolphins",
-    "section": "Timestamps",
-    "text": "Timestamps\n\n  \n    \n      0:6:25\n    \n    \n    \n      Using year function from lubridate package to simplify calculating age of dolphins\n\n    \n  \n  \n    \n      0:8:30\n    \n    countfct_lump\n    \n      Combining count and fct_lump functions to get counts of top 5 species (with other species lumped in \"Other\")\n\n    \n  \n  \n    \n      0:9:55\n    \n    \n    \n      Creating boxplot of species and age\n\n    \n  \n  \n    \n      0:11:50\n    \n    \n    \n      Dealing with different types of NA (double, logical) (he doesn't get it in this case, but it's still useful)\n\n    \n  \n  \n    \n      0:15:30\n    \n    \n    \n      Adding acquisition type as colour dimension to histogram\n\n    \n  \n  \n    \n      0:16:00\n    \n    geom_area\n    \n      Creating a spinogram of acquisition type over time (alternative to histogram) using geom_area\n\n    \n  \n  \n    \n      0:17:25\n    \n    %/%\n    \n      Binning year into decade using truncated division operator %/%\n\n    \n  \n  \n    \n      0:19:10\n    \n    complete\n    \n      Fixing annoying triangular gaps in spinogram using complete function to fill in gaps in data\n\n    \n  \n  \n    \n      0:21:15\n    \n    fct_reorder\n    \n      Using fct_reorder function to reorder acquisition type (bigger categories are placed on the bottom of the spinogram)\n\n    \n  \n  \n    \n      0:23:25\n    \n    geom_vline\n    \n      Adding vertical dashed reference line using geom_vline function\n\n    \n  \n  \n    \n      0:24:05\n    \n    \n    \n      Starting analysis of acquisition location\n\n    \n  \n  \n    \n      0:27:05\n    \n    regex_left_joinfuzzyjoin\n    \n      Matching messy text data with regex to aggregate into a few categories variables with fuzzyjoin package\n\n    \n  \n  \n    \n      0:31:30\n    \n    distinct\n    \n      Using distinct function's .keep_all argument to keep only one row per animal ID\n\n    \n  \n  \n    \n      0:33:10\n    \n    coalesce\n    \n      Using coalesce function to conditionally replace NAs (same functionality as SQL verb)\n\n    \n  \n  \n    \n      0:40:00\n    \n    \n    \n      Starting survival analysis\n\n    \n  \n  \n    \n      0:46:25\n    \n    survfitsurvival\n    \n      Using survfit function from survival package to get a baseline survival curve (i.e., not regressed on any independent variables)\n\n    \n  \n  \n    \n      0:47:30\n    \n    \n    \n      Fixing cases where death year is before birth year\n\n    \n  \n  \n    \n      0:48:30\n    \n    \n    \n      Fixing specification of survfit model to better fit the format of our data (right-censored data)\n\n    \n  \n  \n    \n      0:50:10\n    \n    \n    \n      Built-in plot of baseline survival model (estimation of percentage survival at a given age)\n\n    \n  \n  \n    \n      0:50:30\n    \n    tidybroom\n    \n      Using broom package to tidy the survival model data (which is better for ggplot2 plotting)\n\n    \n  \n  \n    \n      0:52:20\n    \n    \n    \n      Fitting survival curve based on sex\n\n    \n  \n  \n    \n      0:54:25\n    \n    \n    \n      Cox proportional hazards model (to investigate association of survival time and one or more predictors)\n\n    \n  \n  \n    \n      0:55:50\n    \n    \n    \n      Explanation of why dolphins with unknown sex likely have a systematic bias with their data\n\n    \n  \n  \n    \n      0:57:25\n    \n    \n    \n      Investigating whether being born in captivity is associated with different survival rates\n\n    \n  \n  \n    \n      1:00:10\n    \n    \n    \n      Summary of screencast"
-  },
-  {
     "objectID": "content_pages/european-energy.html",
     "href": "content_pages/european-energy.html",
     "title": "European Energy",
     "section": "",
-    "text": "Notable topics: Data manipulation, Country flags, Slope graph, Function creation\nRecorded on: 2020-08-04\nTimestamps by: Eric Fletcher\nView code"
+    "text": "Notable topics: Data manipulation, Country flags, Slope graph, Function creation\nRecorded on: 2020-08-03\nTimestamps by: Eric Fletcher\nView code"
   },
   {
     "objectID": "content_pages/european-energy.html#screencast",
@@ -515,7 +550,7 @@
     "href": "content_pages/french-train-delays.html",
     "title": "French Train Delays",
     "section": "",
-    "text": "Notable topics: Heat map\nRecorded on: 2019-02-26\nTimestamps by: Alex Cookson\nView code"
+    "text": "Notable topics: Heat map\nRecorded on: 2019-02-25\nTimestamps by: Alex Cookson\nView code"
   },
   {
     "objectID": "content_pages/french-train-delays.html#screencast",
@@ -532,32 +567,11 @@
     "text": "Timestamps\n\n  \n    \n      0:10:20\n    \n    fct_lump\n    \n      Boxplots of departure stations using fct_lump function\n\n    \n  \n  \n    \n      0:14:25\n    \n    \n    \n      Creating heat map of departure and arrival delays, then cleaning up a sparse heat map\n\n    \n  \n  \n    \n      0:15:30\n    \n    fct_reorderlength\n    \n      Using fct_reorder function and length function to reorder stations based on how frequently they appear\n\n    \n  \n  \n    \n      0:16:30\n    \n    fct_infreq\n    \n      Using fct_infreq to reorder based on infrequently-appearing stations (same as above, but without a trick needed)\n\n    \n  \n  \n    \n      0:17:45\n    \n    fct_lump\n    \n      Using fct_lump function to lump based on proportion instead of number of top categories desired\n\n    \n  \n  \n    \n      0:18:45\n    \n    scale_fill_gradient2\n    \n      Using scale_fill_gradient2 function to specify diverging colour scale\n\n    \n  \n  \n    \n      0:26:00\n    \n    \n    \n      Checking another person's take on the data, which is a heatmap over time\n\n    \n  \n  \n    \n      0:28:40\n    \n    sprintf\n    \n      Converting year and month (as digits) into date-class variable using sprintf function and padding month number with extra zero when necessary\n\n    \n  \n  \n    \n      0:34:50\n    \n    summarise_at\n    \n      Using summarise_at function to quickly sum multiple columns\n\n    \n  \n  \n    \n      0:39:35\n    \n    geom_tile\n    \n      Creating heatmap using geom_tile function for percentage of late trains by station over time\n\n    \n  \n  \n    \n      0:45:05\n    \n    fill\n    \n      Using fill function to fill in missing NA values with data from previous observations\n\n    \n  \n  \n    \n      0:50:35\n    \n    paste0\n    \n      Grouping multiple variables into a single category using paste0 function\n\n    \n  \n  \n    \n      0:51:40\n    \n    \n    \n      Grouping heatmap into International / National chunks with a weird hack\n\n    \n  \n  \n    \n      0:52:20\n    \n    \n    \n      Further separating International / National visually\n\n    \n  \n  \n    \n      0:53:30\n    \n    \n    \n      Less hacky way of separating International / National (compared to previous two rows)"
   },
   {
-    "objectID": "content_pages/Friends.html",
-    "href": "content_pages/Friends.html",
-    "title": "Friends",
-    "section": "",
-    "text": "Notable topics: Data Manipulation, Linear Modeling, Pairwise Correlation, Text Mining\nRecorded on: 2020-09-08\nTimestamps by: Eric Fletcher\nView code"
-  },
-  {
-    "objectID": "content_pages/Friends.html#screencast",
-    "href": "content_pages/Friends.html#screencast",
-    "title": "Friends",
-    "section": "Screencast",
-    "text": "Screencast"
-  },
-  {
-    "objectID": "content_pages/Friends.html#timestamps",
-    "href": "content_pages/Friends.html#timestamps",
-    "title": "Friends",
-    "section": "Timestamps",
-    "text": "Timestamps\n\n  \n    \n      0:7:30\n    \n    countdplyr\n    \n      Use dplyr package's count function to count the unique values of multiple variables.\n\n    \n  \n  \n    \n      0:9:35\n    \n    geom_colfct_reorderggplotforcats\n    \n      Use geom_col to show how many lines of dialogue there is for each character. Use fct_reorder to reorder the speaker factor levels by sorting along n.\n\n    \n  \n  \n    \n      0:12:07\n    \n    semi_joindplyr\n    \n      Use semi_join to join friends dataset with main_cast with by = \"speaker returning all rows from friends with a match in main_cast.\n\n    \n  \n  \n    \n      0:12:30\n    \n    uniteinner_joingluefct_reordertidyrglueforcats\n    \n      Use unite to create the episode_number variable which pastes together season and episode with sep = \".\".\nThen, use inner_join to combine above dataset with friends_info with by = c(\"season\", \"episode\").\nThen, use mutate and the glue package instead to combine { season }.{ episode } { title }.\nThen use fct_reorder(episode_title, season + .001 * episode)  to order it by season first then episode.\n\n    \n  \n  \n    \n      0:15:45\n    \n    geom_pointas.integergeom_textgeom_lineggplotbase\n    \n      Use geom_point to visualize episode_title and us_views_millions.\nUse as.integer to change episode_title to integer class.\nAdd labels to geom_point using geom_text with check_overlap = TRUE so text that overlaps previous text in the same layer will not be plotted.\n\n    \n  \n  \n    \n      0:19:95\n    \n    geom_pointas.integergeom_textgeom_lineggplotbase\n    \n      Run the above plot again using imdb_rating instead of us_views_millions\n\n    \n  \n  \n    \n      0:21:35\n    \n    semi_joingeom_boxplotcoord_flipfct_reordercompletefillscale_x_log10dplyrggplotforcatstidyrtidyr\n    \n      Ahead of modeling:\nUse geom_boxplot to visualize the distribution of speaking for main characters.\nUse the complete function with fill = list(n = 0) to replace existing explicit missing values in the data set.\nDemonstration of how to account for missing imdb_rating values using the fill function with .direction = \"downup\" to keep the imdb rating across the same title.\n\n    \n  \n  \n    \n      0:26:45\n    \n    semi_joinsummarizeadd_countgeom_boxplotgeom_smoothgeom_pointdplyrggplot\n    \n      Ahead of modeling:\nUse summarize with cor(log2(n), imdb_rating) to find the correlation between speaker and imdb rating -- the fact that the correlation is positive for all speakers gives David a suspicion that some episodes are longer than others because they're in 2 parts with higher ratings due to important moments. David addresses this confounding factor by including percentage of lines instead of number of lines.\nVisualize results with geom_boxplot, geom_point with geom_smooth.\n\n    \n  \n  \n    \n      0:34:05\n    \n    spreadacrosssemi_joinlmaovtidyrdplyrstats\n    \n      Use a linear model to predict imdb rating based on various variables.\n\n    \n  \n  \n    \n      0:42:00\n    \n    unnest_tokensanti_joinbind_log_oddssemi_joingeom_colscale_y_reorderedtidytexttidyloggplot\n    \n      Use the tidytext and tidylo packages to see what words are most common amongst characters, and whether they are said more times than would be expected by chance.\nUse geom_col to visualize the most overrepresented words per character according to log_odds_weighted.\n\n    \n  \n  \n    \n      0:54:15\n    \n    unitesemi_joinpairwise_corrwidyrtidyr\n    \n      Use the widyr package and pairwise correlation to determine which characters tend to appear in the same scences together?\nUse geom_col to visualize the correlation between characters.\n\n    \n  \n  \n    \n      1:00:25\n    \n    \n    \n      Summary of screencast."
-  },
-  {
     "objectID": "content_pages/gdpr-violations.html",
     "href": "content_pages/gdpr-violations.html",
     "title": "GDPR Violations",
     "section": "",
-    "text": "Notable topics: Data manipulation, Interactive dashboard with shinymetrics and tidymetrics\nRecorded on: 2020-04-21\nTimestamps by: Eric Fletcher\nView code"
+    "text": "Notable topics: Data manipulation, Interactive dashboard with shinymetrics and tidymetrics\nRecorded on: 2020-04-20\nTimestamps by: Eric Fletcher\nView code"
   },
   {
     "objectID": "content_pages/gdpr-violations.html#screencast",
@@ -578,7 +592,7 @@
     "href": "content_pages/global-crop-yields.html",
     "title": "Global Crop Yields",
     "section": "",
-    "text": "Notable topics: Interactive Shiny Dashboard\nRecorded on: 2020-09-01\nTimestamps by: Eric Fletcher\nView code"
+    "text": "Notable topics: Interactive Shiny Dashboard\nRecorded on: 2020-08-31\nTimestamps by: Eric Fletcher\nView code"
   },
   {
     "objectID": "content_pages/global-crop-yields.html#screencast",
@@ -599,7 +613,7 @@
     "href": "content_pages/government-spending-on-kids.html",
     "title": "Government Spending on Kids",
     "section": "",
-    "text": "Notable topics: Data Manipulation, Functions, Embracing, Reading in Many .csv Files, Pairwise Correlation\nRecorded on: 2020-09-15\nTimestamps by: Eric Fletcher\nView code"
+    "text": "Notable topics: Data Manipulation, Functions, Embracing, Reading in Many .csv Files, Pairwise Correlation\nRecorded on: 2020-09-14\nTimestamps by: Eric Fletcher\nView code"
   },
   {
     "objectID": "content_pages/government-spending-on-kids.html#screencast",
@@ -620,7 +634,7 @@
     "href": "content_pages/great-american-beer-festival.html",
     "title": "Great American Beer Festival",
     "section": "",
-    "text": "Notable topics: Log odds ratio, Logistic regression, TIE Fighter plot\nRecorded on: 2020-10-20\nTimestamps by: Eric Fletcher\nView code"
+    "text": "Notable topics: Log odds ratio, Logistic regression, TIE Fighter plot\nRecorded on: 2020-10-19\nTimestamps by: Eric Fletcher\nView code"
   },
   {
     "objectID": "content_pages/great-american-beer-festival.html#screencast",
@@ -641,7 +655,7 @@
     "href": "content_pages/hbcu-enrollment.html",
     "title": "HBCU Enrollment",
     "section": "",
-    "text": "Notable topics: Data Cleaning\nRecorded on: 2021-02-02\nTimestamps by: Eric Fletcher\nView code"
+    "text": "Notable topics: Data Cleaning\nRecorded on: 2021-02-01\nTimestamps by: Eric Fletcher\nView code"
   },
   {
     "objectID": "content_pages/hbcu-enrollment.html#screencast",
@@ -662,7 +676,7 @@
     "href": "content_pages/himalayan-climbers.html",
     "title": "Himalayan Climbers",
     "section": "",
-    "text": "Notable topics: Data Manipulation, Empirical Bayes, Logistic Regression Model\nRecorded on: 2020-09-22\nTimestamps by: Eric Fletcher\nView code"
+    "text": "Notable topics: Data Manipulation, Empirical Bayes, Logistic Regression Model\nRecorded on: 2020-09-21\nTimestamps by: Eric Fletcher\nView code"
   },
   {
     "objectID": "content_pages/himalayan-climbers.html#screencast",
@@ -683,7 +697,7 @@
     "href": "content_pages/historical-phones.html",
     "title": "Historical Phones",
     "section": "",
-    "text": "Notable topics: Joining tables, Animated world choropleth, Adding IQR to geom_line, World development indicators package\nRecorded on: 2020-11-10\nTimestamps by: Eric Fletcher\nView code"
+    "text": "Notable topics: Joining tables, Animated world choropleth, Adding IQR to geom_line, World development indicators package\nRecorded on: 2020-11-09\nTimestamps by: Eric Fletcher\nView code"
   },
   {
     "objectID": "content_pages/historical-phones.html#screencast",
@@ -704,7 +718,7 @@
     "href": "content_pages/horror-movie-profits.html",
     "title": "Horror Movie Profits",
     "section": "",
-    "text": "Notable topics: Graphing for EDA (Exploratory Data Analysis)\nRecorded on: 2018-10-23\nTimestamps by: Alex Cookson\nView code"
+    "text": "Notable topics: Graphing for EDA (Exploratory Data Analysis)\nRecorded on: 2018-10-22\nTimestamps by: Alex Cookson\nView code"
   },
   {
     "objectID": "content_pages/horror-movie-profits.html#screencast",
@@ -725,7 +739,7 @@
     "href": "content_pages/horror-movies.html",
     "title": "Horror Movies",
     "section": "",
-    "text": "Notable topics: ANOVA, Text mining (tidytext package), LASSO regression (glmnet package)\nRecorded on: 2019-10-22\nTimestamps by: Alex Cookson\nView code"
+    "text": "Notable topics: ANOVA, Text mining (tidytext package), LASSO regression (glmnet package)\nRecorded on: 2019-10-21\nTimestamps by: Alex Cookson\nView code"
   },
   {
     "objectID": "content_pages/horror-movies.html#screencast",
@@ -746,7 +760,7 @@
     "href": "content_pages/ikea-furniture.html",
     "title": "IKEA Furniture",
     "section": "",
-    "text": "Notable topics: Linear model, Coefficient/TIE fighter plot, Boxplots, Log scale discussion, Calculating volume\nRecorded on: 2020-11-03\nTimestamps by: Eric Fletcher\nView code"
+    "text": "Notable topics: Linear model, Coefficient/TIE fighter plot, Boxplots, Log scale discussion, Calculating volume\nRecorded on: 2020-11-02\nTimestamps by: Eric Fletcher\nView code"
   },
   {
     "objectID": "content_pages/ikea-furniture.html#screencast",
@@ -767,7 +781,7 @@
     "href": "content_pages/kenya-census.html",
     "title": "Kenya Census",
     "section": "",
-    "text": "Notable topics: Heatmap, Joining Datasets, ShapeFile, Choropleth Map, rKenyaCensus\nRecorded on: 2021-01-19\nTimestamps by: Eric Fletcher\nView code"
+    "text": "Notable topics: Heatmap, Joining Datasets, ShapeFile, Choropleth Map, rKenyaCensus\nRecorded on: 2021-01-18\nTimestamps by: Eric Fletcher\nView code"
   },
   {
     "objectID": "content_pages/kenya-census.html#screencast",
@@ -788,7 +802,7 @@
     "href": "content_pages/malaria-incidence.html",
     "title": "Malaria Incidence",
     "section": "",
-    "text": "Notable topics: Map visualization\nRecorded on: 2018-11-12\nTimestamps by: Alex Cookson\nView code"
+    "text": "Notable topics: Map visualization\nRecorded on: 2018-11-11\nTimestamps by: Alex Cookson\nView code"
   },
   {
     "objectID": "content_pages/malaria-incidence.html#screencast",
@@ -809,7 +823,7 @@
     "href": "content_pages/maryland-bridges.html",
     "title": "Maryland Bridges",
     "section": "",
-    "text": "Notable topics: Data manipulation, Map visualization\nRecorded on: 2018-11-27\nTimestamps by: Alex Cookson\nView code"
+    "text": "Notable topics: Data manipulation, Map visualization\nRecorded on: 2018-11-26\nTimestamps by: Alex Cookson\nView code"
   },
   {
     "objectID": "content_pages/maryland-bridges.html#screencast",
@@ -830,7 +844,7 @@
     "href": "content_pages/media-franchise-revenue.html",
     "title": "Media Franchise Revenue",
     "section": "",
-    "text": "Notable topics: Data manipulation (especially re-ordering factors)\nRecorded on: 2019-06-22\nTimestamps by: Alex Cookson\nView code"
+    "text": "Notable topics: Data manipulation (especially re-ordering factors)\nRecorded on: 2019-06-21\nTimestamps by: Alex Cookson\nView code"
   },
   {
     "objectID": "content_pages/media-franchise-revenue.html#screencast",
@@ -851,7 +865,7 @@
     "href": "content_pages/medium-articles.html",
     "title": "Medium Articles",
     "section": "",
-    "text": "Notable topics: Text mining (tidytext package)\nRecorded on: 2018-12-04\nTimestamps by: Alex Cookson\nView code"
+    "text": "Notable topics: Text mining (tidytext package)\nRecorded on: 2018-12-03\nTimestamps by: Alex Cookson\nView code"
   },
   {
     "objectID": "content_pages/medium-articles.html#screencast",
@@ -872,7 +886,7 @@
     "href": "content_pages/ncaa-womens-basketball.html",
     "title": "NCAA Women’s Basketball",
     "section": "",
-    "text": "Notable topics: Heatmap, Correlation analysis\nRecorded on: 2020-10-06\nTimestamps by: Eric Fletcher\nView code"
+    "text": "Notable topics: Heatmap, Correlation analysis\nRecorded on: 2020-10-05\nTimestamps by: Eric Fletcher\nView code"
   },
   {
     "objectID": "content_pages/ncaa-womens-basketball.html#screencast",
@@ -893,7 +907,7 @@
     "href": "content_pages/ninja-warrior.html",
     "title": "Ninja Warrior",
     "section": "",
-    "text": "Notable topics: Log-odds with tidylo package, Graphing with ggplot2\nRecorded on: 2020-12-15\nTimestamps by: Alex Cookson\nView code"
+    "text": "Notable topics: Log-odds with tidylo package, Graphing with ggplot2\nRecorded on: 2020-12-14\nTimestamps by: Alex Cookson\nView code"
   },
   {
     "objectID": "content_pages/ninja-warrior.html#screencast",
@@ -914,7 +928,7 @@
     "href": "content_pages/nobel-prize-winners.html",
     "title": "Nobel Prize Winners",
     "section": "",
-    "text": "Notable topics: Data manipulation, Graphing for EDA (Exploratory Data Analysis)\nRecorded on: 2019-05-24\nTimestamps by: Alex Cookson\nView code"
+    "text": "Notable topics: Data manipulation, Graphing for EDA (Exploratory Data Analysis)\nRecorded on: 2019-05-23\nTimestamps by: Alex Cookson\nView code"
   },
   {
     "objectID": "content_pages/nobel-prize-winners.html#screencast",
@@ -935,7 +949,7 @@
     "href": "content_pages/nyc-restaurant-inspections.html",
     "title": "NYC Restaurant Inspections",
     "section": "",
-    "text": "Notable topics: Multiple t-test models (broom package), Principal Component Analysis (PCA)\nRecorded on: 2018-12-11\nTimestamps by: Alex Cookson\nView code"
+    "text": "Notable topics: Multiple t-test models (broom package), Principal Component Analysis (PCA)\nRecorded on: 2018-12-10\nTimestamps by: Alex Cookson\nView code"
   },
   {
     "objectID": "content_pages/nyc-restaurant-inspections.html#screencast",
@@ -956,7 +970,7 @@
     "href": "content_pages/nyc-squirrel-census.html",
     "title": "NYC Squirrel Census",
     "section": "",
-    "text": "Notable topics: Map visualization (ggmap package)\nRecorded on: 2019-11-01\nTimestamps by: Alex Cookson\nView code"
+    "text": "Notable topics: Map visualization (ggmap package)\nRecorded on: 2019-10-31\nTimestamps by: Alex Cookson\nView code"
   },
   {
     "objectID": "content_pages/nyc-squirrel-census.html#screencast",
@@ -977,7 +991,7 @@
     "href": "content_pages/palmer-penguins.html",
     "title": "Palmer Penguins",
     "section": "",
-    "text": "Notable topics: Modeling (logistic regression, k-nearest neighbors, decision tree, multiclass logistic regression) with cross validated accuracy\nRecorded on: 2020-07-28\nTimestamps by: Eric Fletcher\nView code"
+    "text": "Notable topics: Modeling (logistic regression, k-nearest neighbors, decision tree, multiclass logistic regression) with cross validated accuracy\nRecorded on: 2020-07-27\nTimestamps by: Eric Fletcher\nView code"
   },
   {
     "objectID": "content_pages/palmer-penguins.html#screencast",
@@ -998,7 +1012,7 @@
     "href": "content_pages/pizza-ratings.html",
     "title": "Pizza Ratings",
     "section": "",
-    "text": "Notable topics: NA\nRecorded on: 2019-10-01\nTimestamps by: Alex Cookson\nView code"
+    "text": "Notable topics: NA\nRecorded on: 2019-09-30\nTimestamps by: Alex Cookson\nView code"
   },
   {
     "objectID": "content_pages/pizza-ratings.html#screencast",
@@ -1019,7 +1033,7 @@
     "href": "content_pages/plants-in-danger.html",
     "title": "Plants in Danger",
     "section": "",
-    "text": "Notable topics: Data manipulation, Web scraping (rvest package) and SelectorGadget\nRecorded on: 2020-08-18\nTimestamps by: Eric Fletcher\nView code"
+    "text": "Notable topics: Data manipulation, Web scraping (rvest package) and SelectorGadget\nRecorded on: 2020-08-17\nTimestamps by: Eric Fletcher\nView code"
   },
   {
     "objectID": "content_pages/plants-in-danger.html#screencast",
@@ -1040,7 +1054,7 @@
     "href": "content_pages/plastic-waste.html",
     "title": "Plastic Waste",
     "section": "",
-    "text": "Notable topics: Map visualization (especially choropleth)\nRecorded on: 2019-05-27\nTimestamps by: Alex Cookson\nView code"
+    "text": "Notable topics: Map visualization (especially choropleth)\nRecorded on: 2019-05-26\nTimestamps by: Alex Cookson\nView code"
   },
   {
     "objectID": "content_pages/plastic-waste.html#screencast",
@@ -1061,7 +1075,7 @@
     "href": "content_pages/r-downloads.html",
     "title": "R Downloads",
     "section": "",
-    "text": "Notable topics: Data manipulation (especially time series)\nRecorded on: 2018-10-30\nTimestamps by: Alex Cookson\nView code"
+    "text": "Notable topics: Data manipulation (especially time series)\nRecorded on: 2018-10-29\nTimestamps by: Alex Cookson\nView code"
   },
   {
     "objectID": "content_pages/r-downloads.html#screencast",
@@ -1082,7 +1096,7 @@
     "href": "content_pages/r-trick-creating-pascals-triangle-with-accumulate.html",
     "title": "R trick: Creating Pascal’s Triangle with accumulate()",
     "section": "",
-    "text": "Notable topics: accumulate() function for recursive formulas\nRecorded on: 2020-03-29\nTimestamps by: Alex Cookson\nView code"
+    "text": "Notable topics: accumulate() function for recursive formulas\nRecorded on: 2020-03-28\nTimestamps by: Alex Cookson\nView code"
   },
   {
     "objectID": "content_pages/r-trick-creating-pascals-triangle-with-accumulate.html#screencast",
@@ -1103,7 +1117,7 @@
     "href": "content_pages/ramen-reviews.html",
     "title": "Ramen Reviews",
     "section": "",
-    "text": "Notable topics: Web scraping (rvest package)\nRecorded on: 2019-06-04\nTimestamps by: Alex Cookson\nView code"
+    "text": "Notable topics: Web scraping (rvest package)\nRecorded on: 2019-06-03\nTimestamps by: Alex Cookson\nView code"
   },
   {
     "objectID": "content_pages/ramen-reviews.html#screencast",
@@ -1124,7 +1138,7 @@
     "href": "content_pages/riddler-monte-carlo-simulation.html",
     "title": "Riddler: Monte Carlo Simulation",
     "section": "",
-    "text": "Notable topics: Simulation\nRecorded on: 2018-12-04\nTimestamps by: Alex Cookson\nView code"
+    "text": "Notable topics: Simulation\nRecorded on: 2018-12-03\nTimestamps by: Alex Cookson\nView code"
   },
   {
     "objectID": "content_pages/riddler-monte-carlo-simulation.html#screencast",
@@ -1145,7 +1159,7 @@
     "href": "content_pages/riddler-simulating-a-branching-process.html",
     "title": "Riddler: Simulating a Branching Process",
     "section": "",
-    "text": "Notable topics: Simulation, Probability distributions (Exponential and Geometric)\nRecorded on: 2020-04-13\nTimestamps by: Alex Cookson\nView code"
+    "text": "Notable topics: Simulation, Probability distributions (Exponential and Geometric)\nRecorded on: 2020-04-12\nTimestamps by: Alex Cookson\nView code"
   },
   {
     "objectID": "content_pages/riddler-simulating-a-branching-process.html#screencast",
@@ -1166,7 +1180,7 @@
     "href": "content_pages/riddler-simulating-a-circular-random-walk.html",
     "title": "Riddler: Simulating a Circular Random Walk",
     "section": "",
-    "text": "Notable topics: Simulation\nRecorded on: 2020-11-23\nTimestamps by: Alex Cookson\nView code"
+    "text": "Notable topics: Simulation\nRecorded on: 2020-11-22\nTimestamps by: Alex Cookson\nView code"
   },
   {
     "objectID": "content_pages/riddler-simulating-a-circular-random-walk.html#screencast",
@@ -1187,7 +1201,7 @@
     "href": "content_pages/riddler-simulating-a-non-increasing-sequence.html",
     "title": "Riddler: Simulating a Non-increasing Sequence",
     "section": "",
-    "text": "Notable topics: Simulation\nRecorded on: 2020-04-06\nTimestamps by: Alex Cookson\nView code"
+    "text": "Notable topics: Simulation\nRecorded on: 2020-04-05\nTimestamps by: Alex Cookson\nView code"
   },
   {
     "objectID": "content_pages/riddler-simulating-a-non-increasing-sequence.html#screencast",
@@ -1208,7 +1222,7 @@
     "href": "content_pages/riddler-simulating-a-week-of-rain.html",
     "title": "Riddler: Simulating a Week of Rain",
     "section": "",
-    "text": "Notable topics: Simulation\nRecorded on: 2018-12-12\nTimestamps by: Alex Cookson\nView code"
+    "text": "Notable topics: Simulation\nRecorded on: 2018-12-11\nTimestamps by: Alex Cookson\nView code"
   },
   {
     "objectID": "content_pages/riddler-simulating-a-week-of-rain.html#screencast",
@@ -1229,7 +1243,7 @@
     "href": "content_pages/riddler-simulating-and-optimizing-coin-flipping.html",
     "title": "Riddler: Simulating and Optimizing Coin Flipping",
     "section": "",
-    "text": "Notable topics: Simulation\nRecorded on: 2020-05-03\nTimestamps by: Alex Cookson\nView code"
+    "text": "Notable topics: Simulation\nRecorded on: 2020-05-02\nTimestamps by: Alex Cookson\nView code"
   },
   {
     "objectID": "content_pages/riddler-simulating-and-optimizing-coin-flipping.html#screencast",
@@ -1250,7 +1264,7 @@
     "href": "content_pages/riddler-simulating-replacing-die-sides.html",
     "title": "Riddler: Simulating Replacing Die Sides",
     "section": "",
-    "text": "Notable topics: accumulate() function for simulation\nRecorded on: 2020-03-30\nTimestamps by: Alex Cookson\nView code"
+    "text": "Notable topics: accumulate() function for simulation\nRecorded on: 2020-03-29\nTimestamps by: Alex Cookson\nView code"
   },
   {
     "objectID": "content_pages/riddler-simulating-replacing-die-sides.html#screencast",
@@ -1271,7 +1285,7 @@
     "href": "content_pages/riddler-spelling-bee-honeycomb.html",
     "title": "Riddler: Spelling Bee Honeycomb",
     "section": "",
-    "text": "Notable topics: Simulation with matrixes\nRecorded on: 2020-01-06\nTimestamps by: Alex Cookson\nView code"
+    "text": "Notable topics: Simulation with matrixes\nRecorded on: 2020-01-05\nTimestamps by: Alex Cookson\nView code"
   },
   {
     "objectID": "content_pages/riddler-spelling-bee-honeycomb.html#screencast",
@@ -1292,7 +1306,7 @@
     "href": "content_pages/seattle-bike-counts.html",
     "title": "Seattle Bike Counts",
     "section": "",
-    "text": "Notable topics: NA\nRecorded on: 2019-04-05\nTimestamps by: Alex Cookson\nView code"
+    "text": "Notable topics: NA\nRecorded on: 2019-04-04\nTimestamps by: Alex Cookson\nView code"
   },
   {
     "objectID": "content_pages/seattle-bike-counts.html#screencast",
@@ -1313,7 +1327,7 @@
     "href": "content_pages/seattle-pet-names.html",
     "title": "Seattle Pet Names",
     "section": "",
-    "text": "Notable topics: Hypergeometric hypothesis testing, Adjusting for multiple hypothesis testing\nRecorded on: 2019-03-16\nTimestamps by: Alex Cookson\nView code"
+    "text": "Notable topics: Hypergeometric hypothesis testing, Adjusting for multiple hypothesis testing\nRecorded on: 2019-03-15\nTimestamps by: Alex Cookson\nView code"
   },
   {
     "objectID": "content_pages/seattle-pet-names.html#screencast",
@@ -1334,7 +1348,7 @@
     "href": "content_pages/simpsons-guest-stars.html",
     "title": "Simpsons Guest Stars",
     "section": "",
-    "text": "Notable topics: Text mining (tidytext package)\nRecorded on: 2019-08-30\nTimestamps by: Alex Cookson\nView code"
+    "text": "Notable topics: Text mining (tidytext package)\nRecorded on: 2019-08-29\nTimestamps by: Alex Cookson\nView code"
   },
   {
     "objectID": "content_pages/simpsons-guest-stars.html#screencast",
@@ -1355,7 +1369,7 @@
     "href": "content_pages/space-launches.html",
     "title": "Space Launches",
     "section": "",
-    "text": "Notable topics: Graphing for EDA (Exploratory Data Analysis)\nRecorded on: 2019-01-15\nTimestamps by: Alex Cookson\nView code"
+    "text": "Notable topics: Graphing for EDA (Exploratory Data Analysis)\nRecorded on: 2019-01-14\nTimestamps by: Alex Cookson\nView code"
   },
   {
     "objectID": "content_pages/space-launches.html#screencast",
@@ -1376,7 +1390,7 @@
     "href": "content_pages/student-teacher-ratios.html",
     "title": "Student-Teacher Ratios",
     "section": "",
-    "text": "Notable topics: WDI package (World Development Indicators)\nRecorded on: 2019-05-10\nTimestamps by: Alex Cookson\nView code"
+    "text": "Notable topics: WDI package (World Development Indicators)\nRecorded on: 2019-05-09\nTimestamps by: Alex Cookson\nView code"
   },
   {
     "objectID": "content_pages/student-teacher-ratios.html#screencast",
@@ -1397,7 +1411,7 @@
     "href": "content_pages/tennis-tournaments.html",
     "title": "Tennis Tournaments",
     "section": "",
-    "text": "Notable topics: NA\nRecorded on: 2019-04-09\nTimestamps by: Alex Cookson\nView code"
+    "text": "Notable topics: NA\nRecorded on: 2019-04-08\nTimestamps by: Alex Cookson\nView code"
   },
   {
     "objectID": "content_pages/tennis-tournaments.html#screencast",
@@ -1418,7 +1432,7 @@
     "href": "content_pages/thanksgiving-dinner.html",
     "title": "Thanksgiving Dinner",
     "section": "",
-    "text": "Notable topics: Survey data, Network graphing\nRecorded on: 2018-11-21\nTimestamps by: Alex Cookson\nView code"
+    "text": "Notable topics: Survey data, Network graphing\nRecorded on: 2018-11-20\nTimestamps by: Alex Cookson\nView code"
   },
   {
     "objectID": "content_pages/thanksgiving-dinner.html#screencast",
@@ -1439,7 +1453,7 @@
     "href": "content_pages/the-office.html",
     "title": "The Office",
     "section": "",
-    "text": "Notable topics: Text mining (tidytext package), LASSO regression (glmnet package)\nRecorded on: 2020-03-16\nTimestamps by: Alex Cookson\nView code"
+    "text": "Notable topics: Text mining (tidytext package), LASSO regression (glmnet package)\nRecorded on: 2020-03-15\nTimestamps by: Alex Cookson\nView code"
   },
   {
     "objectID": "content_pages/the-office.html#screencast",
@@ -1460,7 +1474,7 @@
     "href": "content_pages/tidy-tuesday-tweets.html",
     "title": "TidyTuesday Tweets",
     "section": "",
-    "text": "Notable topics: Text mining (tidytext package)\nRecorded on: 2019-01-07\nTimestamps by: Alex Cookson\nView code"
+    "text": "Notable topics: Text mining (tidytext package)\nRecorded on: 2019-01-06\nTimestamps by: Alex Cookson\nView code"
   },
   {
     "objectID": "content_pages/tidy-tuesday-tweets.html#screencast",
@@ -1481,7 +1495,7 @@
     "href": "content_pages/tour-de-france.html",
     "title": "Tour de France",
     "section": "",
-    "text": "Notable topics: Survival analysis, Animated bar graph (gganimate package)\nRecorded on: 2020-04-07\nTimestamps by: Alex Cookson\nView code"
+    "text": "Notable topics: Survival analysis, Animated bar graph (gganimate package)\nRecorded on: 2020-04-06\nTimestamps by: Alex Cookson\nView code"
   },
   {
     "objectID": "content_pages/tour-de-france.html#screencast",
@@ -1502,7 +1516,7 @@
     "href": "content_pages/transit-costs.html",
     "title": "Transit Costs",
     "section": "",
-    "text": "Notable topics: EDA (Exploratory Data Analysis) with boxplots, interactive Shiny dashboard\nRecorded on: 2021-01-05\nTimestamps by: Alex Cookson\nView code"
+    "text": "Notable topics: EDA (Exploratory Data Analysis) with boxplots, interactive Shiny dashboard\nRecorded on: 2021-01-04\nTimestamps by: Alex Cookson\nView code"
   },
   {
     "objectID": "content_pages/transit-costs.html#screencast",
@@ -1523,7 +1537,7 @@
     "href": "content_pages/tv-golden-age.html",
     "title": "TV Golden Age",
     "section": "",
-    "text": "Notable topics: Data manipulation, Logistic regression\nRecorded on: 2019-01-09\nTimestamps by: Alex Cookson\nView code"
+    "text": "Notable topics: Data manipulation, Logistic regression\nRecorded on: 2019-01-08\nTimestamps by: Alex Cookson\nView code"
   },
   {
     "objectID": "content_pages/tv-golden-age.html#screencast",
@@ -1544,7 +1558,7 @@
     "href": "content_pages/us-dairy-consumption.html",
     "title": "US Dairy Consumption",
     "section": "",
-    "text": "Notable topics: Time series analysis, Forecasting (sweep package)\nRecorded on: 2019-01-29\nTimestamps by: Alex Cookson\nView code"
+    "text": "Notable topics: Time series analysis, Forecasting (sweep package)\nRecorded on: 2019-01-28\nTimestamps by: Alex Cookson\nView code"
   },
   {
     "objectID": "content_pages/us-dairy-consumption.html#screencast",
@@ -1565,7 +1579,7 @@
     "href": "content_pages/us-incarceration.html",
     "title": "US Incarceration",
     "section": "",
-    "text": "Notable topics: Animated map (gganimate package), Dealing with missing data\nRecorded on: 2019-01-25\nTimestamps by: Alex Cookson\nView code"
+    "text": "Notable topics: Animated map (gganimate package), Dealing with missing data\nRecorded on: 2019-01-24\nTimestamps by: Alex Cookson\nView code"
   },
   {
     "objectID": "content_pages/us-incarceration.html#screencast",
@@ -1586,7 +1600,7 @@
     "href": "content_pages/us-ph-ds.html",
     "title": "US PhDs",
     "section": "",
-    "text": "Notable topics: Data cleaning (getting messy data into tidy format)\nRecorded on: 2019-02-22\nTimestamps by: Alex Cookson\nView code"
+    "text": "Notable topics: Data cleaning (getting messy data into tidy format)\nRecorded on: 2019-02-21\nTimestamps by: Alex Cookson\nView code"
   },
   {
     "objectID": "content_pages/us-ph-ds.html#screencast",
@@ -1607,7 +1621,7 @@
     "href": "content_pages/us-wind-turbines.html",
     "title": "US Wind Turbines",
     "section": "",
-    "text": "Notable topics: Animated map (gganimate package)\nRecorded on: 2018-11-06\nTimestamps by: Alex Cookson\nView code"
+    "text": "Notable topics: Animated map (gganimate package)\nRecorded on: 2018-11-05\nTimestamps by: Alex Cookson\nView code"
   },
   {
     "objectID": "content_pages/us-wind-turbines.html#screencast",
@@ -1628,7 +1642,7 @@
     "href": "content_pages/volcano-eruptions.html",
     "title": "Volcano Eruptions",
     "section": "",
-    "text": "Notable topics: Static map with ggplot2, Interactive map with leaflet, Animated map with gganimate\nRecorded on: 2020-05-12\nTimestamps by: Eric Fletcher\nView code"
+    "text": "Notable topics: Static map with ggplot2, Interactive map with leaflet, Animated map with gganimate\nRecorded on: 2020-05-11\nTimestamps by: Eric Fletcher\nView code"
   },
   {
     "objectID": "content_pages/volcano-eruptions.html#screencast",
@@ -1649,7 +1663,7 @@
     "href": "content_pages/wine-ratings.html",
     "title": "Wine Ratings",
     "section": "",
-    "text": "Notable topics: Text mining (tidytext package), LASSO regression (glmnet package)\nRecorded on: 2019-05-31\nTimestamps by: Alex Cookson\nView code"
+    "text": "Notable topics: Text mining (tidytext package), LASSO regression (glmnet package)\nRecorded on: 2019-05-30\nTimestamps by: Alex Cookson\nView code"
   },
   {
     "objectID": "content_pages/wine-ratings.html#screencast",
@@ -1670,7 +1684,7 @@
     "href": "content_pages/women-in-the-workplace.html",
     "title": "Women in the Workplace",
     "section": "",
-    "text": "Notable topics: Interactive scatterplot (plotly and shiny packages)\nRecorded on: 2019-03-05\nTimestamps by: Alex Cookson\nView code"
+    "text": "Notable topics: Interactive scatterplot (plotly and shiny packages)\nRecorded on: 2019-03-04\nTimestamps by: Alex Cookson\nView code"
   },
   {
     "objectID": "content_pages/women-in-the-workplace.html#screencast",
@@ -1691,7 +1705,7 @@
     "href": "content_pages/womens-world-cup.html",
     "title": "Women’s World Cup",
     "section": "",
-    "text": "Notable topics: NA\nRecorded on: 2019-07-22\nTimestamps by: Alex Cookson\nView code"
+    "text": "Notable topics: NA\nRecorded on: 2019-07-21\nTimestamps by: Alex Cookson\nView code"
   },
   {
     "objectID": "content_pages/womens-world-cup.html#screencast",
@@ -1712,7 +1726,7 @@
     "href": "content_pages/x-men-comics.html",
     "title": "X-Men Comics",
     "section": "",
-    "text": "Notable topics: Data manipulation, Lollipop graph, Grouping using floor division\nRecorded on: 2020-06-30\nTimestamps by: Eric Fletcher\nView code"
+    "text": "Notable topics: Data manipulation, Lollipop graph, Grouping using floor division\nRecorded on: 2020-06-29\nTimestamps by: Eric Fletcher\nView code"
   },
   {
     "objectID": "content_pages/x-men-comics.html#screencast",
@@ -1727,20 +1741,6 @@
     "title": "X-Men Comics",
     "section": "Timestamps",
     "text": "Timestamps\n\n  \n    \n      0:07:25\n    \n    separatetidyr\n    \n      Using separate to separate the name from secrete identity in the character column\n\n    \n  \n  \n    \n      0:09:55\n    \n    summarizeacrossdplyr\n    \n      Using summarize and across to find the frequency of the action variables and find out how many issues each action was used for each character\n\n    \n  \n  \n    \n      0:13:25\n    \n    geom_colfct_reorderggplot2forcats\n    \n      Create a geom_col chart to visualize which character speaks in the most issues\n\n    \n  \n  \n    \n      0:18:35\n    \n    geom_pointgeom_textgeom_text_repelsummarizeggplot2ggrepeldplyr\n    \n      Create a geom_point chart to visualize each character’s average lines per issue in which the character is depicted\n\n    \n  \n  \n    \n      0:22:05\n    \n    geom_pointgeom_textgeom_text_repelsummarizeggplot2ggrepeldplyr\n    \n      Create a geom_point chart to visualize each character’s average thoughts per issue in which the character is depicted\n\n    \n  \n  \n    \n      0:23:10\n    \n    geom_pointgeom_textgeom_text_repelsummarizeggplot2ggrepeldplyr\n    \n      Create a geom_point chart to visualize character’s speech versus thought ratio per issue in which the character is depicted\n\n    \n  \n  \n    \n      0:30:05\n    \n    geom_pointpivot_longerfct_reorderggplot2tidyrforcats\n    \n      Create a geom_point to visualize character’s number of lines while in costume versus not in costume\n\n    \n  \n  \n    \n      0:34:30\n    \n    geom_pointgeom_textgeom_text_repelsummarizeggplot2ggrepeldplyr\n    \n      Create a geom_point chart to visualize the lines in costume versus lines out of costume ratio\n\n    \n  \n  \n    \n      0:39:20\n    \n    geom_pointfct_reordergeom_errorbarhggplot2forcats\n    \n      Create a lollipop graph using geom_point and geom_errorbarh to visualize the lines in costume versus lines out of costume ratio and their distance from 1.0 (1 to 1)\n\n    \n  \n  \n    \n      0:45:00\n    \n    summarizegroup_byarrangedplyr\n    \n      Use summarize to find the frequency of each location and the total number of unique issues where the location is used\n\n    \n  \n  \n    \n      0:46:00\n    \n    summarizefct_lumpdplyrforcats\n    \n      Use summarize and fct_lump to count how many issues each author has written while lumping together all authors except the most frequent\n\n    \n  \n  \n    \n      0:47:25\n    \n    summarizefct_lumpdplyrforcats\n    \n      Use summarize and fct_lump to see if the authors rates of passing the Bechdel test differ from one another\n\n    \n  \n  \n    \n      0:52:45\n    \n    geom_linesummarizedplyr\n    \n      Create a geom_line chart to visualize if the rates of passing the Bechdel test changed over time and floor division %/% to generate 20 observations per group\n\n    \n  \n  \n    \n      0:54:35\n    \n    geom_colsummarizefct_lumpfacet_wrapggplotdplyrforcats\n    \n      Create a geom_col to visualize the amount of lines each character has per issue over time giving context to Bechdel test passing rates\n\n    \n  \n  \n    \n      1:00:00\n    \n    \n    \n      Summary of screencast"
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "R Screencasts",
-    "section": "",
-    "text": "If you’re looking for real-world examples of live data analyses, you’ve come to the right place.\nDavid Robinson, a highly experienced Data Scientist, has recorded many screencasts where he analyses data that he’s never seen before. These are fantastic examples of how to think about approaching an analysis. You couldn’t ask for a better mentor!\nThe recordings were done as part of a weekly R programming challenge called TidyTuesday. All code is shared and all datasets are publicly available."
-  },
-  {
-    "objectID": "index.html#all-recordings",
-    "href": "index.html#all-recordings",
-    "title": "R Screencasts",
-    "section": "All recordings",
-    "text": "All recordings"
   },
   {
     "objectID": "resources.html",

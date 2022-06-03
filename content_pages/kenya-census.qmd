@@ -3,7 +3,7 @@ title: |
   Kenya Census
 description: |
   Heatmap, Joining Datasets, ShapeFile, Choropleth Map, rKenyaCensus
-date: 2021-01-19
+date: 2021-01-18
 date-format: long
 aliases:
   - "Kenya Census.html"
@@ -11,7 +11,7 @@ aliases:
 
 Notable topics: Heatmap, Joining Datasets, ShapeFile, Choropleth Map, rKenyaCensus
 
-Recorded on: 2021-01-19
+Recorded on: 2021-01-18
 
 Timestamps by: Eric Fletcher
 

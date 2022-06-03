@@ -3,7 +3,7 @@ title: |
   Ramen Reviews
 description: |
   Web scraping (rvest package)
-date: 2019-06-04
+date: 2019-06-03
 date-format: long
 aliases:
   - "Ramen Reviews.html"
@@ -11,7 +11,7 @@ aliases:
 
 Notable topics: Web scraping (rvest package)
 
-Recorded on: 2019-06-04
+Recorded on: 2019-06-03
 
 Timestamps by: Alex Cookson
 

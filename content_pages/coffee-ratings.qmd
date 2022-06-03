@@ -3,7 +3,7 @@ title: |
   Coffee Ratings
 description: |
   Ridgeline plot, Pairwise correlation, Network plot, Singular value decomposition, Linear model
-date: 2020-07-07
+date: 2020-07-06
 date-format: long
 aliases:
   - "Coffee Ratings.html"
@@ -11,7 +11,7 @@ aliases:
 
 Notable topics: Ridgeline plot, Pairwise correlation, Network plot, Singular value decomposition, Linear model
 
-Recorded on: 2020-07-07
+Recorded on: 2020-07-06
 
 Timestamps by: Eric Fletcher
 

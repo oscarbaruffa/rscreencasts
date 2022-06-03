@@ -3,7 +3,7 @@ title: |
   Seattle Pet Names
 description: |
   Hypergeometric hypothesis testing, Adjusting for multiple hypothesis testing
-date: 2019-03-16
+date: 2019-03-15
 date-format: long
 aliases:
   - "Seattle Pet Names.html"
@@ -11,7 +11,7 @@ aliases:
 
 Notable topics: Hypergeometric hypothesis testing, Adjusting for multiple hypothesis testing
 
-Recorded on: 2019-03-16
+Recorded on: 2019-03-15
 
 Timestamps by: Alex Cookson
 

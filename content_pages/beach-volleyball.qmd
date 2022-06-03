@@ -3,7 +3,7 @@ title: |
   Beach Volleyball
 description: |
   Data cleaning, Logistic regression
-date: 2020-05-19
+date: 2020-05-18
 date-format: long
 aliases:
   - "Beach Volleyball.html"
@@ -11,7 +11,7 @@ aliases:
 
 Notable topics: Data cleaning, Logistic regression
 
-Recorded on: 2020-05-19
+Recorded on: 2020-05-18
 
 Timestamps by: Eric Fletcher
 

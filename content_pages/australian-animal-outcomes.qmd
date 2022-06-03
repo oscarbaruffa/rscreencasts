@@ -3,7 +3,7 @@ title: |
   Australian Animal Outcomes
 description: |
   Data manipulation, Web Scraping (rvest package) and SelectorGadget, Animated Choropleth Map
-date: 2020-07-21
+date: 2020-07-20
 date-format: long
 aliases:
   - "Australian Animal Outcomes.html"
@@ -11,7 +11,7 @@ aliases:
 
 Notable topics: Data manipulation, Web Scraping (rvest package) and SelectorGadget, Animated Choropleth Map
 
-Recorded on: 2020-07-21
+Recorded on: 2020-07-20
 
 Timestamps by: Eric Fletcher
 

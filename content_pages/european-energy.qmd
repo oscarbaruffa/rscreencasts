@@ -3,7 +3,7 @@ title: |
   European Energy
 description: |
   Data manipulation, Country flags, Slope graph, Function creation
-date: 2020-08-04
+date: 2020-08-03
 date-format: long
 aliases:
   - "European Energy.html"
@@ -11,7 +11,7 @@ aliases:
 
 Notable topics: Data manipulation, Country flags, Slope graph, Function creation
 
-Recorded on: 2020-08-04
+Recorded on: 2020-08-03
 
 Timestamps by: Eric Fletcher
 

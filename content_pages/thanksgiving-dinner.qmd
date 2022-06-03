@@ -3,7 +3,7 @@ title: |
   Thanksgiving Dinner
 description: |
   Survey data, Network graphing
-date: 2018-11-21
+date: 2018-11-20
 date-format: long
 aliases:
   - "Thanksgiving Dinner.html"
@@ -11,7 +11,7 @@ aliases:
 
 Notable topics: Survey data, Network graphing
 
-Recorded on: 2018-11-21
+Recorded on: 2018-11-20
 
 Timestamps by: Alex Cookson
 

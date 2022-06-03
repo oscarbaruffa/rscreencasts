@@ -3,7 +3,7 @@ title: |
   Cocktails
 description: |
   Pairwise correlation, Network diagram, Principal component analysis (PCA)
-date: 2020-05-26
+date: 2020-05-25
 date-format: long
 aliases:
   - "Cocktails.html"
@@ -11,7 +11,7 @@ aliases:
 
 Notable topics: Pairwise correlation, Network diagram, Principal component analysis (PCA)
 
-Recorded on: 2020-05-26
+Recorded on: 2020-05-25
 
 Timestamps by: Eric Fletcher
 

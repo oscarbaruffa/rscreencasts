@@ -3,7 +3,7 @@ title: |
   Pizza Ratings
 description: |
   NA
-date: 2019-10-01
+date: 2019-09-30
 date-format: long
 aliases:
   - "Pizza Ratings.html"
@@ -11,7 +11,7 @@ aliases:
 
 Notable topics: NA
 
-Recorded on: 2019-10-01
+Recorded on: 2019-09-30
 
 Timestamps by: Alex Cookson
 

@@ -3,7 +3,7 @@ title: |
   GDPR Violations
 description: |
   Data manipulation, Interactive dashboard with `shinymetrics` and `tidymetrics`
-date: 2020-04-21
+date: 2020-04-20
 date-format: long
 aliases:
   - "GDPR Violations.html"
@@ -11,7 +11,7 @@ aliases:
 
 Notable topics: Data manipulation, Interactive dashboard with `shinymetrics` and `tidymetrics`
 
-Recorded on: 2020-04-21
+Recorded on: 2020-04-20
 
 Timestamps by: Eric Fletcher
 
