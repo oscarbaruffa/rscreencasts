@@ -80,6 +80,7 @@ Below you'll find a list of `r screencasts_count`  time-stamped screencasts.
 :::
 
 ```{r create_pages_function, include = FALSE}
+# this function turns the list of functions or packages into a series of badges
 badgify <- function(class) {
   class <- paste(class, switch(
     class,
@@ -93,6 +94,7 @@ badgify <- function(class) {
   }
 }
 
+# a base-R version of purrr::map_chr()
 map_chr <- function(.x, .f, ...) {
   vapply(.x, .f, character(1), ...)
 }
@@ -116,6 +118,8 @@ for (entry_screencast in row.names(screencasts_data)) {
       description = map_chr(description, commonmark::markdown_html)
     )
  
+  # whisker needs a list containing lists for each row
+  # the following line is a base-R version of purrr::transpose()
   screencast$timestamps <- apply(screencast$timestamps, 1, as.list)
 
   content_template <- paste(readLines("_content-template.md"), collapse = "\n")
