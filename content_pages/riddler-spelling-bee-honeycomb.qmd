@@ -5,8 +5,7 @@ description: |
   Simulation with matrixes
 date: 2020-01-05
 date-format: long
-aliases:
-  - "Riddler: Spelling Bee Honeycomb.html"
+
 ---
 
 Notable topics: Simulation with matrixes
