@@ -1,0 +1,224 @@
+---
+title: |
+  NCAA Women's Basketball
+description: |
+  Heatmap, Correlation analysis
+date: 2020-10-05
+date-format: long
+aliases:
+  - "NCAA Women's Basketball.html"
+---
+
+Notable topics: Heatmap, Correlation analysis
+
+Recorded on: 2020-10-05
+
+Timestamps by: Eric Fletcher
+
+[View code](https://github.com/dgrtwo/data-screencasts/blob/master/2020_10_06_ncaa_womens_basketball.Rmd)
+
+## Screencast
+
+<div id="yt-player" data-video-id="-RD8GNCNsCk"></div>
+
+## Timestamps
+
+```{=html}
+<div id="topics">
+  <div class="topic">
+    <h3 id="ts-900">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(900, this)">0:15:00</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">fct_relevel</span></div><div><span class="badge-packages badge bg-primary">forcats</span></div></div>
+    <div class="topic_description">
+      <p>Use <code>fct_relevel</code> from the <code>forcats</code> package to order the factor levels for the <code>tourney_finish</code> variable.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-995">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(995, this)">0:16:35</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">geom_tile</span><span class="badge-functions badge bg-info">scale_fill_gradient2</span></div><div><span class="badge-packages badge bg-primary">ggplot2</span></div></div>
+    <div class="topic_description">
+      <p>Use <code>geom_tile</code> from the <code>ggplot2</code> package to create a <code>heatmap</code> to show how far a particular seed ends up going in the tournament.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1235">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1235, this)">0:20:35</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">scale_y_continuous</span></div><div><span class="badge-packages badge bg-primary">ggplot2</span></div></div>
+    <div class="topic_description">
+      <p>Use <code>scale_y_continuous</code> from the <code>ggplot2</code> package with <code>breaks = seq(1, 16)</code> in order to include all 16 seeds.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1255">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1255, this)">0:20:55</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">geom_text</span><span class="badge-functions badge bg-info">scales</span></div><div><span class="badge-packages badge bg-primary">ggplot2</span></div></div>
+    <div class="topic_description">
+      <p>Use <code>geom_text</code> from the <code>ggplot2</code> package with <code>label = percent(pct)</code> to apply the percentage to each tile in the heatmap.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1300">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1300, this)">0:21:40</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">scale_x_discrete</span><span class="badge-functions badge bg-info">scale_y_continuous</span></div><div><span class="badge-packages badge bg-primary">ggplot2</span></div></div>
+    <div class="topic_description">
+      <p>Use <code>scale_x_discrete</code> and <code>scale_y_continuous</code> both with <code>expand = c(0, 0)</code> to remove the space between the x and y axis and the heatmap tiles. David calls this flattening.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1935">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1935, this)">0:32:15</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">scale_y_reverse</span></div><div><span class="badge-packages badge bg-primary">ggplot2</span></div></div>
+    <div class="topic_description">
+      <p>Use <code>scale_y_reverse</code> to flip the order of the y-axis from 1-16 to 16-1.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2085">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2085, this)">0:34:45</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">cor</span><span class="badge-functions badge bg-info">geom_line</span></div><div><span class="badge-packages badge bg-primary">stats</span><span class="badge-packages badge bg-primary">ggplot2</span></div></div>
+    <div class="topic_description">
+      <p>Use <code>cor</code> from the <code>stats</code> package to calculate the <code>correlation</code> between <code>seed</code> and <code>tourney_finish</code>. Then plotted to determine if there is a correlation over time.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2390">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2390, this)">0:39:50</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">geom_smooth</span></div><div><span class="badge-packages badge bg-primary">ggplot2</span></div></div>
+    <div class="topic_description">
+      <p>Use <code>geom_smooth</code> with <code>method = &quot;loess&quot;</code> to add a smoothing line with confidence bound to aid in seeing the trend between <code>seed</code> and <code>reg_percent</code>.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2530">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2530, this)">0:42:10</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">fct_lump</span></div><div><span class="badge-packages badge bg-primary">forcats</span></div></div>
+    <div class="topic_description">
+      <p>Use <code>fct_lump</code> from the <code>forcats</code> package to lump together all the conference except for the <code>n</code> most frequent.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2575">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2575, this)">0:42:55</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">geom_jitter</span></div><div><span class="badge-packages badge bg-primary">ggplot2</span></div></div>
+    <div class="topic_description">
+      <p>Use <code>geom_jitter</code> from the <code>ggplot2</code> package instead of <code>geom_boxplot</code> to avoid overplotting which makes it easier to visualize the points that make up the distribution of the <code>seed</code> variable.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2825">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2825, this)">0:47:05</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">geom_smooth</span></div><div><span class="badge-packages badge bg-primary">ggplot2</span></div></div>
+    <div class="topic_description">
+      <p>Use <code>geom_smooth</code> with <code>method = &quot;lm&quot;</code> to aid in seeing the trend between <code>reg_percent</code> and <code>tourney_w</code>.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-3260">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(3260, this)">0:54:20</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">.</span><span class="badge-functions badge bg-info">%>%</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Create a <code>dot pipe function</code> using <code>.</code> and <code>%&gt;%</code> to avoid duplicating summary statistics with <code>summarize</code>.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-3395">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(3395, this)">0:56:35</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">glue</span></div><div><span class="badge-packages badge bg-primary">glue</span></div></div>
+    <div class="topic_description">
+      <p>Use <code>glue</code> from the <code>glue</code> package to concatenate together <code>school</code> and <code>n_entries</code> on the <code>geo_col</code> y-axis.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-3590">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(3590, this)">0:59:50</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Summary of screencast.</p>
+
+    </div>
+  </div>
+</div>
+```
+     
+<script>
+// 2. This code loads the IFrame Player API code asynchronously.
+var tag = document.createElement("script");
+
+tag.src = "https://www.youtube.com/iframe_api";
+var firstScriptTag = document.getElementsByTagName("script")[0];
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+// 3. This function creates an <iframe> (and YouTube player)
+//    after the API code downloads.
+var videoId = document.getElementById("yt-player").dataset.videoId;
+var player;
+function onYouTubeIframeAPIReady() {
+  player = new YT.Player("yt-player", {
+    height: "486",
+    width: "864",
+    videoId: videoId,
+    playerVars: {
+      "playsinline": 1
+    },
+    events: {
+      onStateChange: function(event) {
+        if (event.data == YT.PlayerState.PLAYING) {
+          followTimestamps()
+        }
+      }
+    }
+  });
+}
+
+function playerSkipToTimestamp(seconds, tsElement) {
+  player.seekTo(seconds, true)
+  tsElement.scrollIntoView()
+  document.getElementById("screencast").scrollIntoView()
+}
+
+const timestamps = Array.from(document.querySelectorAll('.topic h3[id^="ts-"]'))
+  .map(el => el.id.replace('ts-', ''))
+
+function followTimestamps() {
+  if (player.getPlayerState() !== 1) {
+    return
+  }
+  const currentTime = `${Math.floor(player.getCurrentTime())}`
+  if (timestamps.includes(currentTime)) {
+    const el = document.getElementById(`ts-${currentTime}`)
+    if (el) {
+      el.scrollIntoView()
+      document.getElementById("screencast").scrollIntoView()
+    }
+  }
+  setTimeout(followTimestamps, 1000)
+}
+</script>

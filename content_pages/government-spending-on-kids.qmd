@@ -1,0 +1,190 @@
+---
+title: |
+  Government Spending on Kids
+description: |
+  Data Manipulation, Functions, Embracing, Reading in Many .csv Files, Pairwise Correlation
+date: 2020-09-14
+date-format: long
+aliases:
+  - "Government Spending on Kids.html"
+---
+
+Notable topics: Data Manipulation, Functions, Embracing, Reading in Many .csv Files, Pairwise Correlation
+
+Recorded on: 2020-09-14
+
+Timestamps by: Eric Fletcher
+
+[View code](https://github.com/dgrtwo/data-screencasts/blob/master/2020_09_15_government_spending_kids.Rmd)
+
+## Screencast
+
+<div id="yt-player" data-video-id="dHRPrVsnNwo"></div>
+
+## Timestamps
+
+```{=html}
+<div id="topics">
+  <div class="topic">
+    <h3 id="ts-375">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(375, this)">0:6:15</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">geom_line</span><span class="badge-functions badge bg-info">summarize</span><span class="badge-functions badge bg-info">unique</span><span class="badge-functions badge bg-info">sample</span><span class="badge-functions badge bg-info">facet_wrap</span><span class="badge-functions badge bg-info">fct_reorder</span><span class="badge-functions badge bg-info">theme_tufte</span><span class="badge-functions badge bg-info">geom_vline</span></div><div><span class="badge-packages badge bg-primary">ggplot</span><span class="badge-packages badge bg-primary">dplyr</span><span class="badge-packages badge bg-primary">base</span><span class="badge-packages badge bg-primary">ggthemes</span><span class="badge-packages badge bg-primary">forcats</span></div></div>
+    <div class="topic_description">
+      <p>Using <code>geom_line</code> and <code>summarize</code> to visualize education spending over time. First for all states. Then individual states. Then small groups of states using <code>%in%</code>. Then in random groups of size n using <code>%in%</code> and <code>sample</code> with <code>unique</code>. <code>fct_reorder</code> is used to reorder <code>state</code> factor levels by sorting along the <code>inf_adj</code> variable.</p>
+<p><code>geom_vline</code> used to add reference to the 2009 financial crisis.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-960">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(960, this)">0:16:00</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">geom_line</span><span class="badge-functions badge bg-info">summarize</span><span class="badge-functions badge bg-info">unique</span><span class="badge-functions badge bg-info">sample</span><span class="badge-functions badge bg-info">facet_wrap</span><span class="badge-functions badge bg-info">fct_reorder</span><span class="badge-functions badge bg-info">theme_tufte</span><span class="badge-functions badge bg-info">geom_vline</span><span class="badge-functions badge bg-info">geom_hline</span></div><div><span class="badge-packages badge bg-primary">ggplot</span><span class="badge-packages badge bg-primary">dplyr</span><span class="badge-packages badge bg-primary">base</span><span class="badge-packages badge bg-primary">ggthemes</span><span class="badge-packages badge bg-primary">forcats</span></div></div>
+    <div class="topic_description">
+      <p>Take the previous chart setting the <code>inf_adj_perchild</code> for the first year  <code>1997</code> to <code>100%</code> in order to show a measure of increase from <code>100%</code> as opposed to absolute value for change over time for each state relative to <code>1997</code>.  <code>geom_hline</code> used to add reference for the <code>100%</code> starting point. David ends up changing the starting point from <code>100%</code> to <code>0%</code></p>
+<p><code>fct_reorder</code> with <code>max</code> used to reorder the plots in descending order based on highest peak values.</p>
+<p>David briefly mentions the <a href="https://www.sharpsightlabs.com/blog/small-multiples-ggplot/#:~:text=The%20small%20multiples%20technique%20is,groups%20or%20comparing%20over%20time.&amp;text=In%20contrast%2C%20R&#x27;s%20GGPlot2%20package,multiples%20extraordinarily%20easy%20to%20create.">small multiples</a> approach to analyzing data.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1415">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1415, this)">0:23:35</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">function</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Create a <code>function</code> named <code>plot_changed_faceted</code> to make it easier to visualize the many other variables included in the dataset.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1645">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1645, this)">0:27:25</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">function</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Create a <code>function</code> named <code>plot_faceted</code> with a <code>{{ y_axis }}</code> <a href="https://dplyr.tidyverse.org/articles/programming.html">embracing</a> argument. Adding this function creates two stages: one for data transformation and another for plotting.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2225">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2225, this)">0:37:05</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">dir</span><span class="badge-functions badge bg-info">map_df</span><span class="badge-functions badge bg-info">function</span><span class="badge-functions badge bg-info">set_names</span><span class="badge-functions badge bg-info">pivot_longer</span><span class="badge-functions badge bg-info">separate</span><span class="badge-functions badge bg-info">extract</span></div><div><span class="badge-packages badge bg-primary">base</span><span class="badge-packages badge bg-primary">purr</span><span class="badge-packages badge bg-primary">tidyr</span></div></div>
+    <div class="topic_description">
+      <p>Use the <code>dir</code> function with <code>pattern</code> and <code>purrr</code> package's <code>map_df</code> function to read in many different <code>.csv</code> files with GDP values for each state.</p>
+<p>Troubleshooting <code>Can't combine &lt;character&gt; and &lt;double&gt; columns</code> error using <code>function</code> and <code>mutate</code> with <code>across</code> and <code>as.numeric</code>.</p>
+<p>Extract state name from filename using <code>extract</code> from <code>tidyr</code> and <code>regular expression</code>.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-3050">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(3050, this)">0:50:50</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">read_xlsx</span></div><div><span class="badge-packages badge bg-primary">readxl</span></div></div>
+    <div class="topic_description">
+      <p>Unsuccessful attempt at importing state population data via a not user friendly dataset from <code>census.gov</code> by skipping the first 3 rows of the Excel file.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-3262">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(3262, this)">0:54:22</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">geom_col</span><span class="badge-functions badge bg-info">fct_reorder</span><span class="badge-functions badge bg-info">scale_fill_discrete</span></div><div><span class="badge-packages badge bg-primary">ggplot</span><span class="badge-packages badge bg-primary">forcats</span></div></div>
+    <div class="topic_description">
+      <p>Use <code>geom_col</code> to see which states spend the most for each child for a single variable and multiple variables using <code>%in%</code>.</p>
+<p>Use <code>scale_fill_discrete</code> with <code>guide_legend(reverse = TRUE)</code> to change the ordering of the legend.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-3460">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(3460, this)">0:57:40</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">pairwise_corr</span><span class="badge-functions badge bg-info">fct_reorder</span></div><div><span class="badge-packages badge bg-primary">widyr</span></div></div>
+    <div class="topic_description">
+      <p>Use <code>geom_col</code> and 'pairwise_corr<code>to visualize the correlation between variables across states in 2016 using</code>pairwise correlation`.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-3722">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(3722, this)">1:02:02</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">pivot_wider</span><span class="badge-functions badge bg-info">geom_point</span><span class="badge-functions badge bg-info">geom_text</span></div><div><span class="badge-packages badge bg-primary">ggplot</span><span class="badge-packages badge bg-primary">tidyr</span></div></div>
+    <div class="topic_description">
+      <p>Use <code> geom_point</code> to plot <code>inf_adjust_perchild_PK12ed</code> versus <code>inf_adj_perchild_highered</code>. <code>geom_text</code> used to apply state names to each point.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-3900">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(3900, this)">1:05:00</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Summary of screencast.</p>
+
+    </div>
+  </div>
+</div>
+```
+     
+<script>
+// 2. This code loads the IFrame Player API code asynchronously.
+var tag = document.createElement("script");
+
+tag.src = "https://www.youtube.com/iframe_api";
+var firstScriptTag = document.getElementsByTagName("script")[0];
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+// 3. This function creates an <iframe> (and YouTube player)
+//    after the API code downloads.
+var videoId = document.getElementById("yt-player").dataset.videoId;
+var player;
+function onYouTubeIframeAPIReady() {
+  player = new YT.Player("yt-player", {
+    height: "486",
+    width: "864",
+    videoId: videoId,
+    playerVars: {
+      "playsinline": 1
+    },
+    events: {
+      onStateChange: function(event) {
+        if (event.data == YT.PlayerState.PLAYING) {
+          followTimestamps()
+        }
+      }
+    }
+  });
+}
+
+function playerSkipToTimestamp(seconds, tsElement) {
+  player.seekTo(seconds, true)
+  tsElement.scrollIntoView()
+  document.getElementById("screencast").scrollIntoView()
+}
+
+const timestamps = Array.from(document.querySelectorAll('.topic h3[id^="ts-"]'))
+  .map(el => el.id.replace('ts-', ''))
+
+function followTimestamps() {
+  if (player.getPlayerState() !== 1) {
+    return
+  }
+  const currentTime = `${Math.floor(player.getCurrentTime())}`
+  if (timestamps.includes(currentTime)) {
+    const el = document.getElementById(`ts-${currentTime}`)
+    if (el) {
+      el.scrollIntoView()
+      document.getElementById("screencast").scrollIntoView()
+    }
+  }
+  setTimeout(followTimestamps, 1000)
+}
+</script>

@@ -1,0 +1,234 @@
+---
+title: |
+  African-American Achievements
+description: |
+  `plotly` interactive timeline, Wikipedia web scraping
+date: 2020-06-08
+date-format: long
+aliases:
+  - "African-American Achievements.html"
+---
+
+Notable topics: `plotly` interactive timeline, Wikipedia web scraping
+
+Recorded on: 2020-06-08
+
+Timestamps by: Eric Fletcher
+
+[View code](https://github.com/dgrtwo/data-screencasts/blob/master/african-american-achievements.Rmd)
+
+## Screencast
+
+<div id="yt-player" data-video-id="-W-OopvhNPo"></div>
+
+## Timestamps
+
+```{=html}
+<div id="topics">
+  <div class="topic">
+    <h3 id="ts-500">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(500, this)">0:8:20</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">fct_reorder</span></div><div><span class="badge-packages badge bg-primary">forcats</span></div></div>
+    <div class="topic_description">
+      <p>Use <code> fct_reorder</code> from the <code>forcats</code> package to reorder the <code>category</code> factor levels by sorting along  <code>n</code>.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-695">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(695, this)">0:11:35</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">str_remove</span></div><div><span class="badge-packages badge bg-primary">stringr</span></div></div>
+    <div class="topic_description">
+      <p>Use <code>str_remove</code> from the <code>stringr</code> package to remove anything after a bracket or parenthesis from the <code>person</code> variable with the <code>regular expression</code> <code>&quot;[\\[\\(].*&quot;</code> David then discusses how web scraping may be a better option than parsing the strings.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-745">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(745, this)">0:12:25</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">str_trim</span></div><div><span class="badge-packages badge bg-primary">stringr</span></div></div>
+    <div class="topic_description">
+      <p>Use <code>str_trim</code> from the <code>stringr</code> package to remove the <code>whitespace</code> from the <code>person</code> variable. David then discusses how web scraping may be a better option than parsing the strings.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-950">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(950, this)">0:15:50</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">ggplotly</span></div><div><span class="badge-packages badge bg-primary">plotly</span></div></div>
+    <div class="topic_description">
+      <p>Create an interactive <code>plotly</code> timeline.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1100">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1100, this)">0:18:20</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">ylim</span></div><div><span class="badge-packages badge bg-primary">ggplot2</span></div></div>
+    <div class="topic_description">
+      <p>Use <code>ylim(c(-.1, 1))</code> to set scale limits moving the <code>geom_point</code> to the bottom of the graph.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1170">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1170, this)">0:19:30</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">paste0</span></div><div><span class="badge-packages badge bg-primary">base</span></div></div>
+    <div class="topic_description">
+      <p>Use <code>paste0</code> from <code>base R</code> to concatenate the <code>accomplishment</code> and <code>person</code> with <code>&quot;: &quot;</code> in between the two displayed in the timeline hover label.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1230">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1230, this)">0:20:30</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">aes</span></div><div><span class="badge-packages badge bg-primary">ggplot2</span></div></div>
+    <div class="topic_description">
+      <p>Set <code>y</code> to <code>category</code> in <code>ggplot</code> <code>aesthetics</code> to get 8 separate timelines on one plot, one for each category. Doing this allows David to remove the <code>ylim</code> mentioned above.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1345">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1345, this)">0:22:25</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">tooltip</span></div><div><span class="badge-packages badge bg-primary">plotly</span></div></div>
+    <div class="topic_description">
+      <p>Use the <code>plotly</code> <code>tooltip = text</code> parameter to get just a single line of text in the <code>plotly</code> hover labels.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1565">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1565, this)">0:26:05</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">glue</span></div><div><span class="badge-packages badge bg-primary">glue</span></div></div>
+    <div class="topic_description">
+      <p>Use <code>glue</code> from the <code>glue</code> package to reformat <code>text</code> with <code>\n</code> included so that the single line of text can now be broken up into 2 separate lines in the hover labels.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2035">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2035, this)">0:33:55</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">separate_rows</span></div><div><span class="badge-packages badge bg-primary">tidyr</span></div></div>
+    <div class="topic_description">
+      <p>Use <code>separate_rows</code> from the <code>tidyr</code> package to separate the <code>occupation_s</code> variable from the <code>science</code> dataset into multiple columns delimited by a semicolon with <code>sep = &quot;; &quot;</code></p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2065">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2065, this)">0:34:25</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">str_to_title</span></div><div><span class="badge-packages badge bg-primary">stringr</span></div></div>
+    <div class="topic_description">
+      <p>Use <code>str_to_title</code> from the <code>stringr</code> package to conver the case to title case in the <code>occupation_s</code> variable.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2115">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2115, this)">0:35:15</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">str_detect</span></div><div><span class="badge-packages badge bg-primary">stringr</span></div></div>
+    <div class="topic_description">
+      <p>Use <code>str_detect</code> from the <code>stringr</code> package to detect the presence of <code>statistician</code> from within the <code>occupation_s</code> variable with <code>regex(&quot;statistician&quot;, ignore_case = TRUE)</code> to perform a case-insensitive search.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2515">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2515, this)">0:41:55</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">read_html</span><span class="badge-functions badge bg-info">html_nodes</span><span class="badge-functions badge bg-info">html_table</span><span class="badge-functions badge bg-info">setNames</span></div><div><span class="badge-packages badge bg-primary">rvest</span></div></div>
+    <div class="topic_description">
+      <p>Use the <code>rvest</code> package with <code>Selector Gadget</code>  to scrape additional information about the individual from their <code>Wikipedia</code> infobox.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2955">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2955, this)">0:49:15</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">map</span><span class="badge-functions badge bg-info">possibly</span><span class="badge-functions badge bg-info">read_html</span></div><div><span class="badge-packages badge bg-primary">purrr</span></div></div>
+    <div class="topic_description">
+      <p>Use <code>map</code> and <code>possibly</code> from the <code>purrr</code> package to separate out the downloading of data from parsing the useful information. David then turns the infobox extraction step into an <code>anonymous function</code> using <code>.%&gt;%</code> dot-pipe.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-3520">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(3520, this)">0:58:40</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Summary of screencast.</p>
+
+    </div>
+  </div>
+</div>
+```
+     
+<script>
+// 2. This code loads the IFrame Player API code asynchronously.
+var tag = document.createElement("script");
+
+tag.src = "https://www.youtube.com/iframe_api";
+var firstScriptTag = document.getElementsByTagName("script")[0];
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+// 3. This function creates an <iframe> (and YouTube player)
+//    after the API code downloads.
+var videoId = document.getElementById("yt-player").dataset.videoId;
+var player;
+function onYouTubeIframeAPIReady() {
+  player = new YT.Player("yt-player", {
+    height: "486",
+    width: "864",
+    videoId: videoId,
+    playerVars: {
+      "playsinline": 1
+    },
+    events: {
+      onStateChange: function(event) {
+        if (event.data == YT.PlayerState.PLAYING) {
+          followTimestamps()
+        }
+      }
+    }
+  });
+}
+
+function playerSkipToTimestamp(seconds, tsElement) {
+  player.seekTo(seconds, true)
+  tsElement.scrollIntoView()
+  document.getElementById("screencast").scrollIntoView()
+}
+
+const timestamps = Array.from(document.querySelectorAll('.topic h3[id^="ts-"]'))
+  .map(el => el.id.replace('ts-', ''))
+
+function followTimestamps() {
+  if (player.getPlayerState() !== 1) {
+    return
+  }
+  const currentTime = `${Math.floor(player.getCurrentTime())}`
+  if (timestamps.includes(currentTime)) {
+    const el = document.getElementById(`ts-${currentTime}`)
+    if (el) {
+      el.scrollIntoView()
+      document.getElementById("screencast").scrollIntoView()
+    }
+  }
+  setTimeout(followTimestamps, 1000)
+}
+</script>

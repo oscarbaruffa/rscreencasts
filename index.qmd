@@ -9,25 +9,30 @@ listing:
   sort-ui: [title, date]
 ---
 
-```{r get data, include=FALSE, cache=TRUE}
+```{r setup, include = FALSE}
 library(magrittr)
 library(dplyr)
 library(googlesheets4)
 library(janitor)
 library(stringr)
+library(glue)
+```
 
+```{r load, include = FALSE, cache = TRUE}
 gs4_deauth()
 
 screencasts_data_google <- read_sheet("https://docs.google.com/spreadsheets/d/1pjj_G9ncJZPGTYPkR1BYwzA6bhJoeTfY2fJeGKSbOKM/edit#gid=444382177", sheet = "Summary")
 
 timestamps_data_google <- read_sheet("https://docs.google.com/spreadsheets/d/1pjj_G9ncJZPGTYPkR1BYwzA6bhJoeTfY2fJeGKSbOKM/edit#gid=444382177", sheet = "Screencasts")
 
-screencasts_data <- screencasts_data_google %>% 
+screencasts_data <- 
+  screencasts_data_google %>% 
   clean_names() %>% 
   filter(complete == "x") %>% 
   arrange(screencast) %>% 
   # regex is (?<=) positive assertion, means look after this match, then the additional = is the things to match,and .+ is all characters except whitespace 
-  mutate(vid_key = str_extract(screencast_url, "(?<==).+")) %>% 
+  mutate(vid_key = str_extract(screencast_url, "(?<==).+")) %>%
+  mutate(date = strftime(date, "%F")) %>%
   identity() 
 
 screencasts_count <- screencasts_data %>% 
@@ -36,94 +41,98 @@ screencasts_count <- screencasts_data %>%
   pull()
 
 timestamps_data <- timestamps_data_google %>% 
-  clean_names()
-
-
+  clean_names() %>%
+  mutate(timestamp_sec = as.character(timestamp_sec))
 ```
 
+::: lead
 If you're looking for real-world examples of live data analyses, you've come to the right place.
+:::
 
-David Robinson, a highly experienced Data Scientist, has recorded many screencasts where he analyses data that he's never seen before. These are fantastic examples of how to think about approaching an analysis.
+[David Robinson][drob], a highly experienced Data Scientist, has [recorded many screencasts][drob-yt-playlist] where he analyses data that he's never seen before.
+These are fantastic examples of how to think about approaching an analysis.
+You couldn't ask for a better mentor!
 
-The recordings were done as part of a weekly R programming challenge called TidyTuesday. All code is shared and all datasets are publicly available.
+The recordings were done as part of a weekly R programming challenge called [TidyTuesday]. 
+All [code is shared][drob-code] and all [datasets are publicly available][tidytuesday].
 
-> You couldn't ask for a better mentor!
+::: {.callout-note}
+### What you can learn
 
+This is a wealth of knowledge for new and experienced analysts alike!
 In each video you'll learn:
 
 - How to approach the analysis
 
-- What packages and methods he's using, and why
+- What packages and methods are being used and why
 
 - Handy R tips and tricks
 
 - How to get unstuck when something doesn't lead anywhere   
 
-This is a wealth of knowledge for new and experienced analysts alike. 
+:::
+
+::: {.callout-tip}
+## Use the search bar
 
 Use the search bar to look for specific functions, packages or other keywords. 
-
 Below you'll find a list of `r screencasts_count`  time-stamped screencasts.
+:::
+
+```{r create_pages_function, include = FALSE}
+# this function turns the list of functions or packages into a series of badges
+badgify <- function(class) {
+  class <- paste(class, switch(
+    class,
+    functions = "badge bg-info",
+    packages = "badge bg-primary"
+  ))
+  function(x) {
+    if (is.na(x)) return("")
+    x <- strsplit(x, "\\s*\\|\\s*")[[1]]
+    paste(glue('<span class="badge-{class}">{x}</span>'), collapse = "")
+  }
+}
+
+# a base-R version of purrr::map_chr()
+map_chr <- function(.x, .f, ...) {
+  vapply(.x, .f, character(1), ...)
+}
+```
 
 ```{r create_pages, echo=FALSE, results='asis'}
 
 for (entry_screencast in row.names(screencasts_data)) {
  
-   topic <- as.character(screencasts_data[entry_screencast, "screencast"])
-   #not using a dplyr filter considtion, because it causes the render to fail for some 
-   #reason with the error "cannot find the specified file"
-   timestamps_entries <- subset(timestamps_data, screencast==topic)
+  screencast <- as.list(screencasts_data[entry_screencast, ])
   
- # this text has to be left aligned for it to work properly, otherwise it gets tabbed and is not recognised as a yaml header. Might be becuaxse of the AS IS argument
-content_text <- paste0(
-'---
-title: "',as.character(screencasts_data[entry_screencast, "screencast"]),'"
-description: "',as.character(screencasts_data[entry_screencast, "notable_topics"]),'"
-date: ',as.character(screencasts_data[entry_screencast, "date"]),'
-date-format: long
----
-
-Notable topics: ',as.character(screencasts_data[entry_screencast, "notable_topics"]),'
-
-Recorded on: ',as.character(screencasts_data[entry_screencast, "date"]),'
-
-Timestamps by: ',as.character(screencasts_data[entry_screencast, "contributor"]),'
-
-[View code](',as.character(screencasts_data[entry_screencast, "browse_r_code_url"]),')','
-
-## Full screencast
-<iframe class="video" src="https://www.youtube.com/embed/', as.character(screencasts_data[entry_screencast, "vid_key"]),'" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-## Timestamps\n')
-
-for (entry_timestamp in row.names(timestamps_entries)) {
+  screencast_name <- screencast$screencast
   
+  screencast$timestamps <- 
+    timestamps_data %>%
+    filter(screencast == screencast_name) %>%
+    select(timestamp_with_hours, description, functions, packages, timestamp_sec) %>%
+    mutate(
+      functions = map_chr(functions, badgify("functions")),
+      packages = map_chr(packages, badgify("packages")),
+      description = map_chr(description, commonmark::markdown_html)
+    )
+ 
+  # whisker needs a list containing lists for each row
+  # the following line is a base-R version of purrr::transpose()
+  screencast$timestamps <- apply(screencast$timestamps, 1, as.list)
 
-
-content_text <- paste0(content_text,'\n',
-
-# Create the headings
-'### ',as.character(timestamps_entries[entry_timestamp, "timestamp_with_hours"]),'\n\n',
-
-as.character(timestamps_entries[entry_timestamp, "description"]),'\n\n',
-                      
-as.character(timestamps_entries[entry_timestamp, "functions"]),'\n\n',
-
-as.character(timestamps_entries[entry_timestamp, "packages"]),'\n\n','
-
-<iframe class="video" src="https://www.youtube.com/embed/', as.character(screencasts_data[entry_screencast, "vid_key"]),'?start=',as.character(timestamps_entries[entry_timestamp, "timestamp_sec"]),'" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>\n')
-
+  content_template <- paste(readLines("_content-template.md"), collapse = "\n")
+  content_text <- whisker::whisker.render(content_template, data = screencast)
+    
+  content_file_name <- janitor::make_clean_names(screencast_name, sep_out = "-")
+  writeLines(content_text, glue("content_pages/{content_file_name}.qmd"))
 }
-fileConn<-file(paste0("content_pages/",as.character(screencasts_data[entry_screencast, "screencast"]),".qmd"))
-writeLines(content_text, fileConn)
-close(fileConn)
-
-  
-}
-
-
-
-
 ```
 
 ## All recordings
+
+[TidyTuesday]: https://github.com/rfordatascience/tidytuesday/
+[drob]: http://varianceexplained.org/
+[drob-code]: https://github.com/dgrtwo/data-screencasts
+[drob-yt-playlist]: https://www.youtube.com/watch?v=5ub92c-5xFQ&list=PL19ev-r1GBwkuyiwnxoHTRC8TTqP8OEi8

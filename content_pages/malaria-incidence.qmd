@@ -1,0 +1,324 @@
+---
+title: |
+  Malaria Incidence
+description: |
+  Map visualization
+date: 2018-11-11
+date-format: long
+aliases:
+  - "Malaria Incidence.html"
+---
+
+Notable topics: Map visualization
+
+Recorded on: 2018-11-11
+
+Timestamps by: Alex Cookson
+
+[View code](https://github.com/dgrtwo/data-screencasts/blob/master/malaria.Rmd)
+
+## Screencast
+
+<div id="yt-player" data-video-id="5_6O2oDy5Jk"></div>
+
+## Timestamps
+
+```{=html}
+<div id="topics">
+  <div class="topic">
+    <h3 id="ts-165">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(165, this)">0:2:45</button>
+    </h3>
+    <div class="topic_badges"><div></div><div><span class="badge-packages badge bg-primary">malariaAtlas</span></div></div>
+    <div class="topic_description">
+      <p>Importing data using the malariaAtlas package</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-850">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(850, this)">0:14:10</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">geom_line</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using geom_line function to visualize malaria prevalence over time</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-910">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(910, this)">0:15:10</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">geom_point</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Quick map visualization using longitude and latitude coordinates and the geom_point function</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1120">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1120, this)">0:18:40</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">borders</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using borders function to add Kenyan country borders to map</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1190">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1190, this)">0:19:50</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">scale_colour_gradient2</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using scale_colour_gradient2 function to change the colour scale of points on the map</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1240">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1240, this)">0:20:40</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">arrange</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using arrange function to ensure that certain points on a map appear in front of/behind other points</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1310">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1310, this)">0:21:50</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">%/%</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Aggregating data into decades using the truncated division operator %/%</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1485">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1485, this)">0:24:45</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Starting to look at aggregated malaria data (instead of country-specific data)</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1610">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1610, this)">0:26:50</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">sample</span><span class="badge-functions badge bg-info">unique</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using sample and unique functions to randomly select a few countries, which are then graphed</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1710">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1710, this)">0:28:30</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">last</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using last function to select the most recent observation from a set of arranged data</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1975">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1975, this)">0:32:55</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Creating a Bland-Altman plot to explore relationship between current incidence and change in incidence in past 15 years</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2145">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2145, this)">0:35:45</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">anti_join</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using anti_join function to find which countries are not in the malaria dataset</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2200">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2200, this)">0:36:40</button>
+    </h3>
+    <div class="topic_badges"><div></div><div><span class="badge-packages badge bg-primary">maps</span></div></div>
+    <div class="topic_description">
+      <p>Using the iso3166 dataset set in the maps package to match three-letter country code (i.e., the ISO 3166 code) with country names</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2310">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2310, this)">0:38:30</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">geom_polygon</span><span class="badge-functions badge bg-info">theme_void</span><span class="badge-functions badge bg-info">coord_map</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Creating a world map using geom_polygon function (and eventually theme_void and coord_map functions)</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2340">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2340, this)">0:39:00</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Getting rid of Antarctica from world map</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2555">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2555, this)">0:42:35</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">facet_wrap</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using facet_wrap function to create small multiples of world map for different time periods</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2850">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2850, this)">0:47:30</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Starting to create an animated map of malaria deaths (actual code writing starts at 57:45)</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-3085">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(3085, this)">0:51:25</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Starting with a single year after working through some bugs</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-3130">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(3130, this)">0:52:10</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">regex_inner_join</span></div><div><span class="badge-packages badge bg-primary">fuzzyjoin</span></div></div>
+    <div class="topic_description">
+      <p>Using regex_inner_join function from the fuzzyjoin package to join map datasets because one of them has values in regular expressions</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-3315">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(3315, this)">0:55:15</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">str_remove</span></div><div></div></div>
+    <div class="topic_description">
+      <p>As alternative to fuzzyjoin package in above step, using str_remove function to get rid of unwanted regex</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-3465">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(3465, this)">0:57:45</button>
+    </h3>
+    <div class="topic_badges"><div></div><div><span class="badge-packages badge bg-primary">gganimate</span></div></div>
+    <div class="topic_description">
+      <p>Starting to turn static map into an animation using gganimate package</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-3720">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(3720, this)">1:02:00</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>The actual animated map</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-3755">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(3755, this)">1:02:35</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">countrycode</span></div><div><span class="badge-packages badge bg-primary">countrycode</span></div></div>
+    <div class="topic_description">
+      <p>Using countrycode package to filter down to countries in a specific continent (Africa, in this case)</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-3835">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(3835, this)">1:03:55</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Summary of screencast</p>
+
+    </div>
+  </div>
+</div>
+```
+     
+<script>
+// 2. This code loads the IFrame Player API code asynchronously.
+var tag = document.createElement("script");
+
+tag.src = "https://www.youtube.com/iframe_api";
+var firstScriptTag = document.getElementsByTagName("script")[0];
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+// 3. This function creates an <iframe> (and YouTube player)
+//    after the API code downloads.
+var videoId = document.getElementById("yt-player").dataset.videoId;
+var player;
+function onYouTubeIframeAPIReady() {
+  player = new YT.Player("yt-player", {
+    height: "486",
+    width: "864",
+    videoId: videoId,
+    playerVars: {
+      "playsinline": 1
+    },
+    events: {
+      onStateChange: function(event) {
+        if (event.data == YT.PlayerState.PLAYING) {
+          followTimestamps()
+        }
+      }
+    }
+  });
+}
+
+function playerSkipToTimestamp(seconds, tsElement) {
+  player.seekTo(seconds, true)
+  tsElement.scrollIntoView()
+  document.getElementById("screencast").scrollIntoView()
+}
+
+const timestamps = Array.from(document.querySelectorAll('.topic h3[id^="ts-"]'))
+  .map(el => el.id.replace('ts-', ''))
+
+function followTimestamps() {
+  if (player.getPlayerState() !== 1) {
+    return
+  }
+  const currentTime = `${Math.floor(player.getCurrentTime())}`
+  if (timestamps.includes(currentTime)) {
+    const el = document.getElementById(`ts-${currentTime}`)
+    if (el) {
+      el.scrollIntoView()
+      document.getElementById("screencast").scrollIntoView()
+    }
+  }
+  setTimeout(followTimestamps, 1000)
+}
+</script>

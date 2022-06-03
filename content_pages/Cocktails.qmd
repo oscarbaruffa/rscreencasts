@@ -1,200 +1,234 @@
 ---
-title: "Cocktails"
-description: "Pairwise correlation, Network diagram, Principal component analysis (PCA)"
-date: 2020-05-26
+title: |
+  Cocktails
+description: |
+  Pairwise correlation, Network diagram, Principal component analysis (PCA)
+date: 2020-05-25
 date-format: long
+aliases:
+  - "Cocktails.html"
 ---
 
 Notable topics: Pairwise correlation, Network diagram, Principal component analysis (PCA)
 
-Recorded on: 2020-05-26
+Recorded on: 2020-05-25
 
 Timestamps by: Eric Fletcher
 
 [View code](https://github.com/dgrtwo/data-screencasts/blob/master/cocktails.Rmd)
 
-## Full screencast
-<iframe class="video" src="https://www.youtube.com/embed/EC0SVkFB2OU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+## Screencast
+
+<div id="yt-player" data-video-id="EC0SVkFB2OU"></div>
 
 ## Timestamps
 
-### 0:6:20
-
-Use `fct_reorder` from the `forcats` package to reorder the `ingredient` factor levels along `n`.
-
-fct_reorder
-
-forcats
-
-
-
-<iframe class="video" src="https://www.youtube.com/embed/EC0SVkFB2OU?start=380" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-### 0:7:40
-
-Use `fct_lump` from the `forcats` package to lump together all the levels except the `n` most frequent in the `category` and `ingredient` variables.
-
-fct_lump
-
-forcats
-
-
-
-<iframe class="video" src="https://www.youtube.com/embed/EC0SVkFB2OU?start=460" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-### 0:11:30
-
-Use `pairwise_cor` from the `widyr` package to find the correlation between the `ingredients`.
-
-pairwise_cor
-
-widyr
-
-
-
-<iframe class="video" src="https://www.youtube.com/embed/EC0SVkFB2OU?start=690" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-### 0:16:00
-
-Use `reorder_within` from the `tidytext` package with `scale_x_reordered`  to reorder the the columns in each `facet`.
-
-reorder_within | scale_x_reordered
-
-tidytext
-
-
-
-<iframe class="video" src="https://www.youtube.com/embed/EC0SVkFB2OU?start=960" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-### 0:19:45
-
-Use the `ggraph` and `igraph` packages to create a `network diagram`
-
-graph_from_data_frame | ggraph | geom_edge_link | geom_node_point | geom_node_label
-
-igraph | ggraph
-
-
-
-<iframe class="video" src="https://www.youtube.com/embed/EC0SVkFB2OU?start=1185" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-### 0:25:15
-
-Use `extract` from the `tidyr` package with `regex = (.*) oz` to create a new variable `amount` which doesn't include the `oz`.
-
-extract
-
-tidyr
-
-
-
-<iframe class="video" src="https://www.youtube.com/embed/EC0SVkFB2OU?start=1515" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-### 0:26:40
-
-Use `extract` with `regex` to turn the strings in the new `amount` variable into separate columns for the `ones`, `numerator`, and `denominator`.
-
-extract
-
-tidyr
-
-
-
-<iframe class="video" src="https://www.youtube.com/embed/EC0SVkFB2OU?start=1600" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-### 0:28:53
-
-Use `replace_na` from the `tidyr` package to replace `NA` with zeros in the `ones`, `numberator`, and `denominator` columns. David ends up reaplcing the `zero` in the `denominator` column with ones in order for the calculation to work.
-
-replace_na
-
-tidyr
-
-
-
-<iframe class="video" src="https://www.youtube.com/embed/EC0SVkFB2OU?start=1733" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-### 0:31:49
-
-Use `geom_text_repel` from the `ggrepel` package to add `ingredient` labels to the `geom_point` plot.
-
-geom_text_repel
-
-ggrepel
-
-
-
-<iframe class="video" src="https://www.youtube.com/embed/EC0SVkFB2OU?start=1909" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-### 0:32:30
-
-Use `na_if` from the `dplyr` package to replace `zeros` with `NA`
-
-na_if
-
-dplyr
-
-
-
-<iframe class="video" src="https://www.youtube.com/embed/EC0SVkFB2OU?start=1950" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-### 0:34:25
-
-Use `scale_size_continuous` with `labels = percent_format()` to convert size legend values to percent.
-
-scale_size_continuous
-
-ggplot2
-
-
-
-<iframe class="video" src="https://www.youtube.com/embed/EC0SVkFB2OU?start=2065" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-### 0:36:35
-
-Change the size of the points in the `network diagram` proportional to `n` using `vertices = ingredient_info` within `graph_from_data_frame` and `aes(size = n)` within `geom_node_point`.
-
-graph_from_data_frame | geom_node_point
-
-igraph | ggraph
-
-
-
-<iframe class="video" src="https://www.youtube.com/embed/EC0SVkFB2OU?start=2195" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-### 0:48:05
-
-Use `widely_svd` from the `widyr` package to perform principle component analysis on the `ingredients`.
-
-widely_svd | top_n | abs | geom_col | reorder_within | scale_y_reordered | facet_wrap
-
-widyr
-
-
-
-<iframe class="video" src="https://www.youtube.com/embed/EC0SVkFB2OU?start=2885" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-### 0:52:32
-
-Use `paste0`  to concatenate `PC` and `dimension` in the facet panel titles.
-
-paste0
-
-base
-
-
-
-<iframe class="video" src="https://www.youtube.com/embed/EC0SVkFB2OU?start=3152" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-### 0:57:00
-
-Summary of screencast.
-
-NA
-
-NA
-
-
-
-<iframe class="video" src="https://www.youtube.com/embed/EC0SVkFB2OU?start=3420" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
+```{=html}
+<div id="topics">
+  <div class="topic">
+    <h3 id="ts-380">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(380, this)">0:6:20</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">fct_reorder</span></div><div><span class="badge-packages badge bg-primary">forcats</span></div></div>
+    <div class="topic_description">
+      <p>Use <code>fct_reorder</code> from the <code>forcats</code> package to reorder the <code>ingredient</code> factor levels along <code>n</code>.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-460">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(460, this)">0:7:40</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">fct_lump</span></div><div><span class="badge-packages badge bg-primary">forcats</span></div></div>
+    <div class="topic_description">
+      <p>Use <code>fct_lump</code> from the <code>forcats</code> package to lump together all the levels except the <code>n</code> most frequent in the <code>category</code> and <code>ingredient</code> variables.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-690">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(690, this)">0:11:30</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">pairwise_cor</span></div><div><span class="badge-packages badge bg-primary">widyr</span></div></div>
+    <div class="topic_description">
+      <p>Use <code>pairwise_cor</code> from the <code>widyr</code> package to find the correlation between the <code>ingredients</code>.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-960">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(960, this)">0:16:00</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">reorder_within</span><span class="badge-functions badge bg-info">scale_x_reordered</span></div><div><span class="badge-packages badge bg-primary">tidytext</span></div></div>
+    <div class="topic_description">
+      <p>Use <code>reorder_within</code> from the <code>tidytext</code> package with <code>scale_x_reordered</code>  to reorder the the columns in each <code>facet</code>.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1185">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1185, this)">0:19:45</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">graph_from_data_frame</span><span class="badge-functions badge bg-info">ggraph</span><span class="badge-functions badge bg-info">geom_edge_link</span><span class="badge-functions badge bg-info">geom_node_point</span><span class="badge-functions badge bg-info">geom_node_label</span></div><div><span class="badge-packages badge bg-primary">igraph</span><span class="badge-packages badge bg-primary">ggraph</span></div></div>
+    <div class="topic_description">
+      <p>Use the <code>ggraph</code> and <code>igraph</code> packages to create a <code>network diagram</code></p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1515">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1515, this)">0:25:15</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">extract</span></div><div><span class="badge-packages badge bg-primary">tidyr</span></div></div>
+    <div class="topic_description">
+      <p>Use <code>extract</code> from the <code>tidyr</code> package with <code>regex = (.*) oz</code> to create a new variable <code>amount</code> which doesn't include the <code>oz</code>.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1600">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1600, this)">0:26:40</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">extract</span></div><div><span class="badge-packages badge bg-primary">tidyr</span></div></div>
+    <div class="topic_description">
+      <p>Use <code>extract</code> with <code>regex</code> to turn the strings in the new <code>amount</code> variable into separate columns for the <code>ones</code>, <code>numerator</code>, and <code>denominator</code>.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1733">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1733, this)">0:28:53</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">replace_na</span></div><div><span class="badge-packages badge bg-primary">tidyr</span></div></div>
+    <div class="topic_description">
+      <p>Use <code>replace_na</code> from the <code>tidyr</code> package to replace <code>NA</code> with zeros in the <code>ones</code>, <code>numberator</code>, and <code>denominator</code> columns. David ends up reaplcing the <code>zero</code> in the <code>denominator</code> column with ones in order for the calculation to work.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1909">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1909, this)">0:31:49</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">geom_text_repel</span></div><div><span class="badge-packages badge bg-primary">ggrepel</span></div></div>
+    <div class="topic_description">
+      <p>Use <code>geom_text_repel</code> from the <code>ggrepel</code> package to add <code>ingredient</code> labels to the <code>geom_point</code> plot.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1950">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1950, this)">0:32:30</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">na_if</span></div><div><span class="badge-packages badge bg-primary">dplyr</span></div></div>
+    <div class="topic_description">
+      <p>Use <code>na_if</code> from the <code>dplyr</code> package to replace <code>zeros</code> with <code>NA</code></p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2065">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2065, this)">0:34:25</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">scale_size_continuous</span></div><div><span class="badge-packages badge bg-primary">ggplot2</span></div></div>
+    <div class="topic_description">
+      <p>Use <code>scale_size_continuous</code> with <code>labels = percent_format()</code> to convert size legend values to percent.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2195">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2195, this)">0:36:35</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">graph_from_data_frame</span><span class="badge-functions badge bg-info">geom_node_point</span></div><div><span class="badge-packages badge bg-primary">igraph</span><span class="badge-packages badge bg-primary">ggraph</span></div></div>
+    <div class="topic_description">
+      <p>Change the size of the points in the <code>network diagram</code> proportional to <code>n</code> using <code>vertices = ingredient_info</code> within <code>graph_from_data_frame</code> and <code>aes(size = n)</code> within <code>geom_node_point</code>.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2885">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2885, this)">0:48:05</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">widely_svd</span><span class="badge-functions badge bg-info">top_n</span><span class="badge-functions badge bg-info">abs</span><span class="badge-functions badge bg-info">geom_col</span><span class="badge-functions badge bg-info">reorder_within</span><span class="badge-functions badge bg-info">scale_y_reordered</span><span class="badge-functions badge bg-info">facet_wrap</span></div><div><span class="badge-packages badge bg-primary">widyr</span></div></div>
+    <div class="topic_description">
+      <p>Use <code>widely_svd</code> from the <code>widyr</code> package to perform principle component analysis on the <code>ingredients</code>.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-3152">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(3152, this)">0:52:32</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">paste0</span></div><div><span class="badge-packages badge bg-primary">base</span></div></div>
+    <div class="topic_description">
+      <p>Use <code>paste0</code>  to concatenate <code>PC</code> and <code>dimension</code> in the facet panel titles.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-3420">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(3420, this)">0:57:00</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Summary of screencast.</p>
+
+    </div>
+  </div>
+</div>
+```
+     
+<script>
+// 2. This code loads the IFrame Player API code asynchronously.
+var tag = document.createElement("script");
+
+tag.src = "https://www.youtube.com/iframe_api";
+var firstScriptTag = document.getElementsByTagName("script")[0];
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+// 3. This function creates an <iframe> (and YouTube player)
+//    after the API code downloads.
+var videoId = document.getElementById("yt-player").dataset.videoId;
+var player;
+function onYouTubeIframeAPIReady() {
+  player = new YT.Player("yt-player", {
+    height: "486",
+    width: "864",
+    videoId: videoId,
+    playerVars: {
+      "playsinline": 1
+    },
+    events: {
+      onStateChange: function(event) {
+        if (event.data == YT.PlayerState.PLAYING) {
+          followTimestamps()
+        }
+      }
+    }
+  });
+}
+
+function playerSkipToTimestamp(seconds, tsElement) {
+  player.seekTo(seconds, true)
+  tsElement.scrollIntoView()
+  document.getElementById("screencast").scrollIntoView()
+}
+
+const timestamps = Array.from(document.querySelectorAll('.topic h3[id^="ts-"]'))
+  .map(el => el.id.replace('ts-', ''))
+
+function followTimestamps() {
+  if (player.getPlayerState() !== 1) {
+    return
+  }
+  const currentTime = `${Math.floor(player.getCurrentTime())}`
+  if (timestamps.includes(currentTime)) {
+    const el = document.getElementById(`ts-${currentTime}`)
+    if (el) {
+      el.scrollIntoView()
+      document.getElementById("screencast").scrollIntoView()
+    }
+  }
+  setTimeout(followTimestamps, 1000)
+}
+</script>

@@ -1,0 +1,344 @@
+---
+title: |
+  CORD-19 Data Package
+description: |
+  R package development and documentation-writing
+date: 2020-03-18
+date-format: long
+aliases:
+  - "CORD-19 Data Package.html"
+---
+
+Notable topics: R package development and documentation-writing
+
+Recorded on: 2020-03-18
+
+Timestamps by: Alex Cookson
+
+[View code](https://github.com/dgrtwo/data-screencasts/blob/master/cord-19.Rmd)
+
+## Screencast
+
+<div id="yt-player" data-video-id="F4oUJp76KUY"></div>
+
+## Timestamps
+
+```{=html}
+<div id="topics">
+  <div class="topic">
+    <h3 id="ts-70">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(70, this)">0:1:10</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Overview of JSON files with the data David will make a package of</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-185">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(185, this)">0:3:05</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Starting to create a new package with &quot;New Project&quot; in RStudio</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-340">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(340, this)">0:5:40</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Creating a file to reference the license for the dataset</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-445">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(445, this)">0:7:25</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">use_data_raw</span></div><div><span class="badge-packages badge bg-primary">usethis</span></div></div>
+    <div class="topic_description">
+      <p>Using use_data_raw function from usethis package to set up a folder structure and preliminary function for raw data</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-510">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(510, this)">0:8:30</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Explanation that we want to limit the number of packages we load when building a package (e.g., no library(tidyverse) )</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-540">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(540, this)">0:9:00</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">use_package</span></div><div><span class="badge-packages badge bg-primary">usethis</span></div></div>
+    <div class="topic_description">
+      <p>Using use_package function from usethis package to add &quot;Suggested packages&quot;</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-615">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(615, this)">0:10:15</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Reviewing import and cleaning code already completed</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-895">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(895, this)">0:14:55</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Using roxygen2 package to write documentation</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1175">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1175, this)">0:19:35</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>More documentation writing</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1490">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1490, this)">0:24:50</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">use_data</span></div><div><span class="badge-packages badge bg-primary">usethis</span></div></div>
+    <div class="topic_description">
+      <p>Using use_data function from usethis package to create a folder structure and datafile for (finished/cleaned) data</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1570">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1570, this)">0:26:10</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Making a mistake clicking &quot;Install and Restart&quot; button on the &quot;Build&quot; tab (because of huge objects in the environment) (see 26:50 for alternative)</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1610">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1610, this)">0:26:50</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">load_all</span></div><div><span class="badge-packages badge bg-primary">devtools</span></div></div>
+    <div class="topic_description">
+      <p>Using load_all function from devtrools package as an alternative to &quot;Install and Restart&quot; from above step</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1655">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1655, this)">0:27:35</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">document</span></div><div><span class="badge-packages badge bg-primary">devtools</span></div></div>
+    <div class="topic_description">
+      <p>Using document function from devtools package to process written documentation</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1940">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1940, this)">0:32:20</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>De-duplicating paper data in a way the keeps records that have fewer missing values than other records for the same paper</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2390">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2390, this)">0:39:50</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">use_data</span></div><div><span class="badge-packages badge bg-primary">usethis</span></div></div>
+    <div class="topic_description">
+      <p>Using use_data function with its overwrite argument to overwrite existing data</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2850">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2850, this)">0:47:30</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Writing documentation for paragraphs data</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-3475">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(3475, this)">0:57:55</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Testing an install of the package</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-3570">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(3570, this)">0:59:30</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Adding link to code in documentation</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-3780">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(3780, this)">1:03:00</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Writing examples of how to use the package (in documentation)</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-4125">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(4125, this)">1:08:45</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Discussion of outstanding items that David hasn't done yet (e.g., readme, vignettes, tests)</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-4160">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(4160, this)">1:09:20</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">use_readme_rmd</span></div><div><span class="badge-packages badge bg-primary">usethis</span></div></div>
+    <div class="topic_description">
+      <p>Creating a simple readme, including examples, with use_readme_rmd function from usethis package</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-4570">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(4570, this)">1:16:10</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">knit</span></div><div><span class="badge-packages badge bg-primary">knitr</span></div></div>
+    <div class="topic_description">
+      <p>Using knit function from the knitr package to knit the readme into a markdown file</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-4630">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(4630, this)">1:17:10</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Creating a GitHub repository to host the package (includes how to commit to a GitHub repo using RStudio's GUI)</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-4695">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(4695, this)">1:18:15</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Explanation that version 0.0.0.9000 means that the package is in early development</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-4830">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(4830, this)">1:20:30</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Actually creating the GitHub repository</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-4945">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(4945, this)">1:22:25</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Overview of remaining tasks</p>
+
+    </div>
+  </div>
+</div>
+```
+     
+<script>
+// 2. This code loads the IFrame Player API code asynchronously.
+var tag = document.createElement("script");
+
+tag.src = "https://www.youtube.com/iframe_api";
+var firstScriptTag = document.getElementsByTagName("script")[0];
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+// 3. This function creates an <iframe> (and YouTube player)
+//    after the API code downloads.
+var videoId = document.getElementById("yt-player").dataset.videoId;
+var player;
+function onYouTubeIframeAPIReady() {
+  player = new YT.Player("yt-player", {
+    height: "486",
+    width: "864",
+    videoId: videoId,
+    playerVars: {
+      "playsinline": 1
+    },
+    events: {
+      onStateChange: function(event) {
+        if (event.data == YT.PlayerState.PLAYING) {
+          followTimestamps()
+        }
+      }
+    }
+  });
+}
+
+function playerSkipToTimestamp(seconds, tsElement) {
+  player.seekTo(seconds, true)
+  tsElement.scrollIntoView()
+  document.getElementById("screencast").scrollIntoView()
+}
+
+const timestamps = Array.from(document.querySelectorAll('.topic h3[id^="ts-"]'))
+  .map(el => el.id.replace('ts-', ''))
+
+function followTimestamps() {
+  if (player.getPlayerState() !== 1) {
+    return
+  }
+  const currentTime = `${Math.floor(player.getCurrentTime())}`
+  if (timestamps.includes(currentTime)) {
+    const el = document.getElementById(`ts-${currentTime}`)
+    if (el) {
+      el.scrollIntoView()
+      document.getElementById("screencast").scrollIntoView()
+    }
+  }
+  setTimeout(followTimestamps, 1000)
+}
+</script>

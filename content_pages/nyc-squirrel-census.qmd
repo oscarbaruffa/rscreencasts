@@ -1,0 +1,384 @@
+---
+title: |
+  NYC Squirrel Census
+description: |
+  Map visualization (ggmap package)
+date: 2019-10-31
+date-format: long
+aliases:
+  - "NYC Squirrel Census.html"
+---
+
+Notable topics: Map visualization (ggmap package)
+
+Recorded on: 2019-10-31
+
+Timestamps by: Alex Cookson
+
+[View code](https://github.com/dgrtwo/data-screencasts/blob/master/nyc-squirrels.Rmd)
+
+## Screencast
+
+<div id="yt-player" data-video-id="6GV9sAD6Pi0"></div>
+
+## Timestamps
+
+```{=html}
+<div id="topics">
+  <div class="topic">
+    <h3 id="ts-345">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(345, this)">0:5:45</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">geom_point</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Starter EDA of latitude and longitude using geom_point</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-405">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(405, this)">0:6:45</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Aggregating squirrel counts by hectare to get a &quot;binned&quot; map</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-540">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(540, this)">0:9:00</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Investigating colour notes</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-630">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(630, this)">0:10:30</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Asking question, &quot;Are there areas of the parks where we see certain-coloured squirrels</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-765">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(765, this)">0:12:45</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Plotting latitude and percentage of gray squirrels to answer, &quot;Do we get a lower proportion of gray squirrels as we go farther north?&quot;</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-810">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(810, this)">0:13:30</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Using logistic regression to test gray squirrel (proportion as we go farther north)</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-990">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(990, this)">0:16:30</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Noting that he could have used original data sets as input for logistic regression function</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1170">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1170, this)">0:19:30</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>&quot;Does a squirrel run away?&quot; based on location in the park (latitude), using logistic regression</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1245">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1245, this)">0:20:45</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">summarise_at</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using summarise_at function to apply same function to multiple variables</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1525">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1525, this)">0:25:25</button>
+    </h3>
+    <div class="topic_badges"><div></div><div><span class="badge-packages badge bg-primary">ggmap</span></div></div>
+    <div class="topic_description">
+      <p>Loading ggmap package</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1620">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1620, this)">0:27:00</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">get_map</span></div><div><span class="badge-packages badge bg-primary">ggmap</span></div></div>
+    <div class="topic_description">
+      <p>Start using ggmap, with the get_map function</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1700">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1700, this)">0:28:20</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Decision to not set up Google API key to use ggmap properly</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1815">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1815, this)">0:30:15</button>
+    </h3>
+    <div class="topic_badges"><div></div><div><span class="badge-packages badge bg-primary">sf</span></div></div>
+    <div class="topic_description">
+      <p>Using the sf package to read in a shapefile of Central Park</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1840">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1840, this)">0:30:40</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">read_sf</span></div><div><span class="badge-packages badge bg-primary">sf</span></div></div>
+    <div class="topic_description">
+      <p>Using read_sf function from sf package to import a shapefile into R</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1890">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1890, this)">0:31:30</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">geom_sf</span></div><div><span class="badge-packages badge bg-primary">sf</span></div></div>
+    <div class="topic_description">
+      <p>Using geom_sf function from sf package to visualise the imported shapefile</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1965">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1965, this)">0:32:45</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Combining shapefile &quot;background&quot; with relevant squirrel data in one plot</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2080">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2080, this)">0:34:40</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Visualising pathways (footpaths, bicycle paths) in the shapefile</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2275">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2275, this)">0:37:55</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Finishing visualisation and moving on to analysing activity types</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2325">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2325, this)">0:38:45</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">ends_with</span><span class="badge-functions badge bg-info">gather</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Selecting fields based on whether they end with &quot;ing&quot;, then gathering those fields into tidy format</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2390">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2390, this)">0:39:50</button>
+    </h3>
+    <div class="topic_badges"><div></div><div><span class="badge-packages badge bg-primary">shiny</span></div></div>
+    <div class="topic_description">
+      <p>Decision to create a Shiny visualisation</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2490">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2490, this)">0:41:30</button>
+    </h3>
+    <div class="topic_badges"><div></div><div><span class="badge-packages badge bg-primary">shiny</span></div></div>
+    <div class="topic_description">
+      <p>Setting Shiny app settings (e.g., slider for minimum number of squirrels)</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2535">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2535, this)">0:42:15</button>
+    </h3>
+    <div class="topic_badges"><div></div><div><span class="badge-packages badge bg-primary">shiny</span></div></div>
+    <div class="topic_description">
+      <p>Setting up Shiny app options / variables</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2630">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2630, this)">0:43:50</button>
+    </h3>
+    <div class="topic_badges"><div></div><div><span class="badge-packages badge bg-primary">shiny</span></div></div>
+    <div class="topic_description">
+      <p>Explanation of why setting up options in Shiny app the way he did</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2760">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2760, this)">0:46:00</button>
+    </h3>
+    <div class="topic_badges"><div></div><div><span class="badge-packages badge bg-primary">shiny</span></div></div>
+    <div class="topic_description">
+      <p>Solving error &quot;Discrete value supplied to continuous scale&quot;</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2810">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2810, this)">0:46:50</button>
+    </h3>
+    <div class="topic_badges"><div></div><div><span class="badge-packages badge bg-primary">shiny</span></div></div>
+    <div class="topic_description">
+      <p>First draft of Shiny app</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2915">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2915, this)">0:48:35</button>
+    </h3>
+    <div class="topic_badges"><div></div><div><span class="badge-packages badge bg-primary">shiny</span></div></div>
+    <div class="topic_description">
+      <p>Creating a dynamic midpoint for the two-gradient scale in the app</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-3090">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(3090, this)">0:51:30</button>
+    </h3>
+    <div class="topic_badges"><div></div><div><span class="badge-packages badge bg-primary">shiny</span></div></div>
+    <div class="topic_description">
+      <p>Adding additional variables of more behaviours to Shiny app (kuks, moans, runs from, etc.)</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-3190">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(3190, this)">0:53:10</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>&quot;What are the distributions of some of these [behaviours]?&quot;</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-3410">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(3410, this)">0:56:50</button>
+    </h3>
+    <div class="topic_badges"><div></div><div><span class="badge-packages badge bg-primary">shiny</span></div></div>
+    <div class="topic_description">
+      <p>Adding ground location (above ground, ground plane) to Shiny app</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-3500">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(3500, this)">0:58:20</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Summary of screencast</p>
+
+    </div>
+  </div>
+</div>
+```
+     
+<script>
+// 2. This code loads the IFrame Player API code asynchronously.
+var tag = document.createElement("script");
+
+tag.src = "https://www.youtube.com/iframe_api";
+var firstScriptTag = document.getElementsByTagName("script")[0];
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+// 3. This function creates an <iframe> (and YouTube player)
+//    after the API code downloads.
+var videoId = document.getElementById("yt-player").dataset.videoId;
+var player;
+function onYouTubeIframeAPIReady() {
+  player = new YT.Player("yt-player", {
+    height: "486",
+    width: "864",
+    videoId: videoId,
+    playerVars: {
+      "playsinline": 1
+    },
+    events: {
+      onStateChange: function(event) {
+        if (event.data == YT.PlayerState.PLAYING) {
+          followTimestamps()
+        }
+      }
+    }
+  });
+}
+
+function playerSkipToTimestamp(seconds, tsElement) {
+  player.seekTo(seconds, true)
+  tsElement.scrollIntoView()
+  document.getElementById("screencast").scrollIntoView()
+}
+
+const timestamps = Array.from(document.querySelectorAll('.topic h3[id^="ts-"]'))
+  .map(el => el.id.replace('ts-', ''))
+
+function followTimestamps() {
+  if (player.getPlayerState() !== 1) {
+    return
+  }
+  const currentTime = `${Math.floor(player.getCurrentTime())}`
+  if (timestamps.includes(currentTime)) {
+    const el = document.getElementById(`ts-${currentTime}`)
+    if (el) {
+      el.scrollIntoView()
+      document.getElementById("screencast").scrollIntoView()
+    }
+  }
+  setTimeout(followTimestamps, 1000)
+}
+</script>

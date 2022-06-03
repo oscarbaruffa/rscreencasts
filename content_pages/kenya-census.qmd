@@ -1,0 +1,374 @@
+---
+title: |
+  Kenya Census
+description: |
+  Heatmap, Joining Datasets, ShapeFile, Choropleth Map, rKenyaCensus
+date: 2021-01-18
+date-format: long
+aliases:
+  - "Kenya Census.html"
+---
+
+Notable topics: Heatmap, Joining Datasets, ShapeFile, Choropleth Map, rKenyaCensus
+
+Recorded on: 2021-01-18
+
+Timestamps by: Eric Fletcher
+
+[View code](https://github.com/dgrtwo/data-screencasts/blob/master/2021_01_19_kenya_census.Rmd)
+
+## Screencast
+
+<div id="yt-player" data-video-id="dM_0zjj4TtM"></div>
+
+## Timestamps
+
+```{=html}
+<div id="topics">
+  <div class="topic">
+    <h3 id="ts-135">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(135, this)">0:2:15</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">str_trim</span></div><div><span class="badge-packages badge bg-primary">stringr</span></div></div>
+    <div class="topic_description">
+      <p>Trim whitespace from a string.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-275">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(275, this)">0:4:35</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">fct_reorder</span></div><div><span class="badge-packages badge bg-primary">forcats</span></div></div>
+    <div class="topic_description">
+      <p>Reorder factor levels by sorting along another variable by sum.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-300">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(300, this)">0:5:00</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">comma</span><span class="badge-functions badge bg-info">scale_x_continuous</span></div><div><span class="badge-packages badge bg-primary">scales</span><span class="badge-packages badge bg-primary">ggplot2</span></div></div>
+    <div class="topic_description">
+      <p>Label x axis numbers in decimal format (e.g. 0.12, 1,234).</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-315">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(315, this)">0:5:15</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">gather</span></div><div><span class="badge-packages badge bg-primary">tidyr</span></div></div>
+    <div class="topic_description">
+      <p>Pivot data from wide to long.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-325">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(325, this)">0:5:25</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">str_to_title</span></div><div><span class="badge-packages badge bg-primary">stringr</span></div></div>
+    <div class="topic_description">
+      <p>Convert case of a string to title case.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-410">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(410, this)">0:6:50</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">geom_text</span></div><div><span class="badge-packages badge bg-primary">ggplot2</span></div></div>
+    <div class="topic_description">
+      <p>Add text labels to the <code>geom_point</code> plot.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-455">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(455, this)">0:7:35</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">geom_hline</span></div><div><span class="badge-packages badge bg-primary">ggplot2</span></div></div>
+    <div class="topic_description">
+      <p>Add horizontal reference line to <code>geom_point</code> plot.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-455">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(455, this)">0:7:35</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">comma</span><span class="badge-functions badge bg-info">scale_y_continuous</span></div><div><span class="badge-packages badge bg-primary">scales</span><span class="badge-packages badge bg-primary">ggplot2</span></div></div>
+    <div class="topic_description">
+      <p>Label y axis numbers in percent format.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-540">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(540, this)">0:9:00</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">expand_limits</span></div><div><span class="badge-packages badge bg-primary">ggplot2</span></div></div>
+    <div class="topic_description">
+      <p>Expand the plot axis limits by having the y axis begin at 0.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-550">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(550, this)">0:9:10</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">scale_x_log10</span></div><div><span class="badge-packages badge bg-primary">ggplot2</span></div></div>
+    <div class="topic_description">
+      <p>Position x axis data on a log10 scale.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-620">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(620, this)">0:10:20</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">gather</span></div><div><span class="badge-packages badge bg-primary">tidyr</span></div></div>
+    <div class="topic_description">
+      <p>Pivot data from wide to long.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-675">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(675, this)">0:11:15</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">str_to_title</span></div><div><span class="badge-packages badge bg-primary">stringr</span></div></div>
+    <div class="topic_description">
+      <p>Convert case of a string to title case.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-710">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(710, this)">0:11:50</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">fct_reorder</span></div><div><span class="badge-packages badge bg-primary">forcats</span></div></div>
+    <div class="topic_description">
+      <p>Reorder factor levels by sorting along another variable by sum.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-885">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(885, this)">0:14:45</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">geom_tile</span></div><div><span class="badge-packages badge bg-primary">ggplot2</span></div></div>
+    <div class="topic_description">
+      <p>Create a heatmap.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-913">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(913, this)">0:15:13</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">complete</span></div><div><span class="badge-packages badge bg-primary">tidyr</span></div></div>
+    <div class="topic_description">
+      <p>Complete a data frame with missing combinations of data.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-930">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(930, this)">0:15:30</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">theme</span></div><div><span class="badge-packages badge bg-primary">ggplot2</span></div></div>
+    <div class="topic_description">
+      <p>Rotate x axis labels 90 degrees.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1015">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1015, this)">0:16:55</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">full_join</span></div><div><span class="badge-packages badge bg-primary">dplyr</span></div></div>
+    <div class="topic_description">
+      <p>Join two datasets while including all rows in x or y.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1080">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1080, this)">0:18:00</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">str_replace_all</span></div><div><span class="badge-packages badge bg-primary">stringr</span></div></div>
+    <div class="topic_description">
+      <p>Replace matched patterns in a string using <code>str_replace_all</code> with the <code>regular expression</code> <code>([a-z])([A-Z])</code> and <code>&quot;\\1 \\2&quot;</code> to separate words that were joined together (e.g. TanaRiver, Tana River).</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1180">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1180, this)">0:19:40</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">anti_join</span></div><div><span class="badge-packages badge bg-primary">dplyr</span></div></div>
+    <div class="topic_description">
+      <p>Join two datasets while returning all rows from x without a match in y.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1180">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1180, this)">0:19:40</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">right_join</span></div><div><span class="badge-packages badge bg-primary">dplyr</span></div></div>
+    <div class="topic_description">
+      <p>Join two datasets while including all rows in y.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1180">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1180, this)">0:19:40</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">inner_join</span></div><div><span class="badge-packages badge bg-primary">dplyr</span></div></div>
+    <div class="topic_description">
+      <p>Join two datasets while including all rows in x and y.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1655">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1655, this)">0:27:35</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">KenyaCounties_SHP</span></div><div><span class="badge-packages badge bg-primary">rKenyaCensus</span></div></div>
+    <div class="topic_description">
+      <p>Import and basic exploration of the <code>rKenyaCensus</code> package shapefiles.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1695">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1695, this)">0:28:15</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">st_as_sf</span><span class="badge-functions badge bg-info">geom_sf</span></div><div><span class="badge-packages badge bg-primary">ggplot2</span><span class="badge-packages badge bg-primary">sf</span></div></div>
+    <div class="topic_description">
+      <p>Create a map using the <code>rKenyaCensus</code> shapefile data.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2100">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2100, this)">0:35:00</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">st_simplify</span></div><div><span class="badge-packages badge bg-primary">sf</span></div></div>
+    <div class="topic_description">
+      <p>Simplify the shapefile data to make for faster processesing.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2180">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2180, this)">0:36:20</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">left_join</span></div><div><span class="badge-packages badge bg-primary">dplyr</span></div></div>
+    <div class="topic_description">
+      <p>Join two datasets while including all rows in x.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2245">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2245, this)">0:37:25</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">ggplot</span><span class="badge-functions badge bg-info">geom_sf</span><span class="badge-functions badge bg-info">theme_map</span></div><div><span class="badge-packages badge bg-primary">ggplot2</span><span class="badge-packages badge bg-primary">sf</span></div></div>
+    <div class="topic_description">
+      <p>Create a choropleth map - TROUBLSHOOTING through 41:45.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2600">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2600, this)">0:43:20</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">filter</span><span class="badge-functions badge bg-info">gather</span><span class="badge-functions badge bg-info">mutate</span><span class="badge-functions badge bg-info">group_by</span><span class="badge-functions badge bg-info">summarize</span><span class="badge-functions badge bg-info">spread</span><span class="badge-functions badge bg-info">select</span></div><div><span class="badge-packages badge bg-primary">ggplot2</span><span class="badge-packages badge bg-primary">dplyr</span><span class="badge-packages badge bg-primary">tidyr</span></div></div>
+    <div class="topic_description">
+      <p>Create a flexible function that generates <code>geom_col</code> plots used for for exploring the many different datasets in the <code>rKenyaCensus</code> package.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-3115">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(3115, this)">0:51:55</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">fct_lump</span></div><div><span class="badge-packages badge bg-primary">forcats</span></div></div>
+    <div class="topic_description">
+      <p>Lump together factor levels into &quot;other&quot;.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-3560">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(3560, this)">0:59:20</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Summary of screencast.</p>
+
+    </div>
+  </div>
+</div>
+```
+     
+<script>
+// 2. This code loads the IFrame Player API code asynchronously.
+var tag = document.createElement("script");
+
+tag.src = "https://www.youtube.com/iframe_api";
+var firstScriptTag = document.getElementsByTagName("script")[0];
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+// 3. This function creates an <iframe> (and YouTube player)
+//    after the API code downloads.
+var videoId = document.getElementById("yt-player").dataset.videoId;
+var player;
+function onYouTubeIframeAPIReady() {
+  player = new YT.Player("yt-player", {
+    height: "486",
+    width: "864",
+    videoId: videoId,
+    playerVars: {
+      "playsinline": 1
+    },
+    events: {
+      onStateChange: function(event) {
+        if (event.data == YT.PlayerState.PLAYING) {
+          followTimestamps()
+        }
+      }
+    }
+  });
+}
+
+function playerSkipToTimestamp(seconds, tsElement) {
+  player.seekTo(seconds, true)
+  tsElement.scrollIntoView()
+  document.getElementById("screencast").scrollIntoView()
+}
+
+const timestamps = Array.from(document.querySelectorAll('.topic h3[id^="ts-"]'))
+  .map(el => el.id.replace('ts-', ''))
+
+function followTimestamps() {
+  if (player.getPlayerState() !== 1) {
+    return
+  }
+  const currentTime = `${Math.floor(player.getCurrentTime())}`
+  if (timestamps.includes(currentTime)) {
+    const el = document.getElementById(`ts-${currentTime}`)
+    if (el) {
+      el.scrollIntoView()
+      document.getElementById("screencast").scrollIntoView()
+    }
+  }
+  setTimeout(followTimestamps, 1000)
+}
+</script>

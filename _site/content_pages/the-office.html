@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-0.9.501">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="dcterms.date" content="2020-03-15">
+<meta name="description" content="Text mining (tidytext package), LASSO regression (glmnet package)">
+
+<title>R Screencasts - The Office</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+span.underline{text-decoration: underline;}
+div.column{display: inline-block; vertical-align: top; width: 50%;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../images/favicon-32x32.png" rel="icon" type="image/png">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+<script defer="" data-domain="rscreencasts.com" src="https://plausible.io/js/script.outbound-links.js"></script>
+
+<meta property="og:title" content="R Screencasts - The Office">
+<meta property="og:description" content="Awesome data analysis screencasts from a top Data Scientist">
+<meta property="og:image" content="https://www.rscreencasts.com/images/rscreencasts_social.png">
+<meta property="og:url" content="https://www.rscreencasts.com/">
+<meta property="og:site_name" content="R Screencasts">
+
+<meta name="twitter:title" content="R Screencasts - The Office">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image:alt" content="Awesome data analysis screencasts from a top Data Scientist">
+<meta name="twitter:site" content="@oscarbaruffa">
+<meta name="twitter:description" content="Awesome data analysis screencasts from a top Data Scientists">
+<meta name="twitter:image" content="https://www.rscreencasts.com/images/rscreencasts_social.png">
+
+
+<link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">R Screencasts</span>
+  </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../index.html">Home</a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../resources.html">Resources</a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../about.html">About</a>
+  </li>  
+</ul>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#screencast" id="toc-screencast" class="nav-link active" data-scroll-target="#screencast">Screencast</a></li>
+  <li><a href="#timestamps" id="toc-timestamps" class="nav-link" data-scroll-target="#timestamps">Timestamps</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><p>The Office</p></h1>
+</div>
+
+<div>
+  <div class="description">
+    <p>Text mining (tidytext package), LASSO regression (glmnet package)</p>
+  </div>
+</div>
+
+
+<div class="quarto-title-meta">
+
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">March 15, 2020</p>
+    </div>
+  </div>
+    
+  </div>
+  
+
+</header>
+
+<p>Notable topics: Text mining (tidytext package), LASSO regression (glmnet package)</p>
+<p>Recorded on: 2020-03-15</p>
+<p>Timestamps by: Alex Cookson</p>
+<p><a href="https://github.com/dgrtwo/data-screencasts/blob/master/office-transcripts.Rmd">View code</a></p>
+<section id="screencast" class="level2">
+<h2 class="anchored" data-anchor-id="screencast">Screencast</h2>
+<div id="yt-player" data-video-id="_IvAubTDQME">
+
+</div>
+</section>
+<section id="timestamps" class="level2">
+<h2 class="anchored" data-anchor-id="timestamps">Timestamps</h2>
+<div id="topics">
+  <div class="topic">
+    <h3 id="ts-105" class="anchored">
+      <button class="btn btn-link btn-timestamp" onclick="playerSkipToTimestamp(105, this)">0:1:45</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Overview of transcripts data</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-145" class="anchored">
+      <button class="btn btn-link btn-timestamp" onclick="playerSkipToTimestamp(145, this)">0:2:25</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Overview of ratintgs data</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-250" class="anchored">
+      <button class="btn btn-link btn-timestamp" onclick="playerSkipToTimestamp(250, this)">0:4:10</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">fct_inorder</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using fct_inorder function to create a factor with levels based on when they appear in the dataframe</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-290" class="anchored">
+      <button class="btn btn-link btn-timestamp" onclick="playerSkipToTimestamp(290, this)">0:4:50</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">theme</span><span class="badge-functions badge bg-info">element_text</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using theme and element_text to turn axis labels 90 degrees</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-355" class="anchored">
+      <button class="btn btn-link btn-timestamp" onclick="playerSkipToTimestamp(355, this)">0:5:55</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">geom_line</span><span class="badge-functions badge bg-info">geom_point</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Creating a line graph with points at each observation (using geom_line and geom_point)</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-430" class="anchored">
+      <button class="btn btn-link btn-timestamp" onclick="playerSkipToTimestamp(430, this)">0:7:10</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Adding text labels to very high and very low-rated episodes</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-530" class="anchored">
+      <button class="btn btn-link btn-timestamp" onclick="playerSkipToTimestamp(530, this)">0:8:50</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">theme</span><span class="badge-functions badge bg-info">element_blank</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using theme function's panel.grid.major argument to get rid of some extraneous gridlines, using element_blank function</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-615" class="anchored">
+      <button class="btn btn-link btn-timestamp" onclick="playerSkipToTimestamp(615, this)">0:10:15</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">geom_text_repel</span></div><div><span class="badge-packages badge bg-primary">ggrepel</span></div></div>
+    <div class="topic_description">
+      <p>Using geom_text_repel from ggrepel package to experiment with different labelling (before abandoning this approach)</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-765" class="anchored">
+      <button class="btn btn-link btn-timestamp" onclick="playerSkipToTimestamp(765, this)">0:12:45</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">row_number</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using row_number function to add episode_number field to make graphing easier</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-845" class="anchored">
+      <button class="btn btn-link btn-timestamp" onclick="playerSkipToTimestamp(845, this)">0:14:05</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Explanation of why number of ratings (votes) is relevant to interpreting the graph</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1150" class="anchored">
+      <button class="btn btn-link btn-timestamp" onclick="playerSkipToTimestamp(1150, this)">0:19:10</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">unnest_tokens</span></div><div><span class="badge-packages badge bg-primary">tidytext</span></div></div>
+    <div class="topic_description">
+      <p>Using unnest_tokens function from tidytext package to split full-sentence text field to individual words</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1210" class="anchored">
+      <button class="btn btn-link btn-timestamp" onclick="playerSkipToTimestamp(1210, this)">0:20:10</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">anti_join</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using anti_join function to filter out stop words (e.g., and, or, the)</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1345" class="anchored">
+      <button class="btn btn-link btn-timestamp" onclick="playerSkipToTimestamp(1345, this)">0:22:25</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">str_remove_all</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using str_remove_all function to get rid of quotation marks from character names (quirks that might pop up when parsing)</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1540" class="anchored">
+      <button class="btn btn-link btn-timestamp" onclick="playerSkipToTimestamp(1540, this)">0:25:40</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">bind_tf_idf</span></div><div><span class="badge-packages badge bg-primary">tidytext</span></div></div>
+    <div class="topic_description">
+      <p>Asking, "Are there words that are specific to certain characters?" (using bind_tf_idf function)</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1945" class="anchored">
+      <button class="btn btn-link btn-timestamp" onclick="playerSkipToTimestamp(1945, this)">0:32:25</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">reorder_within</span><span class="badge-functions badge bg-info">scale_x_reordered</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using reorder_within function to re-order factors within a grouping (when a term appears in multiple groups) and scale_x_reordered function to graph</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2225" class="anchored">
+      <button class="btn btn-link btn-timestamp" onclick="playerSkipToTimestamp(2225, this)">0:37:05</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Asking, "What effects the popularity of an episode?"</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2275" class="anchored">
+      <button class="btn btn-link btn-timestamp" onclick="playerSkipToTimestamp(2275, this)">0:37:55</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Dealing with inconsistent episode names between datasets</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2485" class="anchored">
+      <button class="btn btn-link btn-timestamp" onclick="playerSkipToTimestamp(2485, this)">0:41:25</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">str_remove</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using str_remove function and some regex to remove "(Parts 1&amp;2)" from some episode names</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2565" class="anchored">
+      <button class="btn btn-link btn-timestamp" onclick="playerSkipToTimestamp(2565, this)">0:42:45</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">str_to_lower</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using str_to_lower function to further align episode names (addresses inconsistent capitalization)</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-3140" class="anchored">
+      <button class="btn btn-link btn-timestamp" onclick="playerSkipToTimestamp(3140, this)">0:52:20</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Setting up dataframe of features for a LASSO regression, with director and writer each being a feature with its own line</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-3175" class="anchored">
+      <button class="btn btn-link btn-timestamp" onclick="playerSkipToTimestamp(3175, this)">0:52:55</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">separate_rows</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using separate_rows function to separate episodes with multiple writers so that each has their own row</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-3505" class="anchored">
+      <button class="btn btn-link btn-timestamp" onclick="playerSkipToTimestamp(3505, this)">0:58:25</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">log2</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using log2 function to transform number of lines fields to something more useable (since it is log-normally distributed)</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-3620" class="anchored">
+      <button class="btn btn-link btn-timestamp" onclick="playerSkipToTimestamp(3620, this)">1:00:20</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">cast_sparse</span></div><div><span class="badge-packages badge bg-primary">tidytext</span></div></div>
+    <div class="topic_description">
+      <p>Using cast_sparse function from tidytext package to create a sparse matrix of features by episode</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-3715" class="anchored">
+      <button class="btn btn-link btn-timestamp" onclick="playerSkipToTimestamp(3715, this)">1:01:55</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">semi_join</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using semi_join function as a "filtering join"</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-3750" class="anchored">
+      <button class="btn btn-link btn-timestamp" onclick="playerSkipToTimestamp(3750, this)">1:02:30</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Setting up dataframes (after we have our features) to run LASSO regression</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-3830" class="anchored">
+      <button class="btn btn-link btn-timestamp" onclick="playerSkipToTimestamp(3830, this)">1:03:50</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">cv.glmnet</span></div><div><span class="badge-packages badge bg-primary">glmnet</span></div></div>
+    <div class="topic_description">
+      <p>Using cv.glmnet function from glmnet package to run a cross-validated LASSO regression</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-3935" class="anchored">
+      <button class="btn btn-link btn-timestamp" onclick="playerSkipToTimestamp(3935, this)">1:05:35</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Explanation of how to pick a lambda penalty parameter</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-3955" class="anchored">
+      <button class="btn btn-link btn-timestamp" onclick="playerSkipToTimestamp(3955, this)">1:05:55</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Explanation of output of LASSO model</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-4165" class="anchored">
+      <button class="btn btn-link btn-timestamp" onclick="playerSkipToTimestamp(4165, this)">1:09:25</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Outline of why David likes regularized linear models (which is what LASSO is)</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-4255" class="anchored">
+      <button class="btn btn-link btn-timestamp" onclick="playerSkipToTimestamp(4255, this)">1:10:55</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Summary of screencast</p>
+
+    </div>
+  </div>
+</div>
+<script>
+// 2. This code loads the IFrame Player API code asynchronously.
+var tag = document.createElement("script");
+
+tag.src = "https://www.youtube.com/iframe_api";
+var firstScriptTag = document.getElementsByTagName("script")[0];
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+// 3. This function creates an <iframe> (and YouTube player)
+//    after the API code downloads.
+var videoId = document.getElementById("yt-player").dataset.videoId;
+var player;
+function onYouTubeIframeAPIReady() {
+  player = new YT.Player("yt-player", {
+    height: "486",
+    width: "864",
+    videoId: videoId,
+    playerVars: {
+      "playsinline": 1
+    },
+    events: {
+      onStateChange: function(event) {
+        if (event.data == YT.PlayerState.PLAYING) {
+          followTimestamps()
+        }
+      }
+    }
+  });
+}
+
+function playerSkipToTimestamp(seconds, tsElement) {
+  player.seekTo(seconds, true)
+  tsElement.scrollIntoView()
+  document.getElementById("screencast").scrollIntoView()
+}
+
+const timestamps = Array.from(document.querySelectorAll('.topic h3[id^="ts-"]'))
+  .map(el => el.id.replace('ts-', ''))
+
+function followTimestamps() {
+  if (player.getPlayerState() !== 1) {
+    return
+  }
+  const currentTime = `${Math.floor(player.getCurrentTime())}`
+  if (timestamps.includes(currentTime)) {
+    const el = document.getElementById(`ts-${currentTime}`)
+    if (el) {
+      el.scrollIntoView()
+      document.getElementById("screencast").scrollIntoView()
+    }
+  }
+  setTimeout(followTimestamps, 1000)
+}
+</script>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    setTimeout(function() {
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      let href = ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+});
+</script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+      <div class="nav-footer-center">Vids by <a href="https://twitter.com/drob">David Robinson</a>. Timestamps &amp; rich content by <a href="https://twitter.com/alexcookson">Alex Cookson</a> and <a href="https://twitter.com/iamericfletcher">Eric Fletcher</a>. Website by <a href="https://twitter.com/OscarBaruffa">Oscar Baruffa</a>, sign up to my <a href="https://oscarbaruffa.com/newsletter/">newsletter</a> for R, data and careers</div>
+  </div>
+</footer>
+
+
+
+</body></html>

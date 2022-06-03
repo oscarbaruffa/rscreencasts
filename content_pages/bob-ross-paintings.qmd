@@ -1,0 +1,324 @@
+---
+title: |
+  Bob Ross Paintings
+description: |
+  Network graphs, Principal Component Analysis (PCA)
+date: 2019-08-11
+date-format: long
+aliases:
+  - "Bob Ross Paintings.html"
+---
+
+Notable topics: Network graphs, Principal Component Analysis (PCA)
+
+Recorded on: 2019-08-11
+
+Timestamps by: Alex Cookson
+
+[View code](https://github.com/dgrtwo/data-screencasts/blob/master/bob-ross.Rmd)
+
+## Screencast
+
+<div id="yt-player" data-video-id="sD993H5FBIY"></div>
+
+## Timestamps
+
+```{=html}
+<div id="topics">
+  <div class="topic">
+    <h3 id="ts-100">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(100, this)">0:1:40</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">clean_names</span></div><div><span class="badge-packages badge bg-primary">janitor</span></div></div>
+    <div class="topic_description">
+      <p>Using clean_names function in janitor package to get field names to snake_case</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-110">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(110, this)">0:1:50</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">gather</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using gather function to get wide elements into tall (tidy) format</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-155">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(155, this)">0:2:35</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">str_to_title</span><span class="badge-functions badge bg-info">str_replace</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Cleaning text (str_to_title, str_replace) to get into nicer-to-read format</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-210">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(210, this)">0:3:30</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">str_remove_all</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using str_remove_all function to trim trimming quotation marks and backslashes</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-280">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(280, this)">0:4:40</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">extract</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using extract function to extract the season number and episode number from episode field; uses regex capturing groups</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-840">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(840, this)">0:14:00</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">add_count</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using add_count function's name argument to specify field's name</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-935">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(935, this)">0:15:35</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Getting into whether the elements of Ross's paintings changed over time (e.g., are mountains more/less common over time?)</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1200">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1200, this)">0:20:00</button>
+    </h3>
+    <div class="topic_badges"><div></div><div><span class="badge-packages badge bg-primary">broom</span></div></div>
+    <div class="topic_description">
+      <p>Quick point: could have used logistic regression to see change over time of elements</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1270">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1270, this)">0:21:10</button>
+    </h3>
+    <div class="topic_badges"><div></div><div><span class="badge-packages badge bg-primary">widyr</span></div></div>
+    <div class="topic_description">
+      <p>Asking, &quot;What elements tends to appear together?&quot; prompting clustering analysis</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1335">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1335, this)">0:22:15</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">pairwise_cor</span></div><div><span class="badge-packages badge bg-primary">widyr</span></div></div>
+    <div class="topic_description">
+      <p>Using pairwise_cor to see which elements tend to appear together</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1370">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1370, this)">0:22:50</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Discussion of a blind spot of pairwise correlation (high or perfect correlation on elements that only appear once or twice)</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1685">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1685, this)">0:28:05</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Asking, &quot;What are clusters of elements that belong together?&quot;</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1710">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1710, this)">0:28:30</button>
+    </h3>
+    <div class="topic_badges"><div></div><div><span class="badge-packages badge bg-primary">ggraph</span><span class="badge-packages badge bg-primary">igraph</span></div></div>
+    <div class="topic_description">
+      <p>Creating network plot using ggraph and igraph packages</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1815">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1815, this)">0:30:15</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Reviewing network plot for interesting clusters (e.g., beach cluster, mountain cluster, structure cluster)</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1915">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1915, this)">0:31:55</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Explanation of Principal Component Analysis (PCA)</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2075">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2075, this)">0:34:35</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Start of actual PCA coding</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2090">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2090, this)">0:34:50</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">acast</span></div><div><span class="badge-packages badge bg-primary">reshape2</span></div></div>
+    <div class="topic_description">
+      <p>Using acast function to create matrix of painting titles x painting elements (initially wrong, corrected at 36:30)</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2215">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2215, this)">0:36:55</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">t</span><span class="badge-functions badge bg-info">colSums</span><span class="badge-functions badge bg-info">colMeans</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Centering the matrix data using t function (transpose of matrix), colSums function, and colMeans function</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2295">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2295, this)">0:38:15</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">svd</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using svd function to performn singular value decomposition, then tidying with broom package</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2395">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2395, this)">0:39:55</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Exploring one principal component to get a better feel for what PCA is doing</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2600">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2600, this)">0:43:20</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">reorder_within</span></div><div><span class="badge-packages badge bg-primary">tidytext</span></div></div>
+    <div class="topic_description">
+      <p>Using reorder_within function to re-order factors within a grouping</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2880">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2880, this)">0:48:00</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Exploring different matrix names in PCA (u, v, d)</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-3410">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(3410, this)">0:56:50</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Looking at top 6 principal components of painting elements</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-3465">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(3465, this)">0:57:45</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Showing percentage of variation that each principal component is responsible for</p>
+
+    </div>
+  </div>
+</div>
+```
+     
+<script>
+// 2. This code loads the IFrame Player API code asynchronously.
+var tag = document.createElement("script");
+
+tag.src = "https://www.youtube.com/iframe_api";
+var firstScriptTag = document.getElementsByTagName("script")[0];
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+// 3. This function creates an <iframe> (and YouTube player)
+//    after the API code downloads.
+var videoId = document.getElementById("yt-player").dataset.videoId;
+var player;
+function onYouTubeIframeAPIReady() {
+  player = new YT.Player("yt-player", {
+    height: "486",
+    width: "864",
+    videoId: videoId,
+    playerVars: {
+      "playsinline": 1
+    },
+    events: {
+      onStateChange: function(event) {
+        if (event.data == YT.PlayerState.PLAYING) {
+          followTimestamps()
+        }
+      }
+    }
+  });
+}
+
+function playerSkipToTimestamp(seconds, tsElement) {
+  player.seekTo(seconds, true)
+  tsElement.scrollIntoView()
+  document.getElementById("screencast").scrollIntoView()
+}
+
+const timestamps = Array.from(document.querySelectorAll('.topic h3[id^="ts-"]'))
+  .map(el => el.id.replace('ts-', ''))
+
+function followTimestamps() {
+  if (player.getPlayerState() !== 1) {
+    return
+  }
+  const currentTime = `${Math.floor(player.getCurrentTime())}`
+  if (timestamps.includes(currentTime)) {
+    const el = document.getElementById(`ts-${currentTime}`)
+    if (el) {
+      el.scrollIntoView()
+      document.getElementById("screencast").scrollIntoView()
+    }
+  }
+  setTimeout(followTimestamps, 1000)
+}
+</script>

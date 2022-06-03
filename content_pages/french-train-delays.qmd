@@ -1,0 +1,234 @@
+---
+title: |
+  French Train Delays
+description: |
+  Heat map
+date: 2019-02-25
+date-format: long
+aliases:
+  - "French Train Delays.html"
+---
+
+Notable topics: Heat map
+
+Recorded on: 2019-02-25
+
+Timestamps by: Alex Cookson
+
+[View code](https://github.com/dgrtwo/data-screencasts/blob/master/french-trains.Rmd)
+
+## Screencast
+
+<div id="yt-player" data-video-id="bmaigtpKyiM"></div>
+
+## Timestamps
+
+```{=html}
+<div id="topics">
+  <div class="topic">
+    <h3 id="ts-620">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(620, this)">0:10:20</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">fct_lump</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Boxplots of departure stations using fct_lump function</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-865">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(865, this)">0:14:25</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Creating heat map of departure and arrival delays, then cleaning up a sparse heat map</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-930">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(930, this)">0:15:30</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">fct_reorder</span><span class="badge-functions badge bg-info">length</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using fct_reorder function and length function to reorder stations based on how frequently they appear</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-990">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(990, this)">0:16:30</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">fct_infreq</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using fct_infreq to reorder based on infrequently-appearing stations (same as above, but without a trick needed)</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1065">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1065, this)">0:17:45</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">fct_lump</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using fct_lump function to lump based on proportion instead of number of top categories desired</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1125">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1125, this)">0:18:45</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">scale_fill_gradient2</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using scale_fill_gradient2 function to specify diverging colour scale</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1560">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1560, this)">0:26:00</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Checking another person's take on the data, which is a heatmap over time</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1720">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1720, this)">0:28:40</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">sprintf</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Converting year and month (as digits) into date-class variable using sprintf function and padding month number with extra zero when necessary</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2090">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2090, this)">0:34:50</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">summarise_at</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using summarise_at function to quickly sum multiple columns</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2375">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2375, this)">0:39:35</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">geom_tile</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Creating heatmap using geom_tile function for percentage of late trains by station over time</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2705">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2705, this)">0:45:05</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">fill</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using fill function to fill in missing NA values with data from previous observations</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-3035">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(3035, this)">0:50:35</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">paste0</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Grouping multiple variables into a single category using paste0 function</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-3100">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(3100, this)">0:51:40</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Grouping heatmap into International / National chunks with a weird hack</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-3140">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(3140, this)">0:52:20</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Further separating International / National visually</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-3210">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(3210, this)">0:53:30</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Less hacky way of separating International / National (compared to previous two rows)</p>
+
+    </div>
+  </div>
+</div>
+```
+     
+<script>
+// 2. This code loads the IFrame Player API code asynchronously.
+var tag = document.createElement("script");
+
+tag.src = "https://www.youtube.com/iframe_api";
+var firstScriptTag = document.getElementsByTagName("script")[0];
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+// 3. This function creates an <iframe> (and YouTube player)
+//    after the API code downloads.
+var videoId = document.getElementById("yt-player").dataset.videoId;
+var player;
+function onYouTubeIframeAPIReady() {
+  player = new YT.Player("yt-player", {
+    height: "486",
+    width: "864",
+    videoId: videoId,
+    playerVars: {
+      "playsinline": 1
+    },
+    events: {
+      onStateChange: function(event) {
+        if (event.data == YT.PlayerState.PLAYING) {
+          followTimestamps()
+        }
+      }
+    }
+  });
+}
+
+function playerSkipToTimestamp(seconds, tsElement) {
+  player.seekTo(seconds, true)
+  tsElement.scrollIntoView()
+  document.getElementById("screencast").scrollIntoView()
+}
+
+const timestamps = Array.from(document.querySelectorAll('.topic h3[id^="ts-"]'))
+  .map(el => el.id.replace('ts-', ''))
+
+function followTimestamps() {
+  if (player.getPlayerState() !== 1) {
+    return
+  }
+  const currentTime = `${Math.floor(player.getCurrentTime())}`
+  if (timestamps.includes(currentTime)) {
+    const el = document.getElementById(`ts-${currentTime}`)
+    if (el) {
+      el.scrollIntoView()
+      document.getElementById("screencast").scrollIntoView()
+    }
+  }
+  setTimeout(followTimestamps, 1000)
+}
+</script>

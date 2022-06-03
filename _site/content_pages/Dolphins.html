@@ -2,11 +2,11 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-0.9.388">
+<meta name="generator" content="quarto-0.9.501">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2018-12-18">
+<meta name="dcterms.date" content="2018-12-17">
 <meta name="description" content="Survival analysis">
 
 <title>R Screencasts - Dolphins</title>
@@ -19,20 +19,21 @@ div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 </style>
 
+
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="../site_libs/quarto-nav/headroom.min.js"></script>
 <script src="../site_libs/clipboard/clipboard.min.js"></script>
-<meta name="quarto:offset" content="../">
 <script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
 <link href="../images/favicon-32x32.png" rel="icon" type="image/png">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link id="quarto-text-highlighting-styles" href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet">
@@ -112,35 +113,8 @@ ul.task-list{list-style: none;}
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#full-screencast" id="toc-full-screencast" class="nav-link active" data-scroll-target="#full-screencast">Full screencast</a></li>
-  <li><a href="#timestamps" id="toc-timestamps" class="nav-link" data-scroll-target="#timestamps">Timestamps</a>
-  <ul class="collapse">
-  <li><a href="#section" id="toc-section" class="nav-link" data-scroll-target="#section">0:6:25</a></li>
-  <li><a href="#section-1" id="toc-section-1" class="nav-link" data-scroll-target="#section-1">0:8:30</a></li>
-  <li><a href="#section-2" id="toc-section-2" class="nav-link" data-scroll-target="#section-2">0:9:55</a></li>
-  <li><a href="#section-3" id="toc-section-3" class="nav-link" data-scroll-target="#section-3">0:11:50</a></li>
-  <li><a href="#section-4" id="toc-section-4" class="nav-link" data-scroll-target="#section-4">0:15:30</a></li>
-  <li><a href="#section-5" id="toc-section-5" class="nav-link" data-scroll-target="#section-5">0:16:00</a></li>
-  <li><a href="#section-6" id="toc-section-6" class="nav-link" data-scroll-target="#section-6">0:17:25</a></li>
-  <li><a href="#section-7" id="toc-section-7" class="nav-link" data-scroll-target="#section-7">0:19:10</a></li>
-  <li><a href="#section-8" id="toc-section-8" class="nav-link" data-scroll-target="#section-8">0:21:15</a></li>
-  <li><a href="#section-9" id="toc-section-9" class="nav-link" data-scroll-target="#section-9">0:23:25</a></li>
-  <li><a href="#section-10" id="toc-section-10" class="nav-link" data-scroll-target="#section-10">0:24:05</a></li>
-  <li><a href="#section-11" id="toc-section-11" class="nav-link" data-scroll-target="#section-11">0:27:05</a></li>
-  <li><a href="#section-12" id="toc-section-12" class="nav-link" data-scroll-target="#section-12">0:31:30</a></li>
-  <li><a href="#section-13" id="toc-section-13" class="nav-link" data-scroll-target="#section-13">0:33:10</a></li>
-  <li><a href="#section-14" id="toc-section-14" class="nav-link" data-scroll-target="#section-14">0:40:00</a></li>
-  <li><a href="#section-15" id="toc-section-15" class="nav-link" data-scroll-target="#section-15">0:46:25</a></li>
-  <li><a href="#section-16" id="toc-section-16" class="nav-link" data-scroll-target="#section-16">0:47:30</a></li>
-  <li><a href="#section-17" id="toc-section-17" class="nav-link" data-scroll-target="#section-17">0:48:30</a></li>
-  <li><a href="#section-18" id="toc-section-18" class="nav-link" data-scroll-target="#section-18">0:50:10</a></li>
-  <li><a href="#section-19" id="toc-section-19" class="nav-link" data-scroll-target="#section-19">0:50:30</a></li>
-  <li><a href="#section-20" id="toc-section-20" class="nav-link" data-scroll-target="#section-20">0:52:20</a></li>
-  <li><a href="#section-21" id="toc-section-21" class="nav-link" data-scroll-target="#section-21">0:54:25</a></li>
-  <li><a href="#section-22" id="toc-section-22" class="nav-link" data-scroll-target="#section-22">0:55:50</a></li>
-  <li><a href="#section-23" id="toc-section-23" class="nav-link" data-scroll-target="#section-23">0:57:25</a></li>
-  <li><a href="#section-24" id="toc-section-24" class="nav-link" data-scroll-target="#section-24">1:00:10</a></li>
-  </ul></li>
+  <li><a href="#screencast" id="toc-screencast" class="nav-link active" data-scroll-target="#screencast">Screencast</a></li>
+  <li><a href="#timestamps" id="toc-timestamps" class="nav-link" data-scroll-target="#timestamps">Timestamps</a></li>
   </ul>
 </nav>
     </div>
@@ -149,16 +123,14 @@ ul.task-list{list-style: none;}
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Dolphins</h1>
+<h1 class="title"><p>Dolphins</p></h1>
 </div>
 
 <div>
   <div class="description">
-    Survival analysis
+    <p>Survival analysis</p>
   </div>
 </div>
-
-
 
 
 <div class="quarto-title-meta">
@@ -167,7 +139,7 @@ ul.task-list{list-style: none;}
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">December 18, 2018</p>
+      <p class="date">December 17, 2018</p>
     </div>
   </div>
     
@@ -177,218 +149,325 @@ ul.task-list{list-style: none;}
 </header>
 
 <p>Notable topics: Survival analysis</p>
-<p>Recorded on: 2018-12-18</p>
+<p>Recorded on: 2018-12-17</p>
 <p>Timestamps by: Alex Cookson</p>
 <p><a href="NA">View code</a></p>
-<section id="full-screencast" class="level2">
-<h2 class="anchored" data-anchor-id="full-screencast">Full screencast</h2>
-<iframe class="video" src="https://www.youtube.com/embed/KiqpX-gNIS4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
-</iframe>
+<section id="screencast" class="level2">
+<h2 class="anchored" data-anchor-id="screencast">Screencast</h2>
+<div id="yt-player" data-video-id="KiqpX-gNIS4">
+
+</div>
 </section>
 <section id="timestamps" class="level2">
 <h2 class="anchored" data-anchor-id="timestamps">Timestamps</h2>
-<section id="section" class="level3">
-<h3 class="anchored" data-anchor-id="section">0:6:25</h3>
-<p>Using year function from lubridate package to simplify calculating age of dolphins</p>
-<p>NA</p>
-<p>NA</p>
-<iframe class="video" src="https://www.youtube.com/embed/KiqpX-gNIS4?start=385" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
-</iframe>
-</section>
-<section id="section-1" class="level3">
-<h3 class="anchored" data-anchor-id="section-1">0:8:30</h3>
-<p>Combining count and fct_lump functions to get counts of top 5 species (with other species lumped in “Other”)</p>
-<p>count | fct_lump</p>
-<p>NA</p>
-<iframe class="video" src="https://www.youtube.com/embed/KiqpX-gNIS4?start=510" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
-</iframe>
-</section>
-<section id="section-2" class="level3">
-<h3 class="anchored" data-anchor-id="section-2">0:9:55</h3>
-<p>Creating boxplot of species and age</p>
-<p>NA</p>
-<p>NA</p>
-<iframe class="video" src="https://www.youtube.com/embed/KiqpX-gNIS4?start=595" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
-</iframe>
-</section>
-<section id="section-3" class="level3">
-<h3 class="anchored" data-anchor-id="section-3">0:11:50</h3>
-<p>Dealing with different types of NA (double, logical) (he doesn’t get it in this case, but it’s still useful)</p>
-<p>NA</p>
-<p>NA</p>
-<iframe class="video" src="https://www.youtube.com/embed/KiqpX-gNIS4?start=710" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
-</iframe>
-</section>
-<section id="section-4" class="level3">
-<h3 class="anchored" data-anchor-id="section-4">0:15:30</h3>
-<p>Adding acquisition type as colour dimension to histogram</p>
-<p>NA</p>
-<p>NA</p>
-<iframe class="video" src="https://www.youtube.com/embed/KiqpX-gNIS4?start=930" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
-</iframe>
-</section>
-<section id="section-5" class="level3">
-<h3 class="anchored" data-anchor-id="section-5">0:16:00</h3>
-<p>Creating a spinogram of acquisition type over time (alternative to histogram) using geom_area</p>
-<p>geom_area</p>
-<p>NA</p>
-<iframe class="video" src="https://www.youtube.com/embed/KiqpX-gNIS4?start=960" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
-</iframe>
-</section>
-<section id="section-6" class="level3">
-<h3 class="anchored" data-anchor-id="section-6">0:17:25</h3>
-<p>Binning year into decade using truncated division operator %/%</p>
-<p>%/%</p>
-<p>NA</p>
-<iframe class="video" src="https://www.youtube.com/embed/KiqpX-gNIS4?start=1045" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
-</iframe>
-</section>
-<section id="section-7" class="level3">
-<h3 class="anchored" data-anchor-id="section-7">0:19:10</h3>
-<p>Fixing annoying triangular gaps in spinogram using complete function to fill in gaps in data</p>
-<p>complete</p>
-<p>NA</p>
-<iframe class="video" src="https://www.youtube.com/embed/KiqpX-gNIS4?start=1150" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
-</iframe>
-</section>
-<section id="section-8" class="level3">
-<h3 class="anchored" data-anchor-id="section-8">0:21:15</h3>
-<p>Using fct_reorder function to reorder acquisition type (bigger categories are placed on the bottom of the spinogram)</p>
-<p>fct_reorder</p>
-<p>NA</p>
-<iframe class="video" src="https://www.youtube.com/embed/KiqpX-gNIS4?start=1275" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
-</iframe>
-</section>
-<section id="section-9" class="level3">
-<h3 class="anchored" data-anchor-id="section-9">0:23:25</h3>
-<p>Adding vertical dashed reference line using geom_vline function</p>
-<p>geom_vline</p>
-<p>NA</p>
-<iframe class="video" src="https://www.youtube.com/embed/KiqpX-gNIS4?start=1405" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
-</iframe>
-</section>
-<section id="section-10" class="level3">
-<h3 class="anchored" data-anchor-id="section-10">0:24:05</h3>
-<p>Starting analysis of acquisition location</p>
-<p>NA</p>
-<p>NA</p>
-<iframe class="video" src="https://www.youtube.com/embed/KiqpX-gNIS4?start=1445" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
-</iframe>
-</section>
-<section id="section-11" class="level3">
-<h3 class="anchored" data-anchor-id="section-11">0:27:05</h3>
-<p>Matching messy text data with regex to aggregate into a few categories variables with fuzzyjoin package</p>
-<p>regex_left_join</p>
-<p>fuzzyjoin</p>
-<iframe class="video" src="https://www.youtube.com/embed/KiqpX-gNIS4?start=1625" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
-</iframe>
-</section>
-<section id="section-12" class="level3">
-<h3 class="anchored" data-anchor-id="section-12">0:31:30</h3>
-<p>Using distinct function’s .keep_all argument to keep only one row per animal ID</p>
-<p>distinct</p>
-<p>NA</p>
-<iframe class="video" src="https://www.youtube.com/embed/KiqpX-gNIS4?start=1890" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
-</iframe>
-</section>
-<section id="section-13" class="level3">
-<h3 class="anchored" data-anchor-id="section-13">0:33:10</h3>
-<p>Using coalesce function to conditionally replace NAs (same functionality as SQL verb)</p>
-<p>coalesce</p>
-<p>NA</p>
-<iframe class="video" src="https://www.youtube.com/embed/KiqpX-gNIS4?start=1990" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
-</iframe>
-</section>
-<section id="section-14" class="level3">
-<h3 class="anchored" data-anchor-id="section-14">0:40:00</h3>
-<p>Starting survival analysis</p>
-<p>NA</p>
-<p>NA</p>
-<iframe class="video" src="https://www.youtube.com/embed/KiqpX-gNIS4?start=2400" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
-</iframe>
-</section>
-<section id="section-15" class="level3">
-<h3 class="anchored" data-anchor-id="section-15">0:46:25</h3>
-<p>Using survfit function from survival package to get a baseline survival curve (i.e., not regressed on any independent variables)</p>
-<p>survfit</p>
-<p>survival</p>
-<iframe class="video" src="https://www.youtube.com/embed/KiqpX-gNIS4?start=2785" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
-</iframe>
-</section>
-<section id="section-16" class="level3">
-<h3 class="anchored" data-anchor-id="section-16">0:47:30</h3>
-<p>Fixing cases where death year is before birth year</p>
-<p>NA</p>
-<p>NA</p>
-<iframe class="video" src="https://www.youtube.com/embed/KiqpX-gNIS4?start=2850" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
-</iframe>
-</section>
-<section id="section-17" class="level3">
-<h3 class="anchored" data-anchor-id="section-17">0:48:30</h3>
-<p>Fixing specification of survfit model to better fit the format of our data (right-censored data)</p>
-<p>NA</p>
-<p>NA</p>
-<iframe class="video" src="https://www.youtube.com/embed/KiqpX-gNIS4?start=2910" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
-</iframe>
-</section>
-<section id="section-18" class="level3">
-<h3 class="anchored" data-anchor-id="section-18">0:50:10</h3>
-<p>Built-in plot of baseline survival model (estimation of percentage survival at a given age)</p>
-<p>NA</p>
-<p>NA</p>
-<iframe class="video" src="https://www.youtube.com/embed/KiqpX-gNIS4?start=3010" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
-</iframe>
-</section>
-<section id="section-19" class="level3">
-<h3 class="anchored" data-anchor-id="section-19">0:50:30</h3>
-<p>Using broom package to tidy the survival model data (which is better for ggplot2 plotting)</p>
-<p>tidy</p>
-<p>broom</p>
-<iframe class="video" src="https://www.youtube.com/embed/KiqpX-gNIS4?start=3030" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
-</iframe>
-</section>
-<section id="section-20" class="level3">
-<h3 class="anchored" data-anchor-id="section-20">0:52:20</h3>
-<p>Fitting survival curve based on sex</p>
-<p>NA</p>
-<p>NA</p>
-<iframe class="video" src="https://www.youtube.com/embed/KiqpX-gNIS4?start=3140" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
-</iframe>
-</section>
-<section id="section-21" class="level3">
-<h3 class="anchored" data-anchor-id="section-21">0:54:25</h3>
-<p>Cox proportional hazards model (to investigate association of survival time and one or more predictors)</p>
-<p>NA</p>
-<p>NA</p>
-<iframe class="video" src="https://www.youtube.com/embed/KiqpX-gNIS4?start=3265" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
-</iframe>
-</section>
-<section id="section-22" class="level3">
-<h3 class="anchored" data-anchor-id="section-22">0:55:50</h3>
-<p>Explanation of why dolphins with unknown sex likely have a systematic bias with their data</p>
-<p>NA</p>
-<p>NA</p>
-<iframe class="video" src="https://www.youtube.com/embed/KiqpX-gNIS4?start=3350" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
-</iframe>
-</section>
-<section id="section-23" class="level3">
-<h3 class="anchored" data-anchor-id="section-23">0:57:25</h3>
-<p>Investigating whether being born in captivity is associated with different survival rates</p>
-<p>NA</p>
-<p>NA</p>
-<iframe class="video" src="https://www.youtube.com/embed/KiqpX-gNIS4?start=3445" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
-</iframe>
-</section>
-<section id="section-24" class="level3">
-<h3 class="anchored" data-anchor-id="section-24">1:00:10</h3>
-<p>Summary of screencast</p>
-<p>NA</p>
-<p>NA</p>
-<iframe class="video" src="https://www.youtube.com/embed/KiqpX-gNIS4?start=3610" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
-</iframe>
+<div id="topics">
+  <div class="topic">
+    <h3 id="ts-385" class="anchored">
+      <button class="btn btn-link btn-timestamp" onclick="playerSkipToTimestamp(385, this)">0:6:25</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Using year function from lubridate package to simplify calculating age of dolphins</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-510" class="anchored">
+      <button class="btn btn-link btn-timestamp" onclick="playerSkipToTimestamp(510, this)">0:8:30</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">count</span><span class="badge-functions badge bg-info">fct_lump</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Combining count and fct_lump functions to get counts of top 5 species (with other species lumped in "Other")</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-595" class="anchored">
+      <button class="btn btn-link btn-timestamp" onclick="playerSkipToTimestamp(595, this)">0:9:55</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Creating boxplot of species and age</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-710" class="anchored">
+      <button class="btn btn-link btn-timestamp" onclick="playerSkipToTimestamp(710, this)">0:11:50</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Dealing with different types of NA (double, logical) (he doesn't get it in this case, but it's still useful)</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-930" class="anchored">
+      <button class="btn btn-link btn-timestamp" onclick="playerSkipToTimestamp(930, this)">0:15:30</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Adding acquisition type as colour dimension to histogram</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-960" class="anchored">
+      <button class="btn btn-link btn-timestamp" onclick="playerSkipToTimestamp(960, this)">0:16:00</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">geom_area</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Creating a spinogram of acquisition type over time (alternative to histogram) using geom_area</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1045" class="anchored">
+      <button class="btn btn-link btn-timestamp" onclick="playerSkipToTimestamp(1045, this)">0:17:25</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">%/%</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Binning year into decade using truncated division operator %/%</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1150" class="anchored">
+      <button class="btn btn-link btn-timestamp" onclick="playerSkipToTimestamp(1150, this)">0:19:10</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">complete</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Fixing annoying triangular gaps in spinogram using complete function to fill in gaps in data</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1275" class="anchored">
+      <button class="btn btn-link btn-timestamp" onclick="playerSkipToTimestamp(1275, this)">0:21:15</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">fct_reorder</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using fct_reorder function to reorder acquisition type (bigger categories are placed on the bottom of the spinogram)</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1405" class="anchored">
+      <button class="btn btn-link btn-timestamp" onclick="playerSkipToTimestamp(1405, this)">0:23:25</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">geom_vline</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Adding vertical dashed reference line using geom_vline function</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1445" class="anchored">
+      <button class="btn btn-link btn-timestamp" onclick="playerSkipToTimestamp(1445, this)">0:24:05</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Starting analysis of acquisition location</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1625" class="anchored">
+      <button class="btn btn-link btn-timestamp" onclick="playerSkipToTimestamp(1625, this)">0:27:05</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">regex_left_join</span></div><div><span class="badge-packages badge bg-primary">fuzzyjoin</span></div></div>
+    <div class="topic_description">
+      <p>Matching messy text data with regex to aggregate into a few categories variables with fuzzyjoin package</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1890" class="anchored">
+      <button class="btn btn-link btn-timestamp" onclick="playerSkipToTimestamp(1890, this)">0:31:30</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">distinct</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using distinct function's .keep_all argument to keep only one row per animal ID</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1990" class="anchored">
+      <button class="btn btn-link btn-timestamp" onclick="playerSkipToTimestamp(1990, this)">0:33:10</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">coalesce</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using coalesce function to conditionally replace NAs (same functionality as SQL verb)</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2400" class="anchored">
+      <button class="btn btn-link btn-timestamp" onclick="playerSkipToTimestamp(2400, this)">0:40:00</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Starting survival analysis</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2785" class="anchored">
+      <button class="btn btn-link btn-timestamp" onclick="playerSkipToTimestamp(2785, this)">0:46:25</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">survfit</span></div><div><span class="badge-packages badge bg-primary">survival</span></div></div>
+    <div class="topic_description">
+      <p>Using survfit function from survival package to get a baseline survival curve (i.e., not regressed on any independent variables)</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2850" class="anchored">
+      <button class="btn btn-link btn-timestamp" onclick="playerSkipToTimestamp(2850, this)">0:47:30</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Fixing cases where death year is before birth year</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2910" class="anchored">
+      <button class="btn btn-link btn-timestamp" onclick="playerSkipToTimestamp(2910, this)">0:48:30</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Fixing specification of survfit model to better fit the format of our data (right-censored data)</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-3010" class="anchored">
+      <button class="btn btn-link btn-timestamp" onclick="playerSkipToTimestamp(3010, this)">0:50:10</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Built-in plot of baseline survival model (estimation of percentage survival at a given age)</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-3030" class="anchored">
+      <button class="btn btn-link btn-timestamp" onclick="playerSkipToTimestamp(3030, this)">0:50:30</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">tidy</span></div><div><span class="badge-packages badge bg-primary">broom</span></div></div>
+    <div class="topic_description">
+      <p>Using broom package to tidy the survival model data (which is better for ggplot2 plotting)</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-3140" class="anchored">
+      <button class="btn btn-link btn-timestamp" onclick="playerSkipToTimestamp(3140, this)">0:52:20</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Fitting survival curve based on sex</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-3265" class="anchored">
+      <button class="btn btn-link btn-timestamp" onclick="playerSkipToTimestamp(3265, this)">0:54:25</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Cox proportional hazards model (to investigate association of survival time and one or more predictors)</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-3350" class="anchored">
+      <button class="btn btn-link btn-timestamp" onclick="playerSkipToTimestamp(3350, this)">0:55:50</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Explanation of why dolphins with unknown sex likely have a systematic bias with their data</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-3445" class="anchored">
+      <button class="btn btn-link btn-timestamp" onclick="playerSkipToTimestamp(3445, this)">0:57:25</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Investigating whether being born in captivity is associated with different survival rates</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-3610" class="anchored">
+      <button class="btn btn-link btn-timestamp" onclick="playerSkipToTimestamp(3610, this)">1:00:10</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Summary of screencast</p>
+
+    </div>
+  </div>
+</div>
+<script>
+// 2. This code loads the IFrame Player API code asynchronously.
+var tag = document.createElement("script");
+
+tag.src = "https://www.youtube.com/iframe_api";
+var firstScriptTag = document.getElementsByTagName("script")[0];
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+// 3. This function creates an <iframe> (and YouTube player)
+//    after the API code downloads.
+var videoId = document.getElementById("yt-player").dataset.videoId;
+var player;
+function onYouTubeIframeAPIReady() {
+  player = new YT.Player("yt-player", {
+    height: "486",
+    width: "864",
+    videoId: videoId,
+    playerVars: {
+      "playsinline": 1
+    },
+    events: {
+      onStateChange: function(event) {
+        if (event.data == YT.PlayerState.PLAYING) {
+          followTimestamps()
+        }
+      }
+    }
+  });
+}
+
+function playerSkipToTimestamp(seconds, tsElement) {
+  player.seekTo(seconds, true)
+  tsElement.scrollIntoView()
+  document.getElementById("screencast").scrollIntoView()
+}
+
+const timestamps = Array.from(document.querySelectorAll('.topic h3[id^="ts-"]'))
+  .map(el => el.id.replace('ts-', ''))
+
+function followTimestamps() {
+  if (player.getPlayerState() !== 1) {
+    return
+  }
+  const currentTime = `${Math.floor(player.getCurrentTime())}`
+  if (timestamps.includes(currentTime)) {
+    const el = document.getElementById(`ts-${currentTime}`)
+    if (el) {
+      el.scrollIntoView()
+      document.getElementById("screencast").scrollIntoView()
+    }
+  }
+  setTimeout(followTimestamps, 1000)
+}
+</script>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->

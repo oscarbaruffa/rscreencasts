@@ -1,0 +1,144 @@
+---
+title: |
+  Broadway Musicals
+description: |
+  Creating an interactive dashboard with shinymetrics and tidymetrics, moving windows, period aggregation
+date: 2020-04-27
+date-format: long
+aliases:
+  - "Broadway Musicals.html"
+---
+
+Notable topics: Creating an interactive dashboard with shinymetrics and tidymetrics, moving windows, period aggregation
+
+Recorded on: 2020-04-27
+
+Timestamps by: Eric Fletcher
+
+[View code](https://github.com/dgrtwo/data-screencasts/blob/master/broadway.Rmd)
+
+## Screencast
+
+<div id="yt-player" data-video-id="OhY5ZaILRpg"></div>
+
+## Timestamps
+
+```{=html}
+<div id="topics">
+  <div class="topic">
+    <h3 id="ts-495">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(495, this)">0:8:15</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">rename</span><span class="badge-functions badge bg-info">cross_by_periods</span></div><div><span class="badge-packages badge bg-primary">tidymetrics</span></div></div>
+    <div class="topic_description">
+      <p>Use the <code>cross_by_periods </code> function from the <code>tidymetrics</code> package to aggregate data over time (<code>month</code>, <code>quarter</code>, and <code>year</code>) then visualize with <code>geom_line</code>.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-840">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(840, this)">0:14:00</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">cross_by_periods</span></div><div><span class="badge-packages badge bg-primary">tidymetrics</span></div></div>
+    <div class="topic_description">
+      <p>Use the <code>cross_by_periods </code> function from the <code>tidymetrics</code>  package with <code>windows = c(28))</code> to create a 4-week rolling average across <code>month</code>, <code>quarter</code>, and <code>year</code>.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1310">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1310, this)">0:21:50</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">use_metrics_scaffold</span><span class="badge-functions badge bg-info">create_metrics</span></div><div><span class="badge-packages badge bg-primary">shinymetrics</span><span class="badge-packages badge bg-primary">Tidaymetrics</span></div></div>
+    <div class="topic_description">
+      <p>Create and <code>interactive dashboard</code> using the <code>shinymetrics</code> and <code>tidymetrics</code> packages.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1500">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1500, this)">0:25:00</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">str_remove</span></div><div><span class="badge-packages badge bg-primary">stringr</span></div></div>
+    <div class="topic_description">
+      <p>Use the <code>str_remove</code> function from the <code>stringr</code> package to remove matched pattern in a string.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1520">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1520, this)">0:25:20</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">cross_by_dimensions</span></div><div><span class="badge-packages badge bg-primary">tidymetrics</span></div></div>
+    <div class="topic_description">
+      <p>Use the <code>cross_by_dimensions</code> function from the <code>tidymetrics</code> package which acts as an extended <code>group_by</code> that allows complete summaries across each individual dimension and possible combinations.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2485">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2485, this)">0:41:25</button>
+    </h3>
+    <div class="topic_badges"><div></div><div><span class="badge-packages badge bg-primary">shinybones</span></div></div>
+    <div class="topic_description">
+      <p>Use the <code>shinybones</code> package to create an interactive dashboard to visualize all 3 metrics at the same time.</p>
+
+    </div>
+  </div>
+</div>
+```
+     
+<script>
+// 2. This code loads the IFrame Player API code asynchronously.
+var tag = document.createElement("script");
+
+tag.src = "https://www.youtube.com/iframe_api";
+var firstScriptTag = document.getElementsByTagName("script")[0];
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+// 3. This function creates an <iframe> (and YouTube player)
+//    after the API code downloads.
+var videoId = document.getElementById("yt-player").dataset.videoId;
+var player;
+function onYouTubeIframeAPIReady() {
+  player = new YT.Player("yt-player", {
+    height: "486",
+    width: "864",
+    videoId: videoId,
+    playerVars: {
+      "playsinline": 1
+    },
+    events: {
+      onStateChange: function(event) {
+        if (event.data == YT.PlayerState.PLAYING) {
+          followTimestamps()
+        }
+      }
+    }
+  });
+}
+
+function playerSkipToTimestamp(seconds, tsElement) {
+  player.seekTo(seconds, true)
+  tsElement.scrollIntoView()
+  document.getElementById("screencast").scrollIntoView()
+}
+
+const timestamps = Array.from(document.querySelectorAll('.topic h3[id^="ts-"]'))
+  .map(el => el.id.replace('ts-', ''))
+
+function followTimestamps() {
+  if (player.getPlayerState() !== 1) {
+    return
+  }
+  const currentTime = `${Math.floor(player.getCurrentTime())}`
+  if (timestamps.includes(currentTime)) {
+    const el = document.getElementById(`ts-${currentTime}`)
+    if (el) {
+      el.scrollIntoView()
+      document.getElementById("screencast").scrollIntoView()
+    }
+  }
+  setTimeout(followTimestamps, 1000)
+}
+</script>

@@ -1,0 +1,344 @@
+---
+title: |
+  HBCU Enrollment
+description: |
+  Data Cleaning
+date: 2021-02-01
+date-format: long
+aliases:
+  - "HBCU Enrollment.html"
+---
+
+Notable topics: Data Cleaning
+
+Recorded on: 2021-02-01
+
+Timestamps by: Eric Fletcher
+
+[View code](https://github.com/dgrtwo/data-screencasts/blob/master/2021_02_02_hbcu.Rmd)
+
+## Screencast
+
+<div id="yt-player" data-video-id="TSG74voJQ3E"></div>
+
+## Timestamps
+
+```{=html}
+<div id="topics">
+  <div class="topic">
+    <h3 id="ts-165">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(165, this)">0:2:45</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">str_detect</span></div><div><span class="badge-packages badge bg-primary">stringr</span></div></div>
+    <div class="topic_description">
+      <p>Detect the presence or absence of a pattern in a string.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-210">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(210, this)">0:3:30</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">separate</span></div><div><span class="badge-packages badge bg-primary">tidyr</span></div></div>
+    <div class="topic_description">
+      <p>Separate a character column into multiple columns with a regular expression or numeric locations</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-210">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(210, this)">0:3:30</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">rename</span></div><div><span class="badge-packages badge bg-primary">dplyr</span></div></div>
+    <div class="topic_description">
+      <p>Rename column.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-260">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(260, this)">0:4:20</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">distinct</span></div><div><span class="badge-packages badge bg-primary">dplyr</span></div></div>
+    <div class="topic_description">
+      <p>Select only unique/distinct rows from a data frame.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-355">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(355, this)">0:5:55</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">expand_limits</span></div><div><span class="badge-packages badge bg-primary">ggplot2</span></div></div>
+    <div class="topic_description">
+      <p>Expand the y axis plot limits by starting at 0.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-380">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(380, this)">0:6:20</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">full_join</span></div><div><span class="badge-packages badge bg-primary">dplyr</span></div></div>
+    <div class="topic_description">
+      <p>Combine two datasets while including all rows in x and y.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-660">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(660, this)">0:11:00</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">percent</span></div><div><span class="badge-packages badge bg-primary">scales</span></div></div>
+    <div class="topic_description">
+      <p>Y axis labels as percentages (2.5%, 50%, etc).</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-750">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(750, this)">0:12:30</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">bind_rows</span></div><div><span class="badge-packages badge bg-primary">dplyr</span></div></div>
+    <div class="topic_description">
+      <p>Bind multiple data frames by row and an explanation as to why it's not the best approach for joining given the other options.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-895">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(895, this)">0:14:55</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">rbind</span><span class="badge-functions badge bg-info">row_bind</span></div><div><span class="badge-packages badge bg-primary">dplyr</span><span class="badge-packages badge bg-primary">base</span></div></div>
+    <div class="topic_description">
+      <p>Brief discussion on the differences between <code>rbind</code> and <code>row_bind</code>.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-970">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(970, this)">0:16:10</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">str_remove</span></div><div><span class="badge-packages badge bg-primary">stringr</span></div></div>
+    <div class="topic_description">
+      <p>Remove matched patterns in a string.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1030">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1030, this)">0:17:10</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">clean_names</span></div><div><span class="badge-packages badge bg-primary">janitor</span></div></div>
+    <div class="topic_description">
+      <p>Turn variable names into 'snake case' (e.g. Standard Error, standard_error).</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1090">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1090, this)">0:18:10</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">mutate_if</span><span class="badge-functions badge bg-info">is.character</span><span class="badge-functions badge bg-info">parse_number</span></div><div><span class="badge-packages badge bg-primary">dplyr</span><span class="badge-packages badge bg-primary">base</span><span class="badge-packages badge bg-primary">readr</span></div></div>
+    <div class="topic_description">
+      <p>Mutate multiple columns to change type from <code>character</code> to <code>numeric</code> while parsing out the numbers while getting rid of the other characters in the dataset.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1130">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1130, this)">0:18:50</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">slice</span></div><div><span class="badge-packages badge bg-primary">dplyr</span></div></div>
+    <div class="topic_description">
+      <p>Subset rows using their positions.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1215">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1215, this)">0:20:15</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">gather</span><span class="badge-functions badge bg-info">mutate</span><span class="badge-functions badge bg-info">ifelse</span><span class="badge-functions badge bg-info">str_remove</span><span class="badge-functions badge bg-info">spread</span></div><div><span class="badge-packages badge bg-primary">tidyr</span><span class="badge-packages badge bg-primary">dplyr</span><span class="badge-packages badge bg-primary">stringr</span><span class="badge-packages badge bg-primary">base</span></div></div>
+    <div class="topic_description">
+      <p>Reshape the data from wide to long such that there is one row for each year and race.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1285">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1285, this)">0:21:25</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">abs</span></div><div><span class="badge-packages badge bg-primary">base</span></div></div>
+    <div class="topic_description">
+      <p>Compute the absolute value of x</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1495">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1495, this)">0:24:55</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">str_remove</span></div><div><span class="badge-packages badge bg-primary">stringr</span></div></div>
+    <div class="topic_description">
+      <p>Remove matched patterns in a string (e.g. black1, black &amp; white1, white).</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1535">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1535, this)">0:25:35</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">fct_reorder</span></div><div><span class="badge-packages badge bg-primary">forcats</span></div></div>
+    <div class="topic_description">
+      <p>Reorder factor levels in <code>geom_line</code> plot by sorting along another variable.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1765">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1765, this)">0:29:25</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">bind_rows</span></div><div><span class="badge-packages badge bg-primary">dplyr</span></div></div>
+    <div class="topic_description">
+      <p>Bind multiple data frames by row.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2165">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2165, this)">0:36:05</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">fct_relevel</span></div><div><span class="badge-packages badge bg-primary">forcats</span></div></div>
+    <div class="topic_description">
+      <p>Reorder factor levels by hand.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2265">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2265, this)">0:37:45</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">str_remove</span></div><div><span class="badge-packages badge bg-primary">stringr</span></div></div>
+    <div class="topic_description">
+      <p>Detect and remove the presence of a pattern in a string to remove duplication from <code>geom_line</code> plot legend.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2330">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2330, this)">0:38:50</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">fct_reorder</span></div><div><span class="badge-packages badge bg-primary">forcats</span></div></div>
+    <div class="topic_description">
+      <p>&quot;Reorder factor levels in <code>geom_line</code> plot by sorting along another variable with ordering based on the last value to make the data line up with how the values are displayed in the legend. 'fct_reorder(race_ethnicity, percent, last, .desc = TRUE)`&quot;</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2435">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2435, this)">0:40:35</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">read_excel</span></div><div><span class="badge-packages badge bg-primary">readxl</span></div></div>
+    <div class="topic_description">
+      <p>Import external Excel data set from <code>Data.World</code>.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2660">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2660, this)">0:44:20</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">starts_with</span></div><div><span class="badge-packages badge bg-primary">tidyselect</span></div></div>
+    <div class="topic_description">
+      <p>Select variables that match a pattern to remove.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2940">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2940, this)">0:49:00</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">str_remove</span><span class="badge-functions badge bg-info">group_by</span><span class="badge-functions badge bg-info">first</span><span class="badge-functions badge bg-info">ifelse</span><span class="badge-functions badge bg-info">cumsum</span></div><div><span class="badge-packages badge bg-primary">stringr</span><span class="badge-packages badge bg-primary">dplyr</span></div></div>
+    <div class="topic_description">
+      <p>Unpack data in one column (field_gender) into two separate columns (field, gender).</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2960">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2960, this)">0:49:20</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Summary of screencast.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-3480">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(3480, this)">0:58:00</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>NA</p>
+
+    </div>
+  </div>
+</div>
+```
+     
+<script>
+// 2. This code loads the IFrame Player API code asynchronously.
+var tag = document.createElement("script");
+
+tag.src = "https://www.youtube.com/iframe_api";
+var firstScriptTag = document.getElementsByTagName("script")[0];
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+// 3. This function creates an <iframe> (and YouTube player)
+//    after the API code downloads.
+var videoId = document.getElementById("yt-player").dataset.videoId;
+var player;
+function onYouTubeIframeAPIReady() {
+  player = new YT.Player("yt-player", {
+    height: "486",
+    width: "864",
+    videoId: videoId,
+    playerVars: {
+      "playsinline": 1
+    },
+    events: {
+      onStateChange: function(event) {
+        if (event.data == YT.PlayerState.PLAYING) {
+          followTimestamps()
+        }
+      }
+    }
+  });
+}
+
+function playerSkipToTimestamp(seconds, tsElement) {
+  player.seekTo(seconds, true)
+  tsElement.scrollIntoView()
+  document.getElementById("screencast").scrollIntoView()
+}
+
+const timestamps = Array.from(document.querySelectorAll('.topic h3[id^="ts-"]'))
+  .map(el => el.id.replace('ts-', ''))
+
+function followTimestamps() {
+  if (player.getPlayerState() !== 1) {
+    return
+  }
+  const currentTime = `${Math.floor(player.getCurrentTime())}`
+  if (timestamps.includes(currentTime)) {
+    const el = document.getElementById(`ts-${currentTime}`)
+    if (el) {
+      el.scrollIntoView()
+      document.getElementById("screencast").scrollIntoView()
+    }
+  }
+  setTimeout(followTimestamps, 1000)
+}
+</script>

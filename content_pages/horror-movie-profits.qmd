@@ -1,0 +1,264 @@
+---
+title: |
+  Horror Movie Profits
+description: |
+  Graphing for EDA (Exploratory Data Analysis)
+date: 2018-10-22
+date-format: long
+aliases:
+  - "Horror Movie Profits.html"
+---
+
+Notable topics: Graphing for EDA (Exploratory Data Analysis)
+
+Recorded on: 2018-10-22
+
+Timestamps by: Alex Cookson
+
+[View code](https://github.com/dgrtwo/data-screencasts/blob/master/horror-movie-ratings.Rmd)
+
+## Screencast
+
+<div id="yt-player" data-video-id="3-DRwg9yeNA"></div>
+
+## Timestamps
+
+```{=html}
+<div id="topics">
+  <div class="topic">
+    <h3 id="ts-170">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(170, this)">0:2:50</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">parse_date</span></div><div><span class="badge-packages badge bg-primary">lubridate</span></div></div>
+    <div class="topic_description">
+      <p>Using parse_date function from lubridate package to convert date formatted as character to date class (should have used mdy function though)</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-465">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(465, this)">0:7:45</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">fct_lump</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using fct_lump function to aggregate distributors into top 6 (by number of movies) and and &quot;Other&quot; category</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-530">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(530, this)">0:8:50</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Investigating strange numbers in the data and discovering duplication</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-760">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(760, this)">0:12:40</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">problems</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using problems function to look at parsing errors when importing data</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-875">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(875, this)">0:14:35</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">arrange</span><span class="badge-functions badge bg-info">distinct</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using arrange and distinct function and its .keep_all argument to de-duplicate observations</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-970">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(970, this)">0:16:10</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">goem_boxplot</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using geom_boxplot function to create a boxplot of budget by distributor</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1160">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1160, this)">0:19:20</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">floor</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using floor function to bin release years into decades (e.g., &quot;1970&quot; and &quot;1973&quot; both become &quot;1970&quot;)</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1290">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1290, this)">0:21:30</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">summarise_at</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using summarise_at function to apply the same function to multiple variables at the same time</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1450">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1450, this)">0:24:10</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">geom_line</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using geom_line to visualize multiple metrics at the same time</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1560">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1560, this)">0:26:00</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">facet_wrap</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using facet_wrap function to graph small multiples of genre-budget boxplots by distributor</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1715">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1715, this)">0:28:35</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Starting analysis of profit ratio of movies</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1970">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1970, this)">0:32:50</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">paste0</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using paste0 function in a custom function to show labels of multiple (e.g., &quot;4X&quot; or &quot;6X&quot; to mean &quot;4 times&quot; or &quot;6 times&quot;)</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2480">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2480, this)">0:41:20</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Starting analysis of the most common genres over time</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2755">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2755, this)">0:45:55</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Starting analysis of the most profitable individual horror movies</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-3105">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(3105, this)">0:51:45</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">paste0</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using paste0 function to add release date of movie to labels in a bar graph</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-3205">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(3205, this)">0:53:25</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">geom_text</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using geom_text function, along with its check_overlap argument, to add labels to some points on a scatterplot</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-3490">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(3490, this)">0:58:10</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">ggplotly</span></div><div><span class="badge-packages badge bg-primary">plotly</span></div></div>
+    <div class="topic_description">
+      <p>Using ggplotly function from plotly package to create an interactive scatterplot</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-3655">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(3655, this)">1:00:55</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Reviewing unexplored areas of investigation</p>
+
+    </div>
+  </div>
+</div>
+```
+     
+<script>
+// 2. This code loads the IFrame Player API code asynchronously.
+var tag = document.createElement("script");
+
+tag.src = "https://www.youtube.com/iframe_api";
+var firstScriptTag = document.getElementsByTagName("script")[0];
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+// 3. This function creates an <iframe> (and YouTube player)
+//    after the API code downloads.
+var videoId = document.getElementById("yt-player").dataset.videoId;
+var player;
+function onYouTubeIframeAPIReady() {
+  player = new YT.Player("yt-player", {
+    height: "486",
+    width: "864",
+    videoId: videoId,
+    playerVars: {
+      "playsinline": 1
+    },
+    events: {
+      onStateChange: function(event) {
+        if (event.data == YT.PlayerState.PLAYING) {
+          followTimestamps()
+        }
+      }
+    }
+  });
+}
+
+function playerSkipToTimestamp(seconds, tsElement) {
+  player.seekTo(seconds, true)
+  tsElement.scrollIntoView()
+  document.getElementById("screencast").scrollIntoView()
+}
+
+const timestamps = Array.from(document.querySelectorAll('.topic h3[id^="ts-"]'))
+  .map(el => el.id.replace('ts-', ''))
+
+function followTimestamps() {
+  if (player.getPlayerState() !== 1) {
+    return
+  }
+  const currentTime = `${Math.floor(player.getCurrentTime())}`
+  if (timestamps.includes(currentTime)) {
+    const el = document.getElementById(`ts-${currentTime}`)
+    if (el) {
+      el.scrollIntoView()
+      document.getElementById("screencast").scrollIntoView()
+    }
+  }
+  setTimeout(followTimestamps, 1000)
+}
+</script>

@@ -1,0 +1,294 @@
+---
+title: |
+  Australian Animal Outcomes
+description: |
+  Data manipulation, Web Scraping (rvest package) and SelectorGadget, Animated Choropleth Map
+date: 2020-07-20
+date-format: long
+aliases:
+  - "Australian Animal Outcomes.html"
+---
+
+Notable topics: Data manipulation, Web Scraping (rvest package) and SelectorGadget, Animated Choropleth Map
+
+Recorded on: 2020-07-20
+
+Timestamps by: Eric Fletcher
+
+[View code](https://github.com/dgrtwo/data-screencasts/blob/master/australian-animal-outcomes.Rmd)
+
+## Screencast
+
+<div id="yt-player" data-video-id="E2amEz_upzU"></div>
+
+## Timestamps
+
+```{=html}
+<div id="topics">
+  <div class="topic">
+    <h3 id="ts-80">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(80, this)">0:1:20</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">use_tidytemplate</span></div><div><span class="badge-packages badge bg-primary">tidytuesdayR</span></div></div>
+    <div class="topic_description">
+      <p>Using <code>use_tidytemplate</code> to open the project dataset with the package's tidytemplate Rmd</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-270">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(270, this)">0:4:30</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">rename</span></div><div><span class="badge-packages badge bg-primary">dplyr</span></div></div>
+    <div class="topic_description">
+      <p>Using <code>rename</code> to rename <code>Total</code> column to <code>total</code></p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-380">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(380, this)">0:6:20</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">fct_reorder</span></div><div><span class="badge-packages badge bg-primary">forcats</span></div></div>
+    <div class="topic_description">
+      <p>Using <code>fct_reorder</code> to reorder stacked barplot with <code>weight = sum</code></p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-420">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(420, this)">0:7:00</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">fct_lump</span></div><div><span class="badge-packages badge bg-primary">forcats</span></div></div>
+    <div class="topic_description">
+      <p>Using <code>fct_lump</code> with <code>w = n</code> to lump together <code>outcome</code> factor levels displaying the most frequenct with rest lumped into <code>other</code></p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-555">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(555, this)">0:9:15</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">fct_recode</span></div><div><span class="badge-packages badge bg-primary">forcats</span></div></div>
+    <div class="topic_description">
+      <p>Using <code>fct_recode</code> to combine the factor level <code>In Stock</code> with <code>Currently In Care</code></p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-730">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(730, this)">0:12:10</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">fct_reorder</span></div><div><span class="badge-packages badge bg-primary">forcats</span></div></div>
+    <div class="topic_description">
+      <p>Using <code>fct_reorder</code> to reorder <code>facet_wrap</code> panels</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-783">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(783, this)">0:13:03</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">scale_y_continuous</span></div><div><span class="badge-packages badge bg-primary">ggplot2</span><span class="badge-packages badge bg-primary">scales</span></div></div>
+    <div class="topic_description">
+      <p>Using <code>scale_y_continuous</code> with <code>labels = comma</code> to separate digits with comma</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-850">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(850, this)">0:14:10</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">complete</span></div><div><span class="badge-packages badge bg-primary">tidyr</span></div></div>
+    <div class="topic_description">
+      <p>Using <code>complete</code> to complete account for missing combinations of data where the value is 0 in the <code>released</code> column</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-970">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(970, this)">0:16:10</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">max</span></div><div><span class="badge-packages badge bg-primary">base</span></div></div>
+    <div class="topic_description">
+      <p>Using <code>max (year)</code> within <code>filter</code> to subset the data displaying only the most recent year</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1170">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1170, this)">0:19:30</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">pivot_longer</span></div><div><span class="badge-packages badge bg-primary">tidyr</span></div></div>
+    <div class="topic_description">
+      <p>Using <code>pivot_longer</code> to pivot location variables from wide to long</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1305">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1305, this)">0:21:45</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">read_html</span><span class="badge-functions badge bg-info">html_nodes</span><span class="badge-functions badge bg-info">map</span></div><div><span class="badge-packages badge bg-primary">rvest</span><span class="badge-packages badge bg-primary">janitor</span></div></div>
+    <div class="topic_description">
+      <p>Web Scaraping table from Wikipedia with <code>SelectorGadget</code> and <code>Rvest</code></p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1545">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1545, this)">0:25:45</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">str_to_upper</span></div><div><span class="badge-packages badge bg-primary">stringr</span></div></div>
+    <div class="topic_description">
+      <p>Using <code>str_to_upper</code> to upper case the values in the <code>shorthand</code> column</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1633">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1633, this)">0:27:13</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">parse_number</span></div><div><span class="badge-packages badge bg-primary">readr</span></div></div>
+    <div class="topic_description">
+      <p>Using <code>parse_number</code> to remove commas from <code>population</code> and <code>area</code> columns</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1735">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1735, this)">0:28:55</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">bind_rows</span></div><div><span class="badge-packages badge bg-primary">dplyr</span></div></div>
+    <div class="topic_description">
+      <p>Using <code>bind_rows</code> to bind the two web scraped tables from Wikipedia together by row and column</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1775">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1775, this)">0:29:35</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">inner_join</span></div><div><span class="badge-packages badge bg-primary">dplyr</span></div></div>
+    <div class="topic_description">
+      <p>Using <code>inner_join</code> to combine the Wikipedia table with the original data set</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1787">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1787, this)">0:29:47</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">mutate</span></div><div><span class="badge-packages badge bg-primary">dplyr</span></div></div>
+    <div class="topic_description">
+      <p>Using <code>mutate</code> to create new <code>per_capita_million</code> column to show <code>outcome</code> on a per million people basis</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2245">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2245, this)">0:37:25</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">summarize</span></div><div><span class="badge-packages badge bg-primary">dplyr</span></div></div>
+    <div class="topic_description">
+      <p>Using <code>summarize</code> to create new column <code>pct_euthanized</code> showing percent of cats and dogs euthanized over time. Formula accounts for 0 values thus avoiding a resulting empty vector.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2350">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2350, this)">0:39:10</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">scale_y_continuous</span></div><div><span class="badge-packages badge bg-primary">ggplot2</span><span class="badge-packages badge bg-primary">scales</span></div></div>
+    <div class="topic_description">
+      <p>Using <code>scale_y_continuous</code> with <code>labels = percent</code> to add percentage sign to y-axis values</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2565">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2565, this)">0:42:45</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">read_sf</span><span class="badge-functions badge bg-info">geom_sf</span><span class="badge-functions badge bg-info">sf_simplify</span></div><div><span class="badge-packages badge bg-primary">sf</span><span class="badge-packages badge bg-primary">ggplot2</span></div></div>
+    <div class="topic_description">
+      <p>Create a choropleth map of Australia using an Australian States <code>Shapefile</code> using the <code>sf</code> and <code>ggplot2</code> packages | Troubleshooting begins at 44:25 (downsizing / downsampling with <code>sf_simplify</code>)</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-3345">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(3345, this)">0:55:45</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">transition_manual</span></div><div><span class="badge-packages badge bg-primary">gganimate</span></div></div>
+    <div class="topic_description">
+      <p>Add animation to the map of Australia showing the percent of cats euthanized by region using <code>gganimate</code></p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-3695">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(3695, this)">1:01:35</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Summary of screencast</p>
+
+    </div>
+  </div>
+</div>
+```
+     
+<script>
+// 2. This code loads the IFrame Player API code asynchronously.
+var tag = document.createElement("script");
+
+tag.src = "https://www.youtube.com/iframe_api";
+var firstScriptTag = document.getElementsByTagName("script")[0];
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+// 3. This function creates an <iframe> (and YouTube player)
+//    after the API code downloads.
+var videoId = document.getElementById("yt-player").dataset.videoId;
+var player;
+function onYouTubeIframeAPIReady() {
+  player = new YT.Player("yt-player", {
+    height: "486",
+    width: "864",
+    videoId: videoId,
+    playerVars: {
+      "playsinline": 1
+    },
+    events: {
+      onStateChange: function(event) {
+        if (event.data == YT.PlayerState.PLAYING) {
+          followTimestamps()
+        }
+      }
+    }
+  });
+}
+
+function playerSkipToTimestamp(seconds, tsElement) {
+  player.seekTo(seconds, true)
+  tsElement.scrollIntoView()
+  document.getElementById("screencast").scrollIntoView()
+}
+
+const timestamps = Array.from(document.querySelectorAll('.topic h3[id^="ts-"]'))
+  .map(el => el.id.replace('ts-', ''))
+
+function followTimestamps() {
+  if (player.getPlayerState() !== 1) {
+    return
+  }
+  const currentTime = `${Math.floor(player.getCurrentTime())}`
+  if (timestamps.includes(currentTime)) {
+    const el = document.getElementById(`ts-${currentTime}`)
+    if (el) {
+      el.scrollIntoView()
+      document.getElementById("screencast").scrollIntoView()
+    }
+  }
+  setTimeout(followTimestamps, 1000)
+}
+</script>

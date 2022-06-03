@@ -1,0 +1,194 @@
+---
+title: |
+  Plastic Waste
+description: |
+  Map visualization (especially choropleth)
+date: 2019-05-26
+date-format: long
+aliases:
+  - "Plastic Waste.html"
+---
+
+Notable topics: Map visualization (especially choropleth)
+
+Recorded on: 2019-05-26
+
+Timestamps by: Alex Cookson
+
+[View code](https://github.com/dgrtwo/data-screencasts/blob/master/plastic-waste.Rmd)
+
+## Screencast
+
+<div id="yt-player" data-video-id="BRdLOYtJk9o"></div>
+
+## Timestamps
+
+```{=html}
+<div id="topics">
+  <div class="topic">
+    <h3 id="ts-105">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(105, this)">0:1:45</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">summarise_all</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using summarise_all to get proportion of NA values across many variables</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1010">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1010, this)">0:16:50</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">geom_text</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Adding text labels to scatter plot for some points using check_overlap argument</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1305">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1305, this)">0:21:45</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">pmin</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using pmin function to get the lower of two possible numbers for a percentage variable that was showing &gt; 100%</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1740">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1740, this)">0:29:00</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Starting to make a choropleth map</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1770">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1770, this)">0:29:30</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Connecting ISO country names (used in mapping code) to country names given in the dataset</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1920">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1920, this)">0:32:00</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Actual code to create the map using given longitude and latitude</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2025">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2025, this)">0:33:45</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">regex_left_join</span></div><div><span class="badge-packages badge bg-primary">fuzzyjoin</span></div></div>
+    <div class="topic_description">
+      <p>Using fuzzyjoin package to link variables that use regular expression instead of character (using regex_right_join / regex_left_join function)</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2175">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2175, this)">0:36:15</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">coord_fixed</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using coord_fixed function as a hack to get proper ratios for maps</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2370">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2370, this)">0:39:30</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Bringing in additional data using WDI package</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2850">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2850, this)">0:47:30</button>
+    </h3>
+    <div class="topic_badges"><div></div><div><span class="badge-packages badge bg-primary">patchwork</span></div></div>
+    <div class="topic_description">
+      <p>Using patchwork package to show multiple graphs in the same plot</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-3180">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(3180, this)">0:53:00</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Importing and rename multiple indicators from the WDI package at the same time</p>
+
+    </div>
+  </div>
+</div>
+```
+     
+<script>
+// 2. This code loads the IFrame Player API code asynchronously.
+var tag = document.createElement("script");
+
+tag.src = "https://www.youtube.com/iframe_api";
+var firstScriptTag = document.getElementsByTagName("script")[0];
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+// 3. This function creates an <iframe> (and YouTube player)
+//    after the API code downloads.
+var videoId = document.getElementById("yt-player").dataset.videoId;
+var player;
+function onYouTubeIframeAPIReady() {
+  player = new YT.Player("yt-player", {
+    height: "486",
+    width: "864",
+    videoId: videoId,
+    playerVars: {
+      "playsinline": 1
+    },
+    events: {
+      onStateChange: function(event) {
+        if (event.data == YT.PlayerState.PLAYING) {
+          followTimestamps()
+        }
+      }
+    }
+  });
+}
+
+function playerSkipToTimestamp(seconds, tsElement) {
+  player.seekTo(seconds, true)
+  tsElement.scrollIntoView()
+  document.getElementById("screencast").scrollIntoView()
+}
+
+const timestamps = Array.from(document.querySelectorAll('.topic h3[id^="ts-"]'))
+  .map(el => el.id.replace('ts-', ''))
+
+function followTimestamps() {
+  if (player.getPlayerState() !== 1) {
+    return
+  }
+  const currentTime = `${Math.floor(player.getCurrentTime())}`
+  if (timestamps.includes(currentTime)) {
+    const el = document.getElementById(`ts-${currentTime}`)
+    if (el) {
+      el.scrollIntoView()
+      document.getElementById("screencast").scrollIntoView()
+    }
+  }
+  setTimeout(followTimestamps, 1000)
+}
+</script>

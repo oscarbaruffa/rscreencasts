@@ -1,0 +1,284 @@
+---
+title: |
+  GDPR Violations
+description: |
+  Data manipulation, Interactive dashboard with `shinymetrics` and `tidymetrics`
+date: 2020-04-20
+date-format: long
+aliases:
+  - "GDPR Violations.html"
+---
+
+Notable topics: Data manipulation, Interactive dashboard with `shinymetrics` and `tidymetrics`
+
+Recorded on: 2020-04-20
+
+Timestamps by: Eric Fletcher
+
+[View code](https://github.com/dgrtwo/data-screencasts/blob/master/gdpr.Rmd)
+
+## Screencast
+
+<div id="yt-player" data-video-id="EVvnnWKO_4w"></div>
+
+## Timestamps
+
+```{=html}
+<div id="topics">
+  <div class="topic">
+    <h3 id="ts-245">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(245, this)">0:4:05</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">mdy</span></div><div><span class="badge-packages badge bg-primary">lubridate</span></div></div>
+    <div class="topic_description">
+      <p>Use the <code>mdy</code> function from the <code>lubridate</code> package to change  the date variable from <code>character</code> class to <code>date</code> class.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-335">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(335, this)">0:5:35</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">rename</span></div><div><span class="badge-packages badge bg-primary">dplyr</span></div></div>
+    <div class="topic_description">
+      <p>Use the <code>rename</code> function from the <code>dplyr</code> package to rename variable in the dataset.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-375">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(375, this)">0:6:15</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">fct_reorder</span></div><div><span class="badge-packages badge bg-primary">forcats</span></div></div>
+    <div class="topic_description">
+      <p>Use the <code>fct_reorder</code> function from the <code>forcats</code> package to  sort the <code>geom_col</code> in descending order.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-390">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(390, this)">0:6:30</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">fct_lump</span><span class="badge-functions badge bg-info">count</span></div><div><span class="badge-packages badge bg-primary">forcats</span><span class="badge-packages badge bg-primary">dplyr</span></div></div>
+    <div class="topic_description">
+      <p>Use the <code>fct_lump</code> function from the <code>forcats</code> package within <code>count</code>  to  lump together  country names except for the 6 most frequent.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-425">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(425, this)">0:7:05</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">scale_x_continuous</span></div><div><span class="badge-packages badge bg-primary">ggplot2</span><span class="badge-packages badge bg-primary">scales</span></div></div>
+    <div class="topic_description">
+      <p>Use the <code>scale_x_continuous</code> function from <code>ggplot2</code>  with the <code>scales</code> package to change the x-axis values to dollar format.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-495">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(495, this)">0:8:15</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">month</span></div><div><span class="badge-packages badge bg-primary">lubridate</span></div></div>
+    <div class="topic_description">
+      <p>Use the <code>month</code> and <code>floor_date</code>  function from the <code>lubridate</code> package to get the month component from the <code>date</code> variable to count the total fines per month.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-535">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(535, this)">0:8:55</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">na_if</span></div><div><span class="badge-packages badge bg-primary">dplyr</span></div></div>
+    <div class="topic_description">
+      <p>Use the <code>na_if</code> function from the <code>dplyr</code> package to convert specific date value to <code>NA</code>.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-665">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(665, this)">0:11:05</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">fct_reorder</span></div><div><span class="badge-packages badge bg-primary">forcats</span><span class="badge-packages badge bg-primary">dplyr</span></div></div>
+    <div class="topic_description">
+      <p>Use the <code>fct_reorder</code> function from the <code>forcats</code> package to sort the stacked <code>geom_col</code> and legend labels in descending order.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-915">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(915, this)">0:15:15</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">dollar</span></div><div><span class="badge-packages badge bg-primary">scales</span></div></div>
+    <div class="topic_description">
+      <p>Use the <code>dollar</code> function from the <code>scales</code> package to convert the <code>price</code> variable into dollar format.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-940">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(940, this)">0:15:40</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">str_trunc</span></div><div><span class="badge-packages badge bg-primary">stringr</span></div></div>
+    <div class="topic_description">
+      <p>Use the <code>str_trunc</code> to shorten the <code>summary</code> string values to 140 characters.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1055">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1055, this)">0:17:35</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">separate_rows</span></div><div><span class="badge-packages badge bg-primary">tidyr</span></div></div>
+    <div class="topic_description">
+      <p>Use the <code>separate_rows</code> function from the <code>tidyr</code> package with a <code>regular expression</code> to separate the values in the <code>article_violated</code> variable with each matching group placed in its own row.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1170">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1170, this)">0:19:30</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">extract</span></div><div><span class="badge-packages badge bg-primary">tidyr</span></div></div>
+    <div class="topic_description">
+      <p>Use the <code>extract</code> function from the <code>tidyr</code> package with a <code>regular expression</code> to turn each matching group into a new column.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1650">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1650, this)">0:27:30</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">geom_jitter</span></div><div><span class="badge-packages badge bg-primary">ggplot2</span></div></div>
+    <div class="topic_description">
+      <p>Use the <code>geom_jitter</code> function from the <code>ggplot2</code> package to add points to the horizontal box plot.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1915">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1915, this)">0:31:55</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">inner_join</span></div><div><span class="badge-packages badge bg-primary">dplyr</span></div></div>
+    <div class="topic_description">
+      <p>Use the <code>inner_join</code> function from the <code>dplyr</code> package to join together  <code>article_titles</code> and <code>separated_articles</code> tables.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1975">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1975, this)">0:32:55</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">paste0</span></div><div><span class="badge-packages badge bg-primary">base R</span></div></div>
+    <div class="topic_description">
+      <p>Use the <code>paste0</code> function from <code>base R</code> to concatenate <code>article</code> and <code>article_title</code>.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2328">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2328, this)">0:38:48</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">str_detect</span></div><div><span class="badge-packages badge bg-primary">stringr</span></div></div>
+    <div class="topic_description">
+      <p>Use the <code>str_detect</code> function from the <code>stringr</code> package to detect the presence of a pattern in a string.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2425">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2425, this)">0:40:25</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">group_by</span><span class="badge-functions badge bg-info">summarize</span><span class="badge-functions badge bg-info">geom_point</span></div><div><span class="badge-packages badge bg-primary">dplyr</span><span class="badge-packages badge bg-primary">ggplot2</span></div></div>
+    <div class="topic_description">
+      <p>Use the <code>group_by</code> and <code>summarize</code> functions from the <code>dplyr</code> package to aggregate fines that were issued to the same country on the same day allowing for size to be used in <code>geom_point</code> plot.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2474">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2474, this)">0:41:14</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">ggplot2</span></div><div><span class="badge-packages badge bg-primary">ggplot2</span></div></div>
+    <div class="topic_description">
+      <p>Use the <code>scale_size_continuous</code> function from the <code>ggplot2</code> package to remove the size legend.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2575">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2575, this)">0:42:55</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">preview_metric</span></div><div><span class="badge-packages badge bg-primary">tidymetrics</span><span class="badge-packages badge bg-primary">shinymetrics</span></div></div>
+    <div class="topic_description">
+      <p>Create an interactive dashboard using the <code>shinymetrics</code> and <code>tidymetrics</code> which is <a href="https://github.com/datacamp/tidymetrics">a tidy approach to business intelligence</a>.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2845">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2845, this)">0:47:25</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">cross_by_dimensions</span><span class="badge-functions badge bg-info">cross_by_periods</span><span class="badge-functions badge bg-info">use_metrics_scaffold</span><span class="badge-functions badge bg-info">create_metrics</span></div><div><span class="badge-packages badge bg-primary">tidyr</span></div></div>
+    <div class="topic_description">
+      <p>Use the <code>cross_by_dimensions</code> and <code>cross_by_periods</code> functions from the <code>tidyr</code> package which stacks an extra copy of the table for each dimension specified as an argument (<code>country</code>, <code>article_title</code>, <code>type</code>), replaces the value of the column with the word <code>All</code> and <code>periods</code>, and groups by all the columns. It acts as an extended group_by that allows complete summaries across each individual dimension and possible combinations.</p>
+
+    </div>
+  </div>
+</div>
+```
+     
+<script>
+// 2. This code loads the IFrame Player API code asynchronously.
+var tag = document.createElement("script");
+
+tag.src = "https://www.youtube.com/iframe_api";
+var firstScriptTag = document.getElementsByTagName("script")[0];
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+// 3. This function creates an <iframe> (and YouTube player)
+//    after the API code downloads.
+var videoId = document.getElementById("yt-player").dataset.videoId;
+var player;
+function onYouTubeIframeAPIReady() {
+  player = new YT.Player("yt-player", {
+    height: "486",
+    width: "864",
+    videoId: videoId,
+    playerVars: {
+      "playsinline": 1
+    },
+    events: {
+      onStateChange: function(event) {
+        if (event.data == YT.PlayerState.PLAYING) {
+          followTimestamps()
+        }
+      }
+    }
+  });
+}
+
+function playerSkipToTimestamp(seconds, tsElement) {
+  player.seekTo(seconds, true)
+  tsElement.scrollIntoView()
+  document.getElementById("screencast").scrollIntoView()
+}
+
+const timestamps = Array.from(document.querySelectorAll('.topic h3[id^="ts-"]'))
+  .map(el => el.id.replace('ts-', ''))
+
+function followTimestamps() {
+  if (player.getPlayerState() !== 1) {
+    return
+  }
+  const currentTime = `${Math.floor(player.getCurrentTime())}`
+  if (timestamps.includes(currentTime)) {
+    const el = document.getElementById(`ts-${currentTime}`)
+    if (el) {
+      el.scrollIntoView()
+      document.getElementById("screencast").scrollIntoView()
+    }
+  }
+  setTimeout(followTimestamps, 1000)
+}
+</script>

@@ -1,0 +1,144 @@
+---
+title: |
+  R trick: Creating Pascal's Triangle with accumulate()
+description: |
+  accumulate() function for recursive formulas
+date: 2020-03-28
+date-format: long
+aliases:
+  - "R trick: Creating Pascal's Triangle with accumulate().html"
+---
+
+Notable topics: accumulate() function for recursive formulas
+
+Recorded on: 2020-03-28
+
+Timestamps by: Alex Cookson
+
+[View code](https://github.com/dgrtwo/data-screencasts/blob/master/pascals-triangle.Rmd)
+
+## Screencast
+
+<div id="yt-player" data-video-id="rUK9Wz9B2n0"></div>
+
+## Timestamps
+
+```{=html}
+<div id="topics">
+  <div class="topic">
+    <h3 id="ts-70">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(70, this)">0:1:10</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">accumulate</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Simple explanation of accumulate function</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-90">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(90, this)">0:1:30</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Example using letters</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-175">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(175, this)">0:2:55</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">~</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using tilde ~ to create an anonymous function</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-275">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(275, this)">0:4:35</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Introducing Pascal's Triangle</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-385">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(385, this)">0:6:25</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Starting to create Pascal's triangle in R</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-485">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(485, this)">0:8:05</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">accumulate</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Concerting the conceptual solution into an accumulate function</p>
+
+    </div>
+  </div>
+</div>
+```
+     
+<script>
+// 2. This code loads the IFrame Player API code asynchronously.
+var tag = document.createElement("script");
+
+tag.src = "https://www.youtube.com/iframe_api";
+var firstScriptTag = document.getElementsByTagName("script")[0];
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+// 3. This function creates an <iframe> (and YouTube player)
+//    after the API code downloads.
+var videoId = document.getElementById("yt-player").dataset.videoId;
+var player;
+function onYouTubeIframeAPIReady() {
+  player = new YT.Player("yt-player", {
+    height: "486",
+    width: "864",
+    videoId: videoId,
+    playerVars: {
+      "playsinline": 1
+    },
+    events: {
+      onStateChange: function(event) {
+        if (event.data == YT.PlayerState.PLAYING) {
+          followTimestamps()
+        }
+      }
+    }
+  });
+}
+
+function playerSkipToTimestamp(seconds, tsElement) {
+  player.seekTo(seconds, true)
+  tsElement.scrollIntoView()
+  document.getElementById("screencast").scrollIntoView()
+}
+
+const timestamps = Array.from(document.querySelectorAll('.topic h3[id^="ts-"]'))
+  .map(el => el.id.replace('ts-', ''))
+
+function followTimestamps() {
+  if (player.getPlayerState() !== 1) {
+    return
+  }
+  const currentTime = `${Math.floor(player.getCurrentTime())}`
+  if (timestamps.includes(currentTime)) {
+    const el = document.getElementById(`ts-${currentTime}`)
+    if (el) {
+      el.scrollIntoView()
+      document.getElementById("screencast").scrollIntoView()
+    }
+  }
+  setTimeout(followTimestamps, 1000)
+}
+</script>

@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-0.9.501">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="dcterms.date" content="2019-01-08">
+<meta name="description" content="Data manipulation, Logistic regression">
+
+<title>R Screencasts - TV Golden Age</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+span.underline{text-decoration: underline;}
+div.column{display: inline-block; vertical-align: top; width: 50%;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../images/favicon-32x32.png" rel="icon" type="image/png">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+<script defer="" data-domain="rscreencasts.com" src="https://plausible.io/js/script.outbound-links.js"></script>
+
+<meta property="og:title" content="R Screencasts - TV Golden Age">
+<meta property="og:description" content="Awesome data analysis screencasts from a top Data Scientist">
+<meta property="og:image" content="https://www.rscreencasts.com/images/rscreencasts_social.png">
+<meta property="og:url" content="https://www.rscreencasts.com/">
+<meta property="og:site_name" content="R Screencasts">
+
+<meta name="twitter:title" content="R Screencasts - TV Golden Age">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image:alt" content="Awesome data analysis screencasts from a top Data Scientist">
+<meta name="twitter:site" content="@oscarbaruffa">
+<meta name="twitter:description" content="Awesome data analysis screencasts from a top Data Scientists">
+<meta name="twitter:image" content="https://www.rscreencasts.com/images/rscreencasts_social.png">
+
+
+<link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">R Screencasts</span>
+  </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../index.html">Home</a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../resources.html">Resources</a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../about.html">About</a>
+  </li>  
+</ul>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#screencast" id="toc-screencast" class="nav-link active" data-scroll-target="#screencast">Screencast</a></li>
+  <li><a href="#timestamps" id="toc-timestamps" class="nav-link" data-scroll-target="#timestamps">Timestamps</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><p>TV Golden Age</p></h1>
+</div>
+
+<div>
+  <div class="description">
+    <p>Data manipulation, Logistic regression</p>
+  </div>
+</div>
+
+
+<div class="quarto-title-meta">
+
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">January 8, 2019</p>
+    </div>
+  </div>
+    
+  </div>
+  
+
+</header>
+
+<p>Notable topics: Data manipulation, Logistic regression</p>
+<p>Recorded on: 2019-01-08</p>
+<p>Timestamps by: Alex Cookson</p>
+<p><a href="https://github.com/dgrtwo/data-screencasts/blob/master/golden-age-tv.Rmd">View code</a></p>
+<section id="screencast" class="level2">
+<h2 class="anchored" data-anchor-id="screencast">Screencast</h2>
+<div id="yt-player" data-video-id="oYGi2wgSJaM">
+
+</div>
+</section>
+<section id="timestamps" class="level2">
+<h2 class="anchored" data-anchor-id="timestamps">Timestamps</h2>
+<div id="topics">
+  <div class="topic">
+    <h3 id="ts-145" class="anchored">
+      <button class="btn btn-link btn-timestamp" onclick="playerSkipToTimestamp(145, this)">0:2:25</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Quick tip on how to start exploring a new dataset</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-450" class="anchored">
+      <button class="btn btn-link btn-timestamp" onclick="playerSkipToTimestamp(450, this)">0:7:30</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Investigating inconsistency of shows having a count of seasons that is different from the number of seasons given in the data</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-610" class="anchored">
+      <button class="btn btn-link btn-timestamp" onclick="playerSkipToTimestamp(610, this)">0:10:10</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">%in%</span><span class="badge-functions badge bg-info">all</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using %in% operator and all function to only get shows that have a first season and don't have skipped seasons in the data</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-930" class="anchored">
+      <button class="btn btn-link btn-timestamp" onclick="playerSkipToTimestamp(930, this)">0:15:30</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Asking, "Which seasons have the most variation in ratings?"</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1225" class="anchored">
+      <button class="btn btn-link btn-timestamp" onclick="playerSkipToTimestamp(1225, this)">0:20:25</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">facet_wrap</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using facet_wrap function to separate different shows on a line graph into multiple small graphs</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1250" class="anchored">
+      <button class="btn btn-link btn-timestamp" onclick="playerSkipToTimestamp(1250, this)">0:20:50</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Writing custom embedded function to get width of breaks on the x-axis to always be even (e.g., season 2, 4, 6, etc.)</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1430" class="anchored">
+      <button class="btn btn-link btn-timestamp" onclick="playerSkipToTimestamp(1430, this)">0:23:50</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Committing, finding, and explaining a common error of using the same variable name when summarizing multiple things</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1700" class="anchored">
+      <button class="btn btn-link btn-timestamp" onclick="playerSkipToTimestamp(1700, this)">0:28:20</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">%/%</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using truncated division operator %/% to bin data into two-year bins instead of annual (e.g., 1990 and 1991 get binned to 1990)</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1890" class="anchored">
+      <button class="btn btn-link btn-timestamp" onclick="playerSkipToTimestamp(1890, this)">0:31:30</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">mutate</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using subsetting (with square brackets) within the mutate function to calculate mean on only a subset of data (without needing to filter)</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2030" class="anchored">
+      <button class="btn btn-link btn-timestamp" onclick="playerSkipToTimestamp(2030, this)">0:33:50</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">gather</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using gather function (now pivot_longer) to get metrics as columns into tidy format, in order to graph them all at once with a facet_wrap</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2190" class="anchored">
+      <button class="btn btn-link btn-timestamp" onclick="playerSkipToTimestamp(2190, this)">0:36:30</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">pmin</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using pmin function to lump all seasons after 4 into one row (it still shows "4", but it represents "4+")</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2340" class="anchored">
+      <button class="btn btn-link btn-timestamp" onclick="playerSkipToTimestamp(2340, this)">0:39:00</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Asking, "If season 1 is good, do you get a second season?" (show survival)</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2435" class="anchored">
+      <button class="btn btn-link btn-timestamp" onclick="playerSkipToTimestamp(2435, this)">0:40:35</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">paste0</span><span class="badge-functions badge bg-info">spread</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using paste0 and spread functions to get season 1-3 ratings into three columns, one for each season</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2525" class="anchored">
+      <button class="btn btn-link btn-timestamp" onclick="playerSkipToTimestamp(2525, this)">0:42:05</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">distinct</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using distinct function with .keep_all argument remove duplicates by only keeping the first one that appears</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2750" class="anchored">
+      <button class="btn btn-link btn-timestamp" onclick="playerSkipToTimestamp(2750, this)">0:45:50</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">glm</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using logistic regression to answer, "Does season 1 rating affect the probability of getting a second season?" (note he forgets to specify the family argument, fixed at 57:25)</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2915" class="anchored">
+      <button class="btn btn-link btn-timestamp" onclick="playerSkipToTimestamp(2915, this)">0:48:35</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">ntile</span><span class="badge-functions badge bg-info">cut</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using ntile function to divide data into N bins (5 in this case), then eventually using cut function instead</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-3420" class="anchored">
+      <button class="btn btn-link btn-timestamp" onclick="playerSkipToTimestamp(3420, this)">0:57:00</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Adding year as an independent variable to the logistic regression model</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-3530" class="anchored">
+      <button class="btn btn-link btn-timestamp" onclick="playerSkipToTimestamp(3530, this)">0:58:50</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Adding an interaction term (season 1 interacting with year) to the logistic regression model</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-3595" class="anchored">
+      <button class="btn btn-link btn-timestamp" onclick="playerSkipToTimestamp(3595, this)">0:59:55</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">augment</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using augment function as a method of visualizing and interpreting coefficients of regression model</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-3630" class="anchored">
+      <button class="btn btn-link btn-timestamp" onclick="playerSkipToTimestamp(3630, this)">1:00:30</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">crossing</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using crossing function to create new data to test the logistic regression model on and interpret model coefficients</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-3820" class="anchored">
+      <button class="btn btn-link btn-timestamp" onclick="playerSkipToTimestamp(3820, this)">1:03:40</button>
+    </h3>
+    <div class="topic_badges"><div></div><div><span class="badge-packages badge bg-primary">splines</span></div></div>
+    <div class="topic_description">
+      <p>Fitting natural splines using the splines package, which would capture a non-linear relationship</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-3975" class="anchored">
+      <button class="btn btn-link btn-timestamp" onclick="playerSkipToTimestamp(3975, this)">1:06:15</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Summary of screencast</p>
+
+    </div>
+  </div>
+</div>
+<script>
+// 2. This code loads the IFrame Player API code asynchronously.
+var tag = document.createElement("script");
+
+tag.src = "https://www.youtube.com/iframe_api";
+var firstScriptTag = document.getElementsByTagName("script")[0];
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+// 3. This function creates an <iframe> (and YouTube player)
+//    after the API code downloads.
+var videoId = document.getElementById("yt-player").dataset.videoId;
+var player;
+function onYouTubeIframeAPIReady() {
+  player = new YT.Player("yt-player", {
+    height: "486",
+    width: "864",
+    videoId: videoId,
+    playerVars: {
+      "playsinline": 1
+    },
+    events: {
+      onStateChange: function(event) {
+        if (event.data == YT.PlayerState.PLAYING) {
+          followTimestamps()
+        }
+      }
+    }
+  });
+}
+
+function playerSkipToTimestamp(seconds, tsElement) {
+  player.seekTo(seconds, true)
+  tsElement.scrollIntoView()
+  document.getElementById("screencast").scrollIntoView()
+}
+
+const timestamps = Array.from(document.querySelectorAll('.topic h3[id^="ts-"]'))
+  .map(el => el.id.replace('ts-', ''))
+
+function followTimestamps() {
+  if (player.getPlayerState() !== 1) {
+    return
+  }
+  const currentTime = `${Math.floor(player.getCurrentTime())}`
+  if (timestamps.includes(currentTime)) {
+    const el = document.getElementById(`ts-${currentTime}`)
+    if (el) {
+      el.scrollIntoView()
+      document.getElementById("screencast").scrollIntoView()
+    }
+  }
+  setTimeout(followTimestamps, 1000)
+}
+</script>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    setTimeout(function() {
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      let href = ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+});
+</script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+      <div class="nav-footer-center">Vids by <a href="https://twitter.com/drob">David Robinson</a>. Timestamps &amp; rich content by <a href="https://twitter.com/alexcookson">Alex Cookson</a> and <a href="https://twitter.com/iamericfletcher">Eric Fletcher</a>. Website by <a href="https://twitter.com/OscarBaruffa">Oscar Baruffa</a>, sign up to my <a href="https://oscarbaruffa.com/newsletter/">newsletter</a> for R, data and careers</div>
+  </div>
+</footer>
+
+
+
+</body></html>

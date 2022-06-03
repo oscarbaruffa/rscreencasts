@@ -1,272 +1,290 @@
 ---
-title: "Chopped"
-description: "Data manipulation, Modeling (Linear Regression, Random Forest, and Natural Spline)"
-date: 2020-08-25
+title: |
+  Chopped
+description: |
+  Data manipulation, Modeling (Linear Regression, Random Forest, and Natural Spline)
+date: 2020-08-24
 date-format: long
+aliases:
+  - "Chopped.html"
 ---
 
 Notable topics: Data manipulation, Modeling (Linear Regression, Random Forest, and Natural Spline)
 
-Recorded on: 2020-08-25
+Recorded on: 2020-08-24
 
 Timestamps by: Eric Fletcher
 
 [View code](https://github.com/dgrtwo/data-screencasts/blob/master/2020_08_25_chopped.Rmd)
 
-## Full screencast
-<iframe class="video" src="https://www.youtube.com/embed/6V0vAx2Km7U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+## Screencast
+
+<div id="yt-player" data-video-id="6V0vAx2Km7U"></div>
 
 ## Timestamps
 
-### 0:5:20
-
-Use `geom_histogram` to visualize the distribution of episode ratings.
-
-geom_histogram
-
-ggplot
-
-
-
-<iframe class="video" src="https://www.youtube.com/embed/6V0vAx2Km7U?start=320" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-### 0:6:30
-
-Use `geom_point` and `geom_line` with `color = factor(season)` to visualize the episode rating for every episode.
-
-geom_point | geom_line
-
-ggplot |
-
-
-
-<iframe class="video" src="https://www.youtube.com/embed/6V0vAx2Km7U?start=390" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-### 0:7:15
-
-Use `group_by` and `summarize` to show the average rating for each season and the number of episodes in each season.
-
-group_by | summarize
-
-dplyr
-
-
-
-<iframe class="video" src="https://www.youtube.com/embed/6V0vAx2Km7U?start=435" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-### 0:7:15
-
-Continuing from previous row:
-
-Use `geom_line` and `geom_point` with `size = n_episodes`  to visualize the average rating for each season with point size indicating the total number of episodes (larger = more episodes, smaller = fewer episodes).
-
-geom_line | geom_point
-
-ggplot
-
-
-
-<iframe class="video" src="https://www.youtube.com/embed/6V0vAx2Km7U?start=435" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-### 0:10:55
-
-Use `fct_reorder`  to reorder the `episode_name` factor levels by sorting along the `episode_rating` variable.
-
-fct_reorder
-
-forcats
-
-
-
-<iframe class="video" src="https://www.youtube.com/embed/6V0vAx2Km7U?start=655" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-### 0:10:55
-
-Use `geom_point` to visualize the top episodes by rating. 
-
-Use the 'glue' package to place `season number` and `episode number` before episode name on the `y axis`.
-
-gnemonol | arrange
-
-gplot | dplyr | glue
-
-
-
-<iframe class="video" src="https://www.youtube.com/embed/6V0vAx2Km7U?start=655" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-### 0:15:20
-
-Use `pivot_longer` to combine ingredients into one single column.
-
-Use `separate_rows` with `sep = ", "`  to separate out the ingredients with each ingredient getting its own row.
-
-pivot_longer | separate_rows
-
-tidyr
-
-
-
-<iframe class="video" src="https://www.youtube.com/embed/6V0vAx2Km7U?start=920" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-### 0:18:10
-
-Use `fct_lump`  to lump ingredients together except for the 10 most frequent.
-
-Use `fct_reorder` to reorder `ingredient` factor levels by sorting against `n`.
-
-fct_lump | fct_reorder
-
-forcats
-
-
-
-<iframe class="video" src="https://www.youtube.com/embed/6V0vAx2Km7U?start=1090" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-### 0:18:10
-
-Use `geom_col` to create a stacked bar plot to visualize the most common ingredients by course.
-
-geom_col
-
-ggplot
-
-
-
-<iframe class="video" src="https://www.youtube.com/embed/6V0vAx2Km7U?start=1090" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-### 0:19:45
-
-Use `fct_relevel`  to reorder `course` factor levels to appetizer, entree, dessert.
-
-fct_relevel
-
-forcats
-
-
-
-<iframe class="video" src="https://www.youtube.com/embed/6V0vAx2Km7U?start=1185" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-### 0:21:00
-
-Use `fct_rev` and `scale_fill_discrete` with `guide = guide_legend(reverse = TRUE)` to reorder the segments within the stacked bar plot.
-
-fct_rev | scale_fill_discrete
-
-forcats | ggplot
-
-
-
-<iframe class="video" src="https://www.youtube.com/embed/6V0vAx2Km7U?start=1260" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-### 0:23:20
-
-Use the `widyr` package and `pairwise_cor` to find out what ingredients appear together. 
-
-Mentioned: [David Robinson - The {widyr} Package YouTube Talk at 2020 R Conference](https://www.youtube.com/watch?v=mApnx5NJwQA)
-
-add_count | distinct | pairwise_cor
-
-widyr | dplyr
-
-
-
-<iframe class="video" src="https://www.youtube.com/embed/6V0vAx2Km7U?start=1400" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-### 0:26:20
-
-Use `ggraph` , `geom_edge_link`, `geom_node_point`, `geom_node_text` to create an ingredient network diagram to show their makeup and how they interact.
-
-ggraph | geom_edge_link | geom_node_point | geom_node_text
-
-widyr | ggraph | tidygraph
-
-
-
-<iframe class="video" src="https://www.youtube.com/embed/6V0vAx2Km7U?start=1580" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-### 0:28:00
-
-Use `pairwise_count` from `widyr` to count the number of times each pair of items appear together within a group defined by feature.
-
-pairwise_count
-
-widyr
-
-
-
-<iframe class="video" src="https://www.youtube.com/embed/6V0vAx2Km7U?start=1680" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-### 0:30:15
-
-Use `unite` from the `tidyr` package in order to paste together the `episode_course` and `series_episode` columns into one column to figure out if any pairs of ingredients appear together in the same course across episodes.
-
-unite | pairwise_count
-
-tidyr | widyr
-
-
-
-<iframe class="video" src="https://www.youtube.com/embed/6V0vAx2Km7U?start=1815" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-### 0:31:55
-
-Use `summarize` with `min`, `mean, `max`, and `n()` to create the `first_season`, `avg_season`, `last_season` and `n_appearances` variables.
-
-summarize | min | mean | max
-
-dplyr | base
-
-
-
-<iframe class="video" src="https://www.youtube.com/embed/6V0vAx2Km7U?start=1915" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-### 0:34:35
-
-Use `slice` with `tail` to get the `n` ingredients that appear in early and late seasons.
-
-slice | tail
-
-dplyr | base
-
-
-
-<iframe class="video" src="https://www.youtube.com/embed/6V0vAx2Km7U?start=2075" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-### 0:35:40
-
-Use `geom_boxplot` to visualize the distribution of each ingredient across all seasons.
-
-semi_join | geom_boxplot | fct_reorder
-
-dplyr | ggplot | forcats
-
-
-
-<iframe class="video" src="https://www.youtube.com/embed/6V0vAx2Km7U?start=2140" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-### 0:36:50
-
-Fit predictive models (`linear regression` , `random forest`, and `natural spline`) to determine if episode rating is explained by the ingredients or season.
-
-Use `pivot_wider` with `values_fill = list(value = 0))` with 1 indicating ingredient was used and 0 indicating it wasn't used.
-
-pivot_wider | lm | linear_reg | set_engine | fit | initial_split | training | plot | base | vfold_cv | fit_resamples | tune_grid | collect_metrics | geom_line | tidy | rand_forest | clean_names | step_ns | tune_grid  | collect_metrics | prep | juice
-
-tidymodels | stats | rsample | ggplot | broom | parsnip | janitor
-
-
-
-<iframe class="video" src="https://www.youtube.com/embed/6V0vAx2Km7U?start=2210" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-### 1:17:25
-
-Summary of screencast.
-
-NA
-
-NA
-
-
-
-<iframe class="video" src="https://www.youtube.com/embed/6V0vAx2Km7U?start=4645" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
+```{=html}
+<div id="topics">
+  <div class="topic">
+    <h3 id="ts-320">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(320, this)">0:5:20</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">geom_histogram</span></div><div><span class="badge-packages badge bg-primary">ggplot</span></div></div>
+    <div class="topic_description">
+      <p>Use <code>geom_histogram</code> to visualize the distribution of episode ratings.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-390">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(390, this)">0:6:30</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">geom_point</span><span class="badge-functions badge bg-info">geom_line</span></div><div><span class="badge-packages badge bg-primary">ggplot</span></div></div>
+    <div class="topic_description">
+      <p>Use <code>geom_point</code> and <code>geom_line</code> with <code>color = factor(season)</code> to visualize the episode rating for every episode.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-435">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(435, this)">0:7:15</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">group_by</span><span class="badge-functions badge bg-info">summarize</span></div><div><span class="badge-packages badge bg-primary">dplyr</span></div></div>
+    <div class="topic_description">
+      <p>Use <code>group_by</code> and <code>summarize</code> to show the average rating for each season and the number of episodes in each season.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-435">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(435, this)">0:7:15</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">geom_line</span><span class="badge-functions badge bg-info">geom_point</span></div><div><span class="badge-packages badge bg-primary">ggplot</span></div></div>
+    <div class="topic_description">
+      <p>Continuing from previous row:</p>
+<p>Use <code>geom_line</code> and <code>geom_point</code> with <code>size = n_episodes</code>  to visualize the average rating for each season with point size indicating the total number of episodes (larger = more episodes, smaller = fewer episodes).</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-655">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(655, this)">0:10:55</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">fct_reorder</span></div><div><span class="badge-packages badge bg-primary">forcats</span></div></div>
+    <div class="topic_description">
+      <p>Use <code>fct_reorder</code>  to reorder the <code>episode_name</code> factor levels by sorting along the <code>episode_rating</code> variable.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-655">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(655, this)">0:10:55</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">gnemonol</span><span class="badge-functions badge bg-info">arrange</span></div><div><span class="badge-packages badge bg-primary">gplot</span><span class="badge-packages badge bg-primary">dplyr</span><span class="badge-packages badge bg-primary">glue</span></div></div>
+    <div class="topic_description">
+      <p>Use <code>geom_point</code> to visualize the top episodes by rating.</p>
+<p>Use the 'glue' package to place <code>season number</code> and <code>episode number</code> before episode name on the <code>y axis</code>.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-920">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(920, this)">0:15:20</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">pivot_longer</span><span class="badge-functions badge bg-info">separate_rows</span></div><div><span class="badge-packages badge bg-primary">tidyr</span></div></div>
+    <div class="topic_description">
+      <p>Use <code>pivot_longer</code> to combine ingredients into one single column.</p>
+<p>Use <code>separate_rows</code> with <code>sep = &quot;, &quot;</code>  to separate out the ingredients with each ingredient getting its own row.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1090">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1090, this)">0:18:10</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">fct_lump</span><span class="badge-functions badge bg-info">fct_reorder</span></div><div><span class="badge-packages badge bg-primary">forcats</span></div></div>
+    <div class="topic_description">
+      <p>Use <code>fct_lump</code>  to lump ingredients together except for the 10 most frequent.</p>
+<p>Use <code>fct_reorder</code> to reorder <code>ingredient</code> factor levels by sorting against <code>n</code>.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1090">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1090, this)">0:18:10</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">geom_col</span></div><div><span class="badge-packages badge bg-primary">ggplot</span></div></div>
+    <div class="topic_description">
+      <p>Use <code>geom_col</code> to create a stacked bar plot to visualize the most common ingredients by course.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1185">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1185, this)">0:19:45</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">fct_relevel</span></div><div><span class="badge-packages badge bg-primary">forcats</span></div></div>
+    <div class="topic_description">
+      <p>Use <code>fct_relevel</code>  to reorder <code>course</code> factor levels to appetizer, entree, dessert.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1260">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1260, this)">0:21:00</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">fct_rev</span><span class="badge-functions badge bg-info">scale_fill_discrete</span></div><div><span class="badge-packages badge bg-primary">forcats</span><span class="badge-packages badge bg-primary">ggplot</span></div></div>
+    <div class="topic_description">
+      <p>Use <code>fct_rev</code> and <code>scale_fill_discrete</code> with <code>guide = guide_legend(reverse = TRUE)</code> to reorder the segments within the stacked bar plot.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1400">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1400, this)">0:23:20</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">add_count</span><span class="badge-functions badge bg-info">distinct</span><span class="badge-functions badge bg-info">pairwise_cor</span></div><div><span class="badge-packages badge bg-primary">widyr</span><span class="badge-packages badge bg-primary">dplyr</span></div></div>
+    <div class="topic_description">
+      <p>Use the <code>widyr</code> package and <code>pairwise_cor</code> to find out what ingredients appear together.</p>
+<p>Mentioned: <a href="https://www.youtube.com/watch?v=mApnx5NJwQA">David Robinson - The {widyr} Package YouTube Talk at 2020 R Conference</a></p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1580">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1580, this)">0:26:20</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">ggraph</span><span class="badge-functions badge bg-info">geom_edge_link</span><span class="badge-functions badge bg-info">geom_node_point</span><span class="badge-functions badge bg-info">geom_node_text</span></div><div><span class="badge-packages badge bg-primary">widyr</span><span class="badge-packages badge bg-primary">ggraph</span><span class="badge-packages badge bg-primary">tidygraph</span></div></div>
+    <div class="topic_description">
+      <p>Use <code>ggraph</code> , <code>geom_edge_link</code>, <code>geom_node_point</code>, <code>geom_node_text</code> to create an ingredient network diagram to show their makeup and how they interact.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1680">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1680, this)">0:28:00</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">pairwise_count</span></div><div><span class="badge-packages badge bg-primary">widyr</span></div></div>
+    <div class="topic_description">
+      <p>Use <code>pairwise_count</code> from <code>widyr</code> to count the number of times each pair of items appear together within a group defined by feature.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1815">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1815, this)">0:30:15</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">unite</span><span class="badge-functions badge bg-info">pairwise_count</span></div><div><span class="badge-packages badge bg-primary">tidyr</span><span class="badge-packages badge bg-primary">widyr</span></div></div>
+    <div class="topic_description">
+      <p>Use <code>unite</code> from the <code>tidyr</code> package in order to paste together the <code>episode_course</code> and <code>series_episode</code> columns into one column to figure out if any pairs of ingredients appear together in the same course across episodes.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1915">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1915, this)">0:31:55</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">summarize</span><span class="badge-functions badge bg-info">min</span><span class="badge-functions badge bg-info">mean</span><span class="badge-functions badge bg-info">max</span></div><div><span class="badge-packages badge bg-primary">dplyr</span><span class="badge-packages badge bg-primary">base</span></div></div>
+    <div class="topic_description">
+      <p>Use <code>summarize</code> with <code>min</code>, <code>mean, </code>max<code>, and </code>n()<code>to create the</code>first_season<code>, </code>avg_season<code>, </code>last_season<code>and</code>n_appearances` variables.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2075">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2075, this)">0:34:35</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">slice</span><span class="badge-functions badge bg-info">tail</span></div><div><span class="badge-packages badge bg-primary">dplyr</span><span class="badge-packages badge bg-primary">base</span></div></div>
+    <div class="topic_description">
+      <p>Use <code>slice</code> with <code>tail</code> to get the <code>n</code> ingredients that appear in early and late seasons.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2140">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2140, this)">0:35:40</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">semi_join</span><span class="badge-functions badge bg-info">geom_boxplot</span><span class="badge-functions badge bg-info">fct_reorder</span></div><div><span class="badge-packages badge bg-primary">dplyr</span><span class="badge-packages badge bg-primary">ggplot</span><span class="badge-packages badge bg-primary">forcats</span></div></div>
+    <div class="topic_description">
+      <p>Use <code>geom_boxplot</code> to visualize the distribution of each ingredient across all seasons.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2210">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2210, this)">0:36:50</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">pivot_wider</span><span class="badge-functions badge bg-info">lm</span><span class="badge-functions badge bg-info">linear_reg</span><span class="badge-functions badge bg-info">set_engine</span><span class="badge-functions badge bg-info">fit</span><span class="badge-functions badge bg-info">initial_split</span><span class="badge-functions badge bg-info">training</span><span class="badge-functions badge bg-info">plot</span><span class="badge-functions badge bg-info">base</span><span class="badge-functions badge bg-info">vfold_cv</span><span class="badge-functions badge bg-info">fit_resamples</span><span class="badge-functions badge bg-info">tune_grid</span><span class="badge-functions badge bg-info">collect_metrics</span><span class="badge-functions badge bg-info">geom_line</span><span class="badge-functions badge bg-info">tidy</span><span class="badge-functions badge bg-info">rand_forest</span><span class="badge-functions badge bg-info">clean_names</span><span class="badge-functions badge bg-info">step_ns</span><span class="badge-functions badge bg-info">tune_grid</span><span class="badge-functions badge bg-info">collect_metrics</span><span class="badge-functions badge bg-info">prep</span><span class="badge-functions badge bg-info">juice</span></div><div><span class="badge-packages badge bg-primary">tidymodels</span><span class="badge-packages badge bg-primary">stats</span><span class="badge-packages badge bg-primary">rsample</span><span class="badge-packages badge bg-primary">ggplot</span><span class="badge-packages badge bg-primary">broom</span><span class="badge-packages badge bg-primary">parsnip</span><span class="badge-packages badge bg-primary">janitor</span></div></div>
+    <div class="topic_description">
+      <p>Fit predictive models (<code>linear regression</code> , <code>random forest</code>, and <code>natural spline</code>) to determine if episode rating is explained by the ingredients or season.</p>
+<p>Use <code>pivot_wider</code> with <code>values_fill = list(value = 0))</code> with 1 indicating ingredient was used and 0 indicating it wasn't used.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-4645">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(4645, this)">1:17:25</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Summary of screencast.</p>
+
+    </div>
+  </div>
+</div>
+```
+     
+<script>
+// 2. This code loads the IFrame Player API code asynchronously.
+var tag = document.createElement("script");
+
+tag.src = "https://www.youtube.com/iframe_api";
+var firstScriptTag = document.getElementsByTagName("script")[0];
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+// 3. This function creates an <iframe> (and YouTube player)
+//    after the API code downloads.
+var videoId = document.getElementById("yt-player").dataset.videoId;
+var player;
+function onYouTubeIframeAPIReady() {
+  player = new YT.Player("yt-player", {
+    height: "486",
+    width: "864",
+    videoId: videoId,
+    playerVars: {
+      "playsinline": 1
+    },
+    events: {
+      onStateChange: function(event) {
+        if (event.data == YT.PlayerState.PLAYING) {
+          followTimestamps()
+        }
+      }
+    }
+  });
+}
+
+function playerSkipToTimestamp(seconds, tsElement) {
+  player.seekTo(seconds, true)
+  tsElement.scrollIntoView()
+  document.getElementById("screencast").scrollIntoView()
+}
+
+const timestamps = Array.from(document.querySelectorAll('.topic h3[id^="ts-"]'))
+  .map(el => el.id.replace('ts-', ''))
+
+function followTimestamps() {
+  if (player.getPlayerState() !== 1) {
+    return
+  }
+  const currentTime = `${Math.floor(player.getCurrentTime())}`
+  if (timestamps.includes(currentTime)) {
+    const el = document.getElementById(`ts-${currentTime}`)
+    if (el) {
+      el.scrollIntoView()
+      document.getElementById("screencast").scrollIntoView()
+    }
+  }
+  setTimeout(followTimestamps, 1000)
+}
+</script>

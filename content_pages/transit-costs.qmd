@@ -1,0 +1,234 @@
+---
+title: |
+  Transit Costs
+description: |
+  EDA (Exploratory Data Analysis) with boxplots, interactive Shiny dashboard
+date: 2021-01-04
+date-format: long
+aliases:
+  - "Transit Costs.html"
+---
+
+Notable topics: EDA (Exploratory Data Analysis) with boxplots, interactive Shiny dashboard
+
+Recorded on: 2021-01-04
+
+Timestamps by: Alex Cookson
+
+[View code](https://github.com/dgrtwo/data-screencasts/blob/master/2021_01_05_transit_costs.Rmd)
+
+## Screencast
+
+<div id="yt-player" data-video-id="8jNQzce13SE"></div>
+
+## Timestamps
+
+```{=html}
+<div id="topics">
+  <div class="topic">
+    <h3 id="ts-285">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(285, this)">0:4:45</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">countrycode</span></div><div><span class="badge-packages badge bg-primary">countrycode</span></div></div>
+    <div class="topic_description">
+      <p>Using <code>countrycode</code> function from <code>countrycode</code> package to convert two-letter country codes to country names</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-380">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(380, this)">0:6:20</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">geom_errorbarh</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using <code>geom_errorbarh</code> function to visualize start and end times of transit projects</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-435">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(435, this)">0:7:15</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">fct_reorder</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using <code>fct_reorder</code> function to reorder lines by project midpoint year</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-550">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(550, this)">0:9:10</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">as.numeric</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using <code>as.numeric</code> to convert character field (real_cost) to proper numeric field</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-620">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(620, this)">0:10:20</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">mutate_at</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using <code>mutate_at</code> function to apply the same function (<code>as.numeric</code>) to multiple fields in one line of code</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-820">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(820, this)">0:13:40</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">geom_boxplot</span><span class="badge-functions badge bg-info">fct_lump</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using <code>geom_boxplot</code> and <code>fct_lump</code> to visualize cost per kilometre by country as boxplots</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-935">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(935, this)">0:15:35</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">glue</span></div><div><span class="badge-packages badge bg-primary">glue</span></div></div>
+    <div class="topic_description">
+      <p>Using <code>glue</code> function from <code>glue</code> package to combine fields to make easy-to-read labels on a graph</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1155">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1155, this)">0:19:15</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">factor</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Splitting boxplots into whether they are railroads (rr) or not, using <code>factor</code> function and <code>fill</code> argument</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1455">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1455, this)">0:24:15</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Investigating sources of missing data for Shanghai</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1895">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1895, this)">0:31:35</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">geom_jitter</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using <code>geom_jitter</code> with <code>geom_boxplot</code> to show distribution of items within each group</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1980">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1980, this)">0:33:00</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">geom_boxplot</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Setting <code>geom_boxplot</code> argument <code>outlier.size = -1</code> as a hack to get rid of boxplot-generated outlier points</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2440">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2440, this)">0:40:40</button>
+    </h3>
+    <div class="topic_badges"><div></div><div><span class="badge-packages badge bg-primary">shiny</span></div></div>
+    <div class="topic_description">
+      <p>Starting to build a <code>shiny</code> app</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2935">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2935, this)">0:48:55</button>
+    </h3>
+    <div class="topic_badges"><div></div><div><span class="badge-packages badge bg-primary">shiny</span></div></div>
+    <div class="topic_description">
+      <p>Review of preliminary <code>shiny</code> app</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-3480">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(3480, this)">0:58:00</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Screencast summary</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-3625">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(3625, this)">1:00:25</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Showing how to upload code to GitHub in RStudio</p>
+
+    </div>
+  </div>
+</div>
+```
+     
+<script>
+// 2. This code loads the IFrame Player API code asynchronously.
+var tag = document.createElement("script");
+
+tag.src = "https://www.youtube.com/iframe_api";
+var firstScriptTag = document.getElementsByTagName("script")[0];
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+// 3. This function creates an <iframe> (and YouTube player)
+//    after the API code downloads.
+var videoId = document.getElementById("yt-player").dataset.videoId;
+var player;
+function onYouTubeIframeAPIReady() {
+  player = new YT.Player("yt-player", {
+    height: "486",
+    width: "864",
+    videoId: videoId,
+    playerVars: {
+      "playsinline": 1
+    },
+    events: {
+      onStateChange: function(event) {
+        if (event.data == YT.PlayerState.PLAYING) {
+          followTimestamps()
+        }
+      }
+    }
+  });
+}
+
+function playerSkipToTimestamp(seconds, tsElement) {
+  player.seekTo(seconds, true)
+  tsElement.scrollIntoView()
+  document.getElementById("screencast").scrollIntoView()
+}
+
+const timestamps = Array.from(document.querySelectorAll('.topic h3[id^="ts-"]'))
+  .map(el => el.id.replace('ts-', ''))
+
+function followTimestamps() {
+  if (player.getPlayerState() !== 1) {
+    return
+  }
+  const currentTime = `${Math.floor(player.getCurrentTime())}`
+  if (timestamps.includes(currentTime)) {
+    const el = document.getElementById(`ts-${currentTime}`)
+    if (el) {
+      el.scrollIntoView()
+      document.getElementById("screencast").scrollIntoView()
+    }
+  }
+  setTimeout(followTimestamps, 1000)
+}
+</script>

@@ -1,0 +1,264 @@
+---
+title: |
+  Car Fuel Efficiency
+description: |
+  Natural splines for regression
+date: 2019-10-14
+date-format: long
+aliases:
+  - "Car Fuel Efficiency.html"
+---
+
+Notable topics: Natural splines for regression
+
+Recorded on: 2019-10-14
+
+Timestamps by: Alex Cookson
+
+[View code](https://github.com/dgrtwo/data-screencasts/blob/master/car-economy.Rmd)
+
+## Screencast
+
+<div id="yt-player" data-video-id="RpeioixHOHw"></div>
+
+## Timestamps
+
+```{=html}
+<div id="topics">
+  <div class="topic">
+    <h3 id="ts-200">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(200, this)">0:3:20</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">select</span><span class="badge-functions badge bg-info">sort</span><span class="badge-functions badge bg-info">colnames</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using select and sort and colnames functions to sort variables in alphabetical order</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-600">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(600, this)">0:10:00</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">geom_abline</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Adding geom_abline for y = x to a scatter plot for comparison</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1080">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1080, this)">0:18:00</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">geom_boxplot</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Visualising using geom_boxplot for mpg by vehicle class (size of car)</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1485">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1485, this)">0:24:45</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Start of explanation of prediction goals</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1620">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1620, this)">0:27:00</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">sample_frac</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Creating train and test sets, along with trick using sample_frac function to randomly re-arrange all rows in a dataset</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1715">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1715, this)">0:28:35</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">geom_smooth</span></div><div></div></div>
+    <div class="topic_description">
+      <p>First step of developing linear model: visually adding geom_smooth</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1800">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1800, this)">0:30:00</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">augment</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using augment function to add extra variables from model to original dataset (fitted values and residuals, especially)</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1845">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1845, this)">0:30:45</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Creating residuals plot and explaining what you want and don't want to see</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1910">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1910, this)">0:31:50</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Explanation of splines</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2010">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2010, this)">0:33:30</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Visualising effect of regressing using natural splines</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2110">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2110, this)">0:35:10</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Creating a tibble to test different degrees of freedom (1:10) for natural splines</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2190">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2190, this)">0:36:30</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">unnest</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using unnest function to get tidy versions of different models</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2275">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2275, this)">0:37:55</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Visualising fitted values of all 6 different models at the same time</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2530">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2530, this)">0:42:10</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">glance</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Investigating whether the model got &quot;better&quot; as we added degrees of freedom to the natural splines, using the glance function</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2865">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2865, this)">0:47:45</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Using ANOVA to perform a statistical test on whether natural splines as a group explain variation in MPG</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2910">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2910, this)">0:48:30</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Exploring colinearity of dependant variables (displacement and cylinders)</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-3310">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(3310, this)">0:55:10</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">floor</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Binning years into every two years using floor function</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-3400">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(3400, this)">0:56:40</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">summarise_at</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using summarise_at function to do quick averaging of multiple variables</p>
+
+    </div>
+  </div>
+</div>
+```
+     
+<script>
+// 2. This code loads the IFrame Player API code asynchronously.
+var tag = document.createElement("script");
+
+tag.src = "https://www.youtube.com/iframe_api";
+var firstScriptTag = document.getElementsByTagName("script")[0];
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+// 3. This function creates an <iframe> (and YouTube player)
+//    after the API code downloads.
+var videoId = document.getElementById("yt-player").dataset.videoId;
+var player;
+function onYouTubeIframeAPIReady() {
+  player = new YT.Player("yt-player", {
+    height: "486",
+    width: "864",
+    videoId: videoId,
+    playerVars: {
+      "playsinline": 1
+    },
+    events: {
+      onStateChange: function(event) {
+        if (event.data == YT.PlayerState.PLAYING) {
+          followTimestamps()
+        }
+      }
+    }
+  });
+}
+
+function playerSkipToTimestamp(seconds, tsElement) {
+  player.seekTo(seconds, true)
+  tsElement.scrollIntoView()
+  document.getElementById("screencast").scrollIntoView()
+}
+
+const timestamps = Array.from(document.querySelectorAll('.topic h3[id^="ts-"]'))
+  .map(el => el.id.replace('ts-', ''))
+
+function followTimestamps() {
+  if (player.getPlayerState() !== 1) {
+    return
+  }
+  const currentTime = `${Math.floor(player.getCurrentTime())}`
+  if (timestamps.includes(currentTime)) {
+    const el = document.getElementById(`ts-${currentTime}`)
+    if (el) {
+      el.scrollIntoView()
+      document.getElementById("screencast").scrollIntoView()
+    }
+  }
+  setTimeout(followTimestamps, 1000)
+}
+</script>

@@ -1,0 +1,514 @@
+---
+title: |
+  Riddler: Monte Carlo Simulation
+description: |
+  Simulation
+date: 2018-12-03
+date-format: long
+aliases:
+  - "Riddler: Monte Carlo Simulation.html"
+---
+
+Notable topics: Simulation
+
+Recorded on: 2018-12-03
+
+Timestamps by: Alex Cookson
+
+[View code](https://github.com/dgrtwo/data-screencasts/blob/master/riddler-die-reroll.Rmd)
+
+## Screencast
+
+<div id="yt-player" data-video-id="pBGMt28xgvk"></div>
+
+## Timestamps
+
+```{=html}
+<div id="topics">
+  <div class="topic">
+    <h3 id="ts-190">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(190, this)">0:3:10</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">crossing</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using crossing function to set up structure of simulation (1,000 trials, each with 12 chess games)</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-240">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(240, this)">0:4:00</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Adding result to the tidy simulation dataset</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-405">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(405, this)">0:6:45</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">sample</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using sample function to simulate win/loss/draw for each game (good explanation of individual arguments within sample)</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-425">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(425, this)">0:7:05</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">group_by</span><span class="badge-functions badge bg-info">summarise</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using group_by and summarise to get total points for each trial</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-490">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(490, this)">0:8:10</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Adding red vertical reference line to histogram to know when a player wins a matchup</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-600">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(600, this)">0:10:00</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Answering second piece of riddle (how many games would need to be played for better player to win 90% or 99% of the time?)</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-650">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(650, this)">0:10:50</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">unnest</span><span class="badge-functions badge bg-info">seq_len</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using unnest and seq_len function to create groups of number of games (20, 40, …, 100), each with one game per row</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-735">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(735, this)">0:12:15</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Creating a win field based on the simulated data, then summarising win percentage for each group of number of games (20, 40, …, 100)</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-835">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(835, this)">0:13:55</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">seq</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using seq function to create groups of number of games programmatically</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-905">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(905, this)">0:15:05</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Explanation of using logarithmic scale for this riddle</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-945">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(945, this)">0:15:45</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Changing spacing of number of games from even spacing (20, 40, …, 100) to exponential (doubles every time, 12, 24, 48, …, 1536)</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1080">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1080, this)">0:18:00</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Changing spacing of number of games to be finer</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1140">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1140, this)">0:19:00</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Introduction of interpolation as the last step we will do</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1170">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1170, this)">0:19:30</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">approx</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Introducing approx function as method to linearly interpolate data</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1355">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1355, this)">0:22:35</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Break point for the next riddle</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1470">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1470, this)">0:24:30</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Starting recursive approach to this riddle</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1535">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1535, this)">0:25:35</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">matrix</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Setting up a N x N matrix (N = 4 to start)</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1555">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1555, this)">0:25:55</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Explanation of approach (random ball goes into random cup, represented by matrix)</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1585">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1585, this)">0:26:25</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">sample</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using sample function to pick a random element of the matrix</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1635">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1635, this)">0:27:15</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Using for loop to iterate random selection 100 times</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1705">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1705, this)">0:28:25</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Converting for loop to while loop, using colSums to keep track of number of balls in cups</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1805">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1805, this)">0:30:05</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Starting to code the pruning phase</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1815">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1815, this)">0:30:15</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Using diag function to pick matching matrix elements (e.g., the 4th row of the 4th column)</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1910">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1910, this)">0:31:50</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Turning code up to this point into a custom simulate_round function</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1945">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1945, this)">0:32:25</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Using custom simulate_round function to simulate 100 rounds</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2010">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2010, this)">0:33:30</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">all</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using all function to perform logic check on whether all cups in a round are not empty</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2045">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2045, this)">0:34:05</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Converting loop approach to tidy approach</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2110">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2110, this)">0:35:10</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">rerun</span><span class="badge-functions badge bg-info">map_lgl</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using rerun and map_lgl functions from purrr package to simulate a round for each for in a dataframe</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2180">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2180, this)">0:36:20</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Explanation of the tidy approach</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2225">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2225, this)">0:37:05</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">cumsum</span><span class="badge-functions badge bg-info">lag</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using cumsum and lag functions to keep track of the number of rounds until you win a &quot;game&quot;</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2385">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2385, this)">0:39:45</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Creating histogram of number of rounds until winning a game</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2410">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2410, this)">0:40:10</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Setting boundary argument of geom_histogram function to include count of zeros</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2430">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2430, this)">0:40:30</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Brief explanation of geometric distribution</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2485">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2485, this)">0:41:25</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Extending custom simulate_round function to include number of balls thrown to win (in addition to whether we won a round)</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2770">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2770, this)">0:46:10</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Extending to two values of N (N = 3 or N = 4)</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2990">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2990, this)">0:49:50</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Reviewing results of N = 3 and N = 4</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-3140">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(3140, this)">0:52:20</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Extending to N = 5</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-3235">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(3235, this)">0:53:55</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Checking results of chess riddle with Riddler solution</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-3310">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(3310, this)">0:55:10</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Checking results of ball-cup riddle with Riddler solution (Dave slightly misinterpreted what the riddle was asking)</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-3395">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(3395, this)">0:56:35</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Changing simulation code to correct the misinterpretation</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-3700">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(3700, this)">1:01:40</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Reviewing results of corrected simulation</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-3810">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(3810, this)">1:03:30</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Checking results of ball-cup riddle with corrected simulation with Riddler solutions</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-3960">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(3960, this)">1:06:00</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Visualizing number of balls thrown and rounds played</p>
+
+    </div>
+  </div>
+</div>
+```
+     
+<script>
+// 2. This code loads the IFrame Player API code asynchronously.
+var tag = document.createElement("script");
+
+tag.src = "https://www.youtube.com/iframe_api";
+var firstScriptTag = document.getElementsByTagName("script")[0];
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+// 3. This function creates an <iframe> (and YouTube player)
+//    after the API code downloads.
+var videoId = document.getElementById("yt-player").dataset.videoId;
+var player;
+function onYouTubeIframeAPIReady() {
+  player = new YT.Player("yt-player", {
+    height: "486",
+    width: "864",
+    videoId: videoId,
+    playerVars: {
+      "playsinline": 1
+    },
+    events: {
+      onStateChange: function(event) {
+        if (event.data == YT.PlayerState.PLAYING) {
+          followTimestamps()
+        }
+      }
+    }
+  });
+}
+
+function playerSkipToTimestamp(seconds, tsElement) {
+  player.seekTo(seconds, true)
+  tsElement.scrollIntoView()
+  document.getElementById("screencast").scrollIntoView()
+}
+
+const timestamps = Array.from(document.querySelectorAll('.topic h3[id^="ts-"]'))
+  .map(el => el.id.replace('ts-', ''))
+
+function followTimestamps() {
+  if (player.getPlayerState() !== 1) {
+    return
+  }
+  const currentTime = `${Math.floor(player.getCurrentTime())}`
+  if (timestamps.includes(currentTime)) {
+    const el = document.getElementById(`ts-${currentTime}`)
+    if (el) {
+      el.scrollIntoView()
+      document.getElementById("screencast").scrollIntoView()
+    }
+  }
+  setTimeout(followTimestamps, 1000)
+}
+</script>

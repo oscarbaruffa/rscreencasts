@@ -1,0 +1,344 @@
+---
+title: |
+  Board Game Reviews
+description: |
+  LASSO regression (glmnet package)
+date: 2019-03-14
+date-format: long
+aliases:
+  - "Board Game Reviews.html"
+---
+
+Notable topics: LASSO regression (glmnet package)
+
+Recorded on: 2019-03-14
+
+Timestamps by: Alex Cookson
+
+[View code](https://github.com/dgrtwo/data-screencasts/blob/master/board-games.Rmd)
+
+## Screencast
+
+<div id="yt-player" data-video-id="qirKGdQvy9U"></div>
+
+## Timestamps
+
+```{=html}
+<div id="topics">
+  <div class="topic">
+    <h3 id="ts-170">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(170, this)">0:2:50</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Starting EDA (exploratory data analysis) with counts of categorical variables</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-445">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(445, this)">0:7:25</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">scale_x_log10</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Specifying scale_x_log10 function's breaks argument to get sensisble tick marks for time on histogram</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-525">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(525, this)">0:8:45</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">geom_histogram</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Tweaking geom_histogram function's binwidth argument to get something that makes sense for log scale</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-610">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(610, this)">0:10:10</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">separate_rows</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using separate_rows to break down comma-separated values for three different categorical variables</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-955">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(955, this)">0:15:55</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">top_n</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using top_n to get top 20 observations from each of several categories (not quite right, fixed at 17:47)</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-975">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(975, this)">0:16:15</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">facet_wrap</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Troubleshooting various issues with facetted graph (e.g., ordering, values appearing in multiple categories)</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1195">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1195, this)">0:19:55</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">lm</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Starting prediction of average rating with a linear model</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1250">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1250, this)">0:20:50</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Splitting data into train/test sets (training/holdout)</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1375">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1375, this)">0:22:55</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Investigating relationship between max number of players and average rating (to determine if it should be in linear model)</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1505">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1505, this)">0:25:05</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Exploring average rating over time (&quot;Do newer games tend to be rated higher/lower?&quot;)</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1655">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1655, this)">0:27:35</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Discussing necessity of controlling for year a game was published in the linear model</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1710">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1710, this)">0:28:30</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Non-model approach to exploring relationship between game features (e.g., card game, made in Germany) on average rating</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1850">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1850, this)">0:30:50</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">geom_boxplot</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using geom_boxplot function to create boxplot of average ratings for most common game features</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2045">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2045, this)">0:34:05</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">unite</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using unite function to combine multiple variables into one</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2245">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2245, this)">0:37:25</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Introducing Lasso regression as good option when you have many features likely to be correlated with one another</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2295">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2295, this)">0:38:15</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Writing code to set up Lasso regression using glmnet and tidytext packages</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2405">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2405, this)">0:40:05</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Adding average rating to the feature matrix (warning: method is messy)</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2500">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2500, this)">0:41:40</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">setdiff</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using setdiff function to find games that are in one set, but not in another (while setting up matrix for Lasso regression)</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2655">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2655, this)">0:44:15</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Spotting the error stemming from the step above (calling row names from the wrong data)</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2745">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2745, this)">0:45:45</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">glmnet</span></div><div><span class="badge-packages badge bg-primary">glmnet</span></div></div>
+    <div class="topic_description">
+      <p>Explaining what a Lasso regression does, including the penalty parameter lambda</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2915">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2915, this)">0:48:35</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">cv.glmnet</span></div><div><span class="badge-packages badge bg-primary">glmnet</span></div></div>
+    <div class="topic_description">
+      <p>Using a cross-validated Lasso model to choose the level of the penalty parameter (lambda)</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-3095">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(3095, this)">0:51:35</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Adding non-categorical variables to the Lasso model to control for them (e.g., max number of players)</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-3315">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(3315, this)">0:55:15</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">unite</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using unite function to combine multiple variables into one, separated by a colon</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-3525">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(3525, this)">0:58:45</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Graphing the top 20 coefficients in the Lasso model that have the biggest effect on predicted average rating</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-3655">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(3655, this)">1:00:55</button>
+    </h3>
+    <div class="topic_badges"><div></div><div><span class="badge-packages badge bg-primary">yardstick</span></div></div>
+    <div class="topic_description">
+      <p>Mentioning the yardstick package as a way to evaluate the model's performance</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-3675">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(3675, this)">1:01:15</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Discussing drawbacks of linear models like Lasso (can't do non-linear relationships or interaction effects)</p>
+
+    </div>
+  </div>
+</div>
+```
+     
+<script>
+// 2. This code loads the IFrame Player API code asynchronously.
+var tag = document.createElement("script");
+
+tag.src = "https://www.youtube.com/iframe_api";
+var firstScriptTag = document.getElementsByTagName("script")[0];
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+// 3. This function creates an <iframe> (and YouTube player)
+//    after the API code downloads.
+var videoId = document.getElementById("yt-player").dataset.videoId;
+var player;
+function onYouTubeIframeAPIReady() {
+  player = new YT.Player("yt-player", {
+    height: "486",
+    width: "864",
+    videoId: videoId,
+    playerVars: {
+      "playsinline": 1
+    },
+    events: {
+      onStateChange: function(event) {
+        if (event.data == YT.PlayerState.PLAYING) {
+          followTimestamps()
+        }
+      }
+    }
+  });
+}
+
+function playerSkipToTimestamp(seconds, tsElement) {
+  player.seekTo(seconds, true)
+  tsElement.scrollIntoView()
+  document.getElementById("screencast").scrollIntoView()
+}
+
+const timestamps = Array.from(document.querySelectorAll('.topic h3[id^="ts-"]'))
+  .map(el => el.id.replace('ts-', ''))
+
+function followTimestamps() {
+  if (player.getPlayerState() !== 1) {
+    return
+  }
+  const currentTime = `${Math.floor(player.getCurrentTime())}`
+  if (timestamps.includes(currentTime)) {
+    const el = document.getElementById(`ts-${currentTime}`)
+    if (el) {
+      el.scrollIntoView()
+      document.getElementById("screencast").scrollIntoView()
+    }
+  }
+  setTimeout(followTimestamps, 1000)
+}
+</script>

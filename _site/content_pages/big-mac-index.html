@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-0.9.501">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="dcterms.date" content="2020-12-21">
+<meta name="description" content="Data manipulation, Pairwise correlation">
+
+<title>R Screencasts - Big Mac Index</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+span.underline{text-decoration: underline;}
+div.column{display: inline-block; vertical-align: top; width: 50%;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../images/favicon-32x32.png" rel="icon" type="image/png">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+<script defer="" data-domain="rscreencasts.com" src="https://plausible.io/js/script.outbound-links.js"></script>
+
+<meta property="og:title" content="R Screencasts - Big Mac Index">
+<meta property="og:description" content="Awesome data analysis screencasts from a top Data Scientist">
+<meta property="og:image" content="https://www.rscreencasts.com/images/rscreencasts_social.png">
+<meta property="og:url" content="https://www.rscreencasts.com/">
+<meta property="og:site_name" content="R Screencasts">
+
+<meta name="twitter:title" content="R Screencasts - Big Mac Index">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image:alt" content="Awesome data analysis screencasts from a top Data Scientist">
+<meta name="twitter:site" content="@oscarbaruffa">
+<meta name="twitter:description" content="Awesome data analysis screencasts from a top Data Scientists">
+<meta name="twitter:image" content="https://www.rscreencasts.com/images/rscreencasts_social.png">
+
+
+<link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">R Screencasts</span>
+  </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../index.html">Home</a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../resources.html">Resources</a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../about.html">About</a>
+  </li>  
+</ul>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#screencast" id="toc-screencast" class="nav-link active" data-scroll-target="#screencast">Screencast</a></li>
+  <li><a href="#timestamps" id="toc-timestamps" class="nav-link" data-scroll-target="#timestamps">Timestamps</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><p>Big Mac Index</p></h1>
+</div>
+
+<div>
+  <div class="description">
+    <p>Data manipulation, Pairwise correlation</p>
+  </div>
+</div>
+
+
+<div class="quarto-title-meta">
+
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">December 21, 2020</p>
+    </div>
+  </div>
+    
+  </div>
+  
+
+</header>
+
+<p>Notable topics: Data manipulation, Pairwise correlation</p>
+<p>Recorded on: 2020-12-21</p>
+<p>Timestamps by: Eric Fletcher</p>
+<p><a href="https://github.com/dgrtwo/data-screencasts/blob/master/2020_12_22_big_mac_index.Rmd">View code</a></p>
+<section id="screencast" class="level2">
+<h2 class="anchored" data-anchor-id="screencast">Screencast</h2>
+<div id="yt-player" data-video-id="pxJ5wtxL5Kw">
+
+</div>
+</section>
+<section id="timestamps" class="level2">
+<h2 class="anchored" data-anchor-id="timestamps">Timestamps</h2>
+<div id="topics">
+  <div class="topic">
+    <h3 id="ts-345" class="anchored">
+      <button class="btn btn-link btn-timestamp" onclick="playerSkipToTimestamp(345, this)">0:5:45</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">add_count</span></div><div><span class="badge-packages badge bg-primary">dplyr</span></div></div>
+    <div class="topic_description">
+      <p>Use the <code>add_count</code> function from the <code>dplyr</code> package with <code>name = "country_total"</code> to count the number of observations by group in the <code>name</code> variable.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-355" class="anchored">
+      <button class="btn btn-link btn-timestamp" onclick="playerSkipToTimestamp(355, this)">0:5:55</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">filter</span><span class="badge-functions badge bg-info">max</span></div><div><span class="badge-packages badge bg-primary">dplyr</span><span class="badge-packages badge bg-primary">base</span></div></div>
+    <div class="topic_description">
+      <p>Use <code>filter</code> from the <code>dplyr</code> package with <code>country_total == max(country_total)</code> to filter the data for countries where every data point is provided.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-390" class="anchored">
+      <button class="btn btn-link btn-timestamp" onclick="playerSkipToTimestamp(390, this)">0:6:30</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">rename</span></div><div><span class="badge-packages badge bg-primary">dplyr</span></div></div>
+    <div class="topic_description">
+      <p>Use the <code>rename</code> function from the <code>dplyr</code> package to rename the <code>name</code> variable to <code>country_name</code>.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-405" class="anchored">
+      <button class="btn btn-link btn-timestamp" onclick="playerSkipToTimestamp(405, this)">0:6:45</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">theme</span></div><div><span class="badge-packages badge bg-primary">ggplot2</span></div></div>
+    <div class="topic_description">
+      <p>Use <code>theme(legend.position = "none")</code> to hide the legend generated by the <code>geom_line</code> plot.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-420" class="anchored">
+      <button class="btn btn-link btn-timestamp" onclick="playerSkipToTimestamp(420, this)">0:7:00</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">expand_limits</span></div><div><span class="badge-packages badge bg-primary">ggplot2</span></div></div>
+    <div class="topic_description">
+      <p>Use the <code>expand_limits</code> function from the <code>ggplot2</code> package with <code>y = 0</code> so that each <code>facet panel</code> has a y-axis that starts at the same point, in this case 0.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-510" class="anchored">
+      <button class="btn btn-link btn-timestamp" onclick="playerSkipToTimestamp(510, this)">0:8:30</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">fct_reorder</span></div><div><span class="badge-packages badge bg-primary">forcats</span></div></div>
+    <div class="topic_description">
+      <p>Reorder <code>facet panels</code> using the <code>fct_reorder</code> from the <code>forcats</code> package with a function passed in to the <code>.fun</code> argument to calculate the ratio between <code>max</code> and <code>min</code> values in the <code>local_price</code> variable.  At 12:00, David changes from using <code>max</code> and <code>min</code> to <code>last</code> and <code>first</code> to calculate the <code>Big Mac inflation rate</code>.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-800" class="anchored">
+      <button class="btn btn-link btn-timestamp" onclick="playerSkipToTimestamp(800, this)">0:13:20</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">scale_x_log10</span></div><div><span class="badge-packages badge bg-primary">ggplot2</span></div></div>
+    <div class="topic_description">
+      <p>Use <code>scale_x_log10</code> from the <code>ggplot2</code> package to change the <code>breaks</code> for the <code>x-axis</code> while also applying a <code>log10</code> tranformation.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-905" class="anchored">
+      <button class="btn btn-link btn-timestamp" onclick="playerSkipToTimestamp(905, this)">0:15:05</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">geom_text</span><span class="badge-functions badge bg-info">paste0</span></div><div><span class="badge-packages badge bg-primary">ggplot2</span><span class="badge-packages badge bg-primary">base</span></div></div>
+    <div class="topic_description">
+      <p>Use <code>geom_text</code> from the from the <code>ggplot2</code> with <code>paste0</code> package to add labels to each bar in the plot indicating how many time <code>X</code> the price of a Big Mac increased from 2000 to 2020.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1690" class="anchored">
+      <button class="btn btn-link btn-timestamp" onclick="playerSkipToTimestamp(1690, this)">0:28:10</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">geom_line</span></div><div><span class="badge-packages badge bg-primary">ggplot2</span></div></div>
+    <div class="topic_description">
+      <p>Add two lines to a plot using 2 <code>geom_line</code>  with  <code>color =</code> argument and <code>y=</code> argument to distinguish between the two lines.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2045" class="anchored">
+      <button class="btn btn-link btn-timestamp" onclick="playerSkipToTimestamp(2045, this)">0:34:05</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">geom_hline</span></div><div><span class="badge-packages badge bg-primary">ggplot2</span></div></div>
+    <div class="topic_description">
+      <p>Use <code>geom_hline</code> from the <code>ggplot2</code> package to add horizontal reference line to each facet panel.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2140" class="anchored">
+      <button class="btn btn-link btn-timestamp" onclick="playerSkipToTimestamp(2140, this)">0:35:40</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">theme</span></div><div><span class="badge-packages badge bg-primary">ggplot2</span></div></div>
+    <div class="topic_description">
+      <p>Use <code>theme</code> from the <code>ggplot2</code> package with <code>axis.text.x = element_text(angle = 90, hjust = 1)</code> to rmake the x-axis labels horizontal in order to avoid overcrowding.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2305" class="anchored">
+      <button class="btn btn-link btn-timestamp" onclick="playerSkipToTimestamp(2305, this)">0:38:25</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">geom_text</span><span class="badge-functions badge bg-info">geom_text_repel</span></div><div><span class="badge-packages badge bg-primary">ggplot2</span><span class="badge-packages badge bg-primary">ggrepel</span></div></div>
+    <div class="topic_description">
+      <p>Use <code>geom_text</code> to add country names to each point in <code>geom_point</code> plot. David then opts to use <code>geom_text_repel</code> from the <code>ggrepel</code> package instead to avoid overcrowding.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2320" class="anchored">
+      <button class="btn btn-link btn-timestamp" onclick="playerSkipToTimestamp(2320, this)">0:38:40</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">geom_smooth</span></div><div><span class="badge-packages badge bg-primary">ggplot2</span></div></div>
+    <div class="topic_description">
+      <p>Use <code>geom_smooth</code> from the <code>ggplot2</code> package with <code>lm</code> smoothing method to help show the linear trend when comparing <code>gdp_dollar</code> to <code>usd_raw</code>.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2820" class="anchored">
+      <button class="btn btn-link btn-timestamp" onclick="playerSkipToTimestamp(2820, this)">0:47:00</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">transition_manual</span><span class="badge-functions badge bg-info">transition_time</span></div><div><span class="badge-packages badge bg-primary">gganimate</span></div></div>
+    <div class="topic_description">
+      <p>Use the <code>gganimate</code> package to animate the <code>GDP per capital</code> versus <code>adjusted big mac index relative to USD</code> over time.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-3185" class="anchored">
+      <button class="btn btn-link btn-timestamp" onclick="playerSkipToTimestamp(3185, this)">0:53:05</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">str_to_upper</span><span class="badge-functions badge bg-info">str_remove</span></div><div><span class="badge-packages badge bg-primary">stringr</span></div></div>
+    <div class="topic_description">
+      <p>Use <code>str_to_upper</code> and <code>str_remove</code> to remove <code>_adjusted</code> from <code>base_currency</code> while uppercasing the characters that remain.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-3485" class="anchored">
+      <button class="btn btn-link btn-timestamp" onclick="playerSkipToTimestamp(3485, this)">0:58:05</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">pairwise_cor</span></div><div><span class="badge-packages badge bg-primary">widyr</span></div></div>
+    <div class="topic_description">
+      <p>Use <code>pairwise_cor</code> from the <code>widyr</code> package to perform <code>pairwise correlation</code> to figure out which countries Big Mac prices tend to move together over time.</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-3650" class="anchored">
+      <button class="btn btn-link btn-timestamp" onclick="playerSkipToTimestamp(3650, this)">1:00:50</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Screencast summary.</p>
+
+    </div>
+  </div>
+</div>
+<script>
+// 2. This code loads the IFrame Player API code asynchronously.
+var tag = document.createElement("script");
+
+tag.src = "https://www.youtube.com/iframe_api";
+var firstScriptTag = document.getElementsByTagName("script")[0];
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+// 3. This function creates an <iframe> (and YouTube player)
+//    after the API code downloads.
+var videoId = document.getElementById("yt-player").dataset.videoId;
+var player;
+function onYouTubeIframeAPIReady() {
+  player = new YT.Player("yt-player", {
+    height: "486",
+    width: "864",
+    videoId: videoId,
+    playerVars: {
+      "playsinline": 1
+    },
+    events: {
+      onStateChange: function(event) {
+        if (event.data == YT.PlayerState.PLAYING) {
+          followTimestamps()
+        }
+      }
+    }
+  });
+}
+
+function playerSkipToTimestamp(seconds, tsElement) {
+  player.seekTo(seconds, true)
+  tsElement.scrollIntoView()
+  document.getElementById("screencast").scrollIntoView()
+}
+
+const timestamps = Array.from(document.querySelectorAll('.topic h3[id^="ts-"]'))
+  .map(el => el.id.replace('ts-', ''))
+
+function followTimestamps() {
+  if (player.getPlayerState() !== 1) {
+    return
+  }
+  const currentTime = `${Math.floor(player.getCurrentTime())}`
+  if (timestamps.includes(currentTime)) {
+    const el = document.getElementById(`ts-${currentTime}`)
+    if (el) {
+      el.scrollIntoView()
+      document.getElementById("screencast").scrollIntoView()
+    }
+  }
+  setTimeout(followTimestamps, 1000)
+}
+</script>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    setTimeout(function() {
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      let href = ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+});
+</script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+      <div class="nav-footer-center">Vids by <a href="https://twitter.com/drob">David Robinson</a>. Timestamps &amp; rich content by <a href="https://twitter.com/alexcookson">Alex Cookson</a> and <a href="https://twitter.com/iamericfletcher">Eric Fletcher</a>. Website by <a href="https://twitter.com/OscarBaruffa">Oscar Baruffa</a>, sign up to my <a href="https://oscarbaruffa.com/newsletter/">newsletter</a> for R, data and careers</div>
+  </div>
+</footer>
+
+
+
+</body></html>

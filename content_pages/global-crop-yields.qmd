@@ -1,0 +1,214 @@
+---
+title: |
+  Global Crop Yields
+description: |
+  Interactive Shiny Dashboard
+date: 2020-08-31
+date-format: long
+aliases:
+  - "Global Crop Yields.html"
+---
+
+Notable topics: Interactive Shiny Dashboard
+
+Recorded on: 2020-08-31
+
+Timestamps by: Eric Fletcher
+
+[View code](https://github.com/dgrtwo/data-screencasts/blob/master/2020_09_01_crop_yields.Rmd)
+
+## Screencast
+
+<div id="yt-player" data-video-id="0uqAhIiK9Rc"></div>
+
+## Timestamps
+
+```{=html}
+<div id="topics">
+  <div class="topic">
+    <h3 id="ts-215">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(215, this)">0:03:35</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">rename</span></div><div><span class="badge-packages badge bg-primary">dplyr</span></div></div>
+    <div class="topic_description">
+      <p>Using <code>rename</code> to shorten column name</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-400">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(400, this)">0:06:40</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">rename_all</span><span class="badge-functions badge bg-info">str_remove</span></div><div><span class="badge-packages badge bg-primary">dplyr</span><span class="badge-packages badge bg-primary">string</span></div></div>
+    <div class="topic_description">
+      <p>Using <code>rename_all</code> with <code>str_remove</code> and regex to remove characters in column name</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-460">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(460, this)">0:07:40</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">pivot_longer</span></div><div><span class="badge-packages badge bg-primary">tidyr</span></div></div>
+    <div class="topic_description">
+      <p>Using <code>pivot_longer</code> to change data from wide to long</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-505">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(505, this)">0:08:25</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">geom_line</span><span class="badge-functions badge bg-info">facet_wrap</span></div><div><span class="badge-packages badge bg-primary">ggplot2</span></div></div>
+    <div class="topic_description">
+      <p>Create a faceted <code>geom_line</code> chart</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-580">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(580, this)">0:09:40</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">fct_reorder</span></div><div><span class="badge-packages badge bg-primary">forcats</span></div></div>
+    <div class="topic_description">
+      <p>Using <code>fct_reorder</code> to reorder facet panels in ascending order</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-710">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(710, this)">0:11:50</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">write_rds</span><span class="badge-functions badge bg-info">inputPanel</span><span class="badge-functions badge bg-info">renderPlot</span></div><div><span class="badge-packages badge bg-primary">shiny</span><span class="badge-packages badge bg-primary">dplyr</span><span class="badge-packages badge bg-primary">ggplot2</span><span class="badge-packages badge bg-primary">forcats</span><span class="badge-packages badge bg-primary">stringr</span><span class="badge-packages badge bg-primary">plotly</span></div></div>
+    <div class="topic_description">
+      <p>Create an interactive <code>Shiny</code> dashboard</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2000">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2000, this)">0:33:20</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">geom_line</span></div><div><span class="badge-packages badge bg-primary">ggplot2</span></div></div>
+    <div class="topic_description">
+      <p>Create a faceted <code>geom_line</code> chart with <code>add_count</code> and <code>filter(n = max(x))</code> to subset the data for crops that have observations in every year</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2210">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2210, this)">0:36:50</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">geom_point</span><span class="badge-functions badge bg-info">geom_abline</span></div><div><span class="badge-packages badge bg-primary">ggplot2</span></div></div>
+    <div class="topic_description">
+      <p>Create a faceted <code>geom_point</code> chart showing the crop yields at start and end over a 50 year period (1968 start date and 2018 end date)</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2700">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2700, this)">0:45:00</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">geom_boxplot</span></div><div><span class="badge-packages badge bg-primary">ggplot2</span></div></div>
+    <div class="topic_description">
+      <p>Create a <code>geom_boxplot</code> to visualize the distribution of yield ratios for the different crops to see how efficiency has increased across countries</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2760">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2760, this)">0:46:00</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">geom_col</span></div><div><span class="badge-packages badge bg-primary">ggplot2</span></div></div>
+    <div class="topic_description">
+      <p>Create a <code>geom_col</code> chart to visualize the median yield ratio for each crop</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2870">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(2870, this)">0:47:50</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">geom_point</span><span class="badge-functions badge bg-info">geom_text_repel</span></div><div><span class="badge-packages badge bg-primary">ggplot2</span><span class="badge-packages badge bg-primary">ggrepel</span></div></div>
+    <div class="topic_description">
+      <p>Create a <code>geom_point</code> chart to visualize efficiency imporvement for each country for a specific crop (yield start / yield ratio)</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-3025">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(3025, this)">0:50:25</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">countrycode</span><span class="badge-functions badge bg-info">geom_hline</span><span class="badge-functions badge bg-info">geom_text_repel</span></div><div><span class="badge-packages badge bg-primary">countrycode</span><span class="badge-packages badge bg-primary">ggplot2</span><span class="badge-packages badge bg-primary">ggrepel</span></div></div>
+    <div class="topic_description">
+      <p>Using the <code>countrycode</code> package to color <code>geom_point</code> chart by continent names</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-3410">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(3410, this)">0:56:50</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Summary of screencast</p>
+
+    </div>
+  </div>
+</div>
+```
+     
+<script>
+// 2. This code loads the IFrame Player API code asynchronously.
+var tag = document.createElement("script");
+
+tag.src = "https://www.youtube.com/iframe_api";
+var firstScriptTag = document.getElementsByTagName("script")[0];
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+// 3. This function creates an <iframe> (and YouTube player)
+//    after the API code downloads.
+var videoId = document.getElementById("yt-player").dataset.videoId;
+var player;
+function onYouTubeIframeAPIReady() {
+  player = new YT.Player("yt-player", {
+    height: "486",
+    width: "864",
+    videoId: videoId,
+    playerVars: {
+      "playsinline": 1
+    },
+    events: {
+      onStateChange: function(event) {
+        if (event.data == YT.PlayerState.PLAYING) {
+          followTimestamps()
+        }
+      }
+    }
+  });
+}
+
+function playerSkipToTimestamp(seconds, tsElement) {
+  player.seekTo(seconds, true)
+  tsElement.scrollIntoView()
+  document.getElementById("screencast").scrollIntoView()
+}
+
+const timestamps = Array.from(document.querySelectorAll('.topic h3[id^="ts-"]'))
+  .map(el => el.id.replace('ts-', ''))
+
+function followTimestamps() {
+  if (player.getPlayerState() !== 1) {
+    return
+  }
+  const currentTime = `${Math.floor(player.getCurrentTime())}`
+  if (timestamps.includes(currentTime)) {
+    const el = document.getElementById(`ts-${currentTime}`)
+    if (el) {
+      el.scrollIntoView()
+      document.getElementById("screencast").scrollIntoView()
+    }
+  }
+  setTimeout(followTimestamps, 1000)
+}
+</script>

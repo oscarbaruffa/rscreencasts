@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-0.9.501">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="dcterms.date" content="2020-07-27">
+<meta name="description" content="Modeling (logistic regression, k-nearest neighbors, decision tree, multiclass logistic regression) with cross validated accuracy">
+
+<title>R Screencasts - Palmer Penguins</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+span.underline{text-decoration: underline;}
+div.column{display: inline-block; vertical-align: top; width: 50%;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../images/favicon-32x32.png" rel="icon" type="image/png">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+<script defer="" data-domain="rscreencasts.com" src="https://plausible.io/js/script.outbound-links.js"></script>
+
+<meta property="og:title" content="R Screencasts - Palmer Penguins">
+<meta property="og:description" content="Awesome data analysis screencasts from a top Data Scientist">
+<meta property="og:image" content="https://www.rscreencasts.com/images/rscreencasts_social.png">
+<meta property="og:url" content="https://www.rscreencasts.com/">
+<meta property="og:site_name" content="R Screencasts">
+
+<meta name="twitter:title" content="R Screencasts - Palmer Penguins">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image:alt" content="Awesome data analysis screencasts from a top Data Scientist">
+<meta name="twitter:site" content="@oscarbaruffa">
+<meta name="twitter:description" content="Awesome data analysis screencasts from a top Data Scientists">
+<meta name="twitter:image" content="https://www.rscreencasts.com/images/rscreencasts_social.png">
+
+
+<link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">R Screencasts</span>
+  </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../index.html">Home</a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../resources.html">Resources</a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../about.html">About</a>
+  </li>  
+</ul>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#screencast" id="toc-screencast" class="nav-link active" data-scroll-target="#screencast">Screencast</a></li>
+  <li><a href="#timestamps" id="toc-timestamps" class="nav-link" data-scroll-target="#timestamps">Timestamps</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><p>Palmer Penguins</p></h1>
+</div>
+
+<div>
+  <div class="description">
+    <p>Modeling (logistic regression, k-nearest neighbors, decision tree, multiclass logistic regression) with cross validated accuracy</p>
+  </div>
+</div>
+
+
+<div class="quarto-title-meta">
+
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">July 27, 2020</p>
+    </div>
+  </div>
+    
+  </div>
+  
+
+</header>
+
+<p>Notable topics: Modeling (logistic regression, k-nearest neighbors, decision tree, multiclass logistic regression) with cross validated accuracy</p>
+<p>Recorded on: 2020-07-27</p>
+<p>Timestamps by: Eric Fletcher</p>
+<p><a href="https://github.com/dgrtwo/data-screencasts/blob/master/2020_07_28_penguins.Rmd">View code</a></p>
+<section id="screencast" class="level2">
+<h2 class="anchored" data-anchor-id="screencast">Screencast</h2>
+<div id="yt-player" data-video-id="ImpXawPNCfM">
+
+</div>
+</section>
+<section id="timestamps" class="level2">
+<h2 class="anchored" data-anchor-id="timestamps">Timestamps</h2>
+<div id="topics">
+  <div class="topic">
+    <h3 id="ts-677" class="anchored">
+      <button class="btn btn-link btn-timestamp" onclick="playerSkipToTimestamp(677, this)">0:11:17</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">pivot_longer</span><span class="badge-functions badge bg-info">geom_histogram</span><span class="badge-functions badge bg-info">facet_wrap</span></div><div><span class="badge-packages badge bg-primary">tidyr</span><span class="badge-packages badge bg-primary">ggplot2</span></div></div>
+    <div class="topic_description">
+      <p>Create a pivoted histogram plot to visualize the distribution of penguin metrics using <code>pivot_longer</code>, <code>geom_histogram</code>, and <code>facet_wrap</code></p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-880" class="anchored">
+      <button class="btn btn-link btn-timestamp" onclick="playerSkipToTimestamp(880, this)">0:14:40</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">geom_density</span><span class="badge-functions badge bg-info">facet_wrap</span></div><div><span class="badge-packages badge bg-primary">ggplot2</span></div></div>
+    <div class="topic_description">
+      <p>Create a pivoted density plot  to visualize the distribution of penguin metrics using <code>geom_density</code> and <code>facet_wrap</code></p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-921" class="anchored">
+      <button class="btn btn-link btn-timestamp" onclick="playerSkipToTimestamp(921, this)">0:15:21</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">geom_boxplot</span><span class="badge-functions badge bg-info">facet_wrap</span></div><div><span class="badge-packages badge bg-primary">ggplot2</span></div></div>
+    <div class="topic_description">
+      <p>Create a pivoted boxplot plot to visualize the distribution of penguin metrics using <code>geom_boxplot</code> and <code>facet_wrap</code></p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1070" class="anchored">
+      <button class="btn btn-link btn-timestamp" onclick="playerSkipToTimestamp(1070, this)">0:17:50</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">geom_bar</span></div><div><span class="badge-packages badge bg-primary">ggplot2</span></div></div>
+    <div class="topic_description">
+      <p>Create a bar plot to show penguin species changed over time</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1105" class="anchored">
+      <button class="btn btn-link btn-timestamp" onclick="playerSkipToTimestamp(1105, this)">0:18:25</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">geom_bar</span></div><div><span class="badge-packages badge bg-primary">ggplot2</span></div></div>
+    <div class="topic_description">
+      <p>Create a bar plot to show specie counts per island</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1200" class="anchored">
+      <button class="btn btn-link btn-timestamp" onclick="playerSkipToTimestamp(1200, this)">0:20:00</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">initital_split</span><span class="badge-functions badge bg-info">training</span><span class="badge-functions badge bg-info">logistic_reg</span><span class="badge-functions badge bg-info">set_engine</span><span class="badge-functions badge bg-info">fit</span><span class="badge-functions badge bg-info">fct_lump</span><span class="badge-functions badge bg-info">predict</span><span class="badge-functions badge bg-info">metrics</span><span class="badge-functions badge bg-info">vfold_cv</span><span class="badge-functions badge bg-info">fit_resamples</span><span class="badge-functions badge bg-info">collect_metrics</span></div><div><span class="badge-packages badge bg-primary">tidymodels</span><span class="badge-packages badge bg-primary">rsample</span><span class="badge-packages badge bg-primary">parsnip
+yardstick</span></div></div>
+    <div class="topic_description">
+      <p>Create a logistic regression model to predict if a penguin is Adelie or not using bill length with cross validaiton of metrics</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2375" class="anchored">
+      <button class="btn btn-link btn-timestamp" onclick="playerSkipToTimestamp(2375, this)">0:39:35</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">initital_split</span><span class="badge-functions badge bg-info">training</span><span class="badge-functions badge bg-info">logistic_reg</span><span class="badge-functions badge bg-info">set_engine</span><span class="badge-functions badge bg-info">fit</span><span class="badge-functions badge bg-info">fct_lump</span><span class="badge-functions badge bg-info">predict</span><span class="badge-functions badge bg-info">metrics</span><span class="badge-functions badge bg-info">vfold_cv</span><span class="badge-functions badge bg-info">fit_resamples</span><span class="badge-functions badge bg-info">collect_metrics</span></div><div><span class="badge-packages badge bg-primary">tidymodels</span><span class="badge-packages badge bg-primary">rsample</span><span class="badge-packages badge bg-primary">parsnip
+yardstick</span></div></div>
+    <div class="topic_description">
+      <p>Create second logistic regression model using 4 predictive metrics (bill length, bill depth, flipper length, body mass) and then compare the accuracy of both models</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2605" class="anchored">
+      <button class="btn btn-link btn-timestamp" onclick="playerSkipToTimestamp(2605, this)">0:43:25</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">nearest_neighbor</span><span class="badge-functions badge bg-info">initital_split</span><span class="badge-functions badge bg-info">training</span><span class="badge-functions badge bg-info">logistic_reg</span><span class="badge-functions badge bg-info">set_engine</span><span class="badge-functions badge bg-info">fit</span><span class="badge-functions badge bg-info">fct_lump</span><span class="badge-functions badge bg-info">predict</span><span class="badge-functions badge bg-info">metrics</span><span class="badge-functions badge bg-info">vfold_cv</span><span class="badge-functions badge bg-info">fit_resamples</span><span class="badge-functions badge bg-info">collect_metrics</span></div><div><span class="badge-packages badge bg-primary">tidymodels</span><span class="badge-packages badge bg-primary">rsample</span><span class="badge-packages badge bg-primary">parsnip
+yardstick</span></div></div>
+    <div class="topic_description">
+      <p>Create a k-nearest neighbor model and then compare accuracy against logistic regression models to see which has the highest cross validated accuracy</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-3185" class="anchored">
+      <button class="btn btn-link btn-timestamp" onclick="playerSkipToTimestamp(3185, this)">0:53:05</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">testing</span><span class="badge-functions badge bg-info">predict</span><span class="badge-functions badge bg-info">metrics</span></div><div><span class="badge-packages badge bg-primary">rsample</span><span class="badge-packages badge bg-primary">stats</span><span class="badge-packages badge bg-primary">yardstick</span></div></div>
+    <div class="topic_description">
+      <p>What is the accuracy of the testing holdout data on the k-nearest neighbor model?</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-3940" class="anchored">
+      <button class="btn btn-link btn-timestamp" onclick="playerSkipToTimestamp(3940, this)">1:05:40</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">decision_tree</span><span class="badge-functions badge bg-info">set_engine</span></div><div><span class="badge-packages badge bg-primary">parsnip</span></div></div>
+    <div class="topic_description">
+      <p>Create a decision tree and then compare accuracy against the previous models to see which has the highest cross validated accuracy + how to extract a decision tree</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-4245" class="anchored">
+      <button class="btn btn-link btn-timestamp" onclick="playerSkipToTimestamp(4245, this)">1:10:45</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">multinom_reg</span><span class="badge-functions badge bg-info">set_engine</span><span class="badge-functions badge bg-info">fit_resamples</span></div><div><span class="badge-packages badge bg-primary">parsnip</span><span class="badge-packages badge bg-primary">tune</span></div></div>
+    <div class="topic_description">
+      <p>Perform multi class regression using <code>multinom_reg</code></p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-4780" class="anchored">
+      <button class="btn btn-link btn-timestamp" onclick="playerSkipToTimestamp(4780, this)">1:19:40</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Summary of screencast</p>
+
+    </div>
+  </div>
+</div>
+<script>
+// 2. This code loads the IFrame Player API code asynchronously.
+var tag = document.createElement("script");
+
+tag.src = "https://www.youtube.com/iframe_api";
+var firstScriptTag = document.getElementsByTagName("script")[0];
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+// 3. This function creates an <iframe> (and YouTube player)
+//    after the API code downloads.
+var videoId = document.getElementById("yt-player").dataset.videoId;
+var player;
+function onYouTubeIframeAPIReady() {
+  player = new YT.Player("yt-player", {
+    height: "486",
+    width: "864",
+    videoId: videoId,
+    playerVars: {
+      "playsinline": 1
+    },
+    events: {
+      onStateChange: function(event) {
+        if (event.data == YT.PlayerState.PLAYING) {
+          followTimestamps()
+        }
+      }
+    }
+  });
+}
+
+function playerSkipToTimestamp(seconds, tsElement) {
+  player.seekTo(seconds, true)
+  tsElement.scrollIntoView()
+  document.getElementById("screencast").scrollIntoView()
+}
+
+const timestamps = Array.from(document.querySelectorAll('.topic h3[id^="ts-"]'))
+  .map(el => el.id.replace('ts-', ''))
+
+function followTimestamps() {
+  if (player.getPlayerState() !== 1) {
+    return
+  }
+  const currentTime = `${Math.floor(player.getCurrentTime())}`
+  if (timestamps.includes(currentTime)) {
+    const el = document.getElementById(`ts-${currentTime}`)
+    if (el) {
+      el.scrollIntoView()
+      document.getElementById("screencast").scrollIntoView()
+    }
+  }
+  setTimeout(followTimestamps, 1000)
+}
+</script>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    setTimeout(function() {
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      let href = ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+});
+</script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+      <div class="nav-footer-center">Vids by <a href="https://twitter.com/drob">David Robinson</a>. Timestamps &amp; rich content by <a href="https://twitter.com/alexcookson">Alex Cookson</a> and <a href="https://twitter.com/iamericfletcher">Eric Fletcher</a>. Website by <a href="https://twitter.com/OscarBaruffa">Oscar Baruffa</a>, sign up to my <a href="https://oscarbaruffa.com/newsletter/">newsletter</a> for R, data and careers</div>
+  </div>
+</footer>
+
+
+
+</body></html>

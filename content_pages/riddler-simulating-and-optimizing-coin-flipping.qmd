@@ -1,0 +1,244 @@
+---
+title: |
+  Riddler: Simulating and Optimizing Coin Flipping
+description: |
+  Simulation
+date: 2020-05-02
+date-format: long
+aliases:
+  - "Riddler: Simulating and Optimizing Coin Flipping.html"
+---
+
+Notable topics: Simulation
+
+Recorded on: 2020-05-02
+
+Timestamps by: Alex Cookson
+
+[View code](https://github.com/dgrtwo/data-screencasts/blob/master/riddler-prisoner-coin-flip.Rmd)
+
+## Screencast
+
+<div id="yt-player" data-video-id="nmS3UZSWYRo"></div>
+
+## Timestamps
+
+```{=html}
+<div id="topics">
+  <div class="topic">
+    <h3 id="ts-135">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(135, this)">0:2:15</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">crossing</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using <code>crossing</code> function to set up &quot;tidy&quot; simulation (gives you all possible combinations of values you provide it)</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-180">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(180, this)">0:3:00</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">rbinom</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using <code>rbinom</code> function to simulate the number of prisoners who choose to flip, then using <code>rbinom</code> again to simulate number of tails</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-440">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(440, this)">0:7:20</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">dbinom</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using <code>dbinom</code> function (probability mass function) to see probabilities of any given number of prisoners choosing to flip</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-615">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(615, this)">0:10:15</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">map_dbl</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using <code>map_dbl</code> function to iterate a function, making sure to return a <code>dbl</code>-class object</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-685">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(685, this)">0:11:25</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">seq_len</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using <code>seq_len(n)</code> instead of <code>1:n</code> to be slightly more efficient</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-740">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(740, this)">0:12:20</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">optimise</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using <code>optimise</code> function to conduct single-dimension optimisation (for analytical solution to this question)</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-855">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(855, this)">0:14:15</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Using backticks (<code>like this</code>) for inline R functions in RMarkdown</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-915">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(915, this)">0:15:15</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Starting the Extra Credit portion of the problem (N prisoners instead of 4)</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-990">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(990, this)">0:16:30</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">map2_dbl</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using <code>map2_dbl</code> function to iterate a function that requires two inputs (and make sure it returns a <code>dbl</code>-class object)</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1205">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1205, this)">0:20:05</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Reviewing visualisation of probabilties with a varying numbers of prisoners</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1290">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1290, this)">0:21:30</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Tweaking graph to look nicer</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1320">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1320, this)">0:22:00</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Get the exact optimal probability value for each number of prisoners</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1365">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1365, this)">0:22:45</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">optimise</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Troubleshooting <code>optimise</code> function to work when iterated over different numbers of prisoners</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1425">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1425, this)">0:23:45</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">unnest_wider</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using <code>unnest_wider</code> function to disaggregate a list, but put different elements on separate columns (not separate rows, which <code>unnest</code> does</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1530">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1530, this)">0:25:30</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Explanation of what happens to probabilities as number of prisoners increases</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1785">
+      <button class="btn btn-link btn-timestamp" onClick="playerSkipToTimestamp(1785, this)">0:29:45</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Summary of screencast</p>
+
+    </div>
+  </div>
+</div>
+```
+     
+<script>
+// 2. This code loads the IFrame Player API code asynchronously.
+var tag = document.createElement("script");
+
+tag.src = "https://www.youtube.com/iframe_api";
+var firstScriptTag = document.getElementsByTagName("script")[0];
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+// 3. This function creates an <iframe> (and YouTube player)
+//    after the API code downloads.
+var videoId = document.getElementById("yt-player").dataset.videoId;
+var player;
+function onYouTubeIframeAPIReady() {
+  player = new YT.Player("yt-player", {
+    height: "486",
+    width: "864",
+    videoId: videoId,
+    playerVars: {
+      "playsinline": 1
+    },
+    events: {
+      onStateChange: function(event) {
+        if (event.data == YT.PlayerState.PLAYING) {
+          followTimestamps()
+        }
+      }
+    }
+  });
+}
+
+function playerSkipToTimestamp(seconds, tsElement) {
+  player.seekTo(seconds, true)
+  tsElement.scrollIntoView()
+  document.getElementById("screencast").scrollIntoView()
+}
+
+const timestamps = Array.from(document.querySelectorAll('.topic h3[id^="ts-"]'))
+  .map(el => el.id.replace('ts-', ''))
+
+function followTimestamps() {
+  if (player.getPlayerState() !== 1) {
+    return
+  }
+  const currentTime = `${Math.floor(player.getCurrentTime())}`
+  if (timestamps.includes(currentTime)) {
+    const el = document.getElementById(`ts-${currentTime}`)
+    if (el) {
+      el.scrollIntoView()
+      document.getElementById("screencast").scrollIntoView()
+    }
+  }
+  setTimeout(followTimestamps, 1000)
+}
+</script>

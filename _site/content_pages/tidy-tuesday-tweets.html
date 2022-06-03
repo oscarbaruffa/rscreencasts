@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-0.9.501">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="dcterms.date" content="2019-01-06">
+<meta name="description" content="Text mining (tidytext package)">
+
+<title>R Screencasts - TidyTuesday Tweets</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+span.underline{text-decoration: underline;}
+div.column{display: inline-block; vertical-align: top; width: 50%;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../images/favicon-32x32.png" rel="icon" type="image/png">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+<script defer="" data-domain="rscreencasts.com" src="https://plausible.io/js/script.outbound-links.js"></script>
+
+<meta property="og:title" content="R Screencasts - TidyTuesday Tweets">
+<meta property="og:description" content="Awesome data analysis screencasts from a top Data Scientist">
+<meta property="og:image" content="https://www.rscreencasts.com/images/rscreencasts_social.png">
+<meta property="og:url" content="https://www.rscreencasts.com/">
+<meta property="og:site_name" content="R Screencasts">
+
+<meta name="twitter:title" content="R Screencasts - TidyTuesday Tweets">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image:alt" content="Awesome data analysis screencasts from a top Data Scientist">
+<meta name="twitter:site" content="@oscarbaruffa">
+<meta name="twitter:description" content="Awesome data analysis screencasts from a top Data Scientists">
+<meta name="twitter:image" content="https://www.rscreencasts.com/images/rscreencasts_social.png">
+
+
+<link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">R Screencasts</span>
+  </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../index.html">Home</a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../resources.html">Resources</a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../about.html">About</a>
+  </li>  
+</ul>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#screencast" id="toc-screencast" class="nav-link active" data-scroll-target="#screencast">Screencast</a></li>
+  <li><a href="#timestamps" id="toc-timestamps" class="nav-link" data-scroll-target="#timestamps">Timestamps</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><p>TidyTuesday Tweets</p></h1>
+</div>
+
+<div>
+  <div class="description">
+    <p>Text mining (tidytext package)</p>
+  </div>
+</div>
+
+
+<div class="quarto-title-meta">
+
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">January 6, 2019</p>
+    </div>
+  </div>
+    
+  </div>
+  
+
+</header>
+
+<p>Notable topics: Text mining (tidytext package)</p>
+<p>Recorded on: 2019-01-06</p>
+<p>Timestamps by: Alex Cookson</p>
+<p><a href="https://github.com/dgrtwo/data-screencasts/blob/master/tidytuesday-tweets.Rmd">View code</a></p>
+<section id="screencast" class="level2">
+<h2 class="anchored" data-anchor-id="screencast">Screencast</h2>
+<div id="yt-player" data-video-id="KE9ItC3doEU">
+
+</div>
+</section>
+<section id="timestamps" class="level2">
+<h2 class="anchored" data-anchor-id="timestamps">Timestamps</h2>
+
+<div id="topics">
+  <div class="topic">
+    <h3 id="ts-80" class="anchored">
+      <button class="btn btn-link btn-timestamp" onclick="playerSkipToTimestamp(80, this)">0:1:20</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Importing an rds file using read_rds function</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-175" class="anchored">
+      <button class="btn btn-link btn-timestamp" onclick="playerSkipToTimestamp(175, this)">0:2:55</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">floor_date</span></div><div><span class="badge-packages badge bg-primary">lubridate</span></div></div>
+    <div class="topic_description">
+      <p>Using floor_date function from lubridate package to round dates down (that's what the floor part does) to the month level</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-325" class="anchored">
+      <button class="btn btn-link btn-timestamp" onclick="playerSkipToTimestamp(325, this)">0:5:25</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Asking, "Which tweets get the most re-tweets?"</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-350" class="anchored">
+      <button class="btn btn-link btn-timestamp" onclick="playerSkipToTimestamp(350, this)">0:5:50</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">contains</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using contains function to select only columns that contain a certain string ("retweet" in this case)</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-485" class="anchored">
+      <button class="btn btn-link btn-timestamp" onclick="playerSkipToTimestamp(485, this)">0:8:05</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Exploring likes/re-tweets ratio, including dealing with one or the other being 0 (which would cause divide by zero error)</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-660" class="anchored">
+      <button class="btn btn-link btn-timestamp" onclick="playerSkipToTimestamp(660, this)">0:11:00</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Starting exploration of actual text of tweets</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-695" class="anchored">
+      <button class="btn btn-link btn-timestamp" onclick="playerSkipToTimestamp(695, this)">0:11:35</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">unnest_tokens</span></div><div><span class="badge-packages badge bg-primary">tidytext</span></div></div>
+    <div class="topic_description">
+      <p>Using unnest_tokens function from tidytext package to break tweets into individual words (using token argument specifically for tweet-style text)</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-775" class="anchored">
+      <button class="btn btn-link btn-timestamp" onclick="playerSkipToTimestamp(775, this)">0:12:55</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">anti_join</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using anti_join function to filter out stop words (e.g., "and", "or", "the") from tokenized data frame</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-885" class="anchored">
+      <button class="btn btn-link btn-timestamp" onclick="playerSkipToTimestamp(885, this)">0:14:45</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Calculating summary statistics per word (average retweets and likes), then looking at distributions</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-960" class="anchored">
+      <button class="btn btn-link btn-timestamp" onclick="playerSkipToTimestamp(960, this)">0:16:00</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Explanation of Poisson log normal distribution (number of retweets fits this distribution)</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1065" class="anchored">
+      <button class="btn btn-link btn-timestamp" onclick="playerSkipToTimestamp(1065, this)">0:17:45</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Additional example of Poisson log normal distribution (number of likes)</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1100" class="anchored">
+      <button class="btn btn-link btn-timestamp" onclick="playerSkipToTimestamp(1100, this)">0:18:20</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Explanation of geometric mean as better summary statistic than median or arithmetic mean</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1520" class="anchored">
+      <button class="btn btn-link btn-timestamp" onclick="playerSkipToTimestamp(1520, this)">0:25:20</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">floor_date</span></div><div><span class="badge-packages badge bg-primary">lubridate</span></div></div>
+    <div class="topic_description">
+      <p>Using floor_date function from lubridate package to floor dates to the week level and tweaking so that a week starts on Monday (default is Sunday)</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1820" class="anchored">
+      <button class="btn btn-link btn-timestamp" onclick="playerSkipToTimestamp(1820, this)">0:30:20</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Asking, "What topic is each week about?" using just the tweet text</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-1890" class="anchored">
+      <button class="btn btn-link btn-timestamp" onclick="playerSkipToTimestamp(1890, this)">0:31:30</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">bind_tf_idf</span></div><div><span class="badge-packages badge bg-primary">tidytext</span></div></div>
+    <div class="topic_description">
+      <p>Calculating TF-IDF of tweets, with week as the "document"</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2025" class="anchored">
+      <button class="btn btn-link btn-timestamp" onclick="playerSkipToTimestamp(2025, this)">0:33:45</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">top_n</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using top_n and group_by functions to select the top tf-idf score for each week</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2275" class="anchored">
+      <button class="btn btn-link btn-timestamp" onclick="playerSkipToTimestamp(2275, this)">0:37:55</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">str_detect</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using str_detect function to filter out "words" that are just numbers (e.g., 16, 36)</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2460" class="anchored">
+      <button class="btn btn-link btn-timestamp" onclick="playerSkipToTimestamp(2460, this)">0:41:00</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">distinct</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using distinct function with .keep_all argument to ensure only top 1 result, as alternative to top_n function (which includes ties)</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2550" class="anchored">
+      <button class="btn btn-link btn-timestamp" onclick="playerSkipToTimestamp(2550, this)">0:42:30</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Making Jenny Bryan disappointed</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2575" class="anchored">
+      <button class="btn btn-link btn-timestamp" onclick="playerSkipToTimestamp(2575, this)">0:42:55</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">geom_text</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using geom_text function to add text labels to graph to show to word associated with each week</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2650" class="anchored">
+      <button class="btn btn-link btn-timestamp" onclick="playerSkipToTimestamp(2650, this)">0:44:10</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">geom_text_repel</span></div><div><span class="badge-packages badge bg-primary">ggrepel</span></div></div>
+    <div class="topic_description">
+      <p>Using geom_text_repel function from ggrepel package as an alternative to geom_text function for adding text labels to graph</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-2790" class="anchored">
+      <button class="btn btn-link btn-timestamp" onclick="playerSkipToTimestamp(2790, this)">0:46:30</button>
+    </h3>
+    <div class="topic_badges"><div></div><div><span class="badge-packages badge bg-primary">rvest</span></div></div>
+    <div class="topic_description">
+      <p>Using rvest package to scrape web data from a table in Tidy Tuesday README</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-3060" class="anchored">
+      <button class="btn btn-link btn-timestamp" onclick="playerSkipToTimestamp(3060, this)">0:51:00</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Starting to look at #rstats tweets</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-3395" class="anchored">
+      <button class="btn btn-link btn-timestamp" onclick="playerSkipToTimestamp(3395, this)">0:56:35</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Spotting signs of fake accounts with purchased followers (lots of hashtags)</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-3555" class="anchored">
+      <button class="btn btn-link btn-timestamp" onclick="playerSkipToTimestamp(3555, this)">0:59:15</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Explanation of spotting fake accounts</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-3645" class="anchored">
+      <button class="btn btn-link btn-timestamp" onclick="playerSkipToTimestamp(3645, this)">1:00:45</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">str_detect</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using str_detect to filter out web URLs</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-3835" class="anchored">
+      <button class="btn btn-link btn-timestamp" onclick="playerSkipToTimestamp(3835, this)">1:03:55</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">str_count</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using str_count function and some regex to count how many hashtags a tweet has</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-4045" class="anchored">
+      <button class="btn btn-link btn-timestamp" onclick="playerSkipToTimestamp(4045, this)">1:07:25</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Creating a Bland-Altman plot (total on x-axis, variable of interest on y-axis)</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-4125" class="anchored">
+      <button class="btn btn-link btn-timestamp" onclick="playerSkipToTimestamp(4125, this)">1:08:45</button>
+    </h3>
+    <div class="topic_badges"><div><span class="badge-functions badge bg-info">geom_text</span></div><div></div></div>
+    <div class="topic_description">
+      <p>Using geom_text function with check_overlap argument to add labels to scatterplot</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-4340" class="anchored">
+      <button class="btn btn-link btn-timestamp" onclick="playerSkipToTimestamp(4340, this)">1:12:20</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Asking, "Who are the most active #rstats tweeters?"</p>
+
+    </div>
+  </div>
+  <div class="topic">
+    <h3 id="ts-4500" class="anchored">
+      <button class="btn btn-link btn-timestamp" onclick="playerSkipToTimestamp(4500, this)">1:15:00</button>
+    </h3>
+    <div class="topic_badges"><div></div><div></div></div>
+    <div class="topic_description">
+      <p>Summary of screncast</p>
+
+    </div>
+  </div>
+</div>
+<script>
+// 2. This code loads the IFrame Player API code asynchronously.
+var tag = document.createElement("script");
+
+tag.src = "https://www.youtube.com/iframe_api";
+var firstScriptTag = document.getElementsByTagName("script")[0];
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+// 3. This function creates an <iframe> (and YouTube player)
+//    after the API code downloads.
+var videoId = document.getElementById("yt-player").dataset.videoId;
+var player;
+function onYouTubeIframeAPIReady() {
+  player = new YT.Player("yt-player", {
+    height: "486",
+    width: "864",
+    videoId: videoId,
+    playerVars: {
+      "playsinline": 1
+    },
+    events: {
+      onStateChange: function(event) {
+        if (event.data == YT.PlayerState.PLAYING) {
+          followTimestamps()
+        }
+      }
+    }
+  });
+}
+
+function playerSkipToTimestamp(seconds, tsElement) {
+  player.seekTo(seconds, true)
+  tsElement.scrollIntoView()
+  document.getElementById("screencast").scrollIntoView()
+}
+
+const timestamps = Array.from(document.querySelectorAll('.topic h3[id^="ts-"]'))
+  .map(el => el.id.replace('ts-', ''))
+
+function followTimestamps() {
+  if (player.getPlayerState() !== 1) {
+    return
+  }
+  const currentTime = `${Math.floor(player.getCurrentTime())}`
+  if (timestamps.includes(currentTime)) {
+    const el = document.getElementById(`ts-${currentTime}`)
+    if (el) {
+      el.scrollIntoView()
+      document.getElementById("screencast").scrollIntoView()
+    }
+  }
+  setTimeout(followTimestamps, 1000)
+}
+</script>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    setTimeout(function() {
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      let href = ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+});
+</script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+      <div class="nav-footer-center">Vids by <a href="https://twitter.com/drob">David Robinson</a>. Timestamps &amp; rich content by <a href="https://twitter.com/alexcookson">Alex Cookson</a> and <a href="https://twitter.com/iamericfletcher">Eric Fletcher</a>. Website by <a href="https://twitter.com/OscarBaruffa">Oscar Baruffa</a>, sign up to my <a href="https://oscarbaruffa.com/newsletter/">newsletter</a> for R, data and careers</div>
+  </div>
+</footer>
+
+
+
+</body></html>
