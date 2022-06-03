@@ -3,7 +3,7 @@ title: |
   African-American Achievements
 description: |
   `plotly` interactive timeline, Wikipedia web scraping
-date: 2020-06-09
+date: 2020-06-08
 date-format: long
 aliases:
   - "African-American Achievements.html"
@@ -11,7 +11,7 @@ aliases:
 
 Notable topics: `plotly` interactive timeline, Wikipedia web scraping
 
-Recorded on: 2020-06-09
+Recorded on: 2020-06-08
 
 Timestamps by: Eric Fletcher
 

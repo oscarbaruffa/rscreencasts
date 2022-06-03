@@ -3,7 +3,7 @@ title: |
   Palmer Penguins
 description: |
   Modeling (logistic regression, k-nearest neighbors, decision tree, multiclass logistic regression) with cross validated accuracy
-date: 2020-07-28
+date: 2020-07-27
 date-format: long
 aliases:
   - "Palmer Penguins.html"
@@ -11,7 +11,7 @@ aliases:
 
 Notable topics: Modeling (logistic regression, k-nearest neighbors, decision tree, multiclass logistic regression) with cross validated accuracy
 
-Recorded on: 2020-07-28
+Recorded on: 2020-07-27
 
 Timestamps by: Eric Fletcher
 

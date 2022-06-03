@@ -3,7 +3,7 @@ title: |
   Tour de France
 description: |
   Survival analysis, Animated bar graph (gganimate package)
-date: 2020-04-07
+date: 2020-04-06
 date-format: long
 aliases:
   - "Tour de France.html"
@@ -11,7 +11,7 @@ aliases:
 
 Notable topics: Survival analysis, Animated bar graph (gganimate package)
 
-Recorded on: 2020-04-07
+Recorded on: 2020-04-06
 
 Timestamps by: Alex Cookson
 

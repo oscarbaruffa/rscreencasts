@@ -3,7 +3,7 @@ title: |
   US Dairy Consumption
 description: |
   Time series analysis, Forecasting (sweep package)
-date: 2019-01-29
+date: 2019-01-28
 date-format: long
 aliases:
   - "US Dairy Consumption.html"
@@ -11,7 +11,7 @@ aliases:
 
 Notable topics: Time series analysis, Forecasting (sweep package)
 
-Recorded on: 2019-01-29
+Recorded on: 2019-01-28
 
 Timestamps by: Alex Cookson
 

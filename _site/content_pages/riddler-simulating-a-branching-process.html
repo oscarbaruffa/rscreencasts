@@ -2,11 +2,11 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-0.9.388">
+<meta name="generator" content="quarto-0.9.505">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2020-04-13">
+<meta name="dcterms.date" content="2020-04-12">
 <meta name="description" content="Simulation, Probability distributions (Exponential and Geometric)">
 
 <title>R Screencasts - Riddler: Simulating a Branching Process</title>
@@ -19,20 +19,21 @@ div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 </style>
 
+
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="../site_libs/quarto-nav/headroom.min.js"></script>
 <script src="../site_libs/clipboard/clipboard.min.js"></script>
-<meta name="quarto:offset" content="../">
 <script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
-<link href="../images/favicon-32x32.png" rel="icon" type="image/png">
+<meta name="quarto:offset" content="../">
+<link href="..//images/favicon-32x32.png" rel="icon" type="image/png">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link id="quarto-text-highlighting-styles" href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet">
@@ -62,12 +63,16 @@ ul.task-list{list-style: none;}
 <link rel="stylesheet" href="../styles.css">
 <meta property="og:title" content="R Screencasts - Riddler: Simulating a Branching Process">
 <meta property="og:description" content="Awesome data analysis screencasts from a top Data Scientist">
-<meta property="og:image" content="images/rscreencasts_social_preview.png">
+<meta property="og:image" content="https://www.rscreencasts.com/images/rscreencasts_social_preview.png">
 <meta property="og:site-name" content="R Screencasts">
+<meta property="og:image:height" content="640">
+<meta property="og:image:width" content="1200">
 <meta name="twitter:title" content="R Screencasts - Riddler: Simulating a Branching Process">
 <meta name="twitter:description" content="Awesome data analysis screencasts from a top Data Scientist">
-<meta name="twitter:image" content="images/rscreencasts_social_preview.png">
+<meta name="twitter:image" content="https://www.rscreencasts.com/images/rscreencasts_social_preview.png">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image-height" content="640">
+<meta name="twitter:image-width" content="1200">
 </head>
 
 <body class="nav-fixed">
@@ -128,15 +133,13 @@ ul.task-list{list-style: none;}
 </div>
 
 
-
-
 <div class="quarto-title-meta">
 
     
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">April 13, 2020</p>
+      <p class="date">April 12, 2020</p>
     </div>
   </div>
     
@@ -146,7 +149,7 @@ ul.task-list{list-style: none;}
 </header>
 
 <p>Notable topics: Simulation, Probability distributions (Exponential and Geometric)</p>
-<p>Recorded on: 2020-04-13</p>
+<p>Recorded on: 2020-04-12</p>
 <p>Timestamps by: Alex Cookson</p>
 <p><a href="https://github.com/dgrtwo/data-screencasts/blob/master/gdpr.Rmd">View code</a></p>
 <section id="screencast" class="level2">

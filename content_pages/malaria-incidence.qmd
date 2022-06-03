@@ -3,7 +3,7 @@ title: |
   Malaria Incidence
 description: |
   Map visualization
-date: 2018-11-12
+date: 2018-11-11
 date-format: long
 aliases:
   - "Malaria Incidence.html"
@@ -11,7 +11,7 @@ aliases:
 
 Notable topics: Map visualization
 
-Recorded on: 2018-11-12
+Recorded on: 2018-11-11
 
 Timestamps by: Alex Cookson
 

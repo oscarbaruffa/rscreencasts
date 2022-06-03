@@ -3,7 +3,7 @@ title: |
   Caribou Locations
 description: |
   Maps with `ggplot2`, Calculating distance and speed with `geosphere`
-date: 2020-06-23
+date: 2020-06-22
 date-format: long
 aliases:
   - "Caribou Locations.html"
@@ -11,7 +11,7 @@ aliases:
 
 Notable topics: Maps with `ggplot2`, Calculating distance and speed with `geosphere`
 
-Recorded on: 2020-06-23
+Recorded on: 2020-06-22
 
 Timestamps by: Eric Fletcher
 

@@ -3,7 +3,7 @@ title: |
   Great American Beer Festival
 description: |
   Log odds ratio, Logistic regression, TIE Fighter plot
-date: 2020-10-20
+date: 2020-10-19
 date-format: long
 aliases:
   - "Great American Beer Festival.html"
@@ -11,7 +11,7 @@ aliases:
 
 Notable topics: Log odds ratio, Logistic regression, TIE Fighter plot
 
-Recorded on: 2020-10-20
+Recorded on: 2020-10-19
 
 Timestamps by: Eric Fletcher
 

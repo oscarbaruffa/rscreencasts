@@ -3,7 +3,7 @@ title: |
   Himalayan Climbers
 description: |
   Data Manipulation, Empirical Bayes, Logistic Regression Model
-date: 2020-09-22
+date: 2020-09-21
 date-format: long
 aliases:
   - "Himalayan Climbers.html"
@@ -11,7 +11,7 @@ aliases:
 
 Notable topics: Data Manipulation, Empirical Bayes, Logistic Regression Model
 
-Recorded on: 2020-09-22
+Recorded on: 2020-09-21
 
 Timestamps by: Eric Fletcher
 

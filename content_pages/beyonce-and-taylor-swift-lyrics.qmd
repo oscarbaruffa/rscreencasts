@@ -3,7 +3,7 @@ title: |
   Beyonce and Taylor Swift Lyrics
 description: |
   Text analysis, `tf_idf`, Log odds ratio, Diverging bar graph, Lollipop graph
-date: 2020-09-29
+date: 2020-09-28
 date-format: long
 aliases:
   - "Beyonce and Taylor Swift Lyrics.html"
@@ -11,7 +11,7 @@ aliases:
 
 Notable topics: Text analysis, `tf_idf`, Log odds ratio, Diverging bar graph, Lollipop graph
 
-Recorded on: 2020-09-29
+Recorded on: 2020-09-28
 
 Timestamps by: Eric Fletcher
 

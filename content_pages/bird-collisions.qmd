@@ -3,7 +3,7 @@ title: |
   Bird Collisions
 description: |
   Bootstrapping
-date: 2019-05-03
+date: 2019-05-02
 date-format: long
 aliases:
   - "Bird Collisions.html"
@@ -11,7 +11,7 @@ aliases:
 
 Notable topics: Bootstrapping
 
-Recorded on: 2019-05-03
+Recorded on: 2019-05-02
 
 Timestamps by: Alex Cookson
 

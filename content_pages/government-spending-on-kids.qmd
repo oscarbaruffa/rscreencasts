@@ -3,7 +3,7 @@ title: |
   Government Spending on Kids
 description: |
   Data Manipulation, Functions, Embracing, Reading in Many .csv Files, Pairwise Correlation
-date: 2020-09-15
+date: 2020-09-14
 date-format: long
 aliases:
   - "Government Spending on Kids.html"
@@ -11,7 +11,7 @@ aliases:
 
 Notable topics: Data Manipulation, Functions, Embracing, Reading in Many .csv Files, Pairwise Correlation
 
-Recorded on: 2020-09-15
+Recorded on: 2020-09-14
 
 Timestamps by: Eric Fletcher
 
