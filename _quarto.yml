@@ -6,7 +6,7 @@ website:
   favicon: images/favicon-32x32.png
   twitter-card:
     title: "R Screencasts"
-    image: "images/rscreencasts social preview.png"
+    image: "images/rscreencasts_social_preview.png"
     site-url: "https://www.rscreencasts.com"
     card-style: summary_large_image
     description: "Awesome data analysis screencasts from a top Data Scientist"
