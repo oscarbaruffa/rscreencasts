@@ -54,6 +54,13 @@ function onYouTubeIframeAPIReady() {
     videoId: videoId,
     playerVars: {
       "playsinline": 1
+    },
+    events: {
+      onStateChange: function(event) {
+        if (event.data == YT.PlayerState.PLAYING) {
+          followTimestamps()
+        }
+      }
     }
   });
 }
@@ -62,5 +69,23 @@ function playerSkipToTimestamp(seconds, tsElement) {
   player.seekTo(seconds, true)
   tsElement.scrollIntoView()
   document.getElementById("screencast").scrollIntoView()
+}
+
+const timestamps = Array.from(document.querySelectorAll('.topic h3[id^="ts-"]'))
+  .map(el => el.id.replace('ts-', ''))
+
+function followTimestamps() {
+  if (player.getPlayerState() !== 1) {
+    return
+  }
+  const currentTime = `${Math.floor(player.getCurrentTime())}`
+  if (timestamps.includes(currentTime)) {
+    const el = document.getElementById(`ts-${currentTime}`)
+    if (el) {
+      el.scrollIntoView()
+      document.getElementById("screencast").scrollIntoView()
+    }
+  }
+  setTimeout(followTimestamps, 1000)
 }
 </script>
