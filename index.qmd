@@ -18,7 +18,7 @@ library(stringr)
 library(glue)
 ```
 
-```{r load, include = FALSE}
+```{r load, include = FALSE, cache = TRUE}
 gs4_deauth()
 
 screencasts_data_google <- read_sheet("https://docs.google.com/spreadsheets/d/1pjj_G9ncJZPGTYPkR1BYwzA6bhJoeTfY2fJeGKSbOKM/edit#gid=444382177", sheet = "Summary")
